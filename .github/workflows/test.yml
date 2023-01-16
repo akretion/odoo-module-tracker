@@ -27,3 +27,5 @@ jobs:
           key: analyse
       - name: Run Analysis
         run: ./run
+      - name: Run ls
+        run: ls -al
