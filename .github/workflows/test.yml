@@ -24,7 +24,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: analyse
-          key: analyse
+          key: analyse-${{ matrix.odoo_version }}
       - name: Run Analysis
         run: ./run
       - name: Run ls

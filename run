@@ -16,11 +16,11 @@ def get_path(orga, repo):
 def get_repo(orga, repo, version):
     path = get_path(orga, repo)
     if os.path.exists(path):
-        subprocess.run(["git", "fetch", "--all"], cwd=path)
         subprocess.run(
             ["git", "checkout", version],
             cwd=path,
             check=True)
+        subprocess.run(["git", "pull"], cwd=path, check=True)
     else:
         path = f"{DIRECTORY}/{orga}"
         if not os.path.exists(path):
@@ -29,7 +29,6 @@ def get_repo(orga, repo, version):
             ["git", "clone", f"https://github.com/{orga}/{repo}", "-b", version],
             cwd=path,
             check=True)
-
 
 def analyse_repo(orga, repo, version):
     path = get_path(orga, repo)
@@ -59,7 +58,11 @@ for orga, repos in config.items():
     RESULT[orga] = {}
     for repo in repos:
         RESULT[orga][repo] = {}
-        get_repo(orga, repo, version)
+        try:
+            get_repo(orga, repo, version)
+        except Exception as e:
+            print("Fail to fetch repo skip it", e)
+            continue
         analyse_repo(orga, repo, version)
 
 if not os.path.exists("output"):
