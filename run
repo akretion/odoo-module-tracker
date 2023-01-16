@@ -1,0 +1,71 @@
+#!/usr/bin/python3
+
+import subprocess
+import os
+import ast
+import yaml
+
+
+DIRECTORY = "analyse"
+RESULT = {}
+
+
+def get_path(orga, repo):
+    return f"{DIRECTORY}/{orga}/{repo}"
+
+def get_repo(orga, repo, version):
+    path = get_path(orga, repo)
+    if os.path.exists(path):
+        subprocess.run(["git", "fetch", "--all"], cwd=path)
+        subprocess.run(
+            ["git", "checkout", version],
+            cwd=path,
+            check=True)
+    else:
+        path = f"{DIRECTORY}/{orga}"
+        if not os.path.exists(path):
+            os.mkdir(path)
+        subprocess.run(
+            ["git", "clone", f"https://github.com/{orga}/{repo}", "-b", version],
+            cwd=path,
+            check=True)
+
+
+def analyse_repo(orga, repo, version):
+    path = get_path(orga, repo)
+    for module in os.listdir(path):
+        manifest = f"{path}/{module}/__manifest__.py"
+        if os.path.exists(manifest):
+            with open(manifest, mode="r") as f:
+                data = ast.literal_eval(f.read())
+                if data.get("installable", True):
+                    RESULT[orga][repo][module] = {}
+                    if data.get("maintainers"):
+                        RESULT[orga][repo][module]["maintainers"] = data["maintainers"]
+
+
+with open('config.yml', 'r') as f:
+    config = yaml.safe_load(f)
+
+
+version = os.environ.get("ODOO_VERSION", "14.0")
+
+
+if not os.path.exists(DIRECTORY):
+    os.mkdir(DIRECTORY)
+
+
+for orga, repos in config.items():
+    RESULT[orga] = {}
+    for repo in repos:
+        RESULT[orga][repo] = {}
+        get_repo(orga, repo, version)
+        analyse_repo(orga, repo, version)
+
+if not os.path.exists("output"):
+    os.mkdir("output")
+
+
+data = yaml.safe_dump(RESULT)
+with open(f"output/{version}.yml", 'w') as output:
+    output.write(data)
