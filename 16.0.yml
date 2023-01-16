@@ -29,3 +29,365 @@ oca:
   account-financial-reporting:
     account_financial_report: {}
     account_tax_balance: {}
+  account-financial-tools:
+    account_asset_management: {}
+    account_fiscal_position_vat_check: {}
+    account_fiscal_year:
+      maintainers:
+      - eLBati
+    account_invoice_constraint_chronology: {}
+    account_journal_general_sequence:
+      maintainers:
+      - yajo
+    account_move_name_sequence:
+      maintainers:
+      - alexis-via
+      - moylop260
+      - frahikLV
+    account_move_print:
+      maintainers:
+      - JordiBForgeFlow
+    account_usability:
+      maintainers:
+      - legalsylvain
+  account-fiscal-rule:
+    account_fiscal_position_type: {}
+  account-invoice-reporting: {}
+  account-invoicing:
+    account_invoice_blocking: {}
+    account_invoice_check_total: {}
+    account_invoice_fiscal_position_update:
+      maintainers:
+      - alexis-via
+    account_invoice_tax_required: {}
+  account-payment:
+    account_due_list: {}
+  account-reconcile: {}
+  bank-payment:
+    account_payment_mode: {}
+    account_payment_partner: {}
+    account_payment_sale: {}
+  bank-statement-import: {}
+  community-data-files:
+    account_payment_unece:
+      maintainers:
+      - alexis-via
+    account_tax_unece:
+      maintainers:
+      - alexis-via
+    base_bank_from_iban: {}
+    base_iso3166: {}
+    base_unece:
+      maintainers:
+      - astirpe
+      - alexis-via
+    uom_unece:
+      maintainers:
+      - astirpe
+      - alexis-via
+  connector:
+    component:
+      maintainers:
+      - guewen
+    test_component:
+      maintainers:
+      - guewen
+  connector-ecommerce: {}
+  connector-telephony: {}
+  contract: {}
+  crm:
+    crm_claim: {}
+  currency:
+    currency_rate_update: {}
+  delivery-carrier:
+    base_delivery_carrier_label: {}
+    delivery_carrier_account: {}
+    delivery_carrier_agency: {}
+    delivery_carrier_info: {}
+    delivery_cttexpress: {}
+    delivery_package_number: {}
+    delivery_price_method: {}
+    delivery_state: {}
+  e-commerce:
+    website_sale_hide_price: {}
+    website_sale_product_reference_displayed: {}
+  edi:
+    base_edi:
+      maintainers:
+      - simahawk
+  hr:
+    hr_course: {}
+    hr_employee_firstname: {}
+    hr_employee_lastnames: {}
+    hr_employee_medical_examination: {}
+    hr_employee_partner_external: {}
+    hr_employee_ssn: {}
+    hr_personal_equipment_request: {}
+  hr-timesheet: {}
+  intrastat: {}
+  l10n-brazil:
+    l10n_br_base:
+      maintainers:
+      - renatonlima
+      - rvalyi
+    l10n_br_crm: {}
+    l10n_br_stock: {}
+    l10n_br_zip:
+      maintainers:
+      - renatonlima
+  l10n-france:
+    l10n_fr_account_tax_unece:
+      maintainers:
+      - alexis-via
+    l10n_fr_department:
+      maintainers:
+      - legalsylvain
+    l10n_fr_department_oversea:
+      maintainers:
+      - alexis-via
+    l10n_fr_hr_check_ssnid:
+      maintainers:
+      - alexis-via
+    l10n_fr_siret:
+      maintainers:
+      - alexis-via
+    l10n_fr_siret_lookup:
+      maintainers:
+      - remi-filament
+      - alexis-via
+    l10n_fr_state:
+      maintainers:
+      - legalsylvain
+  manufacture:
+    mrp_multi_level:
+      maintainers:
+      - JordiBForgeFlow
+      - LoisRForgeFlow
+      - ChrisOForgeFlow
+    mrp_warehouse_calendar:
+      maintainers:
+      - JordiBForgeFlow
+  mis-builder: {}
+  partner-contact:
+    base_country_state_translatable: {}
+    base_location:
+      maintainers:
+      - pedrobaeza
+    base_location_geonames_import: {}
+    partner_accreditation:
+      maintainers:
+      - victor-champonnois
+    partner_affiliate: {}
+    partner_company_type: {}
+    partner_contact_access_link:
+      maintainers:
+      - Yajo
+    partner_contact_birthdate: {}
+    partner_contact_gender: {}
+    partner_contact_job_position: {}
+    partner_contact_lang: {}
+    partner_contact_nationality: {}
+    partner_contact_personal_information_page: {}
+    partner_disable_gravatar:
+      maintainers:
+      - alexis-via
+    partner_external_map: {}
+    partner_firstname: {}
+    partner_identification: {}
+    partner_multi_relation: {}
+    partner_second_lastname: {}
+    partner_vat_unique: {}
+  pos:
+    pos_customer_comment:
+      maintainers:
+      - legalsylvain
+    pos_default_partner: {}
+    pos_escpos_status: {}
+    pos_order_reorder:
+      maintainers:
+      - GabbasovDinar
+      - CetmixGitDrone
+    pos_order_to_sale_order:
+      maintainers:
+      - legalsylvain
+    pos_payment_terminal: {}
+    pos_receipt_hide_price: {}
+  product-attribute:
+    product_assortment: {}
+    product_category_code:
+      maintainers:
+      - rousseldenis
+    product_code_unique: {}
+    product_dimension: {}
+    product_logistics_uom:
+      maintainers:
+      - hparfr
+    product_manufacturer: {}
+    product_multi_category: {}
+    product_packaging_dimension: {}
+    product_sequence: {}
+    product_state:
+      maintainers:
+      - emagdalenaC2i
+    product_uom_measure_type:
+      maintainers:
+      - legalsylvain
+  product-variant: {}
+  project:
+    project_department: {}
+    project_list: {}
+    project_role:
+      maintainers:
+      - alexey-pelykh
+    project_task_add_very_high:
+      maintainers:
+      - astirpe
+    project_task_default_stage: {}
+    project_template:
+      maintainers:
+      - patrickrwilson
+    project_type: {}
+  project-reporting: {}
+  purchase-reporting: {}
+  purchase-workflow:
+    purchase_allowed_product: {}
+    purchase_commercial_partner:
+      maintainers:
+      - alexis-via
+    purchase_discount: {}
+    purchase_order_line_menu: {}
+    purchase_request: {}
+    purchase_request_tier_validation: {}
+    purchase_stock_packaging:
+      maintainers:
+      - rousseldenis
+  reporting-engine:
+    base_comment_template: {}
+    report_xlsx: {}
+    report_xlsx_helper: {}
+    report_xml: {}
+    sql_export:
+      maintainers:
+      - legalsylvain
+    sql_export_mail:
+      maintainers:
+      - legalsylvain
+    sql_request_abstract:
+      maintainers:
+      - legalsylvain
+  sale-financial: {}
+  sale-reporting: {}
+  sale-workflow:
+    partner_contact_sale_info_propagation: {}
+    partner_sale_pivot:
+      maintainers:
+      - ernestotejeda
+    sale_commercial_partner:
+      maintainers:
+      - alexis-via
+    sale_order_line_menu: {}
+    sale_order_lot_selection:
+      maintainers:
+      - bodedra
+    sale_order_type: {}
+  search-engine: {}
+  server-auth:
+    auth_api_key: {}
+  server-backend:
+    base_user_role:
+      maintainers:
+      - sebalix
+      - jcdrubay
+      - novawish
+  server-brand: {}
+  server-env:
+    data_encryption: {}
+    mail_environment: {}
+    server_environment: {}
+    server_environment_data_encryption: {}
+    server_environment_ir_config_parameter: {}
+  server-tools:
+    auditlog: {}
+    base_cron_exclusion:
+      maintainers:
+      - LoisRForgeFlow
+      - ChrisOForgeFlow
+    base_exception:
+      maintainers:
+      - hparfr
+      - sebastienbeau
+    base_fontawesome: {}
+    base_m2m_custom_field: {}
+    base_technical_user: {}
+    base_view_inheritance_extension: {}
+    dbfilter_from_header: {}
+    iap_alternative_provider:
+      maintainers:
+      - sebastienbeau
+    module_change_auto_install:
+      maintainers:
+      - legalsylvain
+    upgrade_analysis:
+      maintainers:
+      - StefanRijnhart
+      - legalsylvain
+  server-ux:
+    base_technical_features: {}
+    base_tier_validation:
+      maintainers:
+      - LoisRForgeFlow
+    date_range:
+      maintainers:
+      - lmignon
+    multi_step_wizard: {}
+    server_action_mass_edit: {}
+  social:
+    mail_optional_autofollow: {}
+    mail_partner_opt_out: {}
+  stock-logistics-barcode:
+    barcodes_generator_abstract:
+      maintainers:
+      - legalsylvain
+  stock-logistics-reporting: {}
+  stock-logistics-warehouse:
+    scrap_reason_code:
+      maintainers:
+      - bodedra
+    stock_demand_estimate: {}
+    stock_helper: {}
+    stock_location_product_restriction:
+      maintainers:
+      - lmignon
+      - rousseldenis
+    stock_location_zone: {}
+    stock_move_auto_assign: {}
+    stock_move_common_dest: {}
+    stock_move_location: {}
+    stock_mts_mto_rule: {}
+    stock_search_supplierinfo_code: {}
+    stock_warehouse_calendar:
+      maintainers:
+      - JordiBForgeFlow
+  stock-logistics-workflow:
+    stock_move_line_auto_fill: {}
+    stock_picking_auto_create_lot:
+      maintainers:
+      - sergio-teruel
+    stock_picking_back2draft: {}
+    stock_picking_invoice_link: {}
+    stock_picking_sale_order_link: {}
+    stock_putaway_hook: {}
+    stock_quant_package_dimension: {}
+    stock_quant_package_product_packaging: {}
+    stock_receipt_lot_info: {}
+    stock_restrict_lot:
+      maintainers:
+      - florian-dacosta
+  web:
+    web_dark_mode: {}
+    web_domain_field: {}
+    web_environment_ribbon: {}
+    web_refresher: {}
+    web_theme_classic:
+      maintainers:
+      - legalsylvain
