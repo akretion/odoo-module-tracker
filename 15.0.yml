@@ -9,3 +9,1264 @@ oca:
       maintainers:
       - jjscarafia
     partner_statement: {}
+  account-financial-tools:
+    account_asset_management: {}
+    account_asset_management_menu: {}
+    account_balance_line: {}
+    account_chart_update: {}
+    account_chart_update_l10n_eu_oss:
+      maintainers:
+      - LoisRForgeFlow
+    account_chart_update_l10n_eu_oss_oca:
+      maintainers:
+      - LoisRForgeFlow
+    account_check_deposit: {}
+    account_cost_center: {}
+    account_fiscal_position_vat_check: {}
+    account_fiscal_year:
+      maintainers:
+      - eLBati
+    account_invoice_constraint_chronology: {}
+    account_journal_general_sequence:
+      maintainers:
+      - yajo
+    account_journal_lock_date: {}
+    account_lock_date_update: {}
+    account_maturity_date_default:
+      maintainers:
+      - victoralmau
+    account_move_budget: {}
+    account_move_force_removal: {}
+    account_move_line_menu: {}
+    account_move_line_purchase_info: {}
+    account_move_line_sale_info: {}
+    account_move_line_tax_editable: {}
+    account_move_name_sequence:
+      maintainers:
+      - alexis-via
+      - moylop260
+      - frahikLV
+    account_move_print:
+      maintainers:
+      - JordiBForgeFlow
+    account_move_template: {}
+    account_move_total_by_account_internal_group: {}
+    account_netting: {}
+    account_usability:
+      maintainers:
+      - legalsylvain
+    base_vat_optional_vies: {}
+    product_category_tax: {}
+  account-fiscal-rule:
+    account_avatax_oca:
+      maintainers:
+      - dreispt
+    account_avatax_sale_oca:
+      maintainers:
+      - dreispt
+    account_fiscal_position_partner_type: {}
+    l10n_eu_oss_oca: {}
+  account-invoice-reporting:
+    account_comment_template: {}
+    account_invoice_line_sale_line_position: {}
+    account_invoice_report_due_list: {}
+    account_invoice_report_grouped_by_picking: {}
+    account_invoice_report_payment_info: {}
+    account_reporting_volume: {}
+    account_reporting_weight: {}
+    partner_time_to_pay:
+      maintainers:
+      - max3903
+      - rafaelbn
+  account-invoicing:
+    account_invoice_blocking: {}
+    account_invoice_change_currency:
+      maintainers:
+      - luisg123v
+      - rolandojduartem
+    account_invoice_check_picking_date:
+      maintainers:
+      - carlosdauden
+    account_invoice_check_total: {}
+    account_invoice_date_due:
+      maintainers:
+      - luisg123v
+      - joao-p-marques
+    account_invoice_fiscal_position_update:
+      maintainers:
+      - alexis-via
+    account_invoice_fixed_discount: {}
+    account_invoice_payment_term_date_due:
+      maintainers:
+      - ivantodorovich
+    account_invoice_pricelist: {}
+    account_invoice_pricelist_sale: {}
+    account_invoice_refund_link: {}
+    account_invoice_search_by_reference: {}
+    account_invoice_section_sale_order: {}
+    account_invoice_supplier_ref_unique: {}
+    account_invoice_supplier_self_invoice: {}
+    account_invoice_tax_note: {}
+    account_invoice_tax_required: {}
+    account_invoice_transmit_method:
+      maintainers:
+      - alexis-via
+    account_invoice_tree_currency: {}
+    account_invoice_triple_discount: {}
+    account_move_exception: {}
+    account_move_post_block: {}
+    account_move_tier_validation: {}
+    account_move_tier_validation_forward: {}
+    account_tax_group_widget_base_amount:
+      maintainers:
+      - chienandalu
+    portal_account_personal_data_only: {}
+    purchase_stock_picking_return_invoicing:
+      maintainers:
+      - pedrobaeza
+      - MiquelRForgeFlow
+    sale_line_refund_to_invoice_qty: {}
+    sale_order_invoicing_grouping_criteria:
+      maintainers:
+      - pedrobaeza
+    sale_timesheet_invoice_description: {}
+    stock_picking_return_refund_option:
+      maintainers:
+      - sergio-teruel
+  account-payment:
+    account_check_printing_report_base: {}
+    account_due_list: {}
+    account_due_list_payment_mode: {}
+    account_payment_batch_process: {}
+    account_payment_notification:
+      maintainers:
+      - yajo
+    account_payment_promissory_note: {}
+    account_payment_term_extension: {}
+    account_payment_term_partner_holiday:
+      maintainers:
+      - victoralmau
+    account_payment_widget_amount:
+      maintainers:
+      - ChrisOForgeFlow
+    partner_aging:
+      maintainers:
+      - Urvisha-OSI
+  account-reconcile:
+    account_move_reconcile_forbid_cancel: {}
+    account_partner_reconcile: {}
+    account_reconciliation_widget: {}
+    account_reconciliation_widget_due_date:
+      maintainers:
+      - victoralmau
+  bank-payment:
+    account_banking_mandate: {}
+    account_banking_mandate_contact: {}
+    account_banking_mandate_sale:
+      maintainers:
+      - alexis-via
+    account_banking_pain_base: {}
+    account_banking_sepa_credit_transfer: {}
+    account_banking_sepa_direct_debit: {}
+    account_payment_mode: {}
+    account_payment_order: {}
+    account_payment_partner: {}
+    account_payment_purchase: {}
+    account_payment_purchase_stock: {}
+    account_payment_sale: {}
+  bank-statement-import:
+    account_bank_statement_clear_partner: {}
+    account_statement_import:
+      maintainers:
+      - alexis-via
+    account_statement_import_camt: {}
+    account_statement_import_camt54: {}
+    account_statement_import_online:
+      maintainers:
+      - alexey-pelykh
+    account_statement_import_online_ponto: {}
+    account_statement_import_txt_xlsx:
+      maintainers:
+      - alexey-pelykh
+  community-data-files:
+    account_payment_unece: {}
+    account_tax_unece:
+      maintainers:
+      - alexis-via
+    base_bank_from_iban: {}
+    base_iso3166: {}
+    base_unece:
+      maintainers:
+      - astirpe
+      - alexis-via
+    product_fao_fishing: {}
+    uom_unece:
+      maintainers:
+      - astirpe
+      - alexis-via
+  connector:
+    component:
+      maintainers:
+      - guewen
+    component_event: {}
+    connector: {}
+    connector_base_product: {}
+    test_component:
+      maintainers:
+      - guewen
+    test_connector: {}
+  connector-ecommerce: {}
+  connector-telephony: {}
+  contract:
+    contract: {}
+    contract_payment_mode: {}
+    contract_sale: {}
+    contract_sale_generation: {}
+    contract_variable_quantity: {}
+  crm:
+    crm_claim: {}
+    crm_claim_type: {}
+    crm_industry: {}
+    crm_lead_code: {}
+    crm_lead_firstname: {}
+    crm_location: {}
+    crm_multicompany_reporting_currency: {}
+    crm_phonecall: {}
+    crm_phonecall_planner: {}
+    crm_project: {}
+    crm_salesperson_planner: {}
+    crm_salesperson_planner_sale: {}
+    crm_security_group:
+      maintainers:
+      - victoralmau
+    crm_stage_probability: {}
+  currency:
+    currency_rate_update: {}
+  delivery-carrier:
+    connector_routific:
+      maintainers:
+      - CarlosRoca13
+    delivery_carrier_info: {}
+    delivery_carrier_multi_zip: {}
+    delivery_cttexpress: {}
+    delivery_free_fee_removal: {}
+    delivery_multi_destination: {}
+    delivery_package_number: {}
+    delivery_price_method: {}
+    delivery_state: {}
+    delivery_translatable: {}
+    partner_delivery_schedule: {}
+    partner_delivery_zone: {}
+    stock_picking_delivery_link: {}
+  e-commerce:
+    website_sale_b2x_alt_price:
+      maintainers:
+      - Yajo
+    website_sale_cart_expire:
+      maintainers:
+      - ivantodorovich
+    website_sale_checkout_country_vat: {}
+    website_sale_checkout_skip_payment: {}
+    website_sale_comparison_hide_price: {}
+    website_sale_hide_empty_category: {}
+    website_sale_hide_price: {}
+    website_sale_invoice_address: {}
+    website_sale_order_type:
+      maintainers:
+      - stefan-tecnativa
+      - pilarvargas-tecnativa
+    website_sale_product_attachment:
+      maintainers:
+      - Yajo
+    website_sale_product_brand: {}
+    website_sale_product_description: {}
+    website_sale_product_detail_attribute_image: {}
+    website_sale_product_detail_attribute_value_image: {}
+    website_sale_product_item_cart_custom_qty:
+      maintainers:
+      - CarlosRoca13
+    website_sale_product_reference_displayed: {}
+    website_sale_product_sort: {}
+    website_sale_require_login: {}
+    website_sale_secondary_unit: {}
+    website_sale_suggest_create_account: {}
+    website_sale_tax_toggle: {}
+    website_sale_vat_required: {}
+    website_sale_wishlist_keep: {}
+  edi:
+    account_einvoice_generate:
+      maintainers:
+      - alexis-via
+    account_invoice_facturx:
+      maintainers:
+      - alexis-via
+    base_edi:
+      maintainers:
+      - simahawk
+    base_facturx:
+      maintainers:
+      - alexis-via
+    edi_account_oca:
+      maintainers:
+      - etobella
+    edi_backend_partner_oca:
+      maintainers:
+      - LoisRForgeFlow
+    edi_exchange_template_oca:
+      maintainers:
+      - simahawk
+    edi_oca:
+      maintainers:
+      - simahawk
+      - etobella
+    edi_stock_oca: {}
+    edi_storage_oca: {}
+    edi_voxel_account_invoice_oca: {}
+    edi_voxel_oca: {}
+    edi_webservice_oca: {}
+  hr:
+    hr_contract_reference: {}
+    hr_course: {}
+    hr_department_code: {}
+    hr_emergency_contact: {}
+    hr_employee_age: {}
+    hr_employee_birth_name: {}
+    hr_employee_calendar_planning:
+      maintainers:
+      - victoralmau
+      - pedrobaeza
+    hr_employee_digitized_signature:
+      maintainers:
+      - newtratip
+    hr_employee_document: {}
+    hr_employee_firstname: {}
+    hr_employee_id: {}
+    hr_employee_lastnames: {}
+    hr_employee_medical_examination: {}
+    hr_employee_partner_external: {}
+    hr_employee_relative: {}
+    hr_employee_service: {}
+    hr_employee_service_contract: {}
+    hr_employee_ssn: {}
+    hr_holidays_settings: {}
+    hr_job_category: {}
+    hr_org_chart_overview: {}
+    hr_personal_equipment_request: {}
+  hr-timesheet:
+    crm_timesheet: {}
+    hr_employee_product: {}
+    hr_timesheet_begin_end: {}
+    hr_timesheet_sheet: {}
+    hr_timesheet_sheet_begin_end: {}
+    hr_timesheet_task_domain: {}
+    hr_timesheet_task_required: {}
+    hr_timesheet_task_stage: {}
+    hr_timesheet_time_type: {}
+    sale_timesheet_line_exclude: {}
+    sale_timesheet_rounded: {}
+    sale_timesheet_task_exclude: {}
+  intrastat:
+    intrastat_base:
+      maintainers:
+      - alexis-via
+      - luc-demeyer
+    intrastat_product: {}
+    product_harmonized_system:
+      maintainers:
+      - alexis-via
+      - luc-demeyer
+    product_harmonized_system_delivery:
+      maintainers:
+      - alexis-via
+      - luc-demeyer
+    product_harmonized_system_stock:
+      maintainers:
+      - alexis-via
+      - luc-demeyer
+  l10n-brazil:
+    l10n_br_account_due_list: {}
+    l10n_br_base:
+      maintainers:
+      - renatonlima
+      - rvalyi
+    l10n_br_coa:
+      maintainers:
+      - renatonlima
+      - mileo
+    l10n_br_crm: {}
+    l10n_br_stock: {}
+    l10n_br_zip:
+      maintainers:
+      - renatonlima
+  l10n-france:
+    account_banking_fr_lcr:
+      maintainers:
+      - alexis-via
+    account_statement_import_fr_cfonb:
+      maintainers:
+      - alexis-via
+    l10n_fr_account_invoice_facturx:
+      maintainers:
+      - alexis-via
+    l10n_fr_account_tax_unece:
+      maintainers:
+      - alexis-via
+    l10n_fr_chorus_account:
+      maintainers:
+      - alexis-via
+    l10n_fr_chorus_facturx:
+      maintainers:
+      - alexis-via
+    l10n_fr_chorus_sale:
+      maintainers:
+      - alexis-via
+    l10n_fr_department:
+      maintainers:
+      - legalsylvain
+    l10n_fr_department_oversea:
+      maintainers:
+      - alexis-via
+    l10n_fr_ecotaxe: {}
+    l10n_fr_ecotaxe_product: {}
+    l10n_fr_ecotaxe_sale: {}
+    l10n_fr_intrastat_product:
+      maintainers:
+      - alexis-via
+    l10n_fr_intrastat_service:
+      maintainers:
+      - alexis-via
+    l10n_fr_siret:
+      maintainers:
+      - alexis-via
+    l10n_fr_state:
+      maintainers:
+      - legalsylvain
+  manufacture:
+    mrp_bom_attribute_match: {}
+    mrp_bom_component_menu: {}
+    mrp_bom_hierarchy: {}
+    mrp_bom_location: {}
+    mrp_bom_tracking: {}
+    mrp_finished_backorder_product: {}
+    mrp_lot_number_propagation:
+      maintainers:
+      - sebalix
+    mrp_lot_on_hand_first:
+      maintainers:
+      - grindtildeath
+    mrp_multi_level:
+      maintainers:
+      - JordiBForgeFlow
+      - LoisRForgeFlow
+      - ChrisOForgeFlow
+    mrp_multi_level_estimate:
+      maintainers:
+      - LoisRForgeFlow
+    mrp_planned_order_matrix: {}
+    mrp_production_component_availability_search:
+      maintainers:
+      - ivantodorovich
+    mrp_production_date_planned_finished:
+      maintainers:
+      - ivantodorovich
+    mrp_production_grouped_by_product: {}
+    mrp_production_putaway_strategy: {}
+    mrp_progress_button: {}
+    mrp_sale_info: {}
+    mrp_tag: {}
+    mrp_warehouse_calendar:
+      maintainers:
+      - JordiBForgeFlow
+    mrp_workorder_sequence:
+      maintainers:
+      - LoisRForgeFlow
+    quality_control_oca: {}
+    stock_whole_kit_constraint: {}
+  mis-builder:
+    mis_builder:
+      maintainers:
+      - sbidoul
+    mis_builder_budget:
+      maintainers:
+      - sbidoul
+    mis_builder_demo:
+      maintainers:
+      - sbidoul
+  partner-contact:
+    account_partner_company_group: {}
+    animal:
+      maintainers:
+      - max3903
+    base_country_state_translatable: {}
+    base_location:
+      maintainers:
+      - pedrobaeza
+    base_location_geonames_import: {}
+    base_location_nuts: {}
+    base_partner_company_group: {}
+    base_partner_sequence: {}
+    crm_partner_company_group: {}
+    partner_address_street3: {}
+    partner_affiliate: {}
+    partner_bank_code: {}
+    partner_company_group: {}
+    partner_company_type: {}
+    partner_contact_access_link:
+      maintainers:
+      - Yajo
+    partner_contact_address_default: {}
+    partner_contact_age_range: {}
+    partner_contact_birthdate: {}
+    partner_contact_gender: {}
+    partner_contact_job_position: {}
+    partner_contact_lang: {}
+    partner_contact_nationality: {}
+    partner_contact_personal_information_page: {}
+    partner_contact_role: {}
+    partner_deduplicate_acl: {}
+    partner_deduplicate_by_ref: {}
+    partner_deduplicate_filter: {}
+    partner_employee_quantity:
+      maintainers:
+      - pedrobaeza
+    partner_external_map: {}
+    partner_fax: {}
+    partner_firstname: {}
+    partner_industry_secondary: {}
+    partner_manual_rank:
+      maintainers:
+      - luisg123v
+      - frahikLV
+    partner_multi_relation: {}
+    partner_phone_extension: {}
+    partner_phone_secondary:
+      maintainers:
+      - ivantodorovich
+    partner_phonecall_schedule: {}
+    partner_pricelist_search: {}
+    partner_priority:
+      maintainers:
+      - patrickrwilson
+    partner_ref_unique: {}
+    partner_second_lastname: {}
+    partner_vat_unique: {}
+    portal_partner_data_no_edit: {}
+    res_partner_journal_items_link: {}
+    sale_partner_company_group: {}
+  pos:
+    pos_cash_move_reason: {}
+    pos_event_sale:
+      maintainers:
+      - ivantodorovich
+    pos_event_sale_registration_qr_code:
+      maintainers:
+      - ivantodorovich
+    pos_hide_cost_price_and_margin: {}
+    pos_lot_barcode: {}
+    pos_lot_selection: {}
+    pos_payment_change:
+      maintainers:
+      - legalsylvain
+    pos_product_display_default_code: {}
+    pos_receipt_hide_price: {}
+    pos_sale_pos_event_sale:
+      maintainers:
+      - ivantodorovich
+    pos_supplierinfo_barcode:
+      maintainers:
+      - eLBati
+    pos_supplierinfo_search:
+      maintainers:
+      - eLBati
+  product-attribute:
+    product_assortment: {}
+    product_attribute_value_menu: {}
+    product_category_active: {}
+    product_category_code:
+      maintainers:
+      - rousseldenis
+    product_category_code_unique:
+      maintainers:
+      - rousseldenis
+      - luisg123v
+    product_category_product_link: {}
+    product_code_mandatory: {}
+    product_code_unique: {}
+    product_cost_security:
+      maintainers:
+      - sergio-teruel
+    product_dimension: {}
+    product_drained_weight: {}
+    product_logistics_uom:
+      maintainers:
+      - hparfr
+    product_lot_sequence: {}
+    product_manufacturer: {}
+    product_multi_image: {}
+    product_net_weight:
+      maintainers:
+      - legalsylvain
+    product_order_noname:
+      maintainers:
+      - WR-96
+      - moylop260
+      - luisg123v
+    product_packaging_type: {}
+    product_pricelist_by_contact: {}
+    product_pricelist_direct_print: {}
+    product_pricelist_direct_print_company_group: {}
+    product_pricelist_direct_print_website_sale:
+      maintainers:
+      - CarlosRoca13
+    product_pricelist_revision: {}
+    product_pricelist_supplierinfo: {}
+    product_restricted_type: {}
+    product_secondary_unit:
+      maintainers:
+      - sergio-teruel
+    product_sequence: {}
+    product_state:
+      maintainers:
+      - emagdalenaC2i
+    product_supplierinfo_archive:
+      maintainers:
+      - GuillemCForgeFlow
+      - AlvaroTForgeFlow
+      - OriolVForgeFlow
+    product_supplierinfo_for_customer: {}
+    product_supplierinfo_revision: {}
+    product_template_tags:
+      maintainers:
+      - patrickrwilson
+      - ivantodorovich
+    product_variant_attribute_name_manager:
+      maintainers:
+      - oriolvforgeflow
+    sale_product_template_tags:
+      maintainers:
+      - ivantodorovich
+  product-variant:
+    product_variant_configurator: {}
+    product_variant_configurator_manual_creation:
+      maintainers:
+      - ChrisOForgeFlow
+    product_variant_sale_price: {}
+    sale_order_line_variant_description: {}
+  project:
+    project_department: {}
+    project_duplicate_subtask: {}
+    project_forecast_line: {}
+    project_forecast_line_bokeh_chart: {}
+    project_forecast_line_holidays_public: {}
+    project_list: {}
+    project_milestone:
+      maintainers:
+      - patrickrwilson
+    project_parent_task_filter: {}
+    project_purchase_analytic_global: {}
+    project_role:
+      maintainers:
+      - alexey-pelykh
+    project_status:
+      maintainers:
+      - patrickrwilson
+    project_stock:
+      maintainers:
+      - victoralmau
+    project_stock_product_set:
+      maintainers:
+      - victoralmau
+    project_task_add_very_high:
+      maintainers:
+      - astirpe
+    project_task_code: {}
+    project_task_default_stage: {}
+    project_task_dependency:
+      maintainers:
+      - astirpe
+    project_task_material: {}
+    project_task_milestone:
+      maintainers:
+      - mantux11
+    project_task_personal_stage_auto_fold: {}
+    project_task_pull_request: {}
+    project_task_stage_state: {}
+    project_template:
+      maintainers:
+      - patrickrwilson
+    project_timeline: {}
+    project_timesheet_time_control:
+      maintainers:
+      - ernestotejeda
+    project_type: {}
+  project-reporting: {}
+  purchase-reporting: {}
+  purchase-workflow:
+    procurement_purchase_no_grouping: {}
+    procurement_purchase_sale_no_grouping: {}
+    product_form_purchase_link:
+      maintainers:
+      - rousseldenis
+    purchase_advance_payment: {}
+    purchase_analytic_global: {}
+    purchase_blanket_order: {}
+    purchase_default_terms_conditions: {}
+    purchase_delivery_split_date: {}
+    purchase_deposit: {}
+    purchase_discount: {}
+    purchase_exception: {}
+    purchase_fop_shipping: {}
+    purchase_force_invoiced: {}
+    purchase_location_by_line: {}
+    purchase_open_qty: {}
+    purchase_order_approved: {}
+    purchase_order_general_discount: {}
+    purchase_order_line_menu: {}
+    purchase_order_line_price_history: {}
+    purchase_order_line_price_history_discount: {}
+    purchase_order_line_stock_available: {}
+    purchase_order_no_zero_price: {}
+    purchase_order_product_recommendation: {}
+    purchase_order_product_recommendation_brand: {}
+    purchase_order_product_recommendation_xlsx: {}
+    purchase_order_qty_change_no_recompute:
+      maintainers:
+      - victoralmau
+    purchase_order_supplierinfo_update:
+      maintainers:
+      - ernestotejeda
+    purchase_order_type: {}
+    purchase_order_uninvoiced_amount: {}
+    purchase_partner_incoterm:
+      maintainers:
+      - TDu
+      - bealdav
+    purchase_partner_selectable_option:
+      maintainers:
+      - victoralmau
+    purchase_receipt_expectation: {}
+    purchase_receipt_expectation_manual: {}
+    purchase_receipt_expectation_manual_split: {}
+    purchase_reception_notify: {}
+    purchase_reception_status:
+      maintainers:
+      - alexis-via
+    purchase_representative: {}
+    purchase_request: {}
+    purchase_request_department: {}
+    purchase_request_tier_validation: {}
+    purchase_requisition_tier_validation: {}
+    purchase_security:
+      maintainers:
+      - pilarvargas-tecnativa
+    purchase_stock_price_unit_sync: {}
+    purchase_stock_return_request: {}
+    purchase_tier_validation: {}
+    purchase_triple_discount: {}
+    purchase_v12_control_menu: {}
+  reporting-engine:
+    base_comment_template: {}
+    bi_sql_editor:
+      maintainers:
+      - legalsylvain
+    report_qr: {}
+    report_qweb_element_page_visibility: {}
+    report_qweb_parameter: {}
+    report_qweb_pdf_watermark: {}
+    report_wkhtmltopdf_param: {}
+    report_xlsx: {}
+    report_xlsx_helper: {}
+    report_xml: {}
+    sql_export: {}
+    sql_export_excel: {}
+    sql_request_abstract:
+      maintainers:
+      - legalsylvain
+  sale-financial: {}
+  sale-reporting:
+    base_multicompany_reporting_currency: {}
+    product_sold_by_delivery_week:
+      maintainers:
+      - chienandalu
+    sale_comment_template: {}
+    sale_layout_category_hide_detail: {}
+    sale_multicompany_reporting_currency: {}
+    sale_order_line_position: {}
+    sale_order_product_recommendation_product_sold_by_delivery_week:
+      maintainers:
+      - chienandalu
+    sale_order_report_product_image: {}
+    sale_report_delivered:
+      maintainers:
+      - sergio-teruel
+    sale_report_delivered_brand:
+      maintainers:
+      - CarlosRoca13
+    sale_report_delivered_partner_priority:
+      maintainers:
+      - CarlosRoca13
+    sale_report_delivered_subtotal:
+      maintainers:
+      - sergio-teruel
+    sale_report_delivered_volume: {}
+  sale-workflow:
+    partner_contact_sale_info_propagation: {}
+    partner_sale_pivot:
+      maintainers:
+      - ernestotejeda
+    portal_sale_personal_data_only: {}
+    product_supplierinfo_for_customer_elaboration: {}
+    product_supplierinfo_for_customer_sale: {}
+    sale_advance_payment: {}
+    sale_automatic_workflow: {}
+    sale_automatic_workflow_job: {}
+    sale_automatic_workflow_payment_mode: {}
+    sale_blanket_order: {}
+    sale_commercial_partner: {}
+    sale_credit_point: {}
+    sale_delivery_state: {}
+    sale_discount_display_amount: {}
+    sale_elaboration: {}
+    sale_exception: {}
+    sale_force_invoiced: {}
+    sale_force_whole_invoiceability: {}
+    sale_invoice_blocking: {}
+    sale_invoice_no_mail: {}
+    sale_invoice_plan:
+      maintainers:
+      - kittiu
+    sale_invoice_policy: {}
+    sale_last_price_info: {}
+    sale_order_archive: {}
+    sale_order_carrier_auto_assign: {}
+    sale_order_general_discount: {}
+    sale_order_invoice_amount: {}
+    sale_order_invoicing_finished_task: {}
+    sale_order_line_date: {}
+    sale_order_line_delivery_state: {}
+    sale_order_line_description: {}
+    sale_order_line_input: {}
+    sale_order_line_menu: {}
+    sale_order_line_price_history: {}
+    sale_order_line_sequence: {}
+    sale_order_partner_restrict:
+      maintainers:
+      - OriolVForgeFlow
+    sale_order_price_recalculation: {}
+    sale_order_priority: {}
+    sale_order_product_assortment:
+      maintainers:
+      - CarlosRoca13
+    sale_order_product_availability_inline:
+      maintainers:
+      - ernestotejeda
+    sale_order_product_recommendation: {}
+    sale_order_qty_change_no_recompute:
+      maintainers:
+      - victoralmau
+    sale_order_secondary_unit: {}
+    sale_order_type: {}
+    sale_partner_selectable_option:
+      maintainers:
+      - victoralmau
+    sale_payment_sheet:
+      maintainers:
+      - sergio-teruel
+    sale_planner_calendar: {}
+    sale_procurement_group_by_line: {}
+    sale_product_category_menu: {}
+    sale_product_multi_add: {}
+    sale_product_set: {}
+    sale_product_set_layout: {}
+    sale_quotation_number: {}
+    sale_rental:
+      maintainers:
+      - alexis-via
+    sale_shipping_info_helper: {}
+    sale_sourced_by_line: {}
+    sale_start_end_dates:
+      maintainers:
+      - alexis-via
+    sale_stock_cancel_restriction: {}
+    sale_stock_invoice_plan:
+      maintainers:
+      - kittiu
+    sale_stock_last_date: {}
+    sale_stock_picking_blocking: {}
+    sale_stock_picking_note: {}
+    sale_stock_secondary_unit: {}
+    sale_substate: {}
+    sale_tier_validation: {}
+    sale_triple_discount: {}
+    sale_wishlist: {}
+    sales_team_security:
+      maintainers:
+      - pedrobaeza
+      - ivantodorovich
+    sales_team_security_crm:
+      maintainers:
+      - ivantodorovich
+    sales_team_security_sale:
+      maintainers:
+      - ivantodorovich
+  search-engine: {}
+  server-auth:
+    auth_api_key: {}
+    auth_api_key_group:
+      maintainers:
+      - simahawk
+    auth_api_key_server_env: {}
+    auth_ldaps: {}
+    auth_oidc:
+      maintainers:
+      - sbidoul
+    auth_saml: {}
+    auth_session_timeout: {}
+    auth_signup_verify_email: {}
+    auth_user_case_insensitive: {}
+    users_ldap_groups: {}
+  server-backend:
+    base_external_dbsource: {}
+    base_external_dbsource_mssql: {}
+    base_external_dbsource_sqlite: {}
+    base_external_system: {}
+    base_global_discount: {}
+    base_import_match: {}
+    base_user_role:
+      maintainers:
+      - sebalix
+      - jcdrubay
+      - novawish
+  server-brand:
+    disable_odoo_online: {}
+    portal_odoo_debranding:
+      maintainers:
+      - eLBati
+      - ivantodorovich
+    remove_odoo_enterprise: {}
+  server-env:
+    mail_environment: {}
+    mail_environment_google_gmail:
+      maintainers:
+      - ivantodorovich
+    mail_environment_office365: {}
+    server_environment: {}
+    server_environment_ir_config_parameter: {}
+  server-tools:
+    auditlog: {}
+    auto_backup: {}
+    base_conditional_image: {}
+    base_cron_exclusion:
+      maintainers:
+      - LoisRForgeFlow
+      - ChrisOForgeFlow
+    base_exception:
+      maintainers:
+      - hparfr
+      - sebastienbeau
+    base_fontawesome: {}
+    base_multi_image: {}
+    base_remote: {}
+    base_search_fuzzy: {}
+    base_technical_user: {}
+    base_time_window: {}
+    base_view_inheritance_extension: {}
+    datetime_formatter: {}
+    dbfilter_from_header: {}
+    excel_import_export:
+      maintainers:
+      - kittiu
+    excel_import_export_demo:
+      maintainers:
+      - kittiu
+    fetchmail_incoming_log: {}
+    fetchmail_notify_error_to_sender: {}
+    html_text: {}
+    iap_alternative_provider:
+      maintainers:
+      - sebastienbeau
+    letsencrypt: {}
+    module_auto_update: {}
+    module_change_auto_install:
+      maintainers:
+      - legalsylvain
+    onchange_helper: {}
+    sentry:
+      maintainers:
+      - barsi
+      - naglis
+      - versada
+      - moylop260
+      - fernandahf
+    upgrade_analysis:
+      maintainers:
+      - StefanRijnhart
+      - legalsylvain
+  server-ux:
+    announcement: {}
+    barcode_action: {}
+    base_export_manager: {}
+    base_import_security_group: {}
+    base_menu_visibility_restriction:
+      maintainers:
+      - victoralmau
+    base_optional_quick_create: {}
+    base_revision: {}
+    base_search_custom_field_filter:
+      maintainers:
+      - pedrobaeza
+    base_substate: {}
+    base_technical_features: {}
+    base_tier_validation:
+      maintainers:
+      - LoisRForgeFlow
+    base_tier_validation_formula: {}
+    base_tier_validation_forward:
+      maintainers:
+      - kittiu
+    chained_swapper: {}
+    date_range:
+      maintainers:
+      - lmignon
+    default_multi_user:
+      maintainers:
+      - LoisRForgeFlow
+    document_quick_access:
+      maintainers:
+      - etobella
+    document_quick_access_folder_auto_classification:
+      maintainers:
+      - etobella
+    filter_multi_user:
+      maintainers:
+      - LoisRForgeFlow
+    mass_editing: {}
+    multi_step_wizard: {}
+    sequence_reset_period: {}
+  social:
+    base_search_mail_content: {}
+    mail_activity_board: {}
+    mail_activity_creator: {}
+    mail_activity_done: {}
+    mail_activity_partner: {}
+    mail_activity_team: {}
+    mail_attach_existing_attachment: {}
+    mail_autosubscribe: {}
+    mail_debrand:
+      maintainers:
+      - pedrobaeza
+      - joao-p-marques
+    mail_notification_custom_subject:
+      maintainers:
+      - yajo
+    mail_optional_autofollow: {}
+    mail_optional_follower_notification: {}
+    mail_outbound_static: {}
+    mail_parent_recipient: {}
+    mail_preview_base: {}
+    mail_quoted_reply: {}
+    mail_show_follower:
+      maintainers:
+      - yajo
+    mail_tracking: {}
+    mail_tracking_mailgun: {}
+    mass_mailing_custom_unsubscribe: {}
+    mass_mailing_partner: {}
+    mass_mailing_resend:
+      maintainers:
+      - pedrobaeza
+  stock-logistics-barcode:
+    base_gs1_barcode: {}
+    product_supplierinfo_barcode:
+      maintainers:
+      - eLBati
+    stock_barcodes: {}
+    stock_picking_product_barcode_report:
+      maintainers:
+      - CarlosRoca13
+    stock_picking_product_barcode_report_secondary_unit:
+      maintainers:
+      - CarlosRoca13
+  stock-logistics-reporting:
+    delivery_line_sale_line_position: {}
+    stock_account_valuation_report: {}
+    stock_card_report: {}
+    stock_move_value_report: {}
+    stock_picking_report_custom_description:
+      maintainers:
+      - carlosdauden
+    stock_picking_report_undelivered_product: {}
+    stock_picking_report_valued: {}
+    stock_report_quantity_by_location: {}
+  stock-logistics-warehouse:
+    account_move_line_product: {}
+    account_move_line_stock_info: {}
+    procurement_auto_create_group: {}
+    sale_stock_available_info_popup: {}
+    scrap_reason_code:
+      maintainers:
+      - bodedra
+    stock_archive_constraint:
+      maintainers:
+      - victoralmau
+    stock_available: {}
+    stock_available_immediately: {}
+    stock_available_mrp: {}
+    stock_available_unreserved:
+      maintainers:
+      - LoisRForgeFlow
+    stock_demand_estimate: {}
+    stock_demand_estimate_matrix: {}
+    stock_free_quantity: {}
+    stock_helper: {}
+    stock_location_lockdown: {}
+    stock_location_route_description: {}
+    stock_lot_filter_available:
+      maintainers:
+      - CarlosRoca13
+    stock_move_location: {}
+    stock_mts_mto_rule: {}
+    stock_orderpoint_move_link: {}
+    stock_orderpoint_purchase_link: {}
+    stock_orderpoint_uom: {}
+    stock_packaging_calculator: {}
+    stock_picking_show_linked: {}
+    stock_putaway_product_template:
+      maintainers:
+      - kevinkhao
+      - sebastienbeau
+    stock_quant_manual_assign: {}
+    stock_request: {}
+    stock_request_kanban: {}
+    stock_request_purchase: {}
+    stock_reserve: {}
+    stock_secondary_unit: {}
+    stock_warehouse_calendar:
+      maintainers:
+      - JordiBForgeFlow
+  stock-logistics-workflow:
+    delivery_procurement_group_carrier: {}
+    purchase_stock_picking_invoice_link: {}
+    sale_line_returned_qty: {}
+    stock_lot_on_hand_first:
+      maintainers:
+      - grindtildeath
+    stock_lot_product_qty_search:
+      maintainers:
+      - grindtildeath
+    stock_move_line_auto_fill: {}
+    stock_move_quick_lot: {}
+    stock_no_negative: {}
+    stock_owner_restriction: {}
+    stock_picking_auto_create_lot:
+      maintainers:
+      - sergio-teruel
+    stock_picking_back2draft: {}
+    stock_picking_batch_extended:
+      maintainers:
+      - gurneyalex
+      - carlosdauden
+      - i-vyshnevska
+    stock_picking_batch_extended_account:
+      maintainers:
+      - ernestotejeda
+    stock_picking_batch_extended_account_sale_type:
+      maintainers:
+      - ernestotejeda
+    stock_picking_filter_lot: {}
+    stock_picking_info_lot: {}
+    stock_picking_invoice_link: {}
+    stock_picking_mass_action: {}
+    stock_picking_product_assortment:
+      maintainers:
+      - CarlosRoca13
+    stock_picking_product_availability_inline: {}
+    stock_picking_product_availability_search:
+      maintainers:
+      - ivantodorovich
+    stock_picking_purchase_order_link: {}
+    stock_picking_return_restricted_qty: {}
+    stock_picking_sale_order_link: {}
+    stock_picking_send_by_mail: {}
+    stock_picking_show_backorder: {}
+    stock_picking_show_return: {}
+    stock_picking_whole_scrap:
+      maintainers:
+      - sergio-teruel
+    stock_production_lot_active:
+      maintainers:
+      - ThomasBinsfeld
+    stock_push_delay: {}
+    stock_putaway_hook: {}
+    stock_restrict_lot:
+      maintainers:
+      - florian-dacosta
+    stock_return_request: {}
+    stock_split_picking: {}
+  web:
+    web_action_conditionable: {}
+    web_advanced_search:
+      maintainers:
+      - ivantodorovich
+    web_calendar_slot_duration:
+      maintainers:
+      - Yajo
+    web_chatter_position: {}
+    web_company_color: {}
+    web_copy_confirm: {}
+    web_dialog_size: {}
+    web_domain_field: {}
+    web_drop_target: {}
+    web_environment_ribbon: {}
+    web_group_expand: {}
+    web_ir_actions_act_multi: {}
+    web_ir_actions_act_view_reload: {}
+    web_ir_actions_act_window_message: {}
+    web_listview_range_select: {}
+    web_m2x_options: {}
+    web_m2x_options_manager: {}
+    web_no_bubble: {}
+    web_notify: {}
+    web_pwa_oca:
+      maintainers:
+      - eLBati
+    web_refresher: {}
+    web_remember_tree_column_width:
+      maintainers:
+      - frahikLV
+      - luisg123v
+    web_responsive:
+      maintainers:
+      - Yajo
+      - Tardo
+      - SplashS
+    web_search_with_and: {}
+    web_sheet_full_width: {}
+    web_timeline:
+      maintainers:
+      - tarteo
+    web_tree_dynamic_colored_field: {}
+    web_tree_image_tooltip: {}
+    web_tree_many2one_clickable: {}
+    web_view_calendar_list: {}
+    web_widget_bokeh_chart:
+      maintainers:
+      - LoisRForgeFlow
+      - ChrisOForgeFlow
+    web_widget_child_selector: {}
+    web_widget_domain_editor_dialog: {}
+    web_widget_dropdown_dynamic: {}
+    web_widget_image_download: {}
+    web_widget_json_graph:
+      maintainers:
+      - luisg123v
+      - frahikLV
+    web_widget_many2one_simple:
+      maintainers:
+      - Tardo
+    web_widget_numeric_step: {}
+    web_widget_open_tab: {}
+    web_widget_url_advanced: {}
+    web_widget_x2many_2d_matrix:
+      maintainers:
+      - ChrisOForgeFlow
