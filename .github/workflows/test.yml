@@ -23,7 +23,7 @@ jobs:
       - name: Cache Analysis directory
         uses: actions/cache@v3
         with:
-          path: ~/analyse
+          path: analyse
           key: analyse
       - name: Run Analysis
         run: ./run
