@@ -27,5 +27,7 @@ jobs:
           key: analyse-${{ matrix.odoo_version }}
       - name: Run Analysis
         run: ./run
-      - name: Run ls
-        run: ls -al
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: output
