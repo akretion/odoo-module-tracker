@@ -50,15 +50,19 @@ akretion:
     pos_product_tree_default: {}
     pos_usability: {}
     product_category_tax: {}
+    product_detailed_type: {}
+    product_detailed_type_stock: {}
     product_manager_group: {}
     product_manager_group_stock: {}
     product_no_translation: {}
     product_print_zpl_barcode: {}
+    product_priority_star: {}
     product_usability: {}
     purchase_product_tree_default: {}
     purchase_stock_usability: {}
     purchase_usability: {}
     sale_confirm_wizard: {}
+    sale_crm_usability: {}
     sale_no_optional_product: {}
     sale_no_preview_button: {}
     sale_order_add_bom: {}
@@ -76,6 +80,9 @@ akretion:
     stock_no_product_template_menu: {}
     stock_picking_type_default_partner: {}
     stock_product_tree_default: {}
+    stock_quant_package_move_wizard:
+      maintainers:
+      - alexis-via
     stock_reception_usability: {}
     stock_usability: {}
     stock_valuation_xlsx: {}
@@ -101,6 +108,7 @@ oca:
   account-financial-tools:
     account_account_constraint_code: {}
     account_asset_batch_compute: {}
+    account_asset_compute_batch: {}
     account_asset_low_value:
       maintainers:
       - kittiu
@@ -162,6 +170,9 @@ oca:
     account_sequence_option:
       maintainers:
       - kittiu
+    account_spread_cost_revenue:
+      maintainers:
+      - astirpe
     account_template_active:
       maintainers:
       - legalsylvain
@@ -246,6 +257,9 @@ oca:
     account_invoice_refund_reason:
       maintainers:
       - max3903
+    account_invoice_refund_reason_skip_anglo_saxon:
+      maintainers:
+      - ChrisOForgeFlow
     account_invoice_refund_reinvoice: {}
     account_invoice_restrict_linked_so: {}
     account_invoice_search_by_reference: {}
@@ -270,6 +284,9 @@ oca:
     account_mail_autosubscribe:
       maintainers:
       - ivantodorovich
+    account_menu_invoice_refund:
+      maintainers:
+      - kittiu
     account_move_exception: {}
     account_move_line_accounting_description: {}
     account_move_line_accounting_description_purchase: {}
@@ -279,6 +296,9 @@ oca:
     account_move_propagate_ref: {}
     account_move_tier_validation: {}
     account_move_tier_validation_forward: {}
+    account_receipt_journal:
+      maintainers:
+      - eLBati
     account_receipt_print: {}
     account_refund_payment_term:
       maintainers:
@@ -289,6 +309,9 @@ oca:
       - pedrobaeza
       - MiquelRForgeFlow
     sale_line_refund_to_invoice_qty: {}
+    sale_line_refund_to_invoice_qty_skip_anglo_saxon:
+      maintainers:
+      - ChrisOForgeFlow
     sale_order_invoicing_grouping_criteria:
       maintainers:
       - pedrobaeza
@@ -370,6 +393,7 @@ oca:
     account_payment_mode: {}
     account_payment_mode_default_account: {}
     account_payment_order: {}
+    account_payment_order_grouped_output: {}
     account_payment_order_notification:
       maintainers:
       - victoralmau
@@ -399,6 +423,7 @@ oca:
       maintainers:
       - pedrobaeza
     account_statement_import_ofx: {}
+    account_statement_import_ofx_by_acctid: {}
     account_statement_import_online:
       maintainers:
       - alexey-pelykh
@@ -425,6 +450,9 @@ oca:
       - alexis-via
     l10n_eu_nace: {}
     l10n_eu_product_adr: {}
+    l10n_eu_product_adr_dangerous_goods:
+      maintainers:
+      - mmequignon
     uom_unece:
       maintainers:
       - astirpe
@@ -594,6 +622,7 @@ oca:
     delivery_package_fee: {}
     delivery_package_number: {}
     delivery_postlogistics: {}
+    delivery_postlogistics_dangerous_goods: {}
     delivery_postlogistics_server_env: {}
     delivery_price_method: {}
     delivery_price_rule_untaxed:
@@ -645,13 +674,22 @@ oca:
     website_sale_delivery_group:
       maintainers:
       - ivantodorovich
+    website_sale_hide_empty_category: {}
     website_sale_hide_price: {}
+    website_sale_invoice_address: {}
     website_sale_order_type:
       maintainers:
       - joao-p-marques
+    website_sale_payment_term_acquirer:
+      maintainers:
+      - geomer198
+      - CetmixGitDrone
     website_sale_product_assortment:
       maintainers:
       - CarlosRoca13
+    website_sale_product_attachment:
+      maintainers:
+      - Yajo
     website_sale_product_attribute_filter_category:
       maintainers:
       - ivantodorovich
@@ -703,6 +741,7 @@ oca:
       - alexis-via
     account_invoice_import_ubl: {}
     account_invoice_ubl: {}
+    account_invoice_ubl_email_attachment: {}
     base_business_document_import:
       maintainers:
       - alexis-via
@@ -833,6 +872,7 @@ oca:
       maintainers:
       - joao-p-marques
     hr_worked_days_from_timesheet: {}
+    resource_hook: {}
   hr-timesheet:
     crm_timesheet: {}
     hr_employee_product: {}
@@ -906,6 +946,10 @@ oca:
       maintainers:
       - renatonlima
       - rvalyi
+    l10n_br_cnab_structure:
+      maintainers:
+      - antoniospneto
+      - felipemotter
     l10n_br_coa:
       maintainers:
       - renatonlima
@@ -953,6 +997,18 @@ oca:
       - luismalta
       - marcelsavegnago
     l10n_br_portal: {}
+    l10n_br_pos:
+      maintainers:
+      - mileo
+      - lfdivino
+      - luismalta
+      - ygcarvalh
+    l10n_br_pos_cfe:
+      maintainers:
+      - mileo
+      - lfdivino
+      - luismalta
+      - ygcarvalh
     l10n_br_purchase:
       maintainers:
       - renatonlima
@@ -1016,6 +1072,9 @@ oca:
     l10n_fr_account_vat_return:
       maintainers:
       - alexis-via
+    l10n_fr_account_vat_return_selenium:
+      maintainers:
+      - alexis-via
     l10n_fr_account_vat_return_teledec:
       maintainers:
       - alexis-via
@@ -1059,6 +1118,9 @@ oca:
     l10n_fr_mis_reports:
       maintainers:
       - alexis-via
+    l10n_fr_oca:
+      maintainers:
+      - alexis-via
     l10n_fr_pos_cert_allow_change_qty: {}
     l10n_fr_siret:
       maintainers:
@@ -1086,8 +1148,10 @@ oca:
     mrp_bom_hierarchy: {}
     mrp_bom_line_sequence: {}
     mrp_bom_location: {}
+    mrp_bom_responsible: {}
     mrp_bom_tracking: {}
     mrp_component_operation: {}
+    mrp_component_operation_scrap_reason: {}
     mrp_lot_on_hand_first:
       maintainers:
       - grindtildeath
@@ -1137,6 +1201,7 @@ oca:
     quality_control_oca: {}
     quality_control_stock_oca: {}
     repair_discount: {}
+    repair_picking_after_done: {}
     repair_refurbish: {}
     repair_stock_move: {}
     repair_type: {}
@@ -1356,6 +1421,7 @@ oca:
       - sergio-teruel
     product_custom_info: {}
     product_dimension: {}
+    product_expiry_configurable: {}
     product_form_pricelist: {}
     product_logistics_uom:
       maintainers:
@@ -1536,6 +1602,7 @@ oca:
       maintainers:
       - eLBati
       - bosd
+    project_wbs: {}
   project-reporting:
     project_task_report: {}
   purchase-reporting:
@@ -1570,7 +1637,14 @@ oca:
     purchase_exception: {}
     purchase_fop_shipping: {}
     purchase_force_invoiced: {}
+    purchase_invoice_method: {}
     purchase_invoice_plan:
+      maintainers:
+      - kittiu
+    purchase_invoice_plan_deposit:
+      maintainers:
+      - kittiu
+    purchase_invoice_plan_retention:
       maintainers:
       - kittiu
     purchase_isolated_rfq:
@@ -1593,6 +1667,7 @@ oca:
     purchase_order_general_discount: {}
     purchase_order_line_deep_sort: {}
     purchase_order_line_description_picking: {}
+    purchase_order_line_image: {}
     purchase_order_line_invoicing: {}
     purchase_order_line_menu: {}
     purchase_order_line_packaging_qty: {}
@@ -1650,6 +1725,10 @@ oca:
       - joao-p-marques
     purchase_stock_price_unit_sync: {}
     purchase_stock_secondary_unit: {}
+    purchase_stock_vendor_bill_breakdown:
+      maintainers:
+      - geomer198
+      - CetmixGitDrone
     purchase_supplierinfo_product_breakdown: {}
     purchase_tag: {}
     purchase_tier_validation: {}
@@ -1857,6 +1936,7 @@ oca:
       - dreispt
     sale_partner_incoterm: {}
     sale_partner_version: {}
+    sale_pricelist_discount_decimal_precision: {}
     sale_pricelist_from_commitment_date: {}
     sale_procurement_amendment:
       maintainers:
@@ -1924,6 +2004,7 @@ oca:
       maintainers:
       - sbidoul
     auth_ldaps: {}
+    auth_oauth_multi_token: {}
     auth_oidc:
       maintainers:
       - sbidoul
@@ -2083,6 +2164,9 @@ oca:
       - moylop260
       - fernandahf
     sequence_python: {}
+    session_db:
+      maintainers:
+      - sbidoul
     slow_statement_logger: {}
     sql_export: {}
     sql_export_excel: {}
@@ -2129,6 +2213,7 @@ oca:
     base_tier_validation_server_action:
       maintainers:
       - kittiu
+    base_tier_validation_waiting: {}
     base_user_locale: {}
     chained_swapper: {}
     date_range:
@@ -2164,6 +2249,7 @@ oca:
     mail_activity_done: {}
     mail_activity_partner: {}
     mail_activity_team: {}
+    mail_activity_unlink_log: {}
     mail_allow_portal_internal_note: {}
     mail_attach_existing_attachment: {}
     mail_attach_existing_attachment_account: {}
@@ -2239,6 +2325,7 @@ oca:
     product_gs1_barcode: {}
     product_multi_barcode: {}
     product_multi_barcode_stock_menu: {}
+    product_multi_barcode_supplierinfo: {}
     product_supplierinfo_barcode:
       maintainers:
       - eLBati
@@ -2372,6 +2459,7 @@ oca:
     stock_quant_manual_assign: {}
     stock_quant_reservation_info: {}
     stock_quant_reservation_info_mrp: {}
+    stock_quant_view_reservation: {}
     stock_request: {}
     stock_request_analytic: {}
     stock_request_cancel_confirm:
@@ -2415,7 +2503,11 @@ oca:
     sale_line_returned_qty_mrp: {}
     sale_order_global_stock_route: {}
     sale_stock_mto_as_mts_orderpoint: {}
+    stock_account_product_run_fifo_hook: {}
     stock_auto_move: {}
+    stock_dangerous_goods:
+      maintainers:
+      - mmequignon
     stock_delivery_note: {}
     stock_landed_costs_mrp_subcontracting: {}
     stock_lock_lot: {}
@@ -2449,6 +2541,9 @@ oca:
       - carlosdauden
       - i-vyshnevska
     stock_picking_cancel_reason: {}
+    stock_picking_default_planned_transfer:
+      maintainers:
+      - Kev-Roche
     stock_picking_filter_lot: {}
     stock_picking_group_by_partner_by_carrier: {}
     stock_picking_group_by_partner_by_carrier_by_date: {}
@@ -2466,12 +2561,17 @@ oca:
       - mmequignon
       - JuMiSanAr
     stock_picking_purchase_order_link: {}
+    stock_picking_quick:
+      maintainers:
+      - PierrickBrun
+      - bealdav
     stock_picking_restrict_cancel_with_orig_move: {}
     stock_picking_return_show_lot: {}
     stock_picking_sale_order_link: {}
     stock_picking_send_by_mail: {}
     stock_picking_show_backorder: {}
     stock_picking_show_return: {}
+    stock_picking_supplier_ref: {}
     stock_picking_tier_validation: {}
     stock_picking_warn_message: {}
     stock_production_lot_active:
@@ -2490,6 +2590,7 @@ oca:
     stock_scheduler_assignation_horizon: {}
     stock_split_picking: {}
     stock_valuation_layer_by_category: {}
+    stock_valuation_layer_usage: {}
     stock_valuation_no_developer_mode: {}
   web:
     support_branding: {}
@@ -2517,6 +2618,7 @@ oca:
     web_m2x_options_manager: {}
     web_no_bubble: {}
     web_notify: {}
+    web_notify_channel_message: {}
     web_pwa_oca:
       maintainers:
       - eLBati
