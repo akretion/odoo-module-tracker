@@ -911,6 +911,7 @@ oca:
     purchase_request: {}
     purchase_request_department: {}
     purchase_request_exception: {}
+    purchase_request_substate: {}
     purchase_request_tier_validation: {}
     purchase_request_to_requisition: {}
     purchase_requisition_grouped_by_procurement:
@@ -932,6 +933,9 @@ oca:
       maintainers:
       - ps-tubtim
     purchase_work_acceptance_evaluation:
+      maintainers:
+      - kittiu
+    purchase_work_acceptance_invoice_plan:
       maintainers:
       - kittiu
     purchase_work_acceptance_late_fines:
