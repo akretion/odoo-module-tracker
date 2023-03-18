@@ -14,6 +14,7 @@ akretion:
     partner_tree_default_contacts: {}
     pos_check_deposit: {}
     pos_product_tree_default: {}
+    pos_usability: {}
     product_print_zpl_barcode: {}
     product_usability: {}
     purchase_product_tree_default: {}
@@ -357,6 +358,9 @@ oca:
     product_state:
       maintainers:
       - emagdalenaC2i
+    product_template_has_one_variant:
+      maintainers:
+      - rousseldenis
     product_uom_measure_type:
       maintainers:
       - legalsylvain
@@ -394,6 +398,7 @@ oca:
     purchase_last_price_info:
       maintainers:
       - LoisRForgeFlow
+    purchase_order_approved: {}
     purchase_order_line_menu: {}
     purchase_request: {}
     purchase_request_tier_validation: {}
