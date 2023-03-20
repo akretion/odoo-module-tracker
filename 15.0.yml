@@ -501,20 +501,7 @@ oca:
       maintainers:
       - victoralmau
     hr_worked_days_from_timesheet: {}
-  hr-timesheet:
-    crm_timesheet: {}
-    hr_employee_product: {}
-    hr_timesheet_begin_end: {}
-    hr_timesheet_sheet: {}
-    hr_timesheet_sheet_begin_end: {}
-    hr_timesheet_task_domain: {}
-    hr_timesheet_task_required: {}
-    hr_timesheet_task_stage: {}
-    hr_timesheet_time_type: {}
-    sale_timesheet_line_exclude: {}
-    sale_timesheet_rounded: {}
-    sale_timesheet_task_exclude: {}
-  intrastat:
+  intrastat-extrastat:
     intrastat_base:
       maintainers:
       - alexis-via
@@ -1624,6 +1611,19 @@ oca:
     storage_image_product: {}
     storage_thumbnail: {}
   support: {}
+  timesheet:
+    crm_timesheet: {}
+    hr_employee_product: {}
+    hr_timesheet_begin_end: {}
+    hr_timesheet_sheet: {}
+    hr_timesheet_sheet_begin_end: {}
+    hr_timesheet_task_domain: {}
+    hr_timesheet_task_required: {}
+    hr_timesheet_task_stage: {}
+    hr_timesheet_time_type: {}
+    sale_timesheet_line_exclude: {}
+    sale_timesheet_rounded: {}
+    sale_timesheet_task_exclude: {}
   web:
     web_action_conditionable: {}
     web_advanced_search:
