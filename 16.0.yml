@@ -1,5 +1,11 @@
 akretion:
+  account-move-import:
+    account_move_csv_import: {}
   ak-odoo-incubator: {}
+  odoo-import-helper:
+    account_import_helper: {}
+    account_ir_property_helper: {}
+  odoo-perf: {}
   odoo-usability:
     account_usability_akretion: {}
     base_company_extension: {}
@@ -30,6 +36,11 @@ akretion:
       maintainers:
       - alexis-via
     stock_usability: {}
+  partner-module-information: {}
+  pos-sale-order: {}
+  profiloo: {}
+  rest-authenticable: {}
+  sale-configurator: {}
 oca:
   account-financial-reporting:
     account_financial_report: {}
@@ -106,6 +117,24 @@ oca:
     account_statement_import_base:
       maintainers:
       - alexis-via
+  bank-statement-reconcile-simple: {}
+  brand:
+    account_brand:
+      maintainers:
+      - osi-scampbell
+      - sbejaoui
+    brand:
+      maintainers:
+      - sbejaoui
+    brand_external_report_layout:
+      maintainers:
+      - sbejaoui
+    product_brand: {}
+    sale_brand:
+      maintainers:
+      - osi-scampbell
+      - sbejaoui
+  calendar: {}
   community-data-files:
     account_payment_unece:
       maintainers:
@@ -138,6 +167,10 @@ oca:
   connector-telephony: {}
   contract:
     contract: {}
+  credit-control:
+    account_invoice_overdue_reminder:
+      maintainers:
+      - alexis-via
   crm:
     crm_claim: {}
     crm_lead_code: {}
@@ -160,6 +193,7 @@ oca:
     delivery_price_method: {}
     delivery_state: {}
     stock_picking_delivery_link: {}
+  dms: {}
   e-commerce:
     website_sale_hide_price: {}
     website_sale_product_reference_displayed: {}
@@ -271,6 +305,11 @@ oca:
       maintainers:
       - JordiBForgeFlow
   mis-builder: {}
+  multi-company:
+    account_invoice_inter_company: {}
+    product_tax_multicompany_default:
+      maintainers:
+      - Shide
   partner-contact:
     base_country_state_translatable: {}
     base_location:
@@ -408,12 +447,22 @@ oca:
       maintainers:
       - rousseldenis
     purchase_tier_validation: {}
+  queue:
+    queue_job:
+      maintainers:
+      - guewen
+    queue_job_cron: {}
+    queue_job_cron_jobrunner:
+      maintainers:
+      - ivantodorovich
+    test_queue_job: {}
   reporting-engine:
     base_comment_template: {}
     bi_sql_editor:
       maintainers:
       - legalsylvain
     report_company_details_translatable: {}
+    report_csv: {}
     report_label:
       maintainers:
       - ivantodorovich
@@ -430,6 +479,32 @@ oca:
     sql_request_abstract:
       maintainers:
       - legalsylvain
+  rest-framework:
+    base_rest: {}
+    base_rest_auth_api_key:
+      maintainers:
+      - lmignon
+    base_rest_datamodel: {}
+    base_rest_demo:
+      maintainers:
+      - lmignon
+    base_rest_pydantic: {}
+    datamodel:
+      maintainers:
+      - lmignon
+    extendable:
+      maintainers:
+      - lmignon
+    graphql_base:
+      maintainers:
+      - sbidoul
+    graphql_demo:
+      maintainers:
+      - sbidoul
+    pydantic:
+      maintainers:
+      - lmignon
+  rma: {}
   sale-financial: {}
   sale-reporting:
     sale_order_line_position: {}
@@ -455,6 +530,7 @@ oca:
     sale_triple_discount: {}
   search-engine: {}
   server-auth:
+    auth_admin_passkey: {}
     auth_api_key: {}
   server-backend:
     base_user_role:
@@ -544,6 +620,7 @@ oca:
       - joao-p-marques
     mail_optional_autofollow: {}
     mail_optional_follower_notification: {}
+    mail_outbound_static: {}
     mail_partner_opt_out: {}
   stock-logistics-barcode:
     barcodes_generator_abstract:
@@ -568,6 +645,7 @@ oca:
     stock_move_common_dest: {}
     stock_move_location: {}
     stock_mts_mto_rule: {}
+    stock_packaging_calculator: {}
     stock_picking_volume:
       maintainers:
       - lmignon
@@ -581,6 +659,7 @@ oca:
     stock_grn: {}
     stock_lot_production_date: {}
     stock_move_line_auto_fill: {}
+    stock_move_propagate_first_move: {}
     stock_no_negative: {}
     stock_picking_auto_create_lot:
       maintainers:
@@ -597,6 +676,9 @@ oca:
       maintainers:
       - florian-dacosta
     stock_split_picking: {}
+  storage:
+    storage_backend: {}
+  support: {}
   web:
     web_chatter_position: {}
     web_dark_mode: {}
@@ -619,3 +701,15 @@ oca:
       maintainers:
       - tarteo
     web_tree_many2one_clickable: {}
+  web-api: {}
+  wms:
+    stock_available_to_promise_release: {}
+    stock_dynamic_routing: {}
+    stock_picking_completion_info: {}
+    stock_release_channel:
+      maintainers:
+      - sebalix
+shopinvader:
+  odoo-shopinvader: {}
+  odoo-shopinvader-payment: {}
+  pattern-import-export: {}
