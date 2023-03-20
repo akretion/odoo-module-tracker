@@ -1,714 +1,136 @@
 akretion:
   account-move-import:
-    account_move_csv_import: {}
-  ak-odoo-incubator: {}
-  odoo-import-helper:
-    account_import_helper: {}
-    account_ir_property_helper: {}
-  odoo-perf: {}
-  odoo-usability:
-    account_usability_akretion: {}
-    base_company_extension: {}
-    base_usability: {}
-    crm_usability: {}
-    delivery_usability: {}
-    mail_usability: {}
-    mrp_product_tree_default: {}
-    mrp_usability: {}
-    partner_tree_default_account: {}
-    partner_tree_default_base: {}
-    partner_tree_default_contacts: {}
-    pos_check_deposit: {}
-    pos_product_tree_default: {}
-    pos_usability: {}
-    product_print_zpl_barcode: {}
-    product_usability: {}
-    purchase_product_tree_default: {}
-    purchase_stock_usability: {}
-    purchase_usability: {}
-    sale_confirm_wizard: {}
-    sale_product_tree_default: {}
-    sale_quotation_title: {}
-    sale_stock_usability: {}
-    sale_usability: {}
-    stock_product_tree_default: {}
-    stock_quant_package_move_wizard:
-      maintainers:
-      - alexis-via
-    stock_usability: {}
-  partner-module-information: {}
-  pos-sale-order: {}
-  profiloo: {}
-  rest-authenticable: {}
-  sale-configurator: {}
+    account_move_csv_import:
+      author: Akretion
+      depends:
+      - account
+      name: Account Move Import
 oca:
   account-financial-reporting:
-    account_financial_report: {}
-    account_tax_balance: {}
-  account-financial-tools:
-    account_asset_management: {}
-    account_cash_deposit: {}
-    account_chart_update: {}
-    account_fiscal_position_vat_check: {}
-    account_fiscal_year:
-      maintainers:
-      - eLBati
-    account_fiscal_year_auto_create:
-      maintainers:
-      - legalsylvain
-    account_invoice_constraint_chronology: {}
-    account_journal_general_sequence:
-      maintainers:
-      - yajo
-    account_lock_date_update: {}
-    account_move_name_sequence:
-      maintainers:
-      - alexis-via
-      - moylop260
-      - frahikLV
-    account_move_print:
-      maintainers:
-      - JordiBForgeFlow
-    account_template_active:
-      maintainers:
-      - legalsylvain
-    account_usability:
-      maintainers:
-      - legalsylvain
-    base_vat_optional_vies: {}
-  account-fiscal-rule:
-    account_fiscal_position_type: {}
-    account_product_fiscal_classification:
-      maintainers:
-      - legalsylvain
-  account-invoice-reporting:
-    account_invoice_report_grouped_by_picking: {}
-  account-invoicing:
-    account_invoice_blocking: {}
-    account_invoice_check_total: {}
-    account_invoice_fiscal_position_update:
-      maintainers:
-      - alexis-via
-    account_invoice_refund_link: {}
-    account_invoice_tax_required: {}
-    account_invoice_transmit_method:
-      maintainers:
-      - alexis-via
-    account_invoice_triple_discount: {}
-    account_menu_invoice_refund:
-      maintainers:
-      - kittiu
-  account-payment:
-    account_due_list: {}
-    account_payment_term_extension: {}
-  account-reconcile:
-    account_mass_reconcile: {}
-    account_statement_base:
-      maintainers:
-      - alexis-via
-  bank-payment:
-    account_banking_mandate: {}
-    account_payment_mode: {}
-    account_payment_order: {}
-    account_payment_order_grouped_output: {}
-    account_payment_partner: {}
-    account_payment_sale: {}
-  bank-statement-import:
-    account_statement_import_base:
-      maintainers:
-      - alexis-via
-  bank-statement-reconcile-simple: {}
-  brand:
-    account_brand:
-      maintainers:
-      - osi-scampbell
-      - sbejaoui
-    brand:
-      maintainers:
-      - sbejaoui
-    brand_external_report_layout:
-      maintainers:
-      - sbejaoui
-    product_brand: {}
-    sale_brand:
-      maintainers:
-      - osi-scampbell
-      - sbejaoui
-  calendar: {}
-  community-data-files:
-    account_payment_unece:
-      maintainers:
-      - alexis-via
-    account_tax_unece:
-      maintainers:
-      - alexis-via
-    base_bank_from_iban: {}
-    base_iso3166: {}
-    base_unece:
-      maintainers:
-      - astirpe
-      - alexis-via
-    uom_unece:
-      maintainers:
-      - astirpe
-      - alexis-via
-  connector:
-    component:
-      maintainers:
-      - guewen
-    component_event: {}
-    connector: {}
-    connector_base_product: {}
-    test_component:
-      maintainers:
-      - guewen
-    test_connector: {}
-  connector-ecommerce: {}
-  connector-telephony: {}
-  contract:
-    contract: {}
-  credit-control:
-    account_invoice_overdue_reminder:
-      maintainers:
-      - alexis-via
-  crm:
-    crm_claim: {}
-    crm_lead_code: {}
-    crm_lead_firstname: {}
-    crm_lead_search_archive:
-      maintainers:
-      - bealdav
-    crm_location: {}
-  currency:
-    currency_rate_update: {}
-  delivery-carrier:
-    base_delivery_carrier_label: {}
-    delivery_carrier_account: {}
-    delivery_carrier_agency: {}
-    delivery_carrier_info: {}
-    delivery_carrier_max_weight_constraint: {}
-    delivery_cttexpress: {}
-    delivery_package_number: {}
-    delivery_package_type_number_parcels: {}
-    delivery_price_method: {}
-    delivery_state: {}
-    stock_picking_delivery_link: {}
-  dms: {}
-  e-commerce:
-    website_sale_hide_price: {}
-    website_sale_product_reference_displayed: {}
-    website_sale_stock_available: {}
-  edi:
-    base_edi:
-      maintainers:
-      - simahawk
-    pdf_helper:
-      maintainers:
-      - simahawk
-      - alexis-via
-  hr:
-    hr_course: {}
-    hr_employee_digitized_signature:
-      maintainers:
-      - newtratip
-    hr_employee_firstname: {}
-    hr_employee_lastnames: {}
-    hr_employee_medical_examination: {}
-    hr_employee_partner_external: {}
-    hr_employee_relative: {}
-    hr_employee_ssn: {}
-    hr_personal_equipment_request: {}
-  intrastat-extrastat:
-    intrastat_base:
-      maintainers:
-      - alexis-via
-      - luc-demeyer
-    product_harmonized_system:
-      maintainers:
-      - alexis-via
-      - luc-demeyer
-    product_harmonized_system_delivery:
-      maintainers:
-      - alexis-via
-      - luc-demeyer
-    product_harmonized_system_stock:
-      maintainers:
-      - alexis-via
-      - luc-demeyer
-  l10n-brazil:
-    l10n_br_account_due_list:
-      maintainers:
-      - renatonlima
-      - rvalyi
-    l10n_br_base:
-      maintainers:
-      - renatonlima
-      - rvalyi
-    l10n_br_coa:
-      maintainers:
-      - renatonlima
-      - mileo
-    l10n_br_coa_generic:
-      maintainers:
-      - mileo
-    l10n_br_coa_simple:
-      maintainers:
-      - renatonlima
-    l10n_br_crm: {}
-    l10n_br_currency_rate_update:
-      maintainers:
-      - renatonlima
-    l10n_br_stock: {}
-    l10n_br_zip:
-      maintainers:
-      - renatonlima
-  l10n-france:
-    account_balance_ebp_csv_export:
-      maintainers:
-      - alexis-via
-    account_banking_fr_lcr:
-      maintainers:
-      - alexis-via
-    l10n_fr_account_tax_unece:
-      maintainers:
-      - alexis-via
-    l10n_fr_department:
-      maintainers:
-      - legalsylvain
-    l10n_fr_department_oversea:
-      maintainers:
-      - alexis-via
-    l10n_fr_hr_check_ssnid:
-      maintainers:
-      - alexis-via
-    l10n_fr_intrastat_service:
-      maintainers:
-      - alexis-via
-    l10n_fr_siret:
-      maintainers:
-      - alexis-via
-    l10n_fr_siret_lookup:
-      maintainers:
-      - remi-filament
-      - alexis-via
-    l10n_fr_state:
-      maintainers:
-      - legalsylvain
-  manufacture:
-    mrp_multi_level:
-      maintainers:
-      - JordiBForgeFlow
-      - LoisRForgeFlow
-      - ChrisOForgeFlow
-    mrp_warehouse_calendar:
-      maintainers:
-      - JordiBForgeFlow
-  mis-builder: {}
-  multi-company:
-    account_invoice_inter_company: {}
-    product_tax_multicompany_default:
-      maintainers:
-      - Shide
-  partner-contact:
-    base_country_state_translatable: {}
-    base_location:
-      maintainers:
-      - pedrobaeza
-    base_location_geonames_import: {}
-    base_partner_sequence: {}
-    partner_accreditation:
-      maintainers:
-      - victor-champonnois
-    partner_address_street3: {}
-    partner_address_two_lines: {}
-    partner_affiliate: {}
-    partner_company_type: {}
-    partner_contact_access_link:
-      maintainers:
-      - Yajo
-    partner_contact_address_default: {}
-    partner_contact_birthdate: {}
-    partner_contact_gender: {}
-    partner_contact_job_position: {}
-    partner_contact_lang: {}
-    partner_contact_nationality: {}
-    partner_contact_personal_information_page: {}
-    partner_disable_gravatar:
-      maintainers:
-      - alexis-via
-    partner_email_duplicate_warn:
-      maintainers:
-      - alexis-via
-    partner_external_map: {}
-    partner_fax: {}
-    partner_firstname: {}
-    partner_identification: {}
-    partner_manual_rank:
-      maintainers:
-      - luisg123v
-      - frahikLV
-    partner_multi_relation: {}
-    partner_second_lastname: {}
-    partner_tz: {}
-    partner_vat_unique: {}
-  pos:
-    pos_customer_comment:
-      maintainers:
-      - legalsylvain
-    pos_default_partner: {}
-    pos_edit_order_line: {}
-    pos_escpos_status: {}
-    pos_global_discount_in_line: {}
-    pos_lot_barcode: {}
-    pos_lot_selection: {}
-    pos_order_remove_line:
-      maintainers:
-      - robyf70
-    pos_order_reorder:
-      maintainers:
-      - GabbasovDinar
-      - CetmixGitDrone
-    pos_order_to_sale_order:
-      maintainers:
-      - legalsylvain
-    pos_payment_terminal: {}
-    pos_product_display_default_code: {}
-    pos_product_quick_info:
-      maintainers:
-      - GabbasovDinar
-      - CetmixGitDrone
-    pos_receipt_hide_price: {}
-  product-attribute:
-    product_assortment: {}
-    product_category_active: {}
-    product_category_code:
-      maintainers:
-      - rousseldenis
-    product_code_unique: {}
-    product_dimension: {}
-    product_logistics_uom:
-      maintainers:
-      - hparfr
-    product_manufacturer: {}
-    product_multi_category: {}
-    product_packaging_dimension: {}
-    product_sequence: {}
-    product_state:
-      maintainers:
-      - emagdalenaC2i
-    product_template_has_one_variant:
-      maintainers:
-      - rousseldenis
-    product_uom_measure_type:
-      maintainers:
-      - legalsylvain
-    stock_production_lot_expired_date: {}
-  product-variant: {}
-  project:
-    project_department: {}
-    project_list: {}
-    project_role:
-      maintainers:
-      - alexey-pelykh
-    project_stock:
-      maintainers:
-      - victoralmau
-    project_task_add_very_high:
-      maintainers:
-      - astirpe
-    project_task_default_stage: {}
-    project_task_personal_stage_auto_fold: {}
-    project_template:
-      maintainers:
-      - patrickrwilson
-    project_timeline: {}
-    project_type: {}
-  project-reporting: {}
-  purchase-reporting: {}
-  purchase-workflow:
-    purchase_advance_payment: {}
-    purchase_allowed_product: {}
-    purchase_commercial_partner:
-      maintainers:
-      - alexis-via
-    purchase_delivery_split_date: {}
-    purchase_discount: {}
-    purchase_force_invoiced: {}
-    purchase_last_price_info:
-      maintainers:
-      - LoisRForgeFlow
-    purchase_order_approved: {}
-    purchase_order_line_menu: {}
-    purchase_request: {}
-    purchase_request_tier_validation: {}
-    purchase_requisition_tier_validation: {}
-    purchase_stock_packaging:
-      maintainers:
-      - rousseldenis
-    purchase_tier_validation: {}
-  queue:
-    queue_job:
-      maintainers:
-      - guewen
-    queue_job_cron: {}
-    queue_job_cron_jobrunner:
-      maintainers:
-      - ivantodorovich
-    test_queue_job: {}
-  reporting-engine:
-    base_comment_template: {}
-    bi_sql_editor:
-      maintainers:
-      - legalsylvain
-    report_company_details_translatable: {}
-    report_csv: {}
-    report_label:
-      maintainers:
-      - ivantodorovich
-    report_wkhtmltopdf_param: {}
-    report_xlsx: {}
-    report_xlsx_helper: {}
-    report_xml: {}
-    sql_export:
-      maintainers:
-      - legalsylvain
-    sql_export_mail:
-      maintainers:
-      - legalsylvain
-    sql_request_abstract:
-      maintainers:
-      - legalsylvain
-  rest-framework:
-    base_rest: {}
-    base_rest_auth_api_key:
-      maintainers:
-      - lmignon
-    base_rest_datamodel: {}
-    base_rest_demo:
-      maintainers:
-      - lmignon
-    base_rest_pydantic: {}
-    datamodel:
-      maintainers:
-      - lmignon
-    extendable:
-      maintainers:
-      - lmignon
-    graphql_base:
-      maintainers:
-      - sbidoul
-    graphql_demo:
-      maintainers:
-      - sbidoul
-    pydantic:
-      maintainers:
-      - lmignon
-  rma: {}
-  sale-financial: {}
-  sale-reporting:
-    sale_order_line_position: {}
-    sale_order_report_product_image: {}
-  sale-workflow:
-    partner_contact_sale_info_propagation: {}
-    partner_sale_pivot:
-      maintainers:
-      - ernestotejeda
-    sale_automatic_workflow: {}
-    sale_automatic_workflow_payment_mode: {}
-    sale_commercial_partner:
-      maintainers:
-      - alexis-via
-    sale_exception: {}
-    sale_order_line_menu: {}
-    sale_order_lot_selection:
-      maintainers:
-      - bodedra
-    sale_order_type: {}
-    sale_stock_picking_blocking: {}
-    sale_tier_validation: {}
-    sale_triple_discount: {}
-  search-engine: {}
-  server-auth:
-    auth_admin_passkey: {}
-    auth_api_key: {}
-  server-backend:
-    base_user_role:
-      maintainers:
-      - sebalix
-      - jcdrubay
-      - novawish
-    base_user_role_history:
-      maintainers:
-      - ThomasBinsfeld
-  server-brand:
-    disable_odoo_online: {}
-    portal_odoo_debranding:
-      maintainers:
-      - eLBati
-      - ivantodorovich
-    remove_odoo_enterprise: {}
-  server-env:
-    data_encryption: {}
-    mail_environment: {}
-    server_environment: {}
-    server_environment_data_encryption: {}
-    server_environment_ir_config_parameter: {}
-  server-tools:
-    attachment_unindex_content:
-      maintainers:
-      - moylop260
-      - ebirbe
-      - luisg123v
-    auditlog: {}
-    base_cron_exclusion:
-      maintainers:
-      - LoisRForgeFlow
-      - ChrisOForgeFlow
-    base_exception:
-      maintainers:
-      - hparfr
-      - sebastienbeau
-    base_fontawesome: {}
-    base_m2m_custom_field: {}
-    base_search_fuzzy: {}
-    base_technical_user: {}
-    base_time_window: {}
-    base_view_inheritance_extension: {}
-    dbfilter_from_header: {}
-    iap_alternative_provider:
-      maintainers:
-      - sebastienbeau
-    jsonifier: {}
-    module_change_auto_install:
-      maintainers:
-      - legalsylvain
-    onchange_helper: {}
-    sentry:
-      maintainers:
-      - barsi
-      - naglis
-      - versada
-      - moylop260
-      - fernandahf
-    session_db:
-      maintainers:
-      - sbidoul
-    upgrade_analysis:
-      maintainers:
-      - StefanRijnhart
-      - legalsylvain
-  server-ux:
-    base_optional_quick_create: {}
-    base_revision: {}
-    base_technical_features: {}
-    base_tier_validation:
-      maintainers:
-      - LoisRForgeFlow
-    base_tier_validation_formula: {}
-    date_range:
-      maintainers:
-      - lmignon
-    multi_step_wizard: {}
-    server_action_mass_edit: {}
-  social:
-    mail_activity_board: {}
-    mail_attach_existing_attachment: {}
-    mail_debrand:
-      maintainers:
-      - pedrobaeza
-      - joao-p-marques
-    mail_optional_autofollow: {}
-    mail_optional_follower_notification: {}
-    mail_outbound_static: {}
-    mail_partner_opt_out: {}
-  stock-logistics-barcode:
-    barcodes_generator_abstract:
-      maintainers:
-      - legalsylvain
-  stock-logistics-reporting:
-    delivery_line_sale_line_position: {}
-    stock_picking_report_valued: {}
-  stock-logistics-warehouse:
-    account_move_line_stock_info: {}
-    scrap_reason_code:
-      maintainers:
-      - bodedra
-    stock_demand_estimate: {}
-    stock_helper: {}
-    stock_location_product_restriction:
-      maintainers:
-      - lmignon
-      - rousseldenis
-    stock_location_zone: {}
-    stock_move_auto_assign: {}
-    stock_move_common_dest: {}
-    stock_move_location: {}
-    stock_mts_mto_rule: {}
-    stock_packaging_calculator: {}
-    stock_picking_volume:
-      maintainers:
-      - lmignon
-    stock_search_supplierinfo_code: {}
-    stock_warehouse_calendar:
-      maintainers:
-      - JordiBForgeFlow
-  stock-logistics-workflow:
-    purchase_stock_picking_invoice_link: {}
-    stock_delivery_note: {}
-    stock_grn: {}
-    stock_lot_production_date: {}
-    stock_move_line_auto_fill: {}
-    stock_move_propagate_first_move: {}
-    stock_no_negative: {}
-    stock_picking_auto_create_lot:
-      maintainers:
-      - sergio-teruel
-    stock_picking_back2draft: {}
-    stock_picking_invoice_link: {}
-    stock_picking_sale_order_link: {}
-    stock_picking_start: {}
-    stock_putaway_hook: {}
-    stock_quant_package_dimension: {}
-    stock_quant_package_product_packaging: {}
-    stock_receipt_lot_info: {}
-    stock_restrict_lot:
-      maintainers:
-      - florian-dacosta
-    stock_split_picking: {}
-  storage:
-    storage_backend: {}
-  support: {}
-  timesheet: {}
-  web:
-    web_chatter_position: {}
-    web_dark_mode: {}
-    web_domain_field: {}
-    web_environment_ribbon: {}
-    web_help: {}
-    web_refresher: {}
-    web_responsive:
-      maintainers:
-      - Yajo
-      - Tardo
-      - SplashS
-    web_search_with_and: {}
-    web_select_all_companies: {}
-    web_sheet_full_width: {}
-    web_theme_classic:
-      maintainers:
-      - legalsylvain
-    web_timeline:
-      maintainers:
-      - tarteo
-    web_tree_many2one_clickable: {}
-  web-api: {}
-  wms:
-    stock_available_to_promise_release: {}
-    stock_dynamic_routing: {}
-    stock_picking_completion_info: {}
-    stock_release_channel:
-      maintainers:
-      - sebalix
+    account_financial_report:
+      author: Camptocamp SA,initOS GmbH,redCOR AG,ForgeFlow,Odoo Community Association
+        (OCA)
+      depends:
+      - account
+      - date_range
+      - report_xlsx
+      name: Account Financial Reports
+      readme: "=========================\nAccount Financial Reports\n=========================\n\
+        \n.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n   !! This file\
+        \ is generated by oca-gen-addon-readme !!\n   !! changes will be overwritten.\
+        \                   !!\n   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        \n.. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png\n\
+        \    :target: https://odoo-community.org/page/development-status\n    :alt:\
+        \ Beta\n.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png\n\
+        \    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n    :alt:\
+        \ License: AGPL-3\n.. |badge3| image:: https://img.shields.io/badge/github-OCA%2Faccount--financial--reporting-lightgray.png?logo=github\n\
+        \    :target: https://github.com/OCA/account-financial-reporting/tree/16.0/account_financial_report\n\
+        \    :alt: OCA/account-financial-reporting\n.. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n\
+        \    :target: https://translation.odoo-community.org/projects/account-financial-reporting-16-0/account-financial-reporting-16-0-account_financial_report\n\
+        \    :alt: Translate me on Weblate\n.. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png\n\
+        \    :target: https://runbot.odoo-community.org/runbot/91/16.0\n    :alt:\
+        \ Try me on Runbot\n\n|badge1| |badge2| |badge3| |badge4| |badge5| \n\nThis\
+        \ module adds a set of financial reports. They are accessible under\nInvoicing\
+        \ / Reporting / OCA accounting reports.\n\n- General ledger\n- Trial Balance\n\
+        - Open Items\n- Aged Partner Balance\n- VAT Report\n- Journal Ledger\n\nCurrently\
+        \ General ledger, Trial Balance and Open Items are fully compatible with a\
+        \ foreign\ncurrency set up in account in order to display balances. Moreover,\
+        \ any foreign\ncurrency used in account move lines is properly shown.\n\n\
+        In case that in an account has not been configured a second currency foreign\n\
+        currency balances are not available.\n\n**Table of contents**\n\n.. contents::\n\
+        \   :local:\n\nKnown issues / Roadmap\n======================\n\n* 'VAT Report'\
+        \ is valid only for cases where it's met that for each\n  Tax defined: all\
+        \ the \"Account tags\" of all the\n  'Repartition for Invoices' or 'Repartition\
+        \ for Credit Notes'\n  are different.\n* It would be nice to have in reports\
+        \ a column indicating the\n  state of the entries when the option \"All Entries\"\
+        \ is selected\n  in \"Target Moves\" field in a wizard\n\nChangelog\n=========\n\
+        \n11.0.2.5.0 (2019-04-26)\n~~~~~~~~~~~~~~~~~~~~~~~\n\n* In the Trial Balance\
+        \ you have an option to hide parent hierarchy levels\n\n11.0.2.4.1 (2019-01-08)\n\
+        ~~~~~~~~~~~~~~~~~~~~~~~\n\n* Handle better multicompany behaviour\n* Improve\
+        \ how title appears in the reports\n* Improve performance in General Ledger\n\
+        \n\n11.0.2.3.1 (2018-11-29)\n~~~~~~~~~~~~~~~~~~~~~~~\n\n* In the Trial Balance\
+        \ you can apply a filter by hierarchy levels\n* In the General Ledger you\
+        \ can apply a filter by Analytic Tag\n* In the Journal Ledger the field 'Journal'\
+        \ is now optional\n\nBug Tracker\n===========\n\nBugs are tracked on `GitHub\
+        \ Issues <https://github.com/OCA/account-financial-reporting/issues>`_.\n\
+        In case of trouble, please check there if your issue has already been reported.\n\
+        If you spotted it first, help us smashing it by providing a detailed and welcomed\n\
+        `feedback <https://github.com/OCA/account-financial-reporting/issues/new?body=module:%20account_financial_report%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n\
+        \nDo not contact contributors directly about support or help with technical\
+        \ issues.\n\nCredits\n=======\n\nAuthors\n~~~~~~~\n\n* Camptocamp SA\n* initOS\
+        \ GmbH\n* redCOR AG\n* ForgeFlow\n\nContributors\n~~~~~~~~~~~~\n\n* Jordi\
+        \ Ballester <jordi.ballester@forgeflow.com>\n* Yannick Vaucher <yannick.vaucher@camptocamp.com>\n\
+        * Simone Orsi <simone.orsi@abstract.com>\n* Leonardo Pistone <leonardo.pistone@camptocamp.com>\n\
+        * Damien Crier <damien.crier@camptocamp.com>\n* Andrea Stirpe <a.stirpe@onestein.nl>\n\
+        * Thomas Rehn <thomas.rehn@initos.com>\n* Andrea Gallina <4everamd@gmail.com>\n\
+        * Robert Rottermann <robert@redcor.ch>\n* Ciro Urselli <c.urselli@apuliasoftware.it>\n\
+        * Francesco Apruzzese <opencode@e-ware.org>\n* Lorenzo Battistini <https://github.com/eLBati>\n\
+        * Julien Coux <julien.coux@camptocamp.com>\n* Akim Juillerat <akim.juillerat@camptocamp.com>\n\
+        * Alexis de Lattre <alexis@via.ecp.fr>\n* Mihai Fekete <feketemihai@gmail.com>\n\
+        * Miquel Ra\xEFch <miquel.raich@forgeflow.com>\n* Joan Sisquella <joan.sisquella@forgeflow.com>\n\
+        * `Tecnativa <https://www.tecnativa.com>`__:\n\n  * Pedro M. Baeza\n  * Sergio\
+        \ Teruel\n  * Ernesto Tejeda\n  * Jo\xE3o Marques\n  * Alexandre D. D\xED\
+        az\n  * V\xEDctor Mart\xEDnez\n\n* `Sygel <https://www.sygel.es>`__:\n\n \
+        \ * Harald Panten\n  * Valentin Vinagre\n\n* Lois Rilo <lois.rilo@forgeflow.com>\n\
+        * Saran Lim. <saranl@ecosoft.co.th>\n* Omar Casti\xF1eira <omar@comunitea.com>\n\
+        \nMuch of the work in this module was done at a sprint in Sorrento, Italy\
+        \ in\nApril 2016.\n\nMaintainers\n~~~~~~~~~~~\n\nThis module is maintained\
+        \ by the OCA.\n\n.. image:: https://odoo-community.org/logo.png\n   :alt:\
+        \ Odoo Community Association\n   :target: https://odoo-community.org\n\nOCA,\
+        \ or the Odoo Community Association, is a nonprofit organization whose\nmission\
+        \ is to support the collaborative development of Odoo features and\npromote\
+        \ its widespread use.\n\nThis module is part of the `OCA/account-financial-reporting\
+        \ <https://github.com/OCA/account-financial-reporting/tree/16.0/account_financial_report>`_\
+        \ project on GitHub.\n\nYou are welcome to contribute. To learn how please\
+        \ visit https://odoo-community.org/page/Contribute.\n"
+    account_tax_balance:
+      author: Agile Business Group, Therp BV, Tecnativa, ACSONE SA/NV, Odoo Community
+        Association (OCA)
+      depends:
+      - account
+      - date_range
+      development_status: Mature
+      name: Tax Balance
+      readme: "===========\nTax Balance\n===========\n\n.. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        \   !! This file is generated by oca-gen-addon-readme !!\n   !! changes will\
+        \ be overwritten.                   !!\n   !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        \n.. |badge1| image:: https://img.shields.io/badge/maturity-Mature-brightgreen.png\n\
+        \    :target: https://odoo-community.org/page/development-status\n    :alt:\
+        \ Mature\n.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png\n\
+        \    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html\n    :alt:\
+        \ License: AGPL-3\n.. |badge3| image:: https://img.shields.io/badge/github-OCA%2Faccount--financial--reporting-lightgray.png?logo=github\n\
+        \    :target: https://github.com/OCA/account-financial-reporting/tree/16.0/account_tax_balance\n\
+        \    :alt: OCA/account-financial-reporting\n.. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\n\
+        \    :target: https://translation.odoo-community.org/projects/account-financial-reporting-16-0/account-financial-reporting-16-0-account_tax_balance\n\
+        \    :alt: Translate me on Weblate\n.. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png\n\
+        \    :target: https://runbot.odoo-community.org/runbot/91/16.0\n    :alt:\
+        \ Try me on Runbot\n\n|badge1| |badge2| |badge3| |badge4| |badge5| \n\nThis\
+        \ module allows to compute tax balances within a certain date range.\nIt depends\
+        \ on date_range module and exposes 'compute' methods that can be called by\
+        \ other modules\n(like localization ones).\n\n**Table of contents**\n\n..\
+        \ contents::\n   :local:\n\nUsage\n=====\n\nAccounting --> Reporting --> Taxes\
+        \ Balance\n\nSelect the company, the date range, the target moves and 'open\
+        \ taxes'\n\n.. figure:: https://raw.githubusercontent.com/account_tax_balance/static/description/tax_balance.png\n\
+        \nBug Tracker\n===========\n\nBugs are tracked on `GitHub Issues <https://github.com/OCA/account-financial-reporting/issues>`_.\n\
+        In case of trouble, please check there if your issue has already been reported.\n\
+        If you spotted it first, help us smashing it by providing a detailed and welcomed\n\
+        `feedback <https://github.com/OCA/account-financial-reporting/issues/new?body=module:%20account_tax_balance%0Aversion:%2016.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**>`_.\n\
+        \nDo not contact contributors directly about support or help with technical\
+        \ issues.\n\nCredits\n=======\n\nAuthors\n~~~~~~~\n\n* Agile Business Group\n\
+        * Therp BV\n* Tecnativa\n* ACSONE SA/NV\n\nContributors\n~~~~~~~~~~~~\n\n\
+        * Lorenzo Battistini <lorenzo.battistini@agilebg.com>\n* Giovanni Capalbo\
+        \ <giovanni@therp.nl>\n* Tecnativa - Antonio Espinosa\n* Tecnativa - Pedro\
+        \ M. Baeza\n* ACSONE SA/NV - St\xE9phane Bidoul\n* Andrea Stirpe <a.stirpe@onestein.nl>\n\
+        * Iv\xE1n Ant\xF3n <ozono@ozonomultimedia.com>\n* `Sygel <https://www.sygel.es>`__:\n\
+        \n  * Valentin Vinagre\n\nMaintainers\n~~~~~~~~~~~\n\nThis module is maintained\
+        \ by the OCA.\n\n.. image:: https://odoo-community.org/logo.png\n   :alt:\
+        \ Odoo Community Association\n   :target: https://odoo-community.org\n\nOCA,\
+        \ or the Odoo Community Association, is a nonprofit organization whose\nmission\
+        \ is to support the collaborative development of Odoo features and\npromote\
+        \ its widespread use.\n\nThis module is part of the `OCA/account-financial-reporting\
+        \ <https://github.com/OCA/account-financial-reporting/tree/16.0/account_tax_balance>`_\
+        \ project on GitHub.\n\nYou are welcome to contribute. To learn how please\
+        \ visit https://odoo-community.org/page/Contribute.\n"
 shopinvader:
   odoo-shopinvader: {}
   odoo-shopinvader-payment: {}
