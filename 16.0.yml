@@ -218,8 +218,7 @@ oca:
     hr_employee_relative: {}
     hr_employee_ssn: {}
     hr_personal_equipment_request: {}
-  hr-timesheet: {}
-  intrastat:
+  intrastat-extrastat:
     intrastat_base:
       maintainers:
       - alexis-via
@@ -679,6 +678,7 @@ oca:
   storage:
     storage_backend: {}
   support: {}
+  timesheet: {}
   web:
     web_chatter_position: {}
     web_dark_mode: {}
