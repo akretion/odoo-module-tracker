@@ -38,9 +38,20 @@ def analyse_repo(orga, repo, version):
             with open(manifest, mode="r") as f:
                 data = ast.literal_eval(f.read())
                 if data.get("installable", True):
-                    RESULT[orga][repo][module] = {}
-                    if data.get("maintainers"):
-                        RESULT[orga][repo][module]["maintainers"] = data["maintainers"]
+                    readme_path = f"{path}/{module}/README.rst"
+                    if os.path.exists(readme_path):
+                        readme = open(readme_path).read()
+                    else:
+                        readme = ""
+                    RESULT[orga][repo][module] = {
+                        "name": data["name"],
+                        "author": data["author"],
+                        "depends": data.get("depends", []),
+                        "maintainers": data.get("mainainers", []),
+                        "development_status": data.get("development_status"),
+                        "summary": data.get("summary"),
+                        "readme": readme,
+                        }
 
 
 with open('config.yml', 'r') as f:
@@ -71,4 +82,13 @@ if not os.path.exists("output"):
 
 data = yaml.safe_dump(RESULT)
 with open(f"output/{version}.yml", 'w') as output:
+    output.write(data)
+
+
+for orga, repos in RESULT.items():
+    for repo in repos:
+        RESULT[orga][repo] = list(RESULT[orga][repo].keys())
+
+data = yaml.safe_dump(RESULT)
+with open(f"output/module-list-{version}.yml", 'w') as output:
     output.write(data)
