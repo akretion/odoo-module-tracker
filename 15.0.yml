@@ -1,6 +1,14 @@
 akretion:
+  account-move-import: {}
   ak-odoo-incubator: {}
+  odoo-import-helper: {}
+  odoo-perf: {}
   odoo-usability: {}
+  partner-module-information: {}
+  pos-sale-order: {}
+  profiloo: {}
+  rest-authenticable: {}
+  sale-configurator: {}
 oca:
   account-financial-reporting:
     account_financial_report: {}
@@ -246,6 +254,30 @@ oca:
     account_statement_import_txt_xlsx:
       maintainers:
       - alexey-pelykh
+  bank-statement-reconcile-simple: {}
+  brand:
+    account_brand:
+      maintainers:
+      - osi-scampbell
+      - sbejaoui
+    analytic_brand:
+      maintainers:
+      - sbejaoui
+    brand:
+      maintainers:
+      - sbejaoui
+    brand_external_report_layout:
+      maintainers:
+      - sbejaoui
+    contract_brand:
+      maintainers:
+      - sbejaoui
+    product_brand: {}
+    sale_brand:
+      maintainers:
+      - osi-scampbell
+      - sbejaoui
+  calendar: {}
   community-data-files:
     account_payment_unece: {}
     account_tax_unece:
@@ -282,6 +314,23 @@ oca:
     contract_sale: {}
     contract_sale_generation: {}
     contract_variable_quantity: {}
+  credit-control:
+    account_credit_control: {}
+    account_financial_risk:
+      maintainers:
+      - carlosdauden
+    account_invoice_overdue_reminder:
+      maintainers:
+      - alexis-via
+    partner_risk_insurance:
+      maintainers:
+      - Daniel-CA
+      - sergio-teruel
+      - omar7r
+      - Tardo
+    sale_financial_risk: {}
+    sale_financial_risk_info: {}
+    sale_payment_sheet_financial_risk: {}
   crm:
     crm_claim: {}
     crm_claim_type: {}
@@ -325,6 +374,12 @@ oca:
     partner_delivery_zone: {}
     stock_picking_delivery_link: {}
     stock_picking_report_delivery_cost: {}
+  dms:
+    dms: {}
+    dms_attachment_link:
+      maintainers:
+      - victoralmau
+    dms_field: {}
   e-commerce:
     website_sale_b2x_alt_price:
       maintainers:
@@ -601,6 +656,22 @@ oca:
     mis_builder_demo:
       maintainers:
       - sbidoul
+  multi-company:
+    account_invoice_inter_company: {}
+    account_multicompany_easy_creation: {}
+    base_multi_company:
+      maintainers:
+      - pedrobaeza
+    mail_template_multi_company:
+      maintainers:
+      - Olivier-LAURENT
+    partner_multi_company: {}
+    product_multi_company: {}
+    product_tax_multicompany_default:
+      maintainers:
+      - Shide
+    purchase_sale_inter_company: {}
+    purchase_sale_stock_inter_company: {}
   partner-contact:
     account_partner_company_group: {}
     animal:
@@ -944,6 +1015,16 @@ oca:
     purchase_work_acceptance_tier_validation:
       maintainers:
       - kittiu
+  queue:
+    queue_job:
+      maintainers:
+      - guewen
+    queue_job_cron: {}
+    queue_job_cron_jobrunner:
+      maintainers:
+      - ivantodorovich
+    queue_job_subscribe: {}
+    test_queue_job: {}
   reporting-engine:
     base_comment_template: {}
     bi_sql_editor:
@@ -973,6 +1054,61 @@ oca:
     sql_request_abstract:
       maintainers:
       - legalsylvain
+  rest-framework:
+    base_rest:
+      maintainers:
+      - lmignon
+    base_rest_auth_api_key:
+      maintainers:
+      - lmignon
+    base_rest_auth_user_service: {}
+    base_rest_datamodel: {}
+    base_rest_demo:
+      maintainers:
+      - lmignon
+    base_rest_pydantic: {}
+    datamodel:
+      maintainers:
+      - lmignon
+    extendable:
+      maintainers:
+      - lmignon
+    graphql_base:
+      maintainers:
+      - sbidoul
+    model_serializer:
+      maintainers:
+      - fdegrave
+    pydantic:
+      maintainers:
+      - lmignon
+    rest_log:
+      maintainers:
+      - simahawk
+  rma:
+    product_warranty:
+      maintainers:
+      - osi-scampbell
+      - max3903
+    rma:
+      maintainers:
+      - ernestotejeda
+    rma_delivery:
+      maintainers:
+      - chienandalu
+    rma_sale:
+      maintainers:
+      - ernestotejeda
+    rma_sale_mrp:
+      maintainers:
+      - chienandalu
+    stock_production_lot_warranty:
+      maintainers:
+      - osi-scampbell
+      - max3903
+    website_rma:
+      maintainers:
+      - ernestotejeda
   sale-financial: {}
   sale-reporting:
     base_multicompany_reporting_currency: {}
@@ -1136,6 +1272,7 @@ oca:
       - sbidoul
     auth_saml: {}
     auth_session_timeout: {}
+    auth_signup_partner_company: {}
     auth_signup_verify_email: {}
     auth_user_case_insensitive: {}
     password_security: {}
@@ -1268,6 +1405,7 @@ oca:
     sequence_reset_period: {}
   social:
     base_search_mail_content: {}
+    email_template_qweb: {}
     mail_activity_board: {}
     mail_activity_creator: {}
     mail_activity_done: {}
@@ -1381,6 +1519,7 @@ oca:
     stock_quant_cost_info: {}
     stock_quant_manual_assign: {}
     stock_request: {}
+    stock_request_analytic: {}
     stock_request_kanban: {}
     stock_request_mrp: {}
     stock_request_purchase: {}
@@ -1393,6 +1532,7 @@ oca:
     delivery_procurement_group_carrier: {}
     purchase_stock_picking_invoice_link: {}
     sale_line_returned_qty: {}
+    sale_line_returned_qty_mrp: {}
     sale_order_global_stock_route: {}
     stock_landed_costs_delivery:
       maintainers:
@@ -1474,6 +1614,16 @@ oca:
       - florian-dacosta
     stock_return_request: {}
     stock_split_picking: {}
+  storage:
+    storage_backend: {}
+    storage_backend_ftp: {}
+    storage_backend_s3: {}
+    storage_backend_sftp: {}
+    storage_file: {}
+    storage_image: {}
+    storage_image_product: {}
+    storage_thumbnail: {}
+  support: {}
   web:
     web_action_conditionable: {}
     web_advanced_search:
@@ -1546,3 +1696,12 @@ oca:
     web_widget_x2many_2d_matrix:
       maintainers:
       - ChrisOForgeFlow
+  web-api:
+    webservice:
+      maintainers:
+      - etobella
+  wms: {}
+shopinvader:
+  odoo-shopinvader: {}
+  odoo-shopinvader-payment: {}
+  pattern-import-export: {}
