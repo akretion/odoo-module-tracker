@@ -8,13 +8,19 @@ oca:
   - account-reconcile
   - bank-payment
   - bank-statement-import
+  - bank-statement-reconcile-simple
+  - brand
+  - calendar
   - community-data-files
   - connector
   - connector-ecommerce
   - connector-telephony
   - contract
+  - credit-control
   - crm
+  - currency
   - delivery-carrier
+  - dms
   - e-commerce
   - edi
   - hr
@@ -23,6 +29,8 @@ oca:
   - l10n-france
   - l10n-brazil
   - manufacture
+  - mis-builder
+  - multi-company
   - partner-contact
   - pos
   - product-attribute
@@ -31,7 +39,10 @@ oca:
   - project-reporting
   - purchase-reporting
   - purchase-workflow
+  - queue
   - reporting-engine
+  - rest-framework
+  - rma
   - mis-builder
   - sale-financial
   - sale-reporting
@@ -49,8 +60,24 @@ oca:
   - stock-logistics-reporting
   - stock-logistics-warehouse
   - stock-logistics-workflow
+  - storage
+  - support
   - web
+  - web-api
+  - wms
 akretion:
+  - account-move-import
   - ak-odoo-incubator
   - odoo-usability
+  - odoo-import-helper
+  - odoo-perf
+  - partner-module-information
+  - pos-sale-order
+  - profiloo
+  - sale-configurator
+  - rest-authenticable
+shopinvader:
+  - pattern-import-export
+  - odoo-shopinvader
+  - odoo-shopinvader-payment
 
