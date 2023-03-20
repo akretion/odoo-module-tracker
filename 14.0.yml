@@ -978,44 +978,7 @@ oca:
       - joao-p-marques
     hr_worked_days_from_timesheet: {}
     resource_hook: {}
-  hr-timesheet:
-    crm_timesheet: {}
-    hr_employee_product: {}
-    hr_timesheet_activity_begin_end: {}
-    hr_timesheet_analysis:
-      maintainers:
-      - alexey-pelykh
-    hr_timesheet_employee_analytic_tag:
-      maintainers:
-      - victoralmau
-    hr_timesheet_purchase_order: {}
-    hr_timesheet_report:
-      maintainers:
-      - alexey-pelykh
-    hr_timesheet_report_milestone: {}
-    hr_timesheet_sheet: {}
-    hr_timesheet_sheet_activity: {}
-    hr_timesheet_sheet_attendance: {}
-    hr_timesheet_sheet_autodraft: {}
-    hr_timesheet_sheet_period: {}
-    hr_timesheet_sheet_policy_department_manager: {}
-    hr_timesheet_sheet_policy_project_manager: {}
-    hr_timesheet_task_domain: {}
-    hr_timesheet_task_required: {}
-    hr_timesheet_task_stage: {}
-    hr_timesheet_time_restriction: {}
-    hr_timesheet_time_type: {}
-    hr_utilization_analysis:
-      maintainers:
-      - alexey-pelykh
-    hr_utilization_report: {}
-    sale_timesheet_budget:
-      maintainers:
-      - victoralmau
-    sale_timesheet_line_exclude: {}
-    sale_timesheet_order_line_sync: {}
-    sale_timesheet_rounded: {}
-  intrastat:
+  intrastat-extrastat:
     intrastat_base: {}
     intrastat_product: {}
     intrastat_product_generic: {}
@@ -2854,6 +2817,43 @@ oca:
     storage_media_product: {}
     storage_thumbnail: {}
   support: {}
+  timesheet:
+    crm_timesheet: {}
+    hr_employee_product: {}
+    hr_timesheet_activity_begin_end: {}
+    hr_timesheet_analysis:
+      maintainers:
+      - alexey-pelykh
+    hr_timesheet_employee_analytic_tag:
+      maintainers:
+      - victoralmau
+    hr_timesheet_purchase_order: {}
+    hr_timesheet_report:
+      maintainers:
+      - alexey-pelykh
+    hr_timesheet_report_milestone: {}
+    hr_timesheet_sheet: {}
+    hr_timesheet_sheet_activity: {}
+    hr_timesheet_sheet_attendance: {}
+    hr_timesheet_sheet_autodraft: {}
+    hr_timesheet_sheet_period: {}
+    hr_timesheet_sheet_policy_department_manager: {}
+    hr_timesheet_sheet_policy_project_manager: {}
+    hr_timesheet_task_domain: {}
+    hr_timesheet_task_required: {}
+    hr_timesheet_task_stage: {}
+    hr_timesheet_time_restriction: {}
+    hr_timesheet_time_type: {}
+    hr_utilization_analysis:
+      maintainers:
+      - alexey-pelykh
+    hr_utilization_report: {}
+    sale_timesheet_budget:
+      maintainers:
+      - victoralmau
+    sale_timesheet_line_exclude: {}
+    sale_timesheet_order_line_sync: {}
+    sale_timesheet_rounded: {}
   web:
     support_branding: {}
     web_access_rule_buttons: {}
