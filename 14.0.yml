@@ -1,4 +1,6 @@
 akretion:
+  account-move-import:
+    account_move_csv_import: {}
   ak-odoo-incubator:
     account_move_line_mass_edit_account: {}
     attachment_asset_in_db: {}
@@ -20,6 +22,16 @@ akretion:
     purchase_edi_file: {}
     purchase_lot: {}
     security_rule_not_editable: {}
+  odoo-import-helper:
+    account_balance_reset: {}
+    account_import_helper: {}
+    account_ir_property_helper: {}
+    product_import_helper: {}
+    product_pattern_import_helper: {}
+    shopinvader_url_import: {}
+  odoo-perf:
+    perf_product: {}
+    perf_product_inactive: {}
   odoo-usability:
     account_bank_reconciliation_summary_xlsx: {}
     account_invoice_update_wizard: {}
@@ -89,6 +101,32 @@ akretion:
     web_tab_title:
       maintainers:
       - rvalyi
+  partner-module-information: {}
+  pos-sale-order:
+    pos_partial_payment: {}
+    pos_sale_order: {}
+    pos_sale_order_debug: {}
+    pos_sale_order_delivery: {}
+    pos_sale_order_load: {}
+    pos_sale_order_no_payment: {}
+    pos_sale_order_reference: {}
+  profiloo:
+    profile_mail: {}
+  rest-authenticable:
+    partner_auth: {}
+    partner_auth_jwt: {}
+  sale-configurator:
+    sale_configurator_base: {}
+    sale_configurator_option: {}
+    sale_configurator_option_area: {}
+    sale_configurator_option_link: {}
+    sale_configurator_option_no_orphan: {}
+    sale_configurator_option_restricted_qty: {}
+    sale_configurator_pricelist_tax: {}
+    sale_configurator_variant: {}
+    sale_configurator_variant_restricted_qty: {}
+    sale_stock_configurator_option: {}
+    test_sale_configurator_option_variant: {}
 oca:
   account-financial-reporting:
     account_financial_report: {}
@@ -440,6 +478,41 @@ oca:
     account_statement_import_txt_xlsx:
       maintainers:
       - alexey-pelykh
+  bank-statement-reconcile-simple: {}
+  brand:
+    account_brand:
+      maintainers:
+      - osi-scampbell
+      - sbejaoui
+    analytic_brand:
+      maintainers:
+      - sbejaoui
+    brand:
+      maintainers:
+      - sbejaoui
+    brand_external_report_layout:
+      maintainers:
+      - sbejaoui
+    contract_brand:
+      maintainers:
+      - sbejaoui
+    product_brand: {}
+    product_brand_multicompany: {}
+    product_brand_purchase: {}
+    product_brand_social_responsibility: {}
+    product_brand_tag: {}
+    product_brand_tag_secondary: {}
+    sale_brand:
+      maintainers:
+      - osi-scampbell
+      - sbejaoui
+  calendar:
+    calendar_partner_color:
+      maintainers:
+      - hparfr
+    resource_booking:
+      maintainers:
+      - pedrobaeza
   community-data-files:
     account_payment_unece: {}
     account_tax_unece:
@@ -563,6 +636,30 @@ oca:
       maintainers:
       - sbejaoui
     contract_variable_quantity: {}
+  credit-control:
+    account_credit_control: {}
+    account_financial_risk:
+      maintainers:
+      - carlosdauden
+    account_invoice_overdue_reminder:
+      maintainers:
+      - alexis-via
+    account_invoice_overdue_warn:
+      maintainers:
+      - alexis-via
+    account_invoice_overdue_warn_sale:
+      maintainers:
+      - alexis-via
+    account_payment_return_financial_risk: {}
+    partner_risk_insurance:
+      maintainers:
+      - Daniel-CA
+      - sergio-teruel
+      - omar7r
+      - Tardo
+    sale_financial_risk: {}
+    sale_financial_risk_info: {}
+    stock_financial_risk: {}
   crm:
     crm_claim: {}
     crm_claim_code: {}
@@ -654,6 +751,10 @@ oca:
     server_environment_delivery: {}
     stock_picking_carrier_from_rule: {}
     stock_picking_delivery_link: {}
+  dms:
+    dms: {}
+    dms_action: {}
+    dms_field: {}
   e-commerce:
     product_template_multi_link: {}
     product_template_multi_link_date_span: {}
@@ -1143,6 +1244,9 @@ oca:
     mrp_account_analytic:
       maintainers:
       - dreispt
+    mrp_account_bom_attribute_match:
+      maintainers:
+      - ivantodorovich
     mrp_analytic_cost: {}
     mrp_attachment_mgmt:
       maintainers:
@@ -1223,6 +1327,48 @@ oca:
     mis_builder_demo:
       maintainers:
       - sbidoul
+  multi-company:
+    account_invoice_consolidated:
+      maintainers:
+      - max3903
+      - swapnesh-serpentcs
+    account_invoice_inter_company: {}
+    account_invoice_inter_company_queued: {}
+    account_invoice_inter_company_sale: {}
+    account_move_change_company: {}
+    account_multicompany_easy_creation: {}
+    account_payment_other_company:
+      maintainers:
+      - max3903
+      - osi-scampbell
+    base_multi_company:
+      maintainers:
+      - pedrobaeza
+    company_dependent_attribute: {}
+    intercompany_shared_contact: {}
+    mail_multicompany: {}
+    mail_template_multi_company:
+      maintainers:
+      - Olivier-LAURENT
+    multicompany_configuration: {}
+    partner_contact_company_propagation: {}
+    partner_multi_company: {}
+    product_category_inter_company: {}
+    product_multi_company: {}
+    product_supplierinfo_group_intercompany: {}
+    product_supplierinfo_intercompany:
+      maintainers:
+      - PierrickBrun
+      - sebastienbeau
+      - kevinkhao
+    product_supplierinfo_intercompany_multi_company: {}
+    product_tax_multicompany_default:
+      maintainers:
+      - Shide
+    purchase_quick_intercompany: {}
+    purchase_sale_inter_company: {}
+    res_company_code: {}
+    stock_intercompany: {}
   partner-contact:
     animal:
       maintainers:
@@ -1760,6 +1906,24 @@ oca:
       maintainers:
       - victoralmau
     vendor_transport_lead_time: {}
+  queue:
+    base_export_async: {}
+    base_import_async: {}
+    queue_job:
+      maintainers:
+      - guewen
+    queue_job_batch: {}
+    queue_job_context:
+      maintainers:
+      - AshishHirapara
+    queue_job_cron: {}
+    queue_job_cron_jobrunner:
+      maintainers:
+      - ivantodorovich
+    queue_job_subscribe: {}
+    test_base_import_async: {}
+    test_queue_job: {}
+    test_queue_job_batch: {}
   reporting-engine:
     base_comment_template: {}
     bi_sql_editor:
@@ -1794,6 +1958,63 @@ oca:
     report_xlsx_helper: {}
     report_xlsx_helper_demo: {}
     report_xml: {}
+  rest-framework:
+    base_rest:
+      maintainers:
+      - lmignon
+    base_rest_auth_api_key:
+      maintainers:
+      - lmignon
+    base_rest_auth_jwt:
+      maintainers:
+      - lmignon
+    base_rest_auth_user_service: {}
+    base_rest_datamodel: {}
+    base_rest_demo:
+      maintainers:
+      - lmignon
+    base_rest_pydantic: {}
+    datamodel:
+      maintainers:
+      - lmignon
+    extendable:
+      maintainers:
+      - lmignon
+    graphql_base:
+      maintainers:
+      - sbidoul
+    graphql_demo:
+      maintainers:
+      - sbidoul
+    model_serializer:
+      maintainers:
+      - fdegrave
+    pydantic:
+      maintainers:
+      - lmignon
+    rest_log:
+      maintainers:
+      - simahawk
+  rma:
+    product_warranty:
+      maintainers:
+      - osi-scampbell
+      - max3903
+    rma:
+      maintainers:
+      - ernestotejeda
+    rma_delivery:
+      maintainers:
+      - chienandalu
+    rma_sale:
+      maintainers:
+      - ernestotejeda
+    rma_sale_mrp:
+      maintainers:
+      - chienandalu
+    website_rma:
+      maintainers:
+      - ernestotejeda
   sale-financial: {}
   sale-reporting:
     sale_backorder:
@@ -2538,6 +2759,7 @@ oca:
       - grindtildeath
     stock_lot_production_date: {}
     stock_lot_scrap: {}
+    stock_mass_scrap: {}
     stock_move_assign_picking_hook: {}
     stock_move_change_source_location: {}
     stock_move_forced_lot: {}
@@ -2611,6 +2833,27 @@ oca:
     stock_valuation_layer_by_category: {}
     stock_valuation_layer_usage: {}
     stock_valuation_no_developer_mode: {}
+  storage:
+    storage_backend: {}
+    storage_backend_ftp: {}
+    storage_backend_s3: {}
+    storage_backend_sftp: {}
+    storage_file: {}
+    storage_image: {}
+    storage_image_import: {}
+    storage_image_product: {}
+    storage_image_product_brand: {}
+    storage_image_product_brand_import: {}
+    storage_image_product_import: {}
+    storage_image_product_pos:
+      maintainers:
+      - hparfr
+      - pierrickbrun
+    storage_import_image_advanced: {}
+    storage_media: {}
+    storage_media_product: {}
+    storage_thumbnail: {}
+  support: {}
   web:
     support_branding: {}
     web_access_rule_buttons: {}
@@ -2685,3 +2928,219 @@ oca:
     web_widget_text_markdown: {}
     web_widget_url_advanced: {}
     web_widget_x2many_2d_matrix: {}
+  web-api:
+    endpoint:
+      maintainers:
+      - simahawk
+    endpoint_auth_api_key:
+      maintainers:
+      - simahawk
+    endpoint_route_handler:
+      maintainers:
+      - simahawk
+    webservice:
+      maintainers:
+      - etobella
+      - simahawk
+  wms:
+    delivery_carrier_preference: {}
+    delivery_carrier_warehouse: {}
+    delivery_preference_glue_stock_picking_group: {}
+    sale_stock_available_to_promise_release: {}
+    sale_stock_available_to_promise_release_cutoff: {}
+    sale_stock_available_to_promise_release_dropshipping: {}
+    shopfloor:
+      maintainers:
+      - guewen
+      - simahawk
+      - sebalix
+    shopfloor_base:
+      maintainers:
+      - guewen
+      - simahawk
+      - sebalix
+    shopfloor_base_multicompany: {}
+    shopfloor_batch_automatic_creation:
+      maintainers:
+      - guewen
+    shopfloor_checkout_package_measurement:
+      maintainers:
+      - TDu
+    shopfloor_checkout_package_measurement_mobile: {}
+    shopfloor_checkout_sync:
+      maintainers:
+      - guewen
+    shopfloor_dangerous_goods:
+      maintainers:
+      - mmequignon
+    shopfloor_dangerous_goods_mobile: {}
+    shopfloor_delivery_shipment:
+      maintainers:
+      - sebalix
+      - TDu
+    shopfloor_delivery_shipment_mobile: {}
+    shopfloor_example: {}
+    shopfloor_manual_product_transfer:
+      maintainers:
+      - sebalix
+    shopfloor_manual_product_transfer_mobile: {}
+    shopfloor_mobile:
+      maintainers:
+      - simahawk
+    shopfloor_mobile_base:
+      maintainers:
+      - simahawk
+    shopfloor_mobile_base_auth_api_key: {}
+    shopfloor_mobile_base_auth_user: {}
+    shopfloor_packing_info: {}
+    shopfloor_reception:
+      maintainers:
+      - mmequignon
+      - JuMiSanAr
+    shopfloor_reception_mobile:
+      maintainers:
+      - JuMiSanAr
+    shopfloor_rest_log:
+      maintainers:
+      - simahawk
+    shopfloor_workstation: {}
+    shopfloor_workstation_label_printer: {}
+    shopfloor_workstation_mobile: {}
+    stock_available_to_promise_release: {}
+    stock_available_to_promise_release_dynamic_routing: {}
+    stock_checkout_sync: {}
+    stock_dynamic_routing: {}
+    stock_dynamic_routing_checkout_sync: {}
+    stock_dynamic_routing_reserve_rule: {}
+    stock_move_source_relocate: {}
+    stock_move_source_relocate_dynamic_routing: {}
+    stock_picking_completion_info: {}
+    stock_picking_consolidation_priority: {}
+    stock_picking_type_shipping_policy: {}
+    stock_picking_type_shipping_policy_group_by: {}
+    stock_reception_screen: {}
+    stock_reception_screen_measuring_device:
+      maintainers:
+      - gurneyalex
+    stock_reception_screen_qty_by_packaging: {}
+    stock_release_channel:
+      maintainers:
+      - sebalix
+    stock_storage_type: {}
+    stock_storage_type_buffer: {}
+    stock_storage_type_putaway_abc: {}
+    stock_warehouse_flow: {}
+    stock_warehouse_flow_release: {}
+shopinvader:
+  odoo-shopinvader:
+    base_url: {}
+    shopinvader: {}
+    shopinvader_algolia: {}
+    shopinvader_assortment: {}
+    shopinvader_auth_api_key: {}
+    shopinvader_auth_jwt: {}
+    shopinvader_backend_image_proxy: {}
+    shopinvader_cart_expiry: {}
+    shopinvader_category_image_for_product: {}
+    shopinvader_contact_address_default:
+      maintainers:
+      - ivantodorovich
+    shopinvader_customer_activity:
+      maintainers:
+      - ivantodorovich
+    shopinvader_customer_invoicing_mode: {}
+    shopinvader_customer_multi_user: {}
+    shopinvader_customer_multi_user_company_group: {}
+    shopinvader_customer_multi_user_validate: {}
+    shopinvader_customer_multi_user_wishlist: {}
+    shopinvader_customer_price: {}
+    shopinvader_customer_price_wishlist: {}
+    shopinvader_customer_validate: {}
+    shopinvader_delivery_carrier: {}
+    shopinvader_delivery_instruction: {}
+    shopinvader_easy_binding:
+      maintainers:
+      - ivantodorovich
+    shopinvader_elasticsearch: {}
+    shopinvader_guest_mode: {}
+    shopinvader_image: {}
+    shopinvader_import_image: {}
+    shopinvader_invoice: {}
+    shopinvader_lead: {}
+    shopinvader_locomotive: {}
+    shopinvader_locomotive_algolia: {}
+    shopinvader_locomotive_guest_mode: {}
+    shopinvader_locomotive_reset_password: {}
+    shopinvader_locomotive_sale_profile: {}
+    shopinvader_locomotive_wishlist: {}
+    shopinvader_membership: {}
+    shopinvader_multi_cart: {}
+    shopinvader_multi_category: {}
+    shopinvader_notification_default: {}
+    shopinvader_partner_firstname: {}
+    shopinvader_partner_vat: {}
+    shopinvader_pending_cart_reminder: {}
+    shopinvader_portal_mode: {}
+    shopinvader_pos: {}
+    shopinvader_product_attribute_set: {}
+    shopinvader_product_brand: {}
+    shopinvader_product_brand_image: {}
+    shopinvader_product_brand_tag: {}
+    shopinvader_product_manufactured_for: {}
+    shopinvader_product_media: {}
+    shopinvader_product_new: {}
+    shopinvader_product_order: {}
+    shopinvader_product_price_tax: {}
+    shopinvader_product_stock: {}
+    shopinvader_product_stock_assortment: {}
+    shopinvader_product_stock_forecast:
+      maintainers:
+      - ivantodorovich
+    shopinvader_product_stock_forecast_expiry:
+      maintainers:
+      - ivantodorovich
+    shopinvader_product_stock_state: {}
+    shopinvader_product_template_multi_link: {}
+    shopinvader_product_template_multi_link_date_span: {}
+    shopinvader_product_template_tags: {}
+    shopinvader_product_variant_multi_link: {}
+    shopinvader_product_variant_selector: {}
+    shopinvader_product_video_link: {}
+    shopinvader_quotation: {}
+    shopinvader_sale_amount_by_group: {}
+    shopinvader_sale_automatic_workflow:
+      maintainers:
+      - ivantodorovich
+    shopinvader_sale_coupon: {}
+    shopinvader_sale_packaging: {}
+    shopinvader_sale_packaging_wishlist: {}
+    shopinvader_sale_profile: {}
+    shopinvader_search_engine: {}
+    shopinvader_wishlist: {}
+  odoo-shopinvader-payment:
+    invader_invoice_payment: {}
+    invader_payment: {}
+    invader_payment_adyen:
+      maintainers:
+      - rousseldenis
+    invader_payment_manual: {}
+    invader_payment_stripe: {}
+    shopinvader_invoice_payment: {}
+    shopinvader_payment: {}
+    shopinvader_payment_adyen:
+      maintainers:
+      - rousseldenis
+    shopinvader_payment_condition:
+      maintainers:
+      - ivantodorovich
+    shopinvader_payment_manual: {}
+    shopinvader_payment_stripe: {}
+  pattern-import-export:
+    pattern_import_export: {}
+    pattern_import_export_csv: {}
+    pattern_import_export_custom_header: {}
+    pattern_import_export_synchronize:
+      maintainers:
+      - kevinkhao
+      - sebastienbeau
+    pattern_import_export_xlsx: {}
