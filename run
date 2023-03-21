@@ -38,11 +38,11 @@ def analyse_repo(orga, repo, version):
             with open(manifest, mode="r") as f:
                 data = ast.literal_eval(f.read())
                 if data.get("installable", True):
-                    readme_path = f"{path}/{module}/README.rst"
-                    if os.path.exists(readme_path):
-                        readme = open(readme_path).read()
+                    description_path = f"{path}/{module}/static/description/index.html"
+                    if os.path.exists(description_path):
+                        description = open(description_path).read()
                     else:
-                        readme = ""
+                        description = ""
                     RESULT[orga][repo][module] = {
                         "name": data["name"],
                         "author": data["author"],
@@ -50,7 +50,7 @@ def analyse_repo(orga, repo, version):
                         "maintainers": data.get("mainainers", []),
                         "development_status": data.get("development_status"),
                         "summary": data.get("summary"),
-                        "readme": readme,
+                        "description": description,
                         }
 
 
