@@ -395,11 +395,13 @@ oca:
   - stock_search_supplierinfo_code
   - stock_packaging_calculator
   stock-logistics-workflow:
+  - delivery_procurement_group_carrier
   - stock_move_line_auto_fill
   - stock_lot_production_date
   - stock_quant_package_dimension
   - purchase_stock_picking_invoice_link
   - stock_picking_back2draft
+  - stock_picking_group_by_base
   - stock_putaway_hook
   - stock_picking_sale_order_link
   - stock_move_propagate_first_move
