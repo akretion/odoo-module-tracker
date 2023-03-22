@@ -78,6 +78,7 @@ oca:
   account-reconcile:
   - account_statement_base
   - account_mass_reconcile
+  - account_move_line_reconcile_manual
   bank-payment:
   - account_payment_order
   - account_banking_mandate
