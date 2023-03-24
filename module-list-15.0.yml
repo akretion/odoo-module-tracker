@@ -90,6 +90,7 @@ oca:
   - account_invoice_transmit_method
   - product_supplierinfo_for_customer_invoice
   - account_move_tier_validation_forward
+  - account_portal_invoice_search_by_lot
   - sale_timesheet_invoice_description
   - account_invoice_blocking
   - account_global_discount
@@ -118,10 +119,12 @@ oca:
   account-payment:
   - account_due_list
   - account_payment_term_security
+  - account_payment_return_import_iso20022
   - account_payment_notification
   - account_payment_term_extension
   - account_due_list_payment_mode
   - account_payment_batch_process
+  - account_payment_return_import
   - sale_payment_term_security
   - account_payment_term_partner_holiday
   - account_payment_return
@@ -205,6 +208,7 @@ oca:
   - sale_financial_risk_info
   crm:
   - crm_won_reason
+  - crm_lead_vat
   - crm_claim
   - crm_phonecall_summary_predefined
   - crm_stage_probability
@@ -238,6 +242,7 @@ oca:
   - delivery_purchase
   - delivery_package_number
   - delivery_cttexpress
+  - delivery_auto_refresh
   dms:
   - dms
   - dms_field
@@ -255,6 +260,7 @@ oca:
   - website_sale_invoice_address
   - website_sale_order_type
   - website_sale_product_attribute_filter_order
+  - website_sale_product_minimal_price
   - website_sale_product_sort
   - website_sale_hide_price
   - website_sale_product_reference_displayed
@@ -273,6 +279,7 @@ oca:
   - website_sale_comparison_hide_price
   - website_sale_product_assortment
   - website_sale_hide_empty_category
+  - product_template_multi_link
   - website_sale_product_description
   - website_sale_product_attribute_filter_category
   - website_sale_secondary_unit
@@ -547,6 +554,7 @@ oca:
   - purchase_request
   - purchase_requisition_grouped_by_procurement
   - purchase_force_invoiced
+  - purchase_tag
   - purchase_advance_payment
   - purchase_receipt_expectation
   - purchase_order_qty_change_no_recompute
@@ -559,12 +567,14 @@ oca:
   - purchase_order_product_recommendation_forecast
   - purchase_triple_discount
   - purchase_stock_return_request
+  - purchase_order_analytic_search
   - purchase_request_exception
   - purchase_order_general_discount
   - purchase_exception
   - product_form_purchase_link
   - purchase_allowed_product
   - purchase_order_line_qty_to_receive
+  - purchase_merge
   - purchase_partner_selectable_option
   - purchase_order_product_recommendation_brand
   - purchase_default_terms_conditions
@@ -591,6 +601,7 @@ oca:
   - purchase_delivery_split_date
   - procurement_purchase_no_grouping
   - purchase_stock_price_unit_sync
+  - purchase_receipt_percentage
   - purchase_security
   - purchase_requisition_tier_validation
   - purchase_order_line_menu
@@ -753,8 +764,10 @@ oca:
   - auth_oauth_multi_token
   - password_security
   - auth_user_case_insensitive
+  - vault
   - auth_signup_verify_email
   - auth_oidc
+  - vault_share
   - auth_api_key
   server-backend:
   - base_external_dbsource_mssql
@@ -799,6 +812,7 @@ oca:
   - auditlog
   - base_technical_user
   - base_time_window
+  - database_cleanup
   - html_text
   - sentry
   - base_conditional_image
@@ -835,6 +849,7 @@ oca:
   - mass_mailing_resend
   - mail_activity_board
   - mail_debrand
+  - mass_mailing_custom_unsubscribe_event
   - mail_tracking
   - mail_layout_force
   - mail_activity_partner
