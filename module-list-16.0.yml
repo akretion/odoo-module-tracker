@@ -29,6 +29,7 @@ akretion:
   - delivery_usability
   - crm_usability
   - pos_product_tree_default
+  - developer_menu
   - pos_check_deposit
   - mrp_product_tree_default
   - sale_confirm_wizard
@@ -64,6 +65,7 @@ oca:
   account-invoice-reporting:
   - account_invoice_report_grouped_by_picking
   account-invoicing:
+  - account_invoice_merge
   - account_menu_invoice_refund
   - account_invoice_tax_required
   - account_invoice_fiscal_position_update
@@ -78,6 +80,7 @@ oca:
   account-reconcile:
   - account_statement_base
   - account_mass_reconcile
+  - base_transaction_id
   - account_move_line_reconcile_manual
   bank-payment:
   - account_payment_order
@@ -88,6 +91,7 @@ oca:
   - account_payment_partner
   bank-statement-import:
   - account_statement_import_base
+  - account_statement_import_file
   bank-statement-reconcile-simple: []
   brand:
   - product_brand
@@ -144,6 +148,8 @@ oca:
   edi:
   - pdf_helper
   - base_edi
+  - account_einvoice_generate
+  - base_facturx
   hr:
   - hr_employee_digitized_signature
   - hr_employee_relative
@@ -266,12 +272,16 @@ oca:
   - purchase_force_invoiced
   - purchase_advance_payment
   - purchase_commercial_partner
+  - purchase_triple_discount
+  - purchase_exception
   - purchase_allowed_product
+  - purchase_default_terms_conditions
   - purchase_discount
   - purchase_tier_validation
   - purchase_order_approved
   - purchase_delivery_split_date
   - purchase_requisition_tier_validation
+  - purchase_all_shipments
   - purchase_order_line_menu
   - purchase_stock_packaging
   - purchase_last_price_info
@@ -284,6 +294,7 @@ oca:
   - report_csv
   - sql_export
   - report_xlsx_helper
+  - report_qweb_element_page_visibility
   - sql_request_abstract
   - bi_sql_editor
   - report_xml
@@ -373,6 +384,7 @@ oca:
   - mail_optional_follower_notification
   - mail_attach_existing_attachment
   - mail_optional_autofollow
+  - mass_mailing_contact_active
   - mail_partner_opt_out
   - mail_outbound_static
   stock-logistics-barcode:
