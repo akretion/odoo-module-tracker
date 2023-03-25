@@ -91,6 +91,7 @@ oca:
   - account_payment_partner
   bank-statement-import:
   - account_statement_import_base
+  - account_statement_import_ofx
   - account_statement_import_file
   bank-statement-reconcile-simple: []
   brand:
@@ -177,6 +178,7 @@ oca:
   - l10n_br_base
   l10n-france:
   - l10n_fr_intrastat_service
+  - account_statement_import_fr_cfonb
   - account_banking_fr_lcr
   - l10n_fr_department
   - l10n_fr_hr_check_ssnid
@@ -322,6 +324,7 @@ oca:
   - sale_order_line_position
   sale-workflow:
   - sale_order_type
+  - sale_order_archive
   - sale_automatic_workflow_payment_mode
   - partner_contact_sale_info_propagation
   - sale_order_line_menu
@@ -386,6 +389,8 @@ oca:
   - mail_optional_autofollow
   - mass_mailing_contact_active
   - mail_partner_opt_out
+  - mass_mailing_partner
+  - mass_mailing_list_dynamic
   - mail_outbound_static
   stock-logistics-barcode:
   - barcodes_generator_abstract
@@ -449,6 +454,7 @@ oca:
   web-api: []
   wms:
   - stock_available_to_promise_release
+  - stock_picking_type_shipping_policy
   - stock_dynamic_routing
   - stock_release_channel
   - stock_picking_completion_info
