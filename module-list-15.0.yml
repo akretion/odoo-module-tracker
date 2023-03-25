@@ -238,6 +238,7 @@ oca:
   - delivery_state
   - delivery_multi_destination
   - delivery_carrier_info
+  - base_delivery_carrier_label
   - connector_routific
   - delivery_purchase
   - delivery_package_number
@@ -254,6 +255,7 @@ oca:
   - website_sale_suggest_create_account
   - website_sale_b2x_alt_price
   - website_sale_cart_expire
+  - website_sale_stock_list_preview
   - website_sale_product_attribute_value_filter_existing
   - website_sale_require_login
   - website_sale_product_brand
@@ -564,6 +566,7 @@ oca:
   - purchase_fop_shipping
   - purchase_receipt_expectation_manual
   - purchase_work_acceptance_late_fines
+  - purchase_total_ordered_qty
   - purchase_order_product_recommendation_forecast
   - purchase_triple_discount
   - purchase_stock_return_request
