@@ -239,6 +239,7 @@ oca:
   - pos_product_display_default_code
   - pos_escpos_status
   - pos_order_remove_line
+  - pos_stock_available_online
   product-attribute:
   - product_multi_category
   - product_logistics_uom
@@ -334,10 +335,12 @@ oca:
   - partner_sale_pivot
   - sale_commercial_partner
   - sale_order_lot_selection
+  - sale_order_lot_generator
   - sale_tier_validation
   - sale_automatic_workflow
   search-engine: []
   server-auth:
+  - auth_saml
   - auth_admin_passkey
   - auth_api_key
   server-backend:
@@ -432,6 +435,7 @@ oca:
   - stock_split_picking
   - stock_picking_auto_create_lot
   - stock_picking_invoice_link
+  - stock_picking_purchase_order_link
   - stock_no_negative
   storage:
   - storage_backend
