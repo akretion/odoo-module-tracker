@@ -255,6 +255,7 @@ oca:
   - product_packaging_dimension
   - product_manufacturer
   - product_dimension
+  - sale_product_template_tags
   product-variant: []
   project:
   - project_type
@@ -437,6 +438,7 @@ oca:
   - stock_picking_invoice_link
   - stock_picking_purchase_order_link
   - stock_no_negative
+  - stock_picking_show_return
   storage:
   - storage_backend
   support: []
