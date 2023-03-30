@@ -570,6 +570,7 @@ oca:
   - purchase_order_product_recommendation_forecast
   - purchase_order_secondary_unit
   - purchase_triple_discount
+  - sale_purchase_force_vendor
   - purchase_stock_return_request
   - purchase_order_analytic_search
   - purchase_request_exception
@@ -875,6 +876,7 @@ oca:
   - mass_mailing_partner
   - mass_mailing_list_dynamic
   - email_template_qweb
+  - mass_mailing_event_registration_exclude
   - mail_tracking_mailgun
   - mail_show_follower
   - mail_restrict_follower_selection
@@ -895,6 +897,8 @@ oca:
   - stock_move_value_report
   - stock_report_quantity_by_location
   - stock_picking_report_custom_description
+  - stock_quantity_history_location
+  - stock_account_quantity_history_location
   - stock_picking_report_valued_sale_mrp
   - stock_picking_report_valued
   - delivery_line_sale_line_position
@@ -1013,6 +1017,7 @@ oca:
   - web_tree_image_tooltip
   - web_refresher
   - web_tree_dynamic_colored_field
+  - web_time_range_menu_custom
   - web_sheet_full_width
   - web_ir_actions_act_multi
   - web_widget_json_graph
