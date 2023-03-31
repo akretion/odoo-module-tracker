@@ -81,6 +81,7 @@ oca:
   - account_statement_base
   - account_mass_reconcile
   - base_transaction_id
+  - account_move_base_import
   - account_move_line_reconcile_manual
   bank-payment:
   - account_payment_order
@@ -189,6 +190,8 @@ oca:
   - account_balance_ebp_csv_export
   - l10n_fr_department_oversea
   manufacture:
+  - mrp_bom_component_menu
+  - mrp_sale_info
   - mrp_warehouse_calendar
   - mrp_multi_level
   mis-builder: []
@@ -430,6 +433,7 @@ oca:
   - stock_grn
   - stock_quant_package_product_packaging
   - stock_delivery_note
+  - stock_picking_group_by_max_weight
   - stock_receipt_lot_info
   - stock_restrict_lot
   - stock_picking_start
