@@ -83,6 +83,7 @@ oca:
   - base_transaction_id
   - account_move_base_import
   - account_move_line_reconcile_manual
+  - account_reconcile_oca
   bank-payment:
   - account_payment_order
   - account_banking_mandate
@@ -206,6 +207,7 @@ oca:
   - partner_identification
   - base_country_state_translatable
   - partner_accreditation
+  - partner_company_default
   - partner_tz
   - base_location
   - partner_manual_rank
@@ -224,6 +226,7 @@ oca:
   - partner_disable_gravatar
   - partner_multi_relation
   - partner_fax
+  - partner_interest_group
   - partner_contact_job_position
   - partner_vat_unique
   - base_partner_sequence
@@ -349,6 +352,7 @@ oca:
   - auth_api_key
   server-backend:
   - base_user_role
+  - base_external_dbsource
   - base_user_role_history
   server-brand:
   - portal_odoo_debranding
