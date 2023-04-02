@@ -522,6 +522,7 @@ oca:
   - project_department
   - project_forecast_line
   - project_parent_task_filter
+  - project_template_milestone
   - project_template
   - project_task_dependency
   - project_forecast_line_bokeh_chart
@@ -543,6 +544,7 @@ oca:
   - project_timeline_hr_timesheet
   - project_task_personal_stage_auto_fold
   - project_task_milestone
+  - project_stock_request
   - project_task_stage_state
   - project_task_material
   - project_stock_product_set
@@ -835,6 +837,7 @@ oca:
   - base_optional_quick_create
   - chained_swapper
   - base_revision
+  - base_cancel_confirm
   - barcode_action
   - document_quick_access_folder_auto_classification
   - base_tier_validation_formula
