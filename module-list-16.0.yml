@@ -195,7 +195,10 @@ oca:
   - mrp_sale_info
   - mrp_warehouse_calendar
   - mrp_multi_level
-  mis-builder: []
+  mis-builder:
+  - mis_builder_budget
+  - mis_builder_demo
+  - mis_builder
   multi-company:
   - product_tax_multicompany_default
   - account_invoice_inter_company
@@ -311,6 +314,7 @@ oca:
   - report_xml
   - base_comment_template
   - report_xlsx
+  - report_qweb_pdf_watermark
   - report_wkhtmltopdf_param
   - sql_export_mail
   - report_label
@@ -415,11 +419,13 @@ oca:
   - scrap_reason_code
   - stock_picking_volume
   - account_move_line_stock_info
+  - stock_move_auto_assign_auto_release
   - stock_location_zone
   - stock_location_product_restriction
   - stock_warehouse_calendar
   - stock_move_common_dest
   - stock_move_location
+  - stock_picking_commercial_partner
   - stock_demand_estimate
   - stock_move_auto_assign
   - stock_mts_mto_rule
