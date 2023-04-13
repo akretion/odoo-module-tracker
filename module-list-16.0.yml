@@ -135,6 +135,7 @@ oca:
   - delivery_carrier_agency
   - delivery_package_number
   - delivery_cttexpress
+  - delivery_postlogistics
   - delivery_state
   - delivery_carrier_info
   - delivery_carrier_account
@@ -343,6 +344,7 @@ oca:
   - sale_order_lot_generator
   - sale_automatic_workflow
   - sale_order_line_menu
+  - product_supplierinfo_for_customer_sale
   - partner_sale_pivot
   - sale_exception
   - sale_order_type
@@ -425,6 +427,7 @@ oca:
   - stock_move_common_dest
   - stock_warehouse_calendar
   - stock_location_product_restriction
+  - stock_storage_category_capacity_name
   - stock_move_auto_assign
   - stock_picking_commercial_partner
   - stock_mts_mto_rule
@@ -437,6 +440,7 @@ oca:
   - stock_helper
   stock-logistics-workflow:
   - stock_restrict_lot
+  - stock_picking_filter_lot
   - stock_move_line_auto_fill
   - stock_picking_auto_create_lot
   - stock_picking_purchase_order_link
