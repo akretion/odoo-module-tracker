@@ -228,6 +228,7 @@ oca:
   - crm_lead_firstname
   - crm_location
   currency:
+  - currency_rate_update_xe
   - currency_rate_update
   delivery-carrier:
   - delivery_package_number
@@ -877,6 +878,7 @@ oca:
   - mass_mailing_custom_unsubscribe
   - mail_layout_force
   - mail_show_follower
+  - mail_preview_audio
   - mail_preview_base
   - mail_activity_board
   - mail_activity_creator
@@ -972,6 +974,7 @@ oca:
   - stock_picking_info_lot
   - sale_line_returned_qty_mrp
   - stock_move_quick_lot
+  - stock_move_change_source_location
   - stock_picking_backorder_strategy
   - stock_picking_mass_action
   - stock_picking_filter_lot
