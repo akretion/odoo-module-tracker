@@ -1,4 +1,6 @@
 oca:
+  - account-analytic
+  - account-closing
   - account-financial-reporting
   - account-financial-tools
   - account-fiscal-rule
@@ -8,22 +10,24 @@ oca:
   - account-reconcile
   - bank-payment
   - bank-statement-import
-  - bank-statement-reconcile-simple
   - brand
   - calendar
   - community-data-files
   - connector
   - connector-ecommerce
+  - connector-prestashop
   - connector-telephony
   - contract
   - credit-control
   - crm
   - currency
+  - data-protection
   - delivery-carrier
   - dms
   - e-commerce
   - edi
   - hr
+  - knowledge
   - timesheet
   - intrastat-extrastat
   - l10n-france
@@ -58,6 +62,7 @@ oca:
   - social
   - stock-logistics-barcode
   - stock-logistics-reporting
+  - stock-logistics-tracking
   - stock-logistics-warehouse
   - stock-logistics-workflow
   - storage
@@ -67,6 +72,7 @@ oca:
   - wms
 akretion:
   - account-move-import
+  - bank-statement-reconcile-simple
   - ak-odoo-incubator
   - odoo-usability
   - odoo-import-helper
@@ -80,4 +86,6 @@ shopinvader:
   - pattern-import-export
   - odoo-shopinvader
   - odoo-shopinvader-payment
+forgeflow:
+  - stock-rma
 
