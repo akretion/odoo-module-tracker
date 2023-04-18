@@ -165,6 +165,7 @@ oca:
   - hr_employee_medical_examination
   - hr_course
   - hr_employee_lastnames
+  - hr_employee_age
   intrastat-extrastat:
   - product_harmonized_system_stock
   - intrastat_base
@@ -175,6 +176,7 @@ oca:
   - l10n_br_coa_generic
   - l10n_br_base
   - l10n_br_zip
+  - l10n_br_resource
   - l10n_br_currency_rate_update
   - l10n_br_account_due_list
   - l10n_br_coa_simple
@@ -358,6 +360,7 @@ oca:
   search-engine: []
   server-auth:
   - auth_api_key
+  - auth_ldaps
   - auth_admin_passkey
   - auth_saml
   server-backend:
