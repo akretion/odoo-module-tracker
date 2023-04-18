@@ -2,6 +2,9 @@ akretion:
   account-move-import:
   - account_move_csv_import
   ak-odoo-incubator: []
+  bank-statement-reconcile-simple:
+  - account_statement_completion_label_simple_sale
+  - account_statement_completion_label_simple
   odoo-import-helper:
   - account_ir_property_helper
   - account_import_helper
@@ -40,7 +43,18 @@ akretion:
   profiloo: []
   rest-authenticable: []
   sale-configurator: []
+forgeflow:
+  stock-rma:
+  - rma
 oca:
+  account-analytic:
+  - stock_analytic
+  - purchase_analytic
+  account-closing:
+  - account_cutoff_base
+  - account_invoice_start_end_dates
+  - account_cutoff_picking
+  - account_cutoff_start_end_dates
   account-financial-reporting:
   - account_financial_report
   - account_tax_balance
@@ -77,6 +91,7 @@ oca:
   account-payment:
   - account_payment_term_extension
   - account_due_list
+  - account_payment_promissory_note
   account-reconcile:
   - account_move_base_import
   - account_move_line_reconcile_manual
@@ -95,7 +110,6 @@ oca:
   - account_statement_import_ofx
   - account_statement_import_base
   - account_statement_import_file
-  bank-statement-reconcile-simple: []
   brand:
   - brand
   - product_brand
@@ -118,6 +132,7 @@ oca:
   - component
   - connector
   connector-ecommerce: []
+  connector-prestashop: []
   connector-telephony: []
   contract:
   - contract
@@ -131,6 +146,9 @@ oca:
   - crm_location
   currency:
   - currency_rate_update
+  data-protection:
+  - privacy_consent
+  - privacy
   delivery-carrier:
   - delivery_carrier_agency
   - delivery_package_number
@@ -171,6 +189,14 @@ oca:
   - intrastat_base
   - product_harmonized_system
   - product_harmonized_system_delivery
+  knowledge:
+  - document_knowledge
+  - document_page_tag
+  - document_url
+  - document_page
+  - document_page_group
+  - document_page_approval
+  - attachment_zipped_download
   l10n-brazil:
   - l10n_br_stock
   - l10n_br_coa_generic
@@ -253,6 +279,7 @@ oca:
   - pos_order_to_sale_order
   - pos_customer_comment
   - pos_order_reorder
+  - pos_partner_birthdate
   - pos_receipt_hide_price
   - pos_lot_selection
   product-attribute:
@@ -297,6 +324,7 @@ oca:
   - purchase_delivery_split_date
   - purchase_order_approved
   - purchase_order_line_menu
+  - purchase_order_owner
   - purchase_advance_payment
   - purchase_requisition_tier_validation
   - purchase_request_tier_validation
@@ -426,6 +454,7 @@ oca:
   stock-logistics-reporting:
   - stock_picking_report_valued
   - delivery_line_sale_line_position
+  stock-logistics-tracking: []
   stock-logistics-warehouse:
   - scrap_reason_code
   - stock_location_zone
