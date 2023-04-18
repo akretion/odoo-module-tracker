@@ -1,6 +1,9 @@
 akretion:
   account-move-import: []
   ak-odoo-incubator: []
+  bank-statement-reconcile-simple:
+  - account_statement_completion_label_simple_sale
+  - account_statement_completion_label_simple
   odoo-import-helper: []
   odoo-perf: []
   odoo-usability: []
@@ -9,7 +12,38 @@ akretion:
   profiloo: []
   rest-authenticable: []
   sale-configurator: []
+forgeflow:
+  stock-rma:
+  - rma_repair_refurbish
+  - rma_sale_force_invoiced
+  - rma_sale
+  - rma_account
+  - rma_repair
+  - rma_filter_lot
+  - rma_purchase
+  - rma_put_away
+  - rma
 oca:
+  account-analytic:
+  - product_analytic
+  - stock_analytic
+  - purchase_analytic
+  - account_analytic_required
+  - account_analytic_sequence
+  - procurement_mto_analytic
+  - account_move_update_analytic
+  - account_analytic_tag_default
+  - account_analytic_parent
+  - analytic_tag_dimension
+  - analytic_base_department
+  - mrp_analytic
+  account-closing:
+  - account_cutoff_base
+  - account_invoice_start_end_dates
+  - account_multicurrency_revaluation
+  - account_cutoff_accrual_picking
+  - account_cutoff_accrual_subscription
+  - account_cutoff_start_end_dates
   account-financial-reporting:
   - mis_template_financial_report
   - account_financial_report
@@ -165,7 +199,6 @@ oca:
   - account_statement_import_online
   - account_bank_statement_clear_partner
   - account_bank_statement_import_move_line
-  bank-statement-reconcile-simple: []
   brand:
   - brand
   - product_brand
@@ -192,6 +225,7 @@ oca:
   - component
   - connector
   connector-ecommerce: []
+  connector-prestashop: []
   connector-telephony: []
   contract:
   - agreement_rebate_partner_company_group
@@ -230,6 +264,9 @@ oca:
   currency:
   - currency_rate_update_xe
   - currency_rate_update
+  data-protection:
+  - privacy_consent
+  - privacy
   delivery-carrier:
   - delivery_package_number
   - partner_delivery_schedule
@@ -338,6 +375,15 @@ oca:
   - intrastat_product
   - product_harmonized_system
   - product_harmonized_system_delivery
+  knowledge:
+  - knowledge
+  - document_page_project
+  - document_page_tag
+  - document_page_reference
+  - document_url
+  - document_page
+  - document_page_group
+  - document_page_approval
   l10n-brazil:
   - l10n_br_stock
   - l10n_br_coa_generic
@@ -925,6 +971,7 @@ oca:
   - stock_picking_report_external_note
   - stock_card_report
   - stock_picking_report_valued_sale_mrp
+  stock-logistics-tracking: []
   stock-logistics-warehouse:
   - scrap_reason_code
   - stock_location_route_description
