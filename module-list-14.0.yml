@@ -7,6 +7,7 @@ akretion:
   - proxy_action
   - mail_unique_layout
   - intercompany_shared_contact
+  - stock_inventory_simple_valuation
   - forbid_record_creation
   - product_pricelist_per_attribute_value
   - label_wizard
@@ -20,6 +21,9 @@ akretion:
   - purchase_edi_file
   - attachment_asset_in_db
   - project_estimate_step
+  bank-statement-reconcile-simple:
+  - account_statement_completion_label_simple_sale
+  - account_statement_completion_label_simple
   odoo-import-helper:
   - account_balance_reset
   - product_import_helper
@@ -120,7 +124,60 @@ akretion:
   - sale_configurator_variant_restricted_qty
   - sale_configurator_option_no_orphan
   - sale_configurator_option_restricted_qty
+forgeflow:
+  stock-rma:
+  - rma_repair_refurbish
+  - rma_sale_force_invoiced
+  - rma_sale
+  - rma_account
+  - rma_repair
+  - rma_delivery
+  - account_mass_reconcile_by_rma_line
+  - rma_scrap
+  - rma_filter_lot
+  - account_move_line_rma_order_line
+  - rma_purchase
+  - rma_put_away
+  - rma_account_unreconciled
+  - rma
 oca:
+  account-analytic:
+  - purchase_request_analytic
+  - product_analytic
+  - product_analytic_purchase
+  - stock_picking_analytic
+  - mrp_analytic_sale_project
+  - account_analytic_wip
+  - stock_analytic
+  - account_analytic_distribution_required
+  - purchase_analytic
+  - stock_inventory_analytic
+  - account_analytic_required
+  - purchase_stock_analytic
+  - account_analytic_sequence
+  - analytic_partner
+  - procurement_mto_analytic
+  - sale_stock_analytic
+  - product_analytic_sale
+  - analytic_tag_dimension_enhanced
+  - analytic_activity_based_cost
+  - account_move_update_analytic
+  - mrp_analytic_child_mo
+  - account_analytic_tag_default
+  - analytic_partner_hr_timesheet
+  - pos_analytic_by_config
+  - account_analytic_parent
+  - analytic_tag_dimension
+  - analytic_base_department
+  - mrp_analytic
+  account-closing:
+  - account_cutoff_base
+  - account_invoice_start_end_dates
+  - account_fiscal_year_closing
+  - account_multicurrency_revaluation
+  - account_cutoff_accrual_picking
+  - account_cutoff_accrual_subscription
+  - account_cutoff_start_end_dates
   account-financial-reporting:
   - mis_template_financial_report
   - account_financial_report
@@ -342,7 +399,6 @@ oca:
   - account_statement_import_online
   - account_statement_import_move_line
   - account_statement_import_online_paypal
-  bank-statement-reconcile-simple: []
   brand:
   - product_brand_tag_secondary
   - brand
@@ -379,6 +435,9 @@ oca:
   - connector
   connector-ecommerce:
   - connector_ecommerce
+  connector-prestashop:
+  - connector_prestashop
+  - connector_prestashop_environment
   connector-telephony:
   - sms_no_automatic_delete
   - event_phone
@@ -404,6 +463,7 @@ oca:
   - agreement_project
   - product_contract
   - agreement
+  - contract_queue_job
   - agreement_maintenance
   - agreement_account
   - contract_mandate
@@ -449,6 +509,9 @@ oca:
   - currency_rate_update_cmc
   - currency_rate_update
   - account_cryptocurrency
+  data-protection:
+  - privacy_consent
+  - privacy
   delivery-carrier:
   - delivery_carrier_agency
   - delivery_roulier_option
@@ -628,6 +691,18 @@ oca:
   - intrastat_product
   - product_harmonized_system
   - product_harmonized_system_delivery
+  knowledge:
+  - knowledge
+  - document_page_project
+  - document_page_tag
+  - document_page_reference
+  - document_page_access_group
+  - document_url
+  - document_page
+  - document_page_group
+  - attachment_category
+  - document_page_approval
+  - attachment_zipped_download
   l10n-brazil:
   - l10n_br_pos_cfe
   - l10n_br_fiscal_closing
@@ -1524,6 +1599,7 @@ oca:
   - delivery_line_sale_line_position
   - stock_quantity_history_location
   - stock_card_report
+  stock-logistics-tracking: []
   stock-logistics-warehouse:
   - scrap_reason_code
   - stock_location_last_inventory_date
