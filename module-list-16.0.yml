@@ -1,7 +1,8 @@
 akretion:
   account-move-import:
   - account_move_csv_import
-  ak-odoo-incubator: []
+  ak-odoo-incubator:
+  - proxy_action
   bank-statement-reconcile-simple:
   - account_statement_completion_label_simple_sale
   - account_statement_completion_label_simple
@@ -131,7 +132,8 @@ oca:
   - component_event
   - component
   - connector
-  connector-ecommerce: []
+  connector-ecommerce:
+  - connector_ecommerce
   connector-prestashop: []
   connector-telephony: []
   contract:
@@ -233,6 +235,7 @@ oca:
   - mis_builder
   multi-company:
   - account_invoice_inter_company
+  - res_company_search_view
   - product_tax_multicompany_default
   partner-contact:
   - partner_vat_unique
@@ -316,6 +319,7 @@ oca:
   purchase-workflow:
   - purchase_force_invoiced
   - purchase_discount
+  - purchase_line_procurement_group
   - purchase_stock_packaging
   - purchase_last_price_info
   - purchase_request
@@ -408,11 +412,13 @@ oca:
   - server_environment
   - server_environment_data_encryption
   server-tools:
+  - excel_import_export
   - base_view_inheritance_extension
   - upgrade_analysis
   - onchange_helper
   - base_exception
   - auditlog
+  - excel_import_export_demo
   - dbfilter_from_header
   - session_db
   - jsonifier
