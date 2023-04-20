@@ -88,6 +88,7 @@ oca:
   - account_invoice_transmit_method
   - account_invoice_blocking
   - account_invoice_fiscal_position_update
+  - stock_picking_return_refund_option
   - account_menu_invoice_refund
   account-payment:
   - account_payment_term_extension
@@ -378,12 +379,14 @@ oca:
   - sale_triple_discount
   - sale_automatic_workflow_payment_mode
   - sale_order_lot_generator
+  - sale_order_general_discount
   - sale_automatic_workflow
   - sale_order_line_menu
   - product_supplierinfo_for_customer_sale
   - partner_sale_pivot
   - sale_exception
   - sale_order_type
+  - sale_company_currency
   - sale_order_archive
   - partner_contact_sale_info_propagation
   - sale_commercial_partner
@@ -514,6 +517,7 @@ oca:
   - web_search_with_and
   - web_timeline
   - web_no_bubble
+  - web_notify
   - web_refresher
   - web_help
   - web_environment_ribbon
