@@ -83,10 +83,13 @@ oca:
   - account_invoice_refund_link
   - account_invoice_triple_discount
   - account_invoice_merge
+  - partner_invoicing_mode_monthly
   - account_invoice_tax_required
   - account_invoice_check_total
   - account_invoice_transmit_method
+  - partner_invoicing_mode
   - account_invoice_blocking
+  - partner_invoicing_mode_at_shipping
   - account_invoice_fiscal_position_update
   - stock_picking_return_refund_option
   - account_menu_invoice_refund
@@ -287,16 +290,19 @@ oca:
   - pos_receipt_hide_price
   - pos_lot_selection
   product-attribute:
+  - product_expiry_configurable
   - product_multi_category
   - product_category_active
   - product_supplierinfo_for_customer
   - product_manufacturer
   - product_template_has_one_variant
   - product_uom_measure_type
+  - product_route_mto
   - product_category_code
   - product_code_unique
   - product_packaging_dimension
   - stock_production_lot_expired_date
+  - product_uom_updatable
   - product_sequence
   - product_logistics_uom
   - sale_product_template_tags
@@ -330,6 +336,7 @@ oca:
   - purchase_order_approved
   - purchase_order_line_menu
   - purchase_order_owner
+  - purchase_lot
   - purchase_advance_payment
   - purchase_requisition_tier_validation
   - purchase_request_tier_validation
@@ -375,6 +382,7 @@ oca:
   - sale_order_report_product_image
   - sale_order_line_position
   sale-workflow:
+  - sale_cancel_reason
   - sale_stock_picking_blocking
   - sale_triple_discount
   - sale_automatic_workflow_payment_mode
@@ -480,6 +488,7 @@ oca:
   - account_move_line_stock_info
   - stock_move_location
   - stock_packaging_calculator
+  - stock_route_mto
   - stock_picking_volume
   - stock_helper
   stock-logistics-workflow:
