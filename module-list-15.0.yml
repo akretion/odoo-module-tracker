@@ -261,6 +261,7 @@ oca:
   - crm_salesperson_planner
   - crm_project
   - crm_claim_type
+  - crm_partner_assign
   - crm_lead_firstname
   - crm_location
   currency:
@@ -350,6 +351,7 @@ oca:
   - hr_employee_digitized_signature
   - hr_employee_firstname
   - hr_employee_document
+  - hr_branch
   - hr_study
   - hr_employee_ssn
   - hr_holidays_settings
@@ -369,7 +371,9 @@ oca:
   - hr_contract_reference
   - hr_employee_lastnames
   - hr_employee_id
+  - hr_contract_employee_calendar_planning
   - hr_employee_service_contract
+  - hr_contract_multi_job
   - hr_employee_age
   intrastat-extrastat:
   - product_harmonized_system_stock
