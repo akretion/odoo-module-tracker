@@ -4,6 +4,7 @@ akretion:
   ak-odoo-incubator:
   - product_uom_force_change
   - database_age_cron
+  - queue_job_cancel_dead_job
   - proxy_action
   - mail_unique_layout
   - intercompany_shared_contact
@@ -20,6 +21,7 @@ akretion:
   - account_move_line_mass_edit_account
   - purchase_edi_file
   - attachment_asset_in_db
+  - queue_job_default_channel
   - project_estimate_step
   bank-statement-reconcile-simple:
   - account_statement_completion_label_simple_sale
