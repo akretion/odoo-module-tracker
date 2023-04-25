@@ -344,6 +344,7 @@ oca:
   - purchase_commercial_partner
   - purchase_all_shipments
   - purchase_triple_discount
+  - purchase_no_rfq
   - purchase_allowed_product
   - purchase_default_terms_conditions
   queue:
@@ -451,6 +452,7 @@ oca:
   - base_revision
   - base_technical_features
   - base_tier_validation
+  - sequence_reset_period
   - base_tier_validation_formula
   - multi_step_wizard
   - date_range
@@ -479,6 +481,7 @@ oca:
   - stock_search_supplierinfo_code
   - stock_move_common_dest
   - stock_warehouse_calendar
+  - stock_reserve
   - stock_location_product_restriction
   - stock_storage_category_capacity_name
   - stock_move_auto_assign
