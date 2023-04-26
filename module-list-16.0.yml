@@ -148,6 +148,7 @@ oca:
   - crm_lead_code
   - crm_claim
   - crm_lead_search_archive
+  - crm_partner_assign
   - crm_lead_firstname
   - crm_location
   currency:
@@ -296,6 +297,7 @@ oca:
   - product_category_active
   - product_supplierinfo_for_customer
   - product_manufacturer
+  - product_attribute_archive
   - product_template_has_one_variant
   - product_uom_measure_type
   - product_route_mto
@@ -323,7 +325,9 @@ oca:
   - project_department
   - project_task_personal_stage_auto_fold
   project-reporting: []
-  purchase-reporting: []
+  purchase-reporting:
+  - purchase_report_shipping_address
+  - purchase_report_date_format
   purchase-workflow:
   - purchase_force_invoiced
   - purchase_discount
@@ -484,6 +488,7 @@ oca:
   - stock_reserve
   - stock_location_product_restriction
   - stock_storage_category_capacity_name
+  - stock_location_position
   - stock_move_auto_assign
   - stock_picking_commercial_partner
   - stock_mts_mto_rule
