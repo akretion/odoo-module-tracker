@@ -551,6 +551,7 @@ oca:
   - delivery_multi_destination
   - delivery_price_rule_untaxed
   - server_environment_delivery
+  - delivery_schenker_picking_volume
   - delivery_postlogistics_dangerous_goods
   - delivery_send_to_shipper_at_operation
   - delivery_carrier_partner
@@ -1625,6 +1626,7 @@ oca:
   - stock_available_unreserved
   - stock_warehouse_calendar
   - stock_mts_mto_mrp_rule
+  - stock_location_orderpoint_source_relocate
   - stock_reserve
   - stock_orderpoint_uom
   - stock_request_tier_validation
@@ -1633,6 +1635,7 @@ oca:
   - stock_inventory_cost_info
   - product_route_profile
   - stock_location_warehouse
+  - stock_location_orderpoint
   - stock_measuring_device_zippcube
   - stock_pull_list
   - stock_inventory_exclude_sublocation
