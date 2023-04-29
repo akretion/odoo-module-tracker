@@ -239,6 +239,7 @@ oca:
   - mis_builder_demo
   - mis_builder_budget
   multi-company:
+  - product_category_company
   - product_tax_multicompany_default
   - res_company_search_view
   - account_invoice_inter_company
@@ -389,6 +390,7 @@ oca:
   - sale_order_report_product_image
   - sale_order_line_position
   sale-workflow:
+  - sale_invoice_policy
   - sale_company_currency
   - sale_stock_picking_blocking
   - sale_cancel_reason
@@ -486,6 +488,7 @@ oca:
   - stock_location_zone
   - stock_demand_estimate
   - stock_storage_category_capacity_name
+  - stock_location_lockdown
   - stock_mts_mto_rule
   - stock_move_auto_assign_auto_release
   - stock_warehouse_calendar
@@ -512,6 +515,7 @@ oca:
   - stock_no_negative
   - stock_picking_group_by_max_weight
   - stock_picking_filter_lot
+  - stock_move_line_reserved_quant
   - stock_picking_group_by_base
   - stock_picking_purchase_order_link
   - stock_quant_package_product_packaging
@@ -535,6 +539,7 @@ oca:
   web:
   - web_help
   - web_tree_many2one_clickable
+  - web_dialog_size
   - web_sheet_full_width
   - web_notify
   - web_domain_field
@@ -549,6 +554,7 @@ oca:
   - web_search_with_and
   - web_chatter_position
   - web_select_all_companies
+  - web_advanced_search
   web-api: []
   wms:
   - stock_dynamic_routing
