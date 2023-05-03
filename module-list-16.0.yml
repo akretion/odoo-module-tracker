@@ -187,6 +187,7 @@ oca:
   - hr_employee_relative
   - hr_personal_equipment_request
   - hr_employee_partner_external
+  - hr_employee_phone_extension
   - hr_employee_digitized_signature
   - hr_employee_age
   - hr_employee_firstname
@@ -315,7 +316,8 @@ oca:
   - sale_product_template_tags
   - product_code_unique
   - product_uom_measure_type
-  product-variant: []
+  product-variant:
+  - product_variant_default_code
   project:
   - project_task_add_very_high
   - project_list
@@ -556,6 +558,7 @@ oca:
   - web_chatter_position
   - web_select_all_companies
   - web_advanced_search
+  - web_widget_numeric_step
   web-api: []
   wms:
   - stock_dynamic_routing
