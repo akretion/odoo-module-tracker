@@ -288,6 +288,7 @@ oca:
   - pos_global_discount_in_line
   - pos_lot_selection
   - pos_partner_birthdate
+  - pos_membership
   - pos_order_remove_line
   - pos_customer_comment
   - pos_edit_order_line
@@ -394,6 +395,7 @@ oca:
   - sale_order_line_position
   sale-workflow:
   - sale_invoice_policy
+  - sale_automatic_workflow_job
   - sale_company_currency
   - sale_stock_picking_blocking
   - sale_cancel_reason
