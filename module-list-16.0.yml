@@ -419,6 +419,7 @@ oca:
   server-auth:
   - auth_ldaps
   - auth_admin_passkey
+  - auth_oidc
   - auth_api_key
   - auth_saml
   server-backend:
@@ -567,8 +568,10 @@ oca:
   - stock_dynamic_routing
   - stock_release_channel
   - stock_available_to_promise_release
+  - stock_release_channel_auto_release
   - stock_picking_completion_info
   - stock_picking_type_shipping_policy
+  - stock_release_channel_batch_mode_commercial_partner
 shopinvader:
   odoo-shopinvader: []
   odoo-shopinvader-payment: []
