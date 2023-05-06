@@ -600,6 +600,7 @@ oca:
   - website_sale_tax_toggle
   - website_sale_product_attribute_filter_visibility
   - website_sale_barcode_search
+  - website_sale_stock_list_preview
   edi:
   - base_business_document_import
   - account_invoice_facturx_py3o
@@ -976,6 +977,7 @@ oca:
   - pos_require_product_quantity
   - pos_access_right
   - pos_empty_home
+  - pos_order_to_sale_order
   product-attribute:
   - product_supplierinfo_revision
   - product_category_type
