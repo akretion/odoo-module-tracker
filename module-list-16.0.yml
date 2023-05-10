@@ -357,6 +357,7 @@ oca:
   - purchase_requisition_tier_validation
   - purchase_line_procurement_group
   - purchase_order_product_recommendation
+  - purchase_order_uninvoiced_amount
   - purchase_order_owner
   queue:
   - queue_job
@@ -487,6 +488,7 @@ oca:
   - mail_debrand
   - mail_optional_follower_notification
   stock-logistics-barcode:
+  - barcodes_generator_product
   - product_multi_barcode
   - barcodes_generator_abstract
   stock-logistics-reporting:
