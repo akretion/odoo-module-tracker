@@ -617,10 +617,12 @@ oca:
   - project_parent_task_filter
   - project_stage_mgmt
   project-reporting: []
-  purchase-reporting: []
+  purchase-reporting:
+  - purchase_comment_template
   purchase-workflow:
   - purchase_blanket_order
   - purchase_order_general_discount
+  - purchase_line_reassign
   - purchase_tag
   - purchase_allowed_product
   - purchase_request_tier_validation
