@@ -590,6 +590,7 @@ oca:
   - website_sale_barcode_search
   - website_sale_category_breadcrumb
   - product_template_multi_link_date_span
+  - website_sale_product_item_cart_custom_qty
   - website_sale_delivery_group
   - website_sale_product_attachment
   - website_sale_product_detail_attribute_value_image
@@ -612,6 +613,7 @@ oca:
   - edi_webservice_oca
   - edi_purchase_oca
   - sale_order_import_ubl
+  - sale_order_import_ubl_line_customer_ref
   - base_ebill_payment_contract
   - base_ubl_payment
   - base_edi
@@ -1079,6 +1081,7 @@ oca:
   - project_task_default_stage
   - project_timesheet_time_control_sale
   - project_timeline
+  - project_sequence
   - project_milestone
   - project_task_material
   - project_stock
@@ -1325,6 +1328,7 @@ oca:
   - sale_order_lot_selection
   - sale_order_warn_message
   - sale_order_invoice_amount
+  - sale_stock_line_customer_ref
   - sale_stock_picking_blocking
   - pricelist_cache
   - sale_order_line_input
@@ -1449,6 +1453,7 @@ oca:
   - base_fontawesome
   - base_changeset
   - sentry
+  - jsonifier_stored
   - auditlog
   - jsonifier
   - base_time_parameter
