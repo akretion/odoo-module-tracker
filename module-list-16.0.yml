@@ -98,6 +98,7 @@ oca:
   - account_menu_invoice_refund
   - account_invoice_refund_link
   - stock_picking_return_refund_option
+  - account_tax_change
   account-payment:
   - account_due_list_payment_mode
   - account_due_list
@@ -354,6 +355,7 @@ oca:
   - purchase_line_procurement_group
   - purchase_no_rfq
   - purchase_force_invoiced
+  - purchase_order_no_zero_price
   - purchase_lot
   - purchase_advance_payment
   - purchase_stock_packaging
@@ -431,6 +433,7 @@ oca:
   - sale_tier_validation
   - sale_order_type
   - partner_contact_sale_info_propagation
+  - sale_partner_incoterm
   - sale_commercial_partner
   - sale_company_currency
   search-engine: []
@@ -473,6 +476,7 @@ oca:
   - base_cron_exclusion
   - module_change_auto_install
   - base_search_fuzzy
+  - module_analysis
   - onchange_helper
   - module_auto_update
   - rpc_helper
