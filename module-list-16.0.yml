@@ -297,6 +297,7 @@ oca:
   - pos_global_discount_in_line
   - pos_escpos_status
   - pos_order_to_sale_order
+  - pos_payment_change
   - pos_order_remove_line
   - pos_product_display_default_code
   - pos_membership
@@ -409,6 +410,7 @@ oca:
   sale-reporting:
   - sale_order_report_product_image
   - sale_order_line_position
+  - sale_report_delivered
   sale-workflow:
   - sale_order_qty_change_no_recompute
   - sale_order_line_price_history
@@ -495,6 +497,7 @@ oca:
   - date_range
   - user_all_groups
   - server_action_mass_edit
+  - base_custom_filter
   social:
   - mass_mailing_resend
   - mass_mailing_partner
@@ -570,7 +573,8 @@ oca:
   storage:
   - storage_backend
   support: []
-  timesheet: []
+  timesheet:
+  - hr_timesheet_task_required
   web:
   - web_widget_numeric_step
   - web_dark_mode
