@@ -3,6 +3,7 @@ akretion:
   - account_move_csv_import
   ak-odoo-incubator:
   - proxy_action
+  - module_analysis_price
   bank-statement-reconcile-simple:
   - account_statement_completion_label_simple_sale
   - account_statement_completion_label_simple
@@ -77,6 +78,7 @@ oca:
   - account_invoice_constraint_chronology
   - account_move_name_sequence
   account-fiscal-rule:
+  - account_fiscal_position_partner_type
   - account_product_fiscal_classification
   - account_fiscal_position_type
   account-invoice-reporting:
@@ -180,6 +182,7 @@ oca:
   dms: []
   e-commerce:
   - website_sale_product_attribute_value_filter_existing
+  - website_sale_product_description
   - website_sale_hide_price
   - website_sale_stock_available
   - website_sale_product_reference_displayed
@@ -529,12 +532,14 @@ oca:
   - stock_search_supplierinfo_code
   - stock_storage_category_capacity_name
   - stock_packaging_calculator
+  - stock_quant_manual_assign
   - stock_helper
   - stock_location_zone
   - stock_route_mto
   - stock_demand_estimate
   - stock_mts_mto_rule
   - stock_move_location
+  - stock_picking_volume_packaging
   - scrap_reason_code
   - stock_picking_commercial_partner
   - stock_move_auto_assign
