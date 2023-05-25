@@ -66,6 +66,7 @@ oca:
   - account_asset_management
   - account_journal_general_sequence
   - account_chart_update
+  - account_move_line_tax_editable
   - account_fiscal_year
   - account_lock_date_update
   - account_template_active
@@ -92,6 +93,7 @@ oca:
   - account_invoice_check_total
   - account_invoice_merge
   - partner_invoicing_mode
+  - account_receipt_journal
   - partner_invoicing_mode_at_shipping
   - account_invoice_blocking
   - account_invoice_triple_discount
@@ -153,6 +155,7 @@ oca:
   connector-telephony: []
   contract:
   - contract
+  - contract_invoice_start_end_dates
   credit-control:
   - account_invoice_overdue_reminder
   crm:
@@ -584,6 +587,7 @@ oca:
   - storage_backend
   support: []
   timesheet:
+  - hr_timesheet_begin_end
   - hr_timesheet_task_required
   web:
   - web_widget_numeric_step
