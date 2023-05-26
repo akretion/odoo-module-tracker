@@ -614,6 +614,7 @@ oca:
   - project_stage_mgmt
   - project_template
   - project_template_milestone
+  - project_hr
   - project_role
   - project_timeline_hr_timesheet
   - project_parent_task_filter
@@ -897,6 +898,7 @@ oca:
   - iap_alternative_provider
   - base_exception
   - base_fontawesome
+  - base_changeset
   - sentry
   - auditlog
   - base_multi_image
@@ -963,6 +965,7 @@ oca:
   - mass_mailing_event_registration_exclude
   - mail_activity_creator
   - mail_post_defer
+  - mail_send_copy
   - mail_tracking_mailgun
   - mail_preview_base
   - mass_mailing_list_dynamic
@@ -1006,6 +1009,7 @@ oca:
   - stock_change_qty_reason
   - stock_request_mrp
   - stock_inventory_discrepancy
+  - stock_picking_orig_dest_link
   - stock_secondary_unit
   - stock_picking_show_linked
   - stock_quant_cost_info
