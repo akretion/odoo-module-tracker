@@ -132,6 +132,7 @@ forgeflow:
   - rma_purchase
   - account_mass_reconcile_by_rma_line
   - rma_filter_lot
+  - rma_sale_mrp
   - rma_sale_force_invoiced
   - rma_repair_refurbish
   - rma
@@ -1940,6 +1941,7 @@ oca:
   - stock_dynamic_routing_reserve_rule
   - stock_release_channel
   - shopfloor
+  - shopfloor_single_product_transfer_mobile
   - stock_reception_screen
   - stock_checkout_sync
   - stock_available_to_promise_release_dynamic_routing
@@ -1961,6 +1963,7 @@ oca:
   - stock_reception_screen_qty_by_packaging
   - shopfloor_rest_log
   - shopfloor_delivery_shipment_mobile
+  - shopfloor_single_product_transfer
 shopinvader:
   odoo-shopinvader:
   - shopinvader_search_engine
