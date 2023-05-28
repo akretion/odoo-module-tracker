@@ -91,6 +91,7 @@ oca:
   - account_invoice_fiscal_position_update
   - account_invoice_transmit_method
   - account_invoice_check_total
+  - account_invoice_change_currency
   - account_invoice_merge
   - partner_invoicing_mode
   - account_receipt_journal
@@ -117,6 +118,7 @@ oca:
   - account_mass_reconcile
   - account_move_line_reconcile_manual
   bank-payment:
+  - account_banking_pain_base
   - account_payment_mode
   - account_payment_order
   - account_banking_mandate
@@ -156,6 +158,7 @@ oca:
   contract:
   - contract
   - contract_invoice_start_end_dates
+  - contract_sale
   credit-control:
   - account_invoice_overdue_reminder
   crm:
@@ -296,6 +299,7 @@ oca:
   - partner_fax
   - partner_identification
   - partner_contact_access_link
+  - partner_ref_unique
   pos:
   - pos_default_partner
   - pos_edit_order_line
