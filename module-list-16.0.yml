@@ -85,6 +85,7 @@ oca:
   - account_fiscal_position_type
   account-invoice-reporting:
   - account_invoice_report_payment_info
+  - account_comment_template
   - account_reporting_weight
   - account_invoice_report_grouped_by_picking
   account-invoicing:
@@ -167,6 +168,7 @@ oca:
   - crm_lead_search_archive
   - crm_claim
   - crm_location
+  - crm_phonecall
   - crm_lead_code
   - crm_lead_firstname
   currency:
@@ -175,6 +177,7 @@ oca:
   - privacy
   - privacy_consent
   delivery-carrier:
+  - delivery_auto_refresh
   - base_delivery_carrier_label
   - stock_picking_delivery_link
   - delivery_package_number
