@@ -187,6 +187,7 @@ oca:
   - delivery_price_method
   - delivery_state
   - delivery_carrier_info
+  - delivery_automatic_package
   - delivery_carrier_max_weight_constraint
   - delivery_package_type_number_parcels
   - delivery_carrier_account
@@ -328,6 +329,7 @@ oca:
   - product_template_has_one_variant
   - product_assortment
   - product_supplierinfo_for_customer
+  - product_attribute_company_favorite
   - product_code_unique
   - sale_product_template_tags
   - product_route_mto
