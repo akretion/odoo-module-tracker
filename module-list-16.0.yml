@@ -124,6 +124,7 @@ oca:
   - account_payment_order
   - account_banking_mandate
   - account_payment_partner
+  - account_payment_purchase
   - account_payment_sale
   - account_payment_order_grouped_output
   bank-statement-import:
@@ -194,6 +195,7 @@ oca:
   dms: []
   e-commerce:
   - website_sale_product_attribute_value_filter_existing
+  - website_sale_cart_expire
   - website_sale_product_description
   - website_sale_hide_price
   - website_sale_stock_available
