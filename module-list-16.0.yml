@@ -75,6 +75,7 @@ oca:
   - account_usability
   - account_fiscal_year_auto_create
   - account_cash_deposit
+  - account_asset_batch_compute
   - account_move_line_tax_editable
   - account_move_name_sequence
   - account_fiscal_position_vat_check
@@ -122,6 +123,7 @@ oca:
   - account_mass_reconcile
   - account_statement_base
   bank-payment:
+  - account_banking_sepa_credit_transfer
   - account_payment_purchase_stock
   - account_payment_order_grouped_output
   - account_banking_pain_base
@@ -129,6 +131,7 @@ oca:
   - account_payment_partner
   - account_payment_sale
   - account_payment_purchase
+  - account_banking_sepa_direct_debit
   - account_payment_order
   - account_payment_mode
   bank-statement-import:
