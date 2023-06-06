@@ -96,6 +96,7 @@ oca:
   - account_invoice_change_currency
   - account_invoice_refund_link
   - account_invoice_merge
+  - account_invoice_currency_taxes
   - stock_picking_return_refund_option
   - partner_invoicing_mode_monthly
   - account_receipt_journal
@@ -166,6 +167,7 @@ oca:
   connector-telephony: []
   contract:
   - contract
+  - contract_sale_generation
   - contract_sale
   - contract_invoice_start_end_dates
   credit-control:
@@ -367,6 +369,7 @@ oca:
   - project_task_default_stage
   - project_stock
   - project_task_personal_stage_auto_fold
+  - project_parent
   - project_list
   - project_role
   - project_department
@@ -401,6 +404,7 @@ oca:
   - purchase_default_terms_conditions
   - purchase_commercial_partner
   - purchase_order_uninvoiced_amount
+  - purchase_merge
   - purchase_tier_validation
   queue:
   - queue_job_cron
@@ -439,9 +443,12 @@ oca:
   sale-financial: []
   sale-reporting:
   - sale_order_report_product_image
+  - sale_report_delivered_subtotal
   - sale_order_line_position
+  - product_sold_by_delivery_week
   - sale_report_delivered
   sale-workflow:
+  - sale_order_invoice_amount
   - sale_automatic_workflow_payment_mode
   - sale_order_line_price_history
   - sale_order_lot_selection
@@ -452,6 +459,7 @@ oca:
   - sale_triple_discount
   - sale_partner_incoterm
   - sale_order_archive
+  - sale_elaboration
   - sale_automatic_workflow
   - sale_commercial_partner
   - partner_sale_pivot
