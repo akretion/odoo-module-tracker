@@ -145,6 +145,7 @@ oca:
   - stock_picking_invoicing
   - account_invoice_supplier_self_invoice
   - account_tax_group_widget_base_amount
+  - account_invoice_analytic_search
   - account_receipt_send
   - account_invoice_block_payment
   - portal_account_personal_data_only
@@ -164,6 +165,7 @@ oca:
   - account_payment_term_extension
   - account_due_list
   - account_payment_return_import
+  - account_check_printing_report_sslm102
   - account_check_printing_report_base
   - account_payment_multi_deduction
   - account_payment_promissory_note
@@ -223,6 +225,7 @@ oca:
   - account_tax_unece
   - base_bank_from_iban
   - base_iso3166
+  - company_sanitary_registry
   - base_unece
   - product_fao_fishing
   - account_payment_unece
@@ -647,6 +650,7 @@ oca:
   - purchase_reception_status
   - purchase_reception_notify
   - purchase_order_approved
+  - purchase_substate
   - purchase_request_exception
   - purchase_receipt_percentage
   - purchase_line_reassign
@@ -654,12 +658,14 @@ oca:
   - purchase_order_type
   - procurement_purchase_no_grouping
   - purchase_order_supplierinfo_update
+  - purchase_last_price_info
   - purchase_order_secondary_unit
   - purchase_request_to_requisition
   - purchase_stock_tier_validation
   - purchase_quick
   - product_form_purchase_link
   - purchase_order_product_recommendation_forecast
+  - purchase_cancel_confirm
   - purchase_order_line_qty_to_receive
   - purchase_work_acceptance_tier_validation
   - purchase_order_line_deep_sort
@@ -699,6 +705,7 @@ oca:
   - purchase_delivery_split_date
   - purchase_default_terms_conditions
   - purchase_order_uninvoiced_amount
+  - purchase_order_type_dashboard
   - purchase_merge
   - purchase_requisition_grouped_by_procurement
   - purchase_order_general_discount
