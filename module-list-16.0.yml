@@ -185,6 +185,7 @@ oca:
   - crm_claim
   - crm_lead_code
   - crm_phonecall
+  - crm_industry
   - crm_lead_search_archive
   currency:
   - currency_rate_update
@@ -535,6 +536,7 @@ oca:
   - base_view_inheritance_extension
   - module_auto_update
   - base_exception
+  - scheduler_error_mailer
   - base_fontawesome
   - excel_import_export
   - excel_import_export_demo
@@ -569,6 +571,7 @@ oca:
   - server_action_mass_edit
   - user_all_groups
   social:
+  - mail_activity_team
   - mass_mailing_resend
   - mail_attach_existing_attachment
   - mail_partner_opt_out
