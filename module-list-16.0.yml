@@ -59,6 +59,7 @@ oca:
   - account_cutoff_base
   - account_invoice_start_end_dates
   - account_cutoff_picking
+  - account_cutoff_accrual_subscription
   - account_cutoff_start_end_dates
   account-financial-reporting:
   - account_tax_balance
@@ -104,6 +105,7 @@ oca:
   - account_receipt_journal
   - sale_order_invoicing_grouping_criteria
   - account_invoice_blocking
+  - account_invoice_pricelist_sale
   - account_invoice_transmit_method
   - account_invoice_refund_line_selection
   - partner_invoicing_mode
@@ -189,6 +191,7 @@ oca:
   - crm_lead_search_archive
   currency:
   - currency_rate_update
+  - currency_old_rate_notify
   data-protection:
   - privacy
   - privacy_consent
@@ -239,6 +242,7 @@ oca:
   - hr_employee_lastnames
   intrastat-extrastat:
   - product_harmonized_system_delivery
+  - intrastat_product
   - intrastat_base
   - product_harmonized_system_stock
   - product_harmonized_system
@@ -263,6 +267,7 @@ oca:
   - l10n_br_coa_simple
   l10n-france:
   - account_statement_import_fr_cfonb
+  - l10n_fr_intrastat_product
   - l10n_fr_siret_lookup
   - l10n_fr_state
   - l10n_fr_das2
@@ -273,6 +278,7 @@ oca:
   - l10n_fr_cog
   - account_banking_fr_lcr
   - l10n_fr_siret
+  - l10n_fr_mis_reports
   - l10n_fr_intrastat_service
   - account_balance_ebp_csv_export
   manufacture:
