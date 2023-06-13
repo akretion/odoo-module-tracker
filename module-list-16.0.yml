@@ -298,6 +298,7 @@ oca:
   - mail_multicompany
   - account_invoice_inter_company
   - product_category_company
+  - account_multicompany_easy_creation
   - res_company_search_view
   partner-contact:
   - partner_contact_address_default
@@ -419,6 +420,7 @@ oca:
   - purchase_request_tier_validation
   - purchase_order_owner
   - purchase_no_rfq
+  - purchase_security
   - purchase_discount
   - purchase_allowed_product
   - purchase_force_invoiced
@@ -508,6 +510,7 @@ oca:
   - sale_invoice_policy
   - sale_order_lot_generator
   - sale_order_product_recommendation
+  - sale_mrp_bom
   search-engine:
   - connector_search_engine
   - connector_elasticsearch
