@@ -520,6 +520,7 @@ oca:
   currency:
   - currency_rate_inverted
   - currency_rate_update
+  - currency_monthly_rate
   - currency_rate_update_cmc
   - currency_old_rate_notify
   - account_cryptocurrency
@@ -694,7 +695,6 @@ oca:
   - resource_hook
   - hr_contract_type
   - hr_personal_equipment_variant_configurator
-  - hr_holidays_settings
   - hr_personal_equipment_request
   - hr_employee_service_contract
   - hr_employee_ssn
@@ -1310,6 +1310,7 @@ oca:
   - sale_order_secondary_unit
   - sale_advance_payment
   - sale_product_multi_add
+  - sale_promotion_rule_display_discount_amount
   - sale_pricelist_from_commitment_date
   - sale_fixed_discount
   - sale_automatic_workflow_ignore_exception
@@ -1361,6 +1362,7 @@ oca:
   - sale_elaboration
   - sale_global_discount
   - pricelist_cache_rest
+  - sale_promotion_rule
   - sale_automatic_workflow
   - sale_commercial_partner
   - sale_by_packaging
@@ -1371,6 +1373,7 @@ oca:
   - sale_product_brand_exception
   - sale_partner_version
   - product_supplierinfo_for_customer_sale
+  - sale_invoice_auto_deliver
   - sales_team_security_sale
   - sale_procurement_group_by_line
   - sale_pricelist_item_advanced
@@ -1984,20 +1987,24 @@ shopinvader:
   - shopinvader_product_brand
   - shopinvader_product_brand_image
   - shopinvader_backend_image_proxy
+  - shopinvader_sale_profile_update_price
   - shopinvader_sale_packaging
   - shopinvader_product_variant_selector
   - shopinvader_category_image_for_product
   - shopinvader_product_stock_forecast
+  - shopinvader_sale_order_report_without_price
   - shopinvader_pos
   - shopinvader_locomotive_wishlist
   - base_url
   - shopinvader_product_manufactured_for
+  - shopinvader_validation_token_guest
   - shopinvader_customer_price_wishlist
   - shopinvader_sale_automatic_workflow
   - shopinvader_product_stock_state
   - shopinvader_invoice
   - shopinvader_sale_coupon
   - shopinvader_elasticsearch
+  - shopinvader_validation_token
   - shopinvader_locomotive_guest_mode
   - shopinvader_product_media
   - shopinvader_price_per_qty
@@ -2005,6 +2012,7 @@ shopinvader:
   - shopinvader_product_stock
   - shopinvader_customer_validate
   - shopinvader_partner_vat
+  - shopinvader_customer_autobind
   - shopinvader_product_template_multi_link
   - shopinvader_multi_category
   - shopinvader_multi_cart
@@ -2016,10 +2024,14 @@ shopinvader:
   - shopinvader
   - shopinvader_membership
   - shopinvader_customer_multi_user
+  - shopinvader_mass_mailing_company_newsletter
   - shopinvader_product_variant_multi_link
+  - shopinvader_promotion_rule
+  - shopinvader_delivery_carrier_category_keep_carrier
   - shopinvader_assortment
   - shopinvader_sale_packaging_wishlist
   - shopinvader_locomotive_sale_profile
+  - shopinvader_quotation_portal_mode
   - shopinvader_import_image
   - shopinvader_customer_multi_user_company_group
   - shopinvader_customer_invoicing_mode
@@ -2052,6 +2064,7 @@ shopinvader:
   - shopinvader_product_brand_tag
   - shopinvader_guest_mode
   - shopinvader_product_stock_forecast_expiry
+  - shopinvader_sale_update_price
   - shopinvader_wishlist
   - shopinvader_delivery_carrier
   - shopinvader_auth_jwt
