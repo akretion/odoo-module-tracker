@@ -3,7 +3,9 @@ akretion:
   - account_move_csv_import
   ak-odoo-incubator:
   - proxy_action
+  - account_move_dalenys_import
   - module_analysis_price
+  - sale_lot_config
   bank-statement-reconcile-simple:
   - account_statement_completion_label_simple_sale
   - account_statement_completion_label_simple
@@ -499,6 +501,7 @@ oca:
   - sale_force_invoiced
   - sale_exception
   - sale_order_qty_change_no_recompute
+  - sale_substate
   - sale_tier_validation
   - partner_contact_sale_info_propagation
   - sale_invoice_policy
@@ -639,6 +642,7 @@ oca:
   - stock_quant_cost_info
   - stock_packaging_calculator
   stock-logistics-workflow:
+  - stock_move_line_serial_unique
   - stock_split_picking
   - stock_putaway_hook
   - stock_picking_sale_order_link
@@ -707,6 +711,7 @@ oca:
   - stock_release_channel_auto_release
   - stock_dynamic_routing
 shopinvader:
-  odoo-shopinvader: []
+  odoo-shopinvader:
+  - sale_cart
   odoo-shopinvader-payment: []
   pattern-import-export: []
