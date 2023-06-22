@@ -967,6 +967,7 @@ oca:
   - pos_customer_tree_view_vat
   - pos_margin
   - pos_customer_display
+  - pos_report_discount
   - pos_supplierinfo_search
   - pos_disable_pricelist_selection
   - pos_order_remove_line
@@ -1228,6 +1229,7 @@ oca:
   - test_queue_job_batch
   - queue_job_cron
   - base_import_async
+  - export_async_schedule
   - test_base_import_async
   - test_queue_job
   - queue_job_context
@@ -1998,6 +2000,8 @@ shopinvader:
   - shopinvader_delivery_instruction
   - shopinvader_product_media
   - shopinvader_customer_invoicing_mode
+  - shopinvader_product_seasonality_search_engine
+  - shopinvader_locomotive_impersonate
   - shopinvader_customer_validate
   - shopinvader_lead
   - shopinvader_customer_multi_user_company_group
@@ -2069,7 +2073,9 @@ shopinvader:
   - shopinvader_product_variant_selector
   - shopinvader_customer_multi_user
   - shopinvader_partner_vat
+  - shopinvader_locomotive_product_seasonality
   - shopinvader_customer_multi_user_wishlist
+  - shopinvader_product_seasonality
   - shopinvader_contact_address_default
   odoo-shopinvader-payment:
   - shopinvader_payment
