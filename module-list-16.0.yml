@@ -122,6 +122,7 @@ oca:
   account-payment:
   - account_due_list_payment_mode
   - account_payment_term_extension
+  - account_payment_return
   - account_due_list
   - account_payment_promissory_note
   account-reconcile:
@@ -368,12 +369,14 @@ oca:
   - product_expiry_configurable
   - product_assortment
   - product_pricelist_revision
+  - product_pricelist_direct_print_xlsx
   - product_packaging_dimension
   - product_multi_category
   - product_template_has_one_variant
   - product_category_code
   - sale_product_template_tags
   - product_attribute_company_favorite
+  - product_pricelist_direct_print
   - product_manufacturer
   - product_secondary_unit
   - product_dimension
@@ -401,6 +404,7 @@ oca:
   - project_task_add_very_high
   - project_hr
   - project_task_default_stage
+  - project_timeline_hr_timesheet
   - project_timeline
   - project_stock
   - project_purchase_link
@@ -651,6 +655,7 @@ oca:
   stock-logistics-workflow:
   - stock_picking_group_by_base
   - stock_picking_auto_create_lot
+  - stock_picking_show_backorder
   - delivery_procurement_group_carrier
   - stock_split_picking
   - stock_no_negative
