@@ -275,6 +275,7 @@ oca:
   - l10n_fr_cog
   - l10n_fr_mis_reports
   - l10n_fr_intrastat_service
+  - l10n_fr_fec_oca
   - l10n_fr_siret
   - l10n_fr_intrastat_product
   - l10n_fr_account_tax_unece
@@ -308,6 +309,7 @@ oca:
   - account_invoice_inter_company
   partner-contact:
   - partner_contact_gender
+  - partner_bank_acc_type_constraint
   - base_partner_company_group
   - partner_address_street3
   - partner_external_map
@@ -473,6 +475,7 @@ oca:
   - bi_sql_editor
   - report_wkhtmltopdf_param
   rest-framework:
+  - fastapi_auth_jwt
   - base_rest_auth_api_key
   - base_rest_pydantic
   - pydantic
@@ -483,6 +486,7 @@ oca:
   - extendable_fastapi
   - base_rest
   - graphql_demo
+  - fastapi_auth_jwt_demo
   - extendable
   - graphql_base
   rma: []
@@ -514,6 +518,7 @@ oca:
   - sale_invoice_policy
   - sale_mrp_bom
   - sale_automatic_workflow
+  - sale_order_general_discount_triple
   - sale_order_product_availability_inline
   - sale_automatic_workflow_job
   - sale_order_lot_selection
@@ -688,6 +693,7 @@ oca:
   support: []
   timesheet:
   - hr_timesheet_begin_end
+  - hr_timesheet_task_stage
   - hr_timesheet_task_required
   web:
   - web_tree_many2one_clickable
