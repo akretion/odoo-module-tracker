@@ -140,6 +140,7 @@ oca:
   - account_move_exception
   - sale_timesheet_invoice_description
   - account_invoice_pricelist
+  - account_invoice_force_number
   - account_invoice_supplier_ref_unique
   - account_receipt_send
   - stock_picking_invoicing
@@ -907,6 +908,7 @@ oca:
   - server_environment
   - mail_environment_google_gmail
   server-tools:
+  - base_model_restrict_update
   - scheduler_error_mailer
   - base_exception
   - upgrade_analysis
