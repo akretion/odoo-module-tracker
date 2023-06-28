@@ -78,6 +78,7 @@ oca:
   - base_vat_optional_vies
   - account_move_name_sequence
   - account_usability
+  - account_move_template
   - account_fiscal_year
   - account_move_line_tax_editable
   - account_fiscal_position_vat_check
@@ -229,6 +230,7 @@ oca:
   - account_einvoice_generate
   - base_facturx
   - pdf_helper
+  - account_invoice_facturx
   - base_ubl
   - base_edi
   hr:
@@ -278,9 +280,13 @@ oca:
   - l10n_fr_fec_oca
   - l10n_fr_siret
   - l10n_fr_intrastat_product
+  - l10n_fr_chorus_facturx
   - l10n_fr_account_tax_unece
   - l10n_fr_siret_lookup
   - l10n_fr_das2
+  - l10n_fr_chorus_sale
+  - l10n_fr_account_invoice_facturx
+  - l10n_fr_chorus_account
   - l10n_fr_state
   - l10n_fr_department
   - account_statement_import_fr_cfonb
@@ -354,6 +360,7 @@ oca:
   - pos_lot_selection
   - pos_default_partner
   - pos_lot_barcode
+  - pos_loyalty_redeem_payment
   - pos_receipt_hide_price
   - pos_membership
   - pos_product_quick_info
@@ -436,6 +443,7 @@ oca:
   - purchase_order_owner
   - purchase_exception
   - purchase_stock_packaging
+  - purchase_location_by_line
   - purchase_security
   - purchase_delivery_split_date
   - purchase_order_uninvoiced_amount
