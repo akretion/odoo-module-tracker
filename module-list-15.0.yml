@@ -889,6 +889,7 @@ oca:
   - auth_api_key
   - auth_user_case_insensitive
   - vault
+  - auth_admin_passkey
   - auth_saml
   server-backend:
   - base_import_match
@@ -948,6 +949,7 @@ oca:
   server-ux:
   - chained_swapper
   - sequence_reset_period
+  - base_field_deprecated
   - base_tier_validation_forward
   - base_tier_validation
   - base_import_security_group
@@ -962,6 +964,7 @@ oca:
   - base_search_custom_field_filter
   - document_quick_access
   - base_cancel_confirm
+  - base_tier_validation_report
   - base_revision
   - base_substate
   - base_custom_filter
