@@ -117,6 +117,7 @@ oca:
   - account_tax_change
   - account_receipt_journal
   - partner_invoicing_mode_monthly
+  - account_move_tier_validation
   - account_invoice_tax_required
   - account_invoice_blocking
   - account_invoice_pricelist
@@ -562,9 +563,12 @@ oca:
   server-auth:
   - auth_jwt
   - auth_oidc
+  - auth_signup_verify_email
   - auth_ldaps
   - auth_jwt_demo
+  - base_user_show_email
   - auth_api_key
+  - auth_user_case_insensitive
   - auth_admin_passkey
   - auth_saml
   server-backend:
