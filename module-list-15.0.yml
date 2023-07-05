@@ -186,6 +186,7 @@ oca:
   - account_mass_reconcile
   - account_reconciliation_widget
   - account_move_reconcile_forbid_cancel
+  - account_bank_statement_reopen_skip_undo_reconciliation
   - account_partner_reconcile
   - account_reconciliation_widget_due_date
   bank-payment:
@@ -273,6 +274,7 @@ oca:
   - crm_lead_firstname
   - crm_project
   - crm_claim
+  - marketing_crm_partner
   - crm_phonecall_planner
   - crm_security_group
   - crm_stage_probability
@@ -314,6 +316,7 @@ oca:
   - website_sale_product_attribute_value_filter_existing
   - website_sale_stock_provisioning_date
   - website_sale_invoice_address
+  - website_sale_wishlist_archive_cron
   - website_sale_comparison_hide_price
   - website_sale_vat_required
   - website_sale_product_attribute_filter_order
@@ -540,6 +543,7 @@ oca:
   - pos_supplierinfo_barcode
   - pos_report_session_summary
   - pos_supplierinfo_search
+  - pos_user_restriction
   - pos_cash_move_reason
   - pos_product_display_default_code
   - pos_lot_selection
@@ -892,6 +896,7 @@ oca:
   - auth_admin_passkey
   - auth_saml
   server-backend:
+  - base_external_dbsource_sap_hana
   - base_import_match
   - base_external_dbsource_sqlite
   - base_external_dbsource_mssql
@@ -947,6 +952,7 @@ oca:
   - base_cron_exclusion
   - iap_alternative_provider
   server-ux:
+  - base_archive_date
   - chained_swapper
   - sequence_reset_period
   - base_field_deprecated
@@ -1124,6 +1130,7 @@ oca:
   - stock_picking_whole_scrap
   - stock_picking_line_sequence
   - stock_picking_warn_message
+  - stock_move_consu_location_from_putaway
   storage:
   - storage_backend_ftp
   - storage_backend
@@ -1171,6 +1178,7 @@ oca:
   - web_no_bubble
   - web_pivot_computed_measure
   - web_tree_dynamic_colored_field
+  - web_disable_export_group
   - web_calendar_slot_duration
   - web_m2x_options
   - web_refresher
@@ -1181,6 +1189,7 @@ oca:
   - web_ir_actions_act_multi
   - web_m2x_options_manager
   - web_advanced_search
+  - web_send_message_popup
   - web_action_conditionable
   - web_domain_field
   - web_remember_tree_column_width
