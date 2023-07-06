@@ -185,6 +185,7 @@ oca:
   - contract_sale_generation
   - contract_sale
   credit-control:
+  - account_financial_risk
   - account_credit_control
   - account_invoice_overdue_reminder
   crm:
@@ -337,6 +338,7 @@ oca:
   - partner_ref_unique
   - partner_contact_age_range
   - partner_tier_validation
+  - partner_address_split
   - base_partner_sequence
   - partner_pricelist_search
   - partner_identification
@@ -348,6 +350,7 @@ oca:
   - partner_stage
   - partner_contact_gender
   - partner_company_default
+  - sale_customer_rank
   - partner_firstname
   - partner_vat_unique
   - partner_address_street3
@@ -682,6 +685,7 @@ oca:
   - stock_location_product_restriction
   - stock_reserve
   - stock_move_common_dest
+  - account_move_line_product
   - stock_move_location
   - stock_search_supplierinfo_code
   - stock_helper
@@ -712,6 +716,7 @@ oca:
   - stock_move_line_auto_fill
   - stock_owner_restriction
   - stock_no_negative
+  - stock_picking_info_lot
   - stock_picking_auto_create_lot
   - stock_picking_invoice_link
   - delivery_procurement_group_carrier
@@ -721,6 +726,7 @@ oca:
   timesheet:
   - hr_timesheet_begin_end
   - hr_timesheet_task_required
+  - hr_timesheet_task_domain
   - hr_timesheet_sheet
   - hr_timesheet_name_customer
   - hr_timesheet_task_stage
