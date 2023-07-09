@@ -52,7 +52,14 @@ akretion:
   sale-configurator: []
 forgeflow:
   stock-rma:
+  - rma_put_away
+  - rma_account
+  - rma_repair
+  - rma_purchase
+  - rma_scrap
   - rma
+  - rma_sale_force_invoiced
+  - rma_sale
 oca:
   account-analytic:
   - purchase_analytic
@@ -151,6 +158,8 @@ oca:
   bank-statement-import:
   - account_statement_import_file
   - account_statement_import_base
+  - account_statement_import_camt54
+  - account_statement_import_camt
   - account_statement_import_ofx
   brand:
   - brand
@@ -187,6 +196,7 @@ oca:
   credit-control:
   - account_credit_control
   - account_invoice_overdue_reminder
+  - sale_financial_risk_info
   - account_financial_risk
   crm:
   - crm_lead_code
@@ -224,6 +234,7 @@ oca:
   e-commerce:
   - website_sale_attribute_filter_multiselect
   - website_sale_product_reference_displayed
+  - website_sale_product_detail_attribute_image
   - website_sale_product_description
   - website_sale_hide_price
   - website_sale_comparison_hide_price
