@@ -476,6 +476,7 @@ oca:
   - agreement_sale
   - agreement_serviceprofile
   - contract_sale
+  - contract_split
   - agreement_maintenance
   - contract_mandate
   - agreement_mrp
@@ -841,6 +842,7 @@ oca:
   - mrp_component_operation_scrap_reason
   - stock_picking_product_kit_helper
   - mrp_subcontracting_bom_dual_use
+  - mrp_production_note
   - mrp_subcontracting_partner_management
   - mrp_unbuild_move_link
   - mrp_bom_tracking
@@ -1117,6 +1119,7 @@ oca:
   - project_task_dependency
   - project_timesheet_time_control_sale
   - project_timeline_hr_timesheet
+  - project_purchase_link
   - project_stock
   - project_hr
   - project_task_recurring_activity
