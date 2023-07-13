@@ -156,6 +156,7 @@ oca:
   - stock_analytic
   - product_analytic_purchase
   - pos_analytic_by_config
+  - stock_warehouse_analytic
   - mrp_analytic_sale_project
   - stock_picking_analytic
   - analytic_base_department
@@ -741,6 +742,7 @@ oca:
   - l10n_br_stock_account
   - l10n_br_nfse_paulistana
   - l10n_br_coa
+  - l10n_br_fiscal_certificate
   - l10n_br_account_nfe
   - l10n_br_nfe_spec
   - l10n_br_repair
@@ -1333,6 +1335,7 @@ oca:
   - sale_order_line_input
   - sale_quotation_number
   - sale_company_currency
+  - sale_substate
   - sale_order_general_discount_triple
   - sale_force_invoiced
   - sale_order_type
@@ -1350,6 +1353,7 @@ oca:
   - sale_amount_payment_link
   - sale_mrp_bom
   - sale_stock_delivery_address
+  - sale_manual_delivery
   - sale_order_line_menu
   - sale_order_digitized_signature
   - sale_stock_picking_note
@@ -1534,6 +1538,7 @@ oca:
   - base_m2m_custom_field
   - auto_backup
   - base_model_restrict_update
+  - model_read_only
   - base_time_window
   - base_changeset
   - datetime_formatter
