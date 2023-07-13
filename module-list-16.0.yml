@@ -64,6 +64,7 @@ oca:
   account-analytic:
   - purchase_analytic
   - stock_analytic
+  - purchase_stock_analytic
   - account_analytic_required
   account-closing:
   - account_cutoff_accrual_subscription
@@ -114,6 +115,7 @@ oca:
   - purchase_stock_picking_return_invoicing
   - account_invoice_change_currency
   - account_invoice_pricelist
+  - account_tax_group_widget_base_amount
   - account_invoice_merge
   - account_invoice_refund_link
   - account_invoice_currency_taxes
@@ -228,6 +230,7 @@ oca:
   - stock_picking_delivery_link
   - delivery_price_method
   - delivery_state
+  - delivery_estimated_package_quantity_by_weight
   - delivery_carrier_account
   - delivery_carrier_max_weight_constraint
   dms: []
@@ -409,6 +412,7 @@ oca:
   - product_category_active
   - product_state
   - product_pricelist_direct_print_xlsx
+  - product_pricelist_direct_print_company_group
   - product_supplierinfo_for_customer
   - product_cost_security
   - product_manufacturer
@@ -553,6 +557,7 @@ oca:
   - sale_automatic_workflow_payment_mode
   - sale_order_lot_generator
   - sale_mrp_bom
+  - sale_manual_delivery
   - sale_order_line_menu
   - sale_stock_picking_blocking
   - sale_order_archive
