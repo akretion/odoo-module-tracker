@@ -136,6 +136,7 @@ oca:
   - account_payment_promissory_note
   - account_due_list
   - account_payment_return
+  - account_payment_return_import
   - account_due_list_payment_mode
   account-reconcile:
   - account_move_line_reconcile_manual
@@ -657,6 +658,7 @@ oca:
   - base_cancel_confirm
   - date_range
   - server_action_mass_edit
+  - base_search_custom_field_filter
   - date_range_account
   - base_tier_validation
   social:
@@ -784,6 +786,7 @@ oca:
   - stock_picking_type_shipping_policy
   - stock_release_channel_auto_release
   - stock_available_to_promise_release
+  - stock_storage_type
   - stock_release_channel_batch_mode_commercial_partner
 shopinvader:
   odoo-shopinvader:
