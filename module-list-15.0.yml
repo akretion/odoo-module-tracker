@@ -20,6 +20,7 @@ forgeflow:
   - rma_repair
   - rma_repair_refurbish
   - rma_purchase
+  - rma_scrap
   - rma
   - rma_sale_force_invoiced
   - rma_sale
@@ -38,6 +39,7 @@ oca:
   - procurement_mto_analytic
   - account_analytic_parent
   - analytic_tag_dimension
+  - partner_analytic
   - account_analytic_required
   - product_analytic
   account-closing:
@@ -723,6 +725,7 @@ oca:
   - purchase_order_general_discount
   - purchase_order_product_recommendation_classification
   - sale_purchase_force_vendor
+  - purchase_rfq_number
   - purchase_default_terms_conditions
   - purchase_open_qty
   - purchase_stock_price_unit_sync
@@ -752,6 +755,7 @@ oca:
   - report_csv
   - report_qweb_pdf_watermark
   - sql_export
+  - report_qweb_decimal_place
   - report_xlsx_helper
   - bi_sql_editor
   - base_comment_template
@@ -858,6 +862,7 @@ oca:
   - sale_product_set_layout
   - sale_procurement_group_by_line
   - product_supplierinfo_for_customer_elaboration
+  - sale_cancel_reason
   - sale_order_secondary_unit
   - sale_sourced_by_line
   - sale_order_invoice_amount
@@ -911,6 +916,7 @@ oca:
   server-brand:
   - disable_odoo_online
   - remove_odoo_enterprise
+  - hr_expense_remove_mobile_link
   - portal_odoo_debranding
   server-env:
   - server_environment_ir_config_parameter
