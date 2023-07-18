@@ -199,6 +199,7 @@ oca:
   credit-control:
   - account_credit_control
   - account_invoice_overdue_reminder
+  - account_credit_control_dunning_fees
   - sale_financial_risk_info
   - account_financial_risk
   crm:
@@ -249,6 +250,7 @@ oca:
   - account_invoice_facturx
   - base_facturx
   - base_ubl
+  - base_business_document_import
   - pdf_helper
   - base_edi
   - account_einvoice_generate
@@ -387,6 +389,7 @@ oca:
   - pos_order_reorder
   - pos_payment_terminal
   - pos_customer_comment
+  - pos_margin
   - pos_escpos_status
   - pos_lot_barcode
   - pos_lot_selection
@@ -531,7 +534,8 @@ oca:
   - base_rest_datamodel
   - pydantic
   - fastapi_auth_jwt_demo
-  rma: []
+  rma:
+  - product_warranty
   sale-financial: []
   sale-reporting:
   - sale_order_report_product_image
@@ -600,6 +604,7 @@ oca:
   server-backend:
   - base_import_match
   - base_external_dbsource_sqlite
+  - base_portal_type
   - base_global_discount
   - base_user_role_history
   - base_external_dbsource_mssql
@@ -674,6 +679,7 @@ oca:
   - mail_outbound_static
   - mass_mailing_partner
   - mail_debrand
+  - mail_layout_preview
   - mail_activity_board
   - mass_mailing_contact_active
   - mail_optional_follower_notification
@@ -728,6 +734,7 @@ oca:
   - stock_split_picking
   - stock_picking_back2draft
   - stock_picking_purchase_order_link
+  - stock_landed_costs_currency
   - stock_move_propagate_first_move
   - stock_picking_auto_create_lot
   - stock_move_line_auto_fill
@@ -771,6 +778,7 @@ oca:
   - web_advanced_search
   - web_help
   - web_widget_bokeh_chart
+  - web_action_conditionable
   - web_refresher
   - web_search_with_and
   - web_notify
