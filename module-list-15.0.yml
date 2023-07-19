@@ -145,6 +145,7 @@ oca:
   - account_invoice_transmit_method
   - account_invoice_supplier_self_invoice
   - portal_account_personal_data_only
+  - account_invoice_refund_line_selection
   - partner_invoicing_mode_at_shipping
   - account_invoice_view_payment
   - sale_order_invoicing_qty_percentage
@@ -944,6 +945,7 @@ oca:
   - upgrade_analysis
   - database_cleanup
   - letsencrypt
+  - attachment_unindex_content
   - html_text
   - module_analysis
   - module_auto_update
@@ -1003,6 +1005,7 @@ oca:
   - mail_activity_creator
   - mass_mailing_resend
   - mail_activity_done
+  - mail_composer_cc_bcc
   - mail_layout_force
   - mass_mailing_event_registration_exclude
   - mail_outbound_static
