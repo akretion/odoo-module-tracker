@@ -414,6 +414,7 @@ oca:
   - product_code_unique
   - product_pricelist_supplierinfo
   - stock_production_lot_expired_date
+  - product_set
   - product_category_active
   - product_state
   - product_pricelist_direct_print_xlsx
@@ -643,11 +644,13 @@ oca:
   - module_change_auto_install
   - scheduler_error_mailer
   - base_m2m_custom_field
+  - base_partition
   - base_time_window
   - excel_import_export
   - sentry
   - auditlog
   - onchange_helper
+  - base_sparse_field_list_support
   server-ux:
   - multi_step_wizard
   - base_revision
