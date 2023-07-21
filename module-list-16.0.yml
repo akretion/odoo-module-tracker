@@ -138,6 +138,7 @@ oca:
   - account_payment_return
   - account_payment_return_import
   - account_due_list_payment_mode
+  - account_payment_return_import_iso20022
   account-reconcile:
   - account_move_line_reconcile_manual
   - account_move_base_import
@@ -203,6 +204,7 @@ oca:
   - sale_financial_risk
   - sale_financial_risk_info
   - account_financial_risk
+  - stock_financial_risk
   crm:
   - crm_lead_code
   - crm_lead_currency
