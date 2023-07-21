@@ -16,6 +16,7 @@ forgeflow:
   stock-rma:
   - rma_put_away
   - rma_filter_lot
+  - rma_analytic
   - rma_account
   - rma_repair
   - rma_repair_refurbish
@@ -188,6 +189,7 @@ oca:
   account-reconcile:
   - account_bank_statement_reopen_skip_undo_reconciliation
   - account_reconciliation_widget_due_date
+  - account_mass_reconcile_by_purchase_line
   - account_move_reconcile_forbid_cancel
   - account_reconciliation_widget
   - account_mass_reconcile
@@ -766,6 +768,7 @@ oca:
   - report_qweb_element_page_visibility
   - report_xml
   rest-framework:
+  - graphql_demo
   - base_rest_auth_user_service
   - base_rest_auth_api_key
   - base_rest
@@ -881,6 +884,7 @@ oca:
   - sale_discount_display_amount
   - sale_missing_tracking
   - sale_credit_point
+  - sale_fixed_discount
   - partner_contact_sale_info_propagation
   - sale_product_set
   - sale_commercial_partner
@@ -1011,6 +1015,7 @@ oca:
   - mail_outbound_static
   - mail_send_copy
   - mail_activity_partner
+  - fetchmail_mail_activity_team_activity
   - mass_mailing_partner
   - mail_parent_recipient
   - mail_tracking_mass_mailing
