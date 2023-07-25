@@ -450,6 +450,7 @@ oca:
   - project_list
   - project_parent_task_filter
   - project_role
+  - project_duplicate_subtask
   - project_timeline_hr_timesheet
   - project_purchase_link
   - project_stock
@@ -504,6 +505,7 @@ oca:
   - queue_job
   - queue_job_cron_jobrunner
   - test_queue_job
+  - base_export_async
   - queue_job_cron
   reporting-engine:
   - report_label
@@ -557,6 +559,7 @@ oca:
   - sale_elaboration
   - sale_exception
   - sale_tier_validation
+  - sale_quotation_number
   - sale_company_currency
   - sale_substate
   - sale_order_general_discount_triple
