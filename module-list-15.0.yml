@@ -162,6 +162,7 @@ oca:
   - account_move_tier_validation_forward
   - account_invoice_check_total
   - sale_line_refund_to_invoice_qty
+  - account_invoice_crm_tag
   - account_invoice_search_by_reference
   - account_invoice_restrict_linked_so
   - account_invoice_analytic_search
@@ -976,6 +977,7 @@ oca:
   - base_revision
   - default_multi_user
   - chained_swapper
+  - base_tier_validation_server_action
   - base_duplicate_security_group
   - base_technical_features
   - sequence_reset_period
