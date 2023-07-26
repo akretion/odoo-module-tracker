@@ -527,6 +527,7 @@ oca:
   - report_qweb_element_page_visibility
   - report_xml
   rest-framework:
+  - test_extendable_pydantic_fastapi
   - graphql_demo
   - base_rest_auth_api_key
   - base_rest
@@ -592,6 +593,7 @@ oca:
   - sale_automatic_workflow
   - sale_discount_display_amount
   - partner_contact_sale_info_propagation
+  - sale_product_set
   - sale_commercial_partner
   - sale_order_revision
   search-engine:
@@ -621,6 +623,7 @@ oca:
   server-brand:
   - disable_odoo_online
   - remove_odoo_enterprise
+  - hr_expense_remove_mobile_link
   - portal_odoo_debranding
   server-env:
   - server_environment_ir_config_parameter
@@ -797,10 +800,13 @@ oca:
   - web_no_bubble
   - web_responsive
   - web_m2x_options
+  - web_widget_open_tab
   - web_theme_classic
   - web_tree_many2one_clickable
   web-api:
+  - endpoint
   - endpoint_route_handler
+  - webservice
   wms:
   - stock_dynamic_routing
   - stock_picking_completion_info
