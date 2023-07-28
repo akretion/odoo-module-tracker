@@ -13,13 +13,16 @@ akretion:
   - security_rule_not_editable
   - purchase_edi_file
   - account_move_line_mass_edit_account
+  - product_supplierinfo_group_per_attribute_value
   - attachment_asset_in_db
   - project_time_in_day
+  - product_supplierinfo_per_attribute_value
   - database_age_cron
   - proxy_action
   - mail_unique_layout
   - label_wizard
   - stock_inventory_simple_valuation
+  - product_supplierinfo_per_attribute_value_intercompany
   - forbid_record_creation
   - intercompany_shared_contact
   - project_estimate_step
@@ -1683,6 +1686,7 @@ oca:
   stock-logistics-tracking: []
   stock-logistics-warehouse:
   - stock_inventory_discrepancy
+  - stock_procurement_group_hook
   - stock_archive_constraint
   - stock_measuring_device
   - stock_location_zone
