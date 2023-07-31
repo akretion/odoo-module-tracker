@@ -822,6 +822,9 @@ shopinvader:
   odoo-shopinvader:
   - shopinvader_anonymous_partner
   - sale_cart
+  - shopinvader_api_address
   - shopinvader_fastapi_auth_jwt
+  - shopinvader_schema_address
+  - shopinvader_address
   odoo-shopinvader-payment: []
   pattern-import-export: []
