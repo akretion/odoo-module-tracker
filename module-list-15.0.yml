@@ -221,6 +221,7 @@ oca:
   - account_statement_import
   - account_statement_import_online_ponto
   - account_statement_import_camt54
+  - account_statement_import_file_reconciliation_widget
   - account_statement_import_camt
   - account_statement_import_ofx
   - account_statement_import_paypal
@@ -236,6 +237,7 @@ oca:
   calendar:
   - resource_booking
   community-data-files:
+  - base_currency_iso_4217
   - account_payment_unece
   - base_unece
   - account_tax_unece
@@ -759,6 +761,7 @@ oca:
   - bi_view_editor
   - report_qweb_encrypt
   - sql_export_excel
+  - report_py3o
   - report_csv
   - report_qweb_pdf_watermark
   - sql_export
