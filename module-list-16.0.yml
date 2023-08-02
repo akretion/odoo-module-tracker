@@ -127,6 +127,7 @@ oca:
   - account_invoice_refund_line_selection
   - partner_invoicing_mode_at_shipping
   - account_invoice_triple_discount
+  - account_invoice_tree_currency
   - account_invoice_tax_required
   - stock_picking_return_refund_option
   - account_invoice_check_total
@@ -244,6 +245,7 @@ oca:
   - website_sale_product_reference_displayed
   - website_sale_product_detail_attribute_image
   - website_sale_product_description
+  - website_sale_product_brand
   - website_sale_hide_price
   - website_sale_comparison_hide_price
   - website_sale_stock_available
@@ -449,6 +451,7 @@ oca:
   - project_template
   - project_list
   - project_task_material
+  - project_timesheet_time_control
   - project_parent_task_filter
   - project_role
   - project_sequence
@@ -529,7 +532,6 @@ oca:
   - report_qweb_element_page_visibility
   - report_xml
   rest-framework:
-  - test_extendable_pydantic_fastapi
   - graphql_demo
   - base_rest_auth_api_key
   - base_rest
