@@ -96,6 +96,7 @@ oca:
   - account_fiscal_position_vat_check
   - account_template_active
   account-fiscal-rule:
+  - account_avatax_website_sale
   - account_product_fiscal_classification
   - l10n_eu_oss_oca
   - account_fiscal_position_partner_type
@@ -560,6 +561,7 @@ oca:
   - sale_layout_category_hide_detail
   - sale_order_line_position
   - product_sold_by_delivery_week
+  - sale_comment_template
   - sale_order_report_product_image
   sale-workflow:
   - sale_stock_cancel_restriction
@@ -691,6 +693,7 @@ oca:
   - base_substate
   social:
   - base_search_mail_content
+  - mail_template_substitute
   - mass_mailing_contact_active
   - mass_mailing_partner
   - mail_attach_existing_attachment
