@@ -66,6 +66,7 @@ oca:
   - purchase_stock_analytic
   - purchase_analytic
   - stock_analytic
+  - stock_picking_analytic
   account-closing:
   - account_cutoff_accrual_subscription
   - account_invoice_start_end_dates
@@ -120,6 +121,7 @@ oca:
   - account_invoice_tax_required
   - account_menu_invoice_refund
   - account_invoice_transmit_method
+  - sale_line_refund_to_invoice_qty
   - account_receipt_send
   - account_tax_group_widget_base_amount
   - account_invoice_refund_link
@@ -220,6 +222,7 @@ oca:
   - crm_partner_assign
   - crm_claim
   - crm_phonecall
+  - crm_project_task
   currency:
   - currency_old_rate_notify
   - currency_rate_update
@@ -582,6 +585,7 @@ oca:
   - sale_product_category_menu
   - sale_force_invoiced
   - sale_order_revision
+  - sale_start_end_dates
   - sale_order_line_menu
   - product_form_sale_link
   - sale_cancel_reason
@@ -630,6 +634,7 @@ oca:
   - base_external_dbsource_mssql
   - base_import_match
   - base_user_role_history
+  - base_user_role_company
   server-brand:
   - remove_odoo_enterprise
   - portal_odoo_debranding
