@@ -494,6 +494,7 @@ oca:
   - account_multicompany_easy_creation
   - stock_intercompany
   - product_multi_company
+  - mail_multicompany
   - purchase_sale_stock_inter_company
   - mail_template_multi_company
   - base_multi_company
@@ -946,6 +947,7 @@ oca:
   - fetchmail_incoming_log
   - fetchmail_incoming_log_test
   - excel_import_export_demo
+  - base_translation_field_label
   - base_multi_image
   - html_text
   - dbfilter_from_header
@@ -1114,6 +1116,7 @@ oca:
   - stock_picking_whole_scrap
   - stock_picking_product_assortment_availability_inline
   - stock_move_line_auto_fill
+  - stock_picking_origin_reference_purchase
   - stock_picking_warn_message
   - stock_picking_purchase_order_link
   - stock_move_consu_location_from_putaway
@@ -1133,6 +1136,7 @@ oca:
   - stock_picking_show_backorder
   - stock_move_quick_lot
   - stock_production_lot_traceability
+  - stock_picking_origin_reference
   - stock_picking_invoice_link
   - stock_picking_operation_quick_change
   - stock_picking_product_availability_search
@@ -1148,6 +1152,7 @@ oca:
   - stock_picking_sale_order_link
   - stock_picking_mass_action
   - stock_picking_assign_serial_final
+  - stock_picking_origin_reference_sale
   - stock_picking_back2draft
   - stock_owner_restriction
   - stock_landed_costs_purchase_auto
