@@ -89,6 +89,7 @@ oca:
   - account_asset_management
   - account_journal_general_sequence
   - account_asset_batch_compute
+  - account_move_line_sale_info
   - account_move_print
   - base_vat_optional_vies
   - account_fiscal_year
@@ -107,6 +108,7 @@ oca:
   account-invoice-reporting:
   - account_invoice_report_grouped_by_picking
   - account_reporting_weight
+  - account_reporting_volume
   - account_comment_template
   - account_invoice_report_payment_info
   account-invoicing:
@@ -349,6 +351,7 @@ oca:
   - res_company_search_view
   - mail_multicompany
   - mail_template_multi_company
+  - res_company_active
   - product_tax_multicompany_default
   partner-contact:
   - partner_ref_unique
@@ -359,6 +362,7 @@ oca:
   - partner_affiliate
   - partner_multi_relation
   - partner_company_default
+  - sale_partner_company_group
   - partner_contact_job_position
   - partner_fax
   - partner_contact_birthdate
@@ -450,6 +454,7 @@ oca:
   - product_uom_updatable
   - product_attribute_archive
   - product_assortment
+  - product_supplierinfo_revision
   product-variant:
   - product_variant_default_code
   project:
@@ -465,6 +470,7 @@ oca:
   - project_stock
   - project_task_material
   - project_list
+  - project_task_stage_mgmt
   - project_task_add_very_high
   - project_timeline_hr_timesheet
   - project_timesheet_time_control
@@ -589,7 +595,6 @@ oca:
   - sale_order_line_menu
   - product_form_sale_link
   - sale_cancel_reason
-  - sale_order_general_discount_triple
   - sale_procurement_group_by_line
   - sale_order_type
   - sale_stock_picking_blocking
@@ -606,6 +611,7 @@ oca:
   - sale_order_qty_change_no_recompute
   - sale_discount_display_amount
   - sale_product_set
+  - sales_team_security
   - sale_quotation_number
   - sale_order_line_date
   - sale_company_currency
@@ -788,6 +794,7 @@ oca:
   timesheet:
   - hr_timesheet_name_customer
   - hr_timesheet_task_domain
+  - sale_timesheet_line_exclude
   - hr_timesheet_sheet
   - hr_timesheet_task_stage
   - hr_timesheet_task_required
@@ -800,6 +807,7 @@ oca:
   - web_action_conditionable
   - web_dark_mode
   - web_sheet_full_width
+  - web_ir_actions_act_window_page
   - web_widget_bokeh_chart
   - web_chatter_position
   - web_advanced_search
