@@ -222,6 +222,7 @@ oca:
   - crm_lead_code
   - crm_industry
   - crm_partner_assign
+  - crm_lead_vat
   - crm_claim
   - crm_phonecall
   - crm_project_task
@@ -259,6 +260,7 @@ oca:
   - website_sale_product_description
   - website_sale_comparison_hide_price
   - website_sale_product_reference_displayed
+  - website_snippet_product_category
   - website_sale_product_detail_attribute_image
   edi:
   - base_ubl
@@ -694,6 +696,7 @@ oca:
   - server_action_mass_edit
   - base_tier_validation_formula
   - date_range_account
+  - base_export_manager
   - base_tier_validation
   - base_menu_visibility_restriction
   - base_tier_validation_forward
@@ -794,6 +797,7 @@ oca:
   timesheet:
   - hr_timesheet_name_customer
   - hr_timesheet_task_domain
+  - hr_timesheet_sheet_policy_project_manager
   - sale_timesheet_line_exclude
   - hr_timesheet_sheet
   - hr_timesheet_task_stage
