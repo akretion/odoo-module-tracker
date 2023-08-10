@@ -33,6 +33,7 @@ oca:
   - mrp_analytic
   - procurement_mto_analytic
   - account_analytic_tag_default
+  - analytic_partner
   - purchase_stock_analytic
   - partner_analytic
   - purchase_analytic
@@ -665,6 +666,7 @@ oca:
   - purchase_comment_template
   purchase-workflow:
   - purchase_rfq_number
+  - purchase_order_line_sequence
   - purchase_partner_incoterm
   - purchase_request_department
   - purchase_order_product_recommendation_forecast
@@ -725,6 +727,7 @@ oca:
   - purchase_order_qty_by_product_category
   - product_form_purchase_link
   - purchase_order_supplierinfo_update
+  - purchase_order_weight_volume
   - purchase_requisition_tier_validation
   - purchase_receipt_percentage
   - purchase_fully_invoiced
