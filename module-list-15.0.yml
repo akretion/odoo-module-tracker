@@ -111,6 +111,7 @@ oca:
   - account_invoice_line_sale_line_position
   - account_invoice_production_lot
   - account_reporting_weight
+  - account_invoice_report_grouped_by_picking_sale_mrp
   - account_invoice_line_report
   - account_reporting_volume
   - account_comment_template
@@ -143,6 +144,7 @@ oca:
   - product_supplierinfo_for_customer_invoice
   - account_invoice_tax_required
   - account_portal_invoice_search_by_lot
+  - account_move_search_line
   - account_invoice_validation_queued
   - account_invoice_transmit_method
   - account_invoice_section_sale_order
@@ -458,6 +460,7 @@ oca:
   - account_banking_fr_lcr
   manufacture:
   - mrp_sale_info
+  - mrp_bom_line_sequence
   - mrp_multi_level
   - mrp_production_grouped_by_product
   - mrp_production_split
@@ -858,6 +861,7 @@ oca:
   - sale_order_price_recalculation
   - sale_start_end_dates
   - sale_product_multi_add
+  - sale_global_discount
   - sale_shipping_info_helper
   - sale_order_line_menu
   - product_form_sale_link
