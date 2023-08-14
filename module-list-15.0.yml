@@ -155,6 +155,7 @@ oca:
   - account_portal_invoice_search
   - account_invoice_refund_link
   - account_invoice_check_picking_date
+  - account_invoice_discount_display_amount
   - account_invoice_fiscal_position_update
   - partner_invoicing_mode_at_shipping
   - account_invoice_clearing
@@ -1079,6 +1080,7 @@ oca:
   - stock_card_report
   stock-logistics-tracking: []
   stock-logistics-warehouse:
+  - stock_request_submit
   - stock_free_quantity
   - stock_move_location
   - procurement_auto_create_group
