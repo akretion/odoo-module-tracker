@@ -633,6 +633,7 @@ oca:
   server-auth:
   - auth_signup_verify_email
   - auth_jwt
+  - users_ldap_mail
   - auth_user_case_insensitive
   - base_user_show_email
   - auth_oidc
