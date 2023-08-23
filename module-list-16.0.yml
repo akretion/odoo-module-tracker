@@ -257,6 +257,7 @@ oca:
   dms: []
   e-commerce:
   - website_sale_hide_price
+  - website_sale_order_type
   - website_sale_attribute_filter_form_submit
   - website_sale_stock_available
   - website_sale_attribute_filter_multiselect
@@ -411,6 +412,7 @@ oca:
   - partner_address_street3
   - sale_customer_rank
   pos:
+  - pos_order_to_sale_order_report
   - pos_global_discount_in_line
   - pos_partner_birthdate
   - pos_default_partner
@@ -640,6 +642,7 @@ oca:
   - auth_oidc
   - auth_user_case_insensitive
   - base_user_show_email
+  - user_log_view
   - auth_saml
   - auth_signup_verify_email
   - auth_api_key
