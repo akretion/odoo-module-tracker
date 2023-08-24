@@ -291,6 +291,7 @@ oca:
   - hr_employee_medical_examination
   - hr_employee_phone_extension
   - hr_employee_lastnames
+  - hr_employee_document
   - hr_employee_firstname
   intrastat-extrastat:
   - product_harmonized_system_stock
@@ -559,6 +560,7 @@ oca:
   - sql_export
   - sql_request_abstract
   - report_csv
+  - report_py3o
   rest-framework:
   - fastapi_auth_jwt_demo
   - graphql_demo
@@ -754,6 +756,7 @@ oca:
   - stock_location_zone
   - stock_storage_category_capacity_name
   - stock_route_mto
+  - procurement_auto_create_group
   - stock_reserve
   - stock_search_supplierinfo_code
   - stock_demand_estimate
@@ -832,6 +835,7 @@ oca:
   - web_company_color
   - web_remember_tree_column_width
   - web_domain_field
+  - web_save_discard_button
   - web_widget_bokeh_chart
   - web_select_all_companies
   - web_widget_numeric_step
