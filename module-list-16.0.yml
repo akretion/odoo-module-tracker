@@ -262,6 +262,7 @@ oca:
   - website_sale_stock_available
   - website_sale_attribute_filter_multiselect
   - website_sale_product_detail_attribute_image
+  - website_sale_wishlist_keep
   - website_sale_comparison_hide_price
   - website_sale_product_attribute_filter_collapse
   - website_sale_product_brand
@@ -812,7 +813,11 @@ oca:
   - stock_split_picking
   - stock_picking_sale_order_link
   storage:
+  - fs_storage
   - storage_backend
+  - fs_file
+  - fs_attachment
+  - fs_file_demo
   support: []
   timesheet:
   - hr_timesheet_name_customer
