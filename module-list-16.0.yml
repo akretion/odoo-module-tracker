@@ -65,6 +65,7 @@ oca:
   account-analytic:
   - stock_picking_analytic
   - stock_analytic
+  - account_analytic_tag
   - purchase_stock_analytic
   - account_analytic_required
   - purchase_analytic
@@ -193,6 +194,7 @@ oca:
   - company_sanitary_registry
   - account_payment_unece
   - base_iso3166
+  - base_currency_iso_4217
   - account_tax_unece
   - uom_unece
   connector:
@@ -261,11 +263,13 @@ oca:
   - website_sale_attribute_filter_form_submit
   - website_sale_stock_available
   - website_sale_stock_list_preview
+  - website_sale_checkout_skip_payment
   - website_sale_attribute_filter_multiselect
   - website_sale_product_detail_attribute_image
   - website_sale_wishlist_keep
   - website_sale_comparison_hide_price
   - website_sale_product_attribute_filter_collapse
+  - website_sale_product_item_cart_custom_qty
   - website_sale_product_brand
   - website_sale_product_reference_displayed
   - website_sale_product_description
@@ -409,6 +413,7 @@ oca:
   - partner_firstname
   - partner_address_two_lines
   - partner_pricelist_search
+  - partner_contact_type_end_user
   - partner_contact_personal_information_page
   - partner_contact_age_range
   - partner_external_map
@@ -623,6 +628,7 @@ oca:
   - sale_order_line_price_history
   - sale_start_end_dates
   - sale_force_invoiced
+  - sale_product_multi_add
   - product_supplierinfo_for_customer_sale
   - sale_stock_picking_note
   - sale_order_archive
@@ -823,7 +829,9 @@ oca:
   - fs_file_demo
   support: []
   timesheet:
+  - hr_timesheet_time_type
   - hr_timesheet_name_customer
+  - hr_timesheet_employee_analytic_tag
   - hr_timesheet_begin_end
   - hr_timesheet_task_required
   - hr_timesheet_task_stage
@@ -838,6 +846,7 @@ oca:
   - web_widget_plotly_chart
   - web_no_bubble
   - web_action_conditionable
+  - web_ir_actions_act_multi
   - web_dialog_size
   - web_m2x_options
   - web_company_color
