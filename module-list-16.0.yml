@@ -154,6 +154,7 @@ oca:
   - account_due_list
   - account_payment_promissory_note
   account-reconcile:
+  - account_move_reconcile_forbid_cancel
   - account_mass_reconcile
   - account_reconcile_oca
   - account_move_base_import
@@ -611,6 +612,7 @@ oca:
   - partner_sale_pivot
   - sale_order_product_recommendation
   - sale_elaboration
+  - sale_packaging_default
   - sale_manual_delivery
   - sale_partner_selectable_option
   - sale_order_line_sequence
@@ -784,6 +786,7 @@ oca:
   - stock_location_position
   - stock_move_common_dest
   - stock_move_auto_assign_auto_release
+  - stock_move_packaging_qty
   - stock_quant_cost_info
   - stock_packaging_calculator
   stock-logistics-workflow:
