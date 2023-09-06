@@ -37,6 +37,7 @@ akretion:
   - sale_stock_usability
   - partner_tree_default_account
   - stock_product_tree_default
+  - base_partner_one2many_phone
   - purchase_stock_usability
   - sale_product_tree_default
   - mrp_product_tree_default
@@ -125,6 +126,7 @@ oca:
   - account_receipt_journal
   - account_invoice_supplierinfo_update
   - account_invoice_refund_line_selection
+  - account_invoice_section_sale_order
   - account_move_tier_validation
   - account_invoice_show_currency_rate
   - account_invoice_transmit_method
@@ -276,6 +278,7 @@ oca:
   - website_sale_product_description
   - website_snippet_product_category
   - website_sale_cart_expire
+  - website_sale_invoice_address
   - website_sale_product_attribute_value_filter_existing
   edi:
   - account_einvoice_generate
