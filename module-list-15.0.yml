@@ -476,6 +476,7 @@ oca:
   - mrp_bom_tracking
   - mrp_bom_attribute_match
   - mrp_bom_line_sequence
+  - mrp_production_note
   - stock_picking_product_kit_helper
   - mrp_multi_level_estimate
   - mrp_production_putaway_strategy
@@ -1061,6 +1062,7 @@ oca:
   - mass_mailing_custom_unsubscribe
   stock-logistics-barcode:
   - product_supplierinfo_barcode
+  - product_multi_barcode
   - barcodes_generator_product
   - stock_picking_product_barcode_report_secondary_unit
   - barcodes_generator_abstract
@@ -1150,6 +1152,7 @@ oca:
   - stock_picking_origin_reference_purchase
   - delivery_procurement_group_carrier
   - stock_valuation_layer_usage
+  - product_cost_price_avco_sync
   - stock_picking_invoice_link
   - stock_move_change_source_location
   - stock_no_negative
