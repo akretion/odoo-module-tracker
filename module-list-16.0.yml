@@ -42,6 +42,7 @@ akretion:
   - sale_product_tree_default
   - mrp_product_tree_default
   - sale_usability
+  - mrp_subcontracting_usability
   - eradicate_quick_create
   - pos_product_tree_default
   - account_product_fiscal_classification_pos_sale
@@ -261,6 +262,7 @@ oca:
   - delivery_auto_refresh
   dms: []
   e-commerce:
+  - website_sale_product_attachment
   - website_sale_hide_price
   - website_sale_order_type
   - website_sale_attribute_filter_form_submit
@@ -309,6 +311,7 @@ oca:
   - intrastat_base
   - product_harmonized_system
   - product_harmonized_system_delivery
+  - intrastat_product_generic
   knowledge:
   - document_knowledge
   - document_page_reference
@@ -611,6 +614,7 @@ oca:
   - sale_stock_picking_blocking
   - sale_substate
   - sale_tier_validation
+  - sale_order_currency_rate
   - sale_commercial_partner
   - sale_automatic_workflow_payment_mode
   - sales_team_security
