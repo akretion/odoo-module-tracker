@@ -171,6 +171,7 @@ oca:
   - account_move_tier_validation_forward
   - account_move_search_line
   - account_invoice_check_picking_date
+  - account_invoice_mass_sending
   - account_invoice_fiscal_position_update
   - product_form_account_move_line_link
   - account_invoice_payment_term_date_due
@@ -423,6 +424,7 @@ oca:
   - intrastat_base
   - product_harmonized_system
   - product_harmonized_system_delivery
+  - intrastat_product_generic
   knowledge:
   - document_page_reference
   - document_page_group
@@ -610,6 +612,7 @@ oca:
   - product_cost_security
   - sale_product_template_tags
   - stock_product_template_tags
+  - product_status
   - product_supplierinfo_archive
   - product_category_product_link
   - product_pricelist_revision
