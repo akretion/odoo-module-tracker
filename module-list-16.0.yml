@@ -126,6 +126,7 @@ oca:
   - sale_order_invoicing_grouping_criteria
   - account_receipt_journal
   - account_invoice_supplierinfo_update
+  - account_invoice_fixed_discount
   - account_invoice_refund_line_selection
   - account_invoice_section_sale_order
   - account_move_tier_validation
@@ -898,6 +899,7 @@ oca:
   - stock_available_to_promise_release
   - stock_dynamic_routing
   - stock_storage_type
+  - stock_warehouse_flow
 shopinvader:
   odoo-shopinvader:
   - sale_cart
