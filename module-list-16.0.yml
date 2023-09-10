@@ -654,6 +654,7 @@ oca:
   - sale_product_category_menu
   - sale_procurement_group_by_line
   - sale_exception
+  - sale_invoice_frequency
   - sale_product_set
   - sale_order_revision
   search-engine:
@@ -665,6 +666,7 @@ oca:
   - users_ldap_mail
   - auth_oidc
   - auth_user_case_insensitive
+  - auth_api_key_server_env
   - base_user_show_email
   - user_log_view
   - auth_saml
@@ -811,6 +813,7 @@ oca:
   - stock_picking_show_return
   - stock_picking_back2draft
   - stock_picking_grn_mandatory
+  - stock_picking_batch_extended
   - purchase_stock_picking_invoice_link
   - delivery_procurement_group_carrier
   - stock_picking_invoice_link
@@ -903,10 +906,12 @@ oca:
 shopinvader:
   odoo-shopinvader:
   - sale_cart
+  - shopinvader_sale_cart
   - shopinvader_schema_address
   - shopinvader_fastapi_auth_jwt
   - shopinvader_api_address
   - shopinvader_anonymous_partner
   - shopinvader_address
+  - shopinvader_api_cart
   odoo-shopinvader-payment: []
   pattern-import-export: []
