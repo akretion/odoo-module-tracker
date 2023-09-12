@@ -26,6 +26,7 @@ akretion:
   - account_usability_akretion
   - crm_usability
   - partner_tree_default_base
+  - sale_remove_my_quotation_filter
   - product_usability
   - mrp_usability
   - sale_confirm_wizard
@@ -135,6 +136,7 @@ oca:
   - account_invoice_change_currency
   - purchase_stock_picking_return_invoicing
   - account_invoice_merge
+  - account_invoice_force_number
   - account_invoice_pricelist
   - account_invoice_blocking
   - account_invoice_tax_required
@@ -595,6 +597,7 @@ oca:
   - base_rest_datamodel
   rma:
   - product_warranty
+  - rma_sale_mrp
   - rma_sale
   - rma
   sale-financial: []
@@ -605,6 +608,7 @@ oca:
   - sale_report_delivered_subtotal
   - sale_order_report_product_image
   - sale_report_delivered
+  - sale_packaging_report
   - sale_order_line_position
   - sale_order_product_recommendation_product_sold_by_delivery_week
   sale-workflow:
@@ -770,6 +774,7 @@ oca:
   - product_multi_barcode
   - barcodes_generator_product
   - barcodes_generator_abstract
+  - barcodes_generator_package
   stock-logistics-reporting:
   - stock_picking_report_valued
   - delivery_line_sale_line_position
@@ -887,6 +892,7 @@ oca:
   - web_field_numeric_formatting
   - web_timeline
   - web_advanced_search
+  - web_group_expand
   - web_theme_classic
   - web_chatter_position
   web-api:
