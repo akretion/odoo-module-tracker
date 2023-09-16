@@ -82,6 +82,7 @@ oca:
   - account_financial_report
   - account_tax_balance
   account-financial-tools:
+  - account_fiscal_month
   - account_fiscal_position_vat_check
   - account_move_line_sale_info
   - account_move_print
@@ -91,6 +92,7 @@ oca:
   - base_vat_optional_vies
   - account_fiscal_year_auto_create
   - account_move_line_purchase_info
+  - account_move_fiscal_year
   - account_template_active
   - account_lock_date_update
   - account_asset_management
@@ -794,6 +796,7 @@ oca:
   - stock_route_mto
   - stock_search_supplierinfo_code
   - stock_location_lockdown
+  - stock_putaway_product_template
   - stock_demand_estimate
   - scrap_reason_code
   - stock_warehouse_calendar
@@ -833,6 +836,7 @@ oca:
   - stock_picking_group_by_max_weight
   - stock_picking_grn_mandatory
   - stock_picking_purchase_order_link
+  - sale_order_global_stock_route
   - stock_picking_start
   - stock_landed_costs_currency
   - stock_picking_filter_lot
