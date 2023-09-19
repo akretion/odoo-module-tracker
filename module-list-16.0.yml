@@ -278,6 +278,7 @@ oca:
   - website_sale_product_description
   - website_sale_product_attachment
   - website_sale_attribute_filter_form_submit
+  - website_sale_stock_provisioning_date
   - website_sale_stock_available
   - website_sale_attribute_filter_multiselect
   - website_sale_wishlist_keep
@@ -301,6 +302,7 @@ oca:
   - hr_employee_phone_extension
   - hr_employee_birthday_mail
   - hr_employee_lastnames
+  - hr_employee_birth_name
   - hr_course
   - hr_employee_age
   - hr_employee_ssn
@@ -466,6 +468,7 @@ oca:
   - product_pricelist_direct_print_xlsx
   - product_sale_description
   - product_set
+  - product_abc_classification_sale_stock
   - product_template_has_one_variant
   - product_dimension
   - product_attribute_company_favorite
@@ -481,9 +484,11 @@ oca:
   - product_pricelist_simulation_margin
   - product_pricelist_revision
   - product_supplierinfo_revision
+  - product_packaging_level
   - product_supplierinfo_for_customer
   - product_category_code
   - stock_production_lot_expired_date
+  - product_abc_classification
   - product_category_active
   - product_pricelist_simulation
   - product_expiry_configurable
@@ -916,6 +921,7 @@ oca:
   - stock_release_channel_auto_release
   - stock_storage_type
   - stock_release_channel
+  - stock_storage_type_putaway_abc
   - stock_picking_completion_info
   - stock_picking_type_shipping_policy
   - stock_warehouse_flow
