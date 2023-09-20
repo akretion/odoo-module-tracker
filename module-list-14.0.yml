@@ -205,6 +205,7 @@ oca:
   - account_fiscal_position_vat_check
   - product_category_tax
   - account_move_line_sale_info
+  - account_asset_stock_move
   - account_move_fiscal_month
   - account_no_default
   - account_asset_transfer
@@ -392,6 +393,7 @@ oca:
   - account_partner_reconcile
   - account_reconciliation_widget
   - account_move_base_import
+  - account_reconciliation_widget_limit_aml
   bank-payment:
   - account_banking_sepa_credit_transfer
   - account_payment_order_notification
@@ -1197,6 +1199,7 @@ oca:
   - purchase_manual_currency
   - purchase_order_qty_change_no_recompute
   - purchase_cancel_reason
+  - purchase_default_terms_conditions
   - purchase_work_acceptance_evaluation
   - subcontracted_service
   - purchase_representative
