@@ -920,7 +920,9 @@ oca:
   - sale_sourced_by_line
   - sale_stock_invoice_plan
   - sale_last_price_info
-  search-engine: []
+  search-engine:
+  - connector_search_engine
+  - connector_elasticsearch
   server-auth:
   - vault_share
   - password_security
