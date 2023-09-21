@@ -62,6 +62,7 @@ forgeflow:
   - rma_account
   - rma_sale_mrp
   - rma_sale
+  - rma_delivery
   - rma_put_away
   - rma_repair
   - rma_scrap
@@ -71,8 +72,10 @@ oca:
   - stock_analytic
   - account_analytic_required
   - purchase_stock_analytic
+  - account_analytic_tag_distribution
   - stock_picking_analytic
   - account_analytic_tag
+  - account_move_update_analytic
   account-closing:
   - account_cutoff_start_end_dates
   - account_cutoff_picking
@@ -80,6 +83,7 @@ oca:
   - account_cutoff_accrual_subscription
   - account_invoice_start_end_dates
   account-financial-reporting:
+  - mis_builder_cash_flow
   - account_financial_report
   - account_tax_balance
   account-financial-tools:
@@ -280,6 +284,7 @@ oca:
   - website_sale_attribute_filter_form_submit
   - website_sale_stock_provisioning_date
   - website_sale_stock_available
+  - website_sale_product_image_sample
   - website_sale_attribute_filter_multiselect
   - website_sale_wishlist_keep
   - website_sale_product_attribute_filter_collapse
@@ -463,6 +468,7 @@ oca:
   - product_logistics_uom
   - product_code_unique
   - product_pricelist_direct_print
+  - product_supplierinfo_archive
   - sale_product_template_tags
   - product_pricelist_direct_print_company_group
   - product_pricelist_direct_print_xlsx
@@ -499,7 +505,9 @@ oca:
   - product_net_weight
   - product_pricelist_supplierinfo
   product-variant:
+  - sale_order_line_variant_description
   - product_variant_default_code
+  - product_variant_name
   project:
   - project_parent
   - project_template
@@ -538,6 +546,7 @@ oca:
   - purchase_order_line_menu
   - purchase_merge
   - purchase_default_terms_conditions
+  - purchase_invoice_plan
   - purchase_deposit
   - purchase_requisition_tier_validation
   - purchase_order_no_zero_price
@@ -618,6 +627,7 @@ oca:
   - sale_comment_template
   - sale_packaging_report
   - sale_report_delivered
+  - sale_report_delivered_volume
   - product_sold_by_delivery_week
   - sale_layout_category_hide_detail
   - sale_order_product_recommendation_product_sold_by_delivery_week
@@ -661,6 +671,7 @@ oca:
   - sale_invoice_policy
   - sale_order_lot_selection
   - sale_order_product_recommendation
+  - sale_order_line_delivery_state
   - sale_order_invoice_amount
   - sale_automatic_workflow_job
   - sale_order_lot_generator
@@ -668,6 +679,7 @@ oca:
   - sale_stock_picking_note
   - sale_automatic_workflow_payment_mode
   - sale_order_currency_rate
+  - sale_order_general_discount_triple
   - sale_manual_delivery
   - sale_start_end_dates
   - sale_force_invoiced
