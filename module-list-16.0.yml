@@ -420,6 +420,7 @@ oca:
   - partner_company_type
   - partner_fax
   - partner_pricelist_search
+  - partner_deduplicate_acl
   - partner_bank_code
   - partner_tier_validation
   - base_location_geonames_import
@@ -803,7 +804,8 @@ oca:
   - stock_picking_report_valued
   - delivery_line_sale_line_position
   - stock_quantity_history_location
-  stock-logistics-tracking: []
+  stock-logistics-tracking:
+  - stock_quant_package_multi_reference
   stock-logistics-warehouse:
   - stock_picking_volume
   - stock_move_location
@@ -822,6 +824,7 @@ oca:
   - stock_warehouse_calendar
   - stock_reserve
   - stock_location_position
+  - stock_picking_procure_method
   - stock_picking_volume_packaging
   - stock_location_zone
   - stock_move_auto_assign_auto_release
@@ -845,6 +848,7 @@ oca:
   - stock_quant_package_dimension
   - stock_no_negative
   - stock_picking_invoice_link
+  - stock_valuation_layer_usage
   - stock_move_line_auto_fill
   - stock_owner_restriction
   - stock_putaway_hook
