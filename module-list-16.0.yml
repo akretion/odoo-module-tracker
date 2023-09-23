@@ -131,6 +131,8 @@ oca:
   - stock_picking_return_refund_option
   - account_invoice_show_currency_rate
   - account_invoice_change_currency
+  - account_invoice_supplierinfo_update_discount
+  - account_invoice_supplier_ref_unique
   - account_receipt_send
   - account_move_tier_validation
   - account_tax_change
@@ -474,6 +476,7 @@ oca:
   - product_pricelist_direct_print_company_group
   - product_pricelist_direct_print_xlsx
   - product_sale_description
+  - product_category_hr_department
   - product_set
   - product_abc_classification_sale_stock
   - product_template_has_one_variant
@@ -779,6 +782,7 @@ oca:
   - base_tier_validation
   social:
   - mail_post_defer
+  - mail_show_follower
   - mass_mailing_resend
   - mail_debrand
   - mail_template_substitute
@@ -879,6 +883,7 @@ oca:
   storage:
   - storage_backend
   - fs_attachment
+  - fs_image
   - fs_file
   - fs_storage
   - fs_file_demo
