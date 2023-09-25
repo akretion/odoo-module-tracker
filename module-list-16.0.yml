@@ -886,7 +886,10 @@ oca:
   - fs_attachment
   - fs_image
   - fs_file
+  - fs_base_multi_image
   - fs_storage
+  - image_tag
+  - fs_product_multi_image
   - fs_file_demo
   support: []
   timesheet:
@@ -903,6 +906,7 @@ oca:
   web:
   - web_group_expand
   - web_dialog_size
+  - web_widget_dropdown_dynamic
   - web_widget_x2many_2d_matrix
   - web_timeline
   - web_save_discard_button
