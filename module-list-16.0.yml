@@ -238,6 +238,7 @@ oca:
   - account_credit_control_dunning_fees
   - sale_financial_risk
   crm:
+  - crm_claim_type
   - crm_phonecall
   - crm_claim
   - crm_lead_search_archive
@@ -460,6 +461,7 @@ oca:
   - pos_escpos_status
   - pos_payment_terminal
   - pos_membership
+  - pos_minimize_menu
   - pos_customer_comment
   - pos_loyalty_redeem_payment
   - pos_order_to_sale_order
@@ -479,6 +481,7 @@ oca:
   - product_category_hr_department
   - product_set
   - product_abc_classification_sale_stock
+  - product_pricelist_direct_print_website_sale
   - product_template_has_one_variant
   - product_dimension
   - product_attribute_company_favorite
@@ -524,6 +527,7 @@ oca:
   - project_task_stage_mgmt
   - project_task_default_stage
   - project_sequence
+  - project_stock_analytic_tag
   - project_task_add_very_high
   - project_stock
   - project_parent_task_filter
@@ -582,6 +586,7 @@ oca:
   - queue_job
   - base_import_async
   - queue_job_cron
+  - queue_job_subscribe
   - base_export_async
   - queue_job_cron_jobrunner
   reporting-engine:
@@ -593,6 +598,7 @@ oca:
   - sql_export_mail
   - report_xlsx
   - report_label
+  - sql_export_excel
   - sql_export
   - report_qweb_decimal_place
   - report_qweb_encrypt
@@ -698,6 +704,7 @@ oca:
   - auth_oidc
   - users_ldap_mail
   - auth_session_timeout
+  - users_ldap_groups
   - auth_user_case_insensitive
   - auth_api_key_server_env
   - base_user_show_email
@@ -885,12 +892,16 @@ oca:
   - storage_backend
   - fs_attachment
   - fs_image
+  - fs_product_multi_media
   - fs_file
   - fs_base_multi_image
   - fs_storage
   - image_tag
+  - fs_base_multi_media
   - fs_product_multi_image
   - fs_file_demo
+  - fs_product_brand_multi_image
+  - fs_image_thumbnail
   support: []
   timesheet:
   - sale_timesheet_line_exclude
