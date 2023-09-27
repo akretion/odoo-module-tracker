@@ -236,17 +236,20 @@ oca:
   - stock_financial_risk
   - account_invoice_overdue_reminder
   - account_credit_control_dunning_fees
+  - account_payment_return_financial_risk
   - sale_financial_risk
   crm:
   - crm_claim_type
   - crm_phonecall
   - crm_claim
   - crm_lead_search_archive
+  - crm_salesperson_planner
   - crm_location
   - crm_project_task
   - crm_lead_firstname
   - crm_lead_currency
   - crm_lead_vat
+  - crm_salesperson_planner_sale
   - crm_industry
   - crm_partner_assign
   - crm_lead_code
@@ -262,8 +265,10 @@ oca:
   - delivery_estimated_package_quantity_by_weight
   - delivery_postlogistics
   - delivery_carrier_account
+  - stock_picking_report_delivery_cost
   - delivery_package_type_number_parcels
   - delivery_automatic_package
+  - partner_delivery_zone
   - delivery_package_number
   - base_delivery_carrier_label
   - delivery_price_method
@@ -393,6 +398,7 @@ oca:
   - res_company_search_view
   - account_invoice_inter_company
   - res_company_active
+  - purchase_sale_inter_company
   - mail_template_multi_company
   - product_account_multicompany_default
   - product_tax_multicompany_default
@@ -449,6 +455,7 @@ oca:
   - pos_payment_change
   - pos_order_to_sale_order_report
   - pos_edit_order_line
+  - pos_access_right
   - pos_order_reorder
   - pos_lot_barcode
   - pos_product_display_default_code
@@ -460,6 +467,7 @@ oca:
   - pos_default_partner
   - pos_escpos_status
   - pos_payment_terminal
+  - pos_partner_firstname
   - pos_membership
   - pos_minimize_menu
   - pos_customer_comment
@@ -674,6 +682,7 @@ oca:
   - product_form_sale_link
   - partner_contact_sale_info_propagation
   - sale_product_category_menu
+  - sale_order_invoicing_finished_task
   - sale_commercial_partner
   - sale_order_type
   - product_supplierinfo_for_customer_sale
