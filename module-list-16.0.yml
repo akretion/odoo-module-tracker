@@ -552,6 +552,7 @@ oca:
   - purchase_report_date_format
   purchase-workflow:
   - purchase_allowed_product
+  - purchase_fop_shipping
   - purchase_no_rfq
   - purchase_force_invoiced
   - purchase_order_type
@@ -804,6 +805,7 @@ oca:
   - mail_debrand
   - mail_template_substitute
   - mail_attach_existing_attachment
+  - mail_activity_done
   - mass_mailing_list_dynamic
   - mass_mailing_partner
   - base_search_mail_content
@@ -839,6 +841,7 @@ oca:
   - stock_route_mto
   - stock_search_supplierinfo_code
   - stock_location_lockdown
+  - stock_inventory_discrepancy
   - stock_putaway_product_template
   - stock_demand_estimate
   - scrap_reason_code
@@ -917,6 +920,7 @@ oca:
   - hr_timesheet_employee_analytic_tag
   - hr_timesheet_sheet_policy_project_manager
   - hr_timesheet_time_type
+  - crm_timesheet
   - hr_timesheet_name_customer
   - hr_timesheet_task_domain
   - hr_timesheet_begin_end
