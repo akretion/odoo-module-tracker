@@ -281,6 +281,7 @@ oca:
   - delivery_state
   - delivery_carrier_account
   - delivery_auto_refresh
+  - delivery_carrier_partner
   - delivery_price_method
   - delivery_automatic_package
   - base_delivery_carrier_label
@@ -718,6 +719,7 @@ oca:
   server-auth:
   - users_ldap_groups
   - auth_api_key
+  - users_ldap_populate
   - auth_jwt
   - auth_api_key_server_env
   - users_ldap_mail
