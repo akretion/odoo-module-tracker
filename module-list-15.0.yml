@@ -272,6 +272,7 @@ oca:
   connector-telephony: []
   contract:
   - subscription_oca
+  - contract_variable_qty_timesheet
   - contract_variable_quantity
   - contract_payment_mode
   - contract_sale
@@ -1183,6 +1184,7 @@ oca:
   - stock_landed_costs_delivery
   - stock_reception_discrepancy_distribution
   - stock_picking_origin_reference_sale
+  - stock_remote_measure
   - stock_split_picking
   - stock_picking_product_assortment
   - stock_picking_warn_message
@@ -1261,6 +1263,7 @@ oca:
   - web_group_expand
   - web_calendar_slot_duration
   - web_notify
+  - web_widget_remote_measure
   - web_timeline
   - web_advanced_search
   - web_pwa_oca
