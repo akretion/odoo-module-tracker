@@ -528,8 +528,10 @@ oca:
   - sale_product_template_tags
   - product_packaging_dimension
   product-variant:
+  - product_variant_specific_description
   - product_variant_name
   - sale_order_line_variant_description
+  - product_variant_configurator
   - product_variant_default_code
   project:
   - project_task_personal_stage_auto_fold
