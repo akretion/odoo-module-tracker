@@ -127,6 +127,7 @@ oca:
   - account_reporting_volume
   - account_invoice_report_grouped_by_picking
   - account_comment_template
+  - partner_time_to_pay
   - account_invoice_report_payment_info
   account-invoicing:
   - sale_order_invoicing_grouping_criteria
@@ -274,6 +275,7 @@ oca:
   - delivery_carrier_max_weight_constraint
   - delivery_package_number
   - delivery_postlogistics_server_env
+  - delivery_package_fee
   - stock_picking_report_delivery_cost
   - delivery_estimated_package_quantity_by_weight
   - delivery_cttexpress
@@ -282,6 +284,7 @@ oca:
   - delivery_carrier_account
   - delivery_auto_refresh
   - delivery_carrier_partner
+  - carrier_account_environment
   - delivery_price_method
   - delivery_automatic_package
   - base_delivery_carrier_label
@@ -467,6 +470,7 @@ oca:
   - pos_default_partner
   - pos_order_to_sale_order_report
   - pos_stock_available_online
+  - pos_sale_order_print
   - pos_payment_change
   - pos_margin
   - pos_lot_barcode
@@ -815,6 +819,7 @@ oca:
   - mass_mailing_partner
   - base_search_mail_content
   - mail_activity_board
+  - mail_improved_tracking_value
   - mail_partner_opt_out
   - mail_optional_follower_notification
   - mass_mailing_list_dynamic
@@ -838,6 +843,7 @@ oca:
   stock-logistics-reporting:
   - delivery_line_sale_line_position
   - stock_picking_report_valued
+  - stock_picking_report_custom_description
   - stock_quantity_history_location
   stock-logistics-tracking:
   - stock_quant_package_multi_reference
