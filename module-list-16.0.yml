@@ -128,6 +128,7 @@ oca:
   - account_invoice_report_grouped_by_picking
   - account_comment_template
   - partner_time_to_pay
+  - account_invoice_line_report
   - account_invoice_report_payment_info
   account-invoicing:
   - sale_order_invoicing_grouping_criteria
@@ -232,6 +233,7 @@ oca:
   connector-telephony: []
   contract:
   - contract_invoice_start_end_dates
+  - contract_payment_mode
   - contract_sale
   - contract_sale_generation
   - contract
@@ -251,6 +253,7 @@ oca:
   - crm_lead_search_archive
   - crm_lead_currency
   - crm_project_task
+  - crm_lead_to_task
   - crm_claim
   - crm_claim_type
   - crm_industry
@@ -443,6 +446,7 @@ oca:
   - partner_affiliate
   - partner_stage
   - partner_manual_rank
+  - purchase_supplier_rank
   - sale_partner_company_group
   - partner_contact_nationality
   - partner_contact_gender
@@ -732,6 +736,7 @@ oca:
   - auth_api_key_server_env
   - users_ldap_mail
   - base_user_show_email
+  - auth_oidc_environment
   - auth_oidc
   - user_log_view
   - auth_jwt_demo
