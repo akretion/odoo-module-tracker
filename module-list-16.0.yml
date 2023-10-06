@@ -95,6 +95,7 @@ oca:
   - account_chart_update
   - account_move_template
   - account_template_active
+  - account_chart_update_l10n_eu_oss_oca
   - account_loan
   - account_asset_batch_compute
   - account_move_line_tax_editable
@@ -286,6 +287,7 @@ oca:
   - delivery_state
   - delivery_carrier_account
   - delivery_auto_refresh
+  - delivery_roulier
   - delivery_carrier_partner
   - carrier_account_environment
   - delivery_price_method
@@ -727,6 +729,8 @@ oca:
   search-engine:
   - connector_search_engine_serializer_ir_export
   - connector_search_engine
+  - search_engine_serializer_pydantic
+  - search_engine_image_thumbnail
   - connector_elasticsearch
   server-auth:
   - users_ldap_groups
@@ -926,6 +930,7 @@ oca:
   storage:
   - fs_base_multi_image
   - fs_product_multi_media
+  - storage_file
   - storage_backend
   - fs_image
   - fs_product_multi_image
