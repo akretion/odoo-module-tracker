@@ -1221,6 +1221,8 @@ oca:
   - storage_image_product
   - storage_image
   - storage_thumbnail
+  - storage_media
+  - storage_image_backend_migration
   - storage_backend_ftp
   - storage_backend_sftp
   support: []
@@ -1228,6 +1230,7 @@ oca:
   - sale_timesheet_line_exclude
   - sale_timesheet_rounded
   - hr_timesheet_task_stage
+  - hr_timesheet_sheet_period
   - hr_timesheet_begin_end
   - sale_timesheet_task_exclude
   - hr_timesheet_time_type
