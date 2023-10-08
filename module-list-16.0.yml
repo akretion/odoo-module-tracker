@@ -14,6 +14,8 @@ akretion:
   - account_statement_completion_label_simple_sale
   - account_statement_completion_label_simple
   odoo-import-helper:
+  - product_import_helper
+  - import_helper_base
   - account_ir_property_helper
   - partner_import_helper
   - account_import_helper
@@ -576,6 +578,7 @@ oca:
   - purchase_order_supplierinfo_update
   - purchase_discount
   - purchase_order_type
+  - purchase_order_weight_volume
   - purchase_open_qty
   - purchase_fop_shipping
   - purchase_security
@@ -995,14 +998,18 @@ oca:
   - webservice
   wms:
   - stock_picking_completion_info
+  - stock_release_channel_shipment_advice
   - stock_picking_type_shipping_policy
   - stock_dynamic_routing
   - stock_available_to_promise_release
   - stock_release_channel_batch_mode_commercial_partner
+  - stock_release_channel_partner_public_holidays
   - stock_warehouse_flow
   - stock_storage_type_putaway_abc
+  - stock_release_channel_process_end_time
   - stock_storage_type
   - stock_release_channel_auto_release
+  - stock_release_channel_shipment_lead_time
   - stock_release_channel
 shopinvader:
   odoo-shopinvader:
