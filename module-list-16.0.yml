@@ -76,6 +76,7 @@ oca:
   account-analytic:
   - purchase_stock_analytic
   - account_move_update_analytic
+  - product_analytic
   - account_analytic_required
   - account_analytic_tag_distribution
   - stock_analytic
@@ -108,6 +109,7 @@ oca:
   - account_fiscal_position_vat_check
   - account_fiscal_year_auto_create
   - account_move_name_sequence
+  - account_journal_restrict_mode
   - account_usability
   - account_move_fiscal_year
   - account_move_line_purchase_info
@@ -239,6 +241,7 @@ oca:
   - contract_payment_mode
   - contract_sale
   - contract_sale_generation
+  - agreement_rebate_partner_company_group
   - contract
   credit-control:
   - account_payment_return_financial_risk
@@ -419,6 +422,7 @@ oca:
   - account_multicompany_easy_creation
   - product_account_multicompany_default
   - mail_template_multi_company
+  - company_dependent_flag
   partner-contact:
   - base_partner_sequence
   - partner_contact_lang
@@ -520,8 +524,10 @@ oca:
   - product_sale_description
   - product_code_unique
   - product_multi_category
+  - product_packaging_level_salable
   - product_set
   - product_abc_classification_sale_stock
+  - product_total_weight_from_packaging
   - product_logistics_uom
   - product_secondary_unit
   - product_assortment
@@ -851,6 +857,8 @@ oca:
   - barcodes_generator_package
   - barcodes_generator_abstract
   - product_multi_barcode
+  - product_packaging_multi_barcode
+  - product_multi_barcode_stock_menu
   - barcodes_generator_product
   stock-logistics-reporting:
   - delivery_line_sale_line_position
@@ -978,6 +986,7 @@ oca:
   - web_group_expand
   - web_field_numeric_formatting
   - web_notify
+  - web_apply_field_style
   - web_timeline
   - web_advanced_search
   - web_search_with_and
@@ -999,6 +1008,7 @@ oca:
   wms:
   - stock_picking_completion_info
   - stock_release_channel_shipment_advice
+  - stock_release_channel_cutoff
   - stock_picking_type_shipping_policy
   - stock_dynamic_routing
   - stock_available_to_promise_release
