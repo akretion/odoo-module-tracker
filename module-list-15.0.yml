@@ -82,6 +82,7 @@ oca:
   - account_move_print
   - account_fiscal_position_vat_check
   - account_move_budget
+  - stock_account_no_auto_reconcile
   - account_move_name_sequence
   - account_chart_update_l10n_eu_oss
   - account_move_fiscal_month
@@ -277,6 +278,7 @@ oca:
   - contract_payment_mode
   - contract_sale
   - contract_sale_generation
+  - contract_price_revision
   - agreement_rebate_partner_company_group
   - contract
   credit-control:
@@ -652,6 +654,7 @@ oca:
   - project_task_personal_stage_auto_fold
   - project_task_add_very_high
   - project_stock_product_set
+  - project_task_description_template
   - project_purchase_analytic_global
   - project_template
   - project_task_stage_state
@@ -731,6 +734,7 @@ oca:
   - purchase_order_product_recommendation_classification
   - purchase_exception
   - purchase_request
+  - sale_purchase_secondary_unit
   - purchase_order_product_recommendation_secondary_unit
   - purchase_request_to_requisition
   - purchase_invoice_method
@@ -1003,6 +1007,7 @@ oca:
   - module_change_auto_install
   - scheduler_error_mailer
   - base_cron_exclusion
+  - base_kanban_stage_state
   - onchange_helper
   - base_exception
   - excel_import_export_demo
@@ -1181,6 +1186,7 @@ oca:
   - stock_account_product_run_fifo_hook
   - stock_lot_product_qty_search
   - stock_push_delay
+  - product_supplierinfo_for_customer_picking
   - stock_owner_restriction
   - stock_picking_filter_lot
   - stock_landed_costs_delivery
