@@ -444,6 +444,7 @@ oca:
   - partner_contact_birthdate
   - partner_contact_address_default
   - partner_second_lastname
+  - partner_identification_gln
   - partner_industry_secondary
   - partner_accreditation
   - partner_company_type
@@ -757,6 +758,7 @@ oca:
   - auth_saml
   - auth_ldaps
   - auth_signup_verify_email
+  - password_security
   - auth_session_timeout
   - auth_user_case_insensitive
   server-backend:
@@ -841,6 +843,7 @@ oca:
   - mail_partner_opt_out
   - mail_optional_follower_notification
   - mass_mailing_list_dynamic
+  - mail_tracking
   - mail_activity_done
   - mail_outbound_static
   - mass_mailing_resend
@@ -892,6 +895,7 @@ oca:
   - stock_move_auto_assign
   - stock_picking_volume_packaging
   - stock_route_mto
+  - stock_product_qty_by_packaging
   - account_move_line_product
   - stock_helper
   - stock_demand_estimate
@@ -923,6 +927,7 @@ oca:
   - stock_picking_group_by_max_weight
   - stock_split_picking
   - stock_picking_purchase_order_link
+  - stock_partner_delivery_window
   - stock_move_line_serial_unique
   - stock_override_procurement
   - stock_picking_auto_create_lot
