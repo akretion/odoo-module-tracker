@@ -37,8 +37,14 @@ akretion:
   - account_balance_reset
   - account_import_helper
   odoo-perf:
+  - perf_account
+  - perf_stock
+  - perf_multicompany
+  - perf_sale_stock
   - perf_product
   - perf_product_inactive
+  - perf_mrp
+  - perf_sale
   odoo-usability:
   - product_detailed_type
   - pos_product_tree_default
@@ -261,6 +267,7 @@ oca:
   - account_avatax_exemption_base
   - account_avatax_website_sale
   - account_fiscal_position_partner_type
+  - account_avatax_repair_oca
   - account_product_fiscal_classification_test
   - account_avatax_exemption
   account-invoice-reporting:
@@ -1384,6 +1391,7 @@ oca:
   - sale_substate
   - sale_commitment_date_mandatory
   - sale_stock_picking_note
+  - sale_stock_return_request
   - sale_validity
   - sale_invoice_plan
   - sale_by_packaging
