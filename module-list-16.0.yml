@@ -110,6 +110,7 @@ oca:
   - account_fiscal_year_auto_create
   - account_move_name_sequence
   - account_journal_restrict_mode
+  - account_move_fiscal_month
   - account_usability
   - account_move_fiscal_year
   - account_move_line_purchase_info
@@ -175,6 +176,7 @@ oca:
   - account_due_list
   - account_payment_return_import_iso20022
   - account_payment_term_extension
+  - account_due_list_aging_comment
   - account_payment_return_import
   - account_due_list_payment_mode
   - account_payment_notification
@@ -888,6 +890,7 @@ oca:
   - stock_picking_procure_method
   - stock_quant_manual_assign
   - procurement_auto_create_group
+  - stock_inventory_count_to_zero
   - stock_quant_cost_info
   - stock_warehouse_calendar
   - stock_location_zone
