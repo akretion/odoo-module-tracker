@@ -496,6 +496,7 @@ oca:
   - agreement
   - contract_invoice_start_end_dates
   - agreement_sale
+  - subscription_oca
   - contract_sale_tag
   - contract_split
   - agreement_account
@@ -1693,6 +1694,7 @@ oca:
   - mail_layout_force
   - mail_activity_creator
   - email_template_qweb
+  - mail_thread_create_nolog
   - mail_server_by_user
   - mail_debrand
   - mail_show_follower
@@ -1843,6 +1845,7 @@ oca:
   - stock_picking_sale_order_link
   - delivery_package_default_shipping_weight
   - stock_no_negative
+  - product_expiry_simple
   - stock_lot_scrap
   - purchase_stock_picking_invoice_link
   - stock_picking_back2draft
