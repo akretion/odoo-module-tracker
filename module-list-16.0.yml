@@ -138,6 +138,7 @@ oca:
   - account_invoice_report_payment_info
   account-invoicing:
   - sale_order_invoicing_grouping_criteria
+  - account_invoice_crm_tag
   - account_invoice_check_total
   - account_invoice_force_number
   - account_invoice_pricelist
@@ -211,6 +212,7 @@ oca:
   - account_statement_import_ofx
   - account_statement_import_base
   brand:
+  - product_brand_tag
   - product_brand
   - account_brand
   - sale_brand
@@ -847,6 +849,7 @@ oca:
   - mail_improved_tracking_value
   - mail_partner_opt_out
   - mail_optional_follower_notification
+  - mail_activity_reminder
   - mass_mailing_list_dynamic
   - mail_tracking
   - mail_activity_done
@@ -924,6 +927,7 @@ oca:
   - stock_grn
   - sale_order_global_stock_route
   - stock_valuation_layer_usage
+  - stock_picking_line_sequence
   - stock_quant_package_product_packaging
   - stock_account_product_run_fifo_hook
   - stock_owner_restriction
@@ -1022,6 +1026,7 @@ oca:
   - stock_release_channel_cutoff
   - stock_picking_type_shipping_policy
   - stock_dynamic_routing
+  - stock_release_channel_propagate_channel_picking
   - stock_available_to_promise_release
   - stock_release_channel_batch_mode_commercial_partner
   - stock_release_channel_partner_public_holidays
@@ -1035,12 +1040,25 @@ oca:
 shopinvader:
   odoo-shopinvader:
   - shopinvader_sale_cart
+  - shopinvader_search_engine_product_media
   - shopinvader_api_cart
   - shopinvader_anonymous_partner
+  - shopinvader_product_brand_tag
   - sale_cart
   - shopinvader_schema_address
+  - shopinvader_product_url
+  - shopinvader_restapi
+  - shopinvader_search_engine
+  - shopinvader_base_url
+  - shopinvader_product_seo
+  - shopinvader_search_engine_image
+  - shopinvader_search_engine_product_brand_image
+  - shopinvader_search_engine_product_brand
+  - shopinvader_product_description
+  - shopinvader_product
   - shopinvader_fastapi_auth_jwt
   - shopinvader_address
+  - shopinvader_product_brand
   - shopinvader_api_address
   odoo-shopinvader-payment: []
   pattern-import-export: []
