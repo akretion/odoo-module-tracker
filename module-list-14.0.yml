@@ -38,6 +38,7 @@ akretion:
   - account_import_helper
   odoo-perf:
   - perf_account
+  - perf_mail
   - perf_stock
   - perf_multicompany
   - perf_sale_stock
@@ -1444,6 +1445,7 @@ oca:
   - sale_order_line_description
   - sale_order_partner_restrict
   - sale_pricelist_item_advanced
+  - sale_invoice_delivery_state
   - sale_stock_reconcile_valuation_kit
   - sale_blanket_order
   - sale_automatic_workflow_delivery_state
