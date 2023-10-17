@@ -212,6 +212,7 @@ oca:
   - account_statement_import_ofx
   - account_statement_import_base
   brand:
+  - product_brand_purchase
   - product_brand_tag
   - product_brand
   - account_brand
@@ -219,6 +220,7 @@ oca:
   - brand_external_report_layout
   - brand
   - partner_brand
+  - product_brand_mrp
   calendar: []
   community-data-files:
   - uom_unece
@@ -913,6 +915,7 @@ oca:
   - stock_storage_category_capacity_name
   stock-logistics-workflow:
   - stock_picking_sale_order_link
+  - stock_picking_batch_extended_account
   - stock_no_negative
   - stock_move_line_reserved_quant
   - purchase_stock_picking_invoice_link
