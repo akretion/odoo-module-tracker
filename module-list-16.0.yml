@@ -325,6 +325,7 @@ oca:
   - website_sale_stock_list_preview
   - website_sale_product_image_sample
   - website_sale_cart_expire
+  - product_template_multi_link
   - website_sale_product_attribute_filter_collapse
   - website_sale_product_item_cart_custom_qty
   - website_snippet_product_category
@@ -477,6 +478,7 @@ oca:
   - partner_deduplicate_by_ref
   - partner_contact_age_range
   - account_partner_company_group
+  - partner_identification_eori
   - partner_external_map
   - partner_tz
   - partner_middlename
@@ -725,6 +727,7 @@ oca:
   - sale_order_invoice_amount
   - sale_order_product_availability_inline
   - sale_order_invoicing_finished_task
+  - sale_order_product_recommendation_packaging_default
   - partner_contact_sale_info_propagation
   - sale_order_lot_selection
   - sale_order_currency_rate
@@ -946,6 +949,7 @@ oca:
   - stock_picking_auto_create_lot
   - stock_landed_costs_currency
   - stock_quant_package_dimension
+  - stock_picking_batch_extended_account_sale_type
   - stock_picking_batch_extended
   - stock_move_line_auto_fill
   - stock_move_free_reservation_reassign
@@ -1054,6 +1058,7 @@ shopinvader:
   - shopinvader_search_engine
   - shopinvader_base_url
   - shopinvader_product_seo
+  - shopinvader_restapi_auth_jwt
   - shopinvader_search_engine_image
   - shopinvader_search_engine_product_brand_image
   - shopinvader_search_engine_product_brand
