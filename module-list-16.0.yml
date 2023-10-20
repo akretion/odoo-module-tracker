@@ -79,6 +79,7 @@ oca:
   - stock_picking_analytic
   - stock_analytic
   - product_analytic
+  - hr_expense_analytic_tag
   - account_analytic_tag
   - purchase_stock_analytic
   - account_move_update_analytic
@@ -101,6 +102,7 @@ oca:
   - account_usability
   - account_move_template
   - account_fiscal_month
+  - account_move_budget
   - account_fiscal_position_vat_check
   - base_vat_optional_vies
   - account_move_line_purchase_info
@@ -207,6 +209,7 @@ oca:
   - account_payment_purchase
   bank-statement-import:
   - account_statement_import_online
+  - account_statement_import_online_paypal
   - account_statement_import_base
   - account_statement_import_ofx
   - account_statement_import_file
@@ -321,6 +324,7 @@ oca:
   - website_sale_stock_provisioning_date
   - website_sale_order_type
   - website_sale_product_image_sample
+  - website_sale_suggest_create_account
   - website_sale_product_attribute_filter_collapse
   - website_sale_stock_list_preview
   - website_sale_product_description
@@ -334,6 +338,7 @@ oca:
   - website_sale_attribute_filter_form_submit
   edi:
   - account_einvoice_generate
+  - sale_order_import
   - base_edi
   - base_facturx
   - base_business_document_import
@@ -597,6 +602,7 @@ oca:
   - purchase_location_by_line
   - purchase_discount
   - purchase_order_supplierinfo_update
+  - purchase_invoice_method
   - purchase_delivery_split_date
   - purchase_default_terms_conditions
   - purchase_line_procurement_group
@@ -705,6 +711,7 @@ oca:
   - sale_packaging_default
   - sale_stock_picking_note
   - sale_order_qty_change_no_recompute
+  - sale_payment_sheet
   - sales_team_security
   - sale_stock_picking_blocking
   - sale_start_end_dates
