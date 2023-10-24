@@ -79,6 +79,7 @@ oca:
   - stock_picking_analytic
   - stock_analytic
   - product_analytic
+  - sale_analytic_tag
   - hr_expense_analytic_tag
   - account_analytic_tag
   - purchase_stock_analytic
@@ -161,10 +162,12 @@ oca:
   - account_invoice_tax_required
   - partner_invoicing_mode
   - account_invoice_refund_line_selection
+  - account_invoice_supplier_self_invoice
   - sale_order_invoicing_grouping_criteria
   - account_invoice_supplierinfo_update
   - account_invoice_supplierinfo_update_discount
   - account_invoice_pricelist_sale
+  - account_invoice_refund_code
   - account_invoice_refund_link
   - sale_line_refund_to_invoice_qty
   - account_invoice_section_sale_order
@@ -333,6 +336,7 @@ oca:
   - website_sale_checkout_skip_payment
   - website_sale_product_reference_displayed
   - website_sale_product_item_cart_custom_qty
+  - website_sale_require_legal
   - website_sale_attribute_filter_multiselect
   - product_template_multi_link
   - website_sale_attribute_filter_form_submit
@@ -343,6 +347,7 @@ oca:
   - base_facturx
   - base_business_document_import
   - base_edifact
+  - account_invoice_facturx_py3o
   - pdf_helper
   - account_invoice_facturx
   - base_ubl
@@ -414,6 +419,7 @@ oca:
   manufacture:
   - mrp_bom_location
   - mrp_restrict_lot
+  - mrp_bom_hierarchy
   - quality_control_oca
   - mrp_multi_level_estimate
   - mrp_bom_component_menu
