@@ -558,6 +558,7 @@ oca:
   - product_packaging_dimension
   - product_pricelist_direct_print_company_group
   - product_code_unique
+  - product_stock_state
   - product_cost_security
   - product_pricelist_simulation_margin
   - product_abc_classification
@@ -901,6 +902,7 @@ oca:
   stock-logistics-reporting:
   - delivery_line_sale_line_position
   - stock_picking_report_custom_description
+  - stock_picking_report_internal_delivery_address
   - stock_picking_report_valued
   - stock_quantity_history_location
   stock-logistics-tracking:
@@ -1075,6 +1077,7 @@ shopinvader:
   - shopinvader_product_description
   - shopinvader_search_engine
   - shopinvader_product_url
+  - shopinvader_restapi_invoice
   - shopinvader_restapi
   - shopinvader_schema_address
   - shopinvader_address
@@ -1084,6 +1087,7 @@ shopinvader:
   - shopinvader_api_address
   - shopinvader_base_url
   - shopinvader_sale_cart
+  - shopinvader_search_engine_product_seo
   - shopinvader_search_engine_image
   - shopinvader_search_engine_product_brand_image
   - shopinvader_product_seo
