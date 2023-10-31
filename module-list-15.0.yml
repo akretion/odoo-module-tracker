@@ -25,11 +25,13 @@ forgeflow:
   - rma_sale
   - rma_sale_force_invoiced
   - rma_repair
+  - rma_account_readonly
   - rma_operating_unit
   - rma_put_away
   - rma_repair_refurbish
   - rma_purchase_operating_unit
   - rma_account
+  - rma_readonly
 oca:
   account-analytic:
   - account_move_update_analytic
@@ -906,6 +908,7 @@ oca:
   - sale_substate
   - sale_rental
   - sale_order_general_discount
+  - sale_order_warn_message
   - sale_order_product_recommendation
   - sale_planner_calendar
   - sale_discount_display_amount
