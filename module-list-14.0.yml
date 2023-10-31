@@ -6,6 +6,7 @@ akretion:
   - database_age_cron
   - project_time_in_day
   - mail_unique_layout
+  - mail_preview_send
   - product_pricelist_per_attribute_value
   - security_rule_not_editable
   - stock_inventory_simple_valuation
@@ -25,6 +26,7 @@ akretion:
   - label_wizard
   - project_estimate_step
   - proxy_action
+  - mail_env_whitelist
   - product_uom_force_change
   bank-statement-reconcile-simple:
   - account_statement_completion_label_simple
@@ -1919,6 +1921,7 @@ oca:
   - sale_line_returned_qty
   - stock_picking_cancel_reason
   - stock_picking_quick
+  - stock_landed_costs_security
   - stock_partner_delivery_window
   - stock_quant_package_dimension
   - stock_valuation_layer_usage
