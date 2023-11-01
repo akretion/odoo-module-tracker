@@ -219,6 +219,7 @@ oca:
   - account_statement_import_base
   - account_statement_import_ofx
   - account_statement_import_online_paypal
+  - account_statement_import_sheet_file
   - account_statement_import_online
   - account_statement_import_online_ponto
   - account_statement_import_file
@@ -348,6 +349,7 @@ oca:
   - pdf_helper
   - account_invoice_facturx
   - account_invoice_facturx_py3o
+  - base_business_document_import_phone
   - sale_order_import
   - account_einvoice_generate
   - base_facturx
@@ -408,9 +410,12 @@ oca:
   - l10n_fr_state
   - l10n_fr_department_oversea
   - l10n_fr_department
+  - l10n_fr_account_vat_return_teledec
   - l10n_fr_chorus_account
+  - l10n_fr_account_vat_return
   - l10n_fr_siret
   - l10n_fr_account_invoice_facturx
+  - l10n_fr_oca
   - account_statement_import_fr_cfonb
   - l10n_fr_pos_caisse_ap_ip
   - l10n_fr_chorus_facturx
@@ -562,6 +567,7 @@ oca:
   - product_cost_security
   - product_pricelist_simulation_margin
   - product_abc_classification
+  - product_template_tags
   - product_category_type
   - product_template_has_one_variant
   - product_pricelist_direct_print
@@ -884,6 +890,7 @@ oca:
   - mail_improved_tracking_value
   - mass_mailing_partner
   - mail_show_follower
+  - mail_tracking_mass_mailing
   - base_search_mail_content
   - mail_debrand
   - mail_layout_preview
@@ -1048,6 +1055,7 @@ oca:
   - web_refresher
   - web_help
   - web_action_conditionable
+  - web_calendar_slot_duration
   web-api:
   - webservice
   - endpoint_route_handler
