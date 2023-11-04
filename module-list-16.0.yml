@@ -100,6 +100,7 @@ oca:
   - account_move_template
   - account_move_print
   - base_vat_optional_vies
+  - account_netting
   - account_journal_restrict_mode
   - account_move_fiscal_month
   - account_move_fiscal_year
@@ -111,6 +112,7 @@ oca:
   - account_move_line_tax_editable
   - account_invoice_constraint_chronology
   - account_journal_general_sequence
+  - account_partner_required
   - account_move_line_sale_info
   - account_lock_date_update
   - account_fiscal_month
@@ -319,7 +321,8 @@ oca:
   - stock_picking_report_delivery_cost
   - delivery_postlogistics_server_env
   - delivery_automatic_package
-  dms: []
+  dms:
+  - dms
   e-commerce:
   - website_sale_checkout_skip_payment
   - website_sale_order_type
@@ -760,6 +763,7 @@ oca:
   - sale_packaging_default
   - sale_product_set
   - sales_team_security
+  - sale_order_warn_message
   - sale_start_end_dates
   - sale_tier_validation
   - sale_partner_selectable_option
