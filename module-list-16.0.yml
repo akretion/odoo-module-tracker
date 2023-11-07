@@ -475,6 +475,7 @@ oca:
   - partner_firstname
   - partner_contact_type_end_user
   - partner_ref_unique
+  - partner_label
   - partner_tz
   - partner_company_group
   - partner_contact_birthdate
@@ -495,6 +496,7 @@ oca:
   - partner_contact_personal_information_page
   - partner_bank_acc_type_constraint
   - crm_partner_company_group
+  - partner_email_check
   - partner_stage
   - partner_tier_validation
   - partner_interest_group
@@ -555,7 +557,10 @@ oca:
   - product_route_mto
   - product_set
   - stock_production_lot_expired_date
+  - uom_category_active
   - product_pricelist_direct_print_xlsx
+  - product_company_default
+  - product_print_category
   - product_dimension
   - product_category_code
   - product_packaging_level
@@ -573,6 +578,7 @@ oca:
   - product_pricelist_simulation
   - product_supplierinfo_revision
   - product_attribute_company_favorite
+  - product_uom_po_domain
   - product_state
   - product_total_weight_from_packaging
   - product_pricelist_direct_print_company_group
@@ -948,6 +954,7 @@ oca:
   - stock_route_mto
   - stock_helper
   - stock_warehouse_calendar
+  - stock_picking_product_interchangeable
   - stock_putaway_product_template
   - stock_move_location
   - stock_picking_procure_method
@@ -974,6 +981,7 @@ oca:
   - stock_move_free_reservation_reassign
   - stock_quant_package_dimension
   - stock_move_line_reserved_quant
+  - stock_picking_supplier_ref
   - stock_picking_back2draft
   - sale_order_global_stock_route
   - stock_picking_batch_extended_account
@@ -991,6 +999,7 @@ oca:
   - stock_move_line_serial_unique
   - stock_split_picking
   - stock_picking_purchase_order_link
+  - sale_line_returned_qty
   - stock_picking_warn_message
   - stock_picking_sale_order_link
   - stock_picking_start
@@ -1062,6 +1071,7 @@ oca:
   - web_theme_classic
   - web_remember_tree_column_width
   - web_timeline
+  - web_notify_channel_message
   - web_search_with_and
   - web_widget_bokeh_chart
   - web_action_conditionable
