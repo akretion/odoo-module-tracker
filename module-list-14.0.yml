@@ -569,6 +569,7 @@ oca:
   - partner_delivery_zone
   - delivery_carrier_return_barcode_pattern
   - delivery_price_method
+  - delivery_packaging_archive
   - delivery_carrier_customer_info
   - delivery_carrier_package_measure_required
   - delivery_carrier_label_batch
@@ -1873,6 +1874,7 @@ oca:
   - product_cost_price_avco_sync
   - stock_move_line_auto_fill
   - stock_picking_tier_validation
+  - stock_picking_reallocation
   - stock_move_assign_picking_hook
   - stock_move_forced_lot
   - stock_lot_product_qty_search
