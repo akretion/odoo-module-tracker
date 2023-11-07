@@ -145,6 +145,7 @@ oca:
   - account_invoice_discount_display_amount
   - account_invoice_fixed_discount
   - stock_picking_invoicing
+  - account_invoice_payment_retention
   - account_invoice_anglo_saxon_no_cogs_deferral
   - account_global_discount
   - account_receipt_send
@@ -531,10 +532,12 @@ oca:
   - base_multi_company
   - purchase_sale_stock_inter_company
   partner-contact:
+  - partner_capital
   - sale_partner_company_group
   - partner_phone_secondary
   - base_partner_sequence
   - partner_company_type
+  - partner_disable_gravatar
   - partner_deduplicate_by_ref
   - partner_multi_relation
   - partner_fax
@@ -563,6 +566,7 @@ oca:
   - crm_partner_company_group
   - partner_name_hide_parent
   - partner_email_check
+  - partner_stage
   - partner_phonecall_schedule
   - animal
   - partner_external_map
@@ -627,6 +631,7 @@ oca:
   - product_abc_classification_sale
   - product_category_code
   - product_custom_info
+  - product_stock_state
   - sale_product_template_tags
   - product_net_weight
   - product_profile
