@@ -92,6 +92,7 @@ oca:
   - account_invoice_start_end_dates
   - account_cutoff_start_end_dates
   - account_cutoff_base
+  - account_multicurrency_revaluation
   account-financial-reporting:
   - mis_builder_cash_flow
   - account_financial_report
@@ -485,6 +486,7 @@ oca:
   - partner_identification_eori
   - partner_second_lastname
   - partner_identification
+  - partner_deduplicate_filter
   - purchase_supplier_rank
   - partner_deduplicate_acl
   - partner_industry_secondary
@@ -626,6 +628,7 @@ oca:
   purchase-reporting:
   - purchase_report_date_format
   - purchase_report_shipping_address
+  - purchase_report_payment_term
   purchase-workflow:
   - purchase_allowed_product
   - purchase_order_approved
@@ -679,15 +682,18 @@ oca:
   reporting-engine:
   - report_label
   - sql_export_excel
+  - bi_view_editor_spreadsheet_dashboard
   - report_qweb_pdf_watermark
   - report_qweb_parameter
   - report_qweb_encrypt
   - report_qweb_element_page_visibility
+  - bi_view_editor
   - report_xlsx_helper
   - report_py3o
   - sql_request_abstract
   - report_company_details_translatable
   - report_xlsx
+  - report_py3o_fusion_server
   - base_comment_template
   - sql_export
   - report_xml
@@ -753,7 +759,6 @@ oca:
   - sale_order_line_delivery_state
   - sale_order_line_sequence
   - portal_sale_personal_data_only
-  - sale_invoice_policy
   - sale_triple_discount
   - product_supplierinfo_for_customer_sale
   - sale_company_currency
@@ -839,6 +844,7 @@ oca:
   - rpc_helper
   - base_cron_exclusion
   - html_text
+  - base_sequence_option
   - sentry
   - scheduler_error_mailer
   - base_time_window
