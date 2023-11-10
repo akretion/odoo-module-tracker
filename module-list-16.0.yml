@@ -343,6 +343,7 @@ oca:
   - website_sale_attribute_filter_form_submit
   - website_sale_attribute_filter_multiselect
   - website_sale_stock_list_preview
+  - website_sale_vat_required
   - website_sale_stock_available
   - website_sale_wishlist_keep
   - website_snippet_product_category
@@ -662,6 +663,7 @@ oca:
   - purchase_lot
   - purchase_security
   - purchase_triple_discount
+  - purchase_reception_status
   - purchase_partner_selectable_option
   - purchase_request
   - purchase_location_by_line
@@ -670,6 +672,7 @@ oca:
   - purchase_commercial_partner
   - purchase_order_uninvoiced_amount
   - purchase_invoice_method
+  - purchase_order_hide_receipt_status
   - purchase_order_type
   queue:
   - base_import_async
@@ -853,6 +856,7 @@ oca:
   - dbfilter_from_header
   - session_db
   - base_name_search_improved
+  - excel_import_export_unidecode
   - excel_import_export_demo
   - module_auto_update
   - base_m2m_custom_field
