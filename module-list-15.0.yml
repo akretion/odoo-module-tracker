@@ -287,6 +287,7 @@ oca:
   - agreement_rebate_partner_company_group
   - contract_sale_generation
   - contract_payment_mode
+  - contract_sale_invoicing
   - subscription_oca
   credit-control:
   - account_payment_return_financial_risk
@@ -438,6 +439,7 @@ oca:
   - hr_employee_document
   - hr_course
   intrastat-extrastat:
+  - intrastat_product_hscodes_import
   - product_harmonized_system
   - product_harmonized_system_delivery
   - product_harmonized_system_stock
@@ -513,8 +515,11 @@ oca:
   - mrp_production_putaway_strategy
   - mrp_production_date_planned_finished
   - mrp_production_serial_matrix
+  - mrp_workorder_lock_planning
   - mrp_bom_tracking
   - mrp_lot_on_hand_first
+  - mrp_production_operation_injection
+  - mrp_workcenter_category
   - mrp_lot_number_propagation
   mis-builder:
   - mis_builder_demo
