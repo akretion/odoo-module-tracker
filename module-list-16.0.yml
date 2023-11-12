@@ -159,6 +159,7 @@ oca:
   - account_invoice_supplierinfo_update
   - account_invoice_supplier_self_invoice
   - partner_invoicing_mode_monthly
+  - account_tax_one_vat
   - sale_order_invoicing_grouping_criteria
   - account_invoice_supplierinfo_update_discount
   - sale_timesheet_invoice_description
@@ -381,6 +382,7 @@ oca:
   - hr_employee_document
   - hr_course
   intrastat-extrastat:
+  - intrastat_product_hscodes_import
   - product_harmonized_system
   - product_harmonized_system_delivery
   - product_harmonized_system_stock
