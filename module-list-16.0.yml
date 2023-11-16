@@ -362,6 +362,7 @@ oca:
   - account_invoice_facturx
   - base_business_document_import_phone
   - pdf_helper
+  - sale_order_import_edifact
   - base_edi
   - sale_order_import
   - account_einvoice_generate
@@ -590,6 +591,7 @@ oca:
   - product_attribute_company_favorite
   - product_uom_po_domain
   - product_state
+  - product_pricelist_fixed_currency_rate
   - product_total_weight_from_packaging
   - product_pricelist_direct_print_company_group
   - product_sale_description
@@ -658,6 +660,7 @@ oca:
   - purchase_force_invoiced
   - purchase_request_tier_validation
   - purchase_partner_incoterm
+  - purchase_warn_message
   - purchase_all_shipments
   - purchase_order_no_zero_price
   - purchase_order_owner
@@ -767,6 +770,7 @@ oca:
   - product_form_sale_link
   - sale_discount_display_amount
   - sale_order_line_delivery_state
+  - sale_wishlist
   - sale_order_line_sequence
   - portal_sale_personal_data_only
   - sale_triple_discount
@@ -886,6 +890,7 @@ oca:
   server-ux:
   - base_tier_validation
   - sequence_reset_period
+  - base_import_security_group
   - base_cancel_confirm
   - base_substate
   - base_tier_validation_forward
@@ -971,6 +976,7 @@ oca:
   - stock_route_mto
   - stock_helper
   - stock_warehouse_calendar
+  - stock_demand_estimate_matrix
   - stock_picking_product_interchangeable
   - stock_putaway_product_template
   - stock_move_location
