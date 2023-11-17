@@ -547,6 +547,7 @@ oca:
   - pos_payment_change
   - pos_product_display_default_code
   - pos_escpos_status
+  - pos_product_multi_barcode
   - pos_stock_available_online
   - pos_partner_birthdate
   - pos_order_to_sale_order
@@ -568,6 +569,7 @@ oca:
   - product_route_mto
   - product_set
   - stock_production_lot_expired_date
+  - product_packaging_container_deposit
   - uom_category_active
   - product_pricelist_direct_print_xlsx
   - product_company_default
@@ -593,6 +595,7 @@ oca:
   - product_state
   - product_pricelist_fixed_currency_rate
   - product_total_weight_from_packaging
+  - product_packaging_level_purchasable
   - product_pricelist_direct_print_company_group
   - product_sale_description
   - product_packaging_level_salable
@@ -665,6 +668,7 @@ oca:
   - purchase_order_no_zero_price
   - purchase_order_owner
   - purchase_default_terms_conditions
+  - purchase_packaging_level_qty
   - purchase_order_line_menu
   - purchase_order_type_dashboard
   - purchase_deposit
@@ -753,6 +757,7 @@ oca:
   - sale_substate
   - sale_order_line_date
   - sale_automatic_workflow_job
+  - sale_product_packaging_container_deposit
   - sale_stock_picking_blocking
   - sale_elaboration
   - sale_fixed_discount
@@ -765,6 +770,7 @@ oca:
   - sale_order_currency_rate
   - sale_order_qty_change_no_recompute
   - sale_automatic_workflow_payment_mode
+  - sale_pricelist_from_commitment_date
   - sale_order_product_availability_inline
   - sale_payment_sheet
   - product_form_sale_link
@@ -783,7 +789,9 @@ oca:
   - sale_stock_cancel_restriction
   - partner_sale_pivot
   - sale_procurement_group_by_line
+  - sale_exception_holidays_public
   - sale_order_line_price_history
+  - sell_only_by_packaging
   - sale_commercial_partner
   - sale_packaging_default
   - sale_product_set
