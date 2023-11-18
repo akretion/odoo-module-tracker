@@ -494,6 +494,7 @@ oca:
   - partner_contact_lang
   - partner_identification_eori
   - partner_second_lastname
+  - partner_country_state_required
   - partner_identification
   - partner_deduplicate_filter
   - purchase_supplier_rank
@@ -519,6 +520,7 @@ oca:
   - account_partner_company_group
   - partner_contact_access_link
   - partner_affiliate
+  - partner_subject_to_vat
   - partner_bank_code
   - partner_address_two_lines
   - partner_contact_age_range
@@ -797,6 +799,7 @@ oca:
   - sale_product_set
   - sales_team_security
   - sale_order_warn_message
+  - sale_delivery_split_date
   - sale_start_end_dates
   - sale_tier_validation
   - sale_partner_selectable_option
@@ -931,6 +934,7 @@ oca:
   - mail_activity_team
   - mail_template_substitute
   - mail_partner_opt_out
+  - mail_activity_partner
   - mass_mailing_contact_active
   - mass_mailing_list_dynamic
   - mail_post_defer
@@ -1037,6 +1041,7 @@ oca:
   - stock_picking_grn_mandatory
   - stock_restrict_lot
   - stock_picking_line_sequence
+  - delivery_total_weight_from_packaging
   - stock_move_propagate_first_move
   - stock_account_product_run_fifo_hook
   - stock_picking_customer_ref
