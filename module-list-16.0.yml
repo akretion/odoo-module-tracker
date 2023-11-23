@@ -81,6 +81,7 @@ oca:
   - purchase_analytic
   - product_analytic
   - account_analytic_required
+  - account_analytic_account_tag
   - sale_analytic_tag
   - stock_analytic
   - hr_expense_analytic_tag
@@ -340,6 +341,7 @@ oca:
   - website_sale_invoice_address
   - website_sale_attribute_filter_form_submit
   - website_sale_comparison_hide_price
+  - website_sale_product_assortment
   - website_sale_product_attachment
   - website_sale_product_item_cart_custom_qty
   - website_sale_attribute_filter_multiselect
@@ -590,6 +592,7 @@ oca:
   - product_attribute_archive
   - product_company_default
   - product_dimension
+  - product_attribute_value_menu
   - product_set
   - product_net_weight
   - product_uom_measure_type
@@ -662,6 +665,7 @@ oca:
   - purchase_invoice_method
   - purchase_open_qty
   - purchase_tier_validation
+  - sale_purchase_force_vendor
   - purchase_exception
   - purchase_reception_status
   - purchase_requisition_tier_validation
@@ -680,6 +684,7 @@ oca:
   - purchase_order_approved
   - purchase_order_type_dashboard
   - purchase_default_terms_conditions
+  - purchase_only_by_packaging
   - purchase_deposit
   - purchase_order_owner
   - purchase_order_line_menu
@@ -1072,6 +1077,7 @@ oca:
   - hr_timesheet_time_type
   - hr_timesheet_employee_analytic_tag
   - hr_timesheet_task_domain
+  - sale_timesheet_task_exclude
   - hr_timesheet_sheet
   - sale_timesheet_line_exclude
   - crm_timesheet
@@ -1091,6 +1097,7 @@ oca:
   - web_domain_field
   - web_help
   - web_select_all_companies
+  - web_tree_duplicate
   - web_notify_channel_message
   - web_search_with_and
   - web_widget_bokeh_chart
@@ -1124,6 +1131,7 @@ oca:
   wms:
   - stock_release_channel_auto_release
   - stock_release_channel_shipment_advice
+  - stock_release_channel_partner_delivery_window
   - stock_picking_type_shipping_policy
   - stock_release_channel
   - stock_release_channel_propagate_channel_picking
