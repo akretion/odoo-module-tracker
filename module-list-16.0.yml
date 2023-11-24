@@ -21,6 +21,7 @@ akretion:
   - product_import_helper
   odoo-perf: []
   odoo-usability:
+  - base_dynamic_list
   - stock_quant_package_move_wizard
   - pos_check_deposit
   - sale_usability
@@ -31,6 +32,7 @@ akretion:
   - eradicate_quick_create
   - base_partner_one2many_phone
   - base_company_extension
+  - link_tracker_usability
   - mail_usability
   - purchase_usability
   - developer_menu
@@ -441,6 +443,7 @@ oca:
   manufacture:
   - mrp_bom_tracking
   - mrp_production_quant_manual_assign
+  - mrp_unbuild_move_link
   - mrp_multi_level
   - mrp_sale_info
   - mrp_production_note
@@ -450,6 +453,7 @@ oca:
   - quality_control_oca
   - account_move_line_mrp_info
   - mrp_subcontracting_purchase_link
+  - mrp_lot_production_date
   - mrp_bom_component_menu
   - mrp_bom_hierarchy
   - mrp_bom_location
@@ -825,6 +829,7 @@ oca:
   - sale_procurement_group_by_line
   - sale_order_type
   - sale_product_packaging_container_deposit
+  - sale_stock_line_sequence
   - partner_contact_sale_info_propagation
   - sale_order_invoicing_finished_task
   - sale_commercial_partner
@@ -1009,6 +1014,7 @@ oca:
   - stock_putaway_product_template
   - scrap_reason_code
   stock-logistics-workflow:
+  - stock_quant_package_dimension_total_weight_from_packaging
   - purchase_stock_picking_invoice_link
   - stock_picking_show_backorder
   - stock_picking_batch_extended
