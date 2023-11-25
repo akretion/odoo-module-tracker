@@ -864,6 +864,7 @@ oca:
   - repair_type
   - mrp_unbuild_subcontracting
   - mrp_bom_tracking
+  - mrp_bom_attribute_match_semifinished_product
   - mrp_production_serial_matrix
   - mrp_lot_on_hand_first
   - mrp_production_quant_manual_assign
@@ -1142,6 +1143,7 @@ oca:
   - product_supplierinfo_archive
   - product_assortment_description
   - product_cost_security
+  - product_internal_reference_generator
   - product_supplierinfo_stock_picking_type
   - product_uom_updatable
   - product_total_weight_from_packaging
@@ -1380,6 +1382,7 @@ oca:
   - sale_order_weight
   - sale_order_line_position
   sale-workflow:
+  - sale_order_discount_fast_change_ui
   - product_supplierinfo_for_customer_elaboration
   - sale_order_archive
   - sale_start_end_dates
@@ -1399,6 +1402,7 @@ oca:
   - sale_order_line_chained_move
   - sale_by_packaging
   - sale_order_line_sequence
+  - sale_coupon_order_discount_fast_change_ui
   - sale_invoice_policy
   - sale_order_revision
   - sale_partner_version
@@ -1426,6 +1430,7 @@ oca:
   - sale_order_tag
   - sale_contact_type
   - sale_company_currency
+  - sale_promotion_rule_delivery
   - sale_tier_validation
   - sale_order_line_description_single_attribute
   - sales_team_security_sale
