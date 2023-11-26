@@ -125,6 +125,7 @@ oca:
   - account_template_active
   - account_move_line_check_number
   - account_invoice_constraint_chronology
+  - account_account_tag_code
   - base_vat_optional_vies
   - account_fiscal_month
   - account_move_name_sequence
@@ -274,6 +275,7 @@ oca:
   - contract
   credit-control:
   - account_payment_return_financial_risk
+  - partner_risk_insurance
   - account_credit_control
   - account_credit_control_dunning_fees
   - stock_financial_risk
@@ -501,6 +503,7 @@ oca:
   - partner_deduplicate_by_ref
   - partner_bank_acc_type_constraint
   - partner_identification_gln
+  - partner_category_type
   - base_location
   - partner_accreditation
   - partner_stage
@@ -568,8 +571,10 @@ oca:
   - pos_product_display_default_code
   product-attribute:
   - product_pricelist_simulation
+  - product_country_restriction
   - product_category_active
   - product_sale_description
+  - product_variant_attribute_name_manager
   - product_manufacturer
   - product_pricelist_direct_print_xlsx
   - product_abc_classification
@@ -777,6 +782,7 @@ oca:
   - portal_sale_personal_data_only
   - sale_order_product_recommendation
   - sale_order_line_sequence
+  - sale_stock_delivery_state
   - sale_order_revision
   - sale_order_product_recommendation_packaging_default
   - sale_product_category_menu
@@ -821,6 +827,7 @@ oca:
   - sale_automatic_workflow_payment_mode
   - sale_order_general_discount_triple
   - sale_order_lot_selection
+  - sale_order_line_tag
   - sale_partner_selectable_option
   - sale_order_line_menu
   - sale_stock_picking_note
@@ -833,6 +840,7 @@ oca:
   - partner_contact_sale_info_propagation
   - sale_order_invoicing_finished_task
   - sale_commercial_partner
+  - sale_delivery_state
   - partner_sale_pivot
   search-engine:
   - search_engine_image_thumbnail
