@@ -425,6 +425,7 @@ oca:
   - hr_employee_firstname
   - hr_employee_age
   - hr_employee_calendar_planning
+  - hr_contract_type
   - hr_employee_medical_examination
   - hr_employee_birth_name
   - hr_employee_lastnames
@@ -1065,6 +1066,7 @@ oca:
   - default_multi_user
   - announcement
   - base_tier_validation_formula
+  - sequence_check_digit
   - base_custom_filter
   - chained_swapper
   - document_quick_access
@@ -1208,6 +1210,7 @@ oca:
   - stock_picking_send_by_mail
   - stock_remote_measure
   - stock_production_lot_active
+  - stock_picking_batch_set_quantity
   - stock_no_negative
   - stock_picking_product_availability_inline
   - stock_picking_import_serial_number
