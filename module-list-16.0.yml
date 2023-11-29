@@ -158,6 +158,7 @@ oca:
   - account_invoice_tax_required
   - account_invoice_fixed_discount
   - account_invoice_tree_currency
+  - stock_picking_invoicing
   - account_invoice_supplierinfo_update
   - account_invoice_transmit_method
   - account_invoice_currency_taxes
@@ -905,6 +906,7 @@ oca:
   - sentry
   - auditlog
   - base_cron_exclusion
+  - base_sequence_default
   - excel_import_export_unidecode
   - upgrade_analysis
   - jsonifier
@@ -982,6 +984,7 @@ oca:
   - barcodes_generator_product
   stock-logistics-reporting:
   - stock_picking_report_internal_delivery_address
+  - stock_report_quantity_by_location
   - stock_picking_report_valued
   - stock_quantity_history_location
   - stock_picking_report_custom_description
