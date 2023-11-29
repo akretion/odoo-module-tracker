@@ -346,6 +346,7 @@ oca:
   - purchase_stock_picking_return_invoicing
   - account_invoice_refund_link
   - account_invoice_base_invoicing_mode
+  - account_invoice_mode_daily
   - account_invoice_mode_at_shipping
   - sale_timesheet_invoice_description
   - account_invoice_change_currency
@@ -1902,6 +1903,7 @@ oca:
   - stock_picking_auto_create_lot
   - stock_picking_mass_action
   - stock_lot_product_qty_search
+  - stock_move_free_reservation_reassign
   - stock_picking_return_show_lot
   - delivery_total_weight_from_packaging
   - sale_stock_mto_as_mts_orderpoint
