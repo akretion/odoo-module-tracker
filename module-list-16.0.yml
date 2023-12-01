@@ -23,6 +23,7 @@ akretion:
   odoo-usability:
   - base_dynamic_list
   - stock_quant_package_move_wizard
+  - sale_order_route
   - pos_check_deposit
   - sale_usability
   - mrp_product_tree_default
@@ -419,6 +420,7 @@ oca:
   - l10n_br_coa_simple
   - l10n_br_currency_rate_update
   - l10n_br_crm
+  - l10n_br_setup_tests
   l10n-france:
   - l10n_fr_mis_reports
   - l10n_fr_account_vat_return
@@ -456,11 +458,13 @@ oca:
   - mrp_planned_order_matrix
   - quality_control_oca
   - account_move_line_mrp_info
+  - mrp_workorder_lot_display
   - mrp_subcontracting_purchase_link
   - mrp_lot_production_date
   - mrp_bom_component_menu
   - mrp_bom_hierarchy
   - mrp_bom_location
+  - mrp_workorder_sequence
   - mrp_warehouse_calendar
   - mrp_subcontracting_skip_no_negative
   - mrp_restrict_lot
@@ -712,8 +716,10 @@ oca:
   - purchase_order_supplierinfo_update
   - purchase_order_archive
   queue:
+  - test_queue_job_batch
   - base_export_async
   - queue_job_subscribe
+  - queue_job_batch
   - test_queue_job
   - base_import_async
   - queue_job
@@ -791,6 +797,7 @@ oca:
   - sale_manual_delivery
   - sale_triple_discount
   - sale_order_currency_rate
+  - sale_advance_payment
   - sale_force_invoiced
   - sale_payment_sheet
   - sale_pricelist_from_commitment_date
@@ -859,6 +866,7 @@ oca:
   - auth_signup_verify_email
   - auth_saml
   - auth_api_key
+  - auth_jwt_server_env
   - auth_oidc_environment
   - auth_admin_passkey
   - auth_api_key_server_env
