@@ -87,6 +87,7 @@ oca:
   - account_analytic_account_tag
   - sale_analytic_tag
   - stock_analytic
+  - analytic_distribution_widget_remove_save
   - hr_expense_analytic_tag
   - stock_picking_analytic
   - account_move_update_analytic
@@ -154,6 +155,7 @@ oca:
   - account_invoice_supplier_ref_unique
   - account_invoice_blocking
   - account_invoice_force_number
+  - account_invoice_refund_reason
   - account_invoice_supplier_self_invoice
   - account_invoice_fiscal_position_update
   - account_invoice_tax_required
@@ -162,6 +164,7 @@ oca:
   - stock_picking_invoicing
   - account_invoice_supplierinfo_update
   - account_invoice_transmit_method
+  - account_invoice_payment_term_date_due
   - account_invoice_currency_taxes
   - account_tax_change
   - account_invoice_merge
@@ -475,6 +478,7 @@ oca:
   - mis_builder_budget
   multi-company:
   - res_company_active
+  - base_multi_company
   - product_category_company
   - product_tax_multicompany_default
   - account_invoice_inter_company
@@ -581,6 +585,7 @@ oca:
   - product_country_restriction
   - product_category_active
   - product_sale_description
+  - product_lot_sequence
   - product_variant_attribute_name_manager
   - product_manufacturer
   - product_pricelist_direct_print_xlsx
@@ -641,6 +646,7 @@ oca:
   - sale_order_line_variant_description
   project:
   - project_stock_analytic_tag
+  - project_stock_product_set
   - project_task_link
   - project_parent_task_filter
   - project_stock
@@ -1059,6 +1065,7 @@ oca:
   - delivery_procurement_group_carrier
   - sale_line_returned_qty
   - stock_picking_auto_create_lot
+  - stock_picking_mass_action
   - stock_move_free_reservation_reassign
   - delivery_total_weight_from_packaging
   - stock_quant_package_dimension
@@ -1133,6 +1140,7 @@ oca:
   - web_search_with_and
   - web_widget_bokeh_chart
   - web_environment_ribbon
+  - web_widget_mpld3_chart
   - web_widget_x2many_2d_matrix
   - web_widget_plotly_chart
   - web_group_expand
