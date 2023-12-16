@@ -688,6 +688,7 @@ oca:
   - purchase_requisition_tier_validation
   - purchase_request_tier_validation
   - purchase_line_procurement_group
+  - purchase_product_packaging_container_deposit
   - purchase_tag
   - purchase_open_qty
   - purchase_order_owner
@@ -821,6 +822,7 @@ oca:
   - sale_order_archive
   - sale_company_currency
   - sale_product_set
+  - sale_numeric_step
   - sale_order_product_picker
   - partner_contact_sale_info_propagation
   - sale_order_lot_generator
@@ -1041,6 +1043,7 @@ oca:
   - account_move_line_stock_info
   - stock_storage_category_capacity_name
   - stock_move_common_dest
+  - stock_packaging_calculator_packaging_level
   - stock_quant_manual_assign
   - procurement_auto_create_group
   - stock_inventory_discrepancy
