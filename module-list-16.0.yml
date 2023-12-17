@@ -482,15 +482,19 @@ oca:
   multi-company:
   - account_multicompany_easy_creation
   - mail_template_multi_company
+  - res_company_code
+  - stock_intercompany
   - account_invoice_inter_company
   - product_category_company
   - mail_multicompany
+  - account_reconcile_model_multicompany_propagate
   - purchase_sale_inter_company
   - product_tax_multicompany_default
   - company_dependent_flag
   - base_multi_company
   - res_company_active
   - res_company_search_view
+  - res_company_category
   - product_account_multicompany_default
   partner-contact:
   - partner_second_lastname
