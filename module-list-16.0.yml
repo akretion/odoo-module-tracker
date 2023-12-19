@@ -488,6 +488,7 @@ oca:
   - product_category_company
   - mail_multicompany
   - account_reconcile_model_multicompany_propagate
+  - partner_multi_company
   - purchase_sale_inter_company
   - product_tax_multicompany_default
   - company_dependent_flag
@@ -582,6 +583,7 @@ oca:
   - pos_margin
   - pos_discount_all
   - pos_product_multi_barcode
+  - pos_order_to_sale_order_delivery
   - pos_order_reorder
   - pos_global_discount_in_line
   - pos_order_to_sale_order
@@ -805,9 +807,11 @@ oca:
   - sale_order_product_recommendation_packaging_default
   - sale_order_line_sequence
   - sale_elaboration
+  - sale_order_product_recommendation_elaboration
   - sale_order_price_recalculation
   - sale_order_invoice_amount
   - sell_only_by_packaging
+  - sale_order_line_field_from_product_attribute
   - sale_automatic_workflow
   - sale_automatic_workflow_payment_mode
   - product_supplierinfo_for_customer_sale
