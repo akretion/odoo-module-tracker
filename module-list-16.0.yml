@@ -172,6 +172,7 @@ oca:
   - account_invoice_merge
   - account_menu_invoice_refund
   - account_tax_one_vat
+  - product_form_account_move_line_link
   - account_invoice_supplier_ref_unique
   - account_invoice_change_currency
   - account_invoice_supplier_self_invoice
@@ -567,6 +568,7 @@ oca:
   - pos_payment_change
   - pos_partner_birthdate
   - pos_partner_firstname
+  - pos_product_label
   - pos_edit_order_line
   - pos_loyalty_redeem_payment
   - pos_lot_barcode
@@ -577,6 +579,7 @@ oca:
   - pos_payment_terminal
   - pos_customer_comment
   - pos_access_right
+  - pos_reset_search
   - pos_escpos_status
   - pos_order_to_sale_order_report
   - pos_sale_order_print
@@ -901,6 +904,7 @@ oca:
   - user_log_view
   - auth_jwt_demo
   - password_security
+  - auth_oauth_ropc
   - auth_oidc
   - auth_saml
   server-backend:
@@ -1229,6 +1233,7 @@ shopinvader:
   - shopinvader_search_engine_product_stock_state
   - shopinvader_search_engine_update_product_brand_image
   - shopinvader_search_engine_product_seo
+  - shopinvader_product_sale_packaging
   - shopinvader_search_engine_product_brand
   - shopinvader_anonymous_partner
   - shopinvader_product
