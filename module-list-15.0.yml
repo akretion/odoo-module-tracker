@@ -213,6 +213,7 @@ oca:
   - account_due_list
   - account_payment_term_extension
   account-reconcile:
+  - account_move_reconcile_helper
   - account_reconcile_payment_order
   - account_reconciliation_widget
   - account_move_reconcile_forbid_cancel
@@ -622,7 +623,9 @@ oca:
   - pos_supplierinfo_search
   - pos_supplierinfo_barcode
   - pos_hide_cost_price_and_margin
+  - pos_product_template
   - pos_sale_pos_event_sale_session
+  - pos_fixed_discount
   - pos_event_sale_session
   product-attribute:
   - product_pricelist_simulation
