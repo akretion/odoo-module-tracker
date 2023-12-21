@@ -1020,10 +1020,12 @@ oca:
   stock-logistics-barcode:
   - product_multi_barcode_stock_menu
   - barcodes_generator_abstract
+  - product_barcode_constraint_per_company
   - product_packaging_multi_barcode
   - barcodes_generator_product
   - barcodes_generator_package
   - product_multi_barcode
+  - product_multi_barcode_constraint_per_company
   stock-logistics-reporting:
   - stock_picking_report_internal_delivery_address
   - stock_quantity_history_location
@@ -1050,6 +1052,7 @@ oca:
   - stock_location_lockdown
   - stock_packaging_calculator
   - stock_location_position
+  - product_packaging_usability
   - stock_picking_product_interchangeable
   - stock_picking_commercial_partner
   - account_move_line_stock_info
@@ -1231,6 +1234,7 @@ shopinvader:
   - sale_cart
   - shopinvader_search_engine
   - shopinvader_search_engine_product_stock_state
+  - shopinvader_product_attribute_set
   - shopinvader_search_engine_update_product_brand_image
   - shopinvader_search_engine_product_seo
   - shopinvader_product_sale_packaging
