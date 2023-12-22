@@ -301,6 +301,7 @@ oca:
   - crm_claim_type
   - crm_lead_vat
   - crm_security_group
+  - crm_stage_probability
   - crm_salesperson_planner
   - crm_lead_currency
   - crm_salesperson_planner_sale
@@ -498,6 +499,7 @@ oca:
   - res_company_search_view
   - res_company_category
   - product_account_multicompany_default
+  - purchase_sale_stock_inter_company
   partner-contact:
   - partner_second_lastname
   - partner_tier_validation
@@ -968,6 +970,7 @@ oca:
   - base_revision
   - user_all_groups
   - base_tier_validation_forward
+  - base_tier_validation_definition_server_action
   - base_tier_validation
   - date_range_account
   - multi_step_wizard
