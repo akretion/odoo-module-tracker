@@ -573,6 +573,7 @@ oca:
   - pos_partner_birthdate
   - pos_partner_firstname
   - pos_product_label
+  - pos_financial_risk
   - pos_edit_order_line
   - pos_loyalty_redeem_payment
   - pos_lot_barcode
@@ -834,6 +835,7 @@ oca:
   - sales_team_security
   - sale_order_line_price_history
   - sale_wishlist
+  - sale_last_price_info
   - sale_order_general_discount_triple
   - sale_product_packaging_container_deposit
   - sale_tier_validation
@@ -1025,6 +1027,7 @@ oca:
   - mass_mailing_list_dynamic
   - base_search_mail_content
   - mail_attach_existing_attachment
+  - mail_autosubscribe
   - mail_partner_opt_out
   stock-logistics-barcode:
   - product_multi_barcode_stock_menu
@@ -1199,6 +1202,7 @@ oca:
   - web_help
   - web_remember_tree_column_width
   - web_m2x_options
+  - web_touchscreen
   - web_widget_x2many_2d_matrix
   - web_dialog_size
   - web_ir_actions_act_multi
