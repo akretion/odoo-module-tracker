@@ -282,6 +282,7 @@ oca:
   - contract_sale_generation
   - contract_payment_mode
   credit-control:
+  - account_invoice_overdue_warn_sale
   - stock_financial_risk
   - account_credit_control
   - partner_risk_insurance
@@ -290,6 +291,7 @@ oca:
   - account_financial_risk
   - account_credit_control_dunning_fees
   - sale_financial_risk
+  - account_invoice_overdue_warn
   - account_invoice_overdue_reminder
   crm:
   - crm_project_task
@@ -729,6 +731,7 @@ oca:
   - purchase_reception_status
   - purchase_request
   - purchase_order_archive
+  - supplier_calendar
   - purchase_merge
   - purchase_no_rfq
   - purchase_triple_discount
@@ -944,6 +947,7 @@ oca:
   server-tools:
   - base_view_inheritance_extension
   - excel_import_export_unidecode
+  - database_cleanup
   - upgrade_analysis
   - dbfilter_from_header
   - attachment_unindex_content
