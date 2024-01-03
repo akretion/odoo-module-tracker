@@ -1214,6 +1214,7 @@ oca:
   - project_task_report
   purchase-reporting:
   - purchase_backorder
+  - purchase_incoming_product
   - purchase_comment_template
   purchase-workflow:
   - partner_supplierinfo_smartbutton
@@ -1279,6 +1280,7 @@ oca:
   - supplier_calendar
   - purchase_order_line_sequence
   - purchase_quick
+  - purchase_invoice_create_security_group
   - purchase_triple_discount
   - purchase_stock_price_unit_sync
   - purchase_manual_currency
