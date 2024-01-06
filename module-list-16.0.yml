@@ -464,6 +464,7 @@ oca:
   - mrp_lot_production_date
   - mrp_planned_order_matrix
   - mrp_production_note
+  - mrp_lot_number_propagation
   - mrp_bom_location
   - mrp_multi_level
   - mrp_unbuild_move_link
@@ -1016,6 +1017,7 @@ oca:
   - mail_outbound_static
   - mass_mailing_contact_active
   - mail_template_substitute
+  - mass_mailing_event_registration_exclude
   - mail_show_follower
   - mail_tracking
   - mail_activity_team
