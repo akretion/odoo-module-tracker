@@ -276,6 +276,7 @@ oca:
   connector-prestashop: []
   connector-telephony: []
   contract:
+  - contract_variable_quantity
   - contract
   - contract_sale
   - contract_invoice_start_end_dates
@@ -1020,6 +1021,7 @@ oca:
   - mass_mailing_event_registration_exclude
   - mail_show_follower
   - mail_tracking
+  - mail_quoted_reply
   - mail_activity_team
   - mail_post_defer
   - mail_tracking_mailgun
