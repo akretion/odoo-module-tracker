@@ -359,6 +359,7 @@ oca:
   - website_sale_hide_price
   - website_sale_stock_list_preview
   - website_sale_suggest_create_account
+  - website_sale_wishlist_hide_price
   - website_sale_product_attribute_filter_collapse
   - website_sale_product_brand
   - website_sale_wishlist_keep
@@ -376,6 +377,7 @@ oca:
   edi:
   - sale_order_import
   - sale_order_import_edifact
+  - base_wamas_ubl
   - base_edi
   - base_business_document_import
   - base_business_document_import_phone
@@ -480,6 +482,7 @@ oca:
   - mrp_workorder_lot_display
   - mrp_restrict_lot
   - mrp_subcontracting_purchase_link
+  - mrp_packaging_default
   - mrp_bom_component_menu
   - mrp_workorder_sequence
   - mrp_bom_tracking
@@ -675,6 +678,7 @@ oca:
   - project_task_default_stage
   - project_stock_product_set
   - project_list
+  - sale_project_copy_tasks
   - project_timeline
   - project_template
   - project_task_pull_request
@@ -1096,6 +1100,7 @@ oca:
   - stock_inventory_count_to_zero
   - stock_quant_cost_info
   - stock_search_supplierinfo_code
+  - stock_inventory
   - stock_move_auto_assign
   - stock_move_location
   - stock_picking_volume
@@ -1114,6 +1119,7 @@ oca:
   - stock_procurement_customer
   - stock_putaway_hook
   - stock_account_product_run_fifo_hook
+  - stock_lot_scrap
   - stock_move_free_reservation_reassign
   - stock_move_line_auto_fill
   - stock_picking_group_by_max_weight
