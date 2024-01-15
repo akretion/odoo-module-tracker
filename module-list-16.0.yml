@@ -83,6 +83,7 @@ oca:
   - purchase_stock_analytic
   - account_analytic_tag
   - purchase_analytic
+  - account_analytic_parent
   - stock_analytic
   - account_analytic_tag_distribution
   - analytic_distribution_widget_remove_save
@@ -700,6 +701,7 @@ oca:
   - project_parent_task_filter
   - project_hr
   - project_update_visible
+  - project_task_code
   project-reporting: []
   purchase-reporting:
   - purchase_report_payment_term
@@ -1143,6 +1145,7 @@ oca:
   - stock_grn
   - stock_picking_supplier_ref
   - stock_picking_line_sequence
+  - stock_picking_batch_invoice_frequency
   - sale_order_global_stock_route
   - stock_quant_package_dimension
   - stock_picking_customer_ref
@@ -1150,6 +1153,7 @@ oca:
   - stock_picking_batch_extended
   - stock_quant_package_product_packaging
   - stock_split_picking
+  - stock_picking_send_by_mail
   - stock_picking_sale_order_link
   - stock_picking_grn_mandatory
   - stock_picking_batch_extended_account_sale_type
