@@ -670,6 +670,7 @@ oca:
   - product_sequence
   - product_packaging_level
   product-variant:
+  - product_variant_attribute_tax
   - product_variant_default_code
   - product_variant_configurator
   - sale_order_line_variant_description
@@ -873,6 +874,7 @@ oca:
   - sale_mrp_bom
   - sale_product_multi_add
   - sale_invoice_frequency
+  - sale_procurement_customer
   - product_form_sale_link
   - sale_quotation_number
   - sale_order_warn_message
@@ -985,6 +987,7 @@ oca:
   - html_text
   - module_analysis
   - excel_import_export
+  - tracking_manager
   - base_fontawesome
   - sentry
   - base_name_search_improved
