@@ -585,6 +585,7 @@ oca:
   - pos_partner_birthdate
   - pos_partner_firstname
   - pos_product_label
+  - pos_partner_sale_warning
   - pos_financial_risk
   - pos_edit_order_line
   - pos_loyalty_redeem_payment
@@ -902,6 +903,7 @@ oca:
   - sale_payment_sheet
   - sale_order_line_tag
   - sale_automatic_workflow_job
+  - sale_order_line_input
   - sale_packaging_default
   - sale_start_end_dates
   - sale_order_invoicing_picking_filter
@@ -1128,6 +1130,7 @@ oca:
   - stock_account_product_run_fifo_hook
   - stock_lot_scrap
   - stock_move_free_reservation_reassign
+  - stock_move_manage_priority
   - stock_move_line_auto_fill
   - stock_picking_group_by_max_weight
   - delivery_total_weight_from_packaging
@@ -1232,6 +1235,7 @@ oca:
   - web_notify_channel_message
   - web_apply_field_style
   - web_help
+  - web_ir_actions_act_window_message
   - web_remember_tree_column_width
   - web_m2x_options
   - web_touchscreen
