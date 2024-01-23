@@ -703,6 +703,7 @@ oca:
   - project_stock
   - project_type
   - project_parent_task_filter
+  - project_stage_extra_info
   - project_hr
   - project_update_visible
   - project_task_code
@@ -851,6 +852,7 @@ oca:
   - sale_order_product_recommendation
   - sale_stock_line_sequence
   - sale_procurement_group_by_line
+  - sale_order_product_recommendation_quick_add
   - portal_sale_personal_data_only
   - sales_team_security
   - sale_order_line_price_history
@@ -871,6 +873,7 @@ oca:
   - sale_substate
   - sale_discount_display_amount
   - sale_cancel_reason
+  - sale_blanket_order
   - sale_order_currency_rate
   - sale_order_lot_selection
   - sale_mrp_bom
@@ -887,6 +890,7 @@ oca:
   - sale_order_line_delivery_state
   - sale_order_qty_change_no_recompute
   - sale_delivery_state
+  - sale_partner_pricelist
   - sale_triple_discount
   - sale_order_revision
   - sale_partner_selectable_option
@@ -912,6 +916,7 @@ oca:
   - sale_product_category_menu
   - sale_partner_incoterm
   - sale_force_invoiced
+  - sale_pricelist_technical
   search-engine:
   - connector_search_engine_serializer_ir_export
   - search_engine_image_thumbnail
@@ -1161,6 +1166,7 @@ oca:
   - stock_picking_batch_extended
   - stock_quant_package_product_packaging
   - stock_split_picking
+  - stock_move_line_expiration_date_required
   - stock_picking_send_by_mail
   - stock_picking_sale_order_link
   - stock_picking_grn_mandatory
