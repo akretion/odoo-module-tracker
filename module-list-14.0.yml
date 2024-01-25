@@ -1041,6 +1041,7 @@ oca:
   - pos_product_sort
   - pos_receipt_hide_price
   - pos_payment_method_cashdro
+  - pos_return_voucher
   - pos_order_mgmt
   - pos_customer_required
   - pos_payment_change
@@ -1759,6 +1760,7 @@ oca:
   - barcodes_generator_product_multi_barcode
   - stock_barcodes_gs1
   - barcodes_generator_abstract
+  - barcode_generator_product_variant
   - barcodes_generator_location
   - product_barcode_constraint_per_company
   - base_gs1_barcode
