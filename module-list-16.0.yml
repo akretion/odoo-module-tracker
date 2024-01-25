@@ -156,6 +156,7 @@ oca:
   - account_invoice_currency_taxes
   - stock_picking_invoicing
   - account_invoice_check_total
+  - purchase_invoicing_no_zero_line
   - portal_account_personal_data_only
   - purchase_stock_picking_return_invoicing
   - account_invoice_mass_sending
@@ -547,6 +548,7 @@ oca:
   - partner_deduplicate_filter
   - partner_identification_gln
   - partner_manual_rank
+  - partner_contact_department
   - partner_purchase_manager
   - partner_subject_to_vat
   - partner_bank_code
@@ -592,6 +594,7 @@ oca:
   - pos_lot_barcode
   - pos_product_display_default_code
   - pos_default_partner
+  - pos_sale_product_config_no_variant
   - pos_lot_selection
   - pos_order_remove_line
   - pos_payment_terminal
@@ -896,6 +899,7 @@ oca:
   - sale_partner_selectable_option
   - sale_stock_picking_blocking
   - sale_delivery_split_date
+  - sale_stock_product_recommendation
   - sale_exception_holidays_public
   - sale_advance_payment
   - sale_exception
@@ -1122,6 +1126,7 @@ oca:
   - stock_move_packaging_qty
   - account_move_line_product
   stock-logistics-workflow:
+  - stock_picking_batch_print_pickings
   - stock_valuation_layer_usage
   - stock_picking_group_by_partner_by_carrier
   - stock_picking_group_by_base
