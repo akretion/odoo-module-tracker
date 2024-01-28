@@ -291,6 +291,7 @@ oca:
   - contract
   credit-control:
   - account_payment_return_financial_risk
+  - sale_payment_sheet_financial_risk
   - account_financial_risk
   - account_credit_control_dunning_fees
   - account_invoice_overdue_warn
@@ -725,6 +726,7 @@ oca:
   - purchase_commercial_partner
   - purchase_order_hide_receipt_status
   - purchase_order_weight_volume
+  - product_supplierinfo_qty_multiplier
   - purchase_order_owner
   - purchase_invoice_method
   - purchase_order_supplierinfo_update
@@ -852,6 +854,8 @@ oca:
   - sale_order_product_recommendation_elaboration
   - sale_manual_delivery
   - sale_stock_delivery_state
+  - sale_auto_remove_zero_quantity_lines
+  - sale_loyalty_exclude
   - sale_pricelist_technical
   - product_form_sale_link
   - sale_order_lot_generator
@@ -919,6 +923,7 @@ oca:
   - sale_packaging_default
   - sale_order_price_recalculation
   - sale_order_line_sequence
+  - sale_order_carrier_auto_assign
   - sale_substate
   - sale_quotation_number
   - sale_order_warn_message
