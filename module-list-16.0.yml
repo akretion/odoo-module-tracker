@@ -347,6 +347,7 @@ oca:
   - delivery_postlogistics_server_env
   - carrier_account_environment
   - stock_picking_report_delivery_cost
+  - delivery_deliverea
   - delivery_roulier
   - delivery_state
   - delivery_auto_refresh
@@ -692,6 +693,7 @@ oca:
   - sale_project_copy_tasks
   - project_type
   - project_parent
+  - project_administrator_restricted_visibility
   - project_hr
   - project_template
   - project_role
@@ -1014,6 +1016,7 @@ oca:
   - base_domain_inverse_function
   - excel_import_export_unidecode
   - html_text
+  - cron_daylight_saving_time_resistant
   - rpc_helper
   server-ux:
   - base_tier_validation_formula
@@ -1172,6 +1175,7 @@ oca:
   - stock_split_picking
   - stock_move_line_reserved_quant
   - stock_procurement_customer
+  - stock_picking_batch_print_invoices
   - stock_picking_show_return
   - stock_picking_product_link
   - stock_picking_back2draft
@@ -1259,6 +1263,7 @@ oca:
   - web_chatter_position
   - web_touchscreen
   - web_tree_many2one_clickable
+  - web_dashboard_tile
   - web_responsive
   - web_widget_plotly_chart
   - web_environment_ribbon
