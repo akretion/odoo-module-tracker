@@ -598,6 +598,7 @@ oca:
   - pos_payment_terminal
   - pos_payment_change
   - pos_sale_order_print
+  - pos_to_weight_by_product_uom
   - pos_receipt_hide_price
   - pos_sale_product_config_no_variant
   - pos_minimize_menu
@@ -611,6 +612,7 @@ oca:
   - pos_order_to_sale_order
   - pos_lot_selection
   - pos_order_to_sale_order_delivery
+  - pos_product_packaging_container_deposit
   - pos_product_label
   - pos_membership
   - pos_product_display_default_code
@@ -997,6 +999,7 @@ oca:
   - session_db
   - module_change_auto_install
   - base_fontawesome
+  - attachment_synchronize
   - auditlog
   - iap_alternative_provider
   - scheduler_error_mailer
