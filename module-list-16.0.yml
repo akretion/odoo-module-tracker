@@ -104,6 +104,7 @@ oca:
   - account_financial_report
   - account_tax_balance
   - mis_builder_cash_flow
+  - partner_statement
   account-financial-tools:
   - account_asset_management
   - account_move_name_sequence
@@ -350,6 +351,7 @@ oca:
   - delivery_carrier_account
   - delivery_carrier_max_weight_constraint
   - delivery_automatic_package
+  - delivery_driver_stock_picking_batch
   - stock_picking_report_delivery_cost
   - carrier_account_environment
   - delivery_carrier_info
@@ -394,6 +396,7 @@ oca:
   - sale_order_import
   - despatch_advice_import_ubl
   - base_wamas_ubl
+  - account_invoice_edifact
   - despatch_advice_import
   - base_facturx
   - account_invoice_facturx
@@ -446,6 +449,7 @@ oca:
   - l10n_br_base
   - l10n_br_coa_simple
   - l10n_br_currency_rate_update
+  - l10n_br_fiscal
   - l10n_br_zip
   - l10n_br_stock
   l10n-france:
@@ -498,6 +502,7 @@ oca:
   - mrp_restrict_lot
   - mrp_bom_tracking
   - mrp_subcontracting_purchase_link
+  - mrp_tag
   mis-builder:
   - mis_builder_demo
   - mis_builder
@@ -1001,6 +1006,7 @@ oca:
   - base_partition
   - iap_alternative_provider
   - base_time_window
+  - autovacuum_message_attachment
   - base_sequence_default
   - html_text
   - base_fontawesome
@@ -1315,6 +1321,7 @@ shopinvader:
   - shopinvader_search_engine_assortment
   - shopinvader_search_engine_product_seo
   - shopinvader_anonymous_partner
+  - shopinvader_api_sale_loyalty
   - shopinvader_search_engine
   - shopinvader_search_engine_product_stock
   - shopinvader_schema_address
