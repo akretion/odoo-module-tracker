@@ -1431,6 +1431,7 @@ oca:
   - sale_partner_incoterm
   - sale_promotion_rule_assortment
   - sale_delivery_date
+  - sale_blanket_order_revision
   - sale_order_invoice_amount
   - sale_elaboration
   - sale_validity
@@ -1609,6 +1610,7 @@ oca:
   - sequence_python
   - base_generate_code
   - jsonifier_stored
+  - base_import_odoo
   - letsencrypt
   - base_changeset
   - base_remote
