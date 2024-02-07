@@ -432,6 +432,7 @@ oca:
   - intrastat_product_generic
   - intrastat_product_hscodes_import
   knowledge:
+  - document_url_google_drive
   - document_knowledge
   - document_page_tag
   - document_page_approval
@@ -734,6 +735,7 @@ oca:
   purchase-workflow:
   - purchase_packaging_level_qty
   - purchase_order_product_recommendation
+  - purchase_blanket_order
   - purchase_invoice_method
   - purchase_order_no_zero_price
   - purchase_partner_incoterm
@@ -1011,6 +1013,7 @@ oca:
   - base_sequence_default
   - html_text
   - base_fontawesome
+  - url_attachment_search_fuzzy
   - dbfilter_from_header
   - tracking_manager
   - base_m2m_custom_field
@@ -1085,6 +1088,7 @@ oca:
   - mail_activity_reminder
   - mail_optional_follower_notification
   - mail_partner_opt_out
+  - mail_composer_cc_bcc_account
   - mail_autosubscribe
   - mail_debrand
   - mail_layout_preview
