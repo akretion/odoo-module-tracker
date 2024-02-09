@@ -337,6 +337,7 @@ oca:
   - delivery_carrier_partner
   - carrier_account_environment
   - base_delivery_carrier_label
+  - delivery_carrier_deposit
   - delivery_price_method
   - delivery_carrier_info
   - delivery_auto_refresh
@@ -444,6 +445,7 @@ oca:
   l10n-brazil:
   - l10n_br_base
   - l10n_br_fiscal
+  - l10n_br_fiscal_dfe
   - l10n_br_crm
   - l10n_br_account_due_list
   - l10n_br_currency_rate_update
@@ -454,6 +456,7 @@ oca:
   - l10n_br_coa_generic
   - l10n_br_stock
   - l10n_br_coa_simple
+  - l10n_br_fiscal_certificate
   l10n-france:
   - l10n_fr_state
   - l10n_fr_account_vat_return_teledec
@@ -889,6 +892,7 @@ oca:
   - sale_order_line_tag
   - sale_pricelist_from_commitment_date
   - sale_triple_discount
+  - sale_order_amount_to_invoice
   - sale_procurement_group_by_line
   - sale_order_lot_selection
   - sale_stock_picking_note
