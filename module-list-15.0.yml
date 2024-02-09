@@ -356,6 +356,7 @@ oca:
   dms:
   - dms
   - dms_attachment_link
+  - dms_auto_classification
   - dms_field
   e-commerce:
   - website_sale_product_attachment
@@ -470,6 +471,7 @@ oca:
   - document_page_reference
   - knowledge
   l10n-brazil:
+  - l10n_br_purchase
   - l10n_br_base
   - l10n_br_fiscal
   - l10n_br_fiscal_dfe
@@ -478,6 +480,7 @@ oca:
   - l10n_br_account_due_list
   - l10n_br_currency_rate_update
   - l10n_br_coa
+  - l10n_br_sale
   - l10n_br_resource
   - l10n_br_zip
   - l10n_br_setup_tests
@@ -653,6 +656,7 @@ oca:
   - product_multi_price
   - product_abc_classification_sale
   - product_status
+  - nutritional_info
   - product_pricelist_by_contact
   - product_supplierinfo_revision
   - product_pricelist_direct_print_company_group
@@ -663,6 +667,7 @@ oca:
   - product_restricted_type
   - product_state
   - product_category_product_link
+  - nutritional_info_stock_lot
   - product_lot_sequence
   - base_product_mass_addition
   - product_manufacturer
