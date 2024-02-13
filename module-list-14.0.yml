@@ -439,6 +439,7 @@ oca:
   - account_statement_import_txt_xlsx
   - account_statement_import_ofx
   - account_statement_import_online_paypal
+  - account_statement_import_online_wise
   - account_statement_import_base
   - account_statement_import_camt
   - account_statement_import_camt54
@@ -1727,6 +1728,7 @@ oca:
   - mail_quoted_reply
   - mass_mailing_subscription_email
   - mass_mailing_contact_partner
+  - fetchmail_thread_default
   - mass_mailing_partner
   - mail_inline_css
   - microsoft_outlook_single_tenant
@@ -1769,6 +1771,7 @@ oca:
   - stock_inventory_barcode
   - sale_input_barcode
   - barcodes_generator_product_multi_barcode
+  - stock_barcodes_picking_batch
   - barcodes_generator_product
   - barcodes_generator_package
   - product_gs1_barcode
