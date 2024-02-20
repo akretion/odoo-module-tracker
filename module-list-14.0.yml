@@ -117,7 +117,12 @@ akretion:
   - account_invoice_update_wizard_payment_mode
   - sale_crm_usability
   - product_priority_star
-  partner-module-information: []
+  partner-module-information:
+  - module_info_import
+  - module_info_pull_request
+  - module_info_push
+  - module_info_partner
+  - module_info_pull_request_timesheet
   pos-sale-order:
   - pos_partial_payment
   - pos_sale_order_delivery
