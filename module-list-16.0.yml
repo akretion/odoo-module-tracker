@@ -143,6 +143,7 @@ oca:
   - account_fiscal_position_partner_type
   - l10n_eu_oss_oca
   - account_avatax_oca
+  - account_fiscal_position_autodetect_optional_vies
   - account_fiscal_position_type
   - account_avatax_sale_oca
   - account_avatax_exemption_base
@@ -290,6 +291,7 @@ oca:
   connector-telephony: []
   contract:
   - contract_sale
+  - subscription_oca
   - agreement_rebate_partner_company_group
   - contract_variable_quantity
   - contract
@@ -535,6 +537,7 @@ oca:
   - purchase_sale_inter_company
   - product_tax_multicompany_default
   - product_category_company
+  - product_category_company_favorite
   - account_multicompany_easy_creation
   partner-contact:
   - partner_contact_gender
@@ -612,6 +615,7 @@ oca:
   - pos_customer_comment
   - pos_minimize_menu
   - pos_product_quick_info
+  - pos_order_new_line
   - pos_product_packaging_multi_barcode
   - pos_partner_birthdate
   - pos_partner_sale_warning
