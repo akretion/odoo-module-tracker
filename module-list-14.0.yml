@@ -967,6 +967,7 @@ oca:
   - product_tax_multicompany_default
   - product_supplierinfo_intercompany
   - product_multi_company
+  - ir_config_parameter_multi_company
   - account_multicompany_easy_creation
   - intercompany_shared_contact
   - account_invoice_consolidated
@@ -1039,6 +1040,7 @@ oca:
   - partner_address_street3
   - partner_contact_personal_information_page
   - partner_capital
+  - partner_bank_acc_type_constraint
   - partner_tz
   - partner_email_check
   - partner_phone_secondary
@@ -1729,6 +1731,7 @@ oca:
   - mail_tracking
   - mail_outbound_static
   - mail_thread_create_nolog
+  - mail_contact_type
   - email_template_qweb
   - mass_mailing_event_registration_exclude
   - base_search_mail_content
