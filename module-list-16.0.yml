@@ -89,6 +89,7 @@ oca:
   - account_analytic_parent
   - stock_analytic
   - purchase_analytic
+  - account_analytic_sequence
   - account_analytic_tag
   - purchase_analytic_tag
   - account_analytic_account_tag
@@ -500,6 +501,7 @@ oca:
   - mrp_planned_order_matrix
   - mrp_production_note
   - mrp_restrict_lot
+  - mrp_attachment_mgmt
   - mrp_packaging_default
   - mrp_subcontracting_skip_no_negative
   - mrp_bom_hierarchy
@@ -554,6 +556,7 @@ oca:
   - partner_address_split
   - account_partner_company_group
   - partner_label
+  - partner_auto_archive
   - base_country_state_translatable
   - partner_contact_department
   - partner_subject_to_vat
@@ -583,6 +586,7 @@ oca:
   - partner_contact_type_end_user
   - partner_firstname
   - base_partner_company_group
+  - partner_phonecall_schedule
   - partner_contact_nationality
   - partner_contact_lang
   - partner_manual_rank
@@ -634,6 +638,7 @@ oca:
   - pos_payment_change
   - pos_edit_order_line
   - pos_order_to_sale_order_report
+  - pos_payment_method_image
   - pos_escpos_status
   - pos_product_label
   - pos_order_remove_line
@@ -968,6 +973,7 @@ oca:
   - search_engine_serializer_pydantic
   - connector_search_engine_serializer_ir_export
   server-auth:
+  - vault
   - auth_signup_verify_email
   - auth_ldaps
   - auth_api_key
@@ -1081,6 +1087,7 @@ oca:
   - base_custom_filter
   - base_optional_quick_create
   social:
+  - mail_drop_target
   - mail_layout_preview
   - mail_activity_partner
   - mail_tracking_mass_mailing
