@@ -103,6 +103,7 @@ oca:
   - account_multicurrency_revaluation
   - account_cutoff_start_end_dates
   - account_cutoff_accrual_subscription
+  - account_invoice_start_end_dates_move
   account-financial-reporting:
   - partner_statement
   - account_tax_balance
@@ -163,6 +164,7 @@ oca:
   account-invoicing:
   - account_menu_invoice_refund
   - product_form_account_move_line_link
+  - account_invoice_alternate_payer
   - account_invoice_transmit_method
   - account_invoice_tax_required
   - account_invoice_mass_sending
@@ -180,6 +182,7 @@ oca:
   - account_tax_change
   - account_invoice_currency_taxes
   - sale_timesheet_invoice_description
+  - account_invoice_tax_note
   - account_tax_one_vat
   - account_invoice_payment_retention
   - partner_invoicing_mode_at_shipping
@@ -249,6 +252,7 @@ oca:
   - account_statement_import_base
   - account_statement_import_online_paypal
   - account_statement_import_file
+  - account_statement_import_online_gocardless
   - account_statement_import_sheet_file
   - account_statement_import_online
   - account_statement_import_camt
@@ -594,7 +598,9 @@ oca:
   - partner_country_state_required
   - partner_pricelist_search
   - partner_ref_unique
+  - partner_category_security_crm
   - partner_contact_address_default
+  - partner_category_security
   - partner_accreditation
   - partner_identification
   - partner_company_default
@@ -684,6 +690,7 @@ oca:
   - product_pricelist_supplierinfo
   - product_supplierinfo_for_customer
   - product_template_tags
+  - product_supplierinfo_stock_picking_type
   - product_packaging_level_salable
   - product_sale_description
   - product_attribute_company_favorite
@@ -806,6 +813,7 @@ oca:
   - purchase_requisition_tier_validation
   - purchase_reception_status
   - purchase_partner_selectable_option
+  - purchase_order_product_attachment_mgmt
   - purchase_order_line_menu
   - product_supplierinfo_qty_multiplier
   - purchase_order_purchase_manager
@@ -1079,6 +1087,7 @@ oca:
   - date_range
   - base_tier_validation_definition_server_action
   - base_cancel_confirm
+  - template_content_swapper
   - base_user_locale
   - base_technical_features
   - user_all_groups
@@ -1219,6 +1228,7 @@ oca:
   - stock_partner_delivery_window
   - stock_picking_kind
   - stock_picking_group_by_max_weight
+  - stock_picking_import_serial_number
   - stock_receipt_lot_info
   - stock_picking_to_batch_group_fields
   - stock_move_line_expiration_date_required
@@ -1272,6 +1282,7 @@ oca:
   - crm_timesheet
   - hr_timesheet_task_stage
   - hr_timesheet_task_required
+  - hr_timesheet_report
   - hr_timesheet_employee_analytic_tag
   web:
   - web_dashboard_tile
@@ -1280,6 +1291,7 @@ oca:
   - web_ir_actions_act_window_page
   - web_widget_datepicker_fulloptions
   - web_widget_x2many_2d_matrix
+  - web_pivot_computed_measure
   - web_widget_dropdown_dynamic
   - web_tree_duplicate
   - web_touchscreen
@@ -1290,6 +1302,7 @@ oca:
   - web_widget_numeric_step
   - web_ir_actions_act_multi
   - web_listview_range_select
+  - web_pwa_oca
   - web_m2x_options
   - web_domain_field
   - web_no_bubble
