@@ -763,6 +763,7 @@ oca:
   - purchase_report_shipping_address
   purchase-workflow:
   - purchase_triple_discount
+  - purchase_order_price_recalculation
   - purchase_order_type
   - purchase_merge
   - purchase_all_shipments
@@ -790,6 +791,7 @@ oca:
   - purchase_request_tier_validation
   - purchase_partner_incoterm
   - purchase_location_by_line
+  - purchase_stock_price_unit_sync
   - purchase_lot
   - purchase_no_rfq
   - purchase_packaging_level_qty
@@ -1002,6 +1004,7 @@ oca:
   - users_ldap_groups
   - auth_session_timeout
   - auth_api_key_server_env
+  - vault_share
   - auth_oidc_environment
   server-backend:
   - base_import_match
