@@ -91,6 +91,7 @@ oca:
   - purchase_analytic
   - account_analytic_sequence
   - account_analytic_tag
+  - pos_analytic_by_config
   - purchase_analytic_tag
   - account_analytic_account_tag
   - purchase_stock_analytic
@@ -513,6 +514,7 @@ oca:
   - mrp_production_quant_manual_assign
   - mrp_bom_location
   - mrp_workorder_lot_display
+  - quality_control_stock_oca
   - account_move_line_mrp_info
   - mrp_bom_component_menu
   - quality_control_oca
@@ -1112,6 +1114,7 @@ oca:
   - mass_mailing_event_registration_exclude
   - base_search_mail_content
   - mail_template_substitute
+  - mass_mailing_custom_unsubscribe
   - mail_quoted_reply
   - mass_mailing_unique
   - mass_mailing_resend
@@ -1283,6 +1286,7 @@ oca:
   - hr_timesheet_name_customer
   - hr_timesheet_sheet
   - crm_timesheet
+  - hr_timesheet_sheet_autodraft
   - hr_timesheet_task_stage
   - hr_timesheet_task_required
   - hr_timesheet_report
