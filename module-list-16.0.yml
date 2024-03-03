@@ -503,6 +503,7 @@ oca:
   - mrp_lot_number_propagation
   - mrp_subcontracting_inhibit
   - mrp_workorder_sequence
+  - mrp_default_workorder_time
   - mrp_multi_level
   - mrp_planned_order_matrix
   - mrp_production_note
@@ -513,6 +514,7 @@ oca:
   - mrp_bom_hierarchy
   - mrp_production_quant_manual_assign
   - mrp_bom_location
+  - mrp_workcenter_cost
   - mrp_workorder_lot_display
   - quality_control_stock_oca
   - account_move_line_mrp_info
@@ -1299,6 +1301,7 @@ oca:
   - web_widget_datepicker_fulloptions
   - web_widget_x2many_2d_matrix
   - web_pivot_computed_measure
+  - web_send_message_popup
   - web_widget_dropdown_dynamic
   - web_tree_duplicate
   - web_touchscreen
