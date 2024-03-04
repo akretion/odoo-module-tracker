@@ -87,6 +87,7 @@ oca:
   - account_maturity_date_default
   - account_asset_management
   - account_move_line_tax_editable
+  - account_asset_compute_batch
   - account_move_force_removal
   - account_asset_low_value
   - account_invoice_constraint_chronology
@@ -269,6 +270,7 @@ oca:
   - account_brand
   - analytic_brand
   calendar:
+  - calendar_import_ics
   - resource_booking
   community-data-files:
   - base_iso3166
@@ -1330,9 +1332,11 @@ oca:
   - hr_timesheet_task_domain
   - sale_timesheet_task_exclude
   - hr_timesheet_time_type
+  - hr_timesheet_sheet_no_create
   - hr_timesheet_sheet
   - hr_employee_product
   - crm_timesheet
+  - hr_timesheet_sheet_autodraft
   - hr_timesheet_task_stage
   - hr_timesheet_task_required
   - sale_timesheet_rounded
