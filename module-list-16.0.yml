@@ -380,6 +380,7 @@ oca:
   - website_sale_stock_available
   - website_sale_product_description
   - product_template_multi_link
+  - website_sale_product_minimal_price
   - website_sale_wishlist_hide_price
   - website_sale_attribute_filter_multiselect
   - website_sale_invoice_address
@@ -795,6 +796,7 @@ oca:
   - purchase_request_tier_validation
   - purchase_partner_incoterm
   - purchase_location_by_line
+  - purchase_order_qty_change_no_recompute
   - purchase_stock_price_unit_sync
   - purchase_lot
   - purchase_no_rfq
@@ -1115,6 +1117,7 @@ oca:
   - email_template_qweb
   - mass_mailing_event_registration_exclude
   - base_search_mail_content
+  - mail_inline_css
   - mail_template_substitute
   - mass_mailing_custom_unsubscribe
   - mail_quoted_reply
@@ -1303,6 +1306,7 @@ oca:
   - web_pivot_computed_measure
   - web_send_message_popup
   - web_widget_dropdown_dynamic
+  - web_widget_domain_editor_dialog
   - web_tree_duplicate
   - web_touchscreen
   - web_tree_many2one_clickable
