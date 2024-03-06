@@ -303,6 +303,7 @@ oca:
   - account_move_propagate_ref
   - account_invoice_line_sequence
   - account_invoice_tax_required
+  - account_receipt_sale
   - account_move_tier_validation_approver
   - account_invoice_partner
   - account_invoice_mass_sending
@@ -322,6 +323,7 @@ oca:
   - account_invoice_supplierinfo_update
   - account_invoice_refund_link
   - account_refund_payment_term
+  - account_receipt_base
   - account_move_exception
   - account_invoice_mode_monthly
   - account_receipt_journal
@@ -1150,6 +1152,7 @@ oca:
   - product_template_tags
   - product_supplierinfo_stock_picking_type
   - product_internal_reference_generator
+  - product_packaging_type_vendor
   - product_variant_company
   - product_category_description
   - stock_product_template_tags
