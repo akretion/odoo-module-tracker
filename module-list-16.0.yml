@@ -435,6 +435,7 @@ oca:
   - hr_employee_calendar_planning
   - hr_employee_phone_extension
   - hr_employee_partner_external
+  - hr_recruitment_torecruit
   - hr_employee_birthday_mail
   - hr_employee_firstname
   - hr_holidays_settings
@@ -577,6 +578,7 @@ oca:
   - partner_contact_access_link
   - partner_identification_gln
   - partner_purchase_manager
+  - partner_lastname_uppercase
   - partner_contact_job_position
   - partner_middlename
   - partner_contact_birthdate
@@ -629,6 +631,7 @@ oca:
   - pos_order_to_sale_order
   - pos_default_partner
   - pos_customer_comment
+  - pos_payment_method_cashdro
   - pos_minimize_menu
   - pos_product_quick_info
   - pos_order_new_line
@@ -810,6 +813,7 @@ oca:
   - purchase_tag
   - purchase_security
   - purchase_advance_payment
+  - procurement_purchase_no_grouping
   - purchase_product_packaging_container_deposit
   - purchase_order_type_dashboard
   - purchase_order_owner
@@ -839,6 +843,7 @@ oca:
   reporting-engine:
   - bi_sql_editor
   - sql_request_abstract
+  - report_qr
   - report_qweb_element_page_visibility
   - report_wkhtmltopdf_param
   - sql_export_excel
@@ -1334,6 +1339,7 @@ oca:
   - web_theme_classic
   - web_field_numeric_formatting
   - web_timeline
+  - web_disable_export_group
   - web_chatter_position
   - web_advanced_search
   - web_ir_actions_act_window_message
