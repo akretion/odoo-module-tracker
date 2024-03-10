@@ -1021,11 +1021,13 @@ oca:
   - users_ldap_mail
   - users_ldap_groups
   server-backend:
+  - base_group_backend
   - base_external_system
   - base_import_match
   - base_portal_type
   - base_external_dbsource
   - base_external_dbsource_sqlite
+  - server_action_sort
   - base_global_discount
   - base_user_role_company
   - base_user_role_history
@@ -1191,6 +1193,7 @@ oca:
   - stock_move_location
   - stock_helper
   - stock_move_packaging_qty
+  - stock_inventory_justification
   - scrap_reason_code
   - stock_move_auto_assign_auto_release
   - stock_picking_volume
@@ -1202,6 +1205,7 @@ oca:
   - stock_location_lockdown
   - stock_packaging_calculator_packaging_level
   - stock_move_auto_assign
+  - stock_removal_location_by_priority
   - stock_inventory
   - procurement_auto_create_group
   - stock_move_common_dest
@@ -1229,6 +1233,7 @@ oca:
   - stock_lot_production_date
   - stock_picking_auto_create_lot
   - stock_move_free_reservation_reassign
+  - stock_move_priority_picking_assign
   - stock_picking_import_serial_number
   - stock_picking_product_link
   - stock_picking_batch_extended
@@ -1256,6 +1261,7 @@ oca:
   - stock_grn
   - stock_picking_show_return
   - stock_picking_back2draft
+  - stock_auto_move
   - stock_picking_purchase_order_link
   - stock_picking_kind
   - stock_picking_filter_lot
@@ -1310,6 +1316,7 @@ oca:
   - web_dashboard_tile
   - web_timeline
   - web_domain_field
+  - web_widget_image_webcam
   - web_widget_plotly_chart
   - web_sheet_full_width
   - web_m2x_options
@@ -1347,6 +1354,7 @@ oca:
   - web_chatter_position
   - web_pivot_computed_measure
   - web_save_discard_button
+  - web_copy_confirm
   - web_dialog_size
   - web_touchscreen
   - web_remember_tree_column_width
