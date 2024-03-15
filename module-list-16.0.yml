@@ -28,6 +28,7 @@ akretion:
   - link_tracker_usability
   - base_usability
   - purchase_usability
+  - product_manager_group_stock
   - base_partner_one2many_phone
   - stock_quant_package_move_wizard
   - sale_stock_usability
@@ -35,6 +36,7 @@ akretion:
   - crm_usability
   - stock_product_tree_default
   - mail_usability
+  - product_manager_group
   - sale_order_route
   - stock_usability
   - base_dynamic_list
@@ -817,6 +819,7 @@ oca:
   - purchase_invoice_plan
   - purchase_security
   - purchase_blanket_order
+  - purchase_order_downpayment
   - purchase_order_type
   - sale_purchase_force_vendor
   - purchase_order_line_menu
@@ -1177,6 +1180,7 @@ oca:
   - delivery_line_sale_line_position
   - stock_report_quantity_by_location
   - stock_picking_report_custom_description
+  - stock_picking_report_qty_undelivered
   - stock_picking_report_valued
   - stock_card_report
   stock-logistics-tracking:
@@ -1188,6 +1192,7 @@ oca:
   - stock_location_product_restriction
   - stock_move_location
   - stock_inventory_discrepancy
+  - stock_inventory_preparation_filter
   - stock_picking_volume_packaging
   - scrap_reason_code
   - stock_picking_commercial_partner
@@ -1196,6 +1201,7 @@ oca:
   - stock_location_position
   - stock_inventory_justification
   - stock_move_packaging_qty
+  - stock_picking_show_linked
   - stock_location_zone
   - stock_putaway_product_template
   - product_packaging_usability
@@ -1221,6 +1227,7 @@ oca:
   - stock_product_qty_by_packaging
   - stock_quant_cost_info
   - stock_inventory_count_to_zero
+  - stock_valuation_layer_accounting_date
   stock-logistics-workflow:
   - stock_owner_restriction
   - stock_picking_warn_message
@@ -1259,6 +1266,7 @@ oca:
   - stock_move_line_expiration_date_required
   - stock_putaway_hook
   - stock_move_free_reservation_reassign
+  - stock_product_set
   - stock_lot_production_date
   - stock_picking_customer_ref
   - stock_picking_batch_extended_account_sale_type
