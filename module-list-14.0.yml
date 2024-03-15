@@ -61,6 +61,7 @@ akretion:
   - base_mail_sender_bcc
   - account_move_label_copy
   - product_detailed_type
+  - mrp_no_product_template_menu
   - stock_reception_usability
   - sale_no_preview_button
   - purchase_usability
@@ -106,6 +107,7 @@ akretion:
   - base_company_extension
   - sale_show_transaction
   - account_menu_usability
+  - sale_margin_no_onchange
   - sale_no_optional_product
   - pos_product_tree_default
   - purchase_stock_usability
@@ -593,6 +595,7 @@ oca:
   - delivery_state
   - delivery_carrier_agency
   - server_environment_delivery
+  - delivery_carrier_deposit
   - delivery_send_to_shipper_at_operation
   - delivery_carrier_pricelist
   - delivery_carrier_category
@@ -1233,6 +1236,7 @@ oca:
   - project_task_project_required
   - project_template
   - project_task_default_stage
+  - project_forecast_line_deadline
   project-reporting:
   - project_task_report
   purchase-reporting:
@@ -1817,7 +1821,9 @@ oca:
   - stock_inventory_valuation_report
   - stock_picking_report_valued
   - stock_card_report
-  stock-logistics-tracking: []
+  stock-logistics-tracking:
+  - stock_packaging_usability_pp
+  - stock_packaging_usability
   stock-logistics-warehouse:
   - stock_available_immediately
   - stock_location_orderpoint
@@ -1895,6 +1901,7 @@ oca:
   - procurement_auto_create_group
   - stock_reserve
   - stock_location_bin_name
+  - stock_inventory_tier_validation
   - stock_move_auto_assign_auto_release
   - stock_helper
   - stock_packaging_calculator_packaging_type
