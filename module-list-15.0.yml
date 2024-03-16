@@ -530,6 +530,7 @@ oca:
   - mrp_finished_backorder_product
   - mrp_workcenter_category
   - mrp_bom_hierarchy
+  - account_move_line_mrp_info
   - mrp_production_note
   - mrp_progress_button
   - stock_whole_kit_constraint
@@ -615,6 +616,7 @@ oca:
   - partner_contact_nationality
   - partner_manual_rank
   - partner_address_street3
+  - partner_coc
   - base_partner_sequence
   - partner_priority
   - partner_stage
@@ -874,6 +876,7 @@ oca:
   - board_eval_context
   - report_qweb_element_page_visibility
   - report_qr
+  - sql_export_mail
   rest-framework:
   - rest_log
   - graphql_demo
@@ -1240,6 +1243,7 @@ oca:
   - stock_lot_filter_available
   - stock_packaging_calculator
   - account_move_line_stock_info
+  - base_product_merge
   - stock_mts_mto_rule
   - stock_available_unreserved
   - stock_archive_constraint
@@ -1247,6 +1251,7 @@ oca:
   - stock_quant_cost_info
   - stock_orderpoint_move_link
   - stock_inventory_count_to_zero
+  - stock_valuation_layer_accounting_date
   stock-logistics-workflow:
   - stock_owner_restriction
   - stock_picking_warn_message
