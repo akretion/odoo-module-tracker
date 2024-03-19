@@ -81,6 +81,7 @@ forgeflow:
   - rma_put_away
 oca:
   account-analytic:
+  - mrp_stock_analytic
   - hr_timesheet_analytic_tag
   - sale_analytic_tag
   - purchase_analytic_tag
@@ -98,6 +99,8 @@ oca:
   - account_move_update_analytic
   - product_analytic
   - pos_analytic_by_config
+  - account_analytic_root
+  - product_analytic_purchase
   - account_analytic_required
   account-closing:
   - account_invoice_start_end_dates_move
