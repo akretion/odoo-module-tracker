@@ -247,6 +247,7 @@ oca:
   - account_banking_mandate
   - account_payment_mode
   - account_banking_mandate_contact
+  - account_banking_mandate_sale_contact
   - account_banking_sepa_credit_transfer
   - account_payment_purchase
   - account_banking_mandate_sale
@@ -789,8 +790,10 @@ oca:
   - purchase_lot
   - purchase_order_product_attachment_mgmt
   - purchase_discount
+  - purchase_sale_link_by_origin
   - purchase_stock_price_unit_sync
   - purchase_order_no_zero_price
+  - purchase_order_line_receipt_status
   - purchase_order_purchase_manager
   - purchase_request_tier_validation
   - purchase_allowed_product
@@ -832,6 +835,7 @@ oca:
   - purchase_product_packaging_container_deposit
   - purchase_manual_delivery
   - purchase_tag
+  - purchase_request_type
   - purchase_requisition_tier_validation
   - procurement_purchase_no_grouping
   - purchase_tier_validation
@@ -1161,6 +1165,7 @@ oca:
   - mass_mailing_list_dynamic
   - mail_activity_partner
   - mail_drop_target
+  - fetchmail_thread_default
   - mass_mailing_unique
   - mass_mailing_event_registration_exclude
   - mass_mailing_contact_active
@@ -1391,6 +1396,7 @@ oca:
   wms:
   - stock_warehouse_flow
   - stock_release_channel_process_end_time
+  - stock_release_channel_show_volume
   - stock_release_channel_cutoff
   - stock_release_channel_propagate_channel_picking
   - stock_picking_type_shipping_policy
@@ -1407,6 +1413,7 @@ oca:
   - stock_available_to_promise_release
   - delivery_carrier_warehouse
   - shopfloor_base
+  - stock_release_channel_show_weight
   - stock_release_channel_shipment_lead_time
 shopinvader:
   odoo-shopinvader:
