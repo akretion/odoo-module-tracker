@@ -1235,6 +1235,7 @@ oca:
   - stock_search_supplierinfo_code
   - stock_product_qty_by_packaging
   - stock_quant_cost_info
+  - stock_quant_safe_inventory
   - stock_inventory_count_to_zero
   - stock_valuation_layer_accounting_date
   stock-logistics-workflow:
@@ -1285,6 +1286,7 @@ oca:
   - stock_picking_supplier_ref
   - stock_picking_batch_invoice_frequency
   - stock_picking_batch_print_pickings
+  - stock_rule_reserve_max_quantity
   - stock_move_manage_priority
   - stock_grn
   - stock_picking_auto_create_lot
