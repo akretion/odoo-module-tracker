@@ -1036,6 +1036,7 @@ oca:
   - auth_session_timeout
   - base_user_show_email
   - auth_saml
+  - auth_api_key_group
   - auth_signup_verify_email
   - auth_oauth_ropc
   - auth_admin_passkey
@@ -1354,6 +1355,7 @@ oca:
   - web_dialog_size
   - web_widget_open_tab
   - web_group_expand
+  - web_hide_field_with_key
   - web_widget_domain_editor_dialog
   - web_remember_tree_column_width
   - web_theme_classic
