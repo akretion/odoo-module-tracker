@@ -428,6 +428,7 @@ oca:
   - edi_voxel_secondary_unit_oca
   - edi_exchange_template_oca
   - base_facturx
+  - edi_voxel_sale_secondary_unit_oca
   - edi_voxel_oca
   hr:
   - hr_worked_days_from_timesheet
@@ -483,8 +484,10 @@ oca:
   - l10n_br_coa_generic
   - l10n_br_base
   - l10n_br_stock
+  - l10n_br_nfse
   - l10n_br_fiscal_dfe
   - l10n_br_zip
+  - l10n_br_nfse_focus
   - l10n_br_fiscal_certificate
   - l10n_br_sale
   - l10n_br_coa_simple
@@ -492,6 +495,7 @@ oca:
   - l10n_br_account
   - l10n_br_purchase
   - l10n_br_account_due_list
+  - l10n_br_hr
   - l10n_br_resource
   - l10n_br_currency_rate_update
   - l10n_br_crm
@@ -1265,6 +1269,7 @@ oca:
   - stock_picking_product_availability_inline
   - stock_lot_on_hand_first
   - stock_picking_batch_set_quantity
+  - stock_move_propagate_first_move
   - stock_valuation_layer_usage
   - stock_picking_origin_reference_sale
   - stock_valuation_fifo_lot
