@@ -474,8 +474,10 @@ oca:
   - l10n_br_coa_generic
   - l10n_br_base
   - l10n_br_stock
+  - l10n_br_nfse
   - l10n_br_fiscal_dfe
   - l10n_br_zip
+  - l10n_br_nfse_focus
   - l10n_br_fiscal_certificate
   - l10n_br_coa_simple
   - l10n_br_setup_tests
@@ -642,6 +644,7 @@ oca:
   - pos_partner_sale_warning
   - pos_order_to_sale_order_sale_financial_risk
   - pos_order_to_sale_order_report
+  - pos_membership_extension
   - pos_sale_product_config_no_variant
   - pos_lot_barcode
   - pos_loyalty_redeem_payment
@@ -1139,6 +1142,7 @@ oca:
   social:
   - base_search_mail_content
   - mail_quoted_reply
+  - mail_layout_force
   - email_template_qweb
   - mail_activity_team
   - mail_attach_existing_attachment
@@ -1179,6 +1183,7 @@ oca:
   - product_barcode_constraint_per_company
   - barcodes_generator_product
   - barcodes_generator_package
+  - barcodes_generator_location
   - product_packaging_multi_barcode
   - product_multi_barcode
   - product_multi_barcode_constraint_per_company
