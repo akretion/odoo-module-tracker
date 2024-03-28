@@ -284,7 +284,8 @@ oca:
   - brand
   - product_brand_stock_account
   - account_brand
-  calendar: []
+  calendar:
+  - resource_booking
   community-data-files:
   - product_fao_fishing
   - account_payment_unece
@@ -531,9 +532,12 @@ oca:
   - mrp_production_note
   - mrp_unbuild_move_link
   - mrp_tag
+  - mrp_subcontracting_partner_management
   - mrp_lot_number_propagation
   - mrp_sale_info
   - quality_control_oca
+  - mrp_bom_line_formula_quantity
+  - mrp_subcontracting_bom_dual_use
   - mrp_workorder_lot_display
   - mrp_multi_level
   - mrp_bom_location
@@ -556,6 +560,7 @@ oca:
   - account_invoice_inter_company
   - res_company_code
   - product_category_company
+  - purchase_sale_container_deposit_inter_company
   - product_account_multicompany_default
   - stock_intercompany
   - mail_multicompany
@@ -1248,6 +1253,7 @@ oca:
   - stock_owner_restriction
   - stock_picking_warn_message
   - stock_move_line_change_lot
+  - stock_landed_costs_purchase_auto
   - stock_picking_sale_order_link
   - stock_quant_package_dimension
   - stock_picking_batch_extended
@@ -1307,6 +1313,7 @@ oca:
   - stock_auto_move
   - stock_procurement_customer
   - delivery_procurement_group_carrier
+  - stock_landed_costs_security
   - stock_move_line_serial_unique
   - stock_picking_product_link
   - stock_picking_group_by_base
@@ -1400,6 +1407,7 @@ oca:
   - web_dark_mode
   - web_refresher
   web-api:
+  - endpoint_auth_api_key
   - endpoint
   - webservice
   - endpoint_route_handler
@@ -1414,15 +1422,19 @@ oca:
   - stock_release_channel_partner_delivery_window
   - stock_picking_completion_info
   - stock_storage_type
+  - stock_release_channel_plan
   - stock_release_channel_partner_public_holidays
   - stock_release_channel_batch_mode_commercial_partner
   - stock_storage_type_putaway_abc
   - stock_dynamic_routing
+  - stock_release_channel_geoengine
+  - stock_release_channel_delivery
   - stock_release_channel
   - stock_release_channel_shipment_advice
   - stock_available_to_promise_release
   - delivery_carrier_warehouse
   - shopfloor_base
+  - sale_stock_available_to_promise_release
   - stock_release_channel_show_weight
   - stock_release_channel_shipment_lead_time
 shopinvader:
@@ -1432,6 +1444,7 @@ shopinvader:
   - shopinvader_search_engine_product_brand
   - shopinvader_product
   - shopinvader_product_attribute_set
+  - shopinvader_restapi_sale_packaging
   - shopinvader_product_url
   - shopinvader_api_address
   - shopinvader_anonymous_partner
