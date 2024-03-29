@@ -464,9 +464,11 @@ oca:
   - attachment_zipped_download
   - document_url
   - document_page_approval
+  - document_page_project
   - document_page_group
   - document_page
   - document_url_google_drive
+  - document_page_partner
   - document_page_reference
   - document_page_tag
   - document_knowledge
@@ -562,6 +564,7 @@ oca:
   - product_category_company
   - purchase_sale_container_deposit_inter_company
   - product_account_multicompany_default
+  - sale_stock_warehouse_multicompany
   - stock_intercompany
   - mail_multicompany
   - base_multi_company
@@ -716,6 +719,7 @@ oca:
   - product_uom_use_type
   - product_packaging_level_salable
   - product_packaging_level
+  - product_pricelist_alternative
   - product_optional_product_quantity
   - product_supplierinfo_for_customer
   - product_sale_description
@@ -770,6 +774,7 @@ oca:
   - project_stock_analytic_tag
   - project_timesheet_time_control
   - project_task_pull_request_state
+  - project_key
   - project_stock_product_set
   - project_department
   - project_task_material
@@ -1311,6 +1316,7 @@ oca:
   - stock_picking_info_lot
   - stock_picking_to_batch_group_fields
   - stock_auto_move
+  - stock_picking_quick
   - stock_procurement_customer
   - delivery_procurement_group_carrier
   - stock_landed_costs_security
@@ -1449,6 +1455,7 @@ shopinvader:
   - shopinvader_api_address
   - shopinvader_anonymous_partner
   - shopinvader_search_engine_product_stock
+  - shopinvader_api_signin_jwt
   - shopinvader_schema_address
   - shopinvader_fastapi_auth_jwt
   - shopinvader_search_engine
