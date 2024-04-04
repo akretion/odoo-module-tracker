@@ -387,6 +387,8 @@ oca:
   - delivery_state
   dms:
   - dms
+  - dms_user_role
+  - dms_auto_classification
   e-commerce:
   - website_sale_product_attribute_filter_collapse
   - website_sale_product_attachment
@@ -1441,6 +1443,7 @@ oca:
   - stock_release_channel
   - stock_release_channel_geoengine
   - stock_available_to_promise_release
+  - stock_release_channel_plan_process_end_time
   - stock_release_channel_shipment_advice
   - stock_release_channel_cutoff
   - shopfloor_base
