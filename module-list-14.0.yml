@@ -575,6 +575,7 @@ oca:
   - crm_lead_search_archive
   - crm_location_nuts
   currency:
+  - currency_rate_update_xe
   - currency_rate_inverted
   - currency_rate_update_cmc
   - currency_rate_update_transferwise
@@ -1817,6 +1818,7 @@ oca:
   - barcodes_generator_abstract
   - barcodes_generator_package
   - product_multi_barcode_stock_menu
+  - sale_input_barcode_gs1
   - product_gs1_barcode
   - base_gs1_barcode
   stock-logistics-reporting:
