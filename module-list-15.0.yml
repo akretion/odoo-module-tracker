@@ -248,6 +248,7 @@ oca:
   - account_banking_mandate_sale
   bank-statement-import:
   - account_statement_import_txt_xlsx
+  - account_statement_import_move_line
   - account_bank_statement_clear_partner
   - account_statement_import_paypal
   - account_statement_import_ofx
@@ -1186,6 +1187,7 @@ oca:
   - mail_parent_recipient
   - mail_activity_plan
   stock-logistics-barcode:
+  - stock_barcodes_elaboration
   - stock_barcodes_gs1
   - stock_barcodes_picking_batch_revision
   - barcodes_generator_product
