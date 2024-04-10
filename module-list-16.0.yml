@@ -565,6 +565,7 @@ oca:
   - base_multi_company
   - product_tax_multicompany_default
   - company_dependent_flag
+  - sale_product_company
   - account_invoice_inter_company
   - purchase_sale_inter_company
   - sale_stock_warehouse_multicompany
@@ -1436,6 +1437,7 @@ oca:
   - stock_release_channel_shipment_advice_process_end_time
   - stock_dynamic_routing
   - stock_release_channel_process_end_time
+  - stock_available_to_promise_release_block
   - stock_release_channel_propagate_channel_picking
   - stock_picking_completion_info
   - delivery_carrier_warehouse
