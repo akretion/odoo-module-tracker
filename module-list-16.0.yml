@@ -350,6 +350,7 @@ oca:
   - crm_location
   - crm_lead_search_archive
   currency:
+  - currency_rate_update_xe
   - currency_old_rate_notify
   - currency_rate_update
   data-protection:
@@ -862,6 +863,7 @@ oca:
   - purchase_order_product_attachment_mgmt
   - purchase_triple_discount
   - purchase_request_tier_validation
+  - purchase_landed_cost
   - supplier_calendar
   - purchase_invoice_method
   - purchase_sale_link_by_origin
@@ -1286,6 +1288,7 @@ oca:
   - stock_picking_filter_lot
   - stock_putaway_hook
   - stock_picking_batch_print_invoices
+  - stock_customer_deposit
   - stock_grn
   - stock_picking_back2draft
   - stock_landed_costs_currency
@@ -1441,6 +1444,7 @@ oca:
   - stock_release_channel_propagate_channel_picking
   - stock_picking_completion_info
   - delivery_carrier_warehouse
+  - stock_available_to_promise_release_exclude_location
   - stock_release_channel_plan
   - sale_stock_available_to_promise_release
   - stock_storage_type
@@ -1452,6 +1456,7 @@ oca:
   - stock_release_channel_shipment_advice
   - stock_release_channel_cutoff
   - shopfloor_base
+  - sale_stock_available_to_promise_release_block
   - stock_release_channel_partner_delivery_window
   - stock_release_channel_auto_release
   - stock_release_channel_delivery
@@ -1461,6 +1466,7 @@ shopinvader:
   odoo-shopinvader:
   - shopinvader_product_seo
   - shopinvader_api_sale
+  - shopinvader_search_engine_update_product_template_multi_link
   - shopinvader_search_engine_assortment
   - shopinvader_product_brand_tag
   - shopinvader_search_engine_update_product_brand_image
@@ -1475,6 +1481,7 @@ shopinvader:
   - shopinvader_search_engine_update_image
   - shopinvader_sale_cart
   - shopinvader_product
+  - shopinvader_search_engine_product_template_multi_link
   - shopinvader_search_engine_update
   - shopinvader_search_engine
   - shopinvader_product_attribute_set
@@ -1487,6 +1494,7 @@ shopinvader:
   - shopinvader_schema_address
   - shopinvader_search_engine_product_stock
   - shopinvader_anonymous_partner
+  - shopinvader_es_product_categ
   - sale_cart
   - shopinvader_schema_sale_state
   - shopinvader_restapi
