@@ -307,7 +307,8 @@ oca:
   connector-ecommerce:
   - connector_ecommerce
   connector-prestashop: []
-  connector-telephony: []
+  connector-telephony:
+  - base_phone
   contract:
   - contract_payment_mode
   - contract_sale_generation
@@ -1155,6 +1156,7 @@ oca:
   - base_export_manager
   - base_custom_filter
   - base_tier_validation_waiting
+  - announcement
   - base_binary_url_import
   - base_revision
   - base_tier_validation
@@ -1358,6 +1360,7 @@ oca:
   - storage_backend
   support: []
   timesheet:
+  - hr_employee_cost_history
   - hr_timesheet_employee_analytic_tag
   - hr_timesheet_sheet_policy_project_manager
   - hr_timesheet_report
