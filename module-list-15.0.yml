@@ -1191,6 +1191,7 @@ oca:
   stock-logistics-barcode:
   - stock_barcodes_elaboration
   - stock_barcodes_gs1
+  - stock_barcodes_gs1_expiry
   - stock_barcodes_picking_batch_revision
   - barcodes_generator_product
   - stock_barcodes
@@ -1353,6 +1354,7 @@ oca:
   - storage_media
   support: []
   timesheet:
+  - hr_employee_cost_history
   - hr_timesheet_sheet_policy_project_manager
   - hr_timesheet_time_type
   - sale_timesheet_line_exclude
