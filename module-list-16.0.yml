@@ -262,6 +262,7 @@ oca:
   - account_payment_sale
   - account_banking_mandate_sale
   bank-statement-import:
+  - account_statement_import_qif
   - account_statement_import_sheet_file
   - account_statement_import_file_reconcile_oca
   - account_statement_import_ofx
@@ -269,6 +270,7 @@ oca:
   - account_statement_import_online_ponto
   - account_statement_import_camt54
   - account_statement_import_file
+  - account_statement_import_online_qonto
   - account_statement_import_base
   - account_statement_import_online_gocardless
   - account_statement_import_online
@@ -341,6 +343,7 @@ oca:
   - crm_industry
   - crm_claim_code
   - crm_lead_code
+  - crm_won_restrict_per_stage
   - crm_lead_firstname
   - crm_claim
   - crm_lead_vat
@@ -758,6 +761,7 @@ oca:
   - product_dimension
   - product_company_default
   - product_packaging_container_deposit
+  - stock_lot_is_archived
   - product_pricelist_revision
   - product_packaging_level
   - product_product_template_link
@@ -1077,6 +1081,7 @@ oca:
   - base_portal_type
   - server_action_sort
   - base_user_role_history
+  - base_external_dbsource_mysql
   - base_external_dbsource_mssql
   - base_external_dbsource_sqlite
   - base_external_dbsource
@@ -1148,6 +1153,7 @@ oca:
   - base_cancel_confirm
   - date_range
   - base_substate
+  - announcement_dialog_size
   - multi_step_wizard
   - base_tier_validation_forward
   - base_optional_quick_create
@@ -1216,6 +1222,7 @@ oca:
   - product_multi_barcode_stock_menu
   stock-logistics-reporting:
   - stock_picking_report_qty_undelivered
+  - stock_average_daily_sale
   - stock_picking_report_internal_delivery_address
   - stock_card_report
   - delivery_line_sale_line_position
@@ -1303,6 +1310,7 @@ oca:
   - stock_picking_to_batch_group_fields
   - stock_picking_send_by_mail
   - delivery_total_weight_from_packaging
+  - sale_stock_restocking_fee_invoicing
   - stock_move_line_expiration_date_required
   - stock_split_picking
   - stock_move_propagate_first_move
@@ -1322,6 +1330,7 @@ oca:
   - stock_picking_batch_print_pickings
   - stock_picking_import_serial_number
   - stock_picking_info_lot
+  - stock_picking_restrict_cancel_printed
   - stock_lot_production_date
   - stock_picking_line_sequence
   - stock_landed_costs_purchase_auto
@@ -1385,6 +1394,7 @@ oca:
   - web_select_all_companies
   - web_widget_mpld3_chart
   - web_copy_confirm
+  - web_ir_actions_close_wizard_refresh_view
   - web_widget_numeric_step
   - web_calendar_slot_duration
   - web_responsive
@@ -1429,6 +1439,7 @@ oca:
   - web_environment_ribbon
   - web_ir_actions_act_window_message
   - web_group_expand
+  - web_field_tooltip
   web-api:
   - webservice
   - endpoint_route_handler
@@ -1458,6 +1469,7 @@ oca:
   - stock_release_channel_plan_process_end_time
   - stock_release_channel_shipment_advice
   - stock_release_channel_cutoff
+  - stock_release_channel_shipment_advice_toursolver
   - shopfloor_base
   - sale_stock_available_to_promise_release_block
   - stock_release_channel_partner_delivery_window
