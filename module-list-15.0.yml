@@ -682,6 +682,7 @@ oca:
   - product_code_unique
   - product_lot_sequence
   - product_profile
+  - product_attachment_zipped_download
   - nutritional_info
   - product_net_weight
   - product_variant_attribute_name_manager
@@ -1316,6 +1317,7 @@ oca:
   - sale_line_returned_qty_mrp
   - stock_move_change_source_location
   - stock_picking_invoice_link
+  - stock_picking_show_lot
   - stock_picking_origin_reference_purchase
   - stock_picking_import_serial_number
   - stock_reception_discrepancy_distribution
@@ -1363,6 +1365,7 @@ oca:
   - hr_timesheet_sheet_no_create
   - sale_timesheet_rounded
   - sale_timesheet_task_exclude
+  - hr_timesheet_sheet_attendance
   - crm_timesheet
   - hr_timesheet_begin_end
   - hr_timesheet_sheet_autodraft
