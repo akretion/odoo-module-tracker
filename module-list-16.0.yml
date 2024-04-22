@@ -664,6 +664,8 @@ oca:
   - pos_access_right
   - pos_to_weight_by_product_uom
   - pos_edit_order_line
+  - pos_receipt_replace_user_by_trigram
+  - pos_receipt_replace_user_by_trigram_hr
   - pos_partner_location_abstract
   - pos_partner_birthdate
   - pos_payment_method_image
@@ -1273,6 +1275,7 @@ oca:
   - stock_quant_safe_inventory
   - stock_removal_location_by_priority
   - stock_warehouse_calendar
+  - stock_picking_batch_packaging_qty
   - stock_search_supplierinfo_code
   - product_packaging_usability
   - stock_picking_procure_method
