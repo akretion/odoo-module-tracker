@@ -20,7 +20,8 @@ akretion:
   - account_import_helper
   - import_helper_base
   - product_import_helper
-  odoo-perf: []
+  odoo-perf:
+  - perf_product
   odoo-usability:
   - product_manager_group_stock
   - eradicate_quick_create
@@ -822,6 +823,7 @@ oca:
   - purchase_comment_template
   purchase-workflow:
   - purchase_request_type
+  - purchase_reorder_control
   - purchase_order_type
   - purchase_manual_delivery
   - purchase_merge
@@ -1129,6 +1131,7 @@ oca:
   - dbfilter_from_header
   - iap_alternative_provider
   - base_name_search_improved
+  - datetime_formatter
   - cron_daylight_saving_time_resistant
   - attachment_unindex_content
   - tracking_manager
@@ -1139,6 +1142,7 @@ oca:
   - base_sequence_option
   - base_m2m_custom_field
   - rpc_helper
+  - bus_alt_connection
   - sentry
   - base_view_inheritance_extension
   - module_analysis
