@@ -195,6 +195,7 @@ oca:
   - account_invoice_section_sale_order
   - partner_invoicing_mode_monthly
   - account_invoice_default_code_column
+  - account_invoice_line_default_account
   - account_invoice_fixed_discount
   - account_mail_autosubscribe
   - purchase_stock_picking_return_invoicing
@@ -773,6 +774,7 @@ oca:
   - product_packaging_dimension
   product-variant:
   - product_variant_sale_price
+  - purchase_variant_configurator
   - product_variant_specific_description
   - sale_order_line_variant_description
   - product_variant_name
