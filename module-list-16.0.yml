@@ -491,6 +491,7 @@ oca:
   - l10n_br_nfse_focus
   - l10n_br_setup_tests
   - l10n_br_coa_simple
+  - l10n_br_hr
   - l10n_br_nfse
   - l10n_br_currency_rate_update
   - l10n_br_coa
@@ -967,6 +968,7 @@ oca:
   - sale_order_line_position
   sale-workflow:
   - sale_blanket_order
+  - sale_invoice_policy
   - sale_packaging_default
   - sale_numeric_step
   - sale_order_line_date
@@ -1001,6 +1003,7 @@ oca:
   - sale_order_line_delivery_state
   - sale_order_amount_to_invoice
   - sale_discount_display_amount
+  - sale_order_report_without_price
   - sale_sourced_by_line
   - sale_commercial_partner
   - sale_order_product_recommendation_packaging_default
@@ -1466,6 +1469,7 @@ oca:
   - stock_available_to_promise_release_exclude_location
   - stock_release_channel_process_end_time
   - stock_release_channel_shipment_advice_toursolver
+  - stock_picking_batch_creation
   - stock_release_channel_shipment_advice
   - stock_release_channel_partner_delivery_window
   - stock_dynamic_routing
@@ -1486,8 +1490,10 @@ oca:
   - stock_release_channel_shipment_advice_process_end_time
   - stock_release_channel_geoengine
   - stock_release_channel_cutoff
+  - shopfloor_mobile_base
   - stock_picking_type_shipping_policy
   - sale_stock_available_to_promise_release_block
+  - shopfloor
   - stock_release_channel
   - shopfloor_base
   - stock_release_channel_propagate_channel_picking
