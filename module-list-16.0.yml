@@ -227,6 +227,7 @@ oca:
   - account_invoice_supplier_self_invoice
   - sale_order_invoicing_grouping_criteria
   account-payment:
+  - account_payment_widget_amount
   - account_payment_notification
   - account_payment_return_import
   - account_due_list
@@ -601,6 +602,7 @@ oca:
   - partner_label
   - partner_category_security_crm
   - partner_contact_address_default
+  - partner_display_name_line_break
   - partner_email_duplicate_warn
   - partner_address_split
   - partner_external_map
@@ -639,7 +641,6 @@ oca:
   - partner_contact_type_end_user
   - partner_identification_gln
   - partner_identification
-  - partner_address_two_lines
   - partner_contact_gender
   - partner_contact_department
   - partner_contact_nationality
@@ -845,6 +846,7 @@ oca:
   - purchase_product_packaging_container_deposit
   - purchase_commercial_partner
   - purchase_location_by_line
+  - purchase_return
   - product_supplierinfo_qty_multiplier
   - purchase_landed_cost
   - purchase_only_by_packaging
@@ -1508,6 +1510,7 @@ shopinvader:
   - shopinvader_search_engine_assortment
   - shopinvader_search_engine_product_stock_state
   - shopinvader_restapi
+  - shopinvader_api_cart_step
   - shopinvader_filtered_model
   - shopinvader_fastapi_auth_jwt
   - shopinvader_product
@@ -1554,5 +1557,6 @@ shopinvader:
   - shopinvader_base_url
   - shopinvader_anonymous_partner
   - shopinvader_search_engine_product_brand_image
+  - sale_cart_step
   odoo-shopinvader-payment: []
   pattern-import-export: []
