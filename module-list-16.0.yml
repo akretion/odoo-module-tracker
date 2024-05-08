@@ -765,6 +765,7 @@ oca:
   - product_profile
   - product_set
   - product_pricelist_direct_print_company_group
+  - product_code_mixin
   - product_sequence
   - product_assortment
   - product_packaging_level_purchasable
@@ -1330,6 +1331,7 @@ oca:
   - stock_picking_sale_order_link
   - stock_customer_deposit_elaboration
   - stock_picking_to_batch_group_fields
+  - stock_customer_deposit_sale_margin
   - stock_partner_delivery_window
   - stock_move_propagate_first_move
   - delivery_total_weight_from_packaging
@@ -1337,6 +1339,7 @@ oca:
   - stock_move_line_reserved_quant
   - stock_owner_restriction
   - stock_receipt_lot_info
+  - stock_picking_group_by_partner_by_carrier_by_date
   - stock_customer_deposit
   - stock_no_negative
   - stock_picking_grn_mandatory
