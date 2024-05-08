@@ -182,6 +182,7 @@ oca:
   - account_invoice_blocking
   - account_invoice_tax_note
   - account_move_post_block
+  - account_warn_option
   - account_invoice_tree_currency
   - account_invoice_view_payment
   - product_form_account_move_line_link
@@ -1019,6 +1020,7 @@ oca:
   - sale_stock_secondary_unit
   - sale_order_archive
   - sale_order_general_discount
+  - sale_warn_option
   - sale_credit_point
   - sale_invoice_blocking
   - sale_procurement_group_by_line
@@ -1052,6 +1054,7 @@ oca:
   - auth_oidc
   server-backend:
   - base_external_dbsource_mysql
+  - base_ical
   - base_import_match
   - base_external_system
   - base_external_dbsource_mssql
@@ -1170,6 +1173,7 @@ oca:
   - mass_mailing_list_dynamic
   - mail_optional_follower_notification
   - base_search_mail_content
+  - outgoing_email_by_model
   - mail_show_follower
   - mail_notification_custom_subject
   - mail_activity_partner
