@@ -1240,6 +1240,7 @@ oca:
   - project_task_add_very_high
   - project_timesheet_time_control_sale
   - project_role
+  - project_forecast_line_milestone
   - sale_project_service_tracking_copy_tasks
   - project_wbs
   - project_recalculate
@@ -1598,6 +1599,7 @@ oca:
   - auth_signup_verify_email
   - auth_oauth_multi_token
   - password_security
+  - base_user_empty_password
   - auth_jwt_demo
   - auth_api_key_server_env
   - auth_dynamic_groups
