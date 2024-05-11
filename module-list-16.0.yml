@@ -459,6 +459,7 @@ oca:
   - hr_employee_calendar_planning
   - hr_employee_lastnames
   - hr_employee_partner_external
+  - hr_department_code
   - hr_employee_firstname
   - hr_employee_birthday_mail
   - hr_employee_relative
@@ -885,6 +886,7 @@ oca:
   - purchase_order_qty_change_no_recompute
   - purchase_default_terms_conditions
   - purchase_open_qty
+  - purchase_order_supplier_return
   - purchase_lot
   - purchase_order_downpayment
   - sale_purchase_force_vendor
@@ -1404,11 +1406,13 @@ oca:
   - hr_timesheet_time_type
   - crm_timesheet
   - project_task_analytic_propagation
+  - sale_timesheet_invoice_link
   - sale_timesheet_task_exclude
   - hr_timesheet_employee_analytic_tag
   - project_task_stage_allow_timesheet
   - hr_timesheet_task_required
   - sale_timesheet_rounded
+  - hr_timesheet_sheet_attendance
   - hr_timesheet_begin_end
   - hr_timesheet_task_stage
   - hr_timesheet_name_customer
