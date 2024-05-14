@@ -1367,6 +1367,7 @@ oca:
   - stock_picking_partner_note
   - stock_picking_info_lot
   - stock_override_procurement
+  - stock_picking_batch_validate_confirm
   - stock_valuation_layer_usage
   - stock_picking_purchase_order_link
   - stock_move_line_auto_fill
@@ -1483,9 +1484,12 @@ oca:
   - endpoint_auth_api_key
   - endpoint_route_handler
   wms:
+  - shopfloor_rest_log
+  - shopfloor_mobile
   - stock_release_channel_show_volume
   - stock_available_to_promise_release_exclude_location
   - stock_release_channel_process_end_time
+  - shopfloor_batch_automatic_creation
   - shopfloor_workstation
   - stock_release_channel_shipment_advice_toursolver
   - stock_picking_batch_creation
@@ -1495,6 +1499,7 @@ oca:
   - stock_release_channel_delivery
   - stock_release_channel_plan_process_end_time
   - stock_picking_completion_info
+  - shopfloor_mobile_base_auth_api_key
   - stock_release_channel_shipment_lead_time
   - stock_available_to_promise_release
   - sale_stock_available_to_promise_release
