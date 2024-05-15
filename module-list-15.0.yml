@@ -769,6 +769,7 @@ oca:
   - project_task_pull_request
   project-reporting: []
   purchase-reporting:
+  - purchase_order_report_grouped_by_vendor
   - purchase_comment_template
   purchase-workflow:
   - purchase_order_type
@@ -956,6 +957,7 @@ oca:
   - sale_invoice_plan
   - sale_custom_rounding
   - sale_order_line_input
+  - sale_order_line_chained_move
   - sale_invoice_no_mail
   - sale_stock_invoice_plan
   - sale_partner_selectable_option
@@ -1000,6 +1002,7 @@ oca:
   - sale_payment_sheet
   - sale_order_warn_message
   - sale_order_product_recommendation
+  - pricelist_cache
   - sale_order_discount_invoicing
   - sale_automatic_workflow_payment_mode
   - sale_advance_payment
