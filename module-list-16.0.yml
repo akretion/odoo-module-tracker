@@ -2,66 +2,67 @@ akretion:
   account-move-import:
   - account_move_csv_import
   ak-odoo-incubator:
-  - account_refund_no_business_field
-  - purchase_edi_file
-  - mrp_raw_material_from_config
-  - sale_lot_config
+  - product_dimension_net
+  - proxy_action
   - base_custom_export
+  - mrp_raw_material_from_config
+  - purchase_edi_file
   - module_analysis_price
   - sale_delivery_no_invoice_free_shipping
+  - account_refund_no_business_field
+  - sale_lot_config
   - account_move_dalenys_import
-  - proxy_action
   bank-statement-reconcile-simple:
-  - account_statement_completion_label_simple
   - account_statement_completion_label_simple_sale
+  - account_statement_completion_label_simple
   odoo-import-helper:
-  - partner_import_helper
-  - account_ir_property_helper
-  - account_import_helper
   - import_helper_base
   - product_import_helper
+  - account_ir_property_helper
+  - account_import_helper
+  - partner_import_helper
   odoo-perf:
   - perf_product
   odoo-usability:
   - product_manager_group_stock
-  - eradicate_quick_create
-  - purchase_product_tree_default
-  - stock_usability
-  - mail_usability
-  - crm_usability
-  - partner_tree_default_base
-  - pos_product_tree_default
-  - product_manager_group
-  - base_usability
-  - mrp_usability
-  - pos_check_deposit
-  - product_usability
-  - partner_tree_default_contacts
-  - stock_quant_package_move_wizard
-  - sale_stock_usability
-  - mrp_subcontracting_usability
-  - developer_menu
-  - base_dynamic_list
-  - sale_confirm_wizard
   - sale_remove_my_quotation_filter
-  - purchase_usability
-  - partner_tree_default_account
-  - sale_order_route
-  - mrp_product_tree_default
-  - purchase_stock_usability
-  - product_print_zpl_barcode
-  - sale_quotation_title
   - account_usability_akretion
   - pos_usability
-  - delivery_usability
-  - sale_usability
-  - sale_product_tree_default
+  - partner_tree_default_contacts
   - stock_product_tree_default
-  - base_company_extension
-  - base_partner_ref
-  - base_partner_one2many_phone
   - link_tracker_usability
+  - base_partner_ref
+  - sale_order_route
+  - base_usability
+  - base_company_extension
+  - stock_quant_package_move_wizard
   - account_product_fiscal_classification_pos_sale
+  - mail_usability
+  - sale_product_tree_default
+  - purchase_stock_usability
+  - mrp_usability
+  - sale_usability
+  - product_print_zpl_barcode
+  - pos_check_deposit
+  - base_dynamic_list
+  - eradicate_quick_create
+  - base_partner_one2many_phone
+  - mrp_subcontracting_usability
+  - sale_confirm_wizard
+  - product_manager_group
+  - partner_tree_default_base
+  - pos_product_tree_default
+  - stock_usability
+  - product_usability
+  - sale_quotation_title
+  - sale_stock_usability
+  - purchase_product_tree_default
+  - mrp_product_tree_default
+  - purchase_usability
+  - delivery_usability
+  - developer_menu
+  - partner_tree_default_account
+  - crm_usability
   partner-module-information: []
   pos-sale-order: []
   profiloo: []
@@ -69,249 +70,249 @@ akretion:
   sale-configurator: []
 forgeflow:
   stock-rma:
-  - account_move_line_rma_order_line
-  - rma_account
-  - rma_sale_mrp
-  - rma_delivery
   - rma_repair
-  - rma_purchase
-  - rma_category
-  - rma_scrap
   - rma
-  - rma_sale
-  - rma_sale_force_invoiced
+  - rma_account
+  - account_move_line_rma_order_line
   - rma_put_away
+  - rma_sale_mrp
+  - rma_scrap
+  - rma_delivery
+  - rma_sale
+  - rma_purchase
+  - rma_sale_force_invoiced
+  - rma_category
 oca:
   account-analytic:
-  - account_analytic_required
-  - account_analytic_root
-  - mrp_stock_analytic
-  - purchase_analytic
+  - account_analytic_account_tag
   - stock_analytic
-  - account_move_update_analytic
+  - pos_analytic_by_config
+  - account_analytic_sequence
+  - stock_picking_analytic
+  - hr_timesheet_analytic_tag
+  - mrp_stock_analytic
+  - analytic_distribution_widget_remove_save
+  - account_analytic_root
+  - account_analytic_required
   - sale_analytic_tag
+  - purchase_stock_analytic
+  - account_move_update_analytic
+  - account_analytic_tag_distribution
+  - hr_department_analytic
   - account_analytic_parent
   - hr_expense_analytic_tag
   - product_analytic
-  - account_analytic_account_tag
-  - pos_analytic_by_config
-  - account_analytic_sequence
-  - purchase_stock_analytic
-  - account_analytic_tag_distribution
-  - hr_department_analytic
-  - hr_timesheet_analytic_tag
-  - stock_picking_analytic
-  - purchase_analytic_tag
-  - analytic_distribution_widget_remove_save
-  - product_analytic_purchase
   - account_analytic_tag
+  - purchase_analytic
+  - product_analytic_purchase
+  - purchase_analytic_tag
   account-closing:
   - account_cutoff_start_end_dates
-  - account_cutoff_base
   - account_invoice_start_end_dates
+  - account_cutoff_picking
+  - account_cutoff_base
+  - account_multicurrency_revaluation
   - account_cutoff_accrual_subscription
   - account_invoice_start_end_dates_move
-  - account_cutoff_picking
-  - account_multicurrency_revaluation
   account-financial-reporting:
-  - partner_statement
-  - mis_builder_cash_flow
   - account_financial_report
   - account_tax_balance
+  - partner_statement
+  - mis_builder_cash_flow
   account-financial-tools:
+  - account_move_fiscal_year
+  - account_partner_required
+  - account_journal_lock_date
+  - account_chart_update_l10n_eu_oss_oca
+  - account_move_name_sequence
   - account_chart_update
-  - account_move_budget
-  - account_move_print
-  - account_journal_general_sequence
-  - account_fiscal_position_vat_check
-  - account_asset_batch_compute
+  - account_lock_date_update
+  - account_spread_cost_revenue
+  - account_journal_restrict_mode
+  - account_cash_deposit
+  - account_move_template
   - account_asset_management
-  - account_usability
   - account_fiscal_year
   - account_invoice_constraint_chronology
-  - account_move_line_check_number
-  - account_chart_update_l10n_eu_oss_oca
-  - account_journal_restrict_mode
-  - account_spread_cost_revenue
-  - account_netting
-  - account_fiscal_month
-  - account_move_fiscal_month
-  - account_move_template
-  - account_move_line_tax_editable
-  - account_loan
-  - base_vat_optional_vies
-  - account_partner_required
   - account_move_line_sale_info
-  - account_journal_lock_date
-  - account_move_post_date_user
-  - account_move_fiscal_year
+  - account_fiscal_position_vat_check
   - account_move_line_purchase_info
-  - account_cash_deposit
-  - account_account_tag_code
+  - account_journal_general_sequence
+  - base_vat_optional_vies
+  - account_move_print
+  - account_usability
+  - account_move_line_check_number
+  - account_netting
   - account_template_active
-  - account_move_name_sequence
+  - account_move_budget
+  - account_loan
+  - account_fiscal_month
+  - account_asset_batch_compute
+  - account_move_fiscal_month
+  - account_account_tag_code
   - account_fiscal_year_auto_create
-  - account_lock_date_update
+  - account_move_post_date_user
+  - account_move_line_tax_editable
   account-fiscal-rule:
-  - l10n_eu_oss_oca
   - account_product_fiscal_classification
   - account_fiscal_position_autodetect_optional_vies
-  - account_avatax_oca
-  - account_avatax_exemption_base
-  - account_fiscal_position_partner_type
-  - account_avatax_sale_oca
-  - account_fiscal_position_type
+  - l10n_eu_oss_oca
   - account_avatax_website_sale
+  - account_fiscal_position_type
+  - account_fiscal_position_partner_type
+  - account_avatax_exemption_base
+  - account_avatax_oca
+  - account_avatax_sale_oca
   account-invoice-reporting:
-  - account_invoice_production_lot
-  - account_reporting_volume
-  - account_invoice_report_grouped_by_picking
-  - account_reporting_weight
-  - account_invoice_report_payment_info
   - account_comment_template
+  - account_invoice_production_lot
   - account_invoice_line_report
+  - account_invoice_report_grouped_by_picking
   - account_invoice_report_due_list
+  - account_reporting_weight
   - partner_time_to_pay
+  - account_invoice_report_payment_info
+  - account_reporting_volume
   account-invoicing:
-  - account_invoice_supplier_ref_unique
-  - account_invoice_payment_term_date_due
-  - sale_order_invoicing_qty_percentage
-  - account_invoice_refund_code
-  - account_invoice_check_total
-  - account_invoice_supplierinfo_update_discount
-  - stock_picking_invoicing
-  - account_invoice_refund_reason
-  - purchase_invoicing_no_zero_line
-  - account_invoice_crm_tag
-  - account_invoice_mass_sending
-  - account_invoice_change_currency
-  - sale_line_refund_to_invoice_qty
-  - account_invoice_show_currency_rate
-  - account_tax_change
-  - partner_invoicing_mode
-  - account_invoice_pricelist_sale
-  - portal_account_personal_data_only
-  - account_receipt_journal
-  - account_invoice_fiscal_position_update
-  - account_invoice_payment_retention
-  - account_invoice_section_sale_order
-  - partner_invoicing_mode_monthly
-  - account_invoice_default_code_column
-  - account_invoice_line_default_account
-  - account_invoice_fixed_discount
-  - account_mail_autosubscribe
-  - purchase_stock_picking_return_invoicing
-  - account_invoice_supplierinfo_update_triple_discount
-  - account_invoice_refund_line_selection
-  - account_move_substate
   - account_receipt_send
-  - account_invoice_refund_link
+  - account_invoice_alternate_payer
+  - partner_invoicing_mode
+  - account_invoice_show_currency_rate
+  - account_invoice_blocking
+  - account_tax_one_vat
+  - account_invoice_tax_note
+  - purchase_invoicing_no_zero_line
+  - account_invoice_fiscal_position_update
+  - sale_order_invoicing_grouping_criteria
+  - stock_picking_return_refund_option
   - account_tax_group_widget_base_amount
-  - account_invoice_merge
-  - sale_timesheet_invoice_description
+  - account_invoice_crm_tag
+  - account_invoice_payment_term_date_due
+  - account_invoice_supplierinfo_update_discount
+  - partner_invoicing_mode_at_shipping
+  - product_form_account_move_line_link
+  - portal_account_personal_data_only
+  - account_invoice_refund_reason
+  - account_invoice_triple_discount
+  - account_invoice_refund_line_selection
+  - account_invoice_force_number
+  - account_invoice_change_currency
   - account_menu_invoice_refund
   - account_invoice_supplierinfo_update
-  - account_invoice_currency_taxes
-  - account_invoice_triple_discount
-  - account_invoice_blocking
-  - account_invoice_tax_note
-  - account_invoice_tree_currency
-  - product_form_account_move_line_link
-  - account_invoice_force_number
-  - account_tax_one_vat
-  - account_move_tier_validation
-  - account_invoice_transmit_method
-  - stock_picking_return_refund_option
-  - account_invoice_pricelist
-  - account_invoice_tax_required
-  - partner_invoicing_mode_at_shipping
-  - account_invoice_alternate_payer
+  - account_invoice_pricelist_sale
+  - account_invoice_refund_code
+  - partner_invoicing_mode_monthly
+  - account_tax_change
+  - account_invoice_supplierinfo_update_triple_discount
+  - account_invoice_payment_retention
+  - account_invoice_merge
   - account_invoice_supplier_self_invoice
-  - sale_order_invoicing_grouping_criteria
+  - sale_line_refund_to_invoice_qty
+  - account_move_substate
+  - account_invoice_supplier_ref_unique
+  - account_mail_autosubscribe
+  - account_invoice_section_sale_order
+  - account_invoice_refund_link
+  - sale_order_invoicing_qty_percentage
+  - account_invoice_transmit_method
+  - account_move_tier_validation
+  - account_invoice_pricelist
+  - account_invoice_check_total
+  - sale_timesheet_invoice_description
+  - account_invoice_mass_sending
+  - account_invoice_default_code_column
+  - account_invoice_line_default_account
+  - account_invoice_currency_taxes
+  - account_invoice_tax_required
+  - account_receipt_journal
+  - stock_picking_invoicing
+  - account_invoice_tree_currency
+  - purchase_stock_picking_return_invoicing
+  - account_invoice_fixed_discount
   account-payment:
-  - account_payment_widget_amount
   - account_payment_notification
+  - account_due_list_payment_mode
+  - account_payment_return
+  - account_due_list_aging_comment
   - account_payment_return_import
   - account_due_list
-  - account_due_list_aging_comment
   - account_payment_return_import_iso20022
-  - account_payment_promissory_note
   - account_payment_term_extension
-  - account_payment_return
   - account_payment_multi_deduction
-  - account_due_list_payment_mode
+  - account_payment_promissory_note
+  - account_payment_widget_amount
   account-reconcile:
-  - account_move_so_import
-  - account_reconcile_oca
-  - account_move_reconcile_forbid_cancel
-  - account_statement_base
-  - base_transaction_id
-  - account_move_base_import
   - account_move_line_reconcile_manual
+  - account_move_so_import
+  - account_statement_base
+  - account_reconcile_oca
   - account_mass_reconcile
+  - account_move_base_import
+  - base_transaction_id
+  - account_move_reconcile_forbid_cancel
   bank-payment:
-  - account_banking_sepa_credit_transfer
-  - account_payment_sale
-  - account_payment_purchase
-  - account_payment_purchase_stock
-  - account_banking_mandate
-  - account_payment_order_grouped_output
-  - account_payment_order_notification
-  - account_payment_method_fs_storage
-  - account_payment_order
   - account_payment_mode
-  - account_banking_sepa_direct_debit
+  - account_payment_purchase_stock
   - account_banking_mandate_sale_contact
   - account_payment_partner
-  - account_banking_mandate_sale
-  - account_banking_mandate_contact
+  - account_payment_sale
+  - account_payment_order_notification
+  - account_banking_sepa_credit_transfer
+  - account_banking_sepa_direct_debit
+  - account_payment_method_fs_storage
+  - account_payment_order
+  - account_payment_purchase
   - account_banking_pain_base
+  - account_banking_mandate_contact
+  - account_banking_mandate
+  - account_payment_order_grouped_output
+  - account_banking_mandate_sale
   bank-statement-import:
-  - account_statement_import_camt54
-  - account_statement_import_file_reconcile_oca
-  - account_statement_import_online_qonto
-  - account_statement_import_base
-  - account_statement_import_ofx
-  - account_statement_import_online
-  - account_statement_import_online_gocardless
+  - account_statement_import_online_ponto
+  - account_statement_import_qif
   - account_statement_import_sheet_file
   - account_statement_import_camt
   - account_statement_import_online_paypal
-  - account_statement_import_qif
-  - account_statement_import_online_ponto
+  - account_statement_import_online_qonto
+  - account_statement_import_camt54
+  - account_statement_import_online
+  - account_statement_import_ofx
+  - account_statement_import_base
+  - account_statement_import_online_gocardless
   - account_statement_import_file
+  - account_statement_import_file_reconcile_oca
   brand:
-  - partner_brand
   - product_brand
-  - account_brand
-  - product_brand_stock
-  - product_brand_stock_account
-  - brand
-  - product_brand_tag
   - sale_brand
-  - product_brand_mrp
+  - brand
   - brand_external_report_layout
+  - product_brand_tag
+  - account_brand
   - product_brand_purchase
+  - partner_brand
+  - product_brand_stock
+  - product_brand_mrp
+  - product_brand_stock_account
   calendar:
   - resource_booking
   community-data-files:
   - account_payment_unece
-  - company_sanitary_registry
-  - base_iso3166
-  - product_fao_fishing
   - base_bank_from_iban
-  - base_unece
-  - l10n_eu_nace
-  - uom_unece
-  - base_currency_iso_4217
+  - base_iso3166
   - account_tax_unece
+  - l10n_eu_nace
+  - base_currency_iso_4217
+  - product_fao_fishing
+  - base_unece
+  - company_sanitary_registry
+  - uom_unece
   connector:
-  - connector_base_product
   - component_event
-  - connector
-  - component
-  - test_component
   - test_connector
+  - test_component
+  - connector
+  - connector_base_product
+  - component
   connector-ecommerce:
   - connector_ecommerce
   connector-prestashop: []
@@ -319,1264 +320,1266 @@ oca:
   - asterisk_click2dial
   - base_phone
   contract:
-  - contract_sale_generation
   - contract_queue_job
-  - contract_invoice_start_end_dates
-  - contract_sale
-  - contract_payment_mode
   - subscription_oca
-  - agreement_rebate_partner_company_group
   - contract_variable_quantity
   - contract
+  - contract_sale_generation
+  - contract_invoice_start_end_dates
+  - agreement_rebate_partner_company_group
+  - contract_payment_mode
+  - contract_sale
   credit-control:
-  - sale_financial_risk
-  - sale_payment_sheet_financial_risk
-  - partner_risk_insurance
-  - account_credit_control_dunning_fees
-  - stock_financial_risk
-  - account_credit_control
   - account_invoice_overdue_reminder
   - sale_financial_risk_info
   - account_invoice_overdue_warn_sale
+  - sale_financial_risk
+  - account_invoice_overdue_warn
+  - sale_payment_sheet_financial_risk
+  - partner_risk_insurance
   - account_payment_return_financial_risk
   - account_financial_risk
-  - account_invoice_overdue_warn
+  - account_credit_control
+  - account_credit_control_dunning_fees
+  - stock_financial_risk
   crm:
-  - crm_stage_probability
-  - crm_lead_code
-  - crm_phonecall
-  - crm_won_restrict_per_stage
-  - crm_salesperson_planner_sale
-  - crm_project_task
-  - crm_security_group
-  - crm_lead_currency
-  - crm_lead_to_task
-  - crm_claim_type
-  - crm_salesperson_planner
-  - crm_claim_code
-  - crm_location
-  - crm_partner_assign
-  - crm_industry
-  - crm_lead_search_archive
   - crm_lead_vat
-  - crm_claim
+  - crm_industry
   - crm_lead_firstname
+  - crm_claim_type
+  - crm_phonecall
+  - crm_location
+  - crm_security_group
+  - crm_claim
+  - crm_claim_code
+  - crm_project_task
+  - crm_lead_search_archive
+  - crm_lead_code
+  - crm_stage_probability
+  - crm_won_restrict_per_stage
+  - crm_lead_currency
+  - crm_partner_assign
+  - crm_lead_to_task
+  - crm_salesperson_planner_sale
+  - crm_salesperson_planner
   currency:
-  - currency_rate_update_xe
-  - currency_old_rate_notify
   - currency_rate_update
+  - currency_old_rate_notify
+  - currency_rate_update_xe
   data-protection:
   - privacy
   - privacy_consent
   delivery-carrier:
-  - delivery_carrier_agency
-  - delivery_price_method
-  - delivery_state
-  - delivery_package_fee
-  - delivery_deliverea
-  - carrier_account_environment
-  - stock_picking_delivery_link
-  - delivery_driver_stock_picking_batch
-  - delivery_driver
-  - stock_picking_report_delivery_cost
-  - delivery_carrier_deposit
-  - delivery_auto_refresh
-  - partner_delivery_zone
-  - delivery_carrier_partner
-  - delivery_package_number
-  - delivery_estimated_package_quantity_by_weight
-  - delivery_postlogistics
-  - delivery_roulier
-  - delivery_cttexpress
   - delivery_automatic_package
-  - delivery_postlogistics_server_env
-  - base_delivery_carrier_label
-  - delivery_carrier_max_weight_constraint
-  - delivery_carrier_account
-  - delivery_package_type_number_parcels
-  - server_environment_delivery
-  - delivery_carrier_info
-  - partner_delivery_schedule
+  - delivery_package_fee
   - delivery_multi_destination
+  - delivery_package_number
+  - delivery_price_method
+  - partner_delivery_schedule
+  - delivery_carrier_deposit
+  - delivery_carrier_max_weight_constraint
+  - delivery_carrier_info
+  - delivery_postlogistics_server_env
+  - delivery_driver_stock_picking_batch
+  - delivery_carrier_agency
+  - delivery_package_type_number_parcels
+  - delivery_roulier
+  - delivery_deliverea
+  - base_delivery_carrier_label
+  - delivery_estimated_package_quantity_by_weight
+  - delivery_carrier_partner
+  - delivery_auto_refresh
+  - stock_picking_delivery_link
+  - delivery_cttexpress
+  - server_environment_delivery
+  - partner_delivery_zone
+  - delivery_driver
+  - delivery_state
+  - stock_picking_report_delivery_cost
+  - carrier_account_environment
+  - delivery_carrier_account
+  - delivery_postlogistics
   dms:
-  - dms_auto_classification
-  - dms_user_role
   - dms
+  - dms_user_role
+  - dms_auto_classification
   e-commerce:
-  - website_sale_product_image_sample
-  - website_sale_wishlist_keep
-  - website_snippet_product_category
-  - website_sale_vat_required
-  - website_sale_invoice_address
-  - website_sale_hide_price
-  - website_sale_product_assortment
-  - website_sale_wishlist_hide_price
-  - website_sale_product_description
-  - website_sale_product_attribute_value_filter_existing
-  - website_sale_attribute_filter_multiselect
   - website_sale_stock_list_preview
-  - website_sale_product_minimal_price
-  - website_sale_attribute_filter_form_submit
-  - website_sale_require_legal
-  - website_sale_product_attribute_filter_collapse
-  - website_sale_order_type
   - website_sale_comparison_hide_price
-  - website_sale_product_item_cart_custom_qty
-  - website_sale_product_detail_attribute_image
-  - website_sale_checkout_skip_payment
-  - website_sale_product_attachment
+  - website_sale_vat_required
   - website_sale_product_reference_displayed
-  - website_sale_stock_provisioning_date
-  - website_sale_product_brand
-  - product_template_multi_link
-  - website_sale_cart_expire
+  - website_sale_product_assortment
+  - website_sale_attribute_filter_multiselect
   - website_sale_stock_available
+  - website_sale_cart_expire
+  - website_sale_require_legal
+  - website_sale_order_type
+  - website_sale_hide_price
+  - website_sale_wishlist_hide_price
   - website_sale_suggest_create_account
+  - website_sale_product_image_sample
+  - website_sale_product_attachment
+  - website_sale_product_attribute_value_filter_existing
+  - website_sale_product_description
+  - website_snippet_product_category
+  - website_sale_stock_provisioning_date
+  - product_template_multi_link
+  - website_sale_invoice_address
+  - website_sale_product_attribute_filter_collapse
+  - website_sale_product_minimal_price
+  - website_sale_product_detail_attribute_image
+  - website_sale_product_brand
+  - website_sale_attribute_filter_form_submit
+  - website_sale_wishlist_keep
+  - website_sale_checkout_skip_payment
+  - website_sale_product_item_cart_custom_qty
   edi:
+  - base_edifact
+  - base_edi
   - base_facturx
-  - pdf_helper
+  - account_einvoice_generate
+  - sale_order_import_edifact
   - base_business_document_import
   - account_invoice_facturx
-  - sale_order_import
-  - account_einvoice_generate
+  - base_ubl
   - base_business_document_import_phone
+  - despatch_advice_import_ubl
+  - pdf_helper
+  - sale_order_import
+  - account_invoice_edifact
+  - despatch_advice_import
   - base_wamas_ubl
   - account_invoice_facturx_py3o
-  - despatch_advice_import_ubl
-  - base_ubl
-  - despatch_advice_import
-  - account_invoice_edifact
-  - base_edifact
-  - sale_order_import_edifact
-  - base_edi
   hr:
-  - hr_employee_ssn
-  - hr_employee_digitized_signature
-  - hr_recruitment_torecruit
-  - hr_employee_phone_extension
-  - hr_employee_medical_examination
-  - hr_employee_birth_name
-  - hr_employee_document
-  - hr_employee_calendar_planning
-  - hr_employee_lastnames
-  - hr_employee_partner_external
-  - hr_department_code
-  - hr_employee_firstname
-  - hr_employee_birthday_mail
-  - hr_employee_relative
-  - hr_employee_age
-  - hr_professional_category
   - hr_holidays_settings
-  - hr_personal_equipment_request
+  - hr_employee_birthday_mail
+  - hr_employee_ssn
+  - hr_employee_document
+  - hr_employee_firstname
+  - hr_employee_age
+  - hr_employee_medical_examination
   - hr_course
+  - hr_employee_lastnames
+  - hr_department_code
+  - hr_employee_calendar_planning
+  - hr_recruitment_torecruit
+  - hr_personal_equipment_request
+  - hr_employee_birth_name
+  - hr_employee_phone_extension
+  - hr_employee_partner_external
+  - hr_employee_relative
+  - hr_employee_digitized_signature
+  - hr_professional_category
   intrastat-extrastat:
-  - product_harmonized_system
   - intrastat_product_hscodes_import
-  - intrastat_base
-  - intrastat_product
   - product_harmonized_system_stock
+  - intrastat_product
   - intrastat_product_generic
-  - product_harmonized_system_delivery
   - intrastat_delivery
+  - intrastat_base
+  - product_harmonized_system
+  - product_harmonized_system_delivery
   knowledge:
-  - document_page_partner
-  - attachment_zipped_download
-  - document_knowledge
-  - document_page
-  - document_url
   - document_page_project
-  - document_page_group
   - document_page_reference
-  - document_page_tag
-  - document_page_access_group
-  - document_url_google_drive
   - document_page_approval
+  - document_page
+  - document_url_google_drive
+  - document_knowledge
+  - attachment_zipped_download
+  - document_page_partner
+  - document_url
+  - document_page_access_group
+  - document_page_group
+  - document_page_tag
   l10n-brazil:
-  - l10n_br_stock
-  - l10n_br_nfse_focus
+  - l10n_br_fiscal
+  - l10n_br_hr
+  - l10n_br_coa
+  - l10n_br_currency_rate_update
+  - l10n_br_base
   - l10n_br_nfe_spec
+  - l10n_br_fiscal_certificate
+  - l10n_br_resource
+  - l10n_br_crm
+  - l10n_br_nfse_focus
+  - l10n_br_stock
+  - l10n_br_coa_generic
   - l10n_br_setup_tests
   - l10n_br_coa_simple
-  - l10n_br_hr
   - l10n_br_nfse
-  - l10n_br_currency_rate_update
-  - l10n_br_coa
-  - l10n_br_resource
   - l10n_br_fiscal_dfe
   - l10n_br_zip
-  - l10n_br_base
-  - l10n_br_fiscal
-  - l10n_br_crm
-  - l10n_br_coa_generic
   - l10n_br_account_due_list
-  - l10n_br_fiscal_certificate
   l10n-france:
-  - l10n_fr_account_vat_return_teledec
-  - l10n_fr_account_tax_unece
-  - l10n_fr_siret_lookup
-  - l10n_fr_pos_cert_update_draft_order_line
-  - l10n_fr_fec_oca
-  - l10n_fr_intrastat_service
-  - l10n_fr_account_invoice_facturx
-  - l10n_fr_state
-  - l10n_fr_pos_caisse_ap_ip
   - l10n_fr_oca
-  - l10n_fr_account_vat_return
-  - l10n_fr_das2
-  - account_balance_ebp_csv_export
-  - l10n_fr_cog
-  - l10n_fr_intrastat_product
-  - l10n_fr_chorus_sale
-  - l10n_fr_chorus_account
+  - l10n_fr_state
   - l10n_fr_siret
-  - account_statement_import_fr_cfonb
-  - l10n_fr_mis_reports
-  - account_banking_fr_lcr
-  - l10n_fr_hr_check_ssnid
-  - l10n_fr_department_oversea
-  - l10n_fr_chorus_facturx
+  - l10n_fr_account_vat_return
   - l10n_fr_department
+  - l10n_fr_chorus_facturx
+  - l10n_fr_siret_lookup
+  - l10n_fr_account_tax_unece
+  - l10n_fr_mis_reports
+  - l10n_fr_pos_caisse_ap_ip
+  - l10n_fr_account_invoice_facturx
+  - account_banking_fr_lcr
+  - account_balance_ebp_csv_export
+  - l10n_fr_chorus_sale
+  - account_statement_import_fr_cfonb
+  - l10n_fr_cog
+  - l10n_fr_pos_cert_update_draft_order_line
+  - l10n_fr_chorus_account
+  - l10n_fr_das2
+  - l10n_fr_fec_oca
+  - l10n_fr_intrastat_product
+  - l10n_fr_department_oversea
+  - l10n_fr_account_vat_return_teledec
+  - l10n_fr_intrastat_service
+  - l10n_fr_hr_check_ssnid
   manufacture:
-  - mrp_restrict_lot
-  - mrp_multi_level_estimate
-  - mrp_subcontracting_partner_management
-  - mrp_bom_line_formula_quantity
   - quality_control_oca
-  - mrp_planned_order_matrix
-  - quality_control_stock_oca
-  - mrp_production_quant_manual_assign
-  - mrp_unbuild_move_link
-  - mrp_bom_tracking
-  - mrp_packaging_default
-  - mrp_subcontracting_purchase_link
-  - mrp_subcontracting_skip_no_negative
-  - mrp_tag
-  - mrp_bom_hierarchy
-  - mrp_attachment_mgmt
-  - mrp_workcenter_cost
-  - mrp_bom_component_menu
-  - mrp_production_note
-  - mrp_subcontracting_inhibit
-  - mrp_multi_level
-  - mrp_lot_number_propagation
-  - mrp_sale_info
-  - mrp_warehouse_calendar
+  - mrp_restrict_lot
   - mrp_bom_location
-  - mrp_workorder_sequence
-  - mrp_workorder_lot_display
-  - account_move_line_mrp_info
-  - mrp_subcontracting_bom_dual_use
-  - mrp_lot_production_date
   - mrp_default_workorder_time
+  - mrp_sale_info
+  - mrp_production_note
+  - mrp_subcontracting_skip_no_negative
+  - mrp_workcenter_cost
+  - mrp_warehouse_calendar
+  - mrp_workorder_lot_display
+  - mrp_production_quant_manual_assign
+  - account_move_line_mrp_info
+  - mrp_subcontracting_partner_management
+  - mrp_lot_number_propagation
+  - mrp_workorder_sequence
+  - mrp_bom_tracking
+  - mrp_attachment_mgmt
+  - mrp_multi_level
+  - mrp_bom_hierarchy
+  - mrp_packaging_default
+  - mrp_bom_component_menu
+  - mrp_unbuild_move_link
+  - mrp_subcontracting_purchase_link
+  - mrp_planned_order_matrix
+  - mrp_subcontracting_bom_dual_use
+  - mrp_subcontracting_inhibit
+  - mrp_tag
+  - mrp_lot_production_date
+  - mrp_multi_level_estimate
+  - mrp_bom_line_formula_quantity
+  - quality_control_stock_oca
   mis-builder:
+  - mis_builder
   - mis_builder_demo
   - mis_builder_budget
-  - mis_builder
   multi-company:
   - sale_product_company
-  - product_category_company_favorite
-  - purchase_sale_container_deposit_inter_company
-  - purchase_sale_stock_inter_company
-  - product_account_multicompany_default
-  - sale_stock_warehouse_multicompany
-  - res_company_code
-  - res_company_category
-  - mail_multicompany
   - partner_multi_company
-  - account_multicompany_easy_creation
+  - product_tax_multicompany_default
+  - res_company_category
+  - product_category_company_favorite
+  - product_category_company
+  - purchase_sale_container_deposit_inter_company
+  - company_dependent_flag
   - res_company_search_view
+  - res_company_active
+  - stock_intercompany
+  - sale_stock_warehouse_multicompany
+  - purchase_sale_stock_inter_company
+  - mail_template_multi_company
   - base_multi_company
   - account_reconcile_model_multicompany_propagate
-  - mail_template_multi_company
   - purchase_sale_inter_company
-  - res_company_active
-  - product_tax_multicompany_default
-  - product_category_company
+  - product_account_multicompany_default
   - account_invoice_inter_company
-  - company_dependent_flag
-  - stock_intercompany
+  - res_company_code
+  - account_multicompany_easy_creation
+  - mail_multicompany
   partner-contact:
-  - partner_affiliate
-  - partner_deduplicate_acl
-  - partner_category_type
-  - partner_stage
-  - partner_employee_quantity
-  - partner_category_security
-  - crm_partner_company_group
-  - partner_label
-  - partner_category_security_crm
-  - partner_contact_address_default
-  - partner_display_name_line_break
-  - partner_email_duplicate_warn
-  - partner_address_split
-  - partner_external_map
-  - base_location_geonames_import
-  - partner_deduplicate_by_ref
-  - partner_accreditation
-  - partner_ref_unique
-  - partner_firstname
-  - partner_subject_to_vat
-  - partner_company_type
   - sale_partner_company_group
-  - partner_company_group
-  - partner_interest_group
-  - partner_country_state_required
-  - partner_bank_acc_type_constraint
-  - partner_manual_rank
-  - sale_customer_rank
-  - base_country_state_translatable
-  - partner_contact_job_position
-  - partner_second_lastname
-  - partner_fax
-  - partner_contact_lang
-  - partner_identification_eori
-  - partner_lastname_uppercase
-  - purchase_supplier_rank
-  - partner_contact_age_range
-  - partner_pricelist_search
-  - partner_tz
-  - partner_capital
-  - partner_contact_birthdate
-  - partner_disable_gravatar
-  - partner_bank_code
-  - partner_purchase_manager
-  - base_partner_sequence
-  - partner_email_check
-  - partner_contact_type_end_user
-  - partner_identification_gln
-  - partner_identification
-  - partner_contact_gender
-  - partner_contact_department
-  - partner_contact_nationality
-  - base_partner_company_group
-  - partner_tier_validation
-  - partner_phonecall_schedule
-  - partner_mobile_duplicate_warn
   - partner_multi_relation
-  - partner_industry_secondary
-  - partner_deduplicate_filter
-  - partner_auto_archive
-  - partner_middlename
   - base_location
-  - partner_contact_personal_information_page
-  - partner_contact_access_link
-  - account_partner_company_group
+  - partner_contact_age_range
   - partner_address_street3
-  - partner_vat_unique
+  - partner_employee_quantity
+  - partner_middlename
+  - partner_purchase_manager
+  - partner_auto_archive
+  - base_location_geonames_import
+  - partner_category_security_crm
+  - partner_pricelist_search
+  - purchase_supplier_rank
+  - partner_address_split
+  - partner_identification_eori
+  - base_partner_sequence
+  - partner_country_state_required
+  - partner_email_check
+  - partner_disable_gravatar
+  - partner_label
+  - base_country_state_translatable
+  - base_partner_company_group
+  - partner_mobile_duplicate_warn
+  - partner_contact_birthdate
+  - partner_interest_group
+  - partner_contact_nationality
+  - partner_external_map
+  - partner_identification_gln
   - partner_company_default
+  - partner_tz
+  - partner_industry_secondary
+  - partner_accreditation
+  - partner_phonecall_schedule
+  - partner_email_duplicate_warn
+  - partner_identification
+  - partner_lastname_uppercase
+  - account_partner_company_group
+  - partner_stage
+  - partner_bank_acc_type_constraint
+  - partner_capital
+  - partner_contact_type_end_user
+  - partner_company_group
+  - partner_contact_personal_information_page
+  - partner_contact_job_position
+  - partner_deduplicate_acl
+  - partner_deduplicate_filter
+  - partner_category_type
+  - partner_second_lastname
+  - partner_display_name_line_break
+  - partner_company_type
+  - partner_fax
+  - partner_contact_gender
+  - partner_manual_rank
+  - partner_vat_unique
+  - partner_category_security
+  - partner_affiliate
+  - partner_contact_department
+  - partner_contact_address_default
+  - partner_subject_to_vat
+  - partner_bank_code
+  - sale_customer_rank
+  - partner_ref_unique
+  - partner_contact_access_link
+  - partner_tier_validation
+  - partner_contact_lang
+  - partner_firstname
+  - partner_deduplicate_by_ref
+  - crm_partner_company_group
   pos:
-  - pos_order_new_line
-  - pos_product_label
-  - pos_product_packaging_multi_barcode
-  - pos_global_discount_in_line
-  - pos_order_to_sale_order_sale_financial_risk
-  - pos_lot_barcode
-  - pos_access_right
-  - pos_to_weight_by_product_uom
-  - pos_edit_order_line
-  - pos_receipt_replace_user_by_trigram
-  - pos_receipt_replace_user_by_trigram_hr
   - pos_partner_location_abstract
-  - pos_partner_birthdate
-  - pos_payment_method_image
-  - pos_escpos_status
-  - pos_sale_order_print
   - pos_order_reorder
-  - pos_product_quick_info
-  - pos_payment_method_cashdro
-  - pos_order_remove_line
-  - pos_lot_selection
-  - pos_discount_all
-  - pos_membership
+  - pos_order_to_sale_order_sale_financial_risk
   - pos_reset_search
+  - pos_payment_terminal
+  - pos_sale_order_print
+  - pos_order_to_sale_order_report
+  - pos_product_label
+  - pos_receipt_replace_user_by_trigram_hr
+  - pos_escpos_status
+  - pos_financial_risk
+  - pos_payment_method_cashdro
+  - pos_partner_birthdate
+  - pos_default_partner
+  - pos_daily_sales_reports_category_only
   - pos_receipt_hide_price
   - pos_order_to_sale_order
-  - pos_payment_change
-  - pos_customer_comment
-  - pos_product_display_default_code
-  - pos_partner_firstname
-  - pos_minimize_menu
-  - pos_default_partner
-  - pos_order_to_sale_order_report
-  - pos_stock_available_online
-  - pos_financial_risk
-  - pos_order_to_sale_order_delivery
-  - pos_loyalty_redeem_payment
-  - pos_sale_product_config_no_variant
   - pos_product_multi_barcode
-  - pos_receipt_hide_info
-  - pos_daily_sales_reports_category_only
-  - pos_partner_location_google_map
-  - pos_payment_terminal
-  - pos_product_packaging_container_deposit
-  - pos_margin
+  - pos_receipt_replace_user_by_trigram
+  - pos_product_display_default_code
+  - pos_sale_product_config_no_variant
+  - pos_order_new_line
   - pos_membership_extension
+  - pos_order_to_sale_order_delivery
+  - pos_order_remove_line
+  - pos_minimize_menu
+  - pos_discount_all
+  - pos_partner_location_google_map
+  - pos_payment_method_image
+  - pos_stock_available_online
+  - pos_membership
+  - pos_to_weight_by_product_uom
+  - pos_edit_order_line
+  - pos_product_packaging_container_deposit
+  - pos_customer_comment
+  - pos_global_discount_in_line
+  - pos_product_packaging_multi_barcode
   - pos_partner_sale_warning
+  - pos_loyalty_redeem_payment
+  - pos_lot_selection
+  - pos_payment_change
+  - pos_margin
+  - pos_partner_firstname
+  - pos_product_quick_info
+  - pos_lot_barcode
+  - pos_access_right
+  - pos_receipt_hide_info
   product-attribute:
-  - uom_category_active
-  - product_category_active
+  - product_expiry_configurable
+  - product_total_weight_from_packaging
+  - product_pricelist_direct_print_xlsx
+  - product_pricelist_direct_print
+  - product_sequence
   - product_uom_po_domain
-  - product_supplierinfo_code
+  - product_abc_classification_sale_stock
+  - product_dimension
+  - product_packaging_dimension
+  - product_supplierinfo_revision
   - product_uom_use_type
-  - product_pricelist_alternative
-  - product_supplierinfo_stock_picking_type
-  - product_logistics_uom
-  - product_attribute_model_link
-  - product_packaging_level
+  - product_attribute_company_favorite
+  - product_code_mixin
+  - product_packaging_container_deposit
   - product_pricelist_simulation
+  - product_route_mto
+  - product_manufacturer
+  - product_pricelist_direct_print_website_sale
+  - product_pricelist_supplierinfo
+  - product_set
+  - product_code_unique
+  - product_category_active
+  - product_pricelist_alternative
+  - uom_category_active
+  - product_attribute_archive
+  - product_multi_category
+  - product_pricelist_simulation_margin
+  - product_attribute_value_menu
+  - product_pricelist_direct_print_company_group
+  - product_pricelist_item_list_view
+  - product_packaging_level_purchasable
+  - base_product_mass_addition
+  - product_category_level
+  - product_net_weight
+  - product_category_code
+  - product_abc_classification
+  - product_uom_updatable
+  - product_uom_measure_type
+  - product_supplierinfo_code
+  - product_assortment
+  - product_get_price_helper
+  - product_packaging_level
+  - product_pricelist_revision
+  - product_state
+  - product_supplierinfo_for_customer
+  - product_optional_product_quantity
+  - product_logistics_uom
+  - product_secondary_unit
+  - product_category_type
+  - product_cost_security
+  - product_variant_attribute_name_manager
+  - product_packaging_level_salable
+  - product_company_default
+  - product_profile
+  - product_category_hr_department
+  - stock_lot_is_archived
+  - product_product_template_link
+  - product_stock_state
+  - product_template_tags
+  - product_supplierinfo_stock_picking_type
+  - product_supplierinfo_archive
+  - product_print_category
+  - product_template_has_one_variant
+  - product_attribute_model_link
   - product_pricelist_fixed_currency_rate
   - product_sale_description
-  - product_dimension
-  - product_abc_classification_sale_stock
-  - product_country_restriction
-  - product_pricelist_simulation_margin
-  - product_pricelist_direct_print_xlsx
-  - product_route_mto
-  - product_optional_product_quantity
-  - product_category_hr_department
-  - product_manufacturer
-  - product_attribute_value_menu
-  - product_category_type
-  - product_template_has_one_variant
-  - product_total_weight_from_packaging
-  - product_pricelist_direct_print
-  - product_code_unique
-  - product_multi_category
-  - product_packaging_level_salable
-  - product_stock_state
-  - product_net_weight
-  - product_pricelist_revision
-  - product_attribute_archive
-  - product_pricelist_direct_print_website_sale
   - product_lot_sequence
-  - product_state
-  - product_pricelist_supplierinfo
-  - product_supplierinfo_archive
-  - product_pricelist_item_list_view
-  - sale_product_template_tags
-  - product_category_level
-  - product_variant_attribute_name_manager
-  - product_packaging_container_deposit
-  - stock_lot_is_archived
-  - product_supplierinfo_revision
-  - product_template_tags
-  - product_uom_measure_type
-  - product_supplierinfo_for_customer
-  - product_product_template_link
-  - product_category_code
-  - product_print_category
+  - product_country_restriction
   - stock_production_lot_expired_date
-  - product_uom_updatable
-  - product_profile
-  - product_set
-  - product_pricelist_direct_print_company_group
-  - product_code_mixin
-  - product_sequence
-  - product_assortment
-  - product_packaging_level_purchasable
-  - product_expiry_configurable
-  - product_get_price_helper
-  - product_attribute_company_favorite
-  - product_abc_classification
-  - base_product_mass_addition
-  - product_secondary_unit
-  - product_company_default
-  - product_cost_security
-  - product_packaging_dimension
+  - sale_product_template_tags
   product-variant:
   - product_variant_sale_price
-  - purchase_variant_configurator
-  - product_variant_specific_description
-  - sale_order_line_variant_description
-  - product_variant_name
   - product_variant_configurator
-  - product_variant_default_code
   - product_variant_attribute_tax
+  - sale_order_line_variant_description
+  - product_variant_specific_description
+  - purchase_variant_configurator
+  - product_variant_default_code
+  - product_variant_name
   project:
-  - sale_project_copy_tasks
-  - project_stock_product_set
-  - project_type
-  - project_purchase_link
-  - project_sequence
-  - project_update_visible
-  - project_task_name_with_id
-  - project_parent
-  - project_list
-  - project_timeline
-  - project_key
-  - project_template
-  - project_task_material
-  - project_task_stage_mgmt
-  - project_department
-  - project_task_default_stage
-  - project_timeline_hr_timesheet
-  - project_task_pull_request_state
-  - project_task_personal_stage_auto_fold
   - project_administrator_restricted_visibility
   - project_task_code
-  - project_hr
-  - project_task_stage_state
-  - project_duplicate_subtask
-  - project_task_add_very_high
-  - project_role
-  - project_task_link
   - project_stock_analytic_tag
-  - project_parent_task_filter
-  - project_task_note
-  - project_stock
+  - project_type
   - project_stage_extra_info
-  - project_milestone_tree
-  - project_timesheet_time_control
+  - project_key
   - project_task_pull_request
+  - project_stock
+  - project_role
+  - project_timeline
+  - project_task_pull_request_state
+  - project_purchase_link
+  - sale_project_copy_tasks
+  - project_sequence
+  - project_task_note
+  - project_parent
+  - project_parent_task_filter
+  - project_task_stage_state
+  - project_task_material
+  - project_template
+  - project_timesheet_time_control
+  - project_list
+  - project_task_name_with_id
+  - project_update_visible
+  - project_task_add_very_high
+  - project_milestone_tree
+  - project_department
+  - project_hr
+  - project_task_stage_mgmt
+  - project_duplicate_subtask
+  - project_timeline_hr_timesheet
+  - project_stock_product_set
+  - project_task_default_stage
+  - project_task_link
+  - project_task_personal_stage_auto_fold
   project-reporting: []
   purchase-reporting:
-  - purchase_backorder
-  - purchase_report_shipping_address
   - purchase_report_date_format
+  - purchase_report_shipping_address
   - purchase_report_payment_term
   - purchase_comment_template
+  - purchase_backorder
   purchase-workflow:
-  - purchase_request_type
-  - purchase_reorder_control
-  - purchase_order_type
-  - purchase_manual_delivery
-  - purchase_merge
-  - purchase_order_line_receipt_status
-  - purchase_blanket_order
-  - purchase_requisition_tier_validation
-  - purchase_order_archive
-  - purchase_order_approved
-  - purchase_order_product_attachment_mgmt
-  - purchase_no_rfq
-  - purchase_order_owner
-  - purchase_stock_packaging
-  - purchase_product_packaging_container_deposit
-  - purchase_commercial_partner
-  - purchase_location_by_line
-  - purchase_return
-  - product_supplierinfo_qty_multiplier
-  - purchase_landed_cost
-  - purchase_only_by_packaging
-  - purchase_partner_incoterm
-  - purchase_order_general_discount
-  - purchase_order_price_recalculation
-  - purchase_security
-  - purchase_order_line_menu
-  - product_supplier_code_purchase
-  - purchase_stock_price_unit_sync
-  - purchase_fop_shipping
-  - purchase_packaging_default
-  - purchase_tag
-  - purchase_order_weight_volume
-  - purchase_exception
-  - purchase_delivery_split_date
-  - purchase_reception_status
-  - purchase_warn_message
-  - purchase_tier_validation
-  - purchase_triple_discount
-  - purchase_line_procurement_group
-  - supplier_calendar
-  - purchase_packaging_level_qty
-  - purchase_request_tier_validation
-  - purchase_request
-  - purchase_order_no_zero_price
-  - purchase_discount
-  - purchase_invoice_plan
-  - purchase_allowed_product
-  - purchase_order_product_recommendation
-  - purchase_order_purchase_manager
   - purchase_order_type_dashboard
-  - purchase_order_qty_change_no_recompute
-  - purchase_default_terms_conditions
-  - purchase_open_qty
-  - purchase_order_supplier_return
-  - purchase_lot
-  - purchase_order_downpayment
-  - sale_purchase_force_vendor
   - procurement_purchase_no_grouping
-  - purchase_deposit
-  - purchase_advance_payment
-  - purchase_sale_link_by_origin
+  - purchase_landed_cost
+  - purchase_order_qty_change_no_recompute
+  - purchase_only_by_packaging
   - purchase_order_supplierinfo_update
-  - purchase_invoice_method
-  - purchase_force_invoiced
-  - purchase_order_uninvoiced_amount
-  - purchase_partner_selectable_option
-  - purchase_work_acceptance
-  - purchase_all_shipments
+  - purchase_manual_delivery
+  - purchase_fop_shipping
+  - purchase_order_price_recalculation
+  - purchase_request_type
+  - purchase_order_line_receipt_status
+  - purchase_line_procurement_group
+  - purchase_triple_discount
+  - purchase_tag
+  - purchase_request
   - purchase_order_hide_receipt_status
+  - product_supplierinfo_qty_multiplier
+  - purchase_tier_validation
+  - purchase_no_rfq
+  - product_supplier_code_purchase
   - purchase_last_price_info
+  - purchase_order_line_menu
+  - purchase_work_acceptance
+  - purchase_order_no_zero_price
+  - purchase_product_packaging_container_deposit
+  - purchase_order_weight_volume
+  - purchase_stock_price_unit_sync
+  - purchase_blanket_order
+  - purchase_order_uninvoiced_amount
+  - purchase_security
+  - purchase_request_tier_validation
+  - purchase_order_archive
+  - purchase_order_downpayment
+  - purchase_all_shipments
+  - purchase_exception
+  - purchase_merge
+  - purchase_requisition_tier_validation
+  - purchase_reception_status
+  - purchase_delivery_split_date
+  - purchase_order_approved
+  - purchase_advance_payment
+  - purchase_location_by_line
+  - purchase_order_type
+  - purchase_stock_packaging
+  - purchase_partner_selectable_option
+  - purchase_order_product_recommendation
+  - purchase_packaging_level_qty
+  - purchase_order_supplier_return
+  - purchase_allowed_product
+  - purchase_lot
+  - purchase_partner_incoterm
+  - purchase_invoice_method
+  - purchase_open_qty
+  - purchase_invoice_plan
+  - purchase_sale_link_by_origin
+  - supplier_calendar
+  - sale_purchase_force_vendor
+  - purchase_packaging_default
+  - purchase_order_owner
+  - purchase_warn_message
+  - purchase_default_terms_conditions
+  - purchase_commercial_partner
+  - purchase_deposit
+  - purchase_return
+  - purchase_order_purchase_manager
+  - purchase_order_product_attachment_mgmt
+  - purchase_order_general_discount
+  - purchase_discount
+  - purchase_reorder_control
+  - purchase_force_invoiced
   queue:
-  - queue_job_subscribe
-  - queue_job_cron_jobrunner
-  - queue_job_web_notify
-  - test_queue_job_batch
-  - queue_job
-  - test_queue_job
   - base_import_async
-  - queue_job_cron
+  - test_queue_job_batch
+  - queue_job_web_notify
   - queue_job_batch
   - base_export_async
+  - test_queue_job
+  - queue_job_cron_jobrunner
+  - queue_job_cron
+  - queue_job
+  - queue_job_subscribe
   reporting-engine:
-  - base_comment_template
-  - report_qweb_parameter
-  - bi_sql_editor
-  - report_xlsx_helper
-  - sql_request_abstract
-  - report_wkhtmltopdf_param
-  - report_company_details_translatable
-  - report_py3o
-  - report_qweb_pdf_watermark
-  - report_qweb_element_page_visibility
-  - report_qweb_decimal_place
-  - sql_export_mail
-  - report_qweb_signer
-  - report_qweb_encrypt
-  - bi_view_editor_spreadsheet_dashboard
   - report_xml
-  - report_label
-  - report_context
+  - report_xlsx_helper
+  - sql_export_mail
+  - bi_view_editor_spreadsheet_dashboard
+  - report_wkhtmltopdf_param
+  - report_py3o
+  - bi_view_editor
+  - bi_sql_editor
   - report_xlsx
+  - sql_export_excel
+  - base_comment_template
+  - report_csv
   - report_py3o_fusion_server
   - report_async
-  - report_csv
+  - report_qweb_pdf_watermark
   - sql_export
-  - report_qr
+  - report_context
+  - report_qweb_encrypt
+  - report_qweb_element_page_visibility
+  - report_label
   - report_substitute
-  - sql_export_excel
-  - bi_view_editor
+  - sql_request_abstract
+  - report_company_details_translatable
+  - report_qweb_decimal_place
+  - report_qweb_parameter
+  - report_qweb_signer
+  - report_qr
   rest-framework:
   - base_rest_pydantic
-  - fastapi
-  - rest_log
   - graphql_base
-  - fastapi_auth_jwt_demo
-  - pydantic
-  - base_rest_datamodel
-  - datamodel
-  - base_rest_auth_api_key
+  - extendable
+  - base_rest
   - base_rest_demo
   - extendable_fastapi
+  - rest_log
   - graphql_demo
-  - extendable
+  - fastapi_auth_jwt_demo
+  - base_rest_datamodel
+  - pydantic
+  - datamodel
+  - fastapi
   - fastapi_auth_jwt
-  - base_rest
+  - base_rest_auth_api_key
   rma:
-  - rma_sale_mrp
-  - product_warranty
   - rma
+  - rma_sale_mrp
   - rma_sale
+  - product_warranty
   sale-financial: []
   sale-reporting:
-  - sale_order_report_product_image
-  - sale_order_product_recommendation_product_sold_by_delivery_week
-  - sale_comment_template
-  - sale_report_delivered_subtotal
-  - sale_packaging_report
-  - sale_report_delivered_volume
   - sale_layout_category_hide_detail
-  - sale_report_delivered
+  - sale_report_delivered_volume
+  - sale_comment_template
   - product_sold_by_delivery_week
   - sale_order_line_position
+  - sale_report_delivered_subtotal
+  - sale_order_product_recommendation_product_sold_by_delivery_week
+  - sale_packaging_report
+  - sale_report_delivered
+  - sale_order_report_product_image
   sale-workflow:
-  - sale_blanket_order
-  - sale_invoice_policy
-  - sale_packaging_default
-  - sale_numeric_step
-  - sale_order_line_date
-  - sale_shipping_info_helper
-  - sale_invoice_frequency
-  - sale_order_line_field_from_product_attribute
-  - sale_order_product_recommendation_quick_add
-  - sale_exception
-  - sale_product_set
-  - sale_order_lot_generator
-  - sale_product_multi_add
-  - sale_quotation_number
-  - sale_order_line_price_history
-  - sale_order_line_input
-  - sale_partner_selectable_option
-  - portal_sale_personal_data_only
-  - sale_product_packaging_container_deposit
-  - sale_mrp_bom
-  - sale_order_price_recalculation
-  - sale_pricelist_from_commitment_date
-  - sale_stock_picking_note
-  - sale_order_revision
-  - sale_triple_discount
-  - sale_elaboration
-  - sale_order_general_discount_triple
-  - sale_order_carrier_auto_assign
-  - sales_team_security
-  - sale_stock_product_recommendation
-  - sale_manual_delivery
-  - sale_stock_picking_blocking
-  - sale_order_product_picker
-  - sale_order_line_delivery_state
-  - sale_order_amount_to_invoice
-  - sale_discount_display_amount
-  - sale_order_report_without_price
-  - sale_sourced_by_line
-  - sale_commercial_partner
-  - sale_order_product_recommendation_packaging_default
-  - sale_order_line_sequence
-  - sale_partner_pricelist
-  - partner_sale_pivot
-  - sale_order_invoice_amount
-  - sale_auto_remove_zero_quantity_lines
-  - sale_fixed_discount
-  - sale_last_price_info
-  - sale_loyalty_exclude
-  - sale_order_invoicing_finished_task
-  - sale_order_lot_selection
-  - sale_partner_incoterm
-  - sale_tier_validation
-  - partner_contact_sale_info_propagation
-  - sale_payment_sheet
-  - sale_order_warn_message
-  - sale_order_product_recommendation
-  - sale_order_product_recommendation_elaboration
-  - sale_automatic_workflow_payment_mode
-  - sale_procurement_customer
-  - sale_advance_payment
-  - sale_cancel_reason
   - sale_order_line_menu
-  - sale_order_currency_rate
-  - sale_start_end_dates
-  - sale_delivery_split_date
-  - sale_order_qty_change_no_recompute
-  - sale_stock_cancel_restriction
-  - sale_company_currency
-  - sale_order_product_availability_inline
-  - sale_automatic_workflow
-  - sale_wishlist
-  - sale_order_type
-  - sell_only_by_packaging
-  - sale_stock_delivery_state
-  - sale_stock_line_sequence
-  - product_form_sale_link
-  - sale_automatic_workflow_job
-  - sale_order_line_tag
-  - sale_delivery_state
-  - sale_order_archive
-  - sale_order_general_discount
-  - sale_procurement_group_by_line
+  - sale_packaging_default
+  - partner_contact_sale_info_propagation
+  - sale_order_line_date
+  - sale_fixed_discount
+  - sale_blanket_order
   - sale_pricelist_technical
-  - sale_exception_holidays_public
-  - product_supplierinfo_for_customer_sale
+  - sale_procurement_group_by_line
+  - sale_order_line_price_history
   - sale_force_invoiced
-  - sale_order_invoicing_picking_filter
-  - sale_product_category_menu
+  - sale_wishlist
   - sale_substate
+  - sale_triple_discount
+  - product_form_sale_link
+  - sale_stock_product_recommendation
+  - sale_order_product_picker
+  - sale_invoice_frequency
+  - sale_order_general_discount
+  - sale_stock_picking_blocking
+  - sale_order_line_field_from_product_attribute
+  - sale_order_invoicing_finished_task
+  - sale_exception
+  - sale_order_carrier_auto_assign
+  - sale_mrp_bom
+  - sale_sourced_by_line
+  - sale_delivery_split_date
+  - sale_order_line_sequence
+  - sale_order_line_tag
+  - product_supplierinfo_for_customer_sale
+  - sale_stock_line_sequence
+  - sale_order_line_input
+  - sale_order_qty_change_no_recompute
+  - sell_only_by_packaging
+  - sale_order_warn_message
+  - sale_automatic_workflow
+  - sale_shipping_info_helper
+  - sale_quotation_number
+  - sale_automatic_workflow_job
+  - sale_automatic_workflow_payment_mode
+  - sale_partner_incoterm
+  - sale_stock_cancel_restriction
+  - sale_partner_pricelist
+  - sale_cancel_reason
+  - sales_team_security
+  - sale_tier_validation
+  - sale_auto_remove_zero_quantity_lines
+  - sale_pricelist_from_commitment_date
+  - sale_product_multi_add
+  - sale_discount_display_amount
+  - sale_advance_payment
+  - sale_delivery_state
+  - sale_stock_picking_note
+  - sale_order_currency_rate
+  - sale_loyalty_exclude
+  - sale_commercial_partner
+  - sale_order_lot_generator
+  - sale_product_packaging_container_deposit
+  - sale_last_price_info
+  - sale_stock_delivery_state
+  - sale_partner_selectable_option
+  - sale_order_report_without_price
+  - sale_order_product_recommendation_quick_add
+  - portal_sale_personal_data_only
+  - sale_order_line_delivery_state
+  - sale_elaboration
+  - sale_order_type
+  - sale_order_archive
+  - partner_sale_pivot
+  - sale_numeric_step
+  - sale_order_invoicing_picking_filter
+  - sale_order_product_availability_inline
+  - sale_order_price_recalculation
+  - sale_order_amount_to_invoice
+  - sale_order_product_recommendation_packaging_default
+  - sale_order_general_discount_triple
+  - sale_payment_sheet
+  - sale_exception_holidays_public
+  - sale_order_product_recommendation
+  - sale_order_lot_selection
+  - sale_manual_delivery
+  - sale_start_end_dates
+  - sale_product_category_menu
+  - sale_procurement_customer
+  - sale_invoice_policy
+  - sale_order_revision
+  - sale_order_invoice_amount
+  - sale_order_product_recommendation_elaboration
+  - sale_product_set
+  - sale_company_currency
   search-engine:
-  - search_engine_serializer_pydantic
   - connector_search_engine_serializer_ir_export
+  - connector_elasticsearch
   - connector_search_engine
   - search_engine_image_thumbnail
-  - connector_elasticsearch
+  - search_engine_serializer_pydantic
   server-auth:
-  - base_user_show_email
-  - auth_jwt_server_env
-  - auth_api_key
-  - users_ldap_populate
-  - auth_user_case_insensitive
   - auth_session_timeout
-  - vault_share
-  - auth_saml
-  - users_ldap_mail
-  - auth_api_key_group
-  - vault
-  - auth_admin_passkey
-  - users_ldap_groups
-  - auth_oauth_ropc
-  - auth_ldaps
-  - auth_signup_verify_email
-  - auth_oauth_multi_token
-  - password_security
-  - auth_jwt_demo
-  - auth_api_key_server_env
-  - user_log_view
-  - auth_oidc
   - auth_jwt
+  - password_security
+  - auth_api_key_server_env
+  - auth_ldaps
+  - auth_oauth_ropc
+  - users_ldap_populate
+  - users_ldap_mail
+  - base_user_show_email
   - auth_oidc_environment
+  - auth_user_case_insensitive
+  - auth_signup_verify_email
+  - user_log_view
+  - auth_jwt_demo
+  - auth_oauth_multi_token
+  - auth_jwt_server_env
+  - users_ldap_groups
+  - auth_saml
+  - auth_oidc
+  - vault
+  - auth_api_key_group
+  - auth_api_key
+  - auth_admin_passkey
+  - vault_share
   server-backend:
-  - base_portal_type
   - base_external_dbsource_mysql
-  - base_group_backend
-  - base_import_match
-  - base_external_system
-  - base_user_role_company
   - base_user_role_history
+  - base_portal_type
+  - base_user_role
+  - base_group_backend
+  - base_external_dbsource_sqlite
+  - base_external_system
+  - base_import_match
+  - base_external_dbsource
+  - base_user_role_company
+  - server_action_sort
   - base_external_dbsource_mssql
   - base_global_discount
-  - base_user_role
-  - base_external_dbsource
-  - base_external_dbsource_sqlite
-  - server_action_sort
   server-brand:
-  - remove_odoo_enterprise
   - portal_odoo_debranding
   - disable_odoo_online
   - hr_expense_remove_mobile_link
+  - remove_odoo_enterprise
   server-env:
+  - pos_environment
   - mail_environment
   - data_encryption
-  - pos_environment
+  - server_environment_data_encryption
   - server_environment_ir_config_parameter
   - server_environment
-  - server_environment_data_encryption
   server-tools:
-  - upgrade_analysis
-  - base_fontawesome
-  - autovacuum_message_attachment
-  - session_db
-  - module_change_auto_install
-  - jsonifier
-  - base_cron_exclusion
-  - base_domain_inverse_function
+  - base_sequence_option
+  - tracking_manager
   - excel_import_export_demo
+  - module_change_auto_install
+  - onchange_helper
+  - module_auto_update
+  - attachment_queue
+  - rpc_helper
+  - base_m2m_custom_field
+  - cron_daylight_saving_time_resistant
+  - base_technical_user
+  - auditlog
+  - base_fontawesome
+  - base_domain_inverse_function
+  - module_analysis
+  - iap_alternative_provider
+  - attachment_unindex_content
+  - attachment_synchronize
+  - base_cron_exclusion
+  - auto_backup
+  - upgrade_analysis
+  - bus_alt_connection
+  - base_sequence_default
+  - base_exception
+  - session_db
+  - base_view_inheritance_extension
+  - base_name_search_improved
+  - base_time_window
+  - base_sparse_field_list_support
+  - jsonifier
+  - dbfilter_from_header
+  - scheduler_error_mailer
+  - fetchmail_attach_from_folder
+  - sentry
+  - excel_import_export
   - excel_import_export_unidecode
   - base_partition
-  - base_time_window
-  - base_sequence_default
-  - onchange_helper
-  - auditlog
   - url_attachment_search_fuzzy
-  - attachment_synchronize
-  - html_text
-  - scheduler_error_mailer
-  - module_auto_update
-  - base_sparse_field_list_support
-  - base_technical_user
-  - dbfilter_from_header
-  - iap_alternative_provider
-  - base_name_search_improved
+  - autovacuum_message_attachment
   - datetime_formatter
-  - cron_daylight_saving_time_resistant
-  - attachment_unindex_content
-  - tracking_manager
   - database_cleanup
+  - html_text
   - base_search_fuzzy
-  - attachment_queue
-  - excel_import_export
-  - base_sequence_option
-  - base_m2m_custom_field
-  - rpc_helper
-  - bus_alt_connection
-  - sentry
-  - base_view_inheritance_extension
-  - module_analysis
-  - base_exception
-  - auto_backup
   server-ux:
-  - base_menu_visibility_restriction
-  - barcode_action
   - base_tier_validation_definition_server_action
-  - base_binary_url_import
-  - server_action_mass_edit
-  - base_tier_validation
-  - base_custom_filter
-  - template_content_swapper
-  - base_tier_validation_server_action
+  - user_all_groups
   - base_import_security_group
-  - filter_multi_user
-  - announcement_dialog_size
-  - base_archive_security
-  - base_optional_quick_create
-  - base_search_custom_field_filter
-  - sequence_reset_period
-  - test_base_binary_url_import
-  - base_user_locale
-  - date_range_account
-  - base_tier_validation_forward
   - announcement
-  - base_tier_validation_formula
   - base_export_manager
+  - date_range_account
+  - template_content_swapper
+  - base_optional_quick_create
+  - base_tier_validation_forward
+  - barcode_action
+  - base_archive_security
+  - server_action_mass_edit
+  - base_search_custom_field_filter
+  - base_user_locale
+  - base_tier_validation
+  - base_substate
+  - base_menu_visibility_restriction
+  - base_custom_filter
+  - date_range
+  - sequence_reset_period
+  - base_tier_validation_server_action
+  - base_tier_validation_formula
   - multi_step_wizard
   - base_revision
-  - date_range
+  - announcement_dialog_size
+  - base_binary_url_import
   - base_tier_validation_waiting
-  - base_technical_features
-  - user_all_groups
-  - base_substate
+  - test_base_binary_url_import
   - base_cancel_confirm
+  - base_technical_features
+  - developer_menu
+  - filter_multi_user
   social:
-  - mail_inline_css
-  - mail_partner_opt_out
+  - mail_activity_reminder
+  - mail_activity_plan
+  - mail_layout_preview
+  - mail_restrict_follower_selection
   - mail_composer_cc_bcc
-  - mail_attach_existing_attachment
-  - mail_activity_team
-  - mail_debrand
+  - mail_tracking_mailgun
   - mail_tracking_mass_mailing
-  - fetchmail_thread_default
-  - mail_optional_autofollow
-  - mail_outbound_static
-  - mass_mailing_resend
-  - mass_mailing_list_dynamic
-  - mail_optional_follower_notification
+  - mail_attach_existing_attachment
+  - mass_mailing_custom_unsubscribe
+  - mail_autosubscribe
   - base_search_mail_content
-  - mail_show_follower
-  - mail_template_substitute
-  - mail_activity_partner
-  - mail_tracking
+  - mass_mailing_list_dynamic
+  - fetchmail_thread_default
+  - mass_mailing_event_registration_exclude
+  - mass_mailing_contact_active
+  - mail_outbound_static
+  - mail_debrand
   - mail_quoted_reply
+  - mail_activity_team
+  - mail_optional_autofollow
+  - mail_improved_tracking_value
+  - mail_drop_target
   - mail_activity_board
   - email_template_qweb
-  - mail_activity_reminder
-  - mail_composer_cc_bcc_account
-  - mass_mailing_custom_unsubscribe
-  - mail_activity_done
+  - mail_inline_css
   - mail_layout_force
-  - mail_layout_preview
-  - mass_mailing_unique
-  - mail_restrict_follower_selection
-  - mail_improved_tracking_value
-  - mail_tracking_mailgun
   - mass_mailing_partner
-  - mail_autosubscribe
-  - mass_mailing_contact_active
-  - mail_activity_plan
+  - mail_show_follower
+  - mail_tracking
+  - mail_template_substitute
+  - mail_optional_follower_notification
+  - mail_activity_done
+  - mail_activity_partner
+  - mail_composer_cc_bcc_account
+  - mass_mailing_unique
   - mail_send_confirmation
-  - mass_mailing_event_registration_exclude
+  - mail_partner_opt_out
+  - mass_mailing_resend
   - mail_post_defer
-  - mail_drop_target
   stock-logistics-barcode:
+  - product_packaging_multi_barcode
+  - product_multi_barcode_constraint_per_company
+  - barcodes_generator_product
+  - barcodes_generator_package
   - barcodes_generator_abstract
+  - barcodes_generator_location
   - product_multi_barcode
   - product_multi_barcode_stock_menu
   - product_barcode_constraint_per_company
-  - barcodes_generator_product
-  - barcodes_generator_location
-  - barcodes_generator_package
-  - product_multi_barcode_constraint_per_company
-  - product_packaging_multi_barcode
   stock-logistics-reporting:
+  - stock_picking_report_incoming_delivery_address
+  - stock_picking_report_custom_description
+  - stock_picking_report_internal_delivery_address
   - stock_picking_report_valued
   - stock_quantity_history_location
-  - stock_picking_report_internal_delivery_address
-  - stock_card_report
-  - stock_picking_report_incoming_delivery_address
-  - delivery_line_sale_line_position
+  - stock_average_daily_sale
   - stock_picking_report_qty_undelivered
   - stock_report_quantity_by_location
-  - stock_picking_report_custom_description
-  - stock_average_daily_sale
+  - delivery_line_sale_line_position
+  - stock_card_report
   stock-logistics-tracking:
   - stock_quant_package_multi_reference
   stock-logistics-warehouse:
-  - stock_inventory_preparation_filter
-  - stock_move_packaging_qty
-  - stock_route_mto
-  - stock_inventory_count_to_zero
-  - stock_location_zone
-  - scrap_reason_code
-  - stock_picking_commercial_partner
-  - stock_inventory_justification
-  - stock_reserve
-  - stock_picking_show_linked
+  - stock_location_position
   - stock_product_qty_by_packaging
-  - stock_demand_estimate
-  - stock_storage_category_capacity_name
-  - stock_putaway_product_template
-  - stock_picking_volume
   - stock_helper
+  - stock_route_mto
+  - stock_search_supplierinfo_code
   - stock_move_auto_assign_auto_release
-  - stock_move_common_dest
-  - procurement_auto_create_group
   - stock_quant_manual_assign
-  - stock_location_lockdown
-  - stock_valuation_layer_accounting_date
-  - account_move_line_stock_info
-  - stock_mts_mto_rule
+  - stock_inventory_preparation_filter
+  - stock_picking_procure_method
+  - stock_picking_volume
   - stock_move_auto_assign
   - stock_inventory
-  - stock_move_location
-  - stock_picking_product_interchangeable
+  - stock_picking_commercial_partner
   - stock_quant_cost_info
-  - stock_demand_estimate_matrix
-  - account_move_line_product
-  - stock_inventory_discrepancy
-  - stock_picking_volume_packaging
-  - stock_packaging_calculator
-  - stock_location_position
-  - stock_quant_safe_inventory
-  - stock_removal_location_by_priority
-  - stock_warehouse_calendar
-  - stock_picking_batch_packaging_qty
-  - stock_search_supplierinfo_code
-  - product_packaging_usability
-  - stock_picking_procure_method
+  - stock_putaway_product_template
+  - stock_location_zone
   - stock_packaging_calculator_packaging_level
+  - stock_picking_product_interchangeable
+  - stock_reserve
+  - stock_inventory_justification
+  - stock_mts_mto_rule
+  - stock_move_packaging_qty
+  - stock_picking_batch_packaging_qty
+  - stock_demand_estimate_matrix
+  - procurement_auto_create_group
+  - stock_move_location
+  - stock_packaging_calculator
+  - stock_demand_estimate
+  - stock_quant_safe_inventory
+  - account_move_line_stock_info
+  - stock_location_lockdown
+  - stock_storage_category_capacity_name
+  - scrap_reason_code
+  - stock_valuation_layer_accounting_date
+  - stock_inventory_discrepancy
   - stock_location_product_restriction
+  - stock_move_common_dest
+  - account_move_line_product
+  - stock_picking_show_linked
+  - product_packaging_usability
+  - stock_warehouse_calendar
+  - stock_inventory_count_to_zero
+  - stock_removal_location_by_priority
+  - stock_picking_volume_packaging
   stock-logistics-workflow:
-  - stock_picking_show_backorder
   - stock_picking_send_by_mail
-  - stock_split_picking
-  - stock_move_line_expiration_date_required
-  - stock_grn
-  - stock_rule_reserve_max_quantity
-  - stock_picking_batch_extended
-  - sale_line_returned_qty
-  - stock_quant_package_dimension_total_weight_from_packaging
-  - stock_product_set
-  - stock_picking_filter_lot
-  - stock_picking_restrict_cancel_printed
-  - sale_order_global_stock_route
-  - stock_picking_batch_print_pickings
-  - stock_picking_show_return
-  - stock_picking_batch_extended_account_sale_type
-  - stock_picking_customer_ref
-  - stock_quant_package_product_packaging
-  - stock_picking_line_sequence
-  - stock_picking_batch_print_invoices
-  - stock_picking_batch_extended_account
-  - stock_landed_costs_currency
-  - stock_picking_progress
-  - stock_putaway_hook
-  - purchase_stock_picking_invoice_link
-  - stock_picking_batch_invoice_frequency
-  - stock_move_line_change_lot
-  - stock_restrict_lot
-  - stock_picking_start
-  - stock_picking_sale_order_link
-  - stock_customer_deposit_elaboration
-  - stock_picking_to_batch_group_fields
-  - stock_customer_deposit_sale_margin
-  - stock_partner_delivery_window
-  - stock_move_propagate_first_move
-  - delivery_total_weight_from_packaging
-  - stock_auto_move
-  - stock_move_line_reserved_quant
-  - stock_owner_restriction
-  - stock_receipt_lot_info
-  - stock_picking_group_by_partner_by_carrier_by_date
-  - stock_customer_deposit
-  - stock_no_negative
-  - stock_picking_grn_mandatory
-  - stock_quant_package_dimension
-  - stock_move_manage_priority
-  - stock_account_product_run_fifo_hook
-  - stock_procurement_customer
-  - stock_landed_costs_purchase_auto
-  - stock_picking_import_serial_number
-  - stock_landed_costs_security
-  - stock_picking_warn_message
-  - stock_picking_invoice_link
-  - stock_picking_group_by_base
-  - delivery_procurement_group_carrier
-  - stock_picking_partner_note
-  - stock_picking_info_lot
-  - stock_override_procurement
   - stock_picking_batch_validate_confirm
-  - stock_valuation_layer_usage
-  - stock_picking_purchase_order_link
-  - stock_move_line_auto_fill
-  - stock_move_free_reservation_reassign
-  - stock_move_priority_picking_assign
-  - stock_picking_kind
-  - stock_picking_back2draft
-  - stock_lot_scrap
-  - stock_delivery_note
-  - stock_picking_supplier_ref
-  - stock_picking_mass_action
-  - stock_lot_production_date
-  - stock_picking_auto_create_lot
-  - stock_picking_quick
-  - stock_picking_product_link
-  - sale_stock_restocking_fee_invoicing
+  - stock_picking_batch_extended
   - stock_picking_group_by_max_weight
+  - delivery_procurement_group_carrier
+  - stock_picking_show_return
+  - stock_valuation_layer_usage
+  - delivery_total_weight_from_packaging
+  - stock_picking_restrict_cancel_printed
+  - stock_picking_batch_invoice_frequency
+  - stock_customer_deposit_sale_margin
+  - stock_picking_show_backorder
+  - sale_stock_restocking_fee_invoicing
+  - stock_picking_quick
+  - stock_account_product_run_fifo_hook
+  - stock_picking_group_by_base
+  - stock_picking_warn_message
+  - stock_procurement_customer
+  - stock_receipt_lot_info
+  - stock_picking_mass_action
+  - stock_picking_import_serial_number
+  - stock_move_line_expiration_date_required
+  - stock_picking_customer_ref
+  - stock_move_line_reserved_quant
+  - stock_rule_reserve_max_quantity
+  - stock_no_negative
+  - stock_picking_batch_extended_account_sale_type
+  - stock_landed_costs_purchase_auto
+  - stock_move_free_reservation_reassign
+  - stock_picking_supplier_ref
   - stock_picking_group_by_partner_by_carrier
+  - stock_picking_batch_print_invoices
+  - stock_picking_back2draft
+  - stock_override_procurement
   - stock_move_line_serial_unique
+  - stock_owner_restriction
+  - stock_move_manage_priority
+  - stock_customer_deposit
+  - stock_quant_package_dimension_total_weight_from_packaging
+  - stock_picking_partner_note
+  - stock_grn
+  - stock_picking_to_batch_group_fields
+  - stock_split_picking
+  - stock_quant_package_product_packaging
+  - purchase_stock_picking_invoice_link
+  - stock_picking_line_sequence
+  - stock_picking_product_link
+  - stock_quant_package_dimension
+  - stock_picking_info_lot
+  - sale_order_global_stock_route
+  - stock_picking_kind
+  - stock_lot_production_date
+  - stock_picking_group_by_partner_by_carrier_by_date
+  - stock_picking_grn_mandatory
+  - stock_picking_purchase_order_link
+  - stock_customer_deposit_elaboration
+  - sale_line_returned_qty
+  - stock_picking_filter_lot
+  - stock_picking_progress
+  - stock_picking_start
+  - stock_move_priority_picking_assign
+  - stock_picking_sale_order_link
+  - stock_delivery_note
+  - stock_auto_move
+  - stock_move_propagate_first_move
+  - stock_putaway_hook
+  - stock_landed_costs_security
+  - stock_product_set
+  - stock_picking_batch_extended_account
+  - stock_move_line_auto_fill
+  - stock_picking_auto_create_lot
+  - stock_lot_scrap
+  - stock_move_line_change_lot
+  - stock_landed_costs_currency
+  - stock_partner_delivery_window
+  - stock_restrict_lot
+  - stock_picking_invoice_link
+  - stock_picking_batch_print_pickings
   storage:
-  - fs_image
-  - storage_file
-  - fs_attachment
-  - fs_file_demo
-  - image_tag
-  - fs_base_multi_image
-  - storage_backend
-  - fs_storage
-  - fs_product_multi_image
-  - fs_image_thumbnail
-  - fs_base_multi_media
-  - storage_backend_sftp
-  - fs_file
   - fs_product_multi_media
+  - fs_product_multi_image
+  - image_tag
+  - fs_attachment
+  - storage_backend
+  - fs_base_multi_media
+  - fs_image_thumbnail
   - fs_product_brand_multi_image
+  - fs_file
+  - storage_backend_sftp
+  - fs_image
+  - fs_file_demo
+  - storage_file
+  - fs_storage
+  - fs_base_multi_image
   support: []
   timesheet:
-  - hr_timesheet_task_domain
-  - hr_timesheet_sheet_autodraft
-  - sale_timesheet_line_exclude
-  - hr_timesheet_time_type
+  - hr_timesheet_task_stage
   - crm_timesheet
-  - project_task_analytic_propagation
-  - sale_timesheet_invoice_link
-  - sale_timesheet_task_exclude
-  - hr_timesheet_employee_analytic_tag
+  - hr_timesheet_sheet_attendance
   - project_task_stage_allow_timesheet
+  - hr_timesheet_begin_end
   - hr_timesheet_task_required
   - sale_timesheet_rounded
-  - hr_timesheet_sheet_attendance
-  - hr_timesheet_begin_end
-  - hr_timesheet_task_stage
-  - hr_timesheet_name_customer
+  - hr_timesheet_task_domain
+  - hr_timesheet_employee_analytic_tag
+  - sale_timesheet_task_exclude
+  - hr_timesheet_sheet_autodraft
+  - hr_timesheet_time_type
+  - hr_timesheet_sheet
+  - sale_timesheet_invoice_link
   - hr_timesheet_sheet_policy_project_manager
   - hr_timesheet_report
+  - hr_timesheet_name_customer
   - hr_employee_cost_history
-  - hr_timesheet_sheet
+  - sale_timesheet_line_exclude
+  - project_task_analytic_propagation
   web:
-  - web_tree_many2one_clickable
-  - web_dark_mode
-  - web_refresher
-  - web_widget_bokeh_chart
-  - web_widget_image_webcam
-  - web_widget_open_tab
-  - web_company_color
-  - web_calendar_slot_duration
-  - web_pwa_oca
-  - web_tree_duplicate
-  - web_timeline
-  - web_touchscreen
-  - web_widget_datepicker_fulloptions
-  - web_notify
-  - web_no_bubble
-  - web_m2x_options
-  - web_environment_ribbon
-  - web_ir_actions_act_window_page
-  - web_disable_export_group
-  - web_send_message_popup
-  - web_widget_numeric_step
-  - web_copy_confirm
-  - web_widget_x2many_2d_matrix
-  - web_hide_field_with_key
-  - web_dialog_size
-  - web_sheet_full_width
-  - web_save_discard_button
-  - web_field_tooltip
-  - web_widget_domain_editor_dialog
-  - web_responsive
-  - web_advanced_search
-  - web_action_conditionable
-  - web_remember_tree_column_width
-  - web_ir_actions_close_wizard_refresh_view
-  - web_notify_channel_message
   - web_search_with_and
-  - web_chatter_position
+  - web_widget_image_webcam
+  - web_notify_channel_message
+  - web_m2x_options
+  - web_disable_export_group
+  - web_widget_domain_editor_dialog
+  - web_pivot_computed_measure
+  - web_action_conditionable
+  - web_widget_datepicker_fulloptions
+  - web_copy_confirm
   - web_theme_classic
   - web_field_numeric_formatting
-  - web_widget_mpld3_chart
-  - web_help
-  - web_widget_plotly_chart
-  - web_group_expand
-  - web_apply_field_style
-  - web_pivot_computed_measure
-  - web_dashboard_tile
-  - web_listview_range_select
-  - web_select_all_companies
-  - web_domain_field
-  - web_widget_dropdown_dynamic
-  - web_ir_actions_act_multi
+  - web_no_bubble
+  - web_calendar_slot_duration
   - web_ir_actions_act_window_message
+  - web_listview_range_select
+  - web_tree_duplicate
+  - web_notify
+  - web_domain_field
+  - web_pwa_oca
+  - web_company_color
+  - web_remember_tree_column_width
+  - web_widget_dropdown_dynamic
+  - web_apply_field_style
+  - web_help
+  - web_tree_many2one_clickable
+  - web_advanced_search
+  - web_widget_mpld3_chart
+  - web_sheet_full_width
+  - web_widget_numeric_step
+  - web_send_message_popup
+  - web_widget_bokeh_chart
+  - web_dialog_size
+  - web_widget_plotly_chart
+  - web_touchscreen
+  - web_timeline
+  - web_field_tooltip
+  - web_ir_actions_act_window_page
+  - web_widget_open_tab
+  - web_refresher
+  - web_chatter_position
+  - web_save_discard_button
+  - web_dark_mode
+  - web_responsive
+  - web_hide_field_with_key
+  - web_widget_x2many_2d_matrix
+  - web_select_all_companies
+  - web_ir_actions_act_multi
+  - web_dashboard_tile
+  - web_group_expand
+  - web_environment_ribbon
+  - web_ir_actions_close_wizard_refresh_view
   web-api:
   - webservice
   - endpoint
-  - endpoint_auth_api_key
   - endpoint_route_handler
+  - endpoint_auth_api_key
   wms:
-  - shopfloor_rest_log
-  - shopfloor_mobile
-  - stock_release_channel_show_volume
-  - stock_available_to_promise_release_exclude_location
-  - stock_release_channel_process_end_time
-  - shopfloor_batch_automatic_creation
-  - shopfloor_workstation
-  - stock_release_channel_shipment_advice_toursolver
-  - stock_picking_batch_creation
-  - stock_release_channel_shipment_advice
-  - stock_release_channel_partner_delivery_window
-  - stock_dynamic_routing
-  - stock_release_channel_delivery
-  - stock_release_channel_plan_process_end_time
-  - stock_picking_completion_info
-  - shopfloor_mobile_base_auth_api_key
-  - stock_release_channel_shipment_lead_time
-  - stock_available_to_promise_release
-  - sale_stock_available_to_promise_release
-  - stock_storage_type
-  - shopfloor_workstation_mobile
-  - stock_storage_type_putaway_abc
-  - stock_warehouse_flow
-  - stock_release_channel_show_weight
   - stock_release_channel_batch_mode_commercial_partner
+  - stock_storage_type_putaway_abc
   - delivery_carrier_warehouse
-  - stock_release_channel_partner_public_holidays
-  - stock_release_channel_auto_release
-  - stock_release_channel_shipment_advice_process_end_time
-  - stock_release_channel_geoengine
-  - stock_release_channel_cutoff
-  - shopfloor_mobile_base
-  - stock_picking_type_shipping_policy
-  - sale_stock_available_to_promise_release_block
-  - shopfloor
-  - stock_release_channel
-  - shopfloor_base
-  - stock_release_channel_propagate_channel_picking
+  - stock_available_to_promise_release_exclude_location
   - stock_release_channel_plan
   - stock_available_to_promise_release_block
+  - stock_release_channel_plan_process_end_time
+  - stock_warehouse_flow
+  - sale_stock_available_to_promise_release_block
+  - stock_picking_completion_info
+  - stock_release_channel_shipment_advice
+  - shopfloor_workstation
+  - shopfloor_batch_automatic_creation
+  - stock_picking_type_shipping_policy
+  - stock_release_channel_process_end_time
+  - stock_release_channel_partner_delivery_window
+  - shopfloor_rest_log
+  - shopfloor
+  - stock_release_channel_show_weight
+  - stock_dynamic_routing
+  - shopfloor_workstation_mobile
+  - stock_release_channel_shipment_advice_toursolver
+  - stock_available_to_promise_release
+  - stock_release_channel_show_volume
+  - shopfloor_mobile_base
+  - stock_release_channel_delivery
+  - sale_stock_available_to_promise_release
+  - shopfloor_mobile
+  - shopfloor_base
+  - stock_storage_type
+  - stock_release_channel_partner_public_holidays
+  - stock_release_channel_shipment_advice_process_end_time
+  - stock_release_channel_auto_release
+  - stock_release_channel_shipment_lead_time
+  - stock_picking_batch_creation
+  - stock_release_channel
+  - shopfloor_mobile_base_auth_api_key
+  - stock_release_channel_propagate_channel_picking
+  - stock_release_channel_geoengine
+  - stock_release_channel_cutoff
 shopinvader:
   odoo-shopinvader:
-  - shopinvader_search_engine_product_stock
-  - shopinvader_search_engine_assortment
-  - shopinvader_search_engine_product_stock_state
-  - shopinvader_restapi
-  - shopinvader_api_cart_step
-  - shopinvader_filtered_model
-  - shopinvader_fastapi_auth_jwt
-  - shopinvader_product
-  - shopinvader_product_seo
-  - shopinvader_restapi_invoice
-  - shopinvader_es_product_categ
-  - shopinvader_search_engine_update_product_template_multi_link
-  - sale_cart
-  - shopinvader_search_engine
-  - shopinvader_search_engine_update
-  - shopinvader_product_url
-  - shopinvader_restapi_auth_jwt
-  - shopinvader_product_attribute_set
-  - shopinvader_api_sale
-  - shopinvader_search_engine_product_media
-  - shopinvader_restapi_sale_packaging
-  - shopinvader_address
-  - shopinvader_product_brand_tag
-  - shopinvader_sale_cart
-  - shopinvader_api_signin_jwt
-  - shopinvader_search_engine_update_product_brand_tag
-  - shopinvader_search_engine_product_brand
-  - shopinvader_delivery_state
-  - shopinvader_schema_address
-  - shopinvader_search_engine_update_image
-  - shopinvader_product_brand
-  - shopinvader_sale_state
-  - shopinvader_search_engine_image
   - shopinvader_schema_sale_state
-  - shopinvader_api_address
-  - shopinvader_api_cart
-  - shopinvader_search_engine_product_seo
   - shopinvader_api_security_sale
-  - shopinvader_product_sale_packaging
-  - shopinvader_multi_category
-  - shopinvader_api_sale_loyalty
-  - shopinvader_search_engine_update_product_brand_image
-  - shopinvader_search_engine_update_product_brand
-  - shopinvader_product_description
+  - shopinvader_api_cart_step
+  - shopinvader_sale_cart
+  - shopinvader_product
+  - shopinvader_api_sale
+  - shopinvader_search_engine_update_image
+  - shopinvader_restapi_auth_jwt
+  - shopinvader_product_brand_tag
+  - shopinvader_es_product_categ
+  - shopinvader_search_engine_product_brand
+  - shopinvader_api_signin_jwt
+  - shopinvader_search_engine_product_seo
   - shopinvader_search_engine_product_template_multi_link
-  - shopinvader_schema_sale
-  - shopinvader_api_wishlist
-  - shopinvader_search_engine_update_product_media
-  - shopinvader_base_url
-  - shopinvader_anonymous_partner
   - shopinvader_search_engine_product_brand_image
+  - sale_cart
+  - shopinvader_product_url
+  - shopinvader_delivery_state
+  - shopinvader_restapi
+  - shopinvader_address
+  - shopinvader_search_engine_product_media
+  - shopinvader_api_address
+  - shopinvader_sale_state
+  - shopinvader_search_engine
+  - shopinvader_product_brand
+  - shopinvader_restapi_invoice
+  - shopinvader_search_engine_update_product_media
+  - shopinvader_search_engine_update
+  - shopinvader_product_sale_packaging
+  - shopinvader_restapi_sale_packaging
+  - shopinvader_base_url
+  - shopinvader_schema_sale
+  - shopinvader_filtered_model
+  - shopinvader_search_engine_update_product_brand_image
+  - shopinvader_product_attribute_set
+  - shopinvader_search_engine_product_stock_state
+  - shopinvader_anonymous_partner
+  - shopinvader_schema_address
+  - shopinvader_search_engine_product_stock
   - sale_cart_step
+  - shopinvader_fastapi_auth_jwt
+  - shopinvader_multi_category
+  - shopinvader_search_engine_update_product_brand_tag
+  - shopinvader_api_sale_loyalty
+  - shopinvader_search_engine_update_product_template_multi_link
+  - shopinvader_product_seo
+  - shopinvader_search_engine_assortment
+  - shopinvader_api_cart
+  - shopinvader_api_wishlist
+  - shopinvader_product_description
+  - shopinvader_search_engine_update_product_brand
+  - shopinvader_search_engine_image
   odoo-shopinvader-payment: []
   pattern-import-export: []
