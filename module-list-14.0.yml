@@ -634,6 +634,7 @@ oca:
   - carrier_account_environment
   - delivery_packaging_archive
   - delivery_carrier_package_measure_required
+  - delivery_schenker_quant_package_dimension
   - delivery_correos_express
   - delivery_postlogistics
   dms:
@@ -1219,6 +1220,7 @@ oca:
   - project_mail_chatter
   - project_timeline
   - project_stage_mgmt
+  - project_forecast_line_bokeh_chart
   - sale_project_service_tracking_copy_tasks
   - project_purchase_link
   - project_tag
@@ -1521,6 +1523,7 @@ oca:
   - sale_quick
   - product_supplierinfo_for_customer_elaboration
   - sale_pricelist_from_commitment_date
+  - sale_validity_auto_cancel
   - sale_product_multi_add
   - sale_discount_display_amount
   - sale_promotion_rule
@@ -2114,6 +2117,7 @@ oca:
   - web_widget_child_selector
   - web_widget_many2one_simple
   - web_ir_actions_act_window_message
+  - web_pivot_hide_total
   - web_listview_range_select
   - web_m2x_options_manager
   - web_field_required_invisible_manager
