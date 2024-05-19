@@ -134,6 +134,7 @@ oca:
   - account_invoice_restrict_linked_so
   - account_portal_invoice_search
   - account_receipt_send
+  - account_portal_hide_invoice
   - account_invoice_alternate_payer
   - partner_invoicing_mode
   - account_invoice_date_due
@@ -357,6 +358,7 @@ oca:
   - connector_routific
   - delivery_carrier_multi_zip
   - base_delivery_carrier_label
+  - delivery_carrier_partner
   - delivery_translatable
   - delivery_free_fee_removal
   - delivery_purchase
@@ -577,6 +579,7 @@ oca:
   multi-company:
   - partner_multi_company
   - product_tax_multicompany_default
+  - utm_source_multi_company
   - stock_intercompany
   - product_multi_company
   - multicompany_configuration
@@ -957,6 +960,7 @@ oca:
   - sale_wishlist
   - sale_order_secondary_unit
   - sale_stock_invoice_plan
+  - sale_order_restrict_cancel_existing_invoice
   - sale_substate
   - sale_triple_discount
   - product_form_sale_link
@@ -1037,6 +1041,7 @@ oca:
   - sale_force_whole_invoiceability
   - sale_order_invoice_amount
   - sale_custom_rounding
+  - sale_procurement_group_by_commitment_date
   - sale_product_set
   - sale_order_product_recommendation_secondary_unit
   - sale_purchase_procurement_group_by_line
@@ -1346,6 +1351,7 @@ oca:
   - stock_picking_info_lot
   - sale_order_global_stock_route
   - stock_picking_batch_set_quantity
+  - stock_picking_propagate_scheduled_date
   - product_supplierinfo_for_customer_picking
   - stock_picking_purchase_order_link
   - sale_line_returned_qty
@@ -1407,6 +1413,7 @@ oca:
   - web_m2x_options
   - web_disable_export_group
   - web_drop_target
+  - web_widget_char_size
   - web_widget_domain_editor_dialog
   - web_pivot_computed_measure
   - web_action_conditionable
