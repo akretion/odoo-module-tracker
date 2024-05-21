@@ -402,6 +402,7 @@ oca:
   - delivery_carrier_account
   - delivery_postlogistics
   dms:
+  - dms_storage
   - dms
   - dms_user_role
   - dms_auto_classification
@@ -671,6 +672,7 @@ oca:
   pos:
   - pos_partner_location_abstract
   - pos_order_reorder
+  - pos_payment_method_change_policy
   - pos_order_to_sale_order_sale_financial_risk
   - pos_reset_search
   - pos_payment_terminal
@@ -1114,6 +1116,7 @@ oca:
   - base_group_backend
   - base_external_dbsource_sqlite
   - base_external_system
+  - server_action_navigate
   - base_import_match
   - base_external_dbsource
   - base_user_role_company
