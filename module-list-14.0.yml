@@ -126,6 +126,7 @@ akretion:
   partner-module-information:
   - module_info_partner
   - module_info_pull_request
+  - module_info_migration
   - module_info_push
   - module_info_import
   - module_info_pull_request_timesheet
@@ -902,6 +903,7 @@ oca:
   - mrp_production_byproduct_cost_share
   - mrp_sale_info
   - mrp_package_propagation
+  - mrp_auto_assign
   - mrp_unbuild_valuation_layer_link
   - mrp_component_operation_scrap_reason
   - repair_stock_move
