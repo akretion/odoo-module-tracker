@@ -1218,6 +1218,7 @@ oca:
   - filter_multi_user
   social:
   - mail_activity_reminder
+  - mail_gateway
   - mail_activity_plan
   - mail_layout_preview
   - mail_restrict_follower_selection
@@ -1231,6 +1232,7 @@ oca:
   - base_search_mail_content
   - mass_mailing_list_dynamic
   - fetchmail_thread_default
+  - mail_gateway_whatsapp
   - mass_mailing_event_registration_exclude
   - mass_mailing_contact_active
   - mail_outbound_static
@@ -1241,6 +1243,7 @@ oca:
   - mail_improved_tracking_value
   - mail_drop_target
   - mail_activity_board
+  - mail_gateway_telegram
   - email_template_qweb
   - mail_inline_css
   - mail_layout_force
