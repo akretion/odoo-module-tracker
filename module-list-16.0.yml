@@ -359,6 +359,7 @@ oca:
   - crm_lead_search_archive
   - crm_lead_code
   - crm_stage_probability
+  - marketing_crm_partner
   - crm_won_restrict_per_stage
   - crm_lead_currency
   - crm_partner_assign
@@ -391,6 +392,7 @@ oca:
   - base_delivery_carrier_label
   - delivery_estimated_package_quantity_by_weight
   - delivery_carrier_partner
+  - delivery_purchase
   - delivery_auto_refresh
   - stock_picking_delivery_link
   - delivery_cttexpress
@@ -466,6 +468,7 @@ oca:
   - hr_employee_lastnames
   - hr_department_code
   - hr_employee_calendar_planning
+  - hr_employee_service
   - hr_recruitment_torecruit
   - hr_personal_equipment_request
   - hr_employee_birth_name
@@ -564,6 +567,7 @@ oca:
   - mrp_packaging_default
   - mrp_bom_component_menu
   - mrp_unbuild_move_link
+  - mrp_workcenter_hierarchical
   - mrp_subcontracting_purchase_link
   - mrp_planned_order_matrix
   - mrp_subcontracting_bom_dual_use
@@ -589,6 +593,7 @@ oca:
   - res_company_search_view
   - res_company_active
   - stock_intercompany
+  - product_multi_company
   - stock_intercompany_bidirectional
   - sale_stock_warehouse_multicompany
   - purchase_sale_stock_inter_company
@@ -784,6 +789,7 @@ oca:
   - product_supplierinfo_archive
   - product_standard_price_tax_included
   - product_print_category
+  - product_category_product_qty
   - product_template_has_one_variant
   - product_attribute_model_link
   - product_pricelist_fixed_currency_rate
@@ -1339,7 +1345,7 @@ oca:
   - stock_picking_group_by_max_weight
   - delivery_procurement_group_carrier
   - stock_picking_show_return
-  - stock_valuation_layer_usage
+  - stock_landed_costs_delivery
   - delivery_total_weight_from_packaging
   - stock_picking_restrict_cancel_printed
   - stock_picking_batch_invoice_frequency
@@ -1347,7 +1353,6 @@ oca:
   - stock_picking_show_backorder
   - sale_stock_restocking_fee_invoicing
   - stock_picking_quick
-  - stock_account_product_run_fifo_hook
   - stock_picking_group_by_base
   - stock_picking_warn_message
   - stock_procurement_customer
