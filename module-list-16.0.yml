@@ -167,6 +167,7 @@ oca:
   - account_comment_template
   - account_invoice_production_lot
   - account_invoice_line_report
+  - account_invoice_report_header_repeater
   - account_invoice_report_grouped_by_picking
   - account_invoice_report_due_list
   - account_reporting_weight
@@ -402,6 +403,7 @@ oca:
   - delivery_state
   - stock_picking_report_delivery_cost
   - carrier_account_environment
+  - delivery_carrier_package_measure_required
   - delivery_carrier_account
   - delivery_postlogistics
   dms:
@@ -464,6 +466,7 @@ oca:
   - hr_employee_firstname
   - hr_employee_age
   - hr_employee_medical_examination
+  - hr_employee_group_overview_readonly
   - hr_course
   - hr_employee_lastnames
   - hr_department_code
@@ -620,6 +623,7 @@ oca:
   - partner_category_security_crm
   - partner_pricelist_search
   - purchase_supplier_rank
+  - base_location_nuts
   - partner_address_split
   - partner_identification_eori
   - base_partner_sequence
@@ -1345,6 +1349,7 @@ oca:
   - stock_picking_group_by_max_weight
   - delivery_procurement_group_carrier
   - stock_picking_show_return
+  - stock_valuation_layer_usage
   - stock_landed_costs_delivery
   - delivery_total_weight_from_packaging
   - stock_picking_restrict_cancel_printed
@@ -1353,6 +1358,7 @@ oca:
   - stock_picking_show_backorder
   - sale_stock_restocking_fee_invoicing
   - stock_picking_quick
+  - stock_account_product_run_fifo_hook
   - stock_picking_group_by_base
   - stock_picking_warn_message
   - stock_procurement_customer
@@ -1434,6 +1440,7 @@ oca:
   - fs_base_multi_image
   support: []
   timesheet:
+  - hr_timesheet_sheet_policy_department_manager
   - hr_timesheet_task_stage
   - crm_timesheet
   - hr_timesheet_sheet_attendance
