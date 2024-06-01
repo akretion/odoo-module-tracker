@@ -369,6 +369,7 @@ oca:
   - partner_delivery_zone
   - delivery_state
   - stock_picking_report_delivery_cost
+  - delivery_price_rule_untaxed
   dms:
   - dms_attachment_link
   - dms_field
@@ -635,6 +636,7 @@ oca:
   - partner_deduplicate_acl
   - partner_deduplicate_filter
   - partner_second_lastname
+  - partner_readonly_security
   - partner_company_type
   - partner_fax
   - partner_deduplicate_by_website
