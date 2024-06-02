@@ -173,6 +173,7 @@ oca:
   - account_reporting_weight
   - partner_time_to_pay
   - account_invoice_report_payment_info
+  - account_invoice_report_salesperson
   - account_reporting_volume
   account-invoicing:
   - account_receipt_send
@@ -456,6 +457,7 @@ oca:
   - sale_order_import
   - account_invoice_edifact
   - despatch_advice_import
+  - base_ebill_payment_contract
   - base_wamas_ubl
   - account_invoice_facturx_py3o
   hr:
@@ -853,6 +855,7 @@ oca:
   - purchase_report_shipping_address
   - purchase_report_payment_term
   - purchase_comment_template
+  - purchase_packaging_report
   - purchase_backorder
   purchase-workflow:
   - purchase_order_type_dashboard
@@ -1290,8 +1293,10 @@ oca:
   - stock_quantity_history_location
   - stock_average_daily_sale
   - stock_picking_report_qty_undelivered
+  - stock_picking_report_salesperson
   - stock_report_quantity_by_location
   - delivery_line_sale_line_position
+  - stock_picking_report_external_note
   - stock_card_report
   stock-logistics-tracking:
   - stock_quant_package_multi_reference
