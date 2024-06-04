@@ -285,6 +285,7 @@ oca:
   - account_statement_import_base
   - account_statement_import_online_gocardless
   - account_statement_import_file
+  - account_statement_import_online_ofx
   - account_statement_import_file_reconcile_oca
   brand:
   - product_brand
@@ -928,6 +929,7 @@ oca:
   - purchase_order_general_discount
   - purchase_discount
   - purchase_reorder_control
+  - product_supplierinfo_purchase_contact
   - purchase_force_invoiced
   queue:
   - base_import_async
@@ -1622,5 +1624,10 @@ shopinvader:
   - shopinvader_product_description
   - shopinvader_search_engine_update_product_brand
   - shopinvader_search_engine_image
-  odoo-shopinvader-payment: []
+  odoo-shopinvader-payment:
+  - shopinvader_api_payment_cart
+  - shopinvader_api_payment
+  - shopinvader_api_payment_provider_sips
+  - shopinvader_api_payment_provider_stripe
+  - shopinvader_api_payment_provider_custom
   pattern-import-export: []
