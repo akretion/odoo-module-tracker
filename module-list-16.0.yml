@@ -689,6 +689,7 @@ oca:
   - pos_product_mergeable_line
   - pos_order_to_sale_order_sale_financial_risk
   - pos_reset_search
+  - pos_pricelist_technical
   - pos_payment_terminal
   - pos_sale_order_print
   - pos_order_to_sale_order_report
@@ -944,6 +945,7 @@ oca:
   - queue_job_subscribe
   reporting-engine:
   - report_xml
+  - report_generate_helper
   - report_xlsx_helper
   - sql_export_mail
   - bi_view_editor_spreadsheet_dashboard
@@ -1289,6 +1291,7 @@ oca:
   - product_multi_barcode_stock_menu
   - product_barcode_constraint_per_company
   stock-logistics-reporting:
+  - stock_picking_report_delivery_driver
   - stock_picking_report_incoming_delivery_address
   - stock_picking_report_custom_description
   - stock_picking_report_internal_delivery_address
@@ -1580,6 +1583,7 @@ shopinvader:
   - shopinvader_api_sale
   - shopinvader_search_engine_update_image
   - shopinvader_restapi_auth_jwt
+  - shopinvader_search_engine_product_multi_price
   - shopinvader_product_brand_tag
   - shopinvader_es_product_categ
   - shopinvader_search_engine_product_brand
@@ -1595,6 +1599,7 @@ shopinvader:
   - shopinvader_search_engine_product_media
   - shopinvader_api_address
   - shopinvader_sale_state
+  - shopinvader_api_lead
   - shopinvader_search_engine
   - shopinvader_product_brand
   - shopinvader_restapi_invoice
@@ -1613,12 +1618,14 @@ shopinvader:
   - shopinvader_search_engine_product_stock
   - sale_cart_step
   - shopinvader_fastapi_auth_jwt
+  - shopinvader_search_engine_product_price
   - shopinvader_multi_category
   - shopinvader_search_engine_update_product_brand_tag
   - shopinvader_api_sale_loyalty
   - shopinvader_search_engine_update_product_template_multi_link
   - shopinvader_product_seo
   - shopinvader_search_engine_assortment
+  - shopinvader_search_engine_update_pricelist
   - shopinvader_api_cart
   - shopinvader_api_wishlist
   - shopinvader_product_description
