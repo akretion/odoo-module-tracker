@@ -6,6 +6,7 @@ akretion:
   - proxy_action
   - base_custom_export
   - mrp_raw_material_from_config
+  - account_move_adyen_import
   - purchase_edi_file
   - module_analysis_price
   - sale_delivery_no_invoice_free_shipping
@@ -116,6 +117,7 @@ oca:
   - account_invoice_start_end_dates_move
   account-financial-reporting:
   - account_financial_report
+  - mis_template_financial_report
   - account_tax_balance
   - partner_statement
   - mis_builder_cash_flow
@@ -350,6 +352,7 @@ oca:
   - stock_financial_risk
   crm:
   - crm_lead_vat
+  - crm_location_nuts
   - crm_industry
   - crm_lead_firstname
   - crm_claim_type
@@ -532,6 +535,7 @@ oca:
   - l10n_fr_department
   - l10n_fr_chorus_facturx
   - l10n_fr_siret_lookup
+  - l10n_fr_ecotaxe
   - l10n_fr_account_tax_unece
   - l10n_fr_mis_reports
   - l10n_fr_pos_caisse_ap_ip
@@ -612,6 +616,7 @@ oca:
   - res_company_code
   - account_multicompany_easy_creation
   - mail_multicompany
+  - pos_restaurant_multi_company
   partner-contact:
   - sale_partner_company_group
   - partner_multi_relation
@@ -1297,6 +1302,7 @@ oca:
   - stock_picking_report_internal_delivery_address
   - stock_picking_report_valued
   - stock_quantity_history_location
+  - stock_picking_report_header_repeater
   - stock_average_daily_sale
   - stock_picking_report_qty_undelivered
   - stock_picking_report_salesperson
@@ -1590,6 +1596,7 @@ shopinvader:
   - shopinvader_api_signin_jwt
   - shopinvader_search_engine_product_seo
   - shopinvader_search_engine_product_template_multi_link
+  - shopinvader_api_settings
   - shopinvader_search_engine_product_brand_image
   - sale_cart
   - shopinvader_product_url
@@ -1614,6 +1621,7 @@ shopinvader:
   - shopinvader_product_attribute_set
   - shopinvader_search_engine_product_stock_state
   - shopinvader_anonymous_partner
+  - shopinvader_api_customer
   - shopinvader_schema_address
   - shopinvader_search_engine_product_stock
   - sale_cart_step
