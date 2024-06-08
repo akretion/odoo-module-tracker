@@ -280,6 +280,7 @@ oca:
   - product_brand_stock
   calendar:
   - resource_booking
+  - calendar_export_ics
   - calendar_import_ics
   community-data-files:
   - account_payment_unece
@@ -847,6 +848,7 @@ oca:
   - purchase_deposit_analytic
   - purchase_order_analytic_search
   - purchase_invoice_method
+  - purchase_warn_option
   - purchase_open_qty
   - purchase_rfq_number
   - purchase_line_reassign
@@ -1200,6 +1202,7 @@ oca:
   - mail_debrand
   - fetchmail_mail_activity_team_activity
   - mail_quoted_reply
+  - mail_no_user_assign_notification
   - mail_activity_team
   - mail_optional_autofollow
   - mail_improved_tracking_value
