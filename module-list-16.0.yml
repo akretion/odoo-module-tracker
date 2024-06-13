@@ -192,6 +192,7 @@ oca:
   - stock_picking_return_refund_option
   - account_tax_group_widget_base_amount
   - account_invoice_crm_tag
+  - account_move_auto_post_ref
   - account_invoice_payment_term_date_due
   - account_invoice_supplierinfo_update_discount
   - account_global_discount
@@ -617,6 +618,7 @@ oca:
   - res_company_code
   - account_multicompany_easy_creation
   - mail_multicompany
+  - partner_account_multicompany_default
   - pos_restaurant_multi_company
   partner-contact:
   - sale_partner_company_group
@@ -1080,6 +1082,7 @@ oca:
   - sale_order_product_recommendation_quick_add
   - portal_sale_personal_data_only
   - sale_order_line_delivery_state
+  - sale_attached_product
   - sale_elaboration
   - sale_order_type
   - sale_order_archive
