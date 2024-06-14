@@ -280,6 +280,7 @@ oca:
   - account_move_line_tax_editable
   account-fiscal-rule:
   - account_product_fiscal_classification
+  - account_fiscal_position_autodetect_optional_vies
   - account_multi_vat
   - l10n_eu_oss
   - account_avatax_repair_oca
@@ -1179,6 +1180,7 @@ oca:
   - product_logistics_uom
   - product_secondary_unit
   - product_category_type
+  - product_attribute_variant_rules
   - product_medical
   - product_cost_security
   - product_variant_company
