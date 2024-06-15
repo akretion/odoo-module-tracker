@@ -23,7 +23,16 @@ akretion:
   - account_import_helper
   - partner_import_helper
   odoo-perf:
+  - perf_sale_stock
+  - perf_sale
+  - perf_account
+  - perf_stock
+  - perf_product_inactive
+  - perf_purchase
+  - perf_mail
+  - perf_multicompany
   - perf_product
+  - perf_mrp
   odoo-usability:
   - product_manager_group_stock
   - sale_remove_my_quotation_filter
@@ -246,6 +255,7 @@ oca:
   - account_payment_return_import
   - account_due_list
   - account_payment_return_import_iso20022
+  - account_payment_term_discount
   - account_payment_term_extension
   - account_payment_multi_deduction
   - account_payment_promissory_note
@@ -959,6 +969,7 @@ oca:
   - report_xlsx_helper
   - sql_export_mail
   - bi_view_editor_spreadsheet_dashboard
+  - report_display_name_in_footer
   - report_wkhtmltopdf_param
   - report_py3o
   - report_text_format_option
@@ -1516,6 +1527,7 @@ oca:
   - web_tree_many2one_clickable
   - web_widget_pattern
   - web_advanced_search
+  - web_widget_one2many_tree_line_duplicate
   - web_widget_mpld3_chart
   - web_sheet_full_width
   - web_widget_numeric_step
