@@ -141,6 +141,7 @@ oca:
   - account_chart_update_l10n_eu_oss_oca
   - account_move_name_sequence
   - account_chart_update
+  - account_move_line_repair_info
   - account_lock_date_update
   - account_spread_cost_revenue
   - account_journal_restrict_mode
@@ -240,6 +241,7 @@ oca:
   - sale_timesheet_invoice_description
   - account_invoice_mass_sending
   - account_invoice_default_code_column
+  - account_invoice_refund_reason_skip_anglo_saxon
   - account_invoice_line_default_account
   - account_invoice_currency_taxes
   - account_invoice_discount_display_amount
@@ -258,9 +260,11 @@ oca:
   - account_payment_return_import
   - account_due_list
   - account_payment_return_import_iso20022
+  - account_payment_batch_process
   - account_payment_term_discount
   - account_payment_term_extension
   - account_payment_multi_deduction
+  - account_payment_line
   - account_payment_promissory_note
   - account_payment_widget_amount
   account-reconcile:
@@ -282,6 +286,7 @@ oca:
   - account_banking_sepa_credit_transfer
   - account_banking_sepa_direct_debit
   - account_payment_method_fs_storage
+  - account_payment_order_vendor_email
   - account_payment_order
   - account_payment_purchase
   - account_banking_pain_base
@@ -340,6 +345,8 @@ oca:
   - connector_ecommerce
   connector-prestashop: []
   connector-telephony:
+  - hr_phone
+  - hr_recruitment_phone
   - asterisk_click2dial
   - base_phone
   contract:
@@ -576,6 +583,7 @@ oca:
   - mrp_bom_location
   - mrp_default_workorder_time
   - mrp_sale_info
+  - mrp_unbuild_valuation_layer_link
   - mrp_production_note
   - mrp_subcontracting_skip_no_negative
   - mrp_workcenter_cost
@@ -659,6 +667,7 @@ oca:
   - base_country_state_translatable
   - base_partner_company_group
   - partner_mobile_duplicate_warn
+  - partner_phone_extension
   - partner_contact_birthdate
   - partner_interest_group
   - partner_contact_nationality
@@ -682,6 +691,7 @@ oca:
   - partner_contact_job_position
   - partner_deduplicate_acl
   - partner_deduplicate_filter
+  - partner_duns
   - partner_category_type
   - partner_second_lastname
   - partner_display_name_line_break
@@ -898,6 +908,7 @@ oca:
   - purchase_order_line_receipt_status
   - purchase_line_procurement_group
   - purchase_triple_discount
+  - purchase_vendor_promotion
   - purchase_tag
   - purchase_request
   - purchase_order_hide_receipt_status
@@ -1108,6 +1119,7 @@ oca:
   - sale_order_price_recalculation
   - sale_order_amount_to_invoice
   - sale_order_product_recommendation_packaging_default
+  - sale_block_no_stock
   - sale_order_general_discount_triple
   - sale_payment_sheet
   - sale_exception_holidays_public
@@ -1252,6 +1264,7 @@ oca:
   - date_range
   - sequence_reset_period
   - base_tier_validation_server_action
+  - misc_settings
   - base_tier_validation_formula
   - base_rule_visibility_restriction
   - multi_step_wizard
@@ -1401,6 +1414,7 @@ oca:
   - stock_account_product_run_fifo_hook
   - stock_picking_group_by_base
   - stock_picking_warn_message
+  - stock_picking_date_deadline_syncs_scheduled_date
   - stock_procurement_customer
   - stock_receipt_lot_info
   - stock_picking_mass_action
