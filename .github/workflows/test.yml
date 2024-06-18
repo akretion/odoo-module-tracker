@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        odoo_version: ["14.0", "15.0", "16.0"]
+        odoo_version: ["14.0", "15.0", "16.0", "17.0"]
     env:
       ODOO_VERSION: ${{ matrix.odoo_version }}
     steps:
