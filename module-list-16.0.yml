@@ -438,6 +438,7 @@ oca:
   - dms_field
   - dms_user_role
   - dms
+  - dms_field_auto_classification
   - dms_auto_classification
   e-commerce:
   - website_sale_stock_available
@@ -1052,6 +1053,7 @@ oca:
   - sale_product_set
   - sale_order_lot_generator
   - sale_order_warn_message
+  - sale_order_line_effective_date
   - sale_automatic_workflow_job
   - sale_block_no_stock
   - sale_manual_delivery
@@ -1224,6 +1226,7 @@ oca:
   - jsonifier
   - module_auto_update
   - onchange_helper
+  - base_remote
   - base_name_search_improved
   - datetime_formatter
   - auditlog
