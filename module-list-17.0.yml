@@ -84,6 +84,7 @@ oca:
   bank-statement-import:
   - account_statement_import_base
   - account_statement_import_file
+  - account_statement_import_file_reconcile_oca
   - account_statement_import_sheet_file
   brand:
   - brand
@@ -325,6 +326,7 @@ oca:
   - sale_stock_picking_blocking
   - sale_order_revision
   - sale_force_invoiced
+  - sale_discount_display_amount
   - sale_cancel_reason
   search-engine: []
   server-auth:
@@ -446,7 +448,8 @@ oca:
   - web_widget_plotly_chart
   web-api:
   - endpoint_route_handler
-  wms: []
+  wms:
+  - stock_warehouse_flow
 shopinvader:
   odoo-shopinvader: []
   odoo-shopinvader-payment: []
