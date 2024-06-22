@@ -89,9 +89,11 @@ forgeflow:
   - account_move_line_rma_order_line
   - rma_sale_mrp
   - rma_delivery
+  - rma_refund_reason
   - rma_category
   - rma_purchase
   - rma
+  - rma_account_unreconciled
   - rma_repair
   - rma_sale
   - rma_scrap
@@ -439,6 +441,7 @@ oca:
   - dms_user_role
   - dms
   - dms_field_auto_classification
+  - hr_dms_field
   - dms_auto_classification
   e-commerce:
   - website_sale_stock_available
@@ -1326,6 +1329,7 @@ oca:
   - email_template_qweb
   - mail_show_follower
   - mail_partner_opt_out
+  - base_user_signature
   - mail_improved_tracking_value
   stock-logistics-barcode:
   - product_packaging_multi_barcode
@@ -1365,6 +1369,7 @@ oca:
   - stock_location_product_restriction
   - stock_product_qty_by_packaging
   - stock_mts_mto_rule
+  - stock_valuation_layer_total_value
   - scrap_reason_code
   - stock_helper
   - stock_location_zone
