@@ -1,10 +1,53 @@
 akretion:
-  bank-statement-reconcile-simple: []
+  bank-statement-reconcile-simple:
+  - account_statement_completion_label_simple_sale
+  - account_statement_completion_label_simple
 forgeflow:
-  stock-rma: []
+  stock-rma:
+  - rma_sale_force_invoiced
+  - rma_account
+  - rma_put_away
+  - rma_sale_operating_unit
+  - rma_purchase
+  - rma_purchase_operating_unit
+  - rma
+  - rma_readonly
+  - rma_sale_analytic
+  - rma_analytic
+  - rma_repair
+  - rma_repair_refurbish
+  - rma_account_readonly
+  - rma_sale
+  - rma_filter_lot
+  - rma_operating_unit
+  - rma_scrap
+  - rma_purchase_analytic
 oca:
-  account-analytic: []
-  account-closing: []
+  account-analytic:
+  - procurement_mto_analytic
+  - analytic_partner
+  - purchase_analytic
+  - product_analytic
+  - purchase_stock_analytic
+  - account_analytic_parent
+  - account_analytic_required
+  - account_analytic_tag_default
+  - mrp_analytic
+  - partner_analytic
+  - analytic_base_department
+  - purchase_request_analytic
+  - account_move_update_analytic
+  - stock_analytic
+  - analytic_tag_dimension
+  - account_analytic_sequence
+  - pos_analytic_by_config
+  account-closing:
+  - account_cutoff_accrual_subscription
+  - account_cutoff_start_end_dates
+  - account_invoice_start_end_dates
+  - account_cutoff_base
+  - account_cutoff_accrual_picking
+  - account_multicurrency_revaluation
   account-financial-reporting:
   - partner_statement
   - account_tax_balance
@@ -216,8 +259,19 @@ oca:
   - account_statement_import_txt_xlsx
   - account_statement_import_online_paypal
   - account_statement_import_online_gocardless
-  brand: []
-  calendar: []
+  brand:
+  - brand
+  - sale_brand
+  - analytic_brand
+  - contract_brand
+  - brand_external_report_layout
+  - product_brand_stock
+  - product_brand
+  - account_brand
+  calendar:
+  - calendar_import_ics
+  - calendar_export_ics
+  - resource_booking
   community-data-files:
   - base_currency_iso_4217
   - account_tax_unece
@@ -250,7 +304,15 @@ oca:
   - contract
   - product_contract
   - subscription_oca
-  credit-control: []
+  credit-control:
+  - account_credit_control
+  - partner_risk_insurance
+  - account_invoice_overdue_reminder
+  - account_financial_risk
+  - sale_payment_sheet_financial_risk
+  - account_payment_return_financial_risk
+  - sale_financial_risk_info
+  - sale_financial_risk
   crm:
   - crm_industry
   - crm_multicompany_reporting_currency
@@ -276,7 +338,9 @@ oca:
   currency:
   - currency_rate_update_xe
   - currency_rate_update
-  data-protection: []
+  data-protection:
+  - privacy_consent
+  - privacy
   delivery-carrier:
   - delivery_free_fee_removal
   - delivery_package_number
@@ -297,7 +361,14 @@ oca:
   - delivery_translatable
   - base_delivery_carrier_label
   - delivery_price_rule_untaxed
-  dms: []
+  dms:
+  - dms_attachment_link
+  - dms_field
+  - dms_user_role
+  - dms
+  - dms_field_auto_classification
+  - hr_dms_field
+  - dms_auto_classification
   e-commerce:
   - website_sale_stock_available
   - website_sale_cart_expire
@@ -344,6 +415,7 @@ oca:
   edi:
   - edi_voxel_stock_picking_oca
   - edi_voxel_stock_picking_secondary_unit_oca
+  - test_base_import_pdf_by_template
   - edi_backend_partner_oca
   - edi_storage_oca
   - edi_stock_oca
@@ -354,6 +426,7 @@ oca:
   - edi_exchange_template_oca
   - edi_voxel_sale_secondary_unit_oca
   - edi_voxel_oca
+  - base_import_pdf_by_template
   - edi_voxel_sale_order_import_oca
   - edi_account_oca
   - account_einvoice_generate
@@ -394,8 +467,26 @@ oca:
   - hr_employee_medical_examination
   - hr_employee_firstname
   - hr_employee_calendar_planning
-  intrastat-extrastat: []
-  knowledge: []
+  intrastat-extrastat:
+  - intrastat_product_hscodes_import
+  - product_harmonized_system
+  - product_harmonized_system_stock
+  - intrastat_product_generic
+  - intrastat_product
+  - intrastat_base
+  - product_harmonized_system_delivery
+  knowledge:
+  - document_page_project
+  - document_page_reference
+  - document_page_tag
+  - attachment_zipped_download
+  - document_page_access_group
+  - document_url
+  - knowledge
+  - document_page_group
+  - document_page
+  - attachment_preview
+  - document_page_approval
   l10n-brazil:
   - l10n_br_hr
   - l10n_br_cnpj_search
@@ -482,7 +573,23 @@ oca:
   - mis_builder
   - mis_builder_budget
   - mis_builder_demo
-  multi-company: []
+  multi-company:
+  - product_multi_company
+  - mail_template_multi_company
+  - account_multicompany_easy_creation
+  - purchase_sale_inter_company
+  - partner_multi_company
+  - product_category_inter_company
+  - multicompany_configuration
+  - calendar_event_multi_company
+  - account_invoice_inter_company
+  - mail_multicompany
+  - res_company_code
+  - base_multi_company
+  - purchase_sale_stock_inter_company
+  - stock_intercompany
+  - utm_source_multi_company
+  - product_tax_multicompany_default
   partner-contact:
   - account_partner_company_group
   - partner_company_group
@@ -767,7 +874,13 @@ oca:
   - purchase_order_qty_by_product_category
   - purchase_order_approved
   - purchase_allowed_product
-  queue: []
+  queue:
+  - base_export_async
+  - queue_job_cron
+  - queue_job_cron_jobrunner
+  - queue_job
+  - test_queue_job
+  - queue_job_subscribe
   reporting-engine:
   - base_comment_template
   - report_wkhtmltopdf_param
@@ -791,8 +904,28 @@ oca:
   - report_qr
   - sql_request_abstract
   - report_py3o
-  rest-framework: []
-  rma: []
+  rest-framework:
+  - extendable
+  - graphql_base
+  - base_rest_demo
+  - base_rest_auth_user_service
+  - base_rest_auth_api_key
+  - base_rest_datamodel
+  - datamodel
+  - base_rest_pydantic
+  - rest_log
+  - graphql_demo
+  - base_rest
+  - model_serializer
+  - pydantic
+  rma:
+  - product_warranty
+  - rma_sale_mrp
+  - rma_delivery
+  - stock_production_lot_warranty
+  - rma
+  - rma_sale
+  - website_rma
   sale-financial: []
   sale-reporting:
   - sale_report_delivered
@@ -1243,8 +1376,37 @@ oca:
   - stock_remote_measure
   - delivery_procurement_group_carrier
   - stock_force_assign_by_type
-  storage: []
-  timesheet: []
+  storage:
+  - storage_backend_sftp
+  - storage_media
+  - storage_thumbnail
+  - storage_backend
+  - storage_image_backend_migration
+  - storage_backend_s3
+  - storage_backend_ftp
+  - storage_image
+  - storage_import_image_advanced
+  - storage_image_product
+  - storage_file
+  timesheet:
+  - sale_timesheet_task_exclude
+  - sale_timesheet_line_exclude
+  - hr_timesheet_sheet_policy_project_manager
+  - hr_timesheet_sheet_period
+  - hr_timesheet_time_type
+  - sale_timesheet_rounded
+  - hr_timesheet_sheet_begin_end
+  - hr_timesheet_sheet
+  - hr_timesheet_sheet_autodraft
+  - hr_timesheet_begin_end
+  - hr_timesheet_sheet_attendance
+  - hr_timesheet_task_stage
+  - hr_timesheet_task_required
+  - hr_timesheet_sheet_no_create
+  - hr_timesheet_task_domain
+  - hr_employee_product
+  - crm_timesheet
+  - hr_employee_cost_history
   web:
   - web_notify
   - web_time_range_menu_custom
@@ -1297,6 +1459,8 @@ oca:
   - web_widget_remote_measure
   - web_copy_confirm
   - web_ir_actions_act_multi
-  web-api: []
-  wms: []
+  web-api:
+  - webservice
+  wms:
+  - delivery_carrier_warehouse
 shopinvader: {}
