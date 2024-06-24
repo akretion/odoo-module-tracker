@@ -1,5 +1,6 @@
 akretion:
-  account-move-import: []
+  account-move-import:
+  - account_move_csv_import
   ak-odoo-incubator:
   - purchase_edi_file
   - module_analysis_price
@@ -12,9 +13,26 @@ akretion:
   - account_move_dalenys_import
   - proxy_action
   - account_refund_no_business_field
-  bank-statement-reconcile-simple: []
-  odoo-import-helper: []
-  odoo-perf: []
+  bank-statement-reconcile-simple:
+  - account_statement_completion_label_simple_sale
+  - account_statement_completion_label_simple
+  odoo-import-helper:
+  - partner_import_helper
+  - account_import_helper
+  - import_helper_base
+  - product_import_helper
+  - account_ir_property_helper
+  odoo-perf:
+  - perf_product
+  - perf_mail
+  - perf_sale
+  - perf_mrp
+  - perf_product_inactive
+  - perf_stock
+  - perf_sale_stock
+  - perf_purchase
+  - perf_multicompany
+  - perf_account
   odoo-usability:
   - base_partner_one2many_phone
   - base_company_extension
@@ -59,10 +77,54 @@ akretion:
   - sale_confirm_wizard
   - stock_product_tree_default
 forgeflow:
-  stock-rma: []
+  stock-rma:
+  - rma_sale_force_invoiced
+  - rma_account
+  - rma_put_away
+  - account_move_line_rma_order_line
+  - rma_sale_mrp
+  - rma_delivery
+  - rma_refund_reason
+  - rma_category
+  - rma_purchase
+  - rma
+  - rma_account_unreconciled
+  - rma_repair
+  - rma_sale
+  - rma_scrap
 oca:
-  account-analytic: []
-  account-closing: []
+  account-analytic:
+  - account_analytic_account_tag
+  - account_analytic_root
+  - stock_landed_costs_analytic
+  - purchase_analytic
+  - product_analytic
+  - purchase_stock_analytic
+  - account_analytic_parent
+  - account_analytic_required
+  - mrp_stock_analytic
+  - analytic_distribution_widget_remove_save
+  - account_analytic_tag
+  - hr_department_analytic
+  - hr_timesheet_analytic_tag
+  - product_analytic_purchase
+  - purchase_analytic_tag
+  - account_analytic_tag_distribution
+  - account_move_update_analytic
+  - sale_analytic_tag
+  - stock_analytic
+  - stock_picking_analytic
+  - hr_expense_analytic_tag
+  - account_analytic_sequence
+  - pos_analytic_by_config
+  account-closing:
+  - account_cutoff_accrual_subscription
+  - account_cutoff_start_end_dates
+  - account_invoice_start_end_dates_move
+  - account_invoice_start_end_dates
+  - account_cutoff_base
+  - account_cutoff_picking
+  - account_multicurrency_revaluation
   account-financial-reporting:
   - partner_statement
   - account_tax_balance
@@ -244,8 +306,20 @@ oca:
   - account_statement_import_online_gocardless
   - account_statement_import_online_ofx
   - account_statement_import_online_qonto
-  brand: []
-  calendar: []
+  brand:
+  - product_brand_mrp
+  - brand
+  - sale_brand
+  - product_brand_purchase
+  - brand_external_report_layout
+  - product_brand_tag
+  - product_brand_stock
+  - product_brand
+  - product_brand_stock_account
+  - account_brand
+  - partner_brand
+  calendar:
+  - resource_booking
   community-data-files:
   - base_currency_iso_4217
   - l10n_eu_nace
@@ -282,7 +356,19 @@ oca:
   - contract
   - contract_queue_job
   - subscription_oca
-  credit-control: []
+  credit-control:
+  - account_credit_control
+  - stock_financial_risk
+  - partner_risk_insurance
+  - account_credit_control_dunning_fees
+  - account_invoice_overdue_warn_sale
+  - account_invoice_overdue_reminder
+  - account_invoice_overdue_warn
+  - account_financial_risk
+  - sale_payment_sheet_financial_risk
+  - account_payment_return_financial_risk
+  - sale_financial_risk_info
+  - sale_financial_risk
   crm:
   - crm_industry
   - crm_partner_assign
@@ -309,7 +395,9 @@ oca:
   - currency_rate_update_xe
   - currency_old_rate_notify
   - currency_rate_update
-  data-protection: []
+  data-protection:
+  - privacy_consent
+  - privacy
   delivery-carrier:
   - delivery_estimated_package_quantity_by_weight
   - delivery_driver
@@ -343,7 +431,14 @@ oca:
   - delivery_postlogistics
   - delivery_roulier
   - base_delivery_carrier_label
-  dms: []
+  dms:
+  - dms_storage
+  - dms_field
+  - dms_user_role
+  - dms
+  - dms_field_auto_classification
+  - hr_dms_field
+  - dms_auto_classification
   e-commerce:
   - website_sale_stock_available
   - website_sale_cart_expire
@@ -415,8 +510,29 @@ oca:
   - hr_employee_medical_examination
   - hr_employee_firstname
   - hr_employee_calendar_planning
-  intrastat-extrastat: []
-  knowledge: []
+  intrastat-extrastat:
+  - intrastat_product_hscodes_import
+  - product_harmonized_system
+  - product_harmonized_system_stock
+  - intrastat_product_generic
+  - intrastat_delivery
+  - intrastat_product
+  - intrastat_base
+  - product_harmonized_system_delivery
+  knowledge:
+  - document_knowledge
+  - document_url_google_drive
+  - document_page_project
+  - document_page_reference
+  - document_page_partner
+  - document_page_tag
+  - attachment_zipped_download
+  - document_page_access_group
+  - document_url
+  - document_page_access_group_user_role
+  - document_page_group
+  - document_page
+  - document_page_approval
   l10n-brazil:
   - l10n_br_hr
   - l10n_br_coa
@@ -501,7 +617,33 @@ oca:
   - mis_builder
   - mis_builder_budget
   - mis_builder_demo
-  multi-company: []
+  multi-company:
+  - partner_account_multicompany_default
+  - product_multi_company
+  - mail_template_multi_company
+  - account_multicompany_easy_creation
+  - purchase_sale_inter_company
+  - sale_product_company
+  - res_company_search_view
+  - pos_restaurant_multi_company
+  - partner_multi_company
+  - product_category_company
+  - product_account_multicompany_default
+  - account_invoice_inter_company
+  - purchase_sale_container_deposit_inter_company
+  - mail_multicompany
+  - res_company_code
+  - company_dependent_flag
+  - sale_stock_warehouse_multicompany
+  - res_company_category
+  - base_multi_company
+  - product_category_company_favorite
+  - purchase_sale_stock_inter_company
+  - stock_intercompany_bidirectional
+  - stock_intercompany
+  - account_reconcile_model_multicompany_propagate
+  - product_tax_multicompany_default
+  - res_company_active
   partner-contact:
   - account_partner_company_group
   - partner_company_group
@@ -829,7 +971,17 @@ oca:
   - purchase_order_approved
   - purchase_product_packaging_container_deposit
   - purchase_allowed_product
-  queue: []
+  queue:
+  - base_export_async
+  - queue_job_cron
+  - queue_job_cron_jobrunner
+  - queue_job
+  - test_queue_job
+  - base_import_async
+  - queue_job_subscribe
+  - queue_job_web_notify
+  - queue_job_batch
+  - test_queue_job_batch
   reporting-engine:
   - base_comment_template
   - report_wkhtmltopdf_param
@@ -861,8 +1013,27 @@ oca:
   - sql_request_abstract
   - report_py3o
   - report_substitute
-  rest-framework: []
-  rma: []
+  rest-framework:
+  - extendable
+  - graphql_base
+  - extendable_fastapi
+  - base_rest_demo
+  - base_rest_auth_api_key
+  - base_rest_datamodel
+  - fastapi_auth_jwt
+  - datamodel
+  - base_rest_pydantic
+  - fastapi
+  - rest_log
+  - graphql_demo
+  - base_rest
+  - fastapi_auth_jwt_demo
+  - pydantic
+  rma:
+  - product_warranty
+  - rma_sale_mrp
+  - rma
+  - rma_sale
   sale-financial: []
   sale-reporting:
   - sale_report_delivered
@@ -1182,7 +1353,8 @@ oca:
   - stock_quantity_history_location
   - stock_picking_report_external_note
   - stock_picking_report_valued
-  stock-logistics-tracking: []
+  stock-logistics-tracking:
+  - stock_quant_package_multi_reference
   stock-logistics-warehouse:
   - stock_picking_procure_method
   - stock_picking_show_linked
@@ -1313,8 +1485,44 @@ oca:
   - stock_picking_group_by_partner_by_carrier_by_date
   - stock_picking_product_link
   - delivery_procurement_group_carrier
-  storage: []
-  timesheet: []
+  storage:
+  - storage_backend_sftp
+  - fs_image
+  - fs_image_thumbnail
+  - storage_backend
+  - fs_base_multi_image
+  - fs_file
+  - fs_base_multi_media
+  - image_tag
+  - fs_attachment
+  - fs_product_multi_media
+  - fs_storage
+  - storage_file
+  - fs_file_demo
+  - fs_product_multi_image
+  - fs_product_brand_multi_image
+  timesheet:
+  - sale_timesheet_task_exclude
+  - sale_timesheet_line_exclude
+  - hr_timesheet_sheet_policy_project_manager
+  - project_task_analytic_propagation
+  - hr_timesheet_sheet_policy_department_manager
+  - hr_timesheet_time_type
+  - sale_timesheet_rounded
+  - hr_timesheet_sheet
+  - project_task_stage_allow_timesheet
+  - hr_timesheet_sheet_autodraft
+  - hr_timesheet_begin_end
+  - hr_timesheet_name_customer
+  - hr_timesheet_employee_analytic_tag
+  - hr_timesheet_sheet_attendance
+  - hr_timesheet_task_stage
+  - hr_timesheet_task_required
+  - hr_timesheet_task_domain
+  - crm_timesheet
+  - sale_timesheet_invoice_link
+  - hr_employee_cost_history
+  - hr_timesheet_report
   web:
   - web_notify
   - web_widget_image_webcam
@@ -1371,9 +1579,116 @@ oca:
   - web_widget_plotly_chart
   - web_dark_mode
   - web_ir_actions_act_multi
-  web-api: []
-  wms: []
+  web-api:
+  - endpoint_route_handler
+  - endpoint
+  - endpoint_auth_api_key
+  - webservice
+  wms:
+  - stock_release_channel_batch_mode_commercial_partner
+  - stock_warehouse_flow
+  - shopfloor_mobile
+  - stock_release_channel_plan_process_end_time
+  - stock_release_channel_plan
+  - stock_available_to_promise_release_block
+  - shopfloor_rest_log
+  - stock_picking_type_shipping_policy
+  - stock_release_channel_show_weight
+  - shopfloor_mobile_base_auth_api_key
+  - shopfloor_batch_automatic_creation
+  - stock_available_to_promise_release
+  - shopfloor_workstation
+  - shopfloor_base
+  - stock_release_channel_partner_public_holidays
+  - stock_release_channel_shipment_lead_time
+  - stock_picking_batch_creation
+  - stock_release_channel_shipment_advice_process_end_time
+  - stock_release_channel_auto_release
+  - stock_release_channel_geoengine
+  - stock_release_channel_shipment_advice
+  - shopfloor_mobile_base
+  - shopfloor_workstation_mobile
+  - stock_release_channel_process_end_time
+  - stock_dynamic_routing
+  - stock_release_channel_cutoff
+  - stock_storage_type_putaway_abc
+  - stock_picking_completion_info
+  - stock_storage_type
+  - shopfloor
+  - stock_release_channel_propagate_channel_picking
+  - delivery_carrier_warehouse
+  - sale_stock_available_to_promise_release
+  - stock_release_channel_partner_delivery_window
+  - stock_release_channel_shipment_advice_toursolver
+  - stock_available_to_promise_release_exclude_location
+  - stock_release_channel
+  - sale_stock_available_to_promise_release_block
+  - stock_release_channel_delivery
+  - stock_release_channel_show_volume
 shopinvader:
-  odoo-shopinvader: []
-  odoo-shopinvader-payment: []
+  odoo-shopinvader:
+  - shopinvader_address
+  - shopinvader_search_engine_product_multi_price
+  - shopinvader_product_description
+  - shopinvader_search_engine_update_product_brand_tag
+  - shopinvader_multi_category
+  - shopinvader_sale_state
+  - shopinvader_search_engine_update
+  - shopinvader_api_lead
+  - shopinvader_search_engine_update_image
+  - shopinvader_search_engine_product_brand_image
+  - shopinvader_search_engine_product_template_multi_link
+  - shopinvader_restapi
+  - shopinvader_search_engine_update_pricelist
+  - shopinvader_search_engine
+  - shopinvader_api_cart_step
+  - shopinvader_product_brand_tag
+  - shopinvader_api_cart
+  - shopinvader_product_attribute_set
+  - shopinvader_fastapi_auth_jwt
+  - shopinvader_api_wishlist
+  - shopinvader_search_engine_product_stock
+  - shopinvader_delivery_state
+  - shopinvader_search_engine_product_media
+  - shopinvader_search_engine_update_product_brand
+  - shopinvader_anonymous_partner
+  - shopinvader_restapi_auth_jwt
+  - shopinvader_product
+  - sale_cart_step
+  - sale_cart
+  - shopinvader_filtered_model
+  - shopinvader_product_sale_packaging
+  - shopinvader_base_url
+  - shopinvader_search_engine_product_seo
+  - shopinvader_api_address
+  - shopinvader_product_url
+  - shopinvader_restapi_sale_packaging
+  - shopinvader_product_seo
+  - shopinvader_api_sale
+  - shopinvader_product_brand
+  - shopinvader_api_security_sale
+  - shopinvader_search_engine_product_brand
+  - shopinvader_api_signin_jwt
+  - shopinvader_sale_cart
+  - shopinvader_search_engine_image
+  - shopinvader_search_engine_assortment
+  - shopinvader_search_engine_update_product_template_multi_link
+  - shopinvader_es_product_categ
+  - shopinvader_api_sale_loyalty
+  - shopinvader_search_engine_product_stock_state
+  - shopinvader_search_engine_update_product_media
+  - shopinvader_search_engine_update_product_brand_image
+  - shopinvader_restapi_invoice
+  - shopinvader_api_settings
+  - shopinvader_schema_sale_state
+  - shopinvader_schema_address
+  - shopinvader_api_customer
+  - shopinvader_search_engine_product_price
+  - shopinvader_schema_sale
+  odoo-shopinvader-payment:
+  - shopinvader_api_payment_cart
+  - shopinvader_api_payment_provider_custom
+  - shopinvader_api_payment
+  - shopinvader_api_payment_provider_stripe
+  - shopinvader_api_payment_provider_sips
   pattern-import-export: []
