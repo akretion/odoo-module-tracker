@@ -1,29 +1,40 @@
 #!/usr/bin/python3
 
 import ast
+import contextlib
 import os
 import pathlib
+import sqlite3
 import subprocess
 import yaml
 
-CLONE_DIRECTORY = pathlib.Path("analyse")
-OUTPUT_DIRECTORY = pathlib.Path("output")
+BASE_DIRECTORY = pathlib.Path(__file__).resolve().parent
+CLONE_DIRECTORY = BASE_DIRECTORY / "analyse"
+OUTPUT_DIRECTORY = BASE_DIRECTORY / "output"
+CONFIG_FILE = BASE_DIRECTORY / "config.yml"
 
 
 def run(cwd, *args, **kwargs):
     """Shortcut to run a command in a given directory."""
     kwargs.setdefault("check", True)
     kwargs.setdefault("cwd", cwd)
-    subprocess.run(args, **kwargs)
+    return subprocess.run(args, **kwargs)
+
+
+def run_read(cwd, *args, **kwargs):
+    """Shortcut to run a command in a given directory."""
+    return run(cwd, *args, **kwargs, stdout=subprocess.PIPE).stdout.decode("utf-8")
 
 
 def get_repo(org, repo, version):
     """Clone or update a repo to the given version."""
     path = CLONE_DIRECTORY / org / repo
     if path.exists():
+        print(f"Updating {org}/{repo}@{version}")
         run(path, "git", "checkout", version)
         run(path, "git", "pull")
     else:
+        print(f"Cloning {org}/{repo}@{version}")
         path = CLONE_DIRECTORY / org
         path.mkdir(exist_ok=True)
         run(path, "git", "clone", f"https://github.com/{org}/{repo}", "-b", version)
@@ -61,16 +72,253 @@ def analyse_module(path):
 def analyse_repo(path):
     """Analyse a repo and return a dict of module name and its data."""
     return {
-        module: result
+        module.name: result
         for module in path.iterdir()
         for result in [analyse_module(path / module)]
         if result
     }
 
 
+def make_schema(db):
+    """Create the database schema."""
+    print("Creating database schema (if not exists)")
+    db.execute("PRAGMA foreign_keys = ON")
+    db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS "commit" (
+            id INTEGER PRIMARY KEY,
+            repo_id INTEGER,
+            hash TEXT,
+            date TEXT,
+            author TEXT,
+            mail TEXT,
+            message TEXT,
+            FOREIGN KEY(repo_id) REFERENCES repo(id),
+            UNIQUE(repo_id, hash)
+        )
+        """
+    )
+    db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS repo (
+            id INTEGER PRIMARY KEY,
+            org TEXT,
+            repo TEXT,
+            UNIQUE(org, repo)
+        )
+        """
+    )
+    db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS module (
+            id INTEGER PRIMARY KEY,
+            repo_id INTEGER,
+            name TEXT,
+            title TEXT,
+            author TEXT,
+            depends TEXT,
+            maintainers TEXT,
+            development_status TEXT,
+            summary TEXT,
+            FOREIGN KEY(repo_id) REFERENCES repo(id)
+            UNIQUE(repo_id, name)
+        )
+        """
+    )
+    db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS module_commit (
+            commit_id INTEGER,
+            module_id INTEGER,
+            FOREIGN KEY(commit_id) REFERENCES "commit"(id),
+            FOREIGN KEY(module_id) REFERENCES module(id),
+            PRIMARY KEY(commit_id, module_id)
+        )
+        """
+    )
+
+
+@contextlib.contextmanager
+def sqlite_db(path, clean=False):
+    """Context manager for the sqlite database."""
+    if clean and path.exists():
+        path.unlink()
+    try:
+        conn = sqlite3.connect(path)
+    except sqlite3.Error:
+        # Try again from an empty db
+        if path.exists():
+            path.unlink()
+        conn = sqlite3.connect(path)
+
+    db = conn.cursor()
+    make_schema(db)
+    try:
+        yield db
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def fetch(db, query, *args):
+    """Fetch a single row from the database."""
+    return db.execute(query, args).fetchone()
+
+
+def scalar(db, query, *args):
+    """Fetch a single value from the database."""
+    res = fetch(db, query, *args)
+    return res[0] if res else None
+
+
+def upsert_repo(db, org, repo):
+    """Get the repo id from the database, or insert it if it doesn't exist."""
+    return scalar(
+        db,
+        """
+        INSERT INTO repo (org, repo)
+        VALUES (?, ?)
+        ON CONFLICT(org, repo)
+        DO UPDATE SET
+            org = EXCLUDED.org,
+            repo = EXCLUDED.repo
+        RETURNING id
+        """,
+        org,
+        repo,
+    )
+
+
+def upsert_module(db, repo_id, module_name, module_data):
+    """Get the module id from the database, or insert it if it doesn't exist."""
+    return scalar(
+        db,
+        """
+        INSERT INTO module (repo_id, name, title, author, depends, maintainers, development_status, summary)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(repo_id, name)
+        DO UPDATE SET
+            title = EXCLUDED.title,
+            author = EXCLUDED.author,
+            depends = EXCLUDED.depends,
+            maintainers = EXCLUDED.maintainers,
+            development_status = EXCLUDED.development_status,
+            summary = EXCLUDED.summary
+        RETURNING id
+        """,
+        repo_id,
+        module_name,
+        module_data["name"],
+        module_data["author"],
+        ",".join(module_data["depends"]),
+        ",".join(module_data["maintainers"]),
+        module_data["development_status"],
+        module_data["summary"],
+    )
+
+
+def upsert_commit(
+    db, repo_id, commit_hash, commit_date, commit_author, commit_mail, commit_message
+):
+    """Get the commit id from the database, or insert it if it doesn't exist."""
+    return scalar(
+        db,
+        """
+        INSERT INTO "commit" (repo_id, hash, date, author, mail, message)
+        VALUES (?, ?, ?, ?, ?, ?)
+        ON CONFLICT(repo_id, hash)
+        DO UPDATE SET
+            date = EXCLUDED.date,
+            author = EXCLUDED.author,
+            mail = EXCLUDED.mail,
+            message = EXCLUDED.message
+        RETURNING id
+        """,
+        repo_id,
+        commit_hash,
+        commit_date,
+        commit_author,
+        commit_mail,
+        commit_message,
+    )
+
+
+def insert_module_commit(db, commit_id, module_id):
+    """Insert a module commit in the database."""
+    db.execute(
+        """
+        INSERT INTO module_commit (commit_id, module_id)
+        VALUES (?, ?)
+        """,
+        (
+            commit_id,
+            module_id,
+        ),
+    )
+
+
+def fetch_last_commit(db, repo_id):
+    """Fetch the last commit of a repo."""
+    # Use order by id and not date since commits can be out of order
+    return scalar(
+        db,
+        """
+        SELECT hash
+        FROM "commit"
+        WHERE repo_id = ?
+        ORDER BY id DESC
+        LIMIT 1
+        """,
+        repo_id,
+    )
+
+
+def analyse_commits(db, repo_id, path, modules):
+    """Analyse the commits of a repo and store it in the database."""
+    # Update modules
+    module_ids = {
+        module_name: upsert_module(db, repo_id, module_name, module_data)
+        for module_name, module_data in modules.items()
+    }
+
+    last_commit = fetch_last_commit(db, repo_id)
+    target = f"{last_commit}..HEAD" if last_commit else "HEAD"
+    print(f"Analyzing commits for {path.name} ({target})")
+    rev_list = run_read(path, "git", "rev-list", target).strip()
+    if not rev_list:
+        return
+
+    commits = rev_list.split("\n")
+    for commit in reversed(commits):
+        commit_data = run_read(
+            path,
+            "git",
+            "show",
+            "--pretty=format:%aI%x18%an%x18%s%x18%ae",
+            "--name-only",
+            commit,
+        ).strip()
+        header, *files = commit_data.split("\n")
+        commit_date, commit_author, commit_message, commit_mail = header.split(
+            "\x18", 3
+        )
+        commit_id = upsert_commit(
+            db, repo_id, commit, commit_date, commit_author, commit_mail, commit_message
+        )
+        modules = {
+            module
+            for file in files
+            for module in [file.split("/")[0]]
+            if module in module_ids
+        }
+        for module in modules:
+            insert_module_commit(db, commit_id, module_ids[module])
+
+
 def main():
+    """Run the main analysis, writing the results to yaml files and sqlite db."""
     result = {}
-    with open("config.yml", "r") as f:
+    with open(CONFIG_FILE, "r") as f:
         config = yaml.safe_load(f)
 
     version = os.environ.get("ODOO_VERSION", "14.0")
@@ -80,22 +328,26 @@ def main():
         for org_repo in restrict_modules.split(",")
         if restrict_modules
     }
-
-    CLONE_DIRECTORY.mkdir(exist_ok=True)
-
-    for org, repos in config.items():
-        result[org] = {}
-        for repo in repos:
-            if restrict and (org, repo) not in restrict:
-                continue
-            try:
-                path = get_repo(org, repo, version)
-            except Exception as e:
-                print("Fail to fetch repo skip it", e)
-                continue
-            result[org][repo] = analyse_repo(path)
+    clean_db = os.environ.get("CLEAN_DB")
 
     OUTPUT_DIRECTORY.mkdir(exist_ok=True)
+    CLONE_DIRECTORY.mkdir(exist_ok=True)
+
+    with sqlite_db(OUTPUT_DIRECTORY / f"{version}.db", clean=clean_db) as db:
+
+        for org, repos in config.items():
+            result[org] = {}
+            for repo in repos:
+                if restrict and (org, repo) not in restrict:
+                    continue
+                try:
+                    path = get_repo(org, repo, version)
+                except Exception as e:
+                    print("Fail to fetch repo skip it", e)
+                    continue
+                result[org][repo] = analyse_repo(path)
+
+                analyse_commits(db, upsert_repo(db, org, repo), path, result[org][repo])
 
     data = yaml.safe_dump(result)
     with open(OUTPUT_DIRECTORY / f"{version}.yml", "w") as output:
