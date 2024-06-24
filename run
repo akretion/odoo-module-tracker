@@ -13,13 +13,11 @@ RESULT = {}
 def get_path(orga, repo):
     return f"{DIRECTORY}/{orga}/{repo}"
 
+
 def get_repo(orga, repo, version):
     path = get_path(orga, repo)
     if os.path.exists(path):
-        subprocess.run(
-            ["git", "checkout", version],
-            cwd=path,
-            check=True)
+        subprocess.run(["git", "checkout", version], cwd=path, check=True)
         subprocess.run(["git", "pull"], cwd=path, check=True)
     else:
         path = f"{DIRECTORY}/{orga}"
@@ -28,7 +26,9 @@ def get_repo(orga, repo, version):
         subprocess.run(
             ["git", "clone", f"https://github.com/{orga}/{repo}", "-b", version],
             cwd=path,
-            check=True)
+            check=True,
+        )
+
 
 def analyse_repo(orga, repo, version):
     path = get_path(orga, repo)
@@ -51,10 +51,10 @@ def analyse_repo(orga, repo, version):
                         "development_status": data.get("development_status"),
                         "summary": data.get("summary"),
                         "description": description,
-                        }
+                    }
 
 
-with open('config.yml', 'r') as f:
+with open("config.yml", "r") as f:
     config = yaml.safe_load(f)
 
 
@@ -81,7 +81,7 @@ if not os.path.exists("output"):
 
 
 data = yaml.safe_dump(RESULT)
-with open(f"output/{version}.yml", 'w') as output:
+with open(f"output/{version}.yml", "w") as output:
     output.write(data)
 
 
@@ -90,5 +90,5 @@ for orga, repos in RESULT.items():
         RESULT[orga][repo] = list(RESULT[orga][repo].keys())
 
 data = yaml.safe_dump(RESULT)
-with open(f"output/module-list-{version}.yml", 'w') as output:
+with open(f"output/module-list-{version}.yml", "w") as output:
     output.write(data)
