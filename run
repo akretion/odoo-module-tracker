@@ -1,94 +1,114 @@
 #!/usr/bin/python3
 
-import subprocess
-import os
 import ast
+import os
+import pathlib
+import subprocess
 import yaml
 
-
-DIRECTORY = "analyse"
-RESULT = {}
-
-
-def get_path(orga, repo):
-    return f"{DIRECTORY}/{orga}/{repo}"
+CLONE_DIRECTORY = pathlib.Path("analyse")
+OUTPUT_DIRECTORY = pathlib.Path("output")
 
 
-def get_repo(orga, repo, version):
-    path = get_path(orga, repo)
-    if os.path.exists(path):
-        subprocess.run(["git", "checkout", version], cwd=path, check=True)
-        subprocess.run(["git", "pull"], cwd=path, check=True)
+def run(cwd, *args, **kwargs):
+    """Shortcut to run a command in a given directory."""
+    kwargs.setdefault("check", True)
+    kwargs.setdefault("cwd", cwd)
+    subprocess.run(args, **kwargs)
+
+
+def get_repo(org, repo, version):
+    """Clone or update a repo to the given version."""
+    path = CLONE_DIRECTORY / org / repo
+    if path.exists():
+        run(path, "git", "checkout", version)
+        run(path, "git", "pull")
     else:
-        path = f"{DIRECTORY}/{orga}"
-        if not os.path.exists(path):
-            os.mkdir(path)
-        subprocess.run(
-            ["git", "clone", f"https://github.com/{orga}/{repo}", "-b", version],
-            cwd=path,
-            check=True,
-        )
+        path = CLONE_DIRECTORY / org
+        path.mkdir(exist_ok=True)
+        run(path, "git", "clone", f"https://github.com/{org}/{repo}", "-b", version)
+    return path
 
 
-def analyse_repo(orga, repo, version):
-    path = get_path(orga, repo)
-    for module in os.listdir(path):
-        manifest = f"{path}/{module}/__manifest__.py"
-        if os.path.exists(manifest):
-            with open(manifest, mode="r") as f:
-                data = ast.literal_eval(f.read())
-                if data.get("installable", True):
-                    description_path = f"{path}/{module}/static/description/index.html"
-                    if os.path.exists(description_path):
-                        description = open(description_path).read()
-                    else:
-                        description = ""
-                    RESULT[orga][repo][module] = {
-                        "name": data["name"],
-                        "author": data["author"],
-                        "depends": data.get("depends", []),
-                        "maintainers": data.get("mainainers", []),
-                        "development_status": data.get("development_status"),
-                        "summary": data.get("summary"),
-                        "description": description,
-                    }
+def analyse_module(path):
+    """Analyse a module and return a dict of its data."""
+    manifest = path / "__manifest__.py"
+    if not manifest.exists():
+        return
+    with open(manifest, mode="r") as f:
+        data = ast.literal_eval(f.read())
+
+    if not data.get("installable", True):
+        return
+    description_path = path / "static" / "description" / "index.html"
+
+    description = ""
+    if description_path.exists():
+        with open(description_path, "r") as f:
+            description = f.read()
+
+    return {
+        "name": data["name"],
+        "author": data["author"],
+        "depends": data.get("depends", []),
+        "maintainers": data.get("mainainers", []),
+        "development_status": data.get("development_status"),
+        "summary": data.get("summary"),
+        "description": description,
+    }
 
 
-with open("config.yml", "r") as f:
-    config = yaml.safe_load(f)
+def analyse_repo(path):
+    """Analyse a repo and return a dict of module name and its data."""
+    return {
+        module: result
+        for module in path.iterdir()
+        for result in [analyse_module(path / module)]
+        if result
+    }
 
 
-version = os.environ.get("ODOO_VERSION", "14.0")
+def main():
+    result = {}
+    with open("config.yml", "r") as f:
+        config = yaml.safe_load(f)
+
+    version = os.environ.get("ODOO_VERSION", "14.0")
+    restrict = {
+        tuple(org_repo.strip().split("/", 1))
+        for restrict_modules in [os.environ.get("RESTRICT_MODULES", "")]
+        for org_repo in restrict_modules.split(",")
+        if restrict_modules
+    }
+
+    CLONE_DIRECTORY.mkdir(exist_ok=True)
+
+    for org, repos in config.items():
+        result[org] = {}
+        for repo in repos:
+            if restrict and (org, repo) not in restrict:
+                continue
+            try:
+                path = get_repo(org, repo, version)
+            except Exception as e:
+                print("Fail to fetch repo skip it", e)
+                continue
+            result[org][repo] = analyse_repo(path)
+
+    OUTPUT_DIRECTORY.mkdir(exist_ok=True)
+
+    data = yaml.safe_dump(result)
+    with open(OUTPUT_DIRECTORY / f"{version}.yml", "w") as output:
+        output.write(data)
+
+    for org, repos in result.items():
+        for repo in repos:
+            result[org][repo] = list(result[org][repo].keys())
+
+    data = yaml.safe_dump(result)
+    with open(OUTPUT_DIRECTORY / f"module-list-{version}.yml", "w") as output:
+        output.write(data)
 
 
-if not os.path.exists(DIRECTORY):
-    os.mkdir(DIRECTORY)
-
-
-for orga, repos in config.items():
-    RESULT[orga] = {}
-    for repo in repos:
-        RESULT[orga][repo] = {}
-        try:
-            get_repo(orga, repo, version)
-        except Exception as e:
-            print("Fail to fetch repo skip it", e)
-            continue
-        analyse_repo(orga, repo, version)
-
-if not os.path.exists("output"):
-    os.mkdir("output")
-
-
-data = yaml.safe_dump(RESULT)
-with open(f"output/{version}.yml", "w") as output:
-    output.write(data)
-
-
-for orga, repos in RESULT.items():
-    for repo in repos:
-        RESULT[orga][repo] = list(RESULT[orga][repo].keys())
-
-data = yaml.safe_dump(RESULT)
-with open(f"output/module-list-{version}.yml", "w") as output:
-    output.write(data)
+if __name__ == "__main__":
+    main()
