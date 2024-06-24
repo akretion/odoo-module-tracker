@@ -4,6 +4,7 @@ import ast
 import contextlib
 import os
 import pathlib
+import requests
 import sqlite3
 import subprocess
 import yaml
@@ -138,18 +139,31 @@ def make_schema(db):
     )
 
 
+def download(path, url):
+    """Download a file from a url and write it to path."""
+    print(f"Downloading {url}")
+    response = requests.get(url)
+    response.raise_for_status()
+    with open(path, "wb") as f:
+        f.write(response.content)
+
+
 @contextlib.contextmanager
 def sqlite_db(path, clean=False):
     """Context manager for the sqlite database."""
     if clean and path.exists():
         path.unlink()
-    try:
-        conn = sqlite3.connect(path)
-    except sqlite3.Error:
-        # Try again from an empty db
-        if path.exists():
-            path.unlink()
-        conn = sqlite3.connect(path)
+    if not clean and not path.exists():
+        # Try to download last published db version
+        url = (
+            f"https://github.com/akretion/odoo-module-tracker/raw/gh-pages/{path.name}"
+        )
+        try:
+            download(path, url)
+        except Exception as e:
+            print(f"Fail to download db {url} {e}")
+
+    conn = sqlite3.connect(path)
 
     db = conn.cursor()
     make_schema(db)
@@ -334,7 +348,6 @@ def main():
     CLONE_DIRECTORY.mkdir(exist_ok=True)
 
     with sqlite_db(OUTPUT_DIRECTORY / f"{version}.db", clean=clean_db) as db:
-
         for org, repos in config.items():
             result[org] = {}
             for repo in repos:
@@ -345,8 +358,16 @@ def main():
                 except Exception as e:
                     print("Fail to fetch repo skip it", e)
                     continue
-                result[org][repo] = analyse_repo(path)
 
+                # Ensure we are in the right repo
+                remote = run_read(path, "git", "remote", "get-url", "origin").strip()
+                if not remote.endswith(f"{org}/{repo}"):
+                    print(
+                        f"Skipping {org}/{repo} as it is not the right repo: {remote}"
+                    )
+                    continue
+
+                result[org][repo] = analyse_repo(path)
                 analyse_commits(db, upsert_repo(db, org, repo), path, result[org][repo])
 
     data = yaml.safe_dump(result)
