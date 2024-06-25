@@ -278,6 +278,19 @@ oca:
   - account_move_line_check_number
   - account_asset_management_menu
   - account_menu
+  account-fiscal-rule:
+  - account_multi_vat
+  - account_product_fiscal_classification
+  - account_avatax_exemption_base
+  - account_avatax_repair_oca
+  - account_avatax_website_sale
+  - account_avatax_exemption
+  - account_avatax_oca
+  - account_avatax_sale_oca
+  - l10n_eu_oss
+  - account_product_fiscal_classification_test
+  - account_fiscal_position_partner_type
+  - account_fiscal_position_autodetect_optional_vies
   account-invoice-reporting:
   - partner_time_to_pay
   - account_invoice_line_report
