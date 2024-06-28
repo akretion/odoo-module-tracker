@@ -17,6 +17,7 @@ oca:
   - account_cutoff_base
   - account_cutoff_picking
   account-financial-reporting:
+  - partner_statement
   - account_tax_balance
   - account_financial_report
   account-financial-tools:
@@ -135,6 +136,7 @@ oca:
   - pdf_helper
   hr:
   - hr_personal_equipment_request
+  - hr_department_code
   - hr_holidays_settings
   - hr_employee_document
   - hr_employee_second_lastname
@@ -227,6 +229,7 @@ oca:
   - product_supplierinfo_for_customer
   - product_set
   - product_supplierinfo_archive
+  - product_pricelist_supplierinfo
   - product_dimension
   - product_status
   - product_state
@@ -424,6 +427,7 @@ oca:
   - fs_product_brand_multi_image
   timesheet:
   - sale_timesheet_line_exclude
+  - sale_timesheet_rounded
   - hr_timesheet_begin_end
   - hr_timesheet_task_required
   web:
