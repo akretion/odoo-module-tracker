@@ -22,17 +22,6 @@ akretion:
   - import_helper_base
   - product_import_helper
   - account_ir_property_helper
-  odoo-perf:
-  - perf_product
-  - perf_mail
-  - perf_sale
-  - perf_mrp
-  - perf_product_inactive
-  - perf_stock
-  - perf_sale_stock
-  - perf_purchase
-  - perf_multicompany
-  - perf_account
   odoo-usability:
   - base_partner_one2many_phone
   - base_company_extension
@@ -354,6 +343,7 @@ oca:
   - contract_payment_mode
   - contract_variable_quantity
   - contract
+  - product_contract
   - contract_queue_job
   - subscription_oca
   credit-control:
@@ -412,6 +402,7 @@ oca:
   - delivery_carrier_partner
   - delivery_package_type_number_parcels
   - delivery_state
+  - delivery_dropoff_site
   - partner_delivery_zone
   - delivery_driver_stock_picking_batch
   - delivery_cttexpress
@@ -758,6 +749,7 @@ oca:
   - pos_membership
   - pos_partner_sale_warning
   - pos_order_to_sale_order_sale_financial_risk
+  - pos_screen_element_custom_size
   - pos_payment_method_change_policy
   - pos_loyalty_redeem_payment
   - pos_payment_method_image
@@ -930,6 +922,7 @@ oca:
   - purchase_order_owner
   - purchase_date_planned_manual
   - purchase_delivery_split_date
+  - purchase_order_line_stock_available
   - purchase_order_supplier_return
   - purchase_exception
   - purchase_vendor_promotion
@@ -941,6 +934,7 @@ oca:
   - purchase_line_procurement_group
   - purchase_lot
   - purchase_discount
+  - partner_supplierinfo_smartbutton
   - purchase_order_uninvoiced_amount
   - purchase_packaging_level_qty
   - purchase_security
@@ -1370,6 +1364,7 @@ oca:
   - stock_move_common_dest
   - stock_picking_commercial_partner
   - stock_valuation_layer_accounting_date
+  - stock_pull_list
   - stock_location_product_restriction
   - stock_product_qty_by_packaging
   - stock_mts_mto_rule
@@ -1527,6 +1522,7 @@ oca:
   - hr_timesheet_task_required
   - hr_timesheet_task_domain
   - crm_timesheet
+  - hr_timesheet_editable_top
   - sale_timesheet_invoice_link
   - hr_employee_cost_history
   - hr_timesheet_report
