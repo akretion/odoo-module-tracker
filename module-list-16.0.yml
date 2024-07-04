@@ -249,6 +249,7 @@ oca:
   - account_payment_multi_deduction
   - account_due_list_payment_mode
   - account_payment_widget_amount
+  - account_cash_invoice
   - account_payment_return
   - account_payment_term_extension
   - account_payment_term_discount
@@ -710,6 +711,7 @@ oca:
   - partner_subject_to_vat
   - partner_country_state_required
   pos:
+  - pos_timeout
   - pos_edit_order_line
   - pos_lot_selection
   - pos_product_mergeable_line
@@ -731,6 +733,7 @@ oca:
   - pos_pricelist_technical
   - pos_payment_change
   - pos_margin
+  - pos_hide_banknote_button
   - pos_order_to_sale_order_report
   - pos_partner_location_google_map
   - pos_access_right
