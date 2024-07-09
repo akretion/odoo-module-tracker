@@ -181,7 +181,8 @@ oca:
   - mrp_multi_level
   - quality_control_stock_oca
   - quality_control_oca
-  mis-builder: []
+  mis-builder:
+  - mis_builder
   multi-company:
   - mail_multicompany
   partner-contact:
@@ -449,6 +450,7 @@ oca:
   - web_environment_ribbon
   - web_refresher
   - web_group_expand
+  - web_widget_domain_editor_dialog
   - web_calendar_slot_duration
   - web_no_bubble
   - web_theme_classic
