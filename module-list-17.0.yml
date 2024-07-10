@@ -23,6 +23,7 @@ oca:
   account-financial-tools:
   - account_spread_cost_revenue
   - account_partner_required
+  - account_journal_restrict_mode
   - account_move_line_tax_editable
   - account_account_tag_code
   - account_move_budget
@@ -110,6 +111,7 @@ oca:
   - contract
   - product_contract
   credit-control:
+  - account_invoice_overdue_warn
   - account_financial_risk
   - sale_financial_risk
   crm:
@@ -412,6 +414,7 @@ oca:
   - stock_demand_estimate
   - stock_reserve
   - stock_removal_location_by_priority
+  - stock_packaging_calculator
   stock-logistics-workflow:
   - stock_picking_purchase_order_link
   - stock_picking_sale_order_link
