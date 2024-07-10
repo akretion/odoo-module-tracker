@@ -3,6 +3,7 @@ akretion:
   - account_move_csv_import
   ak-odoo-incubator:
   - purchase_edi_file
+  - fs_product
   - module_analysis_price
   - account_move_adyen_import
   - mrp_raw_material_from_config
@@ -415,6 +416,7 @@ oca:
   - delivery_carrier_max_weight_constraint
   - stock_picking_delivery_link
   - delivery_auto_refresh
+  - delivery_roulier_option
   - delivery_correos_express
   - delivery_carrier_package_measure_required
   - delivery_carrier_agency
