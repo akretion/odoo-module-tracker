@@ -117,6 +117,8 @@ oca:
   crm:
   - crm_stage_probability
   - crm_lead_product
+  - crm_phonecall_summary_predefined
+  - crm_phonecall
   - crm_lead_code
   - crm_lead_vat
   currency:
@@ -193,6 +195,8 @@ oca:
   - partner_contact_personal_information_page
   - partner_manual_rank
   - partner_contact_department
+  - partner_deduplicate_by_website
+  - partner_deduplicate_acl
   - account_partner_company_group
   - base_partner_sequence
   - partner_company_type
@@ -201,6 +205,7 @@ oca:
   - base_location
   - partner_address_street3
   - partner_contact_gender
+  - partner_deduplicate_filter
   - partner_stage_only_confirmed
   - base_location_geonames_import
   - partner_ref_unique
