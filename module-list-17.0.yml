@@ -110,8 +110,10 @@ oca:
   - product_contract
   - contract_sale
   - contract
+  - subscription_oca
   credit-control:
   - sale_financial_risk
+  - account_invoice_overdue_warn_sale
   - account_financial_risk
   - account_invoice_overdue_warn
   crm:
@@ -127,6 +129,7 @@ oca:
   data-protection: []
   delivery-carrier:
   - delivery_carrier_info
+  - delivery_roulier
   - base_delivery_carrier_label
   - delivery_carrier_account
   dms: []
