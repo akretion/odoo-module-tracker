@@ -480,9 +480,11 @@ oca:
   - base_edifact
   - base_ebill_payment_contract
   - base_edi
+  - account_invoice_export
   - pdf_helper
   - base_wamas_ubl
   - account_invoice_facturx
+  - account_invoice_export_job
   - account_einvoice_generate
   - sale_order_import
   hr:
@@ -537,6 +539,7 @@ oca:
   - l10n_br_coa_generic
   - l10n_br_resource
   - l10n_br_currency_rate_update
+  - l10n_br_cnpj_search
   - l10n_br_hr
   - l10n_br_account_due_list
   - l10n_br_zip
@@ -598,6 +601,7 @@ oca:
   - mrp_unbuild_valuation_layer_link
   - mrp_workorder_lot_display
   - mrp_lot_number_propagation
+  - mrp_bom_image
   - mrp_bom_line_formula_quantity
   - mrp_attachment_mgmt
   - mrp_unbuild_move_link
@@ -1125,6 +1129,7 @@ oca:
   - sale_manual_delivery
   - sale_order_product_recommendation_quick_add
   - sale_blanket_order
+  - sale_order_product_assortment
   - sale_invoice_policy
   - sale_advance_payment
   - sale_order_type
@@ -1375,6 +1380,7 @@ oca:
   - stock_inventory_preparation_filter
   - scrap_reason_code
   - stock_picking_commercial_partner
+  - stock_valuation_layer_inventory_filter
   - stock_packaging_calculator_packaging_level
   - stock_demand_estimate_matrix
   - stock_quant_cost_info
@@ -1389,6 +1395,7 @@ oca:
   - stock_search_supplierinfo_code
   - stock_picking_procure_method
   - stock_route_mto
+  - stock_vlm_mgmt
   - stock_inventory_justification
   - stock_exception
   - stock_reserve
