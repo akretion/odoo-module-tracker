@@ -50,6 +50,7 @@ oca:
   account-invoicing:
   - account_invoice_transmit_method
   - account_invoice_crm_tag
+  - sale_order_invoicing_grouping_criteria
   - account_invoice_fixed_discount
   - account_invoice_warn_message
   - account_invoice_refund_link
@@ -129,6 +130,7 @@ oca:
   data-protection: []
   delivery-carrier:
   - delivery_carrier_info
+  - delivery_roulier_option
   - delivery_roulier
   - base_delivery_carrier_label
   - delivery_carrier_account
@@ -401,6 +403,7 @@ oca:
   - mail_send_confirmation
   - mail_partner_forwarding
   - mail_debrand
+  - mail_tracking_mailgun
   - mail_partner_opt_out
   - mail_activity_board
   - mail_tracking
@@ -420,6 +423,7 @@ oca:
   - stock_inventory
   - stock_reserve
   - stock_mts_mto_rule
+  - stock_location_lockdown
   - stock_demand_estimate
   - stock_packaging_calculator
   - stock_inventory_discrepancy
