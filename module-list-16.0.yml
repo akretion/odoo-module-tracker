@@ -3,6 +3,7 @@ akretion:
   - account_move_csv_import
   ak-odoo-incubator:
   - purchase_edi_file
+  - project_estimate_step
   - module_analysis_price
   - proxy_action
   - sale_delivery_no_invoice_free_shipping
@@ -255,6 +256,7 @@ oca:
   - account_due_list_aging_comment
   - account_payment_promissory_note
   - account_payment_term_extension
+  - account_move_line_payment
   - account_payment_multi_deduction
   - account_cash_invoice
   - account_due_list_payment_mode
@@ -1082,6 +1084,7 @@ oca:
   - sale_order_invoice_amount
   - sale_mrp_bom
   - partner_sale_pivot
+  - sale_planner_calendar
   - sale_order_carrier_auto_assign
   - sale_restricted_qty
   - sale_order_product_recommendation
