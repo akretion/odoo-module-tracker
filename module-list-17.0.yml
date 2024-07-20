@@ -123,6 +123,7 @@ oca:
   - crm_lead_product
   - crm_phonecall_summary_predefined
   - crm_phonecall
+  - crm_lead_currency
   - crm_lead_code
   - crm_lead_vat
   currency:
@@ -225,6 +226,7 @@ oca:
   - partner_identification
   - partner_stage
   - partner_email_duplicate_warn
+  - partner_identification_gln
   - partner_contact_access_link
   - partner_contact_nationality
   - sale_partner_company_group
@@ -243,12 +245,14 @@ oca:
   - pos_lot_barcode
   product-attribute:
   - product_sequence
+  - product_logistics_uom
   - product_status
   - product_supplierinfo_archive
   - product_set
   - product_state
   - product_pricelist_supplierinfo
   - product_supplierinfo_for_customer
+  - product_code_unique
   - product_dimension
   product-variant:
   - product_variant_sale_price
@@ -316,6 +320,7 @@ oca:
   - sale_exception
   - sales_team_security
   - sale_order_qty_change_no_recompute
+  - sale_order_priority
   - partner_sale_pivot
   - sale_order_carrier_auto_assign
   - sale_start_end_dates
@@ -356,7 +361,8 @@ oca:
   server-backend:
   - base_user_role
   - base_user_role_company
-  server-brand: []
+  server-brand:
+  - disable_odoo_online
   server-env:
   - server_environment_ir_config_parameter
   - server_environment
@@ -383,6 +389,8 @@ oca:
   - tracking_manager
   server-ux:
   - date_range
+  - multi_step_wizard
+  - base_optional_quick_create
   - base_technical_features
   - base_search_custom_field_filter
   - base_revision
