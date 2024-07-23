@@ -59,6 +59,7 @@ oca:
   account-payment:
   - account_due_list
   - account_payment_term_extension
+  - account_due_list_payment_mode
   account-reconcile:
   - account_reconcile_model_oca
   - account_mass_reconcile
@@ -68,6 +69,7 @@ oca:
   - account_banking_mandate
   - account_payment_partner
   - account_banking_sepa_direct_debit
+  - account_vendor_bank_account_default
   - account_banking_mandate_sale
   - account_payment_purchase
   - account_payment_mode
@@ -273,6 +275,7 @@ oca:
   purchase-workflow:
   - purchase_sale_link_by_origin
   - purchase_open_qty
+  - purchase_deposit
   - purchase_tag
   - purchase_invoice_plan
   - supplier_calendar
@@ -402,6 +405,7 @@ oca:
   - base_tier_validation
   social:
   - mail_optional_autofollow
+  - mail_composer_cc_bcc_account
   - mass_mailing_resend
   - mail_tracking_mass_mailing
   - base_search_mail_content
@@ -409,6 +413,7 @@ oca:
   - mail_attach_existing_attachment
   - mail_template_substitute
   - mail_notification_custom_subject
+  - mail_composer_cc_bcc
   - mass_mailing_partner
   - mail_send_confirmation
   - mail_activity_done
@@ -444,6 +449,7 @@ oca:
   - stock_picking_sale_order_link
   - delivery_procurement_group_carrier
   - stock_picking_purchase_order_link
+  - stock_picking_auto_create_lot
   - stock_split_picking
   - stock_picking_show_return
   - stock_picking_invoice_link
