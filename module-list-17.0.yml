@@ -52,6 +52,7 @@ oca:
   - account_invoice_section_sale_order
   - sale_order_invoicing_grouping_criteria
   - account_invoice_transmit_method
+  - sale_invoicing_date_selection
   - account_invoice_fixed_discount
   - account_invoice_warn_message
   - account_invoice_crm_tag
@@ -337,6 +338,7 @@ oca:
   - sale_automatic_workflow_stock
   - sale_fixed_discount
   - sale_stock_picking_blocking
+  - sale_quotation_number
   - sales_team_security
   - sale_shipping_info_helper
   - sale_order_revision
@@ -367,7 +369,9 @@ oca:
   - auth_api_key
   server-backend:
   - base_user_role_company
+  - base_external_dbsource
   - base_user_role
+  - base_external_dbsource_sqlite
   server-brand:
   - disable_odoo_online
   server-env:
@@ -432,6 +436,7 @@ oca:
   - barcodes_generator_abstract
   stock-logistics-reporting:
   - stock_move_value_report
+  - delivery_line_sale_line_position
   - stock_picking_report_valued
   stock-logistics-tracking: []
   stock-logistics-warehouse:
