@@ -46,11 +46,13 @@ oca:
   - account_fiscal_position_autodetect_optional_vies
   - account_avatax_oca
   account-invoice-reporting:
+  - account_comment_template
   - account_invoice_report_grouped_by_picking
   - account_invoice_line_report
   account-invoicing:
   - account_invoice_section_sale_order
   - sale_order_invoicing_grouping_criteria
+  - account_invoice_blocking
   - account_invoice_transmit_method
   - sale_invoicing_date_selection
   - account_invoice_fixed_discount
@@ -60,6 +62,7 @@ oca:
   account-payment:
   - account_due_list
   - account_due_list_payment_mode
+  - account_payment_return
   - account_payment_term_extension
   account-reconcile:
   - account_statement_base
@@ -136,6 +139,7 @@ oca:
   data-protection: []
   delivery-carrier:
   - delivery_carrier_info
+  - delivery_state
   - delivery_roulier_option
   - delivery_carrier_account
   - delivery_roulier
@@ -200,6 +204,7 @@ oca:
   - mis_builder
   multi-company:
   - mail_multicompany
+  - base_multi_company
   partner-contact:
   - partner_email_duplicate_warn
   - partner_firstname
@@ -364,6 +369,7 @@ oca:
   - auth_user_case_insensitive
   - user_log_view
   - auth_api_key_server_env
+  - auth_api_key_group
   - auth_oidc
   - auth_admin_passkey
   - auth_api_key
