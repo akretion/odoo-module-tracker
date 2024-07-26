@@ -146,6 +146,7 @@ oca:
   - base_delivery_carrier_label
   dms: []
   e-commerce:
+  - website_sale_suggest_create_account
   - website_sale_hide_price
   edi:
   - pdf_helper
@@ -465,6 +466,7 @@ oca:
   - stock_picking_auto_create_lot
   - stock_no_negative
   - stock_picking_show_return
+  - stock_picking_filter_lot
   - delivery_procurement_group_carrier
   - stock_picking_sale_order_link
   - stock_picking_invoice_link
