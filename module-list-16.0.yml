@@ -107,6 +107,7 @@ oca:
   - stock_analytic
   - stock_picking_analytic
   - account_move_update_analytic
+  - account_analytic_distribution_manual
   - pos_analytic_by_config
   - product_analytic_purchase
   - account_analytic_parent
@@ -382,6 +383,7 @@ oca:
   - crm_lead_to_task
   - crm_lead_vat
   - crm_phonecall
+  - crm_project_create
   - crm_lead_code
   - crm_industry
   - crm_salesperson_planner_sale
@@ -550,12 +552,16 @@ oca:
   - l10n_br_coa_simple
   - l10n_br_cnpj_search
   - l10n_br_currency_rate_update
+  - l10n_br_cnab_structure
+  - l10n_br_fiscal_closing
   - l10n_br_coa_generic
   - l10n_br_nfe_spec
   - l10n_br_hr
   - l10n_br_resource
   - l10n_br_fiscal
   - l10n_br_fiscal_certificate
+  - l10n_br_ie_search
+  - l10n_br_account_payment_order
   - l10n_br_account_due_list
   - l10n_br_fiscal_dfe
   - l10n_br_coa
@@ -620,6 +626,7 @@ oca:
   - mrp_subcontracting_partner_management
   - mrp_subcontracting_purchase_link
   - mrp_default_workorder_time
+  - quality_control_mrp_oca
   - mrp_subcontracting_skip_no_negative
   - quality_control_stock_oca
   - mrp_multi_level_estimate
@@ -1433,6 +1440,7 @@ oca:
   - scrap_reason_code
   - stock_picking_commercial_partner
   - stock_inventory
+  - stock_package_type_volume
   - stock_picking_show_linked
   - stock_cycle_count
   - stock_move_common_dest
