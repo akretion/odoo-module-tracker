@@ -262,10 +262,12 @@ oca:
   - product_sequence
   - product_pricelist_supplierinfo
   - product_supplierinfo_for_customer
+  - product_secondary_unit
   - product_logistics_uom
   - product_code_unique
   - product_state
   - product_set
+  - product_supplierinfo_revision
   - product_dimension
   - product_status
   product-variant:
@@ -334,6 +336,7 @@ oca:
   sale-workflow:
   - sale_product_multi_add
   - sale_invoice_policy
+  - sale_force_whole_invoiceability
   - sale_product_set
   - sale_commercial_partner
   - sale_stock_cancel_restriction
@@ -360,6 +363,7 @@ oca:
   - sale_order_qty_change_no_recompute
   - partner_sale_pivot
   - sale_order_archive
+  - sale_validity_auto_cancel
   - sale_order_priority
   - sale_discount_display_amount
   - sale_order_price_recalculation
@@ -383,6 +387,7 @@ oca:
   - base_user_role
   - base_external_dbsource_sqlite
   server-brand:
+  - remove_odoo_enterprise
   - disable_odoo_online
   server-env:
   - server_environment
