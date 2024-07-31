@@ -8,6 +8,7 @@ forgeflow:
 oca:
   account-analytic:
   - account_analytic_tag
+  - account_analytic_required
   - analytic_base_department
   - account_analytic_parent
   account-closing:
@@ -128,6 +129,7 @@ oca:
   - sale_financial_risk
   crm:
   - crm_phonecall_summary_predefined
+  - crm_lead_to_task
   - crm_lead_vat
   - crm_phonecall
   - crm_lead_code
@@ -241,6 +243,7 @@ oca:
   - partner_address_split
   - partner_company_group
   - base_location_geonames_import
+  - base_country_state_translatable
   - partner_pricelist_search
   - sale_partner_company_group
   - partner_affiliate
@@ -277,6 +280,7 @@ oca:
   - project_type
   - project_sequence
   - project_department
+  - project_timesheet_time_control
   - project_parent
   - project_task_add_very_high
   - project_task_tag
@@ -333,6 +337,7 @@ oca:
   sale-financial: []
   sale-reporting:
   - sale_order_line_position
+  - sale_comment_template
   sale-workflow:
   - sale_product_multi_add
   - sale_invoice_policy
@@ -493,6 +498,7 @@ oca:
   - image_tag
   - fs_attachment
   timesheet:
+  - hr_timesheet_task_stage
   - hr_timesheet_task_required
   - sale_timesheet_line_exclude
   - hr_timesheet_begin_end
@@ -504,6 +510,7 @@ oca:
   - web_calendar_slot_duration
   - web_tree_many2one_clickable
   - web_widget_x2many_2d_matrix
+  - web_m2x_options
   - web_refresher
   - web_widget_plotly_chart
   - web_remember_tree_column_width
