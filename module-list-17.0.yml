@@ -34,6 +34,7 @@ oca:
   - account_account_tag_code
   - account_move_line_purchase_info
   - account_asset_management
+  - account_netting
   - account_move_template
   - account_fiscal_year
   - account_move_name_sequence
@@ -86,6 +87,7 @@ oca:
   - account_banking_pain_base
   - account_banking_mandate
   bank-statement-import:
+  - account_statement_import_online
   - account_statement_import_file_reconcile_oca
   - account_statement_import_base
   - account_statement_import_file
@@ -210,6 +212,7 @@ oca:
   - mis_builder
   multi-company:
   - mail_multicompany
+  - product_tax_multicompany_default
   - base_multi_company
   partner-contact:
   - partner_email_duplicate_warn
@@ -507,6 +510,7 @@ oca:
   - web_widget_domain_editor_dialog
   - web_widget_bokeh_chart
   - web_no_bubble
+  - web_field_tooltip
   - web_calendar_slot_duration
   - web_tree_many2one_clickable
   - web_widget_x2many_2d_matrix
