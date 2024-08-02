@@ -76,6 +76,7 @@ oca:
   - account_payment_mode
   - account_payment_partner
   - account_payment_purchase
+  - account_vendor_bank_account_default_purchase
   - account_vendor_bank_account_default
   - account_banking_sepa_credit_transfer
   - account_banking_mandate_sale
@@ -460,6 +461,7 @@ oca:
   stock-logistics-reporting:
   - stock_move_value_report
   - delivery_line_sale_line_position
+  - stock_picking_comment_template
   - stock_picking_report_valued
   stock-logistics-tracking: []
   stock-logistics-warehouse:
@@ -475,6 +477,7 @@ oca:
   - stock_picking_volume
   - stock_demand_estimate
   - stock_packaging_calculator
+  - stock_archive_constraint
   stock-logistics-workflow:
   - sale_order_global_stock_route
   - stock_split_picking
@@ -502,6 +505,7 @@ oca:
   - fs_attachment
   timesheet:
   - hr_timesheet_task_stage
+  - crm_timesheet
   - hr_timesheet_task_required
   - sale_timesheet_line_exclude
   - hr_timesheet_begin_end
