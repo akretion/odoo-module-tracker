@@ -162,6 +162,7 @@ oca:
   - base_facturx
   - account_einvoice_generate
   - base_business_document_import
+  - edi_voxel_oca
   - base_edi
   hr:
   - hr_employee_document
@@ -429,6 +430,7 @@ oca:
   - base_cron_exclusion
   server-ux:
   - date_range
+  - base_tier_validation_forward
   - sequence_reset_period
   - date_range_account
   - base_technical_features
@@ -479,6 +481,7 @@ oca:
   - stock_warehouse_calendar
   - stock_picking_volume
   - stock_removal_location_by_priority
+  - base_product_merge
   - stock_demand_estimate
   - stock_location_lockdown
   - scrap_reason_code
@@ -520,6 +523,7 @@ oca:
   - web_theme_classic
   - web_tree_dynamic_colored_field
   - web_calendar_slot_duration
+  - web_widget_image_download
   - web_refresher
   - web_m2x_options
   - web_widget_plotly_chart
