@@ -4,7 +4,8 @@ akretion:
   odoo-import-helper:
   - account_import_helper
 forgeflow:
-  stock-rma: []
+  stock-rma:
+  - rma
 oca:
   account-analytic:
   - stock_analytic
@@ -157,6 +158,7 @@ oca:
   dms:
   - dms
   e-commerce:
+  - website_sale_b2x_alt_price
   - website_sale_hide_price
   - website_sale_suggest_create_account
   edi:
@@ -166,6 +168,7 @@ oca:
   - edi_voxel_oca
   - account_invoice_facturx
   - account_einvoice_generate
+  - edi_voxel_account_invoice_oca
   - base_edi
   hr:
   - hr_employee_second_lastname
@@ -248,6 +251,7 @@ oca:
   - crm_partner_company_group
   - partner_firstname
   - base_location
+  - partner_contact_role
   - partner_display_name_line_break
   - partner_multi_relation
   - partner_external_map
@@ -277,6 +281,7 @@ oca:
   - product_dimension
   - product_supplierinfo_revision
   - product_sequence
+  - product_packaging_dimension
   - product_state
   - product_set
   - product_supplierinfo_for_customer
@@ -313,6 +318,7 @@ oca:
   - purchase_security
   - purchase_force_invoiced
   - purchase_tag
+  - purchase_no_rfq
   - purchase_last_price_info
   - purchase_invoice_plan
   - purchase_delivery_split_date
@@ -326,6 +332,8 @@ oca:
   - purchase_order_type_dashboard
   - purchase_cancel_reason
   - purchase_advance_payment
+  - purchase_partner_incoterm
+  - purchase_invoice_method
   queue:
   - queue_job
   - queue_job_cron
@@ -352,6 +360,7 @@ oca:
   sale-financial: []
   sale-reporting:
   - sale_comment_template
+  - sale_layout_category_hide_detail
   - sale_order_line_position
   sale-workflow:
   - sale_exception
@@ -535,6 +544,7 @@ oca:
   - web_group_expand
   - web_no_bubble
   - web_widget_bokeh_chart
+  - web_widget_numeric_step
   - web_widget_x2many_2d_matrix
   - web_responsive
   - web_m2x_options
