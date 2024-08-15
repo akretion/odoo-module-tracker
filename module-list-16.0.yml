@@ -8,6 +8,7 @@ akretion:
   - proxy_action
   - module_analysis_price
   - account_move_dalenys_import
+  - zip_product_image
   - product_dimension_net
   - project_time_in_day
   - account_move_adyen_import
@@ -270,6 +271,7 @@ oca:
   account-reconcile:
   - account_statement_base
   - account_move_reconcile_forbid_cancel
+  - account_in_payment
   - account_move_so_import
   - account_mass_reconcile
   - base_transaction_id
@@ -921,6 +923,7 @@ oca:
   - project_task_note
   - sale_project_copy_tasks
   - project_timeline
+  - project_pivot
   - project_task_link
   - project_task_default_stage
   - project_task_stage_mgmt
@@ -1424,6 +1427,7 @@ oca:
   - stock_removal_location_by_priority
   - stock_picking_commercial_partner
   - stock_location_zone
+  - stock_quant_reservation_info
   - stock_helper
   - stock_pull_list
   - stock_storage_category_capacity_name
@@ -1448,6 +1452,7 @@ oca:
   - stock_picking_batch_packaging_qty
   - stock_quant_cost_info
   - stock_valuation_layer_total_value
+  - stock_quant_reservation_info_mrp
   - stock_cycle_count
   - stock_putaway_product_template
   - stock_inventory_count_to_zero
@@ -1641,6 +1646,7 @@ oca:
   - web_company_color
   - web_calendar_slot_duration
   - web_widget_image_download
+  - web_widget_remaining_days_exact_date
   - web_remember_tree_column_width
   - web_listview_range_select
   - web_field_tooltip
