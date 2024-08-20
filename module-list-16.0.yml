@@ -355,6 +355,7 @@ oca:
   - contract_queue_job
   - contract
   - contract_sale
+  - contract_mandate
   - subscription_oca
   - agreement_rebate_partner_company_group
   - contract_variable_qty_timesheet
@@ -729,6 +730,7 @@ oca:
   - partner_company_type
   - partner_category_description
   - partner_contact_type_end_user
+  - partner_shipping_policy
   - partner_category_security_crm
   - partner_tier_validation
   - partner_ref_unique
@@ -737,6 +739,7 @@ oca:
   - partner_contact_personal_information_page
   - partner_vat_unique
   - partner_label
+  - sale_partner_address_restrict
   - partner_identification_gln
   - partner_pricelist_search
   - partner_country_state_required
@@ -913,6 +916,7 @@ oca:
   - project_parent_task_filter
   - project_task_add_very_high
   - project_stock_analytic_tag
+  - project_stage_last_update_date
   - project_parent
   - project_task_pull_request_state
   - project_task_pull_request
@@ -1148,6 +1152,7 @@ oca:
   - sales_team_security
   - sale_packaging_default
   - sale_restricted_qty
+  - sale_order_partner_no_autofollow
   - sale_stock_line_sequence
   - sale_exception_holidays_public
   - sale_order_line_field_from_product_attribute
@@ -1419,6 +1424,7 @@ oca:
   - stock_packaging_calculator_packaging_level
   - stock_reservation_date_show
   - stock_package_type_volume
+  - stock_production_lot_quantity_tree
   - stock_demand_estimate_matrix
   - stock_picking_show_linked
   - stock_picking_volume_packaging
