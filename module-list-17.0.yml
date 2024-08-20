@@ -130,6 +130,7 @@ oca:
   - contract_sale
   - subscription_oca
   - product_contract
+  - contract_variable_quantity
   credit-control:
   - account_invoice_overdue_warn_sale
   - sale_financial_risk
@@ -232,6 +233,7 @@ oca:
   - base_location_nuts
   - base_partner_company_group
   - partner_fax
+  - partner_contact_birthplace
   - partner_address_street3
   - account_partner_company_group
   - partner_contact_birthdate
@@ -253,6 +255,7 @@ oca:
   - crm_partner_company_group
   - partner_firstname
   - base_location
+  - partner_tz
   - partner_contact_role
   - partner_display_name_line_break
   - partner_multi_relation
@@ -402,6 +405,7 @@ oca:
   - sale_stock_picking_blocking
   - sale_order_priority
   - sale_stock_picking_note
+  - sale_order_invoicing_finished_task
   - sale_tier_validation
   - sale_order_line_sequence
   - sale_start_end_dates
@@ -554,6 +558,7 @@ oca:
   - web_widget_bokeh_chart
   - web_widget_numeric_step
   - web_widget_x2many_2d_matrix
+  - web_dialog_size
   - web_responsive
   - web_m2x_options
   - web_widget_domain_editor_dialog
