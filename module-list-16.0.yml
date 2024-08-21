@@ -753,6 +753,7 @@ oca:
   - partner_contact_access_link
   pos:
   - pos_financial_risk
+  - pos_customer_tree_view_vat
   - pos_product_packaging_multi_barcode
   - pos_order_to_sale_order_sale_financial_risk
   - pos_partner_sale_warning
@@ -1103,6 +1104,7 @@ oca:
   - sale_order_product_recommendation
   - sale_payment_sheet
   - sale_order_general_discount_triple
+  - sale_force_invoiced_quantity
   - sale_exception
   - sale_order_product_recommendation_packaging_default
   - sale_quotation_number
@@ -1519,6 +1521,7 @@ oca:
   - sale_line_returned_qty
   - stock_picking_filter_lot
   - stock_picking_batch_extended_account
+  - stock_picking_move_package_to_package
   - delivery_procurement_group_carrier
   - stock_picking_invoice_link
   - stock_customer_deposit_sale_margin
