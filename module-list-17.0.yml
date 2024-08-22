@@ -173,6 +173,7 @@ oca:
   - base_edi
   hr:
   - hr_employee_second_lastname
+  - hr_study
   - hr_course
   - hr_department_code
   - hr_employee_document
@@ -293,6 +294,7 @@ oca:
   - product_logistics_uom
   - product_code_unique
   - product_status
+  - sale_product_template_tags
   - product_code_mandatory
   - uom_category_active
   - product_pricelist_supplierinfo
@@ -340,6 +342,7 @@ oca:
   - purchase_advance_payment
   - purchase_partner_incoterm
   - purchase_invoice_method
+  - purchase_warn_message
   queue:
   - queue_job
   - queue_job_cron
@@ -389,6 +392,7 @@ oca:
   - sale_cancel_reason
   - sale_order_line_menu
   - product_form_sale_link
+  - sale_blanket_order
   - sale_product_multi_add
   - sale_order_revision
   - sales_team_security
@@ -414,6 +418,7 @@ oca:
   server-auth:
   - auth_oidc
   - auth_api_key_server_env
+  - auth_saml
   - user_log_view
   - auth_user_case_insensitive
   - auth_api_key_group
