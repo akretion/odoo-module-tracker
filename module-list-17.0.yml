@@ -5,6 +5,7 @@ akretion:
   - account_import_helper
 forgeflow:
   stock-rma:
+  - rma_account
   - rma
 oca:
   account-analytic:
@@ -12,6 +13,7 @@ oca:
   - analytic_base_department
   - account_analytic_tag
   - account_analytic_required
+  - stock_picking_analytic
   - account_analytic_parent
   account-closing:
   - account_cutoff_base
@@ -159,6 +161,7 @@ oca:
   dms:
   - dms
   e-commerce:
+  - website_sale_product_description
   - website_sale_b2x_alt_price
   - website_sale_hide_price
   - website_sale_suggest_create_account
@@ -373,6 +376,8 @@ oca:
   - sale_layout_category_hide_detail
   - sale_order_line_position
   sale-workflow:
+  - sale_order_lot_selection
+  - sale_order_product_recommendation
   - sale_exception
   - sale_quotation_number
   - sale_force_invoiced
