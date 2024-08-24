@@ -33,6 +33,7 @@ oca:
   - account_tax_repartition_line_tax_group_account
   - account_partner_required
   - account_usability
+  - mail_template_substitute_account_move
   - account_move_post_date_user
   - account_move_template
   - account_move_line_purchase_info
@@ -390,6 +391,7 @@ oca:
   - sale_order_price_recalculation
   - sale_automatic_workflow
   - sale_stock_cancel_restriction
+  - sale_partner_incoterm
   - sale_advance_payment
   - sale_discount_display_amount
   - sale_invoice_policy
@@ -425,6 +427,7 @@ oca:
   - auth_api_key_server_env
   - auth_saml
   - user_log_view
+  - auth_signup_verify_email
   - auth_user_case_insensitive
   - auth_api_key_group
   - auth_admin_passkey
