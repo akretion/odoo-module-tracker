@@ -89,6 +89,7 @@ oca:
   - account_vendor_bank_account_default
   - account_payment_mode
   - account_banking_sepa_direct_debit
+  - account_payment_order_notification
   - account_banking_mandate_sale_contact
   - account_payment_sale
   - account_payment_partner
@@ -129,9 +130,11 @@ oca:
   - base_phone
   - asterisk_click2dial
   contract:
+  - contract_sale_invoicing
   - contract
   - contract_sale
   - subscription_oca
+  - contract_variable_qty_timesheet
   - product_contract
   - contract_variable_quantity
   credit-control:
