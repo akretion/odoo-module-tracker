@@ -81,6 +81,7 @@ forgeflow:
   - account_move_line_rma_order_line
   - rma_sale
   - rma_sale_mrp
+  - rma_repair_put_away
   - rma_put_away
   - rma_repair
   - rma_scrap
@@ -557,6 +558,7 @@ oca:
   - l10n_br_nfse_focus
   - l10n_br_fiscal_dfe
   - l10n_br_coa_simple
+  - l10n_br_account_payment_brcobranca
   - l10n_br_ie_search
   - l10n_br_resource
   - spec_driven_model
@@ -570,6 +572,8 @@ oca:
   - l10n_br_zip
   - l10n_br_crm
   - l10n_br_setup_tests
+  - l10n_br_account
+  - l10n_br_sale
   - l10n_br_cnab_structure
   - l10n_br_nfse
   - l10n_br_account_due_list
