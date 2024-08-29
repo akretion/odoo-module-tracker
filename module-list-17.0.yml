@@ -71,6 +71,7 @@ oca:
   account-payment:
   - account_payment_return
   - account_payment_term_extension
+  - account_payment_return_import_iso20022
   - account_due_list_payment_mode
   - account_payment_return_import
   - account_due_list
@@ -130,6 +131,7 @@ oca:
   - base_phone
   - asterisk_click2dial
   contract:
+  - contract_price_revision
   - contract_sale_invoicing
   - contract
   - contract_sale
@@ -338,6 +340,7 @@ oca:
   - purchase_delivery_split_date
   - purchase_request_tier_validation
   - purchase_order_qty_change_no_recompute
+  - purchase_order_line_menu
   - purchase_reception_notify
   - purchase_tier_validation
   - purchase_request
@@ -441,6 +444,7 @@ oca:
   - base_global_discount
   - base_user_role_company
   - base_external_dbsource
+  - base_user_role_history
   server-brand:
   - disable_odoo_online
   - remove_odoo_enterprise
