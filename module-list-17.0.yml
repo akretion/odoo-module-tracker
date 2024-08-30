@@ -53,6 +53,7 @@ oca:
   - l10n_eu_oss_oca
   - account_fiscal_position_partner_type
   account-invoice-reporting:
+  - account_invoice_bank_details
   - account_invoice_report_grouped_by_picking
   - account_comment_template
   - account_invoice_line_report
@@ -152,6 +153,7 @@ oca:
   - crm_phonecall
   - crm_lead_currency
   - crm_lead_code
+  - crm_lead_firstname
   - crm_phonecall_summary_predefined
   currency:
   - currency_rate_update
@@ -433,10 +435,12 @@ oca:
   - auth_api_key_server_env
   - auth_saml
   - user_log_view
+  - impersonate_login
   - auth_signup_verify_email
   - auth_user_case_insensitive
   - auth_api_key_group
   - auth_admin_passkey
+  - auth_admin_passkey_totp_mail_enforce
   - auth_api_key
   server-backend:
   - base_user_role
@@ -499,6 +503,7 @@ oca:
   - mail_activity_team
   - mail_composer_cc_bcc_account
   - mail_tracking_mass_mailing
+  - mail_activity_reminder
   - mail_optional_autofollow
   - mail_partner_forwarding
   - mail_attach_existing_attachment
@@ -532,6 +537,7 @@ oca:
   - stock_mts_mto_rule
   stock-logistics-workflow:
   - stock_restrict_lot
+  - stock_picking_origin_reference
   - stock_no_negative
   - stock_picking_sale_order_link
   - stock_picking_warn_message
@@ -571,6 +577,7 @@ oca:
   - web_refresher
   - web_widget_dropdown_dynamic
   - web_favicon
+  - web_widget_url_advanced
   - web_environment_ribbon
   - web_tree_dynamic_colored_field
   - web_group_expand
