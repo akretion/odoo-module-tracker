@@ -147,6 +147,7 @@ oca:
   credit-control:
   - account_financial_risk
   - account_invoice_overdue_warn_sale
+  - account_payment_return_financial_risk
   - sale_financial_risk
   - account_invoice_overdue_warn
   crm:
@@ -245,6 +246,7 @@ oca:
   - mrp_warehouse_calendar
   mis-builder:
   - mis_builder
+  - mis_builder_budget
   multi-company:
   - account_invoice_inter_company
   - mail_multicompany
@@ -492,6 +494,7 @@ oca:
   - base_revision
   - base_optional_quick_create
   - server_action_mass_edit
+  - barcode_action
   - sequence_reset_period
   - base_tier_validation
   - base_tier_validation_formula
