@@ -510,7 +510,6 @@ oca:
   - base_facturx
   - despatch_advice_import
   hr:
-  - hr_holidays_settings
   - hr_department_code
   - hr_professional_category
   - hr_employee_birth_name
@@ -574,6 +573,7 @@ oca:
   - l10n_br_hr
   - l10n_br_stock_account
   - l10n_br_coa
+  - l10n_br_fiscal_edi
   - l10n_br_account_payment_order
   - l10n_br_nfse_focus
   - l10n_br_coa_simple
@@ -1434,6 +1434,7 @@ oca:
   - stock_picking_report_incoming_delivery_address
   - stock_picking_report_salesperson
   - stock_average_daily_sale
+  - stock_move_value_report
   - stock_picking_operations_multilang
   - stock_card_report
   - stock_picking_batch_report
