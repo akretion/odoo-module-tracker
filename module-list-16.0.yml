@@ -227,6 +227,7 @@ oca:
   - account_invoice_show_currency_rate
   - account_receipt_journal
   - partner_invoicing_mode
+  - account_tax_one_vat_sale
   - account_invoice_tree_currency
   - account_invoice_payment_retention
   - account_tax_group_widget_base_amount
@@ -1006,6 +1007,7 @@ oca:
   - purchase_all_shipments
   - purchase_tier_validation
   - purchase_merge
+  - purchase_request_department
   - purchase_order_line_receipt_status
   - purchase_return
   - purchase_commercial_partner
@@ -1708,10 +1710,12 @@ oca:
   - stock_release_channel_shipment_advice
   - stock_available_to_promise_release
   - stock_available_to_promise_release_block
+  - sale_stock_release_channel_partner_by_date_delivery
   - stock_release_channel_process_end_time
   - stock_release_channel_partner_delivery_window
   - stock_release_channel_partner_public_holidays
   - stock_picking_batch_creation
+  - sale_stock_release_channel_partner_by_date
   - stock_release_channel_plan
   - stock_release_channel_delivery
   - stock_release_channel_batch_mode_commercial_partner
@@ -1720,6 +1724,7 @@ oca:
   - sale_stock_available_to_promise_release_block
   - stock_release_channel_plan_process_end_time
   - stock_release_channel_shipment_advice_process_end_time
+  - stock_release_channel_partner_by_date
   - stock_warehouse_flow
   - stock_storage_type_putaway_abc
   - shopfloor
