@@ -95,6 +95,7 @@ oca:
   - account_payment_order_notification
   - account_banking_sepa_direct_debit
   - account_banking_mandate
+  - account_payment_order_grouped_output
   - account_payment_purchase
   - account_banking_pain_base
   - account_payment_order
@@ -204,6 +205,7 @@ oca:
   - hr_employee_document
   - hr_employee_second_lastname
   intrastat-extrastat:
+  - intrastat_product
   - intrastat_base
   - product_harmonized_system
   - product_harmonized_system_stock
@@ -246,6 +248,7 @@ oca:
   - mrp_warehouse_calendar
   mis-builder:
   - mis_builder
+  - mis_builder_demo
   - mis_builder_budget
   multi-company:
   - account_invoice_inter_company
@@ -313,6 +316,7 @@ oca:
   - product_secondary_unit
   - product_dimension
   - product_supplierinfo_for_customer
+  - product_pricelist_revision
   - product_packaging_dimension
   - product_supplierinfo_revision
   - product_print_category
@@ -494,6 +498,7 @@ oca:
   - base_revision
   - base_optional_quick_create
   - server_action_mass_edit
+  - base_substate
   - barcode_action
   - sequence_reset_period
   - base_tier_validation
@@ -553,6 +558,7 @@ oca:
   - stock_reserve
   stock-logistics-workflow:
   - stock_picking_filter_lot
+  - stock_picking_kind
   - stock_picking_warn_message
   - stock_restrict_lot
   - stock_picking_origin_reference
