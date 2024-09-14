@@ -73,7 +73,9 @@ akretion:
   - product_detailed_type
   - account_invoice_update_wizard
   - sale_order_route
+  - partner_products_shortcut
   - stock_usability
+  - account_payment_line_manual_account
   - purchase_product_tree_default
   - account_invoice_margin
   - sale_down_payment
@@ -1872,6 +1874,7 @@ oca:
   - stock_quantity_history_location
   - stock_account_quantity_history_location
   - stock_report_quantity_by_location
+  - stock_quant_history_queued
   - stock_account_valuation_report
   - stock_picking_report_custom_description
   stock-logistics-tracking:
