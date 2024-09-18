@@ -413,6 +413,7 @@ oca:
   - sale_delivery_state
   - sale_tier_validation
   - sale_sourced_by_line
+  - sale_order_general_discount
   - sale_procurement_group_by_line
   - sale_automatic_workflow
   - sale_order_qty_change_no_recompute
@@ -481,6 +482,7 @@ oca:
   - onchange_helper
   - module_change_auto_install
   - auditlog
+  - session_db
   - base_partition
   - base_exception
   - sentry
