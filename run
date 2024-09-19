@@ -38,7 +38,7 @@ def get_repo(org, repo, version):
         print(f"Cloning {org}/{repo}@{version}")
         org_path = CLONE_DIRECTORY / org
         path.mkdir(exist_ok=True)
-        run(org_path, "git", "clone", f"https://github.com/{org}/{repo}", "-b", version)
+        run(org_path, "git", "clone", "-n", f"https://github.com/{org}/{repo}", "-b", version)
     return path
 
 
