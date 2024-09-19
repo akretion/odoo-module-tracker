@@ -5,7 +5,7 @@ import requests
 import yaml
 import os
 
-SKIP_REPO = ["OCB"]
+SKIP_REPO = ["OCB", "OpenUpgrade"]
 
 github_token = os.environ.get("GITHUB_TOKEN")
 
