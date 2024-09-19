@@ -1,0 +1,47 @@
+#!/usr/bin/python3
+
+import requests
+
+import yaml
+import os
+
+SKIP_REPO = ["OCB"]
+
+github_token = os.environ.get("GITHUB_TOKEN")
+
+if github_token:
+    headers = {"authorization": f"Bearer {github_token}"}
+else:
+    headers = {}
+
+repo_names = []
+page = 1
+while True:
+    print("process page :", page)
+    r = requests.get(
+        "https://api.github.com/orgs/oca/repos?type=all&page=%s&per_page=100" % page,
+        headers=headers
+        )
+    page += 1
+    data = r.json()
+    if not data:
+        break
+    for repo in data:
+        if (
+            repo["default_branch"] not in ["main", "master"]
+            and repo["name"] not in SKIP_REPO
+            ) and (
+            not repo["name"].startswith("l10n")
+            or repo["name"] in ["l10n-france", "l10n-brazil"]
+            ):
+            repo_names.append(repo["name"])
+
+repo_names.sort()
+
+with open('config.yml', 'r') as file:
+    config = yaml.safe_load(file)
+
+config["oca"] = repo_names
+
+with open('config.yml', 'w') as file:
+    yaml.safe_dump(config, file, indent=4)
