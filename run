@@ -36,9 +36,9 @@ def get_repo(org, repo, version):
         run(path, "git", "pull")
     else:
         print(f"Cloning {org}/{repo}@{version}")
-        path = CLONE_DIRECTORY / org
+        org_path = CLONE_DIRECTORY / org
         path.mkdir(exist_ok=True)
-        run(path, "git", "clone", f"https://github.com/{org}/{repo}", "-b", version)
+        run(org_path, "git", "clone", f"https://github.com/{org}/{repo}", "-b", version)
     return path
 
 
@@ -357,14 +357,6 @@ def main():
                     path = get_repo(org, repo, version)
                 except Exception as e:
                     print("Fail to fetch repo skip it", e)
-                    continue
-
-                # Ensure we are in the right repo
-                remote = run_read(path, "git", "remote", "get-url", "origin").strip()
-                if not remote.endswith(f"{org}/{repo}"):
-                    print(
-                        f"Skipping {org}/{repo} as it is not the right repo: {remote}"
-                    )
                     continue
 
                 result[org][repo] = analyse_repo(path)
