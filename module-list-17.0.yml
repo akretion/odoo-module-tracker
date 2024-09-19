@@ -349,6 +349,7 @@ oca:
   - purchase_invoice_method
   - purchase_reception_notify
   - purchase_no_rfq
+  - purchase_blanket_order
   - purchase_delivery_split_date
   - purchase_requisition_tier_validation
   - purchase_cancel_reason
@@ -579,6 +580,7 @@ oca:
   - stock_picking_sale_order_link
   - stock_picking_filter_lot
   - sale_order_global_stock_route
+  - stock_account_product_run_fifo_hook
   - stock_move_line_reference_link
   - stock_restrict_lot
   - stock_no_negative
