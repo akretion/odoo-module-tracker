@@ -590,7 +590,9 @@ oca:
   - helpdesk_mgmt_project
   - helpdesk_type
   - helpdesk_mgmtsystem_nonconformity
+  - helpdesk_mgmt_crm
   - helpdesk_mgmt_timesheet
+  - helpdesk_mgmt_sale
   - helpdesk_motive
   hr:
   - hr_employee_birthday_mail
@@ -809,6 +811,7 @@ oca:
   - mrp_production_grouped_by_product
   - mrp_production_serial_matrix
   - mrp_lot_number_propagation
+  - mrp_2_steps_consumed_qty_sync
   - mrp_bom_location
   - mrp_workorder_lot_display
   - mrp_lot_on_hand_first
@@ -818,6 +821,7 @@ oca:
   - mrp_account_analytic
   - mrp_workcenter_category
   - mrp_bom_hierarchy
+  - mrp_set_quantity_to_reservation
   - mrp_sale_info
   - mrp_workorder_lock_planning
   - mrp_finished_backorder_product
@@ -1794,8 +1798,15 @@ oca:
   - stock_auto_move
   - stock_picking_product_assortment
   stock-weighing:
+  - stock_weighing_remote_measure
+  - stock_picking_batch_weighing
   - stock_weighing
   - web_widget_remote_measure
+  - stock_secondary_unit_weighing
+  - sale_stock_weighing
+  - partner_delivery_zone_weighing
+  - stock_weighing_auto_create_lot
+  - sale_elaboration_weighing
   storage:
   - storage_backend_sftp
   - storage_media
