@@ -260,6 +260,7 @@ oca:
   - fieldservice_equipment_stock
   - fieldservice_calendar
   - fieldservice_sale
+  - fieldservice_sale_stock
   fleet: []
   geospatial: []
   helpdesk: []
@@ -341,8 +342,14 @@ oca:
   - maintenance_equipment_hierarchy
   - maintenance_timesheet
   management-system:
+  - mgmtsystem_action
+  - document_page_work_instruction
   - mgmtsystem
+  - document_page_environmental_aspect
+  - mgmtsystem_survey
   - document_page_procedure
+  - document_page_quality_manual
+  - mgmtsystem_manual
   manufacture:
   - mrp_sale_info
   - mrp_multi_level
