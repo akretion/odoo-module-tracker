@@ -246,6 +246,7 @@ oca:
   - fieldservice
   - fieldservice_account
   - fieldservice_stage_validation
+  - fieldservice_sale_recurring
   - fieldservice_vehicle
   - fieldservice_route
   - fieldservice_isp_flow
@@ -343,11 +344,15 @@ oca:
   - maintenance_timesheet
   management-system:
   - mgmtsystem_action
+  - mgmtsystem_hazard
   - document_page_work_instruction
+  - document_page_environment_manual
+  - mgmtsystem_hazard_risk
   - mgmtsystem
   - document_page_environmental_aspect
   - mgmtsystem_survey
   - document_page_procedure
+  - document_page_health_safety_manual
   - document_page_quality_manual
   - mgmtsystem_manual
   manufacture:
@@ -461,6 +466,7 @@ oca:
   - pos_lot_selection
   - pos_partner_second_lastname
   product-attribute:
+  - product_category_code
   - product_logistics_uom
   - product_code_unique
   - product_code_mandatory
@@ -738,6 +744,7 @@ oca:
   - stock_reserve
   - stock_inventory
   - scrap_reason_code
+  - account_move_line_product
   - stock_packaging_calculator
   - base_product_merge
   - stock_demand_estimate
