@@ -620,6 +620,7 @@ oca:
   - hr_employee_calendar_planning
   - hr_employee_id
   - hr_employee_medical_examination
+  - passport_expiration
   - hr_emergency_contact
   - hr_study
   - hr_employee_age
@@ -1017,6 +1018,7 @@ oca:
   - pos_payment_change
   - pos_sale_pos_event_sale
   product-attribute:
+  - product_pricelist_item_list_view
   - product_category_product_link
   - product_category_code
   - product_manufacturer
@@ -1703,6 +1705,7 @@ oca:
   - stock_inventory_discrepancy
   - stock_lot_filter_available
   - stock_procurement_group_hook
+  - stock_inventory_lockdown
   - stock_quant_reservation_info
   - stock_archive_constraint
   - stock_warehouse_calendar
@@ -1801,6 +1804,7 @@ oca:
   - stock_weighing_remote_measure
   - stock_picking_batch_weighing
   - stock_weighing
+  - stock_weighing_threaded_print
   - web_widget_remote_measure
   - stock_secondary_unit_weighing
   - sale_stock_weighing
