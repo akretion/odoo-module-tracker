@@ -86,7 +86,8 @@ oca:
   - account_reconcile_oca
   - account_reconcile_model_oca
   - account_mass_reconcile
-  agreement: []
+  agreement:
+  - agreement
   apps-store: []
   automation: []
   bank-payment:
@@ -459,6 +460,7 @@ oca:
   pos:
   - pos_product_expiry
   - pos_partner_birthdate
+  - pos_order_to_sale_order
   - pos_partner_firstname
   - pos_lot_barcode
   - pos_partner_ref
@@ -603,6 +605,7 @@ oca:
   - product_supplierinfo_for_customer_sale
   - partner_sale_pivot
   - sale_order_type
+  - sale_order_line_input
   - sale_order_general_discount
   - sale_order_lot_selection
   - sale_shipping_info_helper
