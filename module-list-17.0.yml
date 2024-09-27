@@ -36,6 +36,7 @@ oca:
   - account_move_post_date_user
   - account_asset_management
   - mail_template_substitute_account_move
+  - account_asset_force_account
   - account_spread_cost_revenue
   - account_move_template
   - account_move_print
@@ -184,6 +185,7 @@ oca:
   - crm_lead_code
   - crm_phonecall
   - crm_lead_vat
+  - crm_salesperson_planner
   - crm_lead_product
   - crm_phonecall_summary_predefined
   - crm_stage_probability
@@ -261,6 +263,7 @@ oca:
   - fieldservice_size
   - fieldservice_equipment_stock
   - fieldservice_calendar
+  - fieldservice_repair
   - fieldservice_sale
   - fieldservice_sale_stock
   fleet: []
@@ -300,8 +303,10 @@ oca:
   - product_harmonized_system
   - product_harmonized_system_stock
   - product_harmonized_system_delivery
+  - intrastat_product_generic
   - intrastat_product
   - intrastat_base
+  - intrastat_product_hscodes_import
   iot:
   - iot_output_oca
   - iot_rule
