@@ -163,6 +163,7 @@ oca:
   account-financial-reporting:
   - account_tax_balance
   - mis_builder_cash_flow
+  - account_financial_report_sale
   - mis_template_financial_report
   - account_financial_report
   - partner_statement
@@ -242,6 +243,7 @@ oca:
   - partner_invoicing_mode_monthly
   - account_invoice_warn_message
   - account_invoice_refund_line_selection
+  - sale_invoicing_date_selection
   - account_move_cancel_confirm
   - account_tax_one_vat_sale
   - product_form_account_move_line_link
@@ -275,6 +277,7 @@ oca:
   - account_invoice_show_currency_rate
   - account_invoice_transmit_method
   - account_invoice_currency_taxes
+  - sale_order_invoicing_queued
   - account_invoice_default_code_column
   - account_invoice_mass_sending
   - stock_picking_invoicing
@@ -2122,7 +2125,8 @@ oca:
   vertical-cooperative-supermarket: []
   vertical-edition: []
   vertical-education: []
-  vertical-hotel: []
+  vertical-hotel:
+  - hotel
   vertical-isp: []
   vertical-medical: []
   vertical-ngo: []
