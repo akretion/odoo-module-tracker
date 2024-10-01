@@ -27,6 +27,7 @@ oca:
   account-consolidation: []
   account-financial-reporting:
   - account_tax_balance
+  - mis_builder_cash_flow
   - account_financial_report
   - partner_statement
   account-financial-tools:
@@ -66,9 +67,11 @@ oca:
   - partner_time_to_pay
   account-invoicing:
   - account_invoice_blocking
+  - account_invoice_pricelist
   - account_invoice_warn_message
   - sale_invoicing_date_selection
   - product_form_account_move_line_link
+  - partner_invoicing_mode
   - sale_order_invoicing_grouping_criteria
   - account_invoice_crm_tag
   - account_invoice_refund_link
@@ -251,6 +254,7 @@ oca:
   - fieldservice_account
   - fieldservice_stage_validation
   - fieldservice_sale_recurring
+  - fieldservice_project
   - fieldservice_vehicle
   - fieldservice_route
   - fieldservice_isp_flow
@@ -399,6 +403,7 @@ oca:
   operating-unit:
   - account_operating_unit_access_all
   - account_operating_unit
+  - purchase_operating_unit
   - stock_operating_unit_access_all
   - contract_operating_unit_access_all
   - analytic_operating_unit
@@ -661,6 +666,7 @@ oca:
   server-brand:
   - disable_odoo_online
   - remove_odoo_enterprise
+  - portal_odoo_debranding
   server-env:
   - mail_environment
   - server_environment_ir_config_parameter
@@ -751,19 +757,23 @@ oca:
   - stock_request
   - stock_request_mrp
   stock-logistics-tracking: []
-  stock-logistics-transport: []
+  stock-logistics-transport:
+  - tms
   stock-logistics-warehouse:
   - stock_reserve
   - stock_inventory
   - scrap_reason_code
   - account_move_line_product
+  - account_move_line_stock_info
   - stock_packaging_calculator
   - base_product_merge
   - stock_demand_estimate
   - stock_mts_mto_rule
+  - stock_picking_volume_packaging
   - stock_location_lockdown
   - stock_change_qty_reason
   - stock_inventory_discrepancy
+  - stock_route_mto
   - stock_archive_constraint
   - stock_warehouse_calendar
   - stock_picking_volume
@@ -781,9 +791,11 @@ oca:
   - stock_picking_warn_message
   - stock_picking_invoice_link
   - stock_picking_kind
+  - purchase_stock_picking_invoice_link
   - stock_picking_show_backorder
   - stock_picking_sale_order_link
   - stock_picking_filter_lot
+  - stock_valuation_layer_usage
   - sale_order_global_stock_route
   - stock_account_product_run_fifo_hook
   - stock_move_line_reference_link
@@ -865,6 +877,7 @@ oca:
   - website_form_require_legal
   - website_odoo_debranding
   - website_google_tag_manager
+  - website_require_login
   - website_cookiebot
   website-cms: []
   website-themes: []
