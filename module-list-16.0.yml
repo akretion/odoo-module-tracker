@@ -91,6 +91,7 @@ akretion:
   - stock_product_tree_default
   - product_print_zpl_barcode
   - product_manager_group_stock
+  - partner_products_shortcut
   - developer_menu
   - delivery_usability
   - link_tracker_usability
@@ -161,6 +162,7 @@ oca:
   - account_cutoff_start_end_dates
   account-consolidation: []
   account-financial-reporting:
+  - account_sale_stock_report_non_billed
   - account_tax_balance
   - mis_builder_cash_flow
   - account_financial_report_sale
@@ -325,6 +327,7 @@ oca:
   - account_move_line_reconcile_manual
   - account_move_so_import
   agreement:
+  - agreement_sale
   - agreement_legal
   - agreement
   - agreement_rebate
@@ -337,6 +340,7 @@ oca:
   - account_payment_purchase
   - account_banking_sepa_direct_debit
   - account_payment_sale
+  - account_payment_order_return
   - account_payment_method_fs_storage
   - account_banking_mandate_sale_contact
   - account_banking_mandate
@@ -532,6 +536,7 @@ oca:
   - delivery_auto_refresh
   - delivery_package_fee
   - delivery_carrier_partner
+  - delivery_schenker
   - delivery_deliverea
   - delivery_carrier_deposit
   - delivery_price_method
@@ -2000,6 +2005,7 @@ oca:
   - stock_rule_reserve_max_quantity
   - stock_partner_delivery_window
   - stock_picking_quick
+  - procurement_auto_create_group_carrier
   - stock_lock_lot
   - stock_picking_line_sequence
   - stock_picking_group_by_partner_by_carrier_by_date
@@ -2126,6 +2132,7 @@ oca:
   vertical-edition: []
   vertical-education: []
   vertical-hotel:
+  - hotel_housekeeping
   - hotel
   vertical-isp: []
   vertical-medical: []
