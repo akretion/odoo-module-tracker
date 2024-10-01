@@ -135,6 +135,7 @@ oca:
   - account_invoice_check_total
   - account_invoice_validation_queued
   - account_move_tier_validation_forward
+  - account_move_substate
   - account_invoice_restrict_linked_so
   - purchase_stock_picking_return_invoicing
   - account_manual_currency
@@ -1866,7 +1867,8 @@ oca:
   - membership_variable_period
   - contract_membership_delegated_partner
   vertical-community: []
-  vertical-construction: []
+  vertical-construction:
+  - bc3_importer
   vertical-edition: []
   vertical-education: []
   vertical-hotel:
