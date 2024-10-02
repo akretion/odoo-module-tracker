@@ -297,6 +297,7 @@ oca:
   - hr_attendance_report_theoretical_time
   hr-expense:
   - hr_expense_invoice
+  - hr_expense_employee_analytic_default
   - hr_expense_cancel
   - hr_expense_payment
   hr-holidays:
@@ -477,6 +478,7 @@ oca:
   - pos_order_to_sale_order
   - pos_partner_firstname
   - pos_lot_barcode
+  - pos_hide_cost_price_and_margin
   - pos_partner_ref
   - pos_product_template
   - pos_lot_selection
@@ -572,6 +574,7 @@ oca:
   - report_substitute
   - report_xml
   - report_qweb_parameter
+  - report_async
   - bi_sql_editor
   - sql_request_abstract
   - report_qweb_element_page_visibility
