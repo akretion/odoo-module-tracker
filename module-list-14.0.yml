@@ -2482,6 +2482,7 @@ oca:
   - stock_move_free_reservation_reassign
   - stock_picking_auto_create_lot
   - stock_picking_progress
+  - stock_restrict_expiration_date
   - stock_picking_product_link
   - stock_lot_scrap
   - stock_move_line_auto_fill
@@ -2643,7 +2644,8 @@ oca:
   - membership_initial_fee
   - contract_membership_delegated_partner
   vertical-community: []
-  vertical-construction: []
+  vertical-construction:
+  - bc3_importer
   vertical-cooperative-supermarket: []
   vertical-edition: []
   vertical-education: []
@@ -2814,6 +2816,7 @@ oca:
   - shopfloor_purchase_base
   - shopfloor_single_product_transfer_unique_order_at_location
   - sale_stock_available_to_promise_release_dropshipping
+  - stock_service_level_route
   - shopfloor_reception_mobile
   - stock_reception_screen_measuring_device
   - shopfloor_checkout_putinpack_restriction
