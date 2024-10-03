@@ -126,6 +126,7 @@ oca:
   account-analytic:
   - sale_analytic_tag
   - account_analytic_account_tag
+  - account_analytic_organization
   - stock_analytic
   - analytic_partner
   - purchase_stock_analytic
@@ -539,6 +540,7 @@ oca:
   - delivery_schenker
   - delivery_deliverea
   - delivery_carrier_deposit
+  - delivery_carrier_manual_weight
   - delivery_price_method
   - delivery_carrier_agency
   - delivery_carrier_package_measure_required
@@ -1639,6 +1641,7 @@ oca:
   - sale_substate
   - sale_block_no_stock
   - sale_invoice_policy
+  - sale_transaction_form_link
   - sale_order_search_line
   - sale_order_line_effective_date
   - sale_order_product_recommendation
@@ -1818,6 +1821,7 @@ oca:
   - mass_mailing_list_dynamic
   - mail_template_substitute
   - mail_composer_cc_bcc_account
+  - mail_discuss_security
   - mail_gateway_whatsapp
   - mail_composer_cc_bcc
   - mail_activity_board
@@ -1878,6 +1882,7 @@ oca:
   stock-logistics-orderpoint:
   - stock_orderpoint_default_location
   - stock_orderpoint_move_link
+  - stock_orderpoint_route
   - stock_orderpoint_mto_as_mts
   - stock_orderpoint_purchase_link
   - stock_location_orderpoint
@@ -2127,7 +2132,8 @@ oca:
   - membership_initial_fee
   - contract_membership_delegated_partner
   vertical-community: []
-  vertical-construction: []
+  vertical-construction:
+  - bc3_importer
   vertical-cooperative-supermarket: []
   vertical-edition: []
   vertical-education: []
