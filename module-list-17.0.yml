@@ -233,8 +233,10 @@ oca:
   - website_sale_hide_price
   e-learning: []
   edi:
+  - base_import_pdf_by_template
   - edi_voxel_account_invoice_oca
   - base_edi
+  - test_base_import_pdf_by_template
   - account_invoice_facturx
   - pdf_helper
   - base_business_document_import
@@ -586,7 +588,10 @@ oca:
   resource: []
   rest-api: []
   rest-framework:
+  - graphql_base
+  - graphql_demo
   - fastapi
+  - pydantic
   rma:
   - product_warranty
   - rma
@@ -598,6 +603,7 @@ oca:
   sale-reporting:
   - sale_order_line_position
   - sale_comment_template
+  - sale_order_report_product_image
   - sale_layout_category_hide_detail
   sale-workflow:
   - sale_discount_display_amount
@@ -775,6 +781,7 @@ oca:
   - stock_mts_mto_rule
   - stock_picking_volume_packaging
   - stock_location_lockdown
+  - stock_location_zone
   - stock_change_qty_reason
   - stock_inventory_discrepancy
   - stock_route_mto
@@ -886,5 +893,6 @@ oca:
   website-cms: []
   website-themes: []
   wms:
+  - stock_picking_type_shipping_policy
   - stock_warehouse_flow
 shopinvader: {}
