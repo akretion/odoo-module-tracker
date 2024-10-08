@@ -170,12 +170,14 @@ oca:
   - mis_template_financial_report
   - account_financial_report
   - partner_statement
+  - account_purchase_stock_report_non_billed
   account-financial-tools:
   - account_fiscal_year
   - account_asset_transfer
   - account_fiscal_month
   - account_netting
   - account_lock_date_update
+  - account_bank_statement_chatter
   - account_template_active
   - account_asset_number
   - account_move_post_date_user
@@ -898,6 +900,7 @@ oca:
   - maintenance_equipment_sequence
   - maintenance_equipment_hierarchy
   - maintenance_timesheet
+  - base_maintenance_config
   - maintenance_equipment_contract
   - maintenance_location
   - maintenance_equipment_image
@@ -1811,6 +1814,7 @@ oca:
   shift-planning: []
   sign:
   - sign_oca
+  - maintenance_sign_oca
   social:
   - mail_outbound_static
   - mail_tracking
@@ -1929,12 +1933,15 @@ oca:
   - stock_quant_manual_assign
   - stock_reserve
   - stock_inventory
+  - stock_secondary_unit
   - scrap_reason_code
   - product_packaging_usability
   - stock_picking_procure_method
   - stock_move_packaging_qty
+  - stock_scrap_location_default
   - account_move_line_product
   - stock_cycle_count
+  - stock_reserve_rule
   - stock_move_auto_assign
   - stock_reservation_date_show
   - account_move_line_stock_info
@@ -1956,6 +1963,7 @@ oca:
   - stock_location_zone
   - stock_putaway_product_template
   - stock_picking_show_linked
+  - stock_location_package_restriction
   - stock_picking_commercial_partner
   - stock_inventory_discrepancy
   - stock_location_position
@@ -1971,6 +1979,7 @@ oca:
   - stock_quant_safe_inventory
   - stock_demand_estimate_matrix
   - stock_production_lot_quantity_tree
+  - stock_warehouse_relationship
   - stock_product_qty_by_packaging
   - stock_storage_category_capacity_name
   - stock_valuation_layer_inventory_filter
@@ -2006,6 +2015,7 @@ oca:
   - stock_picking_restrict_cancel_printed
   - stock_picking_group_by_base
   - stock_picking_import_serial_number
+  - stock_lot_on_hand_first
   - stock_move_manage_priority
   - stock_picking_date_deadline_syncs_scheduled_date
   - stock_picking_group_by_max_weight
@@ -2015,6 +2025,7 @@ oca:
   - procurement_auto_create_group_carrier
   - stock_lock_lot
   - stock_picking_line_sequence
+  - stock_picking_return_restricted_qty
   - stock_picking_group_by_partner_by_carrier_by_date
   - stock_owner_restriction
   - stock_landed_costs_delivery
