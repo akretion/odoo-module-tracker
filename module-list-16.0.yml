@@ -566,6 +566,7 @@ oca:
   - partner_delivery_schedule
   department: []
   dms:
+  - dms_attachment_link
   - dms_auto_classification
   - dms_field
   - dms
@@ -736,6 +737,7 @@ oca:
   - hr_personal_equipment_request
   - hr_course
   - hr_employee_document
+  - hr_employee_document_from_applicant
   - hr_employee_lastnames
   - hr_recruitment_torecruit
   - hr_employee_ssn
@@ -1549,6 +1551,7 @@ oca:
   sale-reporting:
   - sale_report_commitment_date
   - sale_report_delivered_subtotal
+  - sale_report_country_state
   - product_sold_by_delivery_week
   - sale_order_line_position
   - sale_packaging_report
@@ -1927,6 +1930,7 @@ oca:
   - shipment_advice_planner
   - stock_dock
   - shipment_advice_planner_toursolver_queue_job
+  - stock_depot
   - shipment_advice_planner_toursolver
   stock-logistics-warehouse:
   - stock_valuation_layer_total_value
@@ -1979,6 +1983,7 @@ oca:
   - stock_quant_safe_inventory
   - stock_demand_estimate_matrix
   - stock_production_lot_quantity_tree
+  - stock_package_type_category
   - stock_warehouse_relationship
   - stock_product_qty_by_packaging
   - stock_storage_category_capacity_name
