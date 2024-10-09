@@ -16,6 +16,7 @@ oca:
   - stock_picking_analytic
   - account_analytic_spread_by_tag
   - account_analytic_parent
+  - mrp_stock_analytic
   - account_analytic_tag
   account-budgeting: []
   account-closing:
@@ -509,6 +510,7 @@ oca:
   product-configurator: []
   product-kitting: []
   product-pack:
+  - website_sale_product_pack
   - sale_product_pack
   - product_pack
   product-variant:
@@ -550,6 +552,7 @@ oca:
   - purchase_security
   - purchase_tier_validation
   - purchase_order_archive
+  - purchase_all_shipments
   - purchase_order_type_dashboard
   - purchase_exception
   - purchase_deposit
@@ -770,6 +773,7 @@ oca:
   stock-logistics-transport:
   - tms
   stock-logistics-warehouse:
+  - product_route_profile
   - stock_reserve
   - stock_inventory
   - scrap_reason_code
@@ -799,6 +803,7 @@ oca:
   - delivery_procurement_group_carrier
   - stock_picking_show_return
   - stock_picking_origin_reference
+  - stock_picking_send_by_mail
   - stock_picking_purchase_order_link
   - stock_picking_warn_message
   - stock_picking_invoice_link
