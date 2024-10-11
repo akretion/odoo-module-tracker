@@ -369,6 +369,7 @@ oca:
   - mgmtsystem_action
   - mgmtsystem_survey
   - mgmtsystem_manual
+  - mgmtsystem_nonconformity
   - document_page_environment_manual
   - document_page_quality_manual
   - document_page_work_instruction
@@ -867,6 +868,7 @@ oca:
   - web_no_bubble
   - web_widget_dropdown_dynamic
   - web_widget_open_tab
+  - web_notify
   - web_group_expand
   - web_widget_image_download
   - web_widget_bokeh_chart
@@ -897,6 +899,7 @@ oca:
   - website_google_tag_manager
   - website_odoo_debranding
   - website_require_login
+  - website_cookiefirst
   website-cms: []
   website-themes: []
   wms:
