@@ -451,6 +451,7 @@ oca:
   - contract_sale_generation
   - agreement_rebate_partner_company_group
   - contract_sale
+  - contract_analytic_tag
   - product_contract
   - contract_mandate
   - contract_queue_job
@@ -1514,6 +1515,7 @@ oca:
   - fastapi
   - base_rest_auth_api_key
   rma:
+  - rma_procurement_customer
   - rma
   - rma_sale_mrp
   - product_warranty
@@ -2246,6 +2248,7 @@ oca:
   - website_cookiebot
   - website_google_tag_manager
   - website_whatsapp
+  - website_menu_by_user_status
   - website_odoo_debranding
   - website_require_login
   - website_crm_quick_answer
