@@ -1197,6 +1197,7 @@ oca:
   - pos_order_to_sale_order_delivery
   - pos_to_weight_by_product_uom
   product-attribute:
+  - product_english_name
   - sale_product_template_tags
   - product_code_mandatory
   - product_pricelist_alternative
@@ -1867,6 +1868,7 @@ oca:
   - mail_composer_cc_bcc_account
   - mail_activity_plan
   - mail_discuss_security
+  - mail_notification_custom_subject
   - mail_composer_cc_bcc
   spreadsheet:
   - spreadsheet_oca
