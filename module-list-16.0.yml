@@ -576,6 +576,7 @@ oca:
   - dms_user_role
   - dms
   - dms_storage
+  - account_dms_field
   donation:
   - donation
   - donation_direct_debit
@@ -1722,6 +1723,7 @@ oca:
   - hr_expense_remove_mobile_link
   - portal_odoo_debranding
   server-env:
+  - mail_environment_google_gmail
   - server_environment_data_encryption
   - mail_environment
   - server_environment
