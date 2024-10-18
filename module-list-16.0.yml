@@ -897,6 +897,7 @@ oca:
   - maintenance_request_stage_transition
   - maintenance_request_repair
   - maintenance_request_sequence
+  - maintenance_equipment_category_hierarchy
   - maintenance_equipment_tags
   - base_maintenance_config
   - maintenance_equipment_hierarchy
@@ -1314,8 +1315,10 @@ oca:
   - project_stock_product_set
   - project_hr
   - project_update_visible
+  - project_tag_multicompany
   - project_parent
   - project_stage_extra_info
+  - project_tag_hierarchy
   - project_department
   - project_task_stage_state
   - project_stage_last_update_date
@@ -1333,6 +1336,7 @@ oca:
   - project_task_pull_request
   - project_key
   - project_parent_task_filter
+  - project_tag_security
   - project_task_personal_stage_auto_fold
   - project_type
   - project_administrator_restricted_visibility
