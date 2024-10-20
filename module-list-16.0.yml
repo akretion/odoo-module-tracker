@@ -154,13 +154,19 @@ oca:
   account-budgeting:
   - account_budget_oca
   account-closing:
+  - account_cutoff_accrual_sale
+  - account_cutoff_accrual_sale_stock
+  - account_cutoff_accrual_purchase_stock
+  - account_cutoff_accrual_purchase
   - account_multicurrency_revaluation
   - account_cutoff_accrual_subscription
   - account_invoice_start_end_dates_move
   - account_cutoff_picking
   - account_invoice_start_end_dates
   - account_cutoff_base
+  - account_cutoff_accrual_order_stock_base
   - account_cutoff_start_end_dates
+  - account_cutoff_accrual_order_base
   account-consolidation: []
   account-financial-reporting:
   - mis_template_financial_report
@@ -1341,6 +1347,7 @@ oca:
   - project_type
   - project_administrator_restricted_visibility
   - project_duplicate_subtask
+  - task_project_status
   - project_task_stage_mgmt
   - project_purchase_link
   - project_timesheet_time_control
@@ -1522,10 +1529,12 @@ oca:
   - base_rest_auth_api_key
   rma:
   - rma_procurement_customer
+  - rma_sale_lot
   - rma
   - rma_sale_mrp
   - product_warranty
   - rma_sale
+  - rma_lot
   role-policy: []
   runbot-addons: []
   sale-channel:
