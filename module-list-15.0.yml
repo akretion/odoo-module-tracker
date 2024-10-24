@@ -1216,6 +1216,7 @@ oca:
   - purchase_order_product_recommendation_brand
   - purchase_order_line_stock_available
   - purchase_partner_selectable_option
+  - stock_picking_batch_purchase_price_update
   - purchase_warn_message
   - purchase_cancel_confirm
   - purchase_invoice_plan
@@ -1225,6 +1226,7 @@ oca:
   - purchase_request_tier_validation
   - purchase_advance_payment
   - purchase_receipt_expectation_manual
+  - stock_move_purchase_price_update
   - purchase_order_line_deep_sort
   - purchase_order_qty_change_no_recompute
   - purchase_triple_discount
@@ -1688,6 +1690,7 @@ oca:
   - stock_archive_constraint
   - stock_location_route_description
   - stock_location_position
+  - stock_inventory_verification_request
   - stock_available_immediately
   - stock_request_separate_picking
   - stock_orderpoint_uom
