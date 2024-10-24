@@ -612,6 +612,7 @@ oca:
   rma:
   - rma
   - product_warranty
+  - rma_lot
   role-policy: []
   runbot-addons: []
   sale-channel: []
@@ -771,6 +772,7 @@ oca:
   stock-logistics-interfaces: []
   stock-logistics-orderpoint: []
   stock-logistics-reporting:
+  - stock_quantity_history_location
   - stock_picking_comment_template
   - stock_move_value_report
   - stock_picking_report_valued
