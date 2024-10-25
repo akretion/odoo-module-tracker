@@ -234,6 +234,7 @@ oca:
   e-commerce:
   - website_sale_suggest_create_account
   - website_sale_hide_price
+  - website_sale_product_reference_displayed
   - website_sale_b2x_alt_price
   - website_sale_product_description
   e-learning: []
@@ -586,6 +587,7 @@ oca:
   - test_queue_job
   repair:
   - repair_type
+  - repair_quality_control
   report-print-send:
   - base_report_to_printer
   reporting-engine:
@@ -706,6 +708,7 @@ oca:
   - sentry
   - upgrade_analysis
   - jsonifier
+  - base_m2m_custom_field
   - base_cron_exclusion
   - server_action_logging
   - session_db
