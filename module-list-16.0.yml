@@ -1289,6 +1289,7 @@ oca:
   - product_company_default
   - product_get_price_helper
   product-configurator:
+  - product_configurator_mrp
   - product_configurator
   - product_configurator_sale
   product-kitting: []
@@ -1828,6 +1829,7 @@ oca:
   - developer_menu
   - base_search_custom_field_filter
   - base_substate
+  - mail_suggested_recipient_unchecked
   - barcode_action
   - date_range_account
   - base_tier_validation_server_action
