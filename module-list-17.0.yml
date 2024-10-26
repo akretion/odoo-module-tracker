@@ -97,6 +97,7 @@ oca:
   - account_reconcile_oca
   - account_reconcile_model_oca
   agreement:
+  - agreement_account
   - agreement
   apps-store: []
   automation: []
@@ -386,6 +387,7 @@ oca:
   - mgmtsystem_hazard_risk
   manufacture:
   - mrp_production_note
+  - mrp_repair_order
   - mrp_sale_info
   - mrp_bom_component_menu
   - mrp_multi_level
@@ -414,6 +416,7 @@ oca:
   - mail_multicompany
   - base_multi_company
   - product_tax_multicompany_default
+  - partner_multi_company
   - account_invoice_inter_company
   odoo-pim: []
   operating-unit:
@@ -464,6 +467,7 @@ oca:
   - partner_vat_unique
   - account_partner_company_group
   - partner_second_lastname
+  - partner_category_security
   - partner_deduplicate_filter
   - partner_contact_department
   - crm_partner_company_group
@@ -484,6 +488,7 @@ oca:
   - partner_contact_birthplace
   - partner_contact_personal_information_page
   - base_partner_company_group
+  - partner_company_default
   - partner_deduplicate_acl
   payroll:
   - payroll
@@ -791,6 +796,7 @@ oca:
   - stock_request_kanban
   stock-logistics-tracking: []
   stock-logistics-transport:
+  - tms_sale
   - tms_product
   - tms_purchase
   - tms_account_asset
