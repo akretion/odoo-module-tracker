@@ -394,6 +394,7 @@ oca:
   - mrp_multi_level_estimate
   - quality_control_oca_timesheet
   - mrp_warehouse_calendar
+  - mrp_mass_production_order
   - quality_control_oca
   - mrp_bom_tracking
   - mrp_tag
@@ -591,6 +592,7 @@ oca:
   - queue_job_cron_jobrunner
   - test_queue_job
   repair:
+  - repair_timesheet
   - repair_type
   - repair_quality_control
   report-print-send:
@@ -749,6 +751,7 @@ oca:
   shift-planning: []
   sign: []
   social:
+  - mute_notification_user_autosubscribe
   - mail_activity_done
   - mail_send_confirmation
   - mail_debrand
@@ -807,6 +810,7 @@ oca:
   - product_route_profile
   - stock_picking_volume_packaging
   - stock_reserve
+  - stock_demand_estimate_matrix
   - scrap_reason_code
   - stock_packaging_calculator
   - stock_picking_volume
