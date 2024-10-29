@@ -694,6 +694,7 @@ oca:
   - fieldservice_stock_request
   - fieldservice_account
   - fieldservice_calendar
+  - fieldservice_portal
   - fieldservice_stock
   - fieldservice_route
   - fieldservice_vehicle
@@ -1314,6 +1315,7 @@ oca:
   - sale_product_variant_attribute_tax
   program: []
   project:
+  - project_task_description_template
   - project_task_name_with_id
   - project_task_material
   - project_list
@@ -1584,6 +1586,7 @@ oca:
   - sale_report_delivered_volume
   - sale_order_product_recommendation_product_sold_by_delivery_week
   - sale_layout_category_hide_detail
+  - sale_report_delivered_deposit
   - sale_comment_template
   - sale_report_delivered
   sale-workflow:
