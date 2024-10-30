@@ -569,6 +569,7 @@ oca:
   - delivery_estimated_package_quantity_by_weight
   - sale_order_warehouse_from_delivery_carrier
   - delivery_roulier
+  - delivery_roulier_laposte_fr
   - partner_delivery_schedule
   - delivery_driver_stock_picking_batch
   - delivery_multi_destination
@@ -679,6 +680,7 @@ oca:
   - website_event_ticket_limit
   - website_event_membership_restriction
   - website_event_questions_by_ticket
+  - website_event_contact
   - website_event_require_login
   - event_registration_mass_mailing
   - partner_event
@@ -729,6 +731,7 @@ oca:
   - fleet_vehicle_fuel_capacity
   geospatial:
   - base_geoengine
+  - web_leaflet_lib
   - web_view_leaflet_map_partner
   - base_geolocalize_company
   - base_geoengine_demo
