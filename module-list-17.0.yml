@@ -53,6 +53,7 @@ oca:
   - account_move_name_sequence
   - account_move_line_sale_info
   - account_lock_date_update
+  - account_loan
   - account_move_print
   - account_move_template
   - account_partner_required
@@ -120,6 +121,7 @@ oca:
   - account_payment_sale
   - account_payment_order_grouped_output
   bank-statement-import:
+  - account_statement_import_move_line
   - account_statement_import_base
   - account_statement_import_file
   - account_statement_import_file_reconcile_oca
@@ -497,7 +499,10 @@ oca:
   pms: []
   pos:
   - pos_order_to_sale_order
+  - pos_partner_vat_required
   - pos_partner_second_lastname
+  - pos_partner_firstname_required
+  - pos_partner_address_required
   - pos_lot_selection
   - pos_hide_cost_price_and_margin
   - pos_partner_firstname
