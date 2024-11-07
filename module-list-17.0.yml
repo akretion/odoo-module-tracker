@@ -599,6 +599,7 @@ oca:
   - queue_job_cron_jobrunner
   - test_queue_job
   repair:
+  - repair_stock
   - repair_timesheet
   - repair_type
   - repair_quality_control
@@ -840,6 +841,7 @@ oca:
   - stock_warehouse_calendar
   stock-logistics-workflow:
   - stock_picking_send_by_mail
+  - stock_lot_on_hand_first
   - stock_picking_kind
   - stock_picking_purchase_order_link
   - stock_valuation_layer_usage
@@ -898,7 +900,8 @@ oca:
   vertical-community: []
   vertical-construction: []
   vertical-cooperative-supermarket: []
-  vertical-edition: []
+  vertical-edition:
+  - bookstore_mgmt
   vertical-education: []
   vertical-hotel: []
   vertical-isp: []
