@@ -1396,6 +1396,7 @@ oca:
   - sale_delivery_state
   - sale_planner_calendar
   - sale_payment_sheet
+  - sale_pricelist_global_rule
   - sale_order_type_quotation_number
   - sale_order_line_remove
   - sale_procurement_group_by_commitment_date
@@ -1623,6 +1624,7 @@ oca:
   - mail_activity_creator
   - mail_tracking_mass_mailing
   - mail_quoted_reply
+  - mail_save_as_template_security
   - mail_post_defer
   - mail_activity_partner
   - fetchmail_mail_activity_team_activity
@@ -1738,6 +1740,7 @@ oca:
   - stock_production_lot_active
   - stock_picking_line_sequence
   - sale_line_returned_qty_mrp
+  - stock_landed_costs_priority
   - stock_return_request
   - stock_receipt_lot_info
   - stock_owner_restriction
