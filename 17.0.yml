@@ -32853,6 +32853,177 @@ oca:
       maintainers: []
       name: DDMRP Warning
       summary: Adds configuration warnings on stock buffers.
+    ddmrp_warning_as_job:
+      author: ForgeFlow, Odoo Community Association (OCA)
+      depends:
+      - ddmrp_warning
+      - ddmrp_cron_actions_as_job
+      - queue_job
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>DDMRP Warning as job</title>\n<style type=\"text/css\">\n\n/*\n\
+        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"ddmrp-warning-as-job\">\n<h1 class=\"title\">DDMRP\
+        \ Warning as job</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:c3da656d2f9db0b2835981bb189fa8219c547b904737b6dbe45df13d090b8dd9\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/lgpl-3.0-standalone.html\"\
+        ><img alt=\"License: LGPL-3\" src=\"https://img.shields.io/badge/licence-LGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/ddmrp/tree/17.0/ddmrp_warning_as_job\"\
+        ><img alt=\"OCA/ddmrp\" src=\"https://img.shields.io/badge/github-OCA%2Fddmrp-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/ddmrp-17-0/ddmrp-17-0-ddmrp_warning_as_job\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/ddmrp&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>DDMRP Warning calculations are now run with Queue Jobs.</p>\n\
+        <p>The <tt class=\"docutils literal\"><span class=\"pre\">&lt;stock.buffer&gt;._generate_ddmrp_warnings</span></tt>\
+        \ method is automatically\ndelayed when the context contains\n<tt class=\"\
+        docutils literal\">auto_delay_ddmrp_generate_ddmrp_warnings=True</tt>.</p>\n\
+        <p><strong>Table of contents</strong></p>\n<div class=\"contents local topic\"\
+        \ id=\"contents\">\n<ul class=\"simple\">\n<li><a class=\"reference internal\"\
+        \ href=\"#bug-tracker\" id=\"toc-entry-1\">Bug Tracker</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#credits\" id=\"toc-entry-2\">Credits</a><ul>\n\
+        <li><a class=\"reference internal\" href=\"#authors\" id=\"toc-entry-3\">Authors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-4\"\
+        >Contributors</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-5\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-1\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"reference\
+        \ external\" href=\"https://github.com/OCA/ddmrp/issues\">GitHub Issues</a>.\n\
+        In case of trouble, please check there if your issue has already been reported.\n\
+        If you spotted it first, help us to smash it by providing a detailed and welcomed\n\
+        <a class=\"reference external\" href=\"https://github.com/OCA/ddmrp/issues/new?body=module:%20ddmrp_warning_as_job%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-3\">Authors</a></h2>\n<ul class=\"simple\">\n<li>ForgeFlow</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-4\">Contributors</a></h2>\n<p>David Jim\xE9\
+        nez <a class=\"reference external\" href=\"mailto:david.jimenez&#64;forgeflow.com\"\
+        >david.jimenez&#64;forgeflow.com</a></p>\n</div>\n<div class=\"section\" id=\"\
+        maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-5\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/ddmrp/tree/17.0/ddmrp_warning_as_job\"\
+        >OCA/ddmrp</a> project on GitHub.</p>\n<p>You are welcome to contribute. To\
+        \ learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers: []
+      name: DDMRP Warning as job
+      summary: Run DDMRP Warning as jobs
   delivery-carrier:
     base_delivery_carrier_label:
       author: Camptocamp,Akretion,Odoo Community Association (OCA)
@@ -49896,7 +50067,388 @@ oca:
       name: Custom Hour Interval for Holidays
       summary: "\n        Edit start and end of leaves using time intervals"
   infrastructure: {}
-  interface-github: {}
+  interface-github:
+    github_connector:
+      author: Odoo Community Association (OCA), GRAP, Akretion, Tecnativa
+      depends:
+      - base
+      - web
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Github Connector</title>\n<style type=\"text/css\">\n\n/*\n:Author:\
+        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511 2024-01-13\
+        \ 09:50:07Z milde $\n:Copyright: This stylesheet has been placed in the public\
+        \ domain.\n\nDefault cascading style sheet for the HTML output of Docutils.\n\
+        Despite the name, some widely supported CSS2 features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"github-connector\">\n<h1 class=\"title\">Github\
+        \ Connector</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:29c14b59b60246cac8e8b59309bf989c02dd1b2067ce1f395b45d31f5f29944f\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/interface-github/tree/17.0/github_connector\"\
+        ><img alt=\"OCA/interface-github\" src=\"https://img.shields.io/badge/github-OCA%2Finterface--github-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/interface-github-17-0/interface-github-17-0-github_connector\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/interface-github&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module allows you to:</p>\n<ul class=\"simple\">\n<li>Fetch\
+        \ into Odoo social information from Github (Organizations, Teams,\nUsers)</li>\n\
+        <li>Fetch into Odoo Code structure information from Github (Repositories,\n\
+        Branches)</li>\n<li>Download source code from Github</li>\n<li>Analyze repository\
+        \ code from rules previously created</li>\n</ul>\n<p><strong>Table of contents</strong></p>\n\
+        <div class=\"contents local topic\" id=\"contents\">\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference internal\" href=\"#installation\" id=\"toc-entry-1\"\
+        >Installation</a></li>\n<li><a class=\"reference internal\" href=\"#configuration\"\
+        \ id=\"toc-entry-2\">Configuration</a><ul>\n<li><a class=\"reference internal\"\
+        \ href=\"#technical-information\" id=\"toc-entry-3\">Technical Information</a></li>\n\
+        </ul>\n</li>\n<li><a class=\"reference internal\" href=\"#usage\" id=\"toc-entry-4\"\
+        >Usage</a><ul>\n<li><a class=\"reference internal\" href=\"#initial-upload-from-github\"\
+        \ id=\"toc-entry-5\">Initial upload from Github</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#select-branches-to-download\" id=\"toc-entry-6\"\
+        >Select branches to download</a></li>\n<li><a class=\"reference internal\"\
+        \ href=\"#team-members-synchronization\" id=\"toc-entry-7\">Team / members\
+        \ synchronization</a></li>\n<li><a class=\"reference internal\" href=\"#repositories-synchronization\"\
+        \ id=\"toc-entry-8\">Repositories synchronization</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#fetching-the-source-code\" id=\"toc-entry-9\"\
+        >Fetching the source code</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #analysis-source-code\" id=\"toc-entry-10\">Analysis source code</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#data-creation-in-github\" id=\"\
+        toc-entry-11\">Data creation in Github</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#note\" id=\"toc-entry-12\">Note</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#reporting\" id=\"toc-entry-13\">Reporting</a></li>\n\
+        </ul>\n</li>\n<li><a class=\"reference internal\" href=\"#known-issues-roadmap\"\
+        \ id=\"toc-entry-14\">Known issues / Roadmap</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#bug-tracker\" id=\"toc-entry-15\">Bug Tracker</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#credits\" id=\"toc-entry-16\"\
+        >Credits</a><ul>\n<li><a class=\"reference internal\" href=\"#authors\" id=\"\
+        toc-entry-17\">Authors</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #contributors\" id=\"toc-entry-18\">Contributors</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#maintainers\" id=\"toc-entry-19\">Maintainers</a></li>\n\
+        </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"installation\">\n\
+        <h1><a class=\"toc-backref\" href=\"#toc-entry-1\">Installation</a></h1>\n\
+        <p>To install this addon, you need to install some python dependencies</p>\n\
+        <pre class=\"code bash literal-block\">\nsudo<span class=\"w\"> </span>pip<span\
+        \ class=\"w\"> </span>install<span class=\"w\"> </span>PyGitHub<span class=\"\
+        w\">\n</span>sudo<span class=\"w\"> </span>apt<span class=\"w\"> </span>install<span\
+        \ class=\"w\"> </span>cloc<span class=\"w\">\n</span>sudo<span class=\"w\"\
+        > </span>pip<span class=\"w\"> </span>install<span class=\"w\"> </span>pathspec<span\
+        \ class=\"w\">\n</span>sudo<span class=\"w\"> </span>pip<span class=\"w\"\
+        > </span>install<span class=\"w\"> </span>GitPython\n</pre>\n<p>Analysis source\
+        \ code is generated by\n<a class=\"reference external\" href=\"https://github.com/roskakori/pygount\"\
+        >https://github.com/roskakori/pygount</a></p>\n</div>\n<div class=\"section\"\
+        \ id=\"configuration\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\"\
+        >Configuration</a></h1>\n<p>Once installed, you have to:</p>\n<ol class=\"\
+        arabic simple\">\n<li>Open your odoo.conf file and add extra settings to mention\
+        \ Github\ncredentials, and the local path where the source code will be\n\
+        downloaded:<ul>\n<li><tt class=\"docutils literal\">source_code_local_path\
+        \ = /workspace/source_code/</tt></li>\n</ul>\n</li>\n</ol>\n<p>Note: you can\
+        \ define the route as environment variable using the key\nSOURCE_CODE_LOCAL_PATH</p>\n\
+        <p>Note: make sure that Odoo process has read / write access on that folder</p>\n\
+        <blockquote>\n<ul class=\"simple\">\n<li><tt class=\"docutils literal\">github_token\
+        \ = your_github_access_token</tt></li>\n</ul>\n</blockquote>\n<p>Note: The\
+        \ login/password auth has been deprecated by GitHub.\n<a class=\"reference\
+        \ external\" href=\"https://docs.github.com/en/rest/overview/other-authentication-methods#via-username-and-password\"\
+        >https://docs.github.com/en/rest/overview/other-authentication-methods#via-username-and-password</a></p>\n\
+        <ol class=\"arabic\">\n<li><p class=\"first\">Go to \u2018Settings\u2019 /\
+        \ \u2018Technical\u2019 / \u2018Parameters\u2019 / \u2018System Parameters\u2019\
+        \nand define the following values:</p>\n<ol class=\"arabic simple\">\n<li><tt\
+        \ class=\"docutils literal\">github.max_try</tt>: number of call to the API\
+        \ before an error is\nraised. The more unstable/slow your connection, the\
+        \ higher should\nbe this value</li>\n<li><tt class=\"docutils literal\">git.partial_commit_during_analysis</tt>:\
+        \ Set to <tt class=\"docutils literal\">True</tt> if you\nwant to commit the\
+        \ result of the analysis in the database after\neach repository analysis.\
+        \ We recommend to set to <tt class=\"docutils literal\">True</tt> when you\n\
+        perform the initial download (potentially with a lot of\nrepositories) in\
+        \ order to reduce the size of the transaction</li>\n</ol>\n<p><img alt=\"\
+        image\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_settings.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">Go to your(s) user(s) form to add\
+        \ them in the new \u2018Connector Github\nManager\u2019 groups. The members\
+        \ of this group will have the possibility\nto run Github synchronization.</p>\n\
+        </li>\n</ol>\n<div class=\"section\" id=\"technical-information\">\n<h2><a\
+        \ class=\"toc-backref\" href=\"#toc-entry-3\">Technical Information</a></h2>\n\
+        <p>This module provides 4 crons that you can enable:</p>\n<ul class=\"simple\"\
+        >\n<li>Synchronize All Organizations and Teams\n(<tt class=\"docutils literal\"\
+        >cron_update_organization</tt>)</li>\n<li>Synchronize Branches List for All\
+        \ repositories\n(<tt class=\"docutils literal\">cron_update_branch_list</tt>)</li>\n\
+        <li>Download Source Code for All Github Branches (<tt class=\"docutils literal\"\
+        >cron_download_code</tt>)</li>\n<li>Analyze Source Code for All Github Branches\
+        \ (<tt class=\"docutils literal\">cron_analyze_code</tt>)</li>\n</ul>\n</div>\n\
+        </div>\n<div class=\"section\" id=\"usage\">\n<h1><a class=\"toc-backref\"\
+        \ href=\"#toc-entry-4\">Usage</a></h1>\n<div class=\"section\" id=\"initial-upload-from-github\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-5\">Initial upload from\
+        \ Github</a></h2>\n<p>To fetch information from Github, you have to:</p>\n\
+        <ol class=\"arabic\">\n<li><p class=\"first\">go to \u2018Github\u2019 / \u2018\
+        Settings\u2019 / \u2018Sync Object\u2019</p>\n</li>\n<li><p class=\"first\"\
+        >Select the object type you want to synchronize and its Gthub name</p>\n<p><img\
+        \ alt=\"sync_organization\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/sync_organization.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">Once done for your organization(s),\
+        \ go to \u2018Github\u2019 / \u2018Github\nCommnunity\u2019 / \u2018Organizations\u2019\
+        </p>\n<p><img alt=\"github_organization_kanban\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_organization_kanban.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">Optionally, once organization is created,\
+        \ you can create series for\nyour projects. Go to \u2018Github\u2019 / \u2018\
+        Organizations\u2019 / click on your\norganization / \u2018Organization Series\u2019\
+        \ Tabs</p>\n<p><img alt=\"github_organization_series\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_organization_series.png\"\
+        \ /></p>\n</li>\n</ol>\n</div>\n<div class=\"section\" id=\"select-branches-to-download\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Select branches to download</a></h2>\n\
+        <p>This setting will prevent to download undesired branches, downloading\n\
+        only main branches (releases):</p>\n<ol class=\"arabic\">\n<li><p class=\"\
+        first\">In the \u2018Settings\u2019 tab, set repositories you don\u2019t want\
+        \ to download\n(or repositories you want to download). If \u2018Specific repositories\u2019\
+        \ is\nset, \u2018Ignored Repositories\u2019 value is ignored.</p>\n</li>\n\
+        <li><p class=\"first\">In the \u2018Settings\u2019 tab, set the URL of the\
+        \ \u2018External Services\u2019 you use\nfor Continuous Integration and Coverage.</p>\n\
+        <p><img alt=\"github_organization_external_services\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_organization_external_services.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">Once done, click on buttons \u2018\
+        Syncs\u2019, to synchronize repositories,\nteams and members. (This process\
+        \ can take a while depending of your\nsize)</p>\n<p><img alt=\"github_organization_sync_buttons\"\
+        \ src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_organization_sync_buttons.png\"\
+        \ /></p>\n</li>\n</ol>\n</div>\n<div class=\"section\" id=\"team-members-synchronization\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\">Team / members synchronization</a></h2>\n\
+        <p>You can synchronize members teams:</p>\n<ol class=\"arabic\">\n<li><p class=\"\
+        first\">Go to \u2018Teams\u2019 / tree view / \u2018Actions\u2019 / \u2018\
+        Update from Github\u2019.</p>\n<p><img alt=\"github_team_kanban\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_team_kanban.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">In each team, you can see the members\
+        \ list and the role of the\nmembers</p>\n<p><img alt=\"github_team_partner_kanban\"\
+        \ src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_team_partner_kanban.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">In each team, you can see the repositories\
+        \ list but not the\npermissions of the team. (See \u2018Known Issues\u2019\
+        \ Section)</p>\n<p><img alt=\"github_team_repository_kanban\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_team_repository_kanban.png\"\
+        \ /></p>\n</li>\n</ol>\n</div>\n<div class=\"section\" id=\"repositories-synchronization\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-8\">Repositories synchronization</a></h2>\n\
+        <p>You can synchronize the branches of your repositories:</p>\n<ol class=\"\
+        arabic\">\n<li><p class=\"first\">Go to \u2018Repositories\u2019 / tree view\
+        \ / \u2018Actions\u2019 / \u2018Update from Github\u2019</p>\n<p><img alt=\"\
+        github_repository_kanban\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_repository_kanban.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">In each repository, you can see the\
+        \ main branches list and the size\nof code source.</p>\n<p><img alt=\"github_repository_branch_kanban\"\
+        \ src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_repository_branch_kanban.png\"\
+        \ /></p>\n</li>\n</ol>\n</div>\n<div class=\"section\" id=\"fetching-the-source-code\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-9\">Fetching the source\
+        \ code</a></h2>\n<p>Finally, you can download locally the source code of all\
+        \ your branches:</p>\n<ol class=\"arabic\">\n<li><p class=\"first\">Go to\
+        \ \u2018Repository Branches\u2019 / tree view / \u2018Actions\u2019 / \u2018\
+        Download and\nAnalyse Source Code\u2019.</p>\n<p><img alt=\"wizard_download_analyze\"\
+        \ src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/wizard_download_analyze.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">In the tree view you can update manually\
+        \ source code or refresh\nanalysis.</p>\n<p><img alt=\"github_repository_branch_list\"\
+        \ src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_repository_branch_list.png\"\
+        \ /></p>\n</li>\n</ol>\n</div>\n<div class=\"section\" id=\"analysis-source-code\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-10\">Analysis source code</a></h2>\n\
+        <p>It\u2019s possible to create custom analysis rules that relate to a GitHub\n\
+        organization, GitHub repository and/or GitHub repository branch to\nanalyze\
+        \ code.</p>\n<ol class=\"arabic simple\">\n<li>Go to \u2018Settings\u2019\
+        \ / \u2018Analysis rule groups\u2019 and create records that\nallow to organize\
+        \ the rules</li>\n<li>Go to \u2018Settings\u2019 / \u2018Analysis rules\u2019\
+        \ and create rules, for example:</li>\n</ol>\n<!--  -->\n<blockquote>\n<ol\
+        \ class=\"arabic simple\">\n<li>Name: All code, Group: General, Paths: <tt\
+        \ class=\"docutils literal\">*</tt></li>\n<li>Name: Python code, Group: General,\
+        \ Paths: <tt class=\"docutils literal\">*.py</tt></li>\n<li>Name: Xml code,\
+        \ Group: General, Paths: <tt class=\"docutils literal\">*.xml</tt></li>\n\
+        <li>Name: Repository 1, Group: Custom, Paths: /path/</li>\n</ol>\n</blockquote>\n\
+        <p>Note: Paths field in \u2018Analysis rule\u2019 allow to put multiple paths\
+        \ for\nline, path format is according to\n<a class=\"reference external\"\
+        \ href=\"https://git-scm.com/docs/gitignore#_pattern_format\">https://git-scm.com/docs/gitignore#_pattern_format</a></p>\n\
+        <ol class=\"arabic simple\">\n<li>Go to <em>GitHub &gt; GitHub Community &gt;\
+        \ Organizations</em> and define Analysis\nrules (optional)</li>\n<li>Go to\
+        \ <em>GitHub &gt; GitHub Repository &gt; Repositories</em> and define Analysis\n\
+        rules (optional)</li>\n<li>Go to <em>GitHub &gt; GitHub Repository &gt; Repository\
+        \ Branches</em> and define\nAnalysis rules (optional)</li>\n</ol>\n<p>Analysis\
+        \ source code is executed when \u2018Update Source Code Analysis\u2019\nbutton\
+        \ in some \u2018Repository Branch\u2019, get all the Analysis rules\n(Repository\
+        \ + Organization) and analyze code and generate info about it\nOther option\
+        \ to Analysis source code is in cron called \u2018Analyze Source\nCode for\
+        \ All Github Branches\u2019</p>\n<p>You can see in \u2018Repository Branch\u2019\
+        \ / \u2018Code Analysis\u2019 the info obtained\nfrom analysis rules.</p>\n\
+        </div>\n<div class=\"section\" id=\"data-creation-in-github\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-11\">Data creation in Github</a></h2>\n<p>You\
+        \ have the possibility to creates two items in Github directly from\nOdoo</p>\n\
+        <ol class=\"arabic\">\n<li><p class=\"first\">Teams:</p>\n<ol class=\"arabic\
+        \ simple\">\n<li>Go to \u2018Settings\u2019 / \u2018Create Team in Github\u2019\
+        .</li>\n<li>Set the information and click on Create in Github.</li>\n<li>Odoo\
+        \ will try to create the team. If access right and datas are\ncorrect, the\
+        \ creation will be done directly in Github</li>\n<li>Later on, a synchronization\
+        \ will be performed, to create the\naccording team in the Odoo instance.</li>\n\
+        </ol>\n<p><img alt=\"wizard_create_team\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/wizard_create_team.png\"\
+        \ /></p>\n</li>\n<li><p class=\"first\">Repositories:</p>\n<ol class=\"arabic\
+        \ simple\">\n<li>Go to \u2018Settings\u2019 / \u2018Create Team in Github\u2019\
+        .</li>\n<li>Set the information and click on Create in Github.</li>\n</ol>\n\
+        <p><img alt=\"wizard_create_repository\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/wizard_create_repository.png\"\
+        \ /></p>\n</li>\n</ol>\n</div>\n<div class=\"section\" id=\"note\">\n<h2><a\
+        \ class=\"toc-backref\" href=\"#toc-entry-12\">Note</a></h2>\n<p>Analysis\
+        \ in this module is basic: for the time being, it just gives\nbranches size.</p>\n\
+        <p>Nevertheless, you can develop an extra Odoo Custom module to extend\nanalysis\
+        \ function and get extra statistics, depending on your needs.</p>\n<p>In that\
+        \ way, you can see the module github_connector_odoo, if your\nrepositories\
+        \ contain Odoo modules.</p>\n</div>\n<div class=\"section\" id=\"reporting\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-13\">Reporting</a></h2>\n\
+        <p>This module provides several reports</p>\n<p><strong>Branches by Serie</strong></p>\n\
+        <p><img alt=\"reporting_branches_by_serie\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/reporting_branches_by_serie.png\"\
+        \ /></p>\n<p><strong>Sizes by Serie</strong></p>\n<p><img alt=\"reporting_sizes_by_serie\"\
+        \ src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/reporting_sizes_by_serie.png\"\
+        \ /></p>\n<p><strong>Repository branch analysis rule</strong></p>\n<p><img\
+        \ alt=\"github_repository_branch_rule_info_report\" src=\"https://raw.githubusercontent.com/OCA/interface-github/17.0/github_connector/static/description/github_repository_branch_rule_info_report.png\"\
+        \ /></p>\n</div>\n</div>\n<div class=\"section\" id=\"known-issues-roadmap\"\
+        >\n<h1><a class=\"toc-backref\" href=\"#toc-entry-14\">Known issues / Roadmap</a></h1>\n\
+        <ul>\n<li><p class=\"first\">For the time being, Github API doesn\u2019t provide\
+        \ some informations that\nare available by the classic UI, that includes:</p>\n\
+        <ol class=\"arabic simple\">\n<li>team hierarchy: the field is present in\
+        \ the model\ngithub_team.parent_id, but unused.</li>\n</ol>\n</li>\n<li><p\
+        \ class=\"first\">Possible improvements:</p>\n<ol class=\"arabic simple\"\
+        >\n<li>Create a new module github_connector_website, that could display\n\
+        teams / repositories / branches informations for non logged users.</li>\n\
+        <li>Analyze commits (author, quantity by series, etc\u2026): this feature\n\
+        has been partially implemented in a V8.0 PR.</li>\n<li>Synchronize Pull Request,\
+        \ Issues, Comments: this feature has been\npartially implemented in a V8.0\
+        \ PR.</li>\n</ol>\n</li>\n<li><p class=\"first\">Refactor the github connector:</p>\n\
+        <p>A python library called PyGitHub is available. It could be\ninteresting\
+        \ to use it, instead of using custom code. However, this\nlib doesn\u2019\
+        t provide good access to child object, generating for the\ntime being, unnecessary\
+        \ API calls. For example, updating a repository\nshould call before a call\
+        \ to the parent organization (The current\nmodule is so faster).</p>\n</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"\
+        toc-backref\" href=\"#toc-entry-15\">Bug Tracker</a></h1>\n<p>Bugs are tracked\
+        \ on <a class=\"reference external\" href=\"https://github.com/OCA/interface-github/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/interface-github/issues/new?body=module:%20github_connector%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-16\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-17\">Authors</a></h2>\n<ul class=\"simple\">\n<li>GRAP</li>\n<li>Akretion</li>\n\
+        <li>Tecnativa</li>\n</ul>\n</div>\n<div class=\"section\" id=\"contributors\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-18\">Contributors</a></h2>\n\
+        <ul class=\"simple\">\n<li>Sylvain LE GAL (<a class=\"reference external\"\
+        \ href=\"https://twitter.com/legalsylvain\">https://twitter.com/legalsylvain</a>)</li>\n\
+        <li>S\xE9bastien BEAU (<a class=\"reference external\" href=\"mailto:sebastien.beau&#64;akretion.com\"\
+        >sebastien.beau&#64;akretion.com</a>)</li>\n<li>Beno\xEEt GUILLOT (<a class=\"\
+        reference external\" href=\"mailto:benoit.guillot&#64;akretion.com\">benoit.guillot&#64;akretion.com</a>)</li>\n\
+        <li>Enrique Mart\xEDn (<a class=\"reference external\" href=\"mailto:enriquemartin&#64;digital5.es\"\
+        >enriquemartin&#64;digital5.es</a>)</li>\n<li><a class=\"reference external\"\
+        \ href=\"https://www.tecnativa.com\">Tecnativa</a>:\u201D,<ul>\n<li>Pedro\
+        \ M. Baeza</li>\n<li>Vicent Cubells</li>\n<li>Alexandre D\xEDaz</li>\n<li>Ernesto\
+        \ Tejeda</li>\n<li>Carlos Roca</li>\n<li>V\xEDctor Mart\xEDnez</li>\n<li>Jo\xE3\
+        o Marques</li>\n<li>Carolina Fernandez</li>\n</ul>\n</li>\n</ul>\n</div>\n\
+        <div class=\"section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-19\">Maintainers</a></h2>\n<p>This module is maintained by the\
+        \ OCA.</p>\n<a class=\"reference external image-reference\" href=\"https://odoo-community.org\"\
+        >\n<img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/interface-github/tree/17.0/github_connector\"\
+        >OCA/interface-github</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers: []
+      name: Github Connector
+      summary: Synchronize information from Github repositories
   intrastat-extrastat:
     intrastat_base:
       author: ACSONE SA/NV,Akretion,Noviat,Odoo Community Association (OCA)
@@ -61629,7 +62181,7 @@ oca:
         \ Level</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:d650d0cbd79f4970452c75b364aff9ccf2df3e000d54928cf0189ec982254e52\n\
+        !! source digest: sha256:d2feec1238f19774a812cf151d5213ebff2dd30b053a6c6c47dc2e0f2315e7ac\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Production/Stable\" src=\"https://img.shields.io/badge/maturity-Production%2FStable-green.png\"\
@@ -85755,7 +86307,7 @@ oca:
         \ Category Active</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:85f552c3dd6d3746253028038f9c793f4871e07e8c023ffa9ea7b492affe3b9c\n\
+        !! source digest: sha256:e027b589dfe0610db88cff23371b1f56e707d8186534ec42d10b0e5d0e0843fd\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -90240,9 +90792,10 @@ oca:
         \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
         \ />\n<title>Purchase Delivery Split Date</title>\n<style type=\"text/css\"\
         >\n\n/*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css\
-        \ 8954 2022-01-20 10:10:25Z milde $\n:Copyright: This stylesheet has been\
+        \ 9511 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been\
         \ placed in the public domain.\n\nDefault cascading style sheet for the HTML\
-        \ output of Docutils.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ output of Docutils.\nDespite the name, some widely supported CSS2 features\
+        \ are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
         \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
         \ from tables and images */\n.borderless, table.borderless td, table.borderless\
         \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
@@ -90312,7 +90865,7 @@ oca:
         \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
         \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
         \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
-        \ .ln { color: grey; } /* line numbers */\npre.code, code { background-color:\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
         \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
         \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
         \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
@@ -90322,12 +90875,12 @@ oca:
         \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
         \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
         \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
-        \ }\n\nspan.problematic {\n  color: red }\n\nspan.section-subtitle {\n  /*\
-        \ font-size relative to parent (h1..h6 element) */\n  font-size: 80% }\n\n\
-        table.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px }\n\n\
-        table.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top: 0.5em\
-        \ ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid 1px\
-        \ black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
         table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
         \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
         \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
@@ -90342,7 +90895,7 @@ oca:
         >Purchase Delivery Split Date</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:3da173cedbb6ad49b99379e142a64e9060f82e99c7386cb2284e2beb61489be3\n\
+        !! source digest: sha256:da3ce0fbc1181e497401d4a90ef98d09655db76c95241c22f36100779f581b90\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -90429,8 +90982,8 @@ oca:
         </ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n<h2><a class=\"\
         toc-backref\" href=\"#toc-entry-10\">Maintainers</a></h2>\n<p>This module\
         \ is maintained by the OCA.</p>\n<a class=\"reference external image-reference\"\
-        \ href=\"https://odoo-community.org\"><img alt=\"Odoo Community Association\"\
-        \ src=\"https://odoo-community.org/logo.png\" /></a>\n<p>OCA, or the Odoo\
+        \ href=\"https://odoo-community.org\">\n<img alt=\"Odoo Community Association\"\
+        \ src=\"https://odoo-community.org/logo.png\" />\n</a>\n<p>OCA, or the Odoo\
         \ Community Association, is a nonprofit organization whose\nmission is to\
         \ support the collaborative development of Odoo features and\npromote its\
         \ widespread use.</p>\n<p>This module is part of the <a class=\"reference\
@@ -96456,6 +97009,196 @@ oca:
       maintainers: []
       name: Repair Quality Control
       summary: Create quality controls from repair order
+    repair_service:
+      author: ForgeFlow, Odoo Community Association (OCA)
+      depends:
+      - repair
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Repair Service</title>\n<style type=\"text/css\">\n\n/*\n:Author:\
+        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511 2024-01-13\
+        \ 09:50:07Z milde $\n:Copyright: This stylesheet has been placed in the public\
+        \ domain.\n\nDefault cascading style sheet for the HTML output of Docutils.\n\
+        Despite the name, some widely supported CSS2 features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"repair-service\">\n<h1 class=\"title\">Repair Service</h1>\n\
+        \n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file\
+        \ is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:62e6c28ce5e0812243297177f509b29023e6996ede4ff0cae11bc6aa06e0a6b2\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/repair/tree/17.0/repair_service\"\
+        ><img alt=\"OCA/repair\" src=\"https://img.shields.io/badge/github-OCA%2Frepair-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/repair-17-0/repair-17-0-repair_service\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/repair&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module introduces repair services. It adds a new \u201C\
+        Services\u201D tab in\nthe repair orders, where users can add and manage services\
+        \ associated\nwith the repair. Once the repair order is confirmed and a sale\
+        \ order is\ncreated, these services can be automatically added as sale order\
+        \ lines.\nMoreover, if the repair order has the \u201CUnder Warranty\u201D\
+        \ field checked,\nthe module ensures that the corresponding sale order lines\
+        \ price are set\nto a value of 0, reflecting the warranty coverage.</p>\n\
+        <p><strong>Table of contents</strong></p>\n<div class=\"contents local topic\"\
+        \ id=\"contents\">\n<ul class=\"simple\">\n<li><a class=\"reference internal\"\
+        \ href=\"#use-cases-context\" id=\"toc-entry-1\">Use Cases / Context</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#usage\" id=\"toc-entry-2\">Usage</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#bug-tracker\" id=\"toc-entry-3\"\
+        >Bug Tracker</a></li>\n<li><a class=\"reference internal\" href=\"#credits\"\
+        \ id=\"toc-entry-4\">Credits</a><ul>\n<li><a class=\"reference internal\"\
+        \ href=\"#authors\" id=\"toc-entry-5\">Authors</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#contributors\" id=\"toc-entry-6\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#maintainers\" id=\"toc-entry-7\"\
+        >Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"use-cases-context\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\"\
+        >Use Cases / Context</a></h1>\n<p>This functionality is similar to the \u201C\
+        Operations\u201D tab that existed in\nprevious versions in core Odoo. This\
+        \ tab allowed users to manage\nservices and operations in the repair orders.\
+        \ This module reintroduces\nthat functionality and adds these services as\
+        \ sale order lines when the\nsale order is generated.</p>\n</div>\n<div class=\"\
+        section\" id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\"\
+        >Usage</a></h1>\n<p>When creating or editing a repair order, you will find\
+        \ a new \u201CServices\u201D\ntab within the repair order form. In this tab,\
+        \ you can input and manage\nthe services performed as part of the repair order.\
+        \ Once the repair\norder is confirmed, when you creating a sale order from\
+        \ the repair\norder, the services listed in the \u201CServices\u201D tab will\
+        \ be automatically\nadded as sale order lines.</p>\n</div>\n<div class=\"\
+        section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-3\"\
+        >Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"reference external\"\
+        \ href=\"https://github.com/OCA/repair/issues\">GitHub Issues</a>.\nIn case\
+        \ of trouble, please check there if your issue has already been reported.\n\
+        If you spotted it first, help us to smash it by providing a detailed and welcomed\n\
+        <a class=\"reference external\" href=\"https://github.com/OCA/repair/issues/new?body=module:%20repair_service%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">Authors</a></h2>\n<ul class=\"simple\">\n<li>ForgeFlow</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-6\">Contributors</a></h2>\n<ul>\n<li><p class=\"\
+        first\"><a class=\"reference external\" href=\"https://forgeflow.com\">ForgeFlow</a>:</p>\n\
+        <blockquote>\n<ul class=\"simple\">\n<li>Andreu Orensanz &lt;<a class=\"reference\
+        \ external\" href=\"mailto:andreu.orensanz&#64;forgeflow.com\">andreu.orensanz&#64;forgeflow.com</a>&gt;</li>\n\
+        </ul>\n</blockquote>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/repair/tree/17.0/repair_service\"\
+        >OCA/repair</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers: []
+      name: Repair Service
+      summary: "\n        Adds services to repair orders, so that they can be added\n\
+        \        as sale order lines.\n    "
     repair_stock:
       author: ForgeFlow, Odoo Community Association (OCA)
       depends:

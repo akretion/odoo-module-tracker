@@ -215,6 +215,7 @@ oca:
   - ddmrp
   - ddmrp_exclude_moves_adu_calc
   - ddmrp_cron_actions_as_job
+  - ddmrp_warning_as_job
   - ddmrp_exclude_moves_adu_calc_sales
   - ddmrp_report_part_flow_index
   - ddmrp_warning
@@ -322,7 +323,8 @@ oca:
   - hr_holidays_public
   - hr_holidays_public_city
   infrastructure: []
-  interface-github: []
+  interface-github:
+  - github_connector
   intrastat-extrastat:
   - intrastat_product_hscodes_import
   - intrastat_product
@@ -604,6 +606,7 @@ oca:
   - repair_timesheet
   - repair_type
   - repair_quality_control
+  - repair_service
   report-print-send:
   - base_report_to_printer
   reporting-engine:
