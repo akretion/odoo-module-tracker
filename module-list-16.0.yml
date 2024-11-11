@@ -324,6 +324,7 @@ oca:
   - account_due_list_payment_mode
   - account_payment_widget_amount
   - account_payment_batch_process
+  - account_due_list_days_overdue
   - account_payment_return_import
   - account_payment_multi_deduction
   - partner_aging
@@ -1937,6 +1938,7 @@ oca:
   stock-logistics-orderpoint:
   - stock_orderpoint_purchase_link
   - stock_location_orderpoint
+  - stock_location_orderpoint_cleanup
   - stock_orderpoint_route
   - stock_orderpoint_move_link
   - stock_orderpoint_mto_as_mts
@@ -2138,6 +2140,7 @@ oca:
   storage:
   - storage_file
   - fs_product_brand_multi_image
+  - fs_product_public_category_multi_image
   - fs_image_thumbnail
   - storage_backend_sftp
   - fs_base_multi_image
