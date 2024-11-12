@@ -359,6 +359,7 @@ oca:
   - account_payment_order_vendor_email
   - account_payment_method_fs_storage
   - account_payment_partner
+  - account_payment_order_tier_validation
   - account_banking_mandate_sale
   - account_payment_order
   - account_banking_pain_base
@@ -1792,6 +1793,7 @@ oca:
   - cron_daylight_saving_time_resistant
   - attachment_queue
   - base_remote
+  - sequence_python
   - autovacuum_message_attachment
   - base_partition
   - dbfilter_from_header
