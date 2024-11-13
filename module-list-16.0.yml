@@ -401,6 +401,7 @@ oca:
   - business_requirement_crm
   calendar:
   - calendar_event_type_color
+  - calendar_event_link_base
   - resource_booking
   - calendar_monthly_multi
   commission:
@@ -992,6 +993,7 @@ oca:
   - mrp_unbuild_valuation_layer_link
   - account_move_line_mrp_info
   - mrp_bom_tracking
+  - mrp_unbuild_subcontracting
   - mrp_bom_hierarchy
   - mrp_lot_number_propagation
   - mrp_subcontracting_partner_management
@@ -1572,6 +1574,7 @@ oca:
   sale-financial: []
   sale-promotion:
   - loyalty_limit
+  - sale_loyalty_auto_refresh
   - website_sale_loyalty_page
   - coupon_chatter
   - sale_loyalty_partner_applicability
@@ -1775,6 +1778,7 @@ oca:
   - base_changeset
   - datetime_formatter
   - base_technical_user
+  - base_import_default_enable_tracking
   - module_analysis
   - sentry
   - fetchmail_attach_from_folder
