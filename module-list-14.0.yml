@@ -388,6 +388,7 @@ oca:
   - account_move_propagate_ref
   - account_move_line_accounting_description
   - account_invoice_discount_display_amount
+  - account_invoice_auto_send_by_email
   - account_invoice_restrict_linked_so
   - account_invoice_pricelist_sale
   - account_invoice_refund_line_selection
@@ -1026,6 +1027,7 @@ oca:
   - hr_expense_sheet_payment_state
   - hr_expense_work_acceptance
   - hr_expense_advance_clearing_sequence
+  - hr_expense_tax_adjust
   - hr_expense_tier_validation
   - hr_expense_payment
   - hr_expense_advance_clearing_consolidation
@@ -2084,6 +2086,7 @@ oca:
   - sale_product_set_packaging_qty
   - sale_manual_delivery
   - sale_order_qty_change_no_recompute
+  - sale_order_split_strategy
   - sale_order_discount_fast_change_ui
   search-engine:
   - connector_search_engine
