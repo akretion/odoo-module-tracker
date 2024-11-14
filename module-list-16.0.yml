@@ -208,6 +208,7 @@ oca:
   - account_journal_general_sequence
   - account_bank_statement_chatter
   - account_cash_deposit
+  - account_lock_to_date
   - account_fiscal_year
   - account_fiscal_year_auto_create
   - account_move_name_sequence
@@ -778,6 +779,7 @@ oca:
   - hr_personal_equipment_request
   - hr_employee_document
   - hr_contract_reference
+  - hr_personal_equipment_stock
   - hr_employee_partner_external
   - hr_employee_document_from_applicant
   hr-attendance:
@@ -995,6 +997,7 @@ oca:
   - mrp_bom_tracking
   - mrp_unbuild_subcontracting
   - mrp_bom_hierarchy
+  - mrp_bom_widget_section_and_note_one2many
   - mrp_lot_number_propagation
   - mrp_subcontracting_partner_management
   - mrp_bom_line_formula_quantity
@@ -2254,6 +2257,7 @@ oca:
   - web_advanced_search
   - web_responsive
   - web_hide_field_with_key
+  - web_m2x_options_manager
   - web_domain_field
   - web_company_color
   - web_tree_duplicate
