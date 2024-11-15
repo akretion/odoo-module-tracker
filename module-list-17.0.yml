@@ -262,6 +262,7 @@ oca:
   - edi_oca
   event:
   - event_registration_partner_unique
+  - event_mail
   - event_registration_cancel_reason
   - partner_event
   field-service:
@@ -326,6 +327,7 @@ oca:
   - hr_holidays_public_city
   infrastructure: []
   interface-github:
+  - github_connector_odoo
   - github_connector
   intrastat-extrastat:
   - intrastat_product_hscodes_import
@@ -775,6 +777,7 @@ oca:
   - mail_send_confirmation
   - mail_debrand
   - mass_mailing_partner
+  - mail_layout_preview
   - mail_optional_follower_notification
   - base_search_mail_content
   - mail_tracking_mailgun
@@ -907,6 +910,7 @@ oca:
   vertical-association:
   - membership_variable_period
   - membership_initial_fee
+  - membership_delegated_partner
   - membership_extension
   vertical-community: []
   vertical-construction: []
