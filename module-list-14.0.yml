@@ -817,6 +817,7 @@ oca:
   - base_ubl_payment
   - account_invoice_ubl_email_attachment
   - sale_order_customer_free_ref
+  - edi_sale_oca
   - account_invoice_facturx_py3o
   - account_invoice_ubl_peppol
   - edi_exchange_template_oca
@@ -830,6 +831,7 @@ oca:
   - sale_order_ubl
   - account_einvoice_generate
   - base_business_document_import
+  - edi_sale_endpoint
   - edi_ubl_oca
   - edi_sale_order_import_ubl
   - sale_order_packaging_import
@@ -1287,6 +1289,7 @@ oca:
   - mrp_bom_hierarchy
   - mrp_routing
   - mrp_account_bom_attribute_match
+  - mrp_lot_number_propagation
   - mrp_auto_assign
   - mrp_subcontracting_partner_management
   - mrp_bom_find_ignore
