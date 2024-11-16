@@ -30,6 +30,7 @@ oca:
   - account_cutoff_start_end_dates
   account-consolidation: []
   account-financial-reporting:
+  - mis_template_financial_report
   - account_tax_balance
   - account_financial_report
   - mis_builder_cash_flow
@@ -73,12 +74,14 @@ oca:
   - account_invoice_bank_details
   - partner_time_to_pay
   account-invoicing:
+  - sale_order_invoicing_qty_percentage
   - account_invoice_refund_link
   - account_invoice_transmit_method
   - account_invoice_crm_tag
   - sale_invoicing_date_selection
   - account_invoice_fixed_discount
   - account_invoice_section_sale_order
+  - portal_account_personal_data_only
   - account_invoice_warn_message
   - account_invoice_pricelist
   - account_invoice_block_payment
@@ -264,6 +267,7 @@ oca:
   - event_registration_partner_unique
   - event_mail
   - event_registration_cancel_reason
+  - website_event_require_login
   - partner_event
   field-service:
   - fieldservice_project
@@ -562,6 +566,7 @@ oca:
   - project_task_stage_state
   - project_task_note
   - project_task_default_stage
+  - project_task_pull_request
   - project_type
   - project_task_stage_mgmt
   - project_purchase_link
@@ -911,6 +916,7 @@ oca:
   - membership_variable_period
   - membership_initial_fee
   - membership_delegated_partner
+  - contract_membership_delegated_partner
   - membership_extension
   vertical-community: []
   vertical-construction: []
