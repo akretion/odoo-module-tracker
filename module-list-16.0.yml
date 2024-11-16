@@ -105,6 +105,7 @@ akretion:
   - module_info_partner
   - module_info_pull_request_timesheet
   subcontractor:
+  - account_move_line_project
   - project_invoicing_subcontractor
   - account_invoice_subcontractor
 forgeflow:
@@ -2050,6 +2051,7 @@ oca:
   - stock_product_qty_by_packaging
   - stock_quant_safe_inventory
   - product_packaging_usability
+  - product_view_inventory_no_search_default_my_count
   - stock_valuation_layer_total_value
   - stock_pull_list
   - stock_warehouse_calendar
@@ -2165,6 +2167,7 @@ oca:
   - fs_product_multi_image
   - fs_file_demo
   survey:
+  - survey_question_type_nps
   - survey_question_type_binary
   - survey_question_type_five_star
   - survey_xlsx
@@ -2237,6 +2240,7 @@ oca:
   - web_widget_numeric_step
   - web_widget_remaining_days_exact_date
   - web_no_bubble
+  - web_widget_progressbar_gradient
   - web_send_message_popup
   - web_widget_dropdown_dynamic
   - web_touchscreen
