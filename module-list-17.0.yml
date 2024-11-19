@@ -208,6 +208,7 @@ oca:
   - crm_lead_firstname
   - crm_stage_probability
   - crm_lead_currency
+  - crm_location
   - crm_lead_product
   - crm_lead_code
   currency:
@@ -691,6 +692,7 @@ oca:
   - sale_order_line_menu
   - sale_order_carrier_auto_assign
   - sale_stock_cancel_restriction
+  - sale_delivery_split_date
   - sale_order_line_input
   - sale_order_line_date
   - sale_order_type
@@ -915,6 +917,7 @@ oca:
   vertical-association:
   - membership_variable_period
   - membership_initial_fee
+  - website_membership_random_order
   - membership_delegated_partner
   - contract_membership_delegated_partner
   - membership_extension
