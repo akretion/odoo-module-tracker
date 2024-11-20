@@ -813,6 +813,7 @@ oca:
   - hr_holidays_public_city
   - hr_holidays_auto_extend
   - resource_leaves_geographic
+  - hr_holidays_natural_period_public
   infrastructure:
   - base_dns_infrastructure
   interface-github:
@@ -1368,6 +1369,7 @@ oca:
   - project_stock
   - sale_project_copy_tasks
   - project_task_default_stage
+  - project_scrum
   - project_task_pull_request
   - project_key
   - project_parent_task_filter
@@ -1946,6 +1948,7 @@ oca:
   - product_multi_barcode
   - barcodes_generator_product
   - product_packaging_multi_barcode
+  - stock_barcodes
   stock-logistics-interfaces: []
   stock-logistics-orderpoint:
   - stock_orderpoint_purchase_link
