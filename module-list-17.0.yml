@@ -103,6 +103,7 @@ oca:
   - account_reconcile_oca
   - account_reconcile_model_oca
   agreement:
+  - agreement_sale
   - agreement_account
   - agreement
   apps-store: []
@@ -132,6 +133,7 @@ oca:
   - account_statement_import_file_reconcile_oca
   - account_statement_import_sheet_file
   - account_statement_import_online
+  - account_statement_import_online_ponto
   brand:
   - product_brand
   - brand
@@ -533,6 +535,7 @@ oca:
   - product_pricelist_supplierinfo
   - product_state
   - product_net_weight
+  - product_pricelist_fixed_currency_rate
   - uom_category_active
   - product_supplierinfo_revision
   - product_logistics_uom
@@ -678,6 +681,7 @@ oca:
   - sale_tier_validation
   - sale_delivery_state
   - sale_automatic_workflow_stock
+  - sale_stock_delivery_state
   - sale_order_price_recalculation
   - sale_order_priority
   - sale_product_set
@@ -904,6 +908,7 @@ oca:
   survey:
   - partner_survey
   timesheet:
+  - sale_timesheet_timeline
   - hr_timesheet_task_required
   - hr_timesheet_task_stage
   - hr_timesheet_begin_end
