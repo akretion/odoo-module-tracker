@@ -1599,6 +1599,7 @@ oca:
   - sale_loyalty_incompatibility
   - loyalty_multi_gift
   - sale_loyalty_order_info
+  - sale_loyalty_order_suggestion_multi_gift
   - loyalty_partner_applicability
   - sale_loyalty_initial_date_validity
   sale-reporting:
@@ -1757,6 +1758,7 @@ oca:
   - server_action_navigate
   - base_external_dbsource
   - server_action_sort
+  - base_user_effective_permissions
   - base_group_backend
   - base_user_role_history
   - base_external_dbsource_sqlite
@@ -1900,6 +1902,7 @@ oca:
   - mail_autosubscribe
   - mail_tracking_mailgun
   - mail_attach_existing_attachment
+  - mail_activity_reply_creator
   - fetchmail_thread_default
   - mail_outbound_static
   - mail_activity_reminder
@@ -2236,6 +2239,7 @@ oca:
   wallet: []
   web:
   - web_widget_pattern_partner_autocomplete
+  - web_time_range_menu_custom
   - web_ir_actions_act_window_page
   - web_select_all_companies
   - web_widget_pattern
