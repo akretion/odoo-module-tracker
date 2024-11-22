@@ -96,6 +96,7 @@ oca:
   - account_due_list
   - account_due_list_payment_mode
   - account_payment_return_import
+  - partner_aging
   - account_payment_return
   account-reconcile:
   - account_statement_base
@@ -203,6 +204,7 @@ oca:
   crm:
   - crm_lead_vat
   - crm_phonecall_summary_predefined
+  - marketing_crm_partner
   - crm_salesperson_planner
   - crm_phonecall
   - crm_industry
@@ -270,6 +272,7 @@ oca:
   - event_registration_partner_unique
   - event_mail
   - event_registration_cancel_reason
+  - website_event_membership_restriction
   - website_event_require_login
   - partner_event
   field-service:
@@ -299,10 +302,12 @@ oca:
   fleet: []
   geospatial:
   - base_geoengine
+  - web_leaflet_lib
   - base_geoengine_demo
   - geoengine_base_geolocalize
   - geoengine_partner
-  helpdesk: []
+  helpdesk:
+  - helpdesk_mgmt
   hr:
   - hr_employee_second_lastname
   - hr_department_code
@@ -437,6 +442,7 @@ oca:
   - product_tax_multicompany_default
   - partner_multi_company
   - account_invoice_inter_company
+  - product_multi_company
   odoo-pim: []
   operating-unit:
   - hr_operating_unit
@@ -584,6 +590,7 @@ oca:
   - purchase_order_archive
   - purchase_reception_notify
   - purchase_all_shipments
+  - purchase_default_terms_conditions
   - purchase_exception
   - purchase_security
   - purchase_request
@@ -810,6 +817,7 @@ oca:
   spreadsheet: []
   stock-logistics-availability:
   - stock_available
+  - stock_free_quantity
   stock-logistics-barcode:
   - barcodes_generator_abstract
   - barcodes_generator_product
@@ -967,6 +975,7 @@ oca:
   - web_remember_tree_column_width
   - web_widget_domain_editor_dialog
   - web_field_tooltip
+  - web_editor_class_selector
   web-api:
   - endpoint_route_handler
   - webservice
