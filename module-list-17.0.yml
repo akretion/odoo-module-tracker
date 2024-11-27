@@ -274,6 +274,7 @@ oca:
   - event_mail
   - event_registration_cancel_reason
   - website_event_membership_restriction
+  - website_event_questions_by_ticket
   - website_event_require_login
   - partner_event
   field-service:
@@ -628,6 +629,7 @@ oca:
   - queue_job_cron_jobrunner
   - test_queue_job
   repair:
+  - repair_picking_after_done
   - repair_stock
   - repair_timesheet
   - repair_type
@@ -649,6 +651,7 @@ oca:
   - report_xlsx
   - sql_export
   - report_async
+  - report_qweb_pdf_watermark
   resource: []
   rest-api: []
   rest-framework:
@@ -955,6 +958,7 @@ oca:
   wallet: []
   web:
   - web_widget_url_advanced
+  - web_time_range_menu_custom
   - web_widget_numeric_step
   - web_no_bubble
   - web_widget_dropdown_dynamic
@@ -987,6 +991,7 @@ oca:
   webhook: []
   webkit-tools: []
   website:
+  - website_forum_subscription
   - website_form_require_legal
   - website_cookiebot
   - website_google_tag_manager
