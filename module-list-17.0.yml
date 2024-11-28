@@ -558,7 +558,9 @@ oca:
   - product_print_category
   - product_packaging_dimension
   - product_code_unique
-  product-configurator: []
+  product-configurator:
+  - product_configurator
+  - product_configurator_sale
   product-kitting: []
   product-pack:
   - sale_product_pack
