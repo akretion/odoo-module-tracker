@@ -233,6 +233,7 @@ oca:
   - ddmrp_chatter
   delivery-carrier:
   - delivery_carrier_partner
+  - delivery_package_number
   - delivery_state
   - base_delivery_carrier_label
   - delivery_roulier_option
@@ -249,6 +250,7 @@ oca:
   dotnet: []
   e-commerce:
   - website_sale_suggest_create_account
+  - website_sale_require_legal
   - website_sale_hide_price
   - website_sale_product_reference_displayed
   - website_sale_b2x_alt_price
@@ -293,6 +295,7 @@ oca:
   - fieldservice_repair
   - fieldservice_sale_stock
   - fieldservice_sale
+  - fieldservice_agreement
   - fieldservice_equipment_stock
   - fieldservice_crm
   - fieldservice_geoengine
@@ -708,8 +711,10 @@ oca:
   - sale_order_lot_selection
   - sale_order_invoicing_finished_task
   - partner_sale_pivot
+  - sale_substate
   - sale_order_line_menu
   - sale_order_carrier_auto_assign
+  - portal_sale_personal_data_only
   - sale_stock_cancel_restriction
   - sale_delivery_split_date
   - sale_order_line_input
