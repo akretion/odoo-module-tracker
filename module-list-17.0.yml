@@ -269,6 +269,8 @@ oca:
   - base_facturx
   edi-framework:
   - edi_exchange_template_oca
+  - edi_endpoint_oca
+  - edi_webservice_oca
   - edi_account_oca
   - edi_oca
   event:
@@ -1003,6 +1005,7 @@ oca:
   web-api:
   - endpoint_route_handler
   - webservice
+  - endpoint
   web-api-contrib: []
   webhook: []
   webkit-tools: []
