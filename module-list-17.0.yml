@@ -593,6 +593,7 @@ oca:
   - project_task_default_stage
   - project_task_pull_request
   - project_type
+  - project_administrator_restricted_visibility
   - project_task_stage_mgmt
   - project_purchase_link
   - project_timesheet_time_control
@@ -640,11 +641,14 @@ oca:
   - queue_job_cron_jobrunner
   - test_queue_job
   repair:
+  - base_repair_config
   - repair_picking_after_done
   - repair_stock
+  - repair_type_product_destination
   - repair_timesheet
   - repair_type
   - repair_quality_control
+  - repair_order_template
   - repair_service
   report-print-send:
   - base_report_to_printer
@@ -723,6 +727,7 @@ oca:
   - sale_order_carrier_auto_assign
   - portal_sale_personal_data_only
   - sale_stock_cancel_restriction
+  - sale_partner_selectable_option
   - sale_delivery_split_date
   - sale_order_line_input
   - sale_order_line_date
