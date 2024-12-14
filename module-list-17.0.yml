@@ -237,6 +237,7 @@ oca:
   - delivery_package_number
   - delivery_state
   - base_delivery_carrier_label
+  - delivery_carrier_manual_price
   - delivery_roulier_option
   - delivery_carrier_info
   - sale_order_warehouse_from_delivery_carrier
@@ -279,8 +280,10 @@ oca:
   - website_event_filter_city
   - crm_event
   - event_registration_partner_unique
+  - website_event_sale_b2x_alt_price
   - event_stage_cancelled
   - event_mail
+  - website_event_track_stage_cancelled
   - event_registration_cancel_reason
   - website_event_membership_restriction
   - website_event_questions_by_ticket
@@ -915,6 +918,7 @@ oca:
   - stock_picking_send_by_mail
   - stock_lot_on_hand_first
   - stock_picking_kind
+  - stock_lot_production_date
   - stock_picking_purchase_order_link
   - stock_valuation_layer_usage
   - stock_picking_show_return
