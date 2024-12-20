@@ -6,6 +6,7 @@ akretion:
 forgeflow:
   stock-rma:
   - rma
+  - rma_reason_code
   - rma_account
 oca:
   account-analytic:
@@ -317,7 +318,8 @@ oca:
   - base_territory
   - fieldservice_activity
   - fieldservice_stage_validation
-  fleet: []
+  fleet:
+  - fleet_vehicle_usage
   geospatial:
   - base_geoengine
   - web_leaflet_lib
@@ -329,6 +331,7 @@ oca:
   hr:
   - hr_employee_second_lastname
   - hr_department_code
+  - hr_professional_category
   - hr_employee_calendar_planning
   - hr_work_entry_profile
   - hr_holidays_settings
@@ -338,6 +341,7 @@ oca:
   - hr_course
   - hr_employee_relative
   - hr_employee_firstname
+  - hr_employee_ssn
   - hr_personal_equipment_request
   - hr_employee_document
   - hr_employee_partner_external
@@ -441,6 +445,7 @@ oca:
   - mrp_mass_production_order
   - quality_control_oca
   - account_move_line_mrp_info
+  - mrp_production_back_to_draft
   - mrp_bom_tracking
   - mrp_tag
   - quality_control_stock_oca
@@ -569,6 +574,7 @@ oca:
   - product_supplierinfo_revision
   - product_logistics_uom
   - product_set
+  - product_document_domain
   - product_sequence
   - product_secondary_unit
   - product_supplierinfo_archive
@@ -584,6 +590,7 @@ oca:
   product-configurator:
   - product_configurator
   - product_configurator_sale
+  - website_product_configurator
   product-kitting: []
   product-pack:
   - sale_product_pack
@@ -625,6 +632,7 @@ oca:
   - purchase_security
   - purchase_request
   - purchase_open_qty
+  - purchase_order_secondary_unit
   - purchase_delivery_split_date
   - purchase_deposit
   - purchase_tag
@@ -705,6 +713,7 @@ oca:
   - sale_comment_template
   sale-workflow:
   - sale_order_line_tag
+  - sale_order_type_confirm_message
   - sale_partner_incoterm
   - sale_discount_display_amount
   - sales_team_security
@@ -712,6 +721,7 @@ oca:
   - sale_force_whole_invoiceability
   - sale_order_product_recommendation
   - sale_advance_payment
+  - sale_multi_template_application
   - sale_cancel_reason
   - sale_shipping_info_helper
   - sale_procurement_group_by_line
