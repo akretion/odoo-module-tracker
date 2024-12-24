@@ -450,6 +450,7 @@ oca:
   - mrp_bom_tracking
   - mrp_tag
   - quality_control_stock_oca
+  - mrp_planned_order_matrix
   - mrp_workorder_sequence
   manufacture-reporting:
   - mrp_bom_structure_xlsx
@@ -497,6 +498,7 @@ oca:
   - contract_operating_unit_access_all
   - account_operating_unit_access_all
   partner-contact:
+  - partner_disable_gravatar
   - partner_identification
   - sale_partner_company_group
   - partner_stage
