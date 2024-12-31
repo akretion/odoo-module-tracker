@@ -417,6 +417,7 @@ oca:
   - base_maintenance
   - maintenance_equipment_hierarchy
   - maintenance_project
+  - maintenance_timesheet_time_control
   - maintenance_equipment_sequence
   management-system:
   - mgmtsystem_review
@@ -645,6 +646,7 @@ oca:
   - purchase_tag
   - purchase_no_rfq
   - purchase_order_type
+  - purchase_allowed_product
   - supplier_calendar
   - procurement_purchase_no_grouping
   - purchase_order_type_dashboard
@@ -777,6 +779,7 @@ oca:
   server-auth:
   - auth_saml
   - auth_api_key
+  - auth_ldaps
   - auth_api_key_group
   - auth_session_timeout
   - auth_signup_verify_email
@@ -1013,7 +1016,13 @@ oca:
   - bookstore_mgmt_google_books_api
   - bookstore_mgmt
   vertical-education: []
-  vertical-hotel: []
+  vertical-hotel:
+  - hotel_housekeeping
+  - report_hotel_reservation
+  - hotel_reservation
+  - report_hotel_restaurant
+  - hotel
+  - hotel_restaurant
   vertical-isp: []
   vertical-medical: []
   vertical-ngo: []
