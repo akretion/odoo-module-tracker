@@ -141,7 +141,10 @@ oca:
   - account_statement_import_online_ponto
   brand:
   - product_brand
+  - account_brand
   - brand
+  - analytic_brand
+  - sale_brand
   business-requirement: []
   calendar: []
   commission:
@@ -604,6 +607,7 @@ oca:
   product-kitting: []
   product-pack:
   - sale_product_pack
+  - stock_product_pack
   - website_sale_product_pack
   - product_pack
   product-variant:
