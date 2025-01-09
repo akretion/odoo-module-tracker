@@ -654,6 +654,7 @@ oca:
   - purchase_tag
   - purchase_no_rfq
   - purchase_order_type
+  - purchase_manual_delivery
   - purchase_allowed_product
   - supplier_calendar
   - procurement_purchase_no_grouping
@@ -962,6 +963,7 @@ oca:
   - stock_picking_supplier_ref
   - stock_picking_origin_reference_sale
   - stock_picking_sale_order_link
+  - stock_lock_lot
   - stock_picking_origin_reference
   - stock_picking_filter_lot
   - purchase_stock_picking_invoice_link
@@ -1054,6 +1056,7 @@ oca:
   - web_widget_bokeh_chart
   - web_save_discard_button
   - web_responsive
+  - web_company_color
   - web_tree_many2one_clickable
   - web_chatter_position
   - web_widget_plotly_chart
