@@ -63,7 +63,7 @@ def analyse_module(path):
         "name": data["name"],
         "author": data["author"],
         "depends": data.get("depends", []),
-        "maintainers": data.get("mainainers", []),
+        "maintainers": data.get("maintainers", []),
         "development_status": data.get("development_status"),
         "summary": data.get("summary"),
         "description": description,
