@@ -245,6 +245,7 @@ oca:
   - delivery_carrier_account
   - sale_order_warehouse_from_delivery_carrier
   - delivery_state
+  - delivery_free_fee_removal
   - delivery_package_number
   - delivery_carrier_info
   - delivery_carrier_manual_price
@@ -339,6 +340,9 @@ oca:
   - base_geoengine
   helpdesk:
   - helpdesk_mgmt
+  - helpdesk_mgmt_project
+  - helpdesk_mgmt_crm
+  - helpdesk_mgmt_sale
   hr:
   - hr_professional_category
   - hr_employee_relative
@@ -423,6 +427,7 @@ oca:
   - base_maintenance
   - maintenance_timesheet
   - maintenance_project
+  - maintenance_request_employee
   - maintenance_equipment_status
   - maintenance_equipment_hierarchy
   - maintenance_timesheet_time_control
@@ -628,6 +633,7 @@ oca:
   program: []
   project:
   - project_purchase_link
+  - project_timeline_hr_timesheet
   - project_task_default_stage
   - project_task_add_very_high
   - project_task_stage_state
@@ -977,6 +983,7 @@ oca:
   - stock_picking_back2draft
   - stock_restrict_lot
   - stock_account_product_run_fifo_hook
+  - stock_picking_partner_note
   - stock_picking_origin_reference_purchase
   - stock_picking_kind
   - stock_picking_send_by_mail
@@ -1097,6 +1104,7 @@ oca:
   - website_cookiebot
   - website_forum_subscription
   - website_snippet_big_button
+  - website_crm_quick_answer
   - website_snippet_marginless_gallery
   - website_cookiefirst
   - website_conditional_visibility_user_group
