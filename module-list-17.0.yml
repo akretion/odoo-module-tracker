@@ -602,6 +602,7 @@ oca:
   - product_status
   - product_code_mandatory
   - product_pricelist_supplierinfo
+  - product_usability
   - product_supplierinfo_for_customer
   - product_category_active
   - product_dimension
@@ -654,6 +655,7 @@ oca:
   project-reporting: []
   purchase-reporting: []
   purchase-workflow:
+  - purchase_order_line_deep_sort
   - purchase_deposit
   - purchase_force_invoiced
   - purchase_order_archive
