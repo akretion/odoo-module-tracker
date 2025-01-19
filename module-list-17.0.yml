@@ -808,6 +808,7 @@ oca:
   server-auth:
   - auth_saml
   - auth_admin_passkey_totp_mail_enforce
+  - auth_jwt
   - auth_user_case_insensitive
   - auth_signup_verify_email
   - auth_session_timeout
@@ -905,6 +906,7 @@ oca:
   - mail_activity_board
   - mail_tracking
   - mail_optional_autofollow
+  - mail_print
   - mail_activity_reminder
   - mail_optional_follower_notification
   - base_search_mail_content
