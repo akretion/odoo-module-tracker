@@ -13,6 +13,7 @@ forgeflow:
   - rma_filter_lot
 oca:
   account-analytic:
+  - purchase_analytic
   - analytic_partner
   - mrp_stock_analytic
   - hr_timesheet_analytic_tag
@@ -289,6 +290,7 @@ oca:
   - edi_exchange_template_oca
   - edi_oca
   - edi_endpoint_oca
+  - edi_storage_oca
   - edi_account_oca
   event:
   - website_event_track_stage_cancelled
@@ -303,6 +305,7 @@ oca:
   - event_mail
   - website_event_membership_restriction
   - crm_event
+  - sale_crm_event_reservation
   - event_min_seat
   - event_sale_reservation
   field-service:
@@ -322,7 +325,9 @@ oca:
   - fieldservice_project
   - fieldservice_route
   - fieldservice_sale
+  - fieldservice_sale_agreement_equipment_stock
   - fieldservice_activity
+  - fieldservice_sale_agreement
   - fieldservice_account
   - fieldservice_agreement
   - fieldservice_geoengine
@@ -441,17 +446,26 @@ oca:
   - mgmtsystem_survey
   - document_page_environment_manual
   - mgmtsystem_review
+  - mgmtsystem_action_efficacy
+  - mgmtsystem_nonconformity_repair
   - mgmtsystem_hazard_risk
   - document_page_health_safety_manual
   - document_page_quality_manual
   - mgmtsystem_hazard
   - document_page_environmental_aspect
+  - mgmtsystem_nonconformity_maintenance_equipment
   - document_page_procedure
+  - mgmtsystem_nonconformity_product
   - mgmtsystem_info_security_manual
+  - mgmtsystem_nonconformity_mrp
   - document_page_work_instruction
   - mgmtsystem_audit
   - mgmtsystem_nonconformity
+  - mgmtsystem_partner
+  - mgmtsystem_nonconformity_quality_control_oca
   - mgmtsystem
+  - mgmtsystem_action_template
+  - mgmtsystem_nonconformity_type
   - mgmtsystem_action
   manufacture:
   - mrp_production_back_to_draft
@@ -524,6 +538,7 @@ oca:
   - partner_contact_birthdate
   - partner_tz
   - partner_company_group
+  - partner_readonly_security
   - partner_contact_department
   - partner_contact_access_link
   - partner_contact_nationality
@@ -675,6 +690,7 @@ oca:
   - purchase_blanket_order
   - purchase_order_line_menu
   - purchase_requisition_tier_validation
+  - purchase_order_line_stock_available
   - purchase_order_type
   - purchase_allowed_product
   - purchase_no_rfq
@@ -917,6 +933,7 @@ oca:
   - mail_template_substitute
   spreadsheet: []
   stock-logistics-availability:
+  - stock_available_mrp
   - stock_available
   - stock_free_quantity
   stock-logistics-barcode:
@@ -951,6 +968,7 @@ oca:
   - tms_sale
   stock-logistics-warehouse:
   - base_product_merge
+  - stock_secondary_unit
   - stock_packaging_calculator
   - account_move_line_stock_info
   - account_move_line_product
