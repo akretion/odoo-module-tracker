@@ -209,6 +209,7 @@ oca:
   cooperative: []
   credit-control:
   - account_invoice_overdue_warn_sale
+  - partner_risk_insurance
   - account_financial_risk
   - account_payment_return_financial_risk
   - sale_financial_risk
@@ -931,6 +932,7 @@ oca:
   - mass_mailing_partner
   - mail_partner_opt_out
   - mail_template_substitute
+  - mail_forward
   spreadsheet: []
   stock-logistics-availability:
   - stock_available_mrp
