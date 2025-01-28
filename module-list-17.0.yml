@@ -414,6 +414,7 @@ oca:
   - document_page_group
   - document_page_partner
   - document_page
+  - attachment_zipped_download
   - document_page_tag
   - document_page_approval
   l10n-brazil: []
@@ -474,6 +475,7 @@ oca:
   - mgmtsystem_action
   - document_page_procedure
   - mgmtsystem_nonconformity_repair
+  - mgmtsystem_nonconformity_hazard
   manufacture:
   - mrp_tag
   - mrp_warehouse_calendar
@@ -624,6 +626,7 @@ oca:
   - product_uom_measure_type
   - product_readonly_security
   - product_packaging_dimension
+  - product_pricelist_item_list_view
   - product_net_weight
   - stock_production_lot_expired_date
   - product_pricelist_revision
@@ -700,6 +703,7 @@ oca:
   - purchase_force_invoiced
   - purchase_manual_delivery
   - sale_purchase_force_vendor
+  - purchase_fop_shipping
   - purchase_request
   - supplier_calendar
   - purchase_invoice_method
@@ -998,6 +1002,7 @@ oca:
   - stock_archive_constraint
   - stock_reserve
   - stock_location_zone
+  - stock_quant_manual_assign
   - base_product_merge
   - stock_quant_reservation_info_mrp
   - stock_inventory_discrepancy
