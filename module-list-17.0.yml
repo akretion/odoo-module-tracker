@@ -279,11 +279,13 @@ oca:
   edi:
   - account_invoice_facturx
   - base_facturx
+  - base_ebill_payment_contract
   - base_business_document_import
   - base_import_pdf_by_template_account
   - edi_voxel_account_invoice_oca
   - test_base_import_pdf_by_template
   - base_import_pdf_by_template
+  - account_invoice_export
   - base_edi
   - account_einvoice_generate
   - edi_voxel_oca
@@ -553,6 +555,7 @@ oca:
   - partner_external_map
   - partner_manual_rank
   - partner_second_lastname
+  - partner_title_active
   - partner_contact_role
   - partner_contact_birthplace
   - partner_category_security
@@ -677,6 +680,7 @@ oca:
   - sale_project_task_recurrency
   - project_timeline
   - project_task_stage_state
+  - sale_project_reimbursement_cost
   - project_task_stage_mgmt
   - project_task_description_template
   - project_type
@@ -824,6 +828,7 @@ oca:
   - sale_cancel_reason
   - sale_order_invoicing_finished_task
   - sale_order_price_recalculation
+  - sales_team_security_crm
   - portal_sale_personal_data_only
   - sale_tier_validation
   - sale_blanket_order
@@ -837,6 +842,7 @@ oca:
   - sale_procurement_group_by_line
   - partner_sale_pivot
   - sale_commercial_partner
+  - sales_team_security_sale
   - sale_discount_display_amount
   - sale_partner_selectable_option
   search-engine: []
@@ -1063,6 +1069,7 @@ oca:
   - fs_file_demo
   survey:
   - partner_survey
+  - survey_partner_representative
   timesheet:
   - hr_timesheet_sheet
   - hr_timesheet_begin_end
