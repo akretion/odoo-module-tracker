@@ -95,6 +95,7 @@ oca:
   - sale_order_invoicing_grouping_criteria
   - account_invoice_blocking
   - account_invoice_transmit_method
+  - account_manual_currency
   account-payment:
   - account_payment_return
   - account_due_list_payment_mode
@@ -152,7 +153,8 @@ oca:
   - sale_brand
   - account_brand
   business-requirement: []
-  calendar: []
+  calendar:
+  - resource_booking
   commission:
   - account_commission
   - sale_commission
@@ -251,6 +253,7 @@ oca:
   - delivery_free_fee_removal
   - base_delivery_carrier_label
   - delivery_carrier_partner
+  - partner_delivery_info
   - delivery_carrier_manual_price
   - delivery_roulier
   - sale_order_warehouse_from_delivery_carrier
@@ -558,6 +561,7 @@ oca:
   - partner_title_active
   - partner_contact_role
   - partner_contact_birthplace
+  - partner_duns
   - partner_category_security
   - partner_identification
   - partner_contact_access_link
@@ -960,6 +964,7 @@ oca:
   - stock_available
   - stock_available_mrp
   - stock_free_quantity
+  - stock_available_immediately
   stock-logistics-barcode:
   - barcodes_generator_abstract
   - barcodes_generator_product
@@ -1030,6 +1035,7 @@ oca:
   - stock_move_line_reference_link
   - stock_picking_send_by_mail
   - stock_restrict_lot
+  - stock_scrap_tier_validation_mrp
   - stock_picking_show_return
   - stock_picking_warn_message
   - stock_picking_partner_note
@@ -1041,6 +1047,7 @@ oca:
   - stock_picking_return_restricted_qty
   - stock_picking_origin_reference
   - stock_picking_filter_lot
+  - stock_move_planned_consumed_date
   - sale_order_global_stock_route
   - stock_picking_back2draft
   - stock_quant_package_dimension
@@ -1050,6 +1057,7 @@ oca:
   - stock_picking_return_lot
   - stock_quant_package_product_packaging
   - stock_picking_sale_order_link
+  - stock_scrap_tier_validation
   - stock_no_negative
   - stock_picking_supplier_ref
   - stock_split_picking
@@ -1121,6 +1129,7 @@ oca:
   - web_environment_ribbon
   - web_widget_domain_editor_dialog
   - web_chatter_position
+  - web_widget_mpld3_chart
   - web_widget_x2many_2d_matrix
   - web_widget_numeric_step
   - web_favicon
