@@ -113,6 +113,7 @@ oca:
   agreement:
   - agreement
   - agreement_sale
+  - agreement_legal
   - agreement_repair
   - agreement_account
   apps-store: []
@@ -318,6 +319,7 @@ oca:
   - website_event_membership_restriction
   - website_event_filter_city
   field-service:
+  - fieldservice_repair_order_template
   - fieldservice_sale_recurring
   - fieldservice_sale_agreement
   - fieldservice_recurring
@@ -1046,6 +1048,7 @@ oca:
   - stock_picking_show_backorder
   - stock_picking_return_restricted_qty
   - stock_picking_origin_reference
+  - stock_restrict_by_planned_consumed_date
   - stock_picking_filter_lot
   - stock_move_planned_consumed_date
   - sale_order_global_stock_route
