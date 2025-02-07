@@ -101,6 +101,7 @@ oca:
   - account_payment_return
   - account_payment_term_security
   - account_due_list_payment_mode
+  - sale_payment_term_security
   - account_payment_return_import
   - account_payment_return_import_iso20022
   - partner_aging
@@ -822,6 +823,7 @@ oca:
   - sale_order_type_confirm_message
   - sale_multi_template_application
   - sale_automatic_workflow_stock
+  - sale_readonly_security
   - sale_sourced_by_line
   - sale_order_line_input
   - product_supplierinfo_for_customer_sale
@@ -846,6 +848,7 @@ oca:
   - sale_stock_cancel_restriction
   - sale_quotation_number
   - sale_order_qty_change_no_recompute
+  - sale_order_product_availability_inline
   - sale_order_lot_selection
   - sale_order_priority
   - sale_order_line_menu
