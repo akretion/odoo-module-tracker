@@ -274,8 +274,10 @@ oca:
   donation: []
   dotnet: []
   e-commerce:
+  - website_snippet_product_category
   - website_sale_product_reference_displayed
   - website_sale_suggest_create_account
+  - website_sale_order_type
   - website_sale_secondary_unit
   - website_sale_checkout_skip_payment
   - website_sale_product_description
@@ -756,6 +758,7 @@ oca:
   - repair_type
   - repair_timesheet
   - repair_stock
+  - repair_restrict_lot
   - repair_type_product_destination
   report-print-send:
   - base_report_to_printer
