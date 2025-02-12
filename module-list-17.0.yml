@@ -43,6 +43,7 @@ oca:
   account-financial-tools:
   - account_partner_required
   - account_move_print
+  - account_chart_update
   - account_check_deposit
   - account_move_line_sale_info
   - account_tax_repartition_line_tax_group_account
@@ -147,6 +148,7 @@ oca:
   - account_statement_import_online_gocardless
   - account_statement_import_sheet_file
   - account_statement_import_file_reconcile_oca
+  - account_statement_import_camt54
   - account_statement_import_file
   - account_statement_import_ofx
   - account_statement_import_online
@@ -632,6 +634,7 @@ oca:
   - pos_user_restriction
   product-attribute:
   - product_category_active
+  - product_lot_sequence
   - product_supplierinfo_for_customer
   - product_dimension
   - product_main_supplierinfo
@@ -681,6 +684,7 @@ oca:
   project:
   - project_parent
   - project_task_pull_request
+  - project_group
   - project_role
   - project_department
   - project_task_tag
@@ -1061,6 +1065,7 @@ oca:
   - stock_picking_return_restricted_qty
   - stock_picking_origin_reference
   - stock_restrict_by_planned_consumed_date
+  - stock_picking_auto_create_lot_sequence
   - stock_picking_filter_lot
   - stock_move_planned_consumed_date
   - sale_order_global_stock_route
