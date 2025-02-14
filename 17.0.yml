@@ -27,6 +27,7 @@ forgeflow:
       - stock
       - mail
       - web
+      - stock_restrict_lot
       description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
         \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
         http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
@@ -217,7 +218,7 @@ forgeflow:
         </ol>\n</div>\n<div class=\"section\" id=\"known-issues-roadmap\">\n<h1><a\
         \ class=\"toc-backref\" href=\"#toc-entry-6\">Known issues / Roadmap</a></h1>\n\
         <ul class=\"simple\">\n<li>Picking operations report in customer RMA dropshipping\
-        \ case is\nshowing \u201CVendor Address\u201D while it should be \u201CCustomer\
+        \ case is showing\n\u201CVendor Address\u201D while it should be \u201CCustomer\
         \ Address\u201D.</li>\n<li>Dropshipping always counted as a delivery on the\
         \ smart buttons.</li>\n<li>Uninstall hook.</li>\n<li>Constraints instead of\
         \ required fields on rma.order.line.</li>\n<li>Rename type field on rma.order\
@@ -435,12 +436,12 @@ forgeflow:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
         \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
         \ />\n<title>RMA Reason Code</title>\n<style type=\"text/css\">\n\n/*\n:Author:\
-        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511 2024-01-13\
-        \ 09:50:07Z milde $\n:Copyright: This stylesheet has been placed in the public\
+        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 8954 2022-01-20\
+        \ 10:10:25Z milde $\n:Copyright: This stylesheet has been placed in the public\
         \ domain.\n\nDefault cascading style sheet for the HTML output of Docutils.\n\
-        Despite the name, some widely supported CSS2 features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
-        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
-        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for\
+        \ how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders from\
+        \ tables and images */\n.borderless, table.borderless td, table.borderless\
         \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
         \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
         \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
@@ -508,7 +509,7 @@ forgeflow:
         \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
         \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
         \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
-        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ .ln { color: grey; } /* line numbers */\npre.code, code { background-color:\
         \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
         \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
         \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
@@ -518,12 +519,12 @@ forgeflow:
         \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
         \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
         \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
-        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
-        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
-        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
-        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
-        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
-        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        \ }\n\nspan.problematic {\n  color: red }\n\nspan.section-subtitle {\n  /*\
+        \ font-size relative to parent (h1..h6 element) */\n  font-size: 80% }\n\n\
+        table.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px }\n\n\
+        table.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top: 0.5em\
+        \ ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid 1px\
+        \ black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
         table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
         \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
         \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
@@ -18352,7 +18353,7 @@ oca:
         \ Reconcile Oca</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:7b48f8462e4b43596a339d2203f3f4566d5576b9f949ab75dca7f35d781d08c1\n\
+        !! source digest: sha256:cf0d778067ac722c5a6d7f65f8fa4b0766076829ba9c9c147cc3718782cc85b0\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -29728,16 +29729,17 @@ oca:
       author: Camptocamp,Odoo Community Association (OCA)
       depends:
       - component
-      description: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html PUBLIC\
-        \ \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\
-        >\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"\
-        >\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\
-        \ />\n<meta name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
         \ />\n<title>Components Events</title>\n<style type=\"text/css\">\n\n/*\n\
-        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 8954\
-        \ 2022-01-20 10:10:25Z milde $\n:Copyright: This stylesheet has been placed\
+        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
         \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
-        \ of Docutils.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
         \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
         \ from tables and images */\n.borderless, table.borderless td, table.borderless\
         \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
@@ -29807,7 +29809,7 @@ oca:
         \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
         \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
         \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
-        \ .ln { color: grey; } /* line numbers */\npre.code, code { background-color:\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
         \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
         \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
         \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
@@ -29817,12 +29819,12 @@ oca:
         \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
         \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
         \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
-        \ }\n\nspan.problematic {\n  color: red }\n\nspan.section-subtitle {\n  /*\
-        \ font-size relative to parent (h1..h6 element) */\n  font-size: 80% }\n\n\
-        table.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px }\n\n\
-        table.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top: 0.5em\
-        \ ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid 1px\
-        \ black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
         table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
         \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
         \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
@@ -29837,7 +29839,7 @@ oca:
         \ Events</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:e1f378350f3505fa79426d36ed2b62b2bd099ef5da9445f77ada6247dca1a8c0\n\
+        !! source digest: sha256:3b7d0152cdb3364444fd2a2392561a6e31ffd8cac98e176a6eba51480c46539a\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -29910,9 +29912,9 @@ oca:
         >guewen.baconnier&#64;camptocamp.com</a>&gt;</li>\n</ul>\n</div>\n<div class=\"\
         section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-9\"\
         >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
-        reference external image-reference\" href=\"https://odoo-community.org\"><img\
-        \ alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
-        \ /></a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
         \ whose\nmission is to support the collaborative development of Odoo features\
         \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
         reference external\" href=\"https://github.com/OCA/connector/tree/17.0/component_event\"\
@@ -30319,18 +30321,18 @@ oca:
       author: Camptocamp,Odoo Community Association (OCA)
       depends:
       - component
-      description: "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<!DOCTYPE html PUBLIC\
-        \ \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"\
-        >\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"\
-        >\n<head>\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"\
-        \ />\n<meta name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
         \ />\n<title>Components Tests</title>\n<style type=\"text/css\">\n\n/*\n:Author:\
-        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 8954 2022-01-20\
-        \ 10:10:25Z milde $\n:Copyright: This stylesheet has been placed in the public\
+        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511 2024-01-13\
+        \ 09:50:07Z milde $\n:Copyright: This stylesheet has been placed in the public\
         \ domain.\n\nDefault cascading style sheet for the HTML output of Docutils.\n\
-        \nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html for\
-        \ how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders from\
-        \ tables and images */\n.borderless, table.borderless td, table.borderless\
+        Despite the name, some widely supported CSS2 features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
         \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
         \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
         \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
@@ -30398,7 +30400,7 @@ oca:
         \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
         \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
         \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
-        \ .ln { color: grey; } /* line numbers */\npre.code, code { background-color:\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
         \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
         \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
         \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
@@ -30408,12 +30410,12 @@ oca:
         \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
         \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
         \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
-        \ }\n\nspan.problematic {\n  color: red }\n\nspan.section-subtitle {\n  /*\
-        \ font-size relative to parent (h1..h6 element) */\n  font-size: 80% }\n\n\
-        table.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px }\n\n\
-        table.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top: 0.5em\
-        \ ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid 1px\
-        \ black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
         table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
         \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
         \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
@@ -30428,7 +30430,7 @@ oca:
         \ Tests</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:6c4d7cb1fcb7007ab031a374a7b1e63d6e8af3cdb5df795f1edaa57d45dbaab0\n\
+        !! source digest: sha256:856783de8b34a8925a2a920fe52568290bc36dff82d72c4191d5cec3f493c340\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Production/Stable\" src=\"https://img.shields.io/badge/maturity-Production%2FStable-green.png\"\
@@ -30468,9 +30470,9 @@ oca:
         >\n<li>Guewen Baconnier (Camptocamp)</li>\n</ul>\n</div>\n<div class=\"section\"\
         \ id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-5\"\
         >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
-        reference external image-reference\" href=\"https://odoo-community.org\"><img\
-        \ alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
-        \ /></a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
         \ whose\nmission is to support the collaborative development of Odoo features\
         \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
         \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
@@ -32563,7 +32565,7 @@ oca:
         >Recurring - Product Contract</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:9cbed529f85cc48728a5657f6901b3fa2ce21159205c85a935a80f040bb0bcaa\n\
+        !! source digest: sha256:190dd7784b51f8cd26208ba64ba257409cdaf09e9281973b7076a65d63a87cf8\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -32636,17 +32638,21 @@ oca:
         \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
         \ whose\nmission is to support the collaborative development of Odoo features\
         \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
-        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
+        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainers</a>:</p>\n\
         <p><a class=\"reference external image-reference\" href=\"https://github.com/sbejaoui\"\
-        ><img alt=\"sbejaoui\" src=\"https://github.com/sbejaoui.png?size=40px\" /></a></p>\n\
-        <p>This module is part of the <a class=\"reference external\" href=\"https://github.com/OCA/contract/tree/17.0/product_contract\"\
-        >OCA/contract</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
-        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        ><img alt=\"sbejaoui\" src=\"https://github.com/sbejaoui.png?size=40px\" /></a>\
+        \ <a class=\"reference external image-reference\" href=\"https://github.com/CarlosRoca13\"\
+        ><img alt=\"CarlosRoca13\" src=\"https://github.com/CarlosRoca13.png?size=40px\"\
+        \ /></a></p>\n<p>This module is part of the <a class=\"reference external\"\
+        \ href=\"https://github.com/OCA/contract/tree/17.0/product_contract\">OCA/contract</a>\
+        \ project on GitHub.</p>\n<p>You are welcome to contribute. To learn how please\
+        \ visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
         >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
         </body>\n</html>\n"
       development_status: null
       maintainers:
       - sbejaoui
+      - CarlosRoca13
       name: Recurring - Product Contract
       summary: null
     subscription_oca:
@@ -32971,7 +32977,7 @@ oca:
         \ Credit Control</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:ec98afee1edce9ad092e8790bb697ccff785aaad74d895c0ed10d06fbad8aaf0\n\
+        !! source digest: sha256:9e3b9bac3655ebbdaccaf60a56920e5ff2be88560cadc2348ec8b8a467e0740f\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -38368,7 +38374,7 @@ oca:
         >DDMRP Exclude Moves ADU Calc</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:1031aa0f663110902dbfb7fe012551369b0c763c38b7157dbec1def2260204b3\n\
+        !! source digest: sha256:b591151b35a4c8a2ef442096286c074dfc85ea028e5298fc57f209ad778562c0\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -40838,6 +40844,192 @@ oca:
       maintainers: []
       name: Stock Picking Package Number
       summary: Set or compute number of packages for a picking
+    delivery_price_method:
+      author: Trey (www.trey.es), Odoo Community Association (OCA)
+      depends:
+      - delivery
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Delivery Price Method</title>\n<style type=\"text/css\">\n\n\
+        /*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"delivery-price-method\">\n<h1 class=\"title\">Delivery\
+        \ Price Method</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:85e6500f210288fe74c9ed857f16dea6467eeb5da9e88403572f4fc27e8977c2\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Production/Stable\" src=\"https://img.shields.io/badge/maturity-Production%2FStable-green.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/delivery-carrier/tree/17.0/delivery_price_method\"\
+        ><img alt=\"OCA/delivery-carrier\" src=\"https://img.shields.io/badge/github-OCA%2Fdelivery--carrier-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/delivery-carrier-17-0/delivery-carrier-17-0-delivery_price_method\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/delivery-carrier&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module allows to force a local price rate computation\
+        \ for any\ndelivery method, including those that have been created to query\
+        \ a\nwebservice for fetching the rate.</p>\n<p>It uses the existing fixed\
+        \ price or price based on rules computations.</p>\n<p><strong>Table of contents</strong></p>\n\
+        <div class=\"contents local topic\" id=\"contents\">\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference internal\" href=\"#usage\" id=\"toc-entry-1\"\
+        >Usage</a></li>\n<li><a class=\"reference internal\" href=\"#bug-tracker\"\
+        \ id=\"toc-entry-2\">Bug Tracker</a></li>\n<li><a class=\"reference internal\"\
+        \ href=\"#credits\" id=\"toc-entry-3\">Credits</a><ul>\n<li><a class=\"reference\
+        \ internal\" href=\"#authors\" id=\"toc-entry-4\">Authors</a></li>\n<li><a\
+        \ class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-5\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#maintainers\" id=\"toc-entry-6\"\
+        >Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\">Usage</a></h1>\n\
+        <ol class=\"arabic simple\">\n<li>Go to <em>Sales &gt; Configuration &gt;\
+        \ Sales Orders &gt; Delivery Methods</em>.</li>\n<li>Open or create a new\
+        \ one.</li>\n<li>On the \u201CPrice Method\u201D field, select \u201CFixed\
+        \ Price\u201D or \u201CBased on\nRules\u201D.</li>\n<li>You will see standard\
+        \ fields for selecting the price as if the\ndelivery method isn\u2019t an\
+        \ integration carrier.</li>\n</ol>\n</div>\n<div class=\"section\" id=\"bug-tracker\"\
+        >\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\">Bug Tracker</a></h1>\n\
+        <p>Bugs are tracked on <a class=\"reference external\" href=\"https://github.com/OCA/delivery-carrier/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/delivery-carrier/issues/new?body=module:%20delivery_price_method%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-3\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-4\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Trey (www.trey.es)</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-5\">Contributors</a></h2>\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference external\" href=\"https://www.trey.es\">Trey</a>:<ul>\n\
+        <li>Roberto Lizana &lt;<a class=\"reference external\" href=\"mailto:roberto&#64;trey.es\"\
+        >roberto&#64;trey.es</a>&gt;</li>\n</ul>\n</li>\n<li><a class=\"reference\
+        \ external\" href=\"https://www.tecnativa.com\">Tecnativa</a>:<ul>\n<li>Pedro\
+        \ M. Baeza</li>\n</ul>\n</li>\n<li><a class=\"reference external\" href=\"\
+        https://www.quibq.es\">QubiQ 2010</a>:<ul>\n<li>Mar\xE7al Isern</li>\n</ul>\n\
+        </li>\n<li><a class=\"reference external\" href=\"https://opensourceintegrators.com\"\
+        >Open Source Integrators</a>:<ul>\n<li>Daniel Reis &lt;<a class=\"reference\
+        \ external\" href=\"mailto:dreis&#64;opensourceintegrators.com\">dreis&#64;opensourceintegrators.com</a>&gt;</li>\n\
+        </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n\
+        <h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/delivery-carrier/tree/17.0/delivery_price_method\"\
+        >OCA/delivery-carrier</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: Production/Stable
+      maintainers: []
+      name: Delivery Price Method
+      summary: Force a fixed or rule price calculation on Delivery Methods, for example
+        to override a webservice provided prices.
     delivery_roulier:
       author: Akretion,Odoo Community Association (OCA)
       depends:
@@ -63613,6 +63805,206 @@ oca:
       development_status: null
       maintainers: []
       name: Theoretical vs Attended Time Analysis
+      summary: null
+    hr_attendance_rfid:
+      author: Comunitea, ForgeFlow, Odoo Community Association (OCA)
+      depends:
+      - hr_attendance
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>HR Attendance RFID</title>\n<style type=\"text/css\">\n\n/*\n\
+        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"hr-attendance-rfid\">\n<h1 class=\"title\">HR Attendance\
+        \ RFID</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:86ae6cbc47785c5fa52f58a961d90eb80dc9fddc0c660889ed3bea641567f3db\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/hr-attendance/tree/17.0/hr_attendance_rfid\"\
+        ><img alt=\"OCA/hr-attendance\" src=\"https://img.shields.io/badge/github-OCA%2Fhr--attendance-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/hr-attendance-17-0/hr-attendance-17-0-hr_attendance_rfid\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/hr-attendance&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module extends the functionality of HR Attendance in\
+        \ order to allow\nthe logging of employee attendances using an RFID based\
+        \ employee\nattendance system.</p>\n<p><strong>Table of contents</strong></p>\n\
+        <div class=\"contents local topic\" id=\"contents\">\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference internal\" href=\"#configuration\" id=\"toc-entry-1\"\
+        >Configuration</a></li>\n<li><a class=\"reference internal\" href=\"#usage\"\
+        \ id=\"toc-entry-2\">Usage</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #bug-tracker\" id=\"toc-entry-3\">Bug Tracker</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#credits\" id=\"toc-entry-4\">Credits</a><ul>\n<li><a\
+        \ class=\"reference internal\" href=\"#authors\" id=\"toc-entry-5\">Authors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-6\"\
+        >Contributors</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-7\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"configuration\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-1\">Configuration</a></h1>\n<p>To use this module, you need to\
+        \ use an external system that calls the\nmethod \u2018register_attendance\u2019\
+        \ of the model \u2018hr.employee\u2019 passing as\nparameter the code of the\
+        \ RFID card.</p>\n<p>Developers of a compatible RFID based employee attendance\
+        \ system should\nbe familiar with the outputs of this method and implement\
+        \ proper calls\nand management of responses.</p>\n<p>It is advisory to create\
+        \ an exclusive user to perform this task. As user\ndoesn\u2019t need several\
+        \ access, it is just essential to perform the check\nin/out, a group has been\
+        \ created. Add your attendance device user to\nRFID Attendance group.</p>\n\
+        </div>\n<div class=\"section\" id=\"usage\">\n<h1><a class=\"toc-backref\"\
+        \ href=\"#toc-entry-2\">Usage</a></h1>\n<ol class=\"arabic simple\">\n<li>The\
+        \ HR employee responsible to set up new employees should go to\n\u2018Attendances\
+        \ -&gt; Manage Attendances -&gt; Employees\u2019 and register the\nRFID card\
+        \ code of each of your employees. You can use an USB plugged\nRFID reader\
+        \ connected to your computer for this purpose.</li>\n<li>The employee should\
+        \ put his/her card to the RFID based employee\nattendance system. It is expected\
+        \ that the system will provide some\nform of output of the registration event.</li>\n\
+        </ol>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"\
+        toc-backref\" href=\"#toc-entry-3\">Bug Tracker</a></h1>\n<p>Bugs are tracked\
+        \ on <a class=\"reference external\" href=\"https://github.com/OCA/hr-attendance/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/hr-attendance/issues/new?body=module:%20hr_attendance_rfid%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Comunitea</li>\n\
+        <li>ForgeFlow</li>\n</ul>\n</div>\n<div class=\"section\" id=\"contributors\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Contributors</a></h2>\n\
+        <ul>\n<li><p class=\"first\">Omar Cati\xF1eira Saavedra &lt;<a class=\"reference\
+        \ external\" href=\"mailto:omar&#64;comunitea.com\">omar&#64;comunitea.com</a>&gt;</p>\n\
+        </li>\n<li><p class=\"first\">H\xE9ctor Villarreal Ortega &lt;<a class=\"\
+        reference external\" href=\"mailto:hector.villarreal&#64;forgeflow.com\">hector.villarreal&#64;forgeflow.com</a>&gt;</p>\n\
+        </li>\n<li><p class=\"first\">Jordi Ballester Alomar &lt;<a class=\"reference\
+        \ external\" href=\"mailto:jordi.ballester&#64;forgeflow.com\">jordi.ballester&#64;forgeflow.com</a>&gt;</p>\n\
+        </li>\n<li><p class=\"first\">Brian McMaster &lt;<a class=\"reference external\"\
+        \ href=\"mailto:brian&#64;mcmpest.com\">brian&#64;mcmpest.com</a>&gt;</p>\n\
+        </li>\n<li><p class=\"first\"><a class=\"reference external\" href=\"https://www.tecnativa.com\"\
+        >Tecnativa</a>:</p>\n<blockquote>\n<ul class=\"simple\">\n<li>V\xEDctor Mart\xED\
+        nez</li>\n</ul>\n</blockquote>\n</li>\n<li><p class=\"first\">Juany Davila\
+        \ &lt;<a class=\"reference external\" href=\"mailto:juany.davila&#64;forgeflow.com\"\
+        >juany.davila&#64;forgeflow.com</a>&gt;</p>\n</li>\n</ul>\n</div>\n<div class=\"\
+        section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\"\
+        >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/hr-attendance/tree/17.0/hr_attendance_rfid\"\
+        >OCA/hr-attendance</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers: []
+      name: HR Attendance RFID
       summary: null
   hr-expense:
     hr_expense_cancel:
@@ -105057,6 +105449,213 @@ oca:
       maintainers: []
       name: Unique Product Internal Reference
       summary: Set Product Internal Reference as Unique
+    product_cost_security:
+      author: Tecnativa, Odoo Community Association (OCA)
+      depends:
+      - product
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Product Cost Security</title>\n<style type=\"text/css\">\n\n\
+        /*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"product-cost-security\">\n<h1 class=\"title\">Product\
+        \ Cost Security</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:6337c792d105fdaabbf33b4d1fd3c428cf36972c7de9614d168355ab5c43cdab\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Production/Stable\" src=\"https://img.shields.io/badge/maturity-Production%2FStable-green.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/product-attribute/tree/17.0/product_cost_security\"\
+        ><img alt=\"OCA/product-attribute\" src=\"https://img.shields.io/badge/github-OCA%2Fproduct--attribute-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/product-attribute-17-0/product-attribute-17-0-product_cost_security\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/product-attribute&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>It adds two security groups, one for viewing the product\
+        \ cost price, and\nthe other for editing it.</p>\n<p><strong>Table of contents</strong></p>\n\
+        <div class=\"contents local topic\" id=\"contents\">\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference internal\" href=\"#configuration\" id=\"toc-entry-1\"\
+        >Configuration</a></li>\n<li><a class=\"reference internal\" href=\"#usage\"\
+        \ id=\"toc-entry-2\">Usage</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #known-issues-roadmap\" id=\"toc-entry-3\">Known issues / Roadmap</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#bug-tracker\" id=\"toc-entry-4\"\
+        >Bug Tracker</a></li>\n<li><a class=\"reference internal\" href=\"#credits\"\
+        \ id=\"toc-entry-5\">Credits</a><ul>\n<li><a class=\"reference internal\"\
+        \ href=\"#authors\" id=\"toc-entry-6\">Authors</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#contributors\" id=\"toc-entry-7\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#maintainers\" id=\"toc-entry-8\"\
+        >Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"configuration\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\"\
+        >Configuration</a></h1>\n<p>To use this module you need to:</p>\n<ol class=\"\
+        arabic simple\">\n<li>Go to a <em>Setting &gt; Users and Companies &gt; Users</em>.</li>\n\
+        <li>Edit a user.</li>\n<li>Grant some access level using the <em>Product costs</em>\
+        \ dropdown.</li>\n</ol>\n</div>\n<div class=\"section\" id=\"usage\">\n<h1><a\
+        \ class=\"toc-backref\" href=\"#toc-entry-2\">Usage</a></h1>\n<p>To use this\
+        \ module you need to:</p>\n<ol class=\"arabic simple\">\n<li>Go to product\
+        \ form view.</li>\n<li>You will not see the <em>Cost</em> field unless you\
+        \ follow the\n<em>Configuration</em> steps and get read permissions.</li>\n\
+        <li>You will not be able to edit it unless you are granted write\npermissions.</li>\n\
+        </ol>\n</div>\n<div class=\"section\" id=\"known-issues-roadmap\">\n<h1><a\
+        \ class=\"toc-backref\" href=\"#toc-entry-3\">Known issues / Roadmap</a></h1>\n\
+        <ul class=\"simple\">\n<li>To edit product costs, apart from having <em>Product\
+        \ costs / Edit</em>\npermission, you need to have some other permission that\
+        \ lets you edit\nproducts, such as <em>Sales / Administrator</em> or <em>Inventory\
+        \ /\nAdministrator</em>.</li>\n</ul>\n</div>\n<div class=\"section\" id=\"\
+        bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Bug Tracker</a></h1>\n\
+        <p>Bugs are tracked on <a class=\"reference external\" href=\"https://github.com/OCA/product-attribute/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/product-attribute/issues/new?body=module:%20product_cost_security%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-5\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-6\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Tecnativa</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-7\">Contributors</a></h2>\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference external\" href=\"https://www.tecnativa.com\"\
+        >Tecnativa</a>:<ul>\n<li>Sergio Teruel</li>\n<li>David vidal</li>\n</ul>\n\
+        </li>\n<li>Watthanun Khorchai &lt;<a class=\"reference external\" href=\"\
+        mailto:watthanun_t&#64;hotmail.com\">watthanun_t&#64;hotmail.com</a>&gt;</li>\n\
+        <li>Carlos Lopez &lt;<a class=\"reference external\" href=\"mailto:celm1990&#64;gmail.com\"\
+        >celm1990&#64;gmail.com</a>&gt;</li>\n<li><a class=\"reference external\"\
+        \ href=\"https://www.onestein.eu\">Onestein</a>:<ul>\n<li>Anjeel Haria</li>\n\
+        </ul>\n</li>\n<li>Jairo Llopis (<a class=\"reference external\" href=\"https://www.moduon.team\"\
+        >Moduon</a>)</li>\n<li><a class=\"reference external\" href=\"https://www.binhex.cloud\"\
+        >Binhex</a>:<ul>\n<li>Mario Luis &lt;<a class=\"reference external\" href=\"\
+        mailto:m.luis&#64;binhex.cloud\">m.luis&#64;binhex.cloud</a>&gt;</li>\n</ul>\n\
+        </li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-8\">Maintainers</a></h2>\n<p>This module is\
+        \ maintained by the OCA.</p>\n<a class=\"reference external image-reference\"\
+        \ href=\"https://odoo-community.org\">\n<img alt=\"Odoo Community Association\"\
+        \ src=\"https://odoo-community.org/logo.png\" />\n</a>\n<p>OCA, or the Odoo\
+        \ Community Association, is a nonprofit organization whose\nmission is to\
+        \ support the collaborative development of Odoo features and\npromote its\
+        \ widespread use.</p>\n<p>Current <a class=\"reference external\" href=\"\
+        https://odoo-community.org/page/maintainer-role\">maintainers</a>:</p>\n<p><a\
+        \ class=\"reference external image-reference\" href=\"https://github.com/sergio-teruel\"\
+        ><img alt=\"sergio-teruel\" src=\"https://github.com/sergio-teruel.png?size=40px\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/rafaelbn\"\
+        ><img alt=\"rafaelbn\" src=\"https://github.com/rafaelbn.png?size=40px\" /></a>\
+        \ <a class=\"reference external image-reference\" href=\"https://github.com/yajo\"\
+        ><img alt=\"yajo\" src=\"https://github.com/yajo.png?size=40px\" /></a></p>\n\
+        <p>This module is part of the <a class=\"reference external\" href=\"https://github.com/OCA/product-attribute/tree/17.0/product_cost_security\"\
+        >OCA/product-attribute</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: Production/Stable
+      maintainers:
+      - sergio-teruel
+      - rafaelbn
+      - yajo
+      name: Product Cost Security
+      summary: Product cost security restriction view
     product_dimension:
       author: brain-tec AG, ADHOC SA, Camptocamp SA, Odoo Community Association (OCA)
       depends:
@@ -126285,7 +126884,7 @@ oca:
         \n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file\
         \ is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:dc5e0b875da3ba3a08f5bf83821701c833d52cb035f2b91b163808748e0f008d\n\
+        !! source digest: sha256:7181c1591eda5bdebd47ff7250d8adcbcd067bc53483b29f9e1aa83424859024\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Alpha\" src=\"https://img.shields.io/badge/maturity-Alpha-red.png\"\
@@ -133225,7 +133824,7 @@ oca:
         \ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file is generated\
         \ by oca-gen-addon-readme !!\n!! changes will be overwritten.            \
         \       !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! source\
-        \ digest: sha256:e589c7d0276b5aa4a5684b55b4656c68b9198412353cabc34ee898e4c30cb3ab\n\
+        \ digest: sha256:332aee253ea006150dd84367588b401c225d097053614131e9c2f1ff01fef4cc\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Production/Stable\" src=\"https://img.shields.io/badge/maturity-Production%2FStable-green.png\"\
@@ -133352,16 +133951,20 @@ oca:
         \ &lt;<a class=\"reference external\" href=\"mailto:amarroig&#64;apsl.net\"\
         >amarroig&#64;apsl.net</a>&gt;</li>\n</ul>\n</li>\n<li>Michael Tietz (MT Software)\
         \ <a class=\"reference external\" href=\"mailto:mtietz&#64;mt-software.de\"\
-        >mtietz&#64;mt-software.de</a></li>\n</ul>\n</div>\n<div class=\"section\"\
-        \ id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-8\"\
-        >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
-        reference external image-reference\" href=\"https://odoo-community.org\">\n\
-        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
-        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
-        \ whose\nmission is to support the collaborative development of Odoo features\
-        \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
-        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainers</a>:</p>\n\
-        <p><a class=\"reference external image-reference\" href=\"https://github.com/pedrobaeza\"\
+        >mtietz&#64;mt-software.de</a></li>\n<li>Jacques-Etienne Baudoux - BCIM <a\
+        \ class=\"reference external\" href=\"mailto:je&#64;bcim.be\">je&#64;bcim.be</a></li>\n\
+        <li>Souheil Bejaoui - ACSONE SA/NV <a class=\"reference external\" href=\"\
+        mailto:souheil.bejaoui&#64;acsone.eu\">souheil.bejaoui&#64;acsone.eu</a></li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-8\">Maintainers</a></h2>\n<p>This module is\
+        \ maintained by the OCA.</p>\n<a class=\"reference external image-reference\"\
+        \ href=\"https://odoo-community.org\">\n<img alt=\"Odoo Community Association\"\
+        \ src=\"https://odoo-community.org/logo.png\" />\n</a>\n<p>OCA, or the Odoo\
+        \ Community Association, is a nonprofit organization whose\nmission is to\
+        \ support the collaborative development of Odoo features and\npromote its\
+        \ widespread use.</p>\n<p>Current <a class=\"reference external\" href=\"\
+        https://odoo-community.org/page/maintainer-role\">maintainers</a>:</p>\n<p><a\
+        \ class=\"reference external image-reference\" href=\"https://github.com/pedrobaeza\"\
         ><img alt=\"pedrobaeza\" src=\"https://github.com/pedrobaeza.png?size=40px\"\
         \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/chienandalu\"\
         ><img alt=\"chienandalu\" src=\"https://github.com/chienandalu.png?size=40px\"\
@@ -133491,7 +134094,7 @@ oca:
         <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file is\
         \ generated by oca-gen-addon-readme !!\n!! changes will be overwritten.  \
         \                 !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:75c2b660869693cf46b74a7e80a7047080b9b6c3a72a340dc789f9e71791ec01\n\
+        !! source digest: sha256:f26f5190b61439bf66226889de5492e50db0421e780b5740623e96d7045edeb2\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -148527,6 +149130,193 @@ oca:
       - trojikman
       name: User's Log Viewer
       summary: Allow to see user's actions log
+    users_ldap_populate:
+      author: Therp BV, Odoo Community Association (OCA)
+      depends:
+      - auth_ldap
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>LDAP Populate</title>\n<style type=\"text/css\">\n\n/*\n:Author:\
+        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511 2024-01-13\
+        \ 09:50:07Z milde $\n:Copyright: This stylesheet has been placed in the public\
+        \ domain.\n\nDefault cascading style sheet for the HTML output of Docutils.\n\
+        Despite the name, some widely supported CSS2 features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"ldap-populate\">\n<h1 class=\"title\">LDAP Populate</h1>\n\
+        \n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file\
+        \ is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:a966c208d29cf07fbef7c2fa70c82714faad3e0e9864f8b76e076cbfc6c2dac2\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/server-auth/tree/17.0/users_ldap_populate\"\
+        ><img alt=\"OCA/server-auth\" src=\"https://img.shields.io/badge/github-OCA%2Fserver--auth-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/server-auth-17-0/server-auth-17-0-users_ldap_populate\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/server-auth&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module extends the functionality of auth_ldap by adding\n\
+        functionality so that users can be populated from a LDAP server.</p>\n<p><strong>Table\
+        \ of contents</strong></p>\n<div class=\"contents local topic\" id=\"contents\"\
+        >\n<ul class=\"simple\">\n<li><a class=\"reference internal\" href=\"#usage\"\
+        \ id=\"toc-entry-1\">Usage</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #known-issues-roadmap\" id=\"toc-entry-2\">Known issues / Roadmap</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#bug-tracker\" id=\"toc-entry-3\"\
+        >Bug Tracker</a></li>\n<li><a class=\"reference internal\" href=\"#credits\"\
+        \ id=\"toc-entry-4\">Credits</a><ul>\n<li><a class=\"reference internal\"\
+        \ href=\"#authors\" id=\"toc-entry-5\">Authors</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#contributors\" id=\"toc-entry-6\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#maintainers\" id=\"toc-entry-7\"\
+        >Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\">Usage</a></h1>\n\
+        <p>To use this module, you need to:</p>\n<ol class=\"arabic simple\">\n<li>Go\
+        \ to \u2018Settings\u2019 -&gt; \u2018General Settings\u2019</li>\n<li>In\
+        \ the LDAP category click on or add a LDAP configuration</li>\n<li>In the\
+        \ pop-up enter all the LDAP settings</li>\n<li>Click the populate button</li>\n\
+        <li>A new pop-up will notify you of how many users are added</li>\n</ol>\n\
+        </div>\n<div class=\"section\" id=\"known-issues-roadmap\">\n<h1><a class=\"\
+        toc-backref\" href=\"#toc-entry-2\">Known issues / Roadmap</a></h1>\n<ul class=\"\
+        simple\">\n<li>Improve test coverage and port its LDAP Patch method to a module\
+        \ where\nthey can be imported and reutilized on other tests.</li>\n</ul>\n\
+        </div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\"\
+        \ href=\"#toc-entry-3\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"\
+        reference external\" href=\"https://github.com/OCA/server-auth/issues\">GitHub\
+        \ Issues</a>.\nIn case of trouble, please check there if your issue has already\
+        \ been reported.\nIf you spotted it first, help us to smash it by providing\
+        \ a detailed and welcomed\n<a class=\"reference external\" href=\"https://github.com/OCA/server-auth/issues/new?body=module:%20users_ldap_populate%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Therp BV</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-6\">Contributors</a></h2>\n<ul class=\"simple\"\
+        >\n<li>Therp BV &lt;<a class=\"reference external\" href=\"https://therp.nl\"\
+        >https://therp.nl</a>&gt;</li>\n<li><a class=\"reference external\" href=\"\
+        https://www.tecnativa.com\">Tecnativa</a>:<ul>\n<li>Alexandre D\xEDaz</li>\n\
+        <li>Jo\xE3o Marques</li>\n<li>Carlos Roca</li>\n<li>Carolina Fernandez</li>\n\
+        </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n\
+        <h2><a class=\"toc-backref\" href=\"#toc-entry-7\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
+        <p><a class=\"reference external image-reference\" href=\"https://github.com/joao-p-marques\"\
+        ><img alt=\"joao-p-marques\" src=\"https://github.com/joao-p-marques.png?size=40px\"\
+        \ /></a></p>\n<p>This module is part of the <a class=\"reference external\"\
+        \ href=\"https://github.com/OCA/server-auth/tree/17.0/users_ldap_populate\"\
+        >OCA/server-auth</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers:
+      - joao-p-marques
+      name: LDAP Populate
+      summary: null
   server-backend:
     base_external_dbsource:
       author: Daniel Reis, LasLabs, Odoo Community Association (OCA)
@@ -161487,7 +162277,7 @@ oca:
         \ Activity Team</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:d4929acc5e623e0be1350bdce307434f8bb46ab4ef8f9ffb8cf875539afb542a\n\
+        !! source digest: sha256:f57479d7f6e748ab80d1f5de32d806761fe970d6e84f0b056b7e1206b3afd9b5\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Alpha\" src=\"https://img.shields.io/badge/maturity-Alpha-red.png\"\
@@ -161558,6 +162348,9 @@ oca:
         <li>Vincent Van Rossem <a class=\"reference external\" href=\"mailto:vincent.vanrossem&#64;camptocamp.com\"\
         >vincent.vanrossem&#64;camptocamp.com</a></li>\n<li>Italo Lopes <a class=\"\
         reference external\" href=\"mailto:italo.lopes&#64;camptocamp.com\">italo.lopes&#64;camptocamp.com</a></li>\n\
+        </ul>\n</li>\n<li><a class=\"reference external\" href=\"https://corporatehub.eu/\"\
+        >CorporateHub</a><ul>\n<li>Alexey Pelykh <a class=\"reference external\" href=\"\
+        mailto:alexey.pelykh&#64;corphub.eu\">alexey.pelykh&#64;corphub.eu</a></li>\n\
         </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"other-credits\">\n\
         <h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Other credits</a></h2>\n\
         <p>The migration of this module from 16.0 to 17.0 was financially supported\n\
@@ -162678,7 +163471,7 @@ oca:
         \ Forward Message</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:98469f5ef781e247c2d83df22630a8fa703c8ea151e4dbf3c35686d9997d4f09\n\
+        !! source digest: sha256:5ef4a37a086e596348f4dcec546d3ceadf405792c3f2c6481397d2ff574839d9\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -163273,7 +164066,7 @@ oca:
         title\">Mail optional follower notification</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:9c68e71c93b147a204c464690db84ee1cfa58d034efb80a3eb83f8c5644c35d4\n\
+        !! source digest: sha256:c08fe65f11ecd021b678e411cf7651ede9f0cee550acc78020d9e68ee772c384\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -163303,6 +164096,7 @@ oca:
         s initialized to true to keep the standard behavior.</p>\n<p><img alt=\"image1\"\
         \ src=\"https://raw.githubusercontent.com/OCA/social/17.0/mail_optional_follower_notification/static/description/optional_follower_001.png\"\
         \ /></p>\n<p><img alt=\"image2\" src=\"https://raw.githubusercontent.com/OCA/social/17.0/mail_optional_follower_notification/static/description/optional_follower_002.png\"\
+        \ /></p>\n<p><img alt=\"image3\" src=\"https://raw.githubusercontent.com/OCA/social/17.0/mail_optional_follower_notification/static/description/optional_follower_003.png\"\
         \ /></p>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"\
         toc-backref\" href=\"#toc-entry-2\">Bug Tracker</a></h1>\n<p>Bugs are tracked\
         \ on <a class=\"reference external\" href=\"https://github.com/OCA/social/issues\"\
@@ -163323,15 +164117,16 @@ oca:
         <li>Andrea Stirpe &lt;<a class=\"reference external\" href=\"mailto:a.stirpe&#64;onestein.nl\"\
         >a.stirpe&#64;onestein.nl</a>&gt;</li>\n<li>Robin Goots &lt;<a class=\"reference\
         \ external\" href=\"mailto:robin.goots&#64;dynapps.be\">robin.goots&#64;dynapps.be</a>&gt;</li>\n\
-        </ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n<h2><a class=\"\
-        toc-backref\" href=\"#toc-entry-6\">Maintainers</a></h2>\n<p>This module is\
-        \ maintained by the OCA.</p>\n<a class=\"reference external image-reference\"\
-        \ href=\"https://odoo-community.org\">\n<img alt=\"Odoo Community Association\"\
-        \ src=\"https://odoo-community.org/logo.png\" />\n</a>\n<p>OCA, or the Odoo\
-        \ Community Association, is a nonprofit organization whose\nmission is to\
-        \ support the collaborative development of Odoo features and\npromote its\
-        \ widespread use.</p>\n<p>This module is part of the <a class=\"reference\
-        \ external\" href=\"https://github.com/OCA/social/tree/17.0/mail_optional_follower_notification\"\
+        <li>Quan Nguyen <a class=\"reference external\" href=\"mailto:quan.nhm&#64;komit-consulting.com\"\
+        >quan.nhm&#64;komit-consulting.com</a></li>\n</ul>\n</div>\n<div class=\"\
+        section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\"\
+        >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/social/tree/17.0/mail_optional_follower_notification\"\
         >OCA/social</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
         \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
         >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
@@ -164421,6 +165216,204 @@ oca:
       maintainers: []
       name: Mail Send Confirmation
       summary: null
+    mail_show_follower:
+      author: Sygel, Moduon, Odoo Community Association (OCA)
+      depends:
+      - base
+      - mail
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Mail Show Follower</title>\n<style type=\"text/css\">\n\n/*\n\
+        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"mail-show-follower\">\n<h1 class=\"title\">Mail\
+        \ Show Follower</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:2887744c2fbfccc0a1542f6f46ebdc1d909b261e74c633966cb972fc22a47ad8\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/social/tree/17.0/mail_show_follower\"\
+        ><img alt=\"OCA/social\" src=\"https://img.shields.io/badge/github-OCA%2Fsocial-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/social-17-0/social-17-0-mail_show_follower\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/social&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module extends the functionality of mailing to show\
+        \ the document\nfollowers in head of the mails. In the cc, only appear when:</p>\n\
+        <ol class=\"arabic simple\">\n<li>The followers only count if are contacts\
+        \ or external users (Inner\nFollowers will be discriminated)</li>\n<li>The\
+        \ number of followers are more than 1.</li>\n</ol>\n<p><strong>Table of contents</strong></p>\n\
+        <div class=\"contents local topic\" id=\"contents\">\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference internal\" href=\"#configuration\" id=\"toc-entry-1\"\
+        >Configuration</a></li>\n<li><a class=\"reference internal\" href=\"#usage\"\
+        \ id=\"toc-entry-2\">Usage</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #bug-tracker\" id=\"toc-entry-3\">Bug Tracker</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#credits\" id=\"toc-entry-4\">Credits</a><ul>\n<li><a\
+        \ class=\"reference internal\" href=\"#authors\" id=\"toc-entry-5\">Authors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-6\"\
+        >Contributors</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-7\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"configuration\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-1\">Configuration</a></h1>\n<p>To configure this module, you need\
+        \ to:</p>\n<ol class=\"arabic simple\">\n<li>Go General settings/Discuss/Show\
+        \ Followers on mails/Show Internal\nUsers CC and set if want to show or not\
+        \ internal users in cc details.</li>\n<li>Go Settings/Users &amp; Company\
+        \ select any user in \u2018Preferences\u2019 check or\nnot the \u2018Show\
+        \ in CC\u2019 field if this user need to appear in the cc\nnote.</li>\n<li>Go\
+        \ General settings/Discuss/Show Followers on mails/Text \u2018Sent to\u2019\
+        \nand set the initial part of the message.</li>\n<li>Go General settings/Discuss/Show\
+        \ Followers on mails/Partner format\nand choose desired fields to show on\
+        \ CC recipients.</li>\n<li>Go General settings/Discuss/Show Followers on mails/Text\
+        \ \u2018Replies\u2019\nand choose desired warn message</li>\n<li>Go General\
+        \ settings/Discuss/Show Followers in \u2018Models to exclude\u2019\nenter\
+        \ the models you want to exclude from the CC note.</li>\n</ol>\n</div>\n<div\
+        \ class=\"section\" id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\"\
+        >Usage</a></h1>\n<p>To use this module, you need to:</p>\n<ol class=\"arabic\
+        \ simple\">\n<li>Send an email from any document of odoo.</li>\n</ol>\n</div>\n\
+        <div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-3\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"reference\
+        \ external\" href=\"https://github.com/OCA/social/issues\">GitHub Issues</a>.\n\
+        In case of trouble, please check there if your issue has already been reported.\n\
+        If you spotted it first, help us to smash it by providing a detailed and welcomed\n\
+        <a class=\"reference external\" href=\"https://github.com/OCA/social/issues/new?body=module:%20mail_show_follower%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Sygel</li>\n<li>Moduon</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-6\">Contributors</a></h2>\n<ul class=\"simple\"\
+        >\n<li>Valentin Vinagre &lt;<a class=\"reference external\" href=\"mailto:valentin.vinagre&#64;sygel.es\"\
+        >valentin.vinagre&#64;sygel.es</a>&gt;</li>\n<li>Lorenzo Battistini</li>\n\
+        <li>Eduardo de Miguel &lt;<a class=\"reference external\" href=\"mailto:edu&#64;moduon.team\"\
+        >edu&#64;moduon.team</a>&gt;</li>\n<li>Vincent Van Rossem &lt;<a class=\"\
+        reference external\" href=\"mailto:vincent.vanrossem&#64;camptocamp.com\"\
+        >vincent.vanrossem&#64;camptocamp.com</a>&gt;</li>\n</ul>\n</div>\n<div class=\"\
+        section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\"\
+        >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
+        <p><a class=\"reference external image-reference\" href=\"https://github.com/yajo\"\
+        ><img alt=\"yajo\" src=\"https://github.com/yajo.png?size=40px\" /></a></p>\n\
+        <p>This module is part of the <a class=\"reference external\" href=\"https://github.com/OCA/social/tree/17.0/mail_show_follower\"\
+        >OCA/social</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers:
+      - yajo
+      name: Mail Show Follower
+      summary: Show CC document followers in mails.
     mail_template_substitute:
       author: ACSONE SA/NV,Odoo Community Association (OCA)
       depends:
@@ -173709,6 +174702,187 @@ oca:
       maintainers: []
       name: Stock Location Lockdown
       summary: Prevent to add stock on locked locations
+    stock_location_position:
+      author: BCIM, Okia, Camptocamp, Odoo Community Association (OCA)
+      depends:
+      - stock
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Stock Location Position</title>\n<style type=\"text/css\">\n\n\
+        /*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"stock-location-position\">\n<h1 class=\"title\"\
+        >Stock Location Position</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:03bdef72656ea686a39600920a7de466a09159f699cb3e877cca4e403936d8b5\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Production/Stable\" src=\"https://img.shields.io/badge/maturity-Production%2FStable-green.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/stock-logistics-warehouse/tree/17.0/stock_location_position\"\
+        ><img alt=\"OCA/stock-logistics-warehouse\" src=\"https://img.shields.io/badge/github-OCA%2Fstock--logistics--warehouse-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/stock-logistics-warehouse-17-0/stock-logistics-warehouse-17-0-stock_location_position\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/stock-logistics-warehouse&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module adds position attributes on stock location such\
+        \ as:</p>\n<ul class=\"simple\">\n<li>Corridor</li>\n<li>Row</li>\n<li>Rack</li>\n\
+        <li>Level</li>\n</ul>\n<p>and renames position (XYZ) to box (XYZ).</p>\n<p><strong>Table\
+        \ of contents</strong></p>\n<div class=\"contents local topic\" id=\"contents\"\
+        >\n<ul class=\"simple\">\n<li><a class=\"reference internal\" href=\"#bug-tracker\"\
+        \ id=\"toc-entry-1\">Bug Tracker</a></li>\n<li><a class=\"reference internal\"\
+        \ href=\"#credits\" id=\"toc-entry-2\">Credits</a><ul>\n<li><a class=\"reference\
+        \ internal\" href=\"#authors\" id=\"toc-entry-3\">Authors</a></li>\n<li><a\
+        \ class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-4\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#other-credits\" id=\"toc-entry-5\"\
+        >Other credits</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-6\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-1\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"reference\
+        \ external\" href=\"https://github.com/OCA/stock-logistics-warehouse/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/stock-logistics-warehouse/issues/new?body=module:%20stock_location_position%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-3\">Authors</a></h2>\n<ul class=\"simple\">\n<li>BCIM</li>\n<li>Okia</li>\n\
+        <li>Camptocamp</li>\n</ul>\n</div>\n<div class=\"section\" id=\"contributors\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-4\">Contributors</a></h2>\n\
+        <ul class=\"simple\">\n<li>Syvain Van Hoof (Okia sprl) &lt;<a class=\"reference\
+        \ external\" href=\"mailto:sylvainvh&#64;okia.be\">sylvainvh&#64;okia.be</a>&gt;</li>\n\
+        <li>Jacques-Etienne Baudoux (BCIM) &lt;<a class=\"reference external\" href=\"\
+        mailto:je&#64;bcim.be\">je&#64;bcim.be</a>&gt;</li>\n<li>Guewen Baconnier\
+        \ (Camptocamp) &lt;<a class=\"reference external\" href=\"mailto:guewen.baconnier&#64;camptocamp.com\"\
+        >guewen.baconnier&#64;camptocamp.com</a>&gt;</li>\n<li>Akim Juillerat &lt;<a\
+        \ class=\"reference external\" href=\"mailto:akim.juillerat&#64;camptocamp.com\"\
+        >akim.juillerat&#64;camptocamp.com</a>&gt;</li>\n<li>Phuc Tran Thanh &lt;<a\
+        \ class=\"reference external\" href=\"mailto:phuc&#64;trobz.com\">phuc&#64;trobz.com</a>&gt;</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"other-credits\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-5\">Other credits</a></h2>\n<p>The development\
+        \ of this module has been financially supported by:</p>\n<ul class=\"simple\"\
+        >\n<li>Camptocamp</li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/stock-logistics-warehouse/tree/17.0/stock_location_position\"\
+        >OCA/stock-logistics-warehouse</a> project on GitHub.</p>\n<p>You are welcome\
+        \ to contribute. To learn how please visit <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/Contribute\">https://odoo-community.org/page/Contribute</a>.</p>\n\
+        </div>\n</div>\n</div>\n</body>\n</html>\n"
+      development_status: Production/Stable
+      maintainers: []
+      name: Stock Location Position
+      summary: Add coordinate attributes on stock location.
     stock_location_zone:
       author: BCIM, Okia, Camptocamp, Odoo Community Association (OCA)
       depends:
