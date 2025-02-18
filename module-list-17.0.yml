@@ -7,6 +7,8 @@ forgeflow:
   stock-rma:
   - rma_sale
   - rma_reason_code
+  - rma_repair
+  - rma_repair_refurbish
   - rma_filter_lot
   - rma_account
   - rma
@@ -878,6 +880,7 @@ oca:
   - auth_jwt
   - users_ldap_populate
   - impersonate_login
+  - auth_oauth_multi_token
   - auth_session_timeout
   - auth_ldaps
   - auth_oidc
@@ -980,6 +983,7 @@ oca:
   - mail_send_confirmation
   - mail_activity_done
   - mail_composer_cc_bcc
+  - mass_mailing_list_dynamic
   - mail_outbound_static
   - mass_mailing_resend
   - mail_activity_reminder
