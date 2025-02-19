@@ -219,6 +219,7 @@ oca:
   - contract_variable_qty_timesheet
   cooperative: []
   credit-control:
+  - sale_financial_risk_info
   - partner_risk_insurance
   - sale_financial_risk
   - account_invoice_overdue_warn
@@ -267,6 +268,7 @@ oca:
   - delivery_state
   - delivery_cttexpress
   - delivery_roulier
+  - partner_delivery_schedule
   - sale_order_warehouse_from_delivery_carrier
   - delivery_carrier_manual_weight
   - delivery_roulier_option
@@ -720,6 +722,7 @@ oca:
   - purchase_open_qty
   - purchase_invoice_plan
   - purchase_sale_link_by_origin
+  - purchase_mass_mail
   - purchase_no_rfq
   - purchase_tier_validation
   - purchase_request_tier_validation
