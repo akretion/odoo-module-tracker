@@ -401,6 +401,7 @@ oca:
   - hr_attendance_report_theoretical_time
   hr-expense:
   - hr_expense_employee_analytic_default
+  - hr_expense_advance_clearing
   - hr_expense_invoice
   - hr_expense_sequence
   - hr_expense_payment
@@ -756,6 +757,7 @@ oca:
   - purchase_cancel_reason
   - purchase_tag
   - purchase_order_line_stock_available
+  - purchase_requisition_multiple_vendor
   pwa-builder: []
   queue:
   - queue_job
@@ -975,6 +977,7 @@ oca:
   - mail_tracking_mass_mailing
   - mail_template_substitute
   - mail_quoted_reply
+  - mail_disable_follower_notification
   - mail_optional_follower_notification
   - mail_partner_forwarding
   - mail_composer_cc_bcc_account
