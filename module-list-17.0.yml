@@ -83,6 +83,7 @@ oca:
   - account_invoice_report_grouped_by_picking
   account-invoicing:
   - account_invoice_section_sale_order
+  - account_invoice_subscription_per_contact
   - account_invoice_block_payment
   - sale_order_invoicing_grouping_criteria
   - account_invoice_blocking
@@ -225,6 +226,7 @@ oca:
   - account_invoice_overdue_warn
   - account_credit_control
   - account_invoice_overdue_warn_sale
+  - account_credit_control_dunning_fees
   - account_financial_risk
   - account_payment_return_financial_risk
   crm:
@@ -751,6 +753,7 @@ oca:
   - purchase_advance_payment
   - purchase_last_price_info
   - purchase_deposit
+  - procurement_purchase_requisition_generation
   - purchase_fop_shipping
   - purchase_manual_delivery
   - purchase_request
@@ -770,6 +773,7 @@ oca:
   - repair_order_template
   - repair_stock
   - repair_timesheet
+  - repair_substate
   - repair_type_product_destination
   - repair_restrict_lot
   - repair_service
@@ -972,6 +976,7 @@ oca:
   - mail_debrand
   - mail_notification_custom_subject
   - mail_tracking
+  - mail_activity_cancel_tracking
   - mail_attach_existing_attachment
   - base_search_mail_content
   - mail_tracking_mass_mailing
