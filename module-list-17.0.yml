@@ -23,6 +23,7 @@ oca:
   - pos_analytic_by_config
   - account_analytic_tag
   - stock_analytic
+  - account_analytic_distribution_manual
   - purchase_analytic
   - account_analytic_spread_by_tag
   - account_analytic_required
@@ -95,6 +96,7 @@ oca:
   - account_invoice_crm_tag
   - partner_invoicing_mode
   - account_manual_currency
+  - purchase_stock_picking_return_invoicing
   - sale_invoicing_date_selection
   - portal_account_personal_data_only
   - account_invoice_fixed_discount
@@ -515,6 +517,7 @@ oca:
   - mrp_planned_order_matrix
   - mrp_production_note
   - mrp_repair_order
+  - mrp_bom_hierarchy
   - quality_control_oca
   - mrp_production_back_to_draft
   - mrp_bom_component_menu
@@ -646,6 +649,7 @@ oca:
   product-attribute:
   - product_print_category
   - product_logistics_uom
+  - product_category_product_link
   - product_category_active
   - product_lot_sequence
   - product_net_weight
@@ -770,6 +774,7 @@ oca:
   - test_queue_job
   repair:
   - repair_picking_after_done
+  - repair_picking
   - repair_order_template
   - repair_stock
   - repair_timesheet
@@ -808,6 +813,7 @@ oca:
   - pydantic
   - fastapi
   rma:
+  - rma_sale
   - product_warranty
   - rma
   - rma_lot
@@ -821,6 +827,7 @@ oca:
   - sale_order_line_position
   - sale_comment_template
   - sale_layout_category_hide_detail
+  - sale_report_salesman
   sale-workflow:
   - sale_order_line_date
   - sale_quotation_number
@@ -978,6 +985,7 @@ oca:
   - mail_tracking
   - mail_activity_cancel_tracking
   - mail_attach_existing_attachment
+  - mail_no_user_assign_notification
   - base_search_mail_content
   - mail_tracking_mass_mailing
   - mail_template_substitute
