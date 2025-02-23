@@ -269,6 +269,7 @@ oca:
   - delivery_carrier_partner
   - partner_delivery_info
   - delivery_carrier_account
+  - delivery_multi_destination
   - delivery_state
   - delivery_cttexpress
   - delivery_roulier
@@ -944,6 +945,7 @@ oca:
   - auditlog
   - server_action_logging
   - fetchmail_notify_error_to_sender
+  - html_text
   - upgrade_analysis
   - base_cron_exclusion
   - module_change_auto_install
