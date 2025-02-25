@@ -103,6 +103,7 @@ oca:
   - sale_order_invoicing_qty_percentage
   - account_invoice_refund_link
   - account_invoice_transmit_method
+  - stock_picking_invoicing
   account-payment:
   - account_payment_return
   - account_payment_term_extension
@@ -296,6 +297,7 @@ oca:
   - website_sale_product_detail_attribute_image
   - website_sale_checkout_skip_payment
   - website_sale_b2x_alt_price
+  - website_sale_product_brand
   - website_sale_secondary_unit
   - website_sale_product_reference_displayed
   - website_sale_product_description
@@ -517,8 +519,10 @@ oca:
   - mrp_workorder_sequence
   - mrp_planned_order_matrix
   - mrp_production_note
+  - mrp_component_operation
   - mrp_repair_order
   - mrp_bom_hierarchy
+  - mrp_component_operation_scrap_reason
   - quality_control_oca
   - mrp_production_back_to_draft
   - mrp_bom_component_menu
@@ -833,6 +837,7 @@ oca:
   - sale_order_line_date
   - sale_quotation_number
   - sale_order_price_recalculation
+  - sale_pricelist_global_rule
   - sale_automatic_workflow
   - sale_substate
   - sale_order_line_menu
@@ -866,6 +871,7 @@ oca:
   - sale_order_qty_change_no_recompute
   - sale_fixed_discount
   - sale_order_type
+  - partner_contact_sale_info_propagation
   - sale_shipping_info_helper
   - sale_order_line_price_history
   - sale_blanket_order
