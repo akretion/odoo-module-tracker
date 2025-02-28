@@ -268,6 +268,7 @@ oca:
   - delivery_carrier_account
   - partner_delivery_info
   - delivery_roulier_option
+  - partner_delivery_zone
   - delivery_package_number
   - delivery_cttexpress
   - delivery_multi_destination
@@ -794,6 +795,7 @@ oca:
   - repair_type
   - repair_refurbish
   report-print-send:
+  - printer_zpl2
   - base_report_to_printer
   reporting-engine:
   - report_substitute
