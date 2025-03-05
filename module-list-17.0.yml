@@ -73,6 +73,7 @@ oca:
   - l10n_eu_oss_oca
   - account_fiscal_position_autodetect_optional_vies
   - account_avatax_sale_oca
+  - account_ecotax
   - account_fiscal_position_partner_type
   - account_avatax_website_sale
   - account_avatax_oca
@@ -803,6 +804,7 @@ oca:
   - base_report_to_printer
   reporting-engine:
   - report_substitute
+  - report_csv
   - report_qweb_pdf_watermark
   - report_qweb_parameter
   - report_qweb_element_page_visibility
