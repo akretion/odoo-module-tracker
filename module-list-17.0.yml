@@ -42,6 +42,7 @@ oca:
   - mis_builder_cash_flow
   - mis_template_financial_report
   - account_financial_report
+  - account_sale_stock_report_non_billed
   - account_tax_balance
   account-financial-tools:
   - account_journal_lock_date
@@ -305,6 +306,7 @@ oca:
   - website_sale_vat_required
   - website_sale_product_description
   - website_sale_checkout_skip_payment
+  - website_sale_stock_available
   - website_sale_product_brand
   e-learning: []
   edi:
@@ -602,6 +604,7 @@ oca:
   - partner_contact_gender
   - partner_company_group
   - partner_industry_secondary
+  - partner_employee_quantity
   - partner_deduplicate_filter
   - partner_email_check
   - partner_ref_unique
@@ -1102,6 +1105,7 @@ oca:
   - stock_lot_on_hand_first
   - stock_picking_return_restricted_qty
   - stock_picking_return_lot
+  - stock_push_delay
   - stock_picking_auto_create_lot_sequence
   - stock_valuation_layer_usage
   - stock_quant_package_product_packaging
@@ -1121,6 +1125,7 @@ oca:
   - stock_picking_partner_note
   - stock_picking_back2draft
   - stock_picking_warn_message
+  - stock_production_lot_active
   - stock_picking_purchase_order_link
   - sale_order_global_stock_route
   - stock_account_product_run_fifo_hook
