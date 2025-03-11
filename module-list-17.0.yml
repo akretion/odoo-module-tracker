@@ -87,6 +87,7 @@ oca:
   account-invoicing:
   - account_invoice_crm_tag
   - account_invoice_pricelist
+  - account_move_cancel_confirm
   - product_form_account_move_line_link
   - account_invoice_block_payment
   - account_invoice_fixed_discount
@@ -254,7 +255,8 @@ oca:
   currency:
   - currency_rate_update
   - currency_rate_update_xe
-  data-protection: []
+  data-protection:
+  - privacy
   ddmrp:
   - ddmrp_warning_as_job
   - ddmrp_cron_actions_as_job
@@ -365,6 +367,7 @@ oca:
   - fieldservice_recurring
   - fieldservice_stage_validation
   - fieldservice_crm
+  - fieldservice_kanban_info
   - base_territory
   - fieldservice_vehicle
   - fieldservice_sale_agreement
@@ -692,6 +695,7 @@ oca:
   - product_packaging_dimension
   - product_pricelist_simulation
   - product_manufacturer
+  - product_packaging_level_salable
   - product_secondary_unit
   - product_main_supplierinfo
   - uom_category_active
@@ -741,7 +745,8 @@ oca:
   - project_department
   project-agile: []
   project-reporting: []
-  purchase-reporting: []
+  purchase-reporting:
+  - purchase_report_hide_line
   purchase-workflow:
   - purchase_reception_notify
   - purchase_force_invoiced
@@ -981,6 +986,7 @@ oca:
   - base_revision
   - base_menu_visibility_restriction
   - base_tier_validation
+  - base_cancel_confirm
   - base_technical_features
   - sequence_reset_period
   - date_range_account
