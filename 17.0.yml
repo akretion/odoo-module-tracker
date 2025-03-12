@@ -14649,6 +14649,201 @@ oca:
       name: Acccount Invoice Section Sale Order
       summary: For invoices targetting multiple sale order addsections with sale order
         name.
+    account_invoice_show_currency_rate:
+      author: Tecnativa, Odoo Community Association (OCA)
+      depends:
+      - account
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Account Invoice Show Currency Rate</title>\n<style type=\"text/css\"\
+        >\n\n/*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css\
+        \ 9511 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been\
+        \ placed in the public domain.\n\nDefault cascading style sheet for the HTML\
+        \ output of Docutils.\nDespite the name, some widely supported CSS2 features\
+        \ are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"account-invoice-show-currency-rate\">\n<h1 class=\"\
+        title\">Account Invoice Show Currency Rate</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:a46eaccd90619d90b57a6c019576e94dc3c861f782c8eff0d79556692f96076c\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/account-invoicing/tree/17.0/account_invoice_show_currency_rate\"\
+        ><img alt=\"OCA/account-invoicing\" src=\"https://img.shields.io/badge/github-OCA%2Faccount--invoicing-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/account-invoicing-17-0/account-invoicing-17-0-account_invoice_show_currency_rate\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/account-invoicing&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module shows the currency rate applied in invoices,\
+        \ so you can\nvisually verify what is going to be applied for the exchange,\
+        \ or which\none was applied once converted to company currency.</p>\n<p><strong>Table\
+        \ of contents</strong></p>\n<div class=\"contents local topic\" id=\"contents\"\
+        >\n<ul class=\"simple\">\n<li><a class=\"reference internal\" href=\"#configuration\"\
+        \ id=\"toc-entry-1\">Configuration</a></li>\n<li><a class=\"reference internal\"\
+        \ href=\"#usage\" id=\"toc-entry-2\">Usage</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#bug-tracker\" id=\"toc-entry-3\">Bug Tracker</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#credits\" id=\"toc-entry-4\">Credits</a><ul>\n\
+        <li><a class=\"reference internal\" href=\"#authors\" id=\"toc-entry-5\">Authors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-6\"\
+        >Contributors</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-7\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"configuration\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-1\">Configuration</a></h1>\n<p>Enable the option for multiple currencies\
+        \ in your instance:</p>\n<ol class=\"arabic simple\">\n<li>Go to Invoicing\
+        \ &gt; Configuration &gt; Settings &gt; Currencies &gt;\nMulti-Currencies</li>\n\
+        <li>Go to any draft invoice</li>\n<li>Change the invoice currency</li>\n<li>The\
+        \ proper currency rate, based on the invoice date and the selected\ncurrency,\
+        \ will be shown.</li>\n<li>Add any invoice line.</li>\n<li>Odoo has already\
+        \ generated the journal item lines with the rate\napplied, so the currency\
+        \ rate shown is get from the division between\nthe amount in currency by the\
+        \ amount in company currency.</li>\n</ol>\n<p>Some rates must be defined (and\
+        \ be distinct to 1.0) for currencies\ndifferent from the company default.</p>\n\
+        <ol class=\"arabic simple\">\n<li>Go to Invoicing &gt; Configuration &gt;\
+        \ Currencies and go to EUR</li>\n<li>Go to Rates smart-button</li>\n<li>Update\
+        \ 01/01/2010 record and change rate to 1.5</li>\n</ol>\n</div>\n<div class=\"\
+        section\" id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\"\
+        >Usage</a></h1>\n<p>To use this module, you need to:</p>\n<ol class=\"arabic\
+        \ simple\">\n<li>Go to Invoicing &gt; Customer &gt; Invoice</li>\n<li>Create\
+        \ Invoice and set Currency distinct to company currency (EUR for\nexample)</li>\n\
+        <li>Rate account show according to currency defined.</li>\n</ol>\n</div>\n\
+        <div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-3\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"reference\
+        \ external\" href=\"https://github.com/OCA/account-invoicing/issues\">GitHub\
+        \ Issues</a>.\nIn case of trouble, please check there if your issue has already\
+        \ been reported.\nIf you spotted it first, help us to smash it by providing\
+        \ a detailed and welcomed\n<a class=\"reference external\" href=\"https://github.com/OCA/account-invoicing/issues/new?body=module:%20account_invoice_show_currency_rate%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Tecnativa</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"contributors\">\n<h2><a class=\"\
+        toc-backref\" href=\"#toc-entry-6\">Contributors</a></h2>\n<ul class=\"simple\"\
+        >\n<li><a class=\"reference external\" href=\"https://www.tecnativa.com\"\
+        >Tecnativa</a>:<ul>\n<li>Pedro M. Baeza</li>\n<li>V\xEDctor Mart\xEDnez</li>\n\
+        </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n\
+        <h2><a class=\"toc-backref\" href=\"#toc-entry-7\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
+        <p><a class=\"reference external image-reference\" href=\"https://github.com/victoralmau\"\
+        ><img alt=\"victoralmau\" src=\"https://github.com/victoralmau.png?size=40px\"\
+        \ /></a></p>\n<p>This module is part of the <a class=\"reference external\"\
+        \ href=\"https://github.com/OCA/account-invoicing/tree/17.0/account_invoice_show_currency_rate\"\
+        >OCA/account-invoicing</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers:
+      - victoralmau
+      name: Account Invoice Show Currency Rate
+      summary: Show currency rate in invoices.
     account_invoice_subscription_per_contact:
       author: Tecnativa, Odoo Community Association (OCA)
       depends:
@@ -57362,10 +57557,11 @@ oca:
         \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
         \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
         \ />\n<title>Field Service - CRM</title>\n<style type=\"text/css\">\n\n/*\n\
-        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 8954\
-        \ 2022-01-20 10:10:25Z milde $\n:Copyright: This stylesheet has been placed\
+        :Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
         \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
-        \ of Docutils.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
         \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
         \ from tables and images */\n.borderless, table.borderless td, table.borderless\
         \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
@@ -57435,7 +57631,7 @@ oca:
         \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
         \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
         \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
-        \ .ln { color: grey; } /* line numbers */\npre.code, code { background-color:\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
         \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
         \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
         \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
@@ -57445,12 +57641,12 @@ oca:
         \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
         \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
         \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
-        \ }\n\nspan.problematic {\n  color: red }\n\nspan.section-subtitle {\n  /*\
-        \ font-size relative to parent (h1..h6 element) */\n  font-size: 80% }\n\n\
-        table.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px }\n\n\
-        table.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top: 0.5em\
-        \ ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid 1px\
-        \ black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
         table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
         \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
         \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
@@ -57465,7 +57661,7 @@ oca:
         \ Service - CRM</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:dc711809826070614889acb8ed564240354c39de14a035d864a17ddf99dd6834\n\
+        !! source digest: sha256:44c95e756cc07b924b2bddc0709e748b98c1fa4b912ebb77f0b7629c4377ce8e\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -57530,16 +57726,18 @@ oca:
         >fpatel&#64;opensourceintegrators.com</a>&gt;</li>\n<li><a class=\"reference\
         \ external\" href=\"https://apsl.tech\">APSL</a>:<ul>\n<li>Antoni Marroig\
         \ &lt;<a class=\"reference external\" href=\"mailto:amarroig&#64;apsl.net\"\
-        >amarroig&#64;apsl.net</a>&gt;</li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"\
-        section\" id=\"other-credits\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-9\"\
-        >Other credits</a></h2>\n<p>The development of this module has been financially\
-        \ supported by:</p>\n<ul class=\"simple\">\n<li>Pavlov Media &lt;<a class=\"\
-        reference external\" href=\"https://www.pavlovmedia.com\">https://www.pavlovmedia.com</a>&gt;</li>\n\
+        >amarroig&#64;apsl.net</a>&gt;</li>\n<li>Bernat Obrador &lt;<a class=\"reference\
+        \ external\" href=\"mailto:bobrador&#64;apsl.net\">bobrador&#64;apsl.net</a>&gt;</li>\n\
+        </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"other-credits\">\n\
+        <h2><a class=\"toc-backref\" href=\"#toc-entry-9\">Other credits</a></h2>\n\
+        <p>The development of this module has been financially supported by:</p>\n\
+        <ul class=\"simple\">\n<li>Pavlov Media &lt;<a class=\"reference external\"\
+        \ href=\"https://www.pavlovmedia.com\">https://www.pavlovmedia.com</a>&gt;</li>\n\
         </ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n<h2><a class=\"\
         toc-backref\" href=\"#toc-entry-10\">Maintainers</a></h2>\n<p>This module\
         \ is maintained by the OCA.</p>\n<a class=\"reference external image-reference\"\
-        \ href=\"https://odoo-community.org\"><img alt=\"Odoo Community Association\"\
-        \ src=\"https://odoo-community.org/logo.png\" /></a>\n<p>OCA, or the Odoo\
+        \ href=\"https://odoo-community.org\">\n<img alt=\"Odoo Community Association\"\
+        \ src=\"https://odoo-community.org/logo.png\" />\n</a>\n<p>OCA, or the Odoo\
         \ Community Association, is a nonprofit organization whose\nmission is to\
         \ support the collaborative development of Odoo features and\npromote its\
         \ widespread use.</p>\n<p>Current <a class=\"reference external\" href=\"\
@@ -57894,7 +58092,7 @@ oca:
         >Field Service Geoengine</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:1ea6a5ac722ffe8591fa794cd6f84c2a9f081d0fbe3ea2f39f3622b761480c3d\n\
+        !! source digest: sha256:ecb6a36c3b8578c3647a981e3fca5b547036e61a7f4aae6f7b9a22b41913bcd8\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -85780,7 +85978,7 @@ oca:
         >Management System - Review</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:96b087d09286d648e4494f1ab0117413c8b44bc192fba98f89f0e6a7b8d551eb\n\
+        !! source digest: sha256:f04d53aa5814f73833048de1cbdee37bbb8ceefeb43b99592248e48302545bea\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -129108,7 +129306,7 @@ oca:
         \ Request</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:183c08eae146c85f18755c3c3f78b923eb90b20a6470d397d722f38b1cdbd138\n\
+        !! source digest: sha256:b74332bcee3e1105d7bcf7db36edae0da0a65be919c2255cee7f4481d41a7d0f\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -198928,7 +199126,7 @@ oca:
         >Filesystem Storage Backend</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:4f22975eea97459e2d21e996d42a8a0dae9505454a820dbe714649984cded907\n\
+        !! source digest: sha256:a630b91d2413452b356bd0d3c33130b762f40a96ff38eeb4b4a36a7f3c51aad8\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -199012,16 +199210,16 @@ oca:
         store_fname field of the ir.attachment model. This code must be\nunique. It\
         \ will be used as scheme. example of the store_fname field:\n<tt class=\"\
         docutils literal\"><span class=\"pre\">odoofs://abs34Tg11</span></tt>.</li>\n\
-        <li>The protocol used by the backend. The protocol refers to the\nsupported\
-        \ protocols of the fsspec python package.</li>\n<li>A directory path. This\
-        \ is a root directory from which the filesystem\nwill be mounted. This directory\
+        <li>The protocol used by the backend. The protocol refers to the supported\n\
+        protocols of the fsspec python package.</li>\n<li>A directory path. This is\
+        \ a root directory from which the filesystem\nwill be mounted. This directory\
         \ must exist.</li>\n<li>The protocol options. These are the options that will\
-        \ be passed to\nthe fsspec python package when creating the filesystem. These\
+        \ be passed to the\nfsspec python package when creating the filesystem. These\
         \ options\ndepend on the protocol used and are described in the fsspec\ndocumentation.</li>\n\
         <li>Resolve env vars. This options resolves the protocol options values\n\
         starting with $ from environment variables</li>\n<li>Check Connection Method.\
-        \ If set, Odoo will always check the\nconnection before using a storage and\
-        \ it will remove the fs\nconnection from the cache if the check fails.<ul>\n\
+        \ If set, Odoo will always check the connection\nbefore using a storage and\
+        \ it will remove the fs connection from the\ncache if the check fails.<ul>\n\
         <li><tt class=\"docutils literal\">Create Marker file</tt>: create a hidden\
         \ file on remote and then\ncheck it exists with Use it if you have write access\
         \ to the remote\nand if it is not an issue to leave the marker file in the\
@@ -199054,15 +199252,17 @@ oca:
         \ as follows:</p>\n<pre class=\"code ini literal-block\">\n<span class=\"\
         k\">[fs_storage.fsprod]</span><span class=\"w\">\n</span><span class=\"na\"\
         >protocol</span><span class=\"o\">=</span><span class=\"s\">s3</span><span\
-        \ class=\"w\">\n</span><span class=\"na\">options</span><span class=\"o\"\
-        >=</span><span class=\"s\">{&quot;endpoint_url&quot;: &quot;https://my_s3_server/&quot;,\
-        \ &quot;key&quot;: &quot;KEY&quot;, &quot;secret&quot;: &quot;SECRET&quot;}</span><span\
-        \ class=\"w\">\n</span><span class=\"na\">directory_path</span><span class=\"\
-        o\">=</span><span class=\"s\">my_bucket</span>\n</pre>\n<p>To work, a storage.backend\
-        \ record must exist with the code fsprod into\nthe database. In your configuration\
-        \ section, you can specify the value\nfor the following fields:</p>\n<ul class=\"\
-        simple\">\n<li>protocol</li>\n<li>options</li>\n<li>directory_path</li>\n\
-        </ul>\n</div>\n<div class=\"section\" id=\"migration-from-storage-backend\"\
+        \ class=\"w\">\n</span><span class=\"na\">options={&quot;endpoint_url&quot;</span><span\
+        \ class=\"o\">:</span><span class=\"w\"> </span><span class=\"s\">&quot;https://my_s3_server/&quot;</span><span\
+        \ class=\"na\">, &quot;key&quot;</span><span class=\"o\">:</span><span class=\"\
+        w\"> </span><span class=\"s\">&quot;KEY&quot;</span><span class=\"na\">, &quot;secret&quot;</span><span\
+        \ class=\"o\">:</span><span class=\"w\"> </span><span class=\"s\">&quot;SECRET&quot;</span><span\
+        \ class=\"na\">}</span><span class=\"w\">\n</span><span class=\"na\">directory_path</span><span\
+        \ class=\"o\">=</span><span class=\"s\">my_bucket</span>\n</pre>\n<p>To work,\
+        \ a storage.backend record must exist with the code fsprod into\nthe database.\
+        \ In your configuration section, you can specify the value\nfor the following\
+        \ fields:</p>\n<ul class=\"simple\">\n<li>protocol</li>\n<li>options</li>\n\
+        <li>directory_path</li>\n</ul>\n</div>\n<div class=\"section\" id=\"migration-from-storage-backend\"\
         >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-4\">Migration from storage_backend</a></h2>\n\
         <p>The fs_storage addon can be used to replace the storage_backend addon.\n\
         (It has been designed to be a drop-in replacement for the\nstorage_backend\
@@ -199088,7 +199288,7 @@ oca:
         \ their final locations, or all\ndeleted if the transaction is rolled back.\
         \ This mechanism is only\nvalid for files created during the transaction by\
         \ a call to the open\nmethod of the file system. It is not valid for others\
-        \ operations,\nsuch as rm, mv_file, \u2026 .</li>\n</ul>\n</div>\n<div class=\"\
+        \ operations, such\nas rm, mv_file, \u2026 .</li>\n</ul>\n</div>\n<div class=\"\
         section\" id=\"changelog\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-6\"\
         >Changelog</a></h1>\n<div class=\"section\" id=\"section-1\">\n<h2><a class=\"\
         toc-backref\" href=\"#toc-entry-7\">17.0.2.0.0 (2024-10-07)</a></h2>\n<div\
@@ -199112,7 +199312,7 @@ oca:
         \ error when using the webdav protocol. The auth option is\nexpected to be\
         \ a tuple not a list. Since our config is loaded from a\njson file, we cannot\
         \ use tuples. The fix converts the list to a tuple\nwhen the config is related\
-        \ to a webdav protocol and the auth option\nis into the confix.\n(<a class=\"\
+        \ to a webdav protocol and the auth option is\ninto the confix.\n(<a class=\"\
         reference external\" href=\"https://github.com/OCA/storage/issues/285\">#285</a>)</li>\n\
         </ul>\n</div>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a\
         \ class=\"toc-backref\" href=\"#toc-entry-12\">Bug Tracker</a></h1>\n<p>Bugs\
