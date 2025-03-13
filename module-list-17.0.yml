@@ -43,6 +43,7 @@ oca:
   - mis_template_financial_report
   - account_financial_report
   - account_sale_stock_report_non_billed
+  - account_purchase_stock_report_non_billed
   - account_tax_balance
   account-financial-tools:
   - account_journal_lock_date
@@ -821,6 +822,7 @@ oca:
   - report_qweb_pdf_watermark
   - report_qweb_parameter
   - report_qweb_element_page_visibility
+  - report_qweb_signer
   - report_wkhtmltopdf_param
   - report_xml
   - kpi
@@ -978,6 +980,7 @@ oca:
   - sentry
   - base_m2m_custom_field
   - module_analysis
+  - fetchmail_attach_from_folder
   - auditlog
   - base_technical_user
   - base_cron_exclusion
