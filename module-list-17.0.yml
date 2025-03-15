@@ -74,6 +74,7 @@ oca:
   account-fiscal-rule:
   - l10n_eu_oss_oca
   - account_fiscal_position_autodetect_optional_vies
+  - account_ecotax_sale
   - account_avatax_sale_oca
   - account_ecotax
   - account_fiscal_position_partner_type
@@ -432,6 +433,7 @@ oca:
   hr-holidays:
   - hr_holidays_public
   - hr_holidays_natural_period
+  - hr_holidays_settings
   - hr_holidays_public_city
   - hr_leave_custom_hour_interval
   infrastructure: []
@@ -561,7 +563,8 @@ oca:
   - mis_builder_budget
   - mis_builder_demo
   - mis_builder
-  mis-builder-contrib: []
+  mis-builder-contrib:
+  - mis_builder_analytic
   multi-company:
   - mail_multicompany
   - product_multi_company
@@ -952,6 +955,7 @@ oca:
   - remove_odoo_enterprise
   - portal_odoo_debranding
   - disable_odoo_online
+  - hr_expense_remove_mobile_link
   server-env:
   - mail_environment_office365
   - mail_environment
@@ -1253,6 +1257,7 @@ oca:
   webkit-tools: []
   website:
   - website_cookiebot
+  - website_whatsapp
   - website_odoo_debranding
   - website_require_login
   - website_snippet_marginless_gallery
