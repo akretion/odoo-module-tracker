@@ -734,6 +734,7 @@ oca:
   - project_group
   - project_timeline
   - project_parent
+  - project_group_hr_timesheet
   - project_task_stage_state
   - project_task_note
   - project_parent_task_filter
@@ -1224,6 +1225,7 @@ oca:
   - web_widget_dropdown_dynamic
   - web_widget_mpld3_chart
   - web_timeline
+  - web_search_with_and
   - web_favicon
   - web_no_bubble
   - web_widget_image_download
@@ -1254,6 +1256,7 @@ oca:
   web-api:
   - endpoint_route_handler
   - webservice
+  - endpoint_auth_api_key
   - endpoint
   web-api-contrib: []
   webhook: []
