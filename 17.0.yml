@@ -79408,9 +79408,10 @@ oca:
         \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
         \ />\n<title>POS: Caisse-AP payment protocol for France</title>\n<style type=\"\
         text/css\">\n\n/*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id:\
-        \ html4css1.css 8954 2022-01-20 10:10:25Z milde $\n:Copyright: This stylesheet\
+        \ html4css1.css 9511 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet\
         \ has been placed in the public domain.\n\nDefault cascading style sheet for\
-        \ the HTML output of Docutils.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ the HTML output of Docutils.\nDespite the name, some widely supported CSS2\
+        \ features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
         \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
         \ from tables and images */\n.borderless, table.borderless td, table.borderless\
         \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
@@ -79480,7 +79481,7 @@ oca:
         \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
         \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
         \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
-        \ .ln { color: grey; } /* line numbers */\npre.code, code { background-color:\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
         \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
         \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
         \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
@@ -79490,12 +79491,12 @@ oca:
         \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
         \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
         \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
-        \ }\n\nspan.problematic {\n  color: red }\n\nspan.section-subtitle {\n  /*\
-        \ font-size relative to parent (h1..h6 element) */\n  font-size: 80% }\n\n\
-        table.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px }\n\n\
-        table.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top: 0.5em\
-        \ ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid 1px\
-        \ black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
         table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
         \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
         \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
@@ -79511,7 +79512,7 @@ oca:
         \ !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file is generated\
         \ by oca-gen-addon-readme !!\n!! changes will be overwritten.            \
         \       !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! source\
-        \ digest: sha256:afad03e54d3ac936bb21c8dce0a86827a0355a540c0646ffe42f12465ee583d0\n\
+        \ digest: sha256:823f0619d0033d7761e0cf578c2fff27725ff61adf0bbd9f520a13d67393b05d\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -79577,8 +79578,8 @@ oca:
         \ set the IP address of\nthe payment terminal,</li>\n<li>field <em>Caisse-AP\
         \ Payment Terminal Port</em>: set the TCP port of the\npayment terminal (8888\
         \ by default),</li>\n<li>field <em>Payment Mode</em>: set <em>Card</em> (the\
-        \ value <em>Check</em> is for the\n<em>Check</em> payment method if you use\
-        \ a check printer connected to the\npayment terminal such as Ingenico i2200)</li>\n\
+        \ value <em>Check</em> is for the <em>Check</em>\npayment method if you use\
+        \ a check printer connected to the payment\nterminal such as Ingenico i2200)</li>\n\
         </ul>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"\
         toc-backref\" href=\"#toc-entry-2\">Bug Tracker</a></h1>\n<p>Bugs are tracked\
         \ on <a class=\"reference external\" href=\"https://github.com/OCA/l10n-france/issues\"\
@@ -79602,9 +79603,9 @@ oca:
         \ href=\"https://www.camptocamp.com/\">Camptocamp</a>.</p>\n</div>\n<div class=\"\
         section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\"\
         >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
-        reference external image-reference\" href=\"https://odoo-community.org\"><img\
-        \ alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
-        \ /></a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
         \ whose\nmission is to support the collaborative development of Odoo features\
         \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
         \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
