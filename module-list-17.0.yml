@@ -98,6 +98,7 @@ oca:
   - account_invoice_transmit_method
   - account_invoice_refund_link
   - sale_order_invoicing_qty_percentage
+  - account_invoice_customer_no_autofollow
   - account_invoice_section_sale_order
   - sale_invoicing_date_selection
   - stock_picking_invoicing
@@ -121,6 +122,7 @@ oca:
   - account_payment_term_security
   - account_payment_return
   - account_payment_term_extension
+  - partner_restrict_payment_acquirer
   account-reconcile:
   - account_in_payment
   - account_reconcile_model_oca
@@ -308,6 +310,7 @@ oca:
   - website_sale_hide_empty_category
   - website_sale_suggest_create_account
   - website_sale_product_minimal_price
+  - website_sale_product_attribute_filter_category
   - website_sale_secondary_unit
   - website_sale_product_detail_attribute_image
   - website_sale_require_legal
