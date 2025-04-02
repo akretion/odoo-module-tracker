@@ -406,6 +406,7 @@ oca:
   - helpdesk_mgmt_project
   - helpdesk_mgmt_crm
   - helpdesk_mgmt
+  - helpdesk_mgmt_stage_validation
   hr:
   - hr_course
   - hr_employee_partner_external
@@ -799,6 +800,7 @@ oca:
   - purchase_allowed_product
   - purchase_order_type
   - supplier_calendar
+  - purchase_stock_manual_currency
   - purchase_security
   - purchase_invoice_plan
   - purchase_default_terms_conditions
@@ -948,6 +950,7 @@ oca:
   server-auth:
   - auth_user_case_insensitive
   - user_log_view
+  - password_security
   - auth_admin_passkey_totp_mail_enforce
   - impersonate_login
   - users_ldap_populate
