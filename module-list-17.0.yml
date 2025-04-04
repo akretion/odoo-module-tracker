@@ -310,6 +310,7 @@ oca:
   - website_sale_hide_empty_category
   - website_sale_suggest_create_account
   - website_sale_product_minimal_price
+  - website_sale_product_attribute_value_filter_existing
   - website_sale_product_attribute_filter_category
   - website_sale_secondary_unit
   - website_sale_product_detail_attribute_image
@@ -1083,6 +1084,7 @@ oca:
   stock-logistics-interfaces: []
   stock-logistics-orderpoint: []
   stock-logistics-reporting:
+  - stock_move_pivot_total_price
   - stock_move_value_report
   - stock_quantity_history_location
   - stock_picking_report_custom_description
