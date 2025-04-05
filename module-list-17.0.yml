@@ -742,6 +742,7 @@ oca:
   program: []
   project:
   - project_timesheet_time_control
+  - project_task_related
   - project_type
   - project_timeline_hr_timesheet
   - project_task_default_stage
@@ -902,6 +903,7 @@ oca:
   - sale_force_invoiced
   - sale_order_invoicing_finished_task
   - sale_sourced_by_line
+  - sale_elaboration
   - sale_order_qty_change_no_recompute
   - sale_stock_delivery_state
   - sale_cancel_reason
@@ -1065,13 +1067,15 @@ oca:
   - mail_attach_existing_attachment
   - mail_activity_done
   - mail_debrand
+  - mass_mailing_custom_unsubscribe
   - mail_outbound_static
   - mass_mailing_partner
   - mail_disable_follower_notification
   - mail_tracking
   - mass_mailing_list_dynamic
   - mail_partner_forwarding
-  spreadsheet: []
+  spreadsheet:
+  - spreadsheet_oca
   stock-logistics-availability:
   - stock_available
   - stock_free_quantity
