@@ -18,6 +18,7 @@ oca:
   - account_analytic_spread_by_tag
   - account_analytic_distribution_manual
   - account_analytic_sequence
+  - purchase_analytic_tag
   - hr_timesheet_analytic_tag
   - purchase_analytic
   - account_analytic_required
@@ -407,10 +408,14 @@ oca:
   - geoengine_partner
   helpdesk:
   - helpdesk_mgmt_sale
+  - helpdesk_ticket_open_tab
   - helpdesk_mgmt_project
+  - helpdesk_ticket_partner_response
+  - helpdesk_type
   - helpdesk_mgmt_crm
   - helpdesk_mgmt
   - helpdesk_mgmt_stage_validation
+  - helpdesk_ticket_related
   hr:
   - hr_course
   - hr_employee_partner_external
@@ -1084,6 +1089,7 @@ oca:
   - spreadsheet_oca
   stock-logistics-availability:
   - stock_available
+  - sale_stock_available_info_popup
   - stock_free_quantity
   - stock_available_immediately
   - stock_available_mrp
