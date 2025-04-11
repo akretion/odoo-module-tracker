@@ -13280,6 +13280,213 @@ oca:
       maintainers: []
       name: Account Invoice Line Report
       summary: New view to manage invoice lines information
+    account_invoice_production_lot:
+      author: Agile Business Group,Tecnativa,Odoo Community Association (OCA)
+      depends:
+      - account
+      - stock_picking_invoice_link
+      - sale_management
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Invoice Production Lots</title>\n<style type=\"text/css\">\n\n\
+        /*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"invoice-production-lots\">\n<h1 class=\"title\"\
+        >Invoice Production Lots</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:9f615db55743da918ae1c9b3a46bbe892bfb22bf1e467046789784474a8e4196\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/account-invoice-reporting/tree/17.0/account_invoice_production_lot\"\
+        ><img alt=\"OCA/account-invoice-reporting\" src=\"https://img.shields.io/badge/github-OCA%2Faccount--invoice--reporting-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/account-invoice-reporting-17-0/account-invoice-reporting-17-0-account_invoice_production_lot\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/account-invoice-reporting&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module shows, for each (customer) invoice line, the\
+        \ delivered\nproduction lots that will be also displayed on the invoice report\
+        \ with\ntheir corresponding delivered quantities in case the <strong>Tracking</strong>\
+        \ has\nbeen set to <strong>By Lots</strong>.</p>\n<p><strong>Note:</strong>\
+        \ As of v13.0, Odoo provides an option under <em>Settings</em>\n(<strong>Inventory\
+        \ &gt; Configuration &gt; Settings &gt; Traceability</strong>) to <strong>Display\n\
+        Lots &amp; Serial Numbers on Invoices</strong> which provides similar\nfunctionality.\
+        \ However, it has some limitations compared to this addon:\n* It will only\
+        \ display the associated Lots / Serial Numbers in the\ngenerated <em>Invoice\
+        \ Report</em>, and not in an extra field in the Invoice\nview form. * It will\
+        \ display all the Lots / Serial Numbers grouped\ntogether in an extra line\
+        \ in the Invoice Report. This module adds an\nextra field in each line with\
+        \ that information.</p>\n<p><strong>Table of contents</strong></p>\n<div class=\"\
+        contents local topic\" id=\"contents\">\n<ul class=\"simple\">\n<li><a class=\"\
+        reference internal\" href=\"#configuration\" id=\"toc-entry-1\">Configuration</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#usage\" id=\"toc-entry-2\">Usage</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#bug-tracker\" id=\"toc-entry-3\"\
+        >Bug Tracker</a></li>\n<li><a class=\"reference internal\" href=\"#credits\"\
+        \ id=\"toc-entry-4\">Credits</a><ul>\n<li><a class=\"reference internal\"\
+        \ href=\"#authors\" id=\"toc-entry-5\">Authors</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#contributors\" id=\"toc-entry-6\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#maintainers\" id=\"toc-entry-7\"\
+        >Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"configuration\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\"\
+        >Configuration</a></h1>\n<ul class=\"simple\">\n<li>Go to <strong>Inventory\
+        \ &gt; Configuration &gt; Settings &gt; Traceability</strong>, and\nactivate\
+        \ option <strong>Lots &amp; Serial Numbers</strong> in order to manage lots\
+        \ in\nyour instance.</li>\n<li>Go to <strong>Sales &gt; Sales &gt; Products</strong>\
+        \ and select or create a storable\nproduct (Product Type): check that the\
+        \ product has <strong>Tracking</strong> set to\n<strong>By lots</strong> or\
+        \ to <strong>By Unique Serial Number</strong> (in the Inventory tab)\nand\
+        \ <strong>Invoicing Policy</strong> set to <strong>Delivered quantities</strong>\
+        \ (in the Sales\ntab)</li>\n</ul>\n</div>\n<div class=\"section\" id=\"usage\"\
+        >\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\">Usage</a></h1>\n<ul\
+        \ class=\"simple\">\n<li>Create and validate a sale order</li>\n<li>Set <em>Lots/Serial\
+        \ Numbers</em> on the delivered lines by clicking on the\nbutton <em>Register\
+        \ lots, packs, location</em></li>\n<li>After creating the invoice, the <em>Lots/Serial\
+        \ Numbers</em> are displayed in\nthe <em>Production Lots</em> on the invoice\
+        \ line form and in <em>formatted note</em>\nfield on the invoice report, and,\
+        \ in case <strong>Tracking</strong> has been\nselected to <strong>By lots</strong>,\
+        \ their corresponding delivered quantities will\nbe displad as well.</li>\n\
+        </ul>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"\
+        toc-backref\" href=\"#toc-entry-3\">Bug Tracker</a></h1>\n<p>Bugs are tracked\
+        \ on <a class=\"reference external\" href=\"https://github.com/OCA/account-invoice-reporting/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/account-invoice-reporting/issues/new?body=module:%20account_invoice_production_lot%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-4\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Agile Business\
+        \ Group</li>\n<li>Tecnativa</li>\n</ul>\n</div>\n<div class=\"section\" id=\"\
+        contributors\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Contributors</a></h2>\n\
+        <ul class=\"simple\">\n<li>Lorenzo Battistini &lt;<a class=\"reference external\"\
+        \ href=\"mailto:lorenzo.battistini&#64;agilebg.com\">lorenzo.battistini&#64;agilebg.com</a>&gt;</li>\n\
+        <li>Alessio Gerace &lt;<a class=\"reference external\" href=\"mailto:alessio.gerace&#64;agilebg.com\"\
+        >alessio.gerace&#64;agilebg.com</a>&gt;</li>\n<li>Alex Comba &lt;<a class=\"\
+        reference external\" href=\"mailto:alex.comba&#64;agilebg.com\">alex.comba&#64;agilebg.com</a>&gt;</li>\n\
+        <li><a class=\"reference external\" href=\"https://www.tecnativa.com\">Tecnativa</a>:<ul>\n\
+        <li>Vicent Cubells</li>\n<li>Pedro M. Baeza</li>\n<li>Sergio Teruel</li>\n\
+        </ul>\n</li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\">\n\
+        <h2><a class=\"toc-backref\" href=\"#toc-entry-7\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/account-invoice-reporting/tree/17.0/account_invoice_production_lot\"\
+        >OCA/account-invoice-reporting</a> project on GitHub.</p>\n<p>You are welcome\
+        \ to contribute. To learn how please visit <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/Contribute\">https://odoo-community.org/page/Contribute</a>.</p>\n\
+        </div>\n</div>\n</div>\n</body>\n</html>\n"
+      development_status: null
+      maintainers: []
+      name: Invoice Production Lots
+      summary: Display delivered serial numbers in invoice
     account_invoice_report_grouped_by_picking:
       author: Tecnativa, Odoo Community Association (OCA)
       depends:
@@ -64983,6 +65190,201 @@ oca:
       name: Field Service Vehicles
       summary: Manage Field Service vehicles and assign drivers
   fleet:
+    fleet_vehicle_category:
+      author: Stefano Consolaro, Associazione PNLUG - Gruppo Odoo, Odoo Community
+        Association (OCA)
+      depends:
+      - fleet
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Fleet Vehicle Category</title>\n<style type=\"text/css\">\n\n\
+        /*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511\
+        \ 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been placed\
+        \ in the public domain.\n\nDefault cascading style sheet for the HTML output\
+        \ of Docutils.\nDespite the name, some widely supported CSS2 features are\
+        \ used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"fleet-vehicle-category\">\n<h1 class=\"title\">Fleet\
+        \ Vehicle Category</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:3a2c15ee383b9aac2ce9ac037142807448f31760e8c6d13b5ea96ebbef09befc\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/fleet/tree/17.0/fleet_vehicle_category\"\
+        ><img alt=\"OCA/fleet\" src=\"https://img.shields.io/badge/github-OCA%2Ffleet-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/fleet-17-0/fleet-17-0-fleet_vehicle_category\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/fleet&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module adds category definition for vehicles.</p>\n\
+        <p><strong>Table of contents</strong></p>\n<div class=\"contents local topic\"\
+        \ id=\"contents\">\n<ul class=\"simple\">\n<li><a class=\"reference internal\"\
+        \ href=\"#changelog\" id=\"toc-entry-1\">Changelog</a><ul>\n<li><a class=\"\
+        reference internal\" href=\"#section-1\" id=\"toc-entry-2\">13.0.1.0.0 (2020-06-01)</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#section-2\" id=\"toc-entry-3\"\
+        >14.0.1.0.0 (2021-03-17)</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #section-3\" id=\"toc-entry-4\">15.0.1.0.0 (2023-07-11)</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#section-4\" id=\"toc-entry-5\">16.0.1.0.0 (2024-09-12)</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#section-5\" id=\"toc-entry-6\"\
+        >17.0.1.0.0 (2024-12-31)</a></li>\n</ul>\n</li>\n<li><a class=\"reference\
+        \ internal\" href=\"#bug-tracker\" id=\"toc-entry-7\">Bug Tracker</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#credits\" id=\"toc-entry-8\">Credits</a><ul>\n\
+        <li><a class=\"reference internal\" href=\"#authors\" id=\"toc-entry-9\">Authors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-10\"\
+        >Contributors</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-11\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n\
+        <div class=\"section\" id=\"changelog\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-1\">Changelog</a></h1>\n<div class=\"section\" id=\"section-1\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-2\">13.0.1.0.0 (2020-06-01)</a></h2>\n\
+        <ul class=\"simple\">\n<li>[INI] Initial development</li>\n</ul>\n</div>\n\
+        <div class=\"section\" id=\"section-2\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-3\">14.0.1.0.0 (2021-03-17)</a></h2>\n<ul class=\"simple\">\n<li>[MIG]\
+        \ Module Migration</li>\n</ul>\n</div>\n<div class=\"section\" id=\"section-3\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-4\">15.0.1.0.0 (2023-07-11)</a></h2>\n\
+        <ul class=\"simple\">\n<li>[MIG] Module Migration</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"section-4\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-5\">16.0.1.0.0 (2024-09-12)</a></h2>\n<ul class=\"simple\">\n<li>[MIG]\
+        \ Module Migration</li>\n</ul>\n</div>\n<div class=\"section\" id=\"section-5\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\">17.0.1.0.0 (2024-12-31)</a></h2>\n\
+        <ul class=\"simple\">\n<li>[MIG] Module Migration</li>\n</ul>\n</div>\n</div>\n\
+        <div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\" href=\"\
+        #toc-entry-7\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"reference\
+        \ external\" href=\"https://github.com/OCA/fleet/issues\">GitHub Issues</a>.\n\
+        In case of trouble, please check there if your issue has already been reported.\n\
+        If you spotted it first, help us to smash it by providing a detailed and welcomed\n\
+        <a class=\"reference external\" href=\"https://github.com/OCA/fleet/issues/new?body=module:%20fleet_vehicle_category%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-8\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-9\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Stefano Consolaro</li>\n\
+        <li>Associazione PNLUG - Gruppo Odoo</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"contributors\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-10\"\
+        >Contributors</a></h2>\n<ul class=\"simple\">\n<li>Stefano Consolaro &lt;<a\
+        \ class=\"reference external\" href=\"mailto:stefano.consolaro&#64;mymage.it\"\
+        >stefano.consolaro&#64;mymage.it</a>&gt;</li>\n<li><a class=\"reference external\"\
+        \ href=\"https://www.escodoo.com.br\">Escodoo</a>:<ul>\n<li>Marcel Savegnago\
+        \ &lt;<a class=\"reference external\" href=\"mailto:marcel.savegnago&#64;escodoo.com.br\"\
+        >marcel.savegnago&#64;escodoo.com.br</a>&gt;</li>\n</ul>\n</li>\n<li><a class=\"\
+        reference external\" href=\"https://www.heliconia.io\">Heliconia Solutions\
+        \ Pvt. Ltd.</a></li>\n</ul>\n</div>\n<div class=\"section\" id=\"maintainers\"\
+        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-11\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>This module is part of the <a class=\"\
+        reference external\" href=\"https://github.com/OCA/fleet/tree/17.0/fleet_vehicle_category\"\
+        >OCA/fleet</a> project on GitHub.</p>\n<p>You are welcome to contribute. To\
+        \ learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers: []
+      name: Fleet Vehicle Category
+      summary: Add category definition for vehicles.
     fleet_vehicle_history_date_end:
       author: Druidoo, Odoo Community Association (OCA)
       depends:
@@ -67233,6 +67635,214 @@ oca:
       - victoralmau
       name: Link between Helpdesk and CRM
       summary: Links helpdesk tickets with leads
+    helpdesk_mgmt_portal_follower:
+      author: Advanced Programming Solutions S.L. - APSL - Nagarro, Bernat Obrador,
+        Patryk Pyczko, Miquel Pascual, Odoo Community Association (OCA)
+      depends:
+      - helpdesk_mgmt
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Portal Follower</title>\n<style type=\"text/css\">\n\n/*\n:Author:\
+        \ David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css 9511 2024-01-13\
+        \ 09:50:07Z milde $\n:Copyright: This stylesheet has been placed in the public\
+        \ domain.\n\nDefault cascading style sheet for the HTML output of Docutils.\n\
+        Despite the name, some widely supported CSS2 features are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"portal-follower\">\n<h1 class=\"title\">Portal Follower</h1>\n\
+        \n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file\
+        \ is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:d23c665adc163a08c385af7ccb74c3650839cb87e706c3060c26be2a5a8f7270\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/helpdesk/tree/17.0/helpdesk_mgmt_portal_follower\"\
+        ><img alt=\"OCA/helpdesk\" src=\"https://img.shields.io/badge/github-OCA%2Fhelpdesk-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/helpdesk-17-0/helpdesk-17-0-helpdesk_mgmt_portal_follower\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/helpdesk&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module adds the posibilty to add followers to a helpdesk\
+        \ ticket\nfrom the helpdesk form at the website portal.</p>\n<p><strong>Table\
+        \ of contents</strong></p>\n<div class=\"contents local topic\" id=\"contents\"\
+        >\n<ul class=\"simple\">\n<li><a class=\"reference internal\" href=\"#usage\"\
+        \ id=\"toc-entry-1\">Usage</a></li>\n<li><a class=\"reference internal\" href=\"\
+        #known-issues-roadmap\" id=\"toc-entry-2\">Known issues / Roadmap</a><ul>\n\
+        <li><a class=\"reference internal\" href=\"#known-caveats\" id=\"toc-entry-3\"\
+        >Known Caveats</a></li>\n</ul>\n</li>\n<li><a class=\"reference internal\"\
+        \ href=\"#bug-tracker\" id=\"toc-entry-4\">Bug Tracker</a></li>\n<li><a class=\"\
+        reference internal\" href=\"#credits\" id=\"toc-entry-5\">Credits</a><ul>\n\
+        <li><a class=\"reference internal\" href=\"#authors\" id=\"toc-entry-6\">Authors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#contributors\" id=\"toc-entry-7\"\
+        >Contributors</a></li>\n<li><a class=\"reference internal\" href=\"#maintainers\"\
+        \ id=\"toc-entry-8\">Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div\
+        \ class=\"section\" id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\"\
+        >Usage</a></h1>\n<p>To make it work you just need to add the emails of the\
+        \ wanted followers\nto the <tt class=\"docutils literal\">Emails in Copy</tt>\
+        \ input splitted by comas.</p>\n</div>\n<div class=\"section\" id=\"known-issues-roadmap\"\
+        >\n<h1><a class=\"toc-backref\" href=\"#toc-entry-2\">Known issues / Roadmap</a></h1>\n\
+        <div class=\"section\" id=\"known-caveats\">\n<h2><a class=\"toc-backref\"\
+        \ href=\"#toc-entry-3\">Known Caveats</a></h2>\n<ol class=\"arabic simple\"\
+        >\n<li><strong>Spam Risks</strong>:<ul>\n<li>Allowing users to input any email\
+        \ address could lead to spam if\nunintended recipients are included.</li>\n\
+        </ul>\n</li>\n<li><strong>Privacy Concerns</strong>:<ul>\n<li>Users may inadvertently\
+        \ share sensitive information by adding\nfollowers without the consent of\
+        \ the email address owners.</li>\n<li>This feature could expose email addresses\
+        \ to individuals who should\nnot have access to that information.</li>\n</ul>\n\
+        </li>\n<li><strong>User Misunderstanding</strong>:<ul>\n<li>End-users may\
+        \ not fully understand the implications of adding\nmultiple email addresses,\
+        \ potentially leading to confusion or\nmisuse.</li>\n</ul>\n</li>\n</ol>\n\
+        <p>If you plan to use this module, it is essential to inform users about\n\
+        the importance of carefully selecting followers to add. This process\nwill\
+        \ help maintain privacy and limit unnecessary notifications.</p>\n</div>\n\
+        </div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"toc-backref\"\
+        \ href=\"#toc-entry-4\">Bug Tracker</a></h1>\n<p>Bugs are tracked on <a class=\"\
+        reference external\" href=\"https://github.com/OCA/helpdesk/issues\">GitHub\
+        \ Issues</a>.\nIn case of trouble, please check there if your issue has already\
+        \ been reported.\nIf you spotted it first, help us to smash it by providing\
+        \ a detailed and welcomed\n<a class=\"reference external\" href=\"https://github.com/OCA/helpdesk/issues/new?body=module:%20helpdesk_mgmt_portal_follower%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-5\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-6\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Advanced Programming\
+        \ Solutions S.L. - APSL - Nagarro</li>\n<li>Bernat Obrador</li>\n<li>Patryk\
+        \ Pyczko</li>\n<li>Miquel Pascual</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"contributors\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\"\
+        >Contributors</a></h2>\n<ul class=\"simple\">\n<li><a class=\"reference external\"\
+        \ href=\"https://apsl.tech\">APSL-Nagarro</a>:<ul>\n<li>Patryk Pyczko <a class=\"\
+        reference external\" href=\"mailto:ppyczko&#64;apsl.net\">ppyczko&#64;apsl.net</a></li>\n\
+        <li>Bernat Obrador <a class=\"reference external\" href=\"mailto:bobrador&#64;apsl.net\"\
+        >bobrador&#64;apsl.net</a></li>\n<li>Miquel Pascual <a class=\"reference external\"\
+        \ href=\"mailto:mpascual&#64;apsl.net\">mpascual&#64;apsl.net</a></li>\n<li>Antoni\
+        \ Marroig <a class=\"reference external\" href=\"mailto:amarroig&#64;apsl.net\"\
+        >amarroig&#64;apsl.net</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"\
+        section\" id=\"maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-8\"\
+        >Maintainers</a></h2>\n<p>This module is maintained by the OCA.</p>\n<a class=\"\
+        reference external image-reference\" href=\"https://odoo-community.org\">\n\
+        <img alt=\"Odoo Community Association\" src=\"https://odoo-community.org/logo.png\"\
+        \ />\n</a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainers</a>:</p>\n\
+        <p><a class=\"reference external image-reference\" href=\"https://github.com/BernatObrador\"\
+        ><img alt=\"BernatObrador\" src=\"https://github.com/BernatObrador.png?size=40px\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/ppyczko\"\
+        ><img alt=\"ppyczko\" src=\"https://github.com/ppyczko.png?size=40px\" /></a>\
+        \ <a class=\"reference external image-reference\" href=\"https://github.com/mpascuall\"\
+        ><img alt=\"mpascuall\" src=\"https://github.com/mpascuall.png?size=40px\"\
+        \ /></a></p>\n<p>This module is part of the <a class=\"reference external\"\
+        \ href=\"https://github.com/OCA/helpdesk/tree/17.0/helpdesk_mgmt_portal_follower\"\
+        >OCA/helpdesk</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers:
+      - BernatObrador
+      - ppyczko
+      - mpascuall
+      name: Portal Follower
+      summary: Add ticket followers from website portal
     helpdesk_mgmt_project:
       author: PuntSistemes S.L.U., Odoo Community Association (OCA)
       depends:
@@ -67770,6 +68380,184 @@ oca:
       maintainers: []
       name: Helpdesk Ticket Stage Validation
       summary: Validate input data when reaching a Helpdesk Ticket stage
+    helpdesk_portal_restriction:
+      author: Lansana Barry Sow, APSL-Nagarro, Odoo Community Association (OCA)
+      depends:
+      - helpdesk_mgmt
+      description: "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\
+        \ \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"\
+        http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\">\n<head>\n<meta\
+        \ http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n<meta\
+        \ name=\"generator\" content=\"Docutils: https://docutils.sourceforge.io/\"\
+        \ />\n<title>Helpdesk Portal Restriction</title>\n<style type=\"text/css\"\
+        >\n\n/*\n:Author: David Goodger (goodger@python.org)\n:Id: $Id: html4css1.css\
+        \ 9511 2024-01-13 09:50:07Z milde $\n:Copyright: This stylesheet has been\
+        \ placed in the public domain.\n\nDefault cascading style sheet for the HTML\
+        \ output of Docutils.\nDespite the name, some widely supported CSS2 features\
+        \ are used.\n\nSee https://docutils.sourceforge.io/docs/howto/html-stylesheets.html\
+        \ for how to\ncustomize this style sheet.\n*/\n\n/* used to remove borders\
+        \ from tables and images */\n.borderless, table.borderless td, table.borderless\
+        \ th {\n  border: 0 }\n\ntable.borderless td, table.borderless th {\n  /*\
+        \ Override padding for \"table.docutils td\" with \"! important\".\n     The\
+        \ right padding separates the table cells. */\n  padding: 0 0.5em 0 0 ! important\
+        \ }\n\n.first {\n  /* Override more specific margin styles with \"! important\"\
+        . */\n  margin-top: 0 ! important }\n\n.last, .with-subtitle {\n  margin-bottom:\
+        \ 0 ! important }\n\n.hidden {\n  display: none }\n\n.subscript {\n  vertical-align:\
+        \ sub;\n  font-size: smaller }\n\n.superscript {\n  vertical-align: super;\n\
+        \  font-size: smaller }\n\na.toc-backref {\n  text-decoration: none ;\n  color:\
+        \ black }\n\nblockquote.epigraph {\n  margin: 2em 5em ; }\n\ndl.docutils dd\
+        \ {\n  margin-bottom: 0.5em }\n\nobject[type=\"image/svg+xml\"], object[type=\"\
+        application/x-shockwave-flash\"] {\n  overflow: hidden;\n}\n\n/* Uncomment\
+        \ (and remove this text!) to get bold-faced definition list terms\ndl.docutils\
+        \ dt {\n  font-weight: bold }\n*/\n\ndiv.abstract {\n  margin: 2em 5em }\n\
+        \ndiv.abstract p.topic-title {\n  font-weight: bold ;\n  text-align: center\
+        \ }\n\ndiv.admonition, div.attention, div.caution, div.danger, div.error,\n\
+        div.hint, div.important, div.note, div.tip, div.warning {\n  margin: 2em ;\n\
+        \  border: medium outset ;\n  padding: 1em }\n\ndiv.admonition p.admonition-title,\
+        \ div.hint p.admonition-title,\ndiv.important p.admonition-title, div.note\
+        \ p.admonition-title,\ndiv.tip p.admonition-title {\n  font-weight: bold ;\n\
+        \  font-family: sans-serif }\n\ndiv.attention p.admonition-title, div.caution\
+        \ p.admonition-title,\ndiv.danger p.admonition-title, div.error p.admonition-title,\n\
+        div.warning p.admonition-title, .code .error {\n  color: red ;\n  font-weight:\
+        \ bold ;\n  font-family: sans-serif }\n\n/* Uncomment (and remove this text!)\
+        \ to get reduced vertical space in\n   compound paragraphs.\ndiv.compound\
+        \ .compound-first, div.compound .compound-middle {\n  margin-bottom: 0.5em\
+        \ }\n\ndiv.compound .compound-last, div.compound .compound-middle {\n  margin-top:\
+        \ 0.5em }\n*/\n\ndiv.dedication {\n  margin: 2em 5em ;\n  text-align: center\
+        \ ;\n  font-style: italic }\n\ndiv.dedication p.topic-title {\n  font-weight:\
+        \ bold ;\n  font-style: normal }\n\ndiv.figure {\n  margin-left: 2em ;\n \
+        \ margin-right: 2em }\n\ndiv.footer, div.header {\n  clear: both;\n  font-size:\
+        \ smaller }\n\ndiv.line-block {\n  display: block ;\n  margin-top: 1em ;\n\
+        \  margin-bottom: 1em }\n\ndiv.line-block div.line-block {\n  margin-top:\
+        \ 0 ;\n  margin-bottom: 0 ;\n  margin-left: 1.5em }\n\ndiv.sidebar {\n  margin:\
+        \ 0 0 0.5em 1em ;\n  border: medium outset ;\n  padding: 1em ;\n  background-color:\
+        \ #ffffee ;\n  width: 40% ;\n  float: right ;\n  clear: right }\n\ndiv.sidebar\
+        \ p.rubric {\n  font-family: sans-serif ;\n  font-size: medium }\n\ndiv.system-messages\
+        \ {\n  margin: 5em }\n\ndiv.system-messages h1 {\n  color: red }\n\ndiv.system-message\
+        \ {\n  border: medium outset ;\n  padding: 1em }\n\ndiv.system-message p.system-message-title\
+        \ {\n  color: red ;\n  font-weight: bold }\n\ndiv.topic {\n  margin: 2em }\n\
+        \nh1.section-subtitle, h2.section-subtitle, h3.section-subtitle,\nh4.section-subtitle,\
+        \ h5.section-subtitle, h6.section-subtitle {\n  margin-top: 0.4em }\n\nh1.title\
+        \ {\n  text-align: center }\n\nh2.subtitle {\n  text-align: center }\n\nhr.docutils\
+        \ {\n  width: 75% }\n\nimg.align-left, .figure.align-left, object.align-left,\
+        \ table.align-left {\n  clear: left ;\n  float: left ;\n  margin-right: 1em\
+        \ }\n\nimg.align-right, .figure.align-right, object.align-right, table.align-right\
+        \ {\n  clear: right ;\n  float: right ;\n  margin-left: 1em }\n\nimg.align-center,\
+        \ .figure.align-center, object.align-center {\n  display: block;\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\ntable.align-center {\n  margin-left:\
+        \ auto;\n  margin-right: auto;\n}\n\n.align-left {\n  text-align: left }\n\
+        \n.align-center {\n  clear: both ;\n  text-align: center }\n\n.align-right\
+        \ {\n  text-align: right }\n\n/* reset inner alignment in figures */\ndiv.align-right\
+        \ {\n  text-align: inherit }\n\n/* div.align-center * { */\n/*   text-align:\
+        \ left } */\n\n.align-top    {\n  vertical-align: top }\n\n.align-middle {\n\
+        \  vertical-align: middle }\n\n.align-bottom {\n  vertical-align: bottom }\n\
+        \nol.simple, ul.simple {\n  margin-bottom: 1em }\n\nol.arabic {\n  list-style:\
+        \ decimal }\n\nol.loweralpha {\n  list-style: lower-alpha }\n\nol.upperalpha\
+        \ {\n  list-style: upper-alpha }\n\nol.lowerroman {\n  list-style: lower-roman\
+        \ }\n\nol.upperroman {\n  list-style: upper-roman }\n\np.attribution {\n \
+        \ text-align: right ;\n  margin-left: 50% }\n\np.caption {\n  font-style:\
+        \ italic }\n\np.credits {\n  font-style: italic ;\n  font-size: smaller }\n\
+        \np.label {\n  white-space: nowrap }\n\np.rubric {\n  font-weight: bold ;\n\
+        \  font-size: larger ;\n  color: maroon ;\n  text-align: center }\n\np.sidebar-title\
+        \ {\n  font-family: sans-serif ;\n  font-weight: bold ;\n  font-size: larger\
+        \ }\n\np.sidebar-subtitle {\n  font-family: sans-serif ;\n  font-weight: bold\
+        \ }\n\np.topic-title {\n  font-weight: bold }\n\npre.address {\n  margin-bottom:\
+        \ 0 ;\n  margin-top: 0 ;\n  font: inherit }\n\npre.literal-block, pre.doctest-block,\
+        \ pre.math, pre.code {\n  margin-left: 2em ;\n  margin-right: 2em }\n\npre.code\
+        \ .ln { color: gray; } /* line numbers */\npre.code, code { background-color:\
+        \ #eeeeee }\npre.code .comment, code .comment { color: #5C6576 }\npre.code\
+        \ .keyword, code .keyword { color: #3B0D06; font-weight: bold }\npre.code\
+        \ .literal.string, code .literal.string { color: #0C5404 }\npre.code .name.builtin,\
+        \ code .name.builtin { color: #352B84 }\npre.code .deleted, code .deleted\
+        \ { background-color: #DEB0A1}\npre.code .inserted, code .inserted { background-color:\
+        \ #A3D289}\n\nspan.classifier {\n  font-family: sans-serif ;\n  font-style:\
+        \ oblique }\n\nspan.classifier-delimiter {\n  font-family: sans-serif ;\n\
+        \  font-weight: bold }\n\nspan.interpreted {\n  font-family: sans-serif }\n\
+        \nspan.option {\n  white-space: nowrap }\n\nspan.pre {\n  white-space: pre\
+        \ }\n\nspan.problematic, pre.problematic {\n  color: red }\n\nspan.section-subtitle\
+        \ {\n  /* font-size relative to parent (h1..h6 element) */\n  font-size: 80%\
+        \ }\n\ntable.citation {\n  border-left: solid 1px gray;\n  margin-left: 1px\
+        \ }\n\ntable.docinfo {\n  margin: 2em 4em }\n\ntable.docutils {\n  margin-top:\
+        \ 0.5em ;\n  margin-bottom: 0.5em }\n\ntable.footnote {\n  border-left: solid\
+        \ 1px black;\n  margin-left: 1px }\n\ntable.docutils td, table.docutils th,\n\
+        table.docinfo td, table.docinfo th {\n  padding-left: 0.5em ;\n  padding-right:\
+        \ 0.5em ;\n  vertical-align: top }\n\ntable.docutils th.field-name, table.docinfo\
+        \ th.docinfo-name {\n  font-weight: bold ;\n  text-align: left ;\n  white-space:\
+        \ nowrap ;\n  padding-left: 0 }\n\n/* \"booktabs\" style (no vertical lines)\
+        \ */\ntable.docutils.booktabs {\n  border: 0px;\n  border-top: 2px solid;\n\
+        \  border-bottom: 2px solid;\n  border-collapse: collapse;\n}\ntable.docutils.booktabs\
+        \ * {\n  border: 0px;\n}\ntable.docutils.booktabs th {\n  border-bottom: thin\
+        \ solid;\n  text-align: left;\n}\n\nh1 tt.docutils, h2 tt.docutils, h3 tt.docutils,\n\
+        h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {\n  font-size: 100% }\n\n\
+        ul.auto-toc {\n  list-style-type: none }\n\n</style>\n</head>\n<body>\n<div\
+        \ class=\"document\" id=\"helpdesk-portal-restriction\">\n<h1 class=\"title\"\
+        >Helpdesk Portal Restriction</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
+        \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
+        !! source digest: sha256:9b2291cd018fa98f4cb7281d563c8d5362d51ecee5e31910e1859c9afe4c7bcd\n\
+        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
+        \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
+        ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"http://www.gnu.org/licenses/agpl-3.0-standalone.html\"\
+        ><img alt=\"License: AGPL-3\" src=\"https://img.shields.io/badge/licence-AGPL--3-blue.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://github.com/OCA/helpdesk/tree/17.0/helpdesk_portal_restriction\"\
+        ><img alt=\"OCA/helpdesk\" src=\"https://img.shields.io/badge/github-OCA%2Fhelpdesk-lightgray.png?logo=github\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://translation.odoo-community.org/projects/helpdesk-17-0/helpdesk-17-0-helpdesk_portal_restriction\"\
+        ><img alt=\"Translate me on Weblate\" src=\"https://img.shields.io/badge/weblate-Translate%20me-F47D42.png\"\
+        \ /></a> <a class=\"reference external image-reference\" href=\"https://runboat.odoo-community.org/builds?repo=OCA/helpdesk&amp;target_branch=17.0\"\
+        ><img alt=\"Try me on Runboat\" src=\"https://img.shields.io/badge/runboat-Try%20me-875A7B.png\"\
+        \ /></a></p>\n<p>This module allows you to restrict teams and categories for\
+        \ each\ncustomer.</p>\n<p><strong>Table of contents</strong></p>\n<div class=\"\
+        contents local topic\" id=\"contents\">\n<ul class=\"simple\">\n<li><a class=\"\
+        reference internal\" href=\"#usage\" id=\"toc-entry-1\">Usage</a></li>\n<li><a\
+        \ class=\"reference internal\" href=\"#bug-tracker\" id=\"toc-entry-2\">Bug\
+        \ Tracker</a></li>\n<li><a class=\"reference internal\" href=\"#credits\"\
+        \ id=\"toc-entry-3\">Credits</a><ul>\n<li><a class=\"reference internal\"\
+        \ href=\"#authors\" id=\"toc-entry-4\">Authors</a></li>\n<li><a class=\"reference\
+        \ internal\" href=\"#contributors\" id=\"toc-entry-5\">Contributors</a></li>\n\
+        <li><a class=\"reference internal\" href=\"#maintainers\" id=\"toc-entry-6\"\
+        >Maintainers</a></li>\n</ul>\n</li>\n</ul>\n</div>\n<div class=\"section\"\
+        \ id=\"usage\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-1\">Usage</a></h1>\n\
+        <p>Go to the partner and select the teams and categories for which can open\n\
+        ticket</p>\n</div>\n<div class=\"section\" id=\"bug-tracker\">\n<h1><a class=\"\
+        toc-backref\" href=\"#toc-entry-2\">Bug Tracker</a></h1>\n<p>Bugs are tracked\
+        \ on <a class=\"reference external\" href=\"https://github.com/OCA/helpdesk/issues\"\
+        >GitHub Issues</a>.\nIn case of trouble, please check there if your issue\
+        \ has already been reported.\nIf you spotted it first, help us to smash it\
+        \ by providing a detailed and welcomed\n<a class=\"reference external\" href=\"\
+        https://github.com/OCA/helpdesk/issues/new?body=module:%20helpdesk_portal_restriction%0Aversion:%2017.0%0A%0A**Steps%20to%20reproduce**%0A-%20...%0A%0A**Current%20behavior**%0A%0A**Expected%20behavior**\"\
+        >feedback</a>.</p>\n<p>Do not contact contributors directly about support\
+        \ or help with technical issues.</p>\n</div>\n<div class=\"section\" id=\"\
+        credits\">\n<h1><a class=\"toc-backref\" href=\"#toc-entry-3\">Credits</a></h1>\n\
+        <div class=\"section\" id=\"authors\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-4\">Authors</a></h2>\n<ul class=\"simple\">\n<li>Lansana Barry\
+        \ Sow</li>\n<li>APSL-Nagarro</li>\n</ul>\n</div>\n<div class=\"section\" id=\"\
+        contributors\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-5\">Contributors</a></h2>\n\
+        <p>[APSL-Nagarro](<a class=\"reference external\" href=\"https://apsl.tech\"\
+        >https://apsl.tech</a>):</p>\n<ul class=\"simple\">\n<li>Lansana Barry Sow\
+        \ &lt;<a class=\"reference external\" href=\"mailto:lbarry&#64;apsl.net\"\
+        >lbarry&#64;apsl.net</a>&gt;</li>\n</ul>\n</div>\n<div class=\"section\" id=\"\
+        maintainers\">\n<h2><a class=\"toc-backref\" href=\"#toc-entry-6\">Maintainers</a></h2>\n\
+        <p>This module is maintained by the OCA.</p>\n<a class=\"reference external\
+        \ image-reference\" href=\"https://odoo-community.org\">\n<img alt=\"Odoo\
+        \ Community Association\" src=\"https://odoo-community.org/logo.png\" />\n\
+        </a>\n<p>OCA, or the Odoo Community Association, is a nonprofit organization\
+        \ whose\nmission is to support the collaborative development of Odoo features\
+        \ and\npromote its widespread use.</p>\n<p>Current <a class=\"reference external\"\
+        \ href=\"https://odoo-community.org/page/maintainer-role\">maintainer</a>:</p>\n\
+        <p><a class=\"reference external image-reference\" href=\"https://github.com/lbarry-apsl\"\
+        ><img alt=\"lbarry-apsl\" src=\"https://github.com/lbarry-apsl.png?size=40px\"\
+        \ /></a></p>\n<p>This module is part of the <a class=\"reference external\"\
+        \ href=\"https://github.com/OCA/helpdesk/tree/17.0/helpdesk_portal_restriction\"\
+        >OCA/helpdesk</a> project on GitHub.</p>\n<p>You are welcome to contribute.\
+        \ To learn how please visit <a class=\"reference external\" href=\"https://odoo-community.org/page/Contribute\"\
+        >https://odoo-community.org/page/Contribute</a>.</p>\n</div>\n</div>\n</div>\n\
+        </body>\n</html>\n"
+      development_status: null
+      maintainers:
+      - lbarry-apsl
+      name: Helpdesk Portal Restriction
+      summary: null
     helpdesk_ticket_open_tab:
       author: Antoni Marroig, APSL-Nagarro, Odoo Community Association (OCA)
       depends:
@@ -103494,7 +104282,7 @@ oca:
         >Base Location Geonames Import</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:2fd6b1dbd59c6e4f741bbdd1640c5533f64c48bc1aa1ebb64878348ab207eb9a\n\
+        !! source digest: sha256:07561c3749316a847dcb6dc26979a967a0ef26c425b450bf56c34ec7810f5045\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Mature\" src=\"https://img.shields.io/badge/maturity-Mature-brightgreen.png\"\
@@ -127641,7 +128429,7 @@ oca:
         \ Related Task</h1>\n\n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
         !! This file is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:e12b10df652cf179d678b572a63c352e808f4aed0cb78b2ecc4b5c5273b84142\n\
+        !! source digest: sha256:62e9aa8b21f3cb018f39f34ab5f115c687eba92593334efca0fafdefb779ab6a\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -146195,7 +146983,7 @@ oca:
         \n<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n!! This file\
         \ is generated by oca-gen-addon-readme !!\n!! changes will be overwritten.\
         \                   !!\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\
-        !! source digest: sha256:ac47fc4dc33f5145cfb5e00f54cd685b988300ffce1f666b52178f3d04d5aa02\n\
+        !! source digest: sha256:4a2d69d99180b535e9facdb8f8ce074a7c63477d235b7393234e91d1ed454640\n\
         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->\n<p><a class=\"reference\
         \ external image-reference\" href=\"https://odoo-community.org/page/development-status\"\
         ><img alt=\"Beta\" src=\"https://img.shields.io/badge/maturity-Beta-yellow.png\"\
@@ -146355,15 +147143,16 @@ oca:
         <p>Then, you need to declare your app by defining a model that inherits\n\
         from \u2018fastapi.endpoint\u2019 and add your app name into the app field.\
         \ For\nexample:</p>\n<pre class=\"code python literal-block\">\n<span class=\"\
-        kn\">from</span> <span class=\"nn\">odoo</span> <span class=\"kn\">import</span>\
-        \ <span class=\"n\">fields</span><span class=\"p\">,</span> <span class=\"\
-        n\">models</span><span class=\"w\">\n\n</span><span class=\"k\">class</span>\
-        \ <span class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span\
-        \ class=\"n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
-        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\"\
-        >:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">fields</span><span\
+        \ class=\"p\">,</span> <span class=\"n\">models</span><span class=\"w\">\n\
+        \n</span><span class=\"k\">class</span><span class=\"w\"> </span><span class=\"\
+        nc\">FastapiEndpoint</span><span class=\"p\">(</span><span class=\"n\">models</span><span\
+        \ class=\"o\">.</span><span class=\"n\">Model</span><span class=\"p\">):</span><span\
+        \ class=\"w\">\n\n</span>    <span class=\"n\">_inherit</span> <span class=\"\
+        o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"\
+        w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\">:</span>\
+        \ <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
         n\">fields</span><span class=\"o\">.</span><span class=\"n\">Selection</span><span\
         \ class=\"p\">(</span><span class=\"w\">\n</span>        <span class=\"n\"\
         >selection_add</span><span class=\"o\">=</span><span class=\"p\">[(</span><span\
@@ -146386,89 +147175,96 @@ oca:
         \ for your app when accessed at\nthe endpoint path.</p>\n<p>Now, you can create\
         \ your first router. For that, you need to define a\nglobal variable into\
         \ your fastapi_endpoint module called for example\n\u2018demo_api_router\u2019\
-        </p>\n<pre class=\"code python literal-block\">\n<span class=\"kn\">from</span>\
-        \ <span class=\"nn\">fastapi</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">APIRouter</span><span class=\"w\">\n</span><span class=\"kn\"\
-        >from</span> <span class=\"nn\">odoo</span> <span class=\"kn\">import</span>\
+        </p>\n<pre class=\"code python literal-block\">\n<span class=\"kn\">from</span><span\
+        \ class=\"w\"> </span><span class=\"nn\">fastapi</span><span class=\"w\">\
+        \ </span><span class=\"kn\">import</span> <span class=\"n\">APIRouter</span><span\
+        \ class=\"w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo</span><span class=\"w\"> </span><span class=\"kn\">import</span>\
         \ <span class=\"n\">fields</span><span class=\"p\">,</span> <span class=\"\
-        n\">models</span><span class=\"w\">\n\n</span><span class=\"k\">class</span>\
-        \ <span class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span\
-        \ class=\"n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
-        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\"\
-        >:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
-        n\">fields</span><span class=\"o\">.</span><span class=\"n\">Selection</span><span\
-        \ class=\"p\">(</span><span class=\"w\">\n</span>        <span class=\"n\"\
-        >selection_add</span><span class=\"o\">=</span><span class=\"p\">[(</span><span\
-        \ class=\"s2\">&quot;demo&quot;</span><span class=\"p\">,</span> <span class=\"\
-        s2\">&quot;Demo Endpoint&quot;</span><span class=\"p\">)],</span> <span class=\"\
-        n\">ondelete</span><span class=\"o\">=</span><span class=\"p\">{</span><span\
-        \ class=\"s2\">&quot;demo&quot;</span><span class=\"p\">:</span> <span class=\"\
-        s2\">&quot;cascade&quot;</span><span class=\"p\">}</span><span class=\"w\"\
-        >\n</span>    <span class=\"p\">)</span><span class=\"w\">\n\n</span><span\
-        \ class=\"c1\"># create a router</span><span class=\"w\">\n</span><span class=\"\
-        n\">demo_api_router</span> <span class=\"o\">=</span> <span class=\"n\">APIRouter</span><span\
-        \ class=\"p\">()</span>\n</pre>\n<p>To make your router available to your\
-        \ app, you need to add it to the\nlist of routers returned by the <strong>_get_fastapi_routers</strong>\
+        n\">models</span><span class=\"w\">\n\n</span><span class=\"k\">class</span><span\
+        \ class=\"w\"> </span><span class=\"nc\">FastapiEndpoint</span><span class=\"\
+        p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
+        \ class=\"n\">Model</span><span class=\"p\">):</span><span class=\"w\">\n\n\
+        </span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span> <span\
+        \ class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"w\">\n\n</span>\
+        \    <span class=\"n\">app</span><span class=\"p\">:</span> <span class=\"\
+        nb\">str</span> <span class=\"o\">=</span> <span class=\"n\">fields</span><span\
+        \ class=\"o\">.</span><span class=\"n\">Selection</span><span class=\"p\"\
+        >(</span><span class=\"w\">\n</span>        <span class=\"n\">selection_add</span><span\
+        \ class=\"o\">=</span><span class=\"p\">[(</span><span class=\"s2\">&quot;demo&quot;</span><span\
+        \ class=\"p\">,</span> <span class=\"s2\">&quot;Demo Endpoint&quot;</span><span\
+        \ class=\"p\">)],</span> <span class=\"n\">ondelete</span><span class=\"o\"\
+        >=</span><span class=\"p\">{</span><span class=\"s2\">&quot;demo&quot;</span><span\
+        \ class=\"p\">:</span> <span class=\"s2\">&quot;cascade&quot;</span><span\
+        \ class=\"p\">}</span><span class=\"w\">\n</span>    <span class=\"p\">)</span><span\
+        \ class=\"w\">\n\n</span><span class=\"c1\"># create a router</span><span\
+        \ class=\"w\">\n</span><span class=\"n\">demo_api_router</span> <span class=\"\
+        o\">=</span> <span class=\"n\">APIRouter</span><span class=\"p\">()</span>\n\
+        </pre>\n<p>To make your router available to your app, you need to add it to\
+        \ the\nlist of routers returned by the <strong>_get_fastapi_routers</strong>\
         \ method of your\nfastapi_endpoint model.</p>\n<pre class=\"code python literal-block\"\
-        >\n<span class=\"kn\">from</span> <span class=\"nn\">fastapi</span> <span\
-        \ class=\"kn\">import</span> <span class=\"n\">APIRouter</span><span class=\"\
-        w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">api</span><span class=\"\
-        p\">,</span> <span class=\"n\">fields</span><span class=\"p\">,</span> <span\
-        \ class=\"n\">models</span><span class=\"w\">\n\n</span><span class=\"k\"\
-        >class</span> <span class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span\
-        \ class=\"n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
-        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\"\
-        >:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
-        n\">fields</span><span class=\"o\">.</span><span class=\"n\">Selection</span><span\
-        \ class=\"p\">(</span><span class=\"w\">\n</span>        <span class=\"n\"\
-        >selection_add</span><span class=\"o\">=</span><span class=\"p\">[(</span><span\
-        \ class=\"s2\">&quot;demo&quot;</span><span class=\"p\">,</span> <span class=\"\
-        s2\">&quot;Demo Endpoint&quot;</span><span class=\"p\">)],</span> <span class=\"\
-        n\">ondelete</span><span class=\"o\">=</span><span class=\"p\">{</span><span\
-        \ class=\"s2\">&quot;demo&quot;</span><span class=\"p\">:</span> <span class=\"\
-        s2\">&quot;cascade&quot;</span><span class=\"p\">}</span><span class=\"w\"\
-        >\n</span>    <span class=\"p\">)</span><span class=\"w\">\n\n</span>    <span\
-        \ class=\"k\">def</span> <span class=\"nf\">_get_fastapi_routers</span><span\
-        \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span><span\
-        \ class=\"w\">\n</span>        <span class=\"k\">if</span> <span class=\"\
-        bp\">self</span><span class=\"o\">.</span><span class=\"n\">app</span> <span\
-        \ class=\"o\">==</span> <span class=\"s2\">&quot;demo&quot;</span><span class=\"\
-        p\">:</span><span class=\"w\">\n</span>            <span class=\"k\">return</span>\
-        \ <span class=\"p\">[</span><span class=\"n\">demo_api_router</span><span\
-        \ class=\"p\">]</span><span class=\"w\">\n</span>        <span class=\"k\"\
-        >return</span> <span class=\"nb\">super</span><span class=\"p\">()</span><span\
-        \ class=\"o\">.</span><span class=\"n\">_get_fastapi_routers</span><span class=\"\
-        p\">()</span><span class=\"w\">\n\n</span><span class=\"c1\"># create a router</span><span\
+        >\n<span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"\
+        nn\">fastapi</span><span class=\"w\"> </span><span class=\"kn\">import</span>\
+        \ <span class=\"n\">APIRouter</span><span class=\"w\">\n</span><span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">api</span><span\
+        \ class=\"p\">,</span> <span class=\"n\">fields</span><span class=\"p\">,</span>\
+        \ <span class=\"n\">models</span><span class=\"w\">\n\n</span><span class=\"\
+        k\">class</span><span class=\"w\"> </span><span class=\"nc\">FastapiEndpoint</span><span\
+        \ class=\"p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
+        \ class=\"n\">Model</span><span class=\"p\">):</span><span class=\"w\">\n\n\
+        </span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span> <span\
+        \ class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"w\">\n\n</span>\
+        \    <span class=\"n\">app</span><span class=\"p\">:</span> <span class=\"\
+        nb\">str</span> <span class=\"o\">=</span> <span class=\"n\">fields</span><span\
+        \ class=\"o\">.</span><span class=\"n\">Selection</span><span class=\"p\"\
+        >(</span><span class=\"w\">\n</span>        <span class=\"n\">selection_add</span><span\
+        \ class=\"o\">=</span><span class=\"p\">[(</span><span class=\"s2\">&quot;demo&quot;</span><span\
+        \ class=\"p\">,</span> <span class=\"s2\">&quot;Demo Endpoint&quot;</span><span\
+        \ class=\"p\">)],</span> <span class=\"n\">ondelete</span><span class=\"o\"\
+        >=</span><span class=\"p\">{</span><span class=\"s2\">&quot;demo&quot;</span><span\
+        \ class=\"p\">:</span> <span class=\"s2\">&quot;cascade&quot;</span><span\
+        \ class=\"p\">}</span><span class=\"w\">\n</span>    <span class=\"p\">)</span><span\
+        \ class=\"w\">\n\n</span>    <span class=\"k\">def</span><span class=\"w\"\
+        > </span><span class=\"nf\">_get_fastapi_routers</span><span class=\"p\">(</span><span\
+        \ class=\"bp\">self</span><span class=\"p\">):</span><span class=\"w\">\n\
+        </span>        <span class=\"k\">if</span> <span class=\"bp\">self</span><span\
+        \ class=\"o\">.</span><span class=\"n\">app</span> <span class=\"o\">==</span>\
+        \ <span class=\"s2\">&quot;demo&quot;</span><span class=\"p\">:</span><span\
+        \ class=\"w\">\n</span>            <span class=\"k\">return</span> <span class=\"\
+        p\">[</span><span class=\"n\">demo_api_router</span><span class=\"p\">]</span><span\
+        \ class=\"w\">\n</span>        <span class=\"k\">return</span> <span class=\"\
+        nb\">super</span><span class=\"p\">()</span><span class=\"o\">.</span><span\
+        \ class=\"n\">_get_fastapi_routers</span><span class=\"p\">()</span><span\
+        \ class=\"w\">\n\n</span><span class=\"c1\"># create a router</span><span\
         \ class=\"w\">\n</span><span class=\"n\">demo_api_router</span> <span class=\"\
         o\">=</span> <span class=\"n\">APIRouter</span><span class=\"p\">()</span>\n\
         </pre>\n<p>Now, you can start adding routes to your router. For example, let\u2019\
         s add\na route that returns a list of partners.</p>\n<pre class=\"code python\
-        \ literal-block\">\n<span class=\"kn\">from</span> <span class=\"nn\">typing</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">Annotated</span><span\
-        \ class=\"w\">\n\n</span><span class=\"kn\">from</span> <span class=\"nn\"\
-        >fastapi</span> <span class=\"kn\">import</span> <span class=\"n\">APIRouter</span><span\
-        \ class=\"w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">pydantic</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span\
-        \ class=\"w\">\n\n</span><span class=\"kn\">from</span> <span class=\"nn\"\
-        >odoo</span> <span class=\"kn\">import</span> <span class=\"n\">api</span><span\
+        \ literal-block\">\n<span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">typing</span><span class=\"w\"> </span><span class=\"kn\">import</span>\
+        \ <span class=\"n\">Annotated</span><span class=\"w\">\n\n</span><span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">fastapi</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">APIRouter</span><span\
+        \ class=\"w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">pydantic</span><span class=\"w\"> </span><span class=\"kn\"\
+        >import</span> <span class=\"n\">BaseModel</span><span class=\"w\">\n\n</span><span\
+        \ class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">api</span><span\
         \ class=\"p\">,</span> <span class=\"n\">fields</span><span class=\"p\">,</span>\
         \ <span class=\"n\">models</span><span class=\"w\">\n</span><span class=\"\
-        kn\">from</span> <span class=\"nn\">odoo.api</span> <span class=\"kn\">import</span>\
-        \ <span class=\"n\">Environment</span><span class=\"w\">\n\n</span><span class=\"\
-        kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.dependencies</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">odoo_env</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >FastapiEndpoint</span><span class=\"p\">(</span><span class=\"n\">models</span><span\
-        \ class=\"o\">.</span><span class=\"n\">Model</span><span class=\"p\">):</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"n\">_inherit</span> <span class=\"\
-        o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"\
-        w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\">:</span>\
-        \ <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo.api</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">Environment</span><span\
+        \ class=\"w\">\n\n</span><span class=\"kn\">from</span><span class=\"w\">\
+        \ </span><span class=\"nn\">odoo.addons.fastapi.dependencies</span><span class=\"\
+        w\"> </span><span class=\"kn\">import</span> <span class=\"n\">odoo_env</span><span\
+        \ class=\"w\">\n\n</span><span class=\"k\">class</span><span class=\"w\">\
+        \ </span><span class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span\
+        \ class=\"n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
+        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
+        \ class=\"w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\"\
+        >:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
         n\">fields</span><span class=\"o\">.</span><span class=\"n\">Selection</span><span\
         \ class=\"p\">(</span><span class=\"w\">\n</span>        <span class=\"n\"\
         >selection_add</span><span class=\"o\">=</span><span class=\"p\">[(</span><span\
@@ -146478,7 +147274,7 @@ oca:
         \ class=\"s2\">&quot;demo&quot;</span><span class=\"p\">:</span> <span class=\"\
         s2\">&quot;cascade&quot;</span><span class=\"p\">}</span><span class=\"w\"\
         >\n</span>    <span class=\"p\">)</span><span class=\"w\">\n\n</span>    <span\
-        \ class=\"k\">def</span> <span class=\"nf\">_get_fastapi_routers</span><span\
+        \ class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">_get_fastapi_routers</span><span\
         \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span><span\
         \ class=\"w\">\n</span>        <span class=\"k\">if</span> <span class=\"\
         bp\">self</span><span class=\"o\">.</span><span class=\"n\">app</span> <span\
@@ -146491,21 +147287,22 @@ oca:
         p\">()</span><span class=\"w\">\n\n</span><span class=\"c1\"># create a router</span><span\
         \ class=\"w\">\n</span><span class=\"n\">demo_api_router</span> <span class=\"\
         o\">=</span> <span class=\"n\">APIRouter</span><span class=\"p\">()</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >PartnerInfo</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n</span>    <span class=\"n\">name</span><span\
-        \ class=\"p\">:</span> <span class=\"nb\">str</span><span class=\"w\">\n</span>\
-        \    <span class=\"n\">email</span><span class=\"p\">:</span> <span class=\"\
-        nb\">str</span><span class=\"w\">\n\n</span><span class=\"nd\">&#64;demo_api_router</span><span\
+        \ class=\"w\">\n\n</span><span class=\"k\">class</span><span class=\"w\">\
+        \ </span><span class=\"nc\">PartnerInfo</span><span class=\"p\">(</span><span\
+        \ class=\"n\">BaseModel</span><span class=\"p\">):</span><span class=\"w\"\
+        >\n</span>    <span class=\"n\">name</span><span class=\"p\">:</span> <span\
+        \ class=\"nb\">str</span><span class=\"w\">\n</span>    <span class=\"n\"\
+        >email</span><span class=\"p\">:</span> <span class=\"nb\">str</span><span\
+        \ class=\"w\">\n\n</span><span class=\"nd\">&#64;demo_api_router</span><span\
         \ class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span\
         \ class=\"s2\">&quot;/partners&quot;</span><span class=\"p\">,</span> <span\
         \ class=\"n\">response_model</span><span class=\"o\">=</span><span class=\"\
         nb\">list</span><span class=\"p\">[</span><span class=\"n\">PartnerInfo</span><span\
-        \ class=\"p\">])</span><span class=\"w\">\n</span><span class=\"k\">def</span>\
-        \ <span class=\"nf\">get_partners</span><span class=\"p\">(</span><span class=\"\
-        n\">env</span><span class=\"p\">:</span> <span class=\"n\">Annotated</span><span\
-        \ class=\"p\">[</span><span class=\"n\">Environment</span><span class=\"p\"\
-        >,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
+        \ class=\"p\">])</span><span class=\"w\">\n</span><span class=\"k\">def</span><span\
+        \ class=\"w\"> </span><span class=\"nf\">get_partners</span><span class=\"\
+        p\">(</span><span class=\"n\">env</span><span class=\"p\">:</span> <span class=\"\
+        n\">Annotated</span><span class=\"p\">[</span><span class=\"n\">Environment</span><span\
+        \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
         \ class=\"n\">odoo_env</span><span class=\"p\">)])</span> <span class=\"o\"\
         >-&gt;</span> <span class=\"nb\">list</span><span class=\"p\">[</span><span\
         \ class=\"n\">PartnerInfo</span><span class=\"p\">]:</span><span class=\"\
@@ -146594,23 +147391,24 @@ oca:
         \ dependencies into your\nroutes. For example, the <strong>\u2018odoo_env\u2019\
         </strong> function returns the current\nodoo environment. You can use it to\
         \ access the odoo models and the\ndatabase from your route handlers.</p>\n\
-        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span>\
-        \ <span class=\"nn\">typing</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">Annotated</span><span class=\"w\">\n\n</span><span class=\"\
-        kn\">from</span> <span class=\"nn\">odoo.api</span> <span class=\"kn\">import</span>\
-        \ <span class=\"n\">Environment</span><span class=\"w\">\n</span><span class=\"\
-        kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.dependencies</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">odoo_env</span><span\
+        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span><span\
+        \ class=\"w\"> </span><span class=\"nn\">typing</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">Annotated</span><span class=\"\
+        w\">\n\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.api</span><span class=\"w\"> </span><span class=\"kn\"\
+        >import</span> <span class=\"n\">Environment</span><span class=\"w\">\n</span><span\
+        \ class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo.addons.fastapi.dependencies</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">odoo_env</span><span\
         \ class=\"w\">\n\n</span><span class=\"nd\">&#64;demo_api_router</span><span\
         \ class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span\
         \ class=\"s2\">&quot;/partners&quot;</span><span class=\"p\">,</span> <span\
         \ class=\"n\">response_model</span><span class=\"o\">=</span><span class=\"\
         nb\">list</span><span class=\"p\">[</span><span class=\"n\">PartnerInfo</span><span\
-        \ class=\"p\">])</span><span class=\"w\">\n</span><span class=\"k\">def</span>\
-        \ <span class=\"nf\">get_partners</span><span class=\"p\">(</span><span class=\"\
-        n\">env</span><span class=\"p\">:</span> <span class=\"n\">Annotated</span><span\
-        \ class=\"p\">[</span><span class=\"n\">Environment</span><span class=\"p\"\
-        >,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
+        \ class=\"p\">])</span><span class=\"w\">\n</span><span class=\"k\">def</span><span\
+        \ class=\"w\"> </span><span class=\"nf\">get_partners</span><span class=\"\
+        p\">(</span><span class=\"n\">env</span><span class=\"p\">:</span> <span class=\"\
+        n\">Annotated</span><span class=\"p\">[</span><span class=\"n\">Environment</span><span\
+        \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
         \ class=\"n\">odoo_env</span><span class=\"p\">)])</span> <span class=\"o\"\
         >-&gt;</span> <span class=\"nb\">list</span><span class=\"p\">[</span><span\
         \ class=\"n\">PartnerInfo</span><span class=\"p\">]:</span><span class=\"\
@@ -146666,30 +147464,31 @@ oca:
         \ you will see\nthat the method depends of two parameters: <strong>\u2018\
         endpoint_id\u2019</strong> and\n<strong>\u2018env\u2019</strong>. Each of\
         \ these parameters are dependencies themselves.</p>\n<pre class=\"code python\
-        \ literal-block\">\n<span class=\"k\">def</span> <span class=\"nf\">fastapi_endpoint_id</span><span\
-        \ class=\"p\">()</span> <span class=\"o\">-&gt;</span> <span class=\"nb\"\
-        >int</span><span class=\"p\">:</span><span class=\"w\">\n    </span><span\
-        \ class=\"sd\">&quot;&quot;&quot;This method is overriden by default to make\
-        \ the fastapi.endpoint record\n    available for your endpoint method. To\
-        \ get the fastapi.endpoint record\n    in your method, you just need to add\
-        \ a dependency on the fastapi_endpoint method\n    defined below\n    &quot;&quot;&quot;</span><span\
-        \ class=\"w\">\n\n\n</span><span class=\"k\">def</span> <span class=\"nf\"\
-        >fastapi_endpoint</span><span class=\"p\">(</span><span class=\"w\">\n</span>\
-        \    <span class=\"n\">_id</span><span class=\"p\">:</span> <span class=\"\
-        n\">Annotated</span><span class=\"p\">[</span><span class=\"nb\">int</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
-        \ class=\"n\">fastapi_endpoint_id</span><span class=\"p\">)],</span><span\
-        \ class=\"w\">\n</span>    <span class=\"n\">env</span><span class=\"p\">:</span>\
-        \ <span class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"\
-        n\">Environment</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
-        \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
-        \ class=\"w\">\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
-        \ <span class=\"s2\">&quot;FastapiEndpoint&quot;</span><span class=\"p\">:</span><span\
-        \ class=\"w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;Return the\
-        \ fastapi.endpoint record&quot;&quot;&quot;</span><span class=\"w\">\n</span>\
-        \    <span class=\"k\">return</span> <span class=\"n\">env</span><span class=\"\
-        p\">[</span><span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"\
-        p\">]</span><span class=\"o\">.</span><span class=\"n\">browse</span><span\
+        \ literal-block\">\n<span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">fastapi_endpoint_id</span><span class=\"p\">()</span> <span\
+        \ class=\"o\">-&gt;</span> <span class=\"nb\">int</span><span class=\"p\"\
+        >:</span><span class=\"w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;This\
+        \ method is overriden by default to make the fastapi.endpoint record\n   \
+        \ available for your endpoint method. To get the fastapi.endpoint record\n\
+        \    in your method, you just need to add a dependency on the fastapi_endpoint\
+        \ method\n    defined below\n    &quot;&quot;&quot;</span><span class=\"w\"\
+        >\n\n\n</span><span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">fastapi_endpoint</span><span class=\"p\">(</span><span class=\"\
+        w\">\n</span>    <span class=\"n\">_id</span><span class=\"p\">:</span> <span\
+        \ class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"nb\"\
+        >int</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
+        \ class=\"p\">(</span><span class=\"n\">fastapi_endpoint_id</span><span class=\"\
+        p\">)],</span><span class=\"w\">\n</span>    <span class=\"n\">env</span><span\
+        \ class=\"p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\"\
+        >[</span><span class=\"n\">Environment</span><span class=\"p\">,</span> <span\
+        \ class=\"n\">Depends</span><span class=\"p\">(</span><span class=\"n\">odoo_env</span><span\
+        \ class=\"p\">)],</span><span class=\"w\">\n</span><span class=\"p\">)</span>\
+        \ <span class=\"o\">-&gt;</span> <span class=\"s2\">&quot;FastapiEndpoint&quot;</span><span\
+        \ class=\"p\">:</span><span class=\"w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;Return\
+        \ the fastapi.endpoint record&quot;&quot;&quot;</span><span class=\"w\">\n\
+        </span>    <span class=\"k\">return</span> <span class=\"n\">env</span><span\
+        \ class=\"p\">[</span><span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
+        \ class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">browse</span><span\
         \ class=\"p\">(</span><span class=\"n\">_id</span><span class=\"p\">)</span>\n\
         </pre>\n<p>As you can see, one of these dependencies is the\n<strong>\u2018\
         fastapi_endpoint_id\u2019</strong> dependency and has no concrete implementation.\n\
@@ -146700,19 +147499,20 @@ oca:
         \ you will see that the\n<strong>\u2018fastapi_endpoint_id\u2019</strong>\
         \ dependency is overriden by registering a\nspecific method that returns the\
         \ id of the current fastapi endpoint\nmodel instance for the original method.</p>\n\
-        <pre class=\"code python literal-block\">\n<span class=\"k\">def</span> <span\
-        \ class=\"nf\">_get_app</span><span class=\"p\">(</span><span class=\"bp\"\
-        >self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-        \ class=\"n\">FastAPI</span><span class=\"p\">:</span><span class=\"w\">\n\
-        </span>    <span class=\"n\">app</span> <span class=\"o\">=</span> <span class=\"\
-        n\">FastAPI</span><span class=\"p\">(</span><span class=\"o\">**</span><span\
-        \ class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">_prepare_fastapi_endpoint_params</span><span\
-        \ class=\"p\">())</span><span class=\"w\">\n</span>    <span class=\"k\">for</span>\
-        \ <span class=\"n\">router</span> <span class=\"ow\">in</span> <span class=\"\
-        bp\">self</span><span class=\"o\">.</span><span class=\"n\">_get_fastapi_routers</span><span\
-        \ class=\"p\">():</span><span class=\"w\">\n</span>        <span class=\"\
-        n\">app</span><span class=\"o\">.</span><span class=\"n\">include_router</span><span\
-        \ class=\"p\">(</span><span class=\"n\">prefix</span><span class=\"o\">=</span><span\
+        <pre class=\"code python literal-block\">\n<span class=\"k\">def</span><span\
+        \ class=\"w\"> </span><span class=\"nf\">_get_app</span><span class=\"p\"\
+        >(</span><span class=\"bp\">self</span><span class=\"p\">)</span> <span class=\"\
+        o\">-&gt;</span> <span class=\"n\">FastAPI</span><span class=\"p\">:</span><span\
+        \ class=\"w\">\n</span>    <span class=\"n\">app</span> <span class=\"o\"\
+        >=</span> <span class=\"n\">FastAPI</span><span class=\"p\">(</span><span\
+        \ class=\"o\">**</span><span class=\"bp\">self</span><span class=\"o\">.</span><span\
+        \ class=\"n\">_prepare_fastapi_endpoint_params</span><span class=\"p\">())</span><span\
+        \ class=\"w\">\n</span>    <span class=\"k\">for</span> <span class=\"n\"\
+        >router</span> <span class=\"ow\">in</span> <span class=\"bp\">self</span><span\
+        \ class=\"o\">.</span><span class=\"n\">_get_fastapi_routers</span><span class=\"\
+        p\">():</span><span class=\"w\">\n</span>        <span class=\"n\">app</span><span\
+        \ class=\"o\">.</span><span class=\"n\">include_router</span><span class=\"\
+        p\">(</span><span class=\"n\">prefix</span><span class=\"o\">=</span><span\
         \ class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">root_path</span><span\
         \ class=\"p\">,</span> <span class=\"n\">router</span><span class=\"o\">=</span><span\
         \ class=\"n\">router</span><span class=\"p\">)</span><span class=\"w\">\n\
@@ -146736,36 +147536,38 @@ oca:
         \ depends on an abstract\ndependency.</p>\n<p>When you define a route handler,\
         \ you can inject the\n<strong>\u2018authenticated_partner\u2019</strong> dependency\
         \ as a parameter of your route\nhandler.</p>\n<pre class=\"code python literal-block\"\
-        >\n<span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.base.models.res_partner</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">Partner</span><span class=\"\
+        >\n<span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"\
+        nn\">odoo.addons.base.models.res_partner</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">Partner</span><span class=\"\
         w\">\n\n\n</span><span class=\"nd\">&#64;demo_api_router</span><span class=\"\
         o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span class=\"\
         s2\">&quot;/partners&quot;</span><span class=\"p\">,</span> <span class=\"\
         n\">response_model</span><span class=\"o\">=</span><span class=\"nb\">list</span><span\
         \ class=\"p\">[</span><span class=\"n\">PartnerInfo</span><span class=\"p\"\
-        >])</span><span class=\"w\">\n</span><span class=\"k\">def</span> <span class=\"\
-        nf\">get_partners</span><span class=\"p\">(</span><span class=\"w\">\n</span>\
-        \    <span class=\"n\">env</span><span class=\"p\">:</span> <span class=\"\
-        n\">Annotated</span><span class=\"p\">[</span><span class=\"n\">Environment</span><span\
+        >])</span><span class=\"w\">\n</span><span class=\"k\">def</span><span class=\"\
+        w\"> </span><span class=\"nf\">get_partners</span><span class=\"p\">(</span><span\
+        \ class=\"w\">\n</span>    <span class=\"n\">env</span><span class=\"p\">:</span>\
+        \ <span class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"\
+        n\">Environment</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
+        \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span>\
+        \ <span class=\"n\">partner</span><span class=\"p\">:</span> <span class=\"\
+        n\">Annotated</span><span class=\"p\">[</span><span class=\"n\">Partner</span><span\
         \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">)],</span> <span class=\"n\"\
-        >partner</span><span class=\"p\">:</span> <span class=\"n\">Annotated</span><span\
-        \ class=\"p\">[</span><span class=\"n\">Partner</span><span class=\"p\">,</span>\
-        \ <span class=\"n\">Depends</span><span class=\"p\">(</span><span class=\"\
-        n\">authenticated_partner</span><span class=\"p\">)]</span><span class=\"\
-        w\">\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-        \ class=\"nb\">list</span><span class=\"p\">[</span><span class=\"n\">PartnerInfo</span><span\
-        \ class=\"p\">]:</span><span class=\"w\">\n</span>    <span class=\"k\">return</span>\
-        \ <span class=\"p\">[</span><span class=\"w\">\n</span>        <span class=\"\
-        n\">PartnerInfo</span><span class=\"p\">(</span><span class=\"n\">name</span><span\
-        \ class=\"o\">=</span><span class=\"n\">partner</span><span class=\"o\">.</span><span\
-        \ class=\"n\">name</span><span class=\"p\">,</span> <span class=\"n\">email</span><span\
-        \ class=\"o\">=</span><span class=\"n\">partner</span><span class=\"o\">.</span><span\
-        \ class=\"n\">email</span><span class=\"p\">)</span><span class=\"w\">\n</span>\
-        \        <span class=\"k\">for</span> <span class=\"n\">partner</span> <span\
-        \ class=\"ow\">in</span> <span class=\"n\">env</span><span class=\"p\">[</span><span\
-        \ class=\"s2\">&quot;res.partner&quot;</span><span class=\"p\">]</span><span\
-        \ class=\"o\">.</span><span class=\"n\">search</span><span class=\"p\">([])</span><span\
+        \ class=\"n\">authenticated_partner</span><span class=\"p\">)]</span><span\
+        \ class=\"w\">\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"nb\">list</span><span class=\"p\">[</span><span class=\"n\"\
+        >PartnerInfo</span><span class=\"p\">]:</span><span class=\"w\">\n</span>\
+        \    <span class=\"k\">return</span> <span class=\"p\">[</span><span class=\"\
+        w\">\n</span>        <span class=\"n\">PartnerInfo</span><span class=\"p\"\
+        >(</span><span class=\"n\">name</span><span class=\"o\">=</span><span class=\"\
+        n\">partner</span><span class=\"o\">.</span><span class=\"n\">name</span><span\
+        \ class=\"p\">,</span> <span class=\"n\">email</span><span class=\"o\">=</span><span\
+        \ class=\"n\">partner</span><span class=\"o\">.</span><span class=\"n\">email</span><span\
+        \ class=\"p\">)</span><span class=\"w\">\n</span>        <span class=\"k\"\
+        >for</span> <span class=\"n\">partner</span> <span class=\"ow\">in</span>\
+        \ <span class=\"n\">env</span><span class=\"p\">[</span><span class=\"s2\"\
+        >&quot;res.partner&quot;</span><span class=\"p\">]</span><span class=\"o\"\
+        >.</span><span class=\"n\">search</span><span class=\"p\">([])</span><span\
         \ class=\"w\">\n</span>    <span class=\"p\">]</span>\n</pre>\n<p>At this\
         \ stage, your handler is not tied to a specific authentication\nmechanism\
         \ but only expects to get a partner as a dependency. Depending\non your needs,\
@@ -146775,8 +147577,8 @@ oca:
         \ in the\n<strong>\u2018odoo.addons.fastapi.dependencies\u2019</strong> module\
         \ and relies on\nfunctionalities provided by the <strong>\u2018fastapi.security\u2019\
         </strong> module.</p>\n<pre class=\"code python literal-block\">\n<span class=\"\
-        k\">def</span> <span class=\"nf\">authenticated_partner</span><span class=\"\
-        p\">(</span><span class=\"w\">\n</span>    <span class=\"n\">env</span><span\
+        k\">def</span><span class=\"w\"> </span><span class=\"nf\">authenticated_partner</span><span\
+        \ class=\"p\">(</span><span class=\"w\">\n</span>    <span class=\"n\">env</span><span\
         \ class=\"p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\"\
         >[</span><span class=\"n\">Environment</span><span class=\"p\">,</span> <span\
         \ class=\"n\">Depends</span><span class=\"p\">(</span><span class=\"n\">odoo_env</span><span\
@@ -146843,11 +147645,12 @@ oca:
         \ a new fastapi endpoint. Let\u2019s say that we want\nto allow the authentication\
         \ by using an api key or via basic auth. Since\nbasic auth is already implemented,\
         \ we will only implement the api key\nauthentication mechanism.</p>\n<pre\
-        \ class=\"code python literal-block\">\n<span class=\"kn\">from</span> <span\
-        \ class=\"nn\">fastapi.security</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">APIKeyHeader</span><span class=\"w\">\n\n</span><span class=\"\
-        k\">def</span> <span class=\"nf\">api_key_based_authenticated_partner_impl</span><span\
-        \ class=\"p\">(</span><span class=\"w\">\n</span>    <span class=\"n\">api_key</span><span\
+        \ class=\"code python literal-block\">\n<span class=\"kn\">from</span><span\
+        \ class=\"w\"> </span><span class=\"nn\">fastapi.security</span><span class=\"\
+        w\"> </span><span class=\"kn\">import</span> <span class=\"n\">APIKeyHeader</span><span\
+        \ class=\"w\">\n\n</span><span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">api_key_based_authenticated_partner_impl</span><span class=\"\
+        p\">(</span><span class=\"w\">\n</span>    <span class=\"n\">api_key</span><span\
         \ class=\"p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\"\
         >[</span><span class=\"nb\">str</span><span class=\"p\">,</span> <span class=\"\
         n\">Depends</span><span class=\"p\">(</span><span class=\"w\">\n</span>  \
@@ -146891,10 +147694,11 @@ oca:
         <p>Now that we have an implementation for our two authentication\nmechanisms,\
         \ we can allows the user to select one of these authentication\nmechanisms\
         \ by adding a selection field on the fastapi endpoint model.</p>\n<pre class=\"\
-        code python literal-block\">\n<span class=\"kn\">from</span> <span class=\"\
-        nn\">odoo</span> <span class=\"kn\">import</span> <span class=\"n\">fields</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">models</span><span class=\"w\">\n\
-        \n</span><span class=\"k\">class</span> <span class=\"nc\">FastapiEndpoint</span><span\
+        code python literal-block\">\n<span class=\"kn\">from</span><span class=\"\
+        w\"> </span><span class=\"nn\">odoo</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">fields</span><span class=\"\
+        p\">,</span> <span class=\"n\">models</span><span class=\"w\">\n\n</span><span\
+        \ class=\"k\">class</span><span class=\"w\"> </span><span class=\"nc\">FastapiEndpoint</span><span\
         \ class=\"p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
         \ class=\"n\">Model</span><span class=\"p\">):</span><span class=\"w\">\n\n\
         </span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span> <span\
@@ -146928,17 +147732,18 @@ oca:
         \ we can use the dependency override mechanism to\nprovide the right implementation\
         \ of the <strong>\u2018authenticated_partner\u2019</strong>\ndependency when\
         \ the app is instantiated.</p>\n<pre class=\"code python literal-block\">\n\
-        <span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.dependencies</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">authenticated_partner</span><span\
-        \ class=\"w\">\n</span><span class=\"k\">class</span> <span class=\"nc\">FastapiEndpoint</span><span\
-        \ class=\"p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
-        \ class=\"n\">Model</span><span class=\"p\">):</span><span class=\"w\">\n\n\
-        </span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span> <span\
-        \ class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"w\">\n\n</span>\
-        \    <span class=\"n\">app</span><span class=\"p\">:</span> <span class=\"\
-        nb\">str</span> <span class=\"o\">=</span> <span class=\"n\">fields</span><span\
-        \ class=\"o\">.</span><span class=\"n\">Selection</span><span class=\"p\"\
-        >(</span><span class=\"w\">\n</span>      <span class=\"n\">selection_add</span><span\
+        <span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\"\
+        >odoo.addons.fastapi.dependencies</span><span class=\"w\"> </span><span class=\"\
+        kn\">import</span> <span class=\"n\">authenticated_partner</span><span class=\"\
+        w\">\n</span><span class=\"k\">class</span><span class=\"w\"> </span><span\
+        \ class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span class=\"\
+        n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
+        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
+        \ class=\"w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\"\
+        >:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
+        n\">fields</span><span class=\"o\">.</span><span class=\"n\">Selection</span><span\
+        \ class=\"p\">(</span><span class=\"w\">\n</span>      <span class=\"n\">selection_add</span><span\
         \ class=\"o\">=</span><span class=\"p\">[(</span><span class=\"s2\">&quot;demo&quot;</span><span\
         \ class=\"p\">,</span> <span class=\"s2\">&quot;Demo Endpoint&quot;</span><span\
         \ class=\"p\">)],</span> <span class=\"n\">ondelete</span><span class=\"o\"\
@@ -146957,18 +147762,18 @@ oca:
         n\">string</span><span class=\"o\">=</span><span class=\"s2\">&quot;Authenciation\
         \ method&quot;</span><span class=\"p\">,</span><span class=\"w\">\n</span>\
         \    <span class=\"p\">)</span><span class=\"w\">\n\n</span>  <span class=\"\
-        k\">def</span> <span class=\"nf\">_get_app</span><span class=\"p\">(</span><span\
-        \ class=\"bp\">self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
-        \ <span class=\"n\">FastAPI</span><span class=\"p\">:</span><span class=\"\
-        w\">\n</span>      <span class=\"n\">app</span> <span class=\"o\">=</span>\
-        \ <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"\
-        o\">.</span><span class=\"n\">_get_app</span><span class=\"p\">()</span><span\
-        \ class=\"w\">\n</span>      <span class=\"k\">if</span> <span class=\"bp\"\
-        >self</span><span class=\"o\">.</span><span class=\"n\">app</span> <span class=\"\
-        o\">==</span> <span class=\"s2\">&quot;demo&quot;</span><span class=\"p\"\
-        >:</span><span class=\"w\">\n</span>          <span class=\"c1\"># Here we\
-        \ add the overrides to the authenticated_partner_impl method</span><span class=\"\
-        w\">\n</span>          <span class=\"c1\"># according to the authentication\
+        k\">def</span><span class=\"w\"> </span><span class=\"nf\">_get_app</span><span\
+        \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">)</span>\
+        \ <span class=\"o\">-&gt;</span> <span class=\"n\">FastAPI</span><span class=\"\
+        p\">:</span><span class=\"w\">\n</span>      <span class=\"n\">app</span>\
+        \ <span class=\"o\">=</span> <span class=\"nb\">super</span><span class=\"\
+        p\">()</span><span class=\"o\">.</span><span class=\"n\">_get_app</span><span\
+        \ class=\"p\">()</span><span class=\"w\">\n</span>      <span class=\"k\"\
+        >if</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"\
+        n\">app</span> <span class=\"o\">==</span> <span class=\"s2\">&quot;demo&quot;</span><span\
+        \ class=\"p\">:</span><span class=\"w\">\n</span>          <span class=\"\
+        c1\"># Here we add the overrides to the authenticated_partner_impl method</span><span\
+        \ class=\"w\">\n</span>          <span class=\"c1\"># according to the authentication\
         \ method configured on the demo app</span><span class=\"w\">\n</span>    \
         \      <span class=\"k\">if</span> <span class=\"bp\">self</span><span class=\"\
         o\">.</span><span class=\"n\">demo_auth_method</span> <span class=\"o\">==</span>\
@@ -147007,71 +147812,73 @@ oca:
         \ can use the\n<strong>\u2018odoo.addons.fastapi.dependencies.fastapi_endpoint\u2019\
         </strong> dependency\nmethod to retrieve the \u2018fastapi.endpoint\u2019\
         \ record associated to the\ncurrent request.</p>\n<pre class=\"code python\
-        \ literal-block\">\n<span class=\"kn\">from</span> <span class=\"nn\">pydantic</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">Field</span><span class=\"w\">\n\
-        </span><span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.dependencies</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">fastapi_endpoint</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >EndpointAppInfo</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n</span>  <span class=\"nb\">id</span><span\
+        \ literal-block\">\n<span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">pydantic</span><span class=\"w\"> </span><span class=\"kn\"\
+        >import</span> <span class=\"n\">BaseModel</span><span class=\"p\">,</span>\
+        \ <span class=\"n\">Field</span><span class=\"w\">\n</span><span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo.addons.fastapi.dependencies</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">fastapi_endpoint</span><span\
+        \ class=\"w\">\n\n</span><span class=\"k\">class</span><span class=\"w\">\
+        \ </span><span class=\"nc\">EndpointAppInfo</span><span class=\"p\">(</span><span\
+        \ class=\"n\">BaseModel</span><span class=\"p\">):</span><span class=\"w\"\
+        >\n</span>  <span class=\"nb\">id</span><span class=\"p\">:</span> <span class=\"\
+        nb\">str</span><span class=\"w\">\n</span>  <span class=\"n\">name</span><span\
         \ class=\"p\">:</span> <span class=\"nb\">str</span><span class=\"w\">\n</span>\
-        \  <span class=\"n\">name</span><span class=\"p\">:</span> <span class=\"\
-        nb\">str</span><span class=\"w\">\n</span>  <span class=\"n\">app</span><span\
+        \  <span class=\"n\">app</span><span class=\"p\">:</span> <span class=\"nb\"\
+        >str</span><span class=\"w\">\n</span>  <span class=\"n\">auth_method</span><span\
+        \ class=\"p\">:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span>\
+        \ <span class=\"n\">Field</span><span class=\"p\">(</span><span class=\"n\"\
+        >alias</span><span class=\"o\">=</span><span class=\"s2\">&quot;demo_auth_method&quot;</span><span\
+        \ class=\"p\">)</span><span class=\"w\">\n</span>  <span class=\"n\">root_path</span><span\
         \ class=\"p\">:</span> <span class=\"nb\">str</span><span class=\"w\">\n</span>\
-        \  <span class=\"n\">auth_method</span><span class=\"p\">:</span> <span class=\"\
-        nb\">str</span> <span class=\"o\">=</span> <span class=\"n\">Field</span><span\
-        \ class=\"p\">(</span><span class=\"n\">alias</span><span class=\"o\">=</span><span\
-        \ class=\"s2\">&quot;demo_auth_method&quot;</span><span class=\"p\">)</span><span\
-        \ class=\"w\">\n</span>  <span class=\"n\">root_path</span><span class=\"\
-        p\">:</span> <span class=\"nb\">str</span><span class=\"w\">\n</span>  <span\
-        \ class=\"n\">model_config</span> <span class=\"o\">=</span> <span class=\"\
-        n\">ConfigDict</span><span class=\"p\">(</span><span class=\"n\">from_attributes</span><span\
-        \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">)</span><span\
-        \ class=\"w\">\n\n\n</span>  <span class=\"nd\">&#64;demo_api_router</span><span\
-        \ class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span\
-        \ class=\"w\">\n</span>      <span class=\"s2\">&quot;/endpoint_app_info&quot;</span><span\
-        \ class=\"p\">,</span><span class=\"w\">\n</span>      <span class=\"n\">response_model</span><span\
-        \ class=\"o\">=</span><span class=\"n\">EndpointAppInfo</span><span class=\"\
-        p\">,</span><span class=\"w\">\n</span>      <span class=\"n\">dependencies</span><span\
-        \ class=\"o\">=</span><span class=\"p\">[</span><span class=\"n\">Depends</span><span\
+        \  <span class=\"n\">model_config</span> <span class=\"o\">=</span> <span\
+        \ class=\"n\">ConfigDict</span><span class=\"p\">(</span><span class=\"n\"\
+        >from_attributes</span><span class=\"o\">=</span><span class=\"kc\">True</span><span\
+        \ class=\"p\">)</span><span class=\"w\">\n\n\n</span>  <span class=\"nd\"\
+        >&#64;demo_api_router</span><span class=\"o\">.</span><span class=\"n\">get</span><span\
+        \ class=\"p\">(</span><span class=\"w\">\n</span>      <span class=\"s2\"\
+        >&quot;/endpoint_app_info&quot;</span><span class=\"p\">,</span><span class=\"\
+        w\">\n</span>      <span class=\"n\">response_model</span><span class=\"o\"\
+        >=</span><span class=\"n\">EndpointAppInfo</span><span class=\"p\">,</span><span\
+        \ class=\"w\">\n</span>      <span class=\"n\">dependencies</span><span class=\"\
+        o\">=</span><span class=\"p\">[</span><span class=\"n\">Depends</span><span\
         \ class=\"p\">(</span><span class=\"n\">authenticated_partner</span><span\
         \ class=\"p\">)],</span><span class=\"w\">\n</span>  <span class=\"p\">)</span><span\
         \ class=\"w\">\n</span>  <span class=\"k\">async</span> <span class=\"k\"\
-        >def</span> <span class=\"nf\">endpoint_app_info</span><span class=\"p\">(</span><span\
-        \ class=\"w\">\n</span>      <span class=\"n\">endpoint</span><span class=\"\
-        p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\">[</span><span\
-        \ class=\"n\">FastapiEndpoint</span><span class=\"p\">,</span> <span class=\"\
-        n\">Depends</span><span class=\"p\">(</span><span class=\"n\">fastapi_endpoint</span><span\
-        \ class=\"p\">)],</span><span class=\"w\">\n</span>  <span class=\"p\">)</span>\
-        \ <span class=\"o\">-&gt;</span> <span class=\"n\">EndpointAppInfo</span><span\
-        \ class=\"p\">:</span><span class=\"w\">\n      </span><span class=\"sd\"\
-        >&quot;&quot;&quot;Returns the current endpoint configuration&quot;&quot;&quot;</span><span\
-        \ class=\"w\">\n</span>      <span class=\"c1\"># This method show you how\
-        \ to get access to current endpoint configuration</span><span class=\"w\"\
-        >\n</span>      <span class=\"c1\"># It also show you how you can specify\
-        \ a dependency to force the security</span><span class=\"w\">\n</span>   \
-        \   <span class=\"c1\"># even if the method doesn't require the authenticated\
-        \ partner as parameter</span><span class=\"w\">\n</span>      <span class=\"\
-        k\">return</span> <span class=\"n\">EndpointAppInfo</span><span class=\"o\"\
-        >.</span><span class=\"n\">model_validate</span><span class=\"p\">(</span><span\
-        \ class=\"n\">endpoint</span><span class=\"p\">)</span>\n</pre>\n<p>Some of\
-        \ the configuration fields of the fastapi endpoint could impact\nthe way the\
-        \ app is instantiated. For example, in the previous section,\nwe have seen\
-        \ that the authentication method configured on the\n\u2018fastapi.endpoint\u2019\
+        >def</span><span class=\"w\"> </span><span class=\"nf\">endpoint_app_info</span><span\
+        \ class=\"p\">(</span><span class=\"w\">\n</span>      <span class=\"n\">endpoint</span><span\
+        \ class=\"p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\"\
+        >[</span><span class=\"n\">FastapiEndpoint</span><span class=\"p\">,</span>\
+        \ <span class=\"n\">Depends</span><span class=\"p\">(</span><span class=\"\
+        n\">fastapi_endpoint</span><span class=\"p\">)],</span><span class=\"w\">\n\
+        </span>  <span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span class=\"\
+        n\">EndpointAppInfo</span><span class=\"p\">:</span><span class=\"w\">\n \
+        \     </span><span class=\"sd\">&quot;&quot;&quot;Returns the current endpoint\
+        \ configuration&quot;&quot;&quot;</span><span class=\"w\">\n</span>      <span\
+        \ class=\"c1\"># This method show you how to get access to current endpoint\
+        \ configuration</span><span class=\"w\">\n</span>      <span class=\"c1\"\
+        ># It also show you how you can specify a dependency to force the security</span><span\
+        \ class=\"w\">\n</span>      <span class=\"c1\"># even if the method doesn't\
+        \ require the authenticated partner as parameter</span><span class=\"w\">\n\
+        </span>      <span class=\"k\">return</span> <span class=\"n\">EndpointAppInfo</span><span\
+        \ class=\"o\">.</span><span class=\"n\">model_validate</span><span class=\"\
+        p\">(</span><span class=\"n\">endpoint</span><span class=\"p\">)</span>\n\
+        </pre>\n<p>Some of the configuration fields of the fastapi endpoint could\
+        \ impact\nthe way the app is instantiated. For example, in the previous section,\n\
+        we have seen that the authentication method configured on the\n\u2018fastapi.endpoint\u2019\
         \ record is used in order to provide the right\nimplementation of the <strong>\u2018\
         authenticated_partner\u2019</strong> when the app is\ninstantiated. To ensure\
         \ that the app is re-instantiated when an element\nof the configuration used\
         \ in the instantiation of the app is modified,\nyou must override the <strong>\u2018\
         _fastapi_app_fields\u2019</strong> method to add the name\nof the fields that\
         \ impact the instantiation of the app into the returned\nlist.</p>\n<pre class=\"\
-        code python literal-block\">\n<span class=\"k\">class</span> <span class=\"\
-        nc\">FastapiEndpoint</span><span class=\"p\">(</span><span class=\"n\">models</span><span\
-        \ class=\"o\">.</span><span class=\"n\">Model</span><span class=\"p\">):</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"n\">_inherit</span> <span class=\"\
-        o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"\
-        w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\">:</span>\
-        \ <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
+        code python literal-block\">\n<span class=\"k\">class</span><span class=\"\
+        w\"> </span><span class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span\
+        \ class=\"n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
+        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
+        \ class=\"w\">\n\n</span>    <span class=\"n\">app</span><span class=\"p\"\
+        >:</span> <span class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"\
         n\">fields</span><span class=\"o\">.</span><span class=\"n\">Selection</span><span\
         \ class=\"p\">(</span><span class=\"w\">\n</span>      <span class=\"n\">selection_add</span><span\
         \ class=\"o\">=</span><span class=\"p\">[(</span><span class=\"s2\">&quot;demo&quot;</span><span\
@@ -147093,24 +147900,25 @@ oca:
         \ method&quot;</span><span class=\"p\">,</span><span class=\"w\">\n</span>\
         \    <span class=\"p\">)</span><span class=\"w\">\n\n</span>    <span class=\"\
         nd\">&#64;api</span><span class=\"o\">.</span><span class=\"n\">model</span><span\
-        \ class=\"w\">\n</span>    <span class=\"k\">def</span> <span class=\"nf\"\
-        >_fastapi_app_fields</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
-        \ class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span class=\"n\">List</span><span\
-        \ class=\"p\">[</span><span class=\"nb\">str</span><span class=\"p\">]:</span><span\
-        \ class=\"w\">\n</span>        <span class=\"n\">fields</span> <span class=\"\
-        o\">=</span> <span class=\"nb\">super</span><span class=\"p\">()</span><span\
-        \ class=\"o\">.</span><span class=\"n\">_fastapi_app_fields</span><span class=\"\
-        p\">()</span><span class=\"w\">\n</span>        <span class=\"n\">fields</span><span\
-        \ class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span\
-        \ class=\"s2\">&quot;demo_auth_method&quot;</span><span class=\"p\">)</span><span\
-        \ class=\"w\">\n</span>        <span class=\"k\">return</span> <span class=\"\
-        n\">fields</span>\n</pre>\n</div>\n<div class=\"section\" id=\"dealing-with-languages\"\
-        >\n<h2><a class=\"toc-backref\" href=\"#toc-entry-7\">Dealing with languages</a></h2>\n\
-        <p>The fastapi addon parses the Accept-Language header of the request to\n\
-        determine the language to use. This parsing is done by respecting the\n<a\
-        \ class=\"reference external\" href=\"https://datatracker.ietf.org/doc/html/rfc7231#section-5.3.5\"\
-        >RFC 7231\nspecification</a>.\nThat means that the language is determined\
-        \ by the first language found\nin the header that is supported by odoo (with\
+        \ class=\"w\">\n</span>    <span class=\"k\">def</span><span class=\"w\">\
+        \ </span><span class=\"nf\">_fastapi_app_fields</span><span class=\"p\">(</span><span\
+        \ class=\"bp\">self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"n\">List</span><span class=\"p\">[</span><span class=\"nb\"\
+        >str</span><span class=\"p\">]:</span><span class=\"w\">\n</span>        <span\
+        \ class=\"n\">fields</span> <span class=\"o\">=</span> <span class=\"nb\"\
+        >super</span><span class=\"p\">()</span><span class=\"o\">.</span><span class=\"\
+        n\">_fastapi_app_fields</span><span class=\"p\">()</span><span class=\"w\"\
+        >\n</span>        <span class=\"n\">fields</span><span class=\"o\">.</span><span\
+        \ class=\"n\">append</span><span class=\"p\">(</span><span class=\"s2\">&quot;demo_auth_method&quot;</span><span\
+        \ class=\"p\">)</span><span class=\"w\">\n</span>        <span class=\"k\"\
+        >return</span> <span class=\"n\">fields</span>\n</pre>\n</div>\n<div class=\"\
+        section\" id=\"dealing-with-languages\">\n<h2><a class=\"toc-backref\" href=\"\
+        #toc-entry-7\">Dealing with languages</a></h2>\n<p>The fastapi addon parses\
+        \ the Accept-Language header of the request to\ndetermine the language to\
+        \ use. This parsing is done by respecting the\n<a class=\"reference external\"\
+        \ href=\"https://datatracker.ietf.org/doc/html/rfc7231#section-5.3.5\">RFC\
+        \ 7231\nspecification</a>.\nThat means that the language is determined by\
+        \ the first language found\nin the header that is supported by odoo (with\
         \ care of the priority\norder). If no language is found in the header, the\
         \ odoo default language\nis used. This language is then used to initialize\
         \ the Odoo\u2019s environment\ncontext used by the route handlers. All this\
@@ -147155,30 +147963,33 @@ oca:
         \ of the route handler <strong>\u2018/demo/echo\u2019</strong>,\nthe only\
         \ thing you have to do is to inherit from the model where the\nimplementation\
         \ is defined and override the method <strong>\u2018echo\u2019</strong>.</p>\n\
-        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span>\
-        \ <span class=\"nn\">pydantic</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">BaseModel</span><span class=\"w\">\n</span><span class=\"kn\"\
-        >from</span> <span class=\"nn\">fastapi</span> <span class=\"kn\">import</span>\
-        \ <span class=\"n\">Depends</span><span class=\"p\">,</span> <span class=\"\
-        n\">APIRouter</span><span class=\"w\">\n</span><span class=\"kn\">from</span>\
-        \ <span class=\"nn\">odoo</span> <span class=\"kn\">import</span> <span class=\"\
-        n\">models</span><span class=\"w\">\n</span><span class=\"kn\">from</span>\
-        \ <span class=\"nn\">odoo.addons.fastapi.dependencies</span> <span class=\"\
-        kn\">import</span> <span class=\"n\">odoo_env</span><span class=\"w\">\n\n\
-        </span><span class=\"k\">class</span> <span class=\"nc\">FastapiEndpoint</span><span\
-        \ class=\"p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
-        \ class=\"n\">Model</span><span class=\"p\">):</span><span class=\"w\">\n\n\
-        </span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span> <span\
-        \ class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"w\">\n\n</span>\
-        \    <span class=\"k\">def</span> <span class=\"nf\">_get_fastapi_routers</span><span\
-        \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">)</span>\
-        \ <span class=\"o\">-&gt;</span> <span class=\"n\">List</span><span class=\"\
-        p\">[</span><span class=\"n\">APIRouter</span><span class=\"p\">]:</span><span\
-        \ class=\"w\">\n</span>        <span class=\"n\">routers</span> <span class=\"\
-        o\">=</span> <span class=\"nb\">super</span><span class=\"p\">()</span><span\
-        \ class=\"o\">.</span><span class=\"n\">_get_fastapi_routers</span><span class=\"\
-        p\">()</span><span class=\"w\">\n</span>        <span class=\"n\">routers</span><span\
-        \ class=\"o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span\
+        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span><span\
+        \ class=\"w\"> </span><span class=\"nn\">pydantic</span><span class=\"w\"\
+        > </span><span class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span\
+        \ class=\"w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">fastapi</span><span class=\"w\"> </span><span class=\"kn\"\
+        >import</span> <span class=\"n\">Depends</span><span class=\"p\">,</span>\
+        \ <span class=\"n\">APIRouter</span><span class=\"w\">\n</span><span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">models</span><span\
+        \ class=\"w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.dependencies</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">odoo_env</span><span class=\"\
+        w\">\n\n</span><span class=\"k\">class</span><span class=\"w\"> </span><span\
+        \ class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span class=\"\
+        n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
+        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
+        \ class=\"w\">\n\n</span>    <span class=\"k\">def</span><span class=\"w\"\
+        > </span><span class=\"nf\">_get_fastapi_routers</span><span class=\"p\">(</span><span\
+        \ class=\"bp\">self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"n\">List</span><span class=\"p\">[</span><span class=\"n\"\
+        >APIRouter</span><span class=\"p\">]:</span><span class=\"w\">\n</span>  \
+        \      <span class=\"n\">routers</span> <span class=\"o\">=</span> <span class=\"\
+        nb\">super</span><span class=\"p\">()</span><span class=\"o\">.</span><span\
+        \ class=\"n\">_get_fastapi_routers</span><span class=\"p\">()</span><span\
+        \ class=\"w\">\n</span>        <span class=\"n\">routers</span><span class=\"\
+        o\">.</span><span class=\"n\">append</span><span class=\"p\">(</span><span\
         \ class=\"n\">demo_api_router</span><span class=\"p\">)</span><span class=\"\
         w\">\n</span>        <span class=\"k\">return</span> <span class=\"n\">routers</span><span\
         \ class=\"w\">\n\n</span><span class=\"n\">demo_api_router</span> <span class=\"\
@@ -147192,16 +148003,16 @@ oca:
         \ class=\"o\">=</span><span class=\"p\">[</span><span class=\"n\">Depends</span><span\
         \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
         \ class=\"w\">\n</span><span class=\"p\">)</span><span class=\"w\">\n</span><span\
-        \ class=\"k\">async</span> <span class=\"k\">def</span> <span class=\"nf\"\
-        >echo</span><span class=\"p\">(</span><span class=\"w\">\n</span>    <span\
-        \ class=\"n\">message</span><span class=\"p\">:</span> <span class=\"nb\"\
-        >str</span><span class=\"p\">,</span><span class=\"w\">\n</span>    <span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">:</span> <span class=\"n\"\
-        >Annotated</span><span class=\"p\">[</span><span class=\"n\">Environment</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">)],</span><span class=\"w\"\
-        >\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-        \ class=\"n\">EchoResponse</span><span class=\"p\">:</span><span class=\"\
+        \ class=\"k\">async</span> <span class=\"k\">def</span><span class=\"w\">\
+        \ </span><span class=\"nf\">echo</span><span class=\"p\">(</span><span class=\"\
+        w\">\n</span>    <span class=\"n\">message</span><span class=\"p\">:</span>\
+        \ <span class=\"nb\">str</span><span class=\"p\">,</span><span class=\"w\"\
+        >\n</span>    <span class=\"n\">odoo_env</span><span class=\"p\">:</span>\
+        \ <span class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"\
+        n\">Environment</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
+        \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
+        \ class=\"w\">\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"n\">EchoResponse</span><span class=\"p\">:</span><span class=\"\
         w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;Echo the message&quot;&quot;&quot;</span><span\
         \ class=\"w\">\n</span>    <span class=\"k\">return</span> <span class=\"\
         n\">EchoResponse</span><span class=\"p\">(</span><span class=\"n\">message</span><span\
@@ -147209,30 +148020,31 @@ oca:
         \ class=\"s2\">&quot;demo.fastapi.endpoint&quot;</span><span class=\"p\">]</span><span\
         \ class=\"o\">.</span><span class=\"n\">echo</span><span class=\"p\">(</span><span\
         \ class=\"n\">message</span><span class=\"p\">))</span><span class=\"w\">\n\
-        \n</span><span class=\"k\">class</span> <span class=\"nc\">EchoResponse</span><span\
-        \ class=\"p\">(</span><span class=\"n\">BaseModel</span><span class=\"p\"\
-        >):</span><span class=\"w\">\n</span>    <span class=\"n\">message</span><span\
+        \n</span><span class=\"k\">class</span><span class=\"w\"> </span><span class=\"\
+        nc\">EchoResponse</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n</span>    <span class=\"n\">message</span><span\
         \ class=\"p\">:</span> <span class=\"nb\">str</span><span class=\"w\">\n\n\
-        </span><span class=\"k\">class</span> <span class=\"nc\">DemoEndpoint</span><span\
-        \ class=\"p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
-        \ class=\"n\">AbstractModel</span><span class=\"p\">):</span><span class=\"\
-        w\">\n\n</span>    <span class=\"n\">_name</span> <span class=\"o\">=</span>\
-        \ <span class=\"s2\">&quot;demo.fastapi.endpoint&quot;</span><span class=\"\
-        w\">\n</span>    <span class=\"n\">_description</span> <span class=\"o\">=</span>\
-        \ <span class=\"s2\">&quot;Demo Endpoint&quot;</span><span class=\"w\">\n\n\
-        </span>    <span class=\"k\">def</span> <span class=\"nf\">echo</span><span\
-        \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span>\
-        \ <span class=\"n\">message</span><span class=\"p\">:</span> <span class=\"\
-        nb\">str</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-        \ class=\"nb\">str</span><span class=\"p\">:</span><span class=\"w\">\n</span>\
-        \        <span class=\"k\">return</span> <span class=\"n\">message</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >DemoEndpointInherit</span><span class=\"p\">(</span><span class=\"n\">models</span><span\
+        </span><span class=\"k\">class</span><span class=\"w\"> </span><span class=\"\
+        nc\">DemoEndpoint</span><span class=\"p\">(</span><span class=\"n\">models</span><span\
         \ class=\"o\">.</span><span class=\"n\">AbstractModel</span><span class=\"\
-        p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\">_inherit</span>\
+        p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\">_name</span>\
         \ <span class=\"o\">=</span> <span class=\"s2\">&quot;demo.fastapi.endpoint&quot;</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"k\">def</span> <span class=\"nf\"\
-        >echo</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
+        \ class=\"w\">\n</span>    <span class=\"n\">_description</span> <span class=\"\
+        o\">=</span> <span class=\"s2\">&quot;Demo Endpoint&quot;</span><span class=\"\
+        w\">\n\n</span>    <span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">echo</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
+        \ class=\"p\">,</span> <span class=\"n\">message</span><span class=\"p\">:</span>\
+        \ <span class=\"nb\">str</span><span class=\"p\">)</span> <span class=\"o\"\
+        >-&gt;</span> <span class=\"nb\">str</span><span class=\"p\">:</span><span\
+        \ class=\"w\">\n</span>        <span class=\"k\">return</span> <span class=\"\
+        n\">message</span><span class=\"w\">\n\n</span><span class=\"k\">class</span><span\
+        \ class=\"w\"> </span><span class=\"nc\">DemoEndpointInherit</span><span class=\"\
+        p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
+        \ class=\"n\">AbstractModel</span><span class=\"p\">):</span><span class=\"\
+        w\">\n\n</span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span>\
+        \ <span class=\"s2\">&quot;demo.fastapi.endpoint&quot;</span><span class=\"\
+        w\">\n\n</span>    <span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">echo</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
         \ class=\"p\">,</span> <span class=\"n\">message</span><span class=\"p\">:</span>\
         \ <span class=\"nb\">str</span><span class=\"p\">)</span> <span class=\"o\"\
         >-&gt;</span> <span class=\"nb\">str</span><span class=\"p\">:</span><span\
@@ -147263,8 +148075,9 @@ oca:
         \ <strong>\u2018/demo/echo2\u2019</strong>.\nYou could be tempted to add this\
         \ new route handler in your new addons by\nimporting the router of the existing\
         \ app and adding the new route\nhandler to it.</p>\n<pre class=\"code python\
-        \ literal-block\">\n<span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.models.fastapi_endpoint_demo</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">demo_api_router</span><span\
+        \ literal-block\">\n<span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.models.fastapi_endpoint_demo</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">demo_api_router</span><span\
         \ class=\"w\">\n\n</span><span class=\"nd\">&#64;demo_api_router</span><span\
         \ class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span\
         \ class=\"w\">\n</span>    <span class=\"s2\">&quot;/echo2&quot;</span><span\
@@ -147274,16 +148087,16 @@ oca:
         \ class=\"o\">=</span><span class=\"p\">[</span><span class=\"n\">Depends</span><span\
         \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
         \ class=\"w\">\n</span><span class=\"p\">)</span><span class=\"w\">\n</span><span\
-        \ class=\"k\">async</span> <span class=\"k\">def</span> <span class=\"nf\"\
-        >echo2</span><span class=\"p\">(</span><span class=\"w\">\n</span>    <span\
-        \ class=\"n\">message</span><span class=\"p\">:</span> <span class=\"nb\"\
-        >str</span><span class=\"p\">,</span><span class=\"w\">\n</span>    <span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">:</span> <span class=\"n\"\
-        >Annotated</span><span class=\"p\">[</span><span class=\"n\">Environment</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">)],</span><span class=\"w\"\
-        >\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-        \ class=\"n\">EchoResponse</span><span class=\"p\">:</span><span class=\"\
+        \ class=\"k\">async</span> <span class=\"k\">def</span><span class=\"w\">\
+        \ </span><span class=\"nf\">echo2</span><span class=\"p\">(</span><span class=\"\
+        w\">\n</span>    <span class=\"n\">message</span><span class=\"p\">:</span>\
+        \ <span class=\"nb\">str</span><span class=\"p\">,</span><span class=\"w\"\
+        >\n</span>    <span class=\"n\">odoo_env</span><span class=\"p\">:</span>\
+        \ <span class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"\
+        n\">Environment</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
+        \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
+        \ class=\"w\">\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"n\">EchoResponse</span><span class=\"p\">:</span><span class=\"\
         w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;Echo the message&quot;&quot;&quot;</span><span\
         \ class=\"w\">\n</span>    <span class=\"n\">echo</span> <span class=\"o\"\
         >=</span> <span class=\"n\">odoo_env</span><span class=\"p\">[</span><span\
@@ -147301,18 +148114,19 @@ oca:
         \ a new router and to add it to the list of\nrouters returned by the method\
         \ <strong>\u2018_get_fastapi_routers\u2019</strong> of the model\n<strong>\u2018\
         fastapi.endpoint\u2019</strong> you are inheriting from into your new addon.</p>\n\
-        <pre class=\"code python literal-block\">\n<span class=\"k\">class</span>\
-        \ <span class=\"nc\">FastapiEndpoint</span><span class=\"p\">(</span><span\
-        \ class=\"n\">models</span><span class=\"o\">.</span><span class=\"n\">Model</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"n\"\
-        >_inherit</span> <span class=\"o\">=</span> <span class=\"s2\">&quot;fastapi.endpoint&quot;</span><span\
-        \ class=\"w\">\n\n</span>    <span class=\"k\">def</span> <span class=\"nf\"\
-        >_get_fastapi_routers</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
-        \ class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span class=\"n\">List</span><span\
-        \ class=\"p\">[</span><span class=\"n\">APIRouter</span><span class=\"p\"\
-        >]:</span><span class=\"w\">\n</span>        <span class=\"n\">routers</span>\
-        \ <span class=\"o\">=</span> <span class=\"nb\">super</span><span class=\"\
-        p\">()</span><span class=\"o\">.</span><span class=\"n\">_get_fastapi_routers</span><span\
+        <pre class=\"code python literal-block\">\n<span class=\"k\">class</span><span\
+        \ class=\"w\"> </span><span class=\"nc\">FastapiEndpoint</span><span class=\"\
+        p\">(</span><span class=\"n\">models</span><span class=\"o\">.</span><span\
+        \ class=\"n\">Model</span><span class=\"p\">):</span><span class=\"w\">\n\n\
+        </span>    <span class=\"n\">_inherit</span> <span class=\"o\">=</span> <span\
+        \ class=\"s2\">&quot;fastapi.endpoint&quot;</span><span class=\"w\">\n\n</span>\
+        \    <span class=\"k\">def</span><span class=\"w\"> </span><span class=\"\
+        nf\">_get_fastapi_routers</span><span class=\"p\">(</span><span class=\"bp\"\
+        >self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
+        \ class=\"n\">List</span><span class=\"p\">[</span><span class=\"n\">APIRouter</span><span\
+        \ class=\"p\">]:</span><span class=\"w\">\n</span>        <span class=\"n\"\
+        >routers</span> <span class=\"o\">=</span> <span class=\"nb\">super</span><span\
+        \ class=\"p\">()</span><span class=\"o\">.</span><span class=\"n\">_get_fastapi_routers</span><span\
         \ class=\"p\">()</span><span class=\"w\">\n</span>        <span class=\"k\"\
         >if</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"\
         n\">app</span> <span class=\"o\">==</span> <span class=\"s2\">&quot;demo&quot;</span><span\
@@ -147332,16 +148146,16 @@ oca:
         \ class=\"o\">=</span><span class=\"p\">[</span><span class=\"n\">Depends</span><span\
         \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
         \ class=\"w\">\n</span><span class=\"p\">)</span><span class=\"w\">\n</span><span\
-        \ class=\"k\">async</span> <span class=\"k\">def</span> <span class=\"nf\"\
-        >echo2</span><span class=\"p\">(</span><span class=\"w\">\n</span>    <span\
-        \ class=\"n\">message</span><span class=\"p\">:</span> <span class=\"nb\"\
-        >str</span><span class=\"p\">,</span><span class=\"w\">\n</span>    <span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">:</span> <span class=\"n\"\
-        >Annotated</span><span class=\"p\">[</span><span class=\"n\">Environment</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">Depends</span><span class=\"p\">(</span><span\
-        \ class=\"n\">odoo_env</span><span class=\"p\">)],</span><span class=\"w\"\
-        >\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-        \ class=\"n\">EchoResponse</span><span class=\"p\">:</span><span class=\"\
+        \ class=\"k\">async</span> <span class=\"k\">def</span><span class=\"w\">\
+        \ </span><span class=\"nf\">echo2</span><span class=\"p\">(</span><span class=\"\
+        w\">\n</span>    <span class=\"n\">message</span><span class=\"p\">:</span>\
+        \ <span class=\"nb\">str</span><span class=\"p\">,</span><span class=\"w\"\
+        >\n</span>    <span class=\"n\">odoo_env</span><span class=\"p\">:</span>\
+        \ <span class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"\
+        n\">Environment</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
+        \ class=\"p\">(</span><span class=\"n\">odoo_env</span><span class=\"p\">)],</span><span\
+        \ class=\"w\">\n</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"n\">EchoResponse</span><span class=\"p\">:</span><span class=\"\
         w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;Echo the message&quot;&quot;&quot;</span><span\
         \ class=\"w\">\n</span>    <span class=\"n\">echo</span> <span class=\"o\"\
         >=</span> <span class=\"n\">odoo_env</span><span class=\"p\">[</span><span\
@@ -147371,37 +148185,38 @@ oca:
         >odoo-addon-extendable-fastapi</a>.</p>\n<p>When you want to allow other addons\
         \ to extend a pydantic model, you must\nfirst define the model as an extendable\
         \ model by using a dedicated\nmetaclass</p>\n<pre class=\"code python literal-block\"\
-        >\n<span class=\"kn\">from</span> <span class=\"nn\">pydantic</span> <span\
-        \ class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span class=\"\
-        w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">extendable_pydantic</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">ExtendableModelMeta</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >Partner</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">metaclass</span><span class=\"o\"\
-        >=</span><span class=\"n\">ExtendableModelMeta</span><span class=\"p\">):</span><span\
-        \ class=\"w\">\n</span>  <span class=\"n\">name</span> <span class=\"o\">=</span>\
-        \ <span class=\"mf\">0.1</span><span class=\"w\">\n</span>  <span class=\"\
-        n\">model_config</span> <span class=\"o\">=</span> <span class=\"n\">ConfigDict</span><span\
-        \ class=\"p\">(</span><span class=\"n\">from_attributes</span><span class=\"\
-        o\">=</span><span class=\"kc\">True</span><span class=\"p\">)</span>\n</pre>\n\
-        <p>As any other pydantic model, you can now use this model as parameter or\n\
-        as response of a route handler. You can also use all the features of\nmodels\
-        \ defined with pydantic.</p>\n<pre class=\"code python literal-block\">\n\
-        <span class=\"nd\">&#64;demo_api_router</span><span class=\"o\">.</span><span\
-        \ class=\"n\">get</span><span class=\"p\">(</span><span class=\"w\">\n</span>\
-        \    <span class=\"s2\">&quot;/partner&quot;</span><span class=\"p\">,</span><span\
-        \ class=\"w\">\n</span>    <span class=\"n\">response_model</span><span class=\"\
-        o\">=</span><span class=\"n\">Location</span><span class=\"p\">,</span><span\
+        >\n<span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"\
+        nn\">pydantic</span><span class=\"w\"> </span><span class=\"kn\">import</span>\
+        \ <span class=\"n\">BaseModel</span><span class=\"w\">\n</span><span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">extendable_pydantic</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">ExtendableModelMeta</span><span\
+        \ class=\"w\">\n\n</span><span class=\"k\">class</span><span class=\"w\">\
+        \ </span><span class=\"nc\">Partner</span><span class=\"p\">(</span><span\
+        \ class=\"n\">BaseModel</span><span class=\"p\">,</span> <span class=\"n\"\
+        >metaclass</span><span class=\"o\">=</span><span class=\"n\">ExtendableModelMeta</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n</span>  <span class=\"n\">name</span>\
+        \ <span class=\"o\">=</span> <span class=\"mf\">0.1</span><span class=\"w\"\
+        >\n</span>  <span class=\"n\">model_config</span> <span class=\"o\">=</span>\
+        \ <span class=\"n\">ConfigDict</span><span class=\"p\">(</span><span class=\"\
+        n\">from_attributes</span><span class=\"o\">=</span><span class=\"kc\">True</span><span\
+        \ class=\"p\">)</span>\n</pre>\n<p>As any other pydantic model, you can now\
+        \ use this model as parameter or\nas response of a route handler. You can\
+        \ also use all the features of\nmodels defined with pydantic.</p>\n<pre class=\"\
+        code python literal-block\">\n<span class=\"nd\">&#64;demo_api_router</span><span\
+        \ class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span\
+        \ class=\"w\">\n</span>    <span class=\"s2\">&quot;/partner&quot;</span><span\
+        \ class=\"p\">,</span><span class=\"w\">\n</span>    <span class=\"n\">response_model</span><span\
+        \ class=\"o\">=</span><span class=\"n\">Location</span><span class=\"p\">,</span><span\
         \ class=\"w\">\n</span>    <span class=\"n\">dependencies</span><span class=\"\
         o\">=</span><span class=\"p\">[</span><span class=\"n\">Depends</span><span\
         \ class=\"p\">(</span><span class=\"n\">authenticated_partner</span><span\
         \ class=\"p\">)],</span><span class=\"w\">\n</span><span class=\"p\">)</span><span\
-        \ class=\"w\">\n</span><span class=\"k\">async</span> <span class=\"k\">def</span>\
-        \ <span class=\"nf\">partner</span><span class=\"p\">(</span><span class=\"\
-        w\">\n</span>    <span class=\"n\">partner</span><span class=\"p\">:</span>\
-        \ <span class=\"n\">Annotated</span><span class=\"p\">[</span><span class=\"\
-        n\">ResPartner</span><span class=\"p\">,</span> <span class=\"n\">Depends</span><span\
-        \ class=\"p\">(</span><span class=\"n\">authenticated_partner</span><span\
+        \ class=\"w\">\n</span><span class=\"k\">async</span> <span class=\"k\">def</span><span\
+        \ class=\"w\"> </span><span class=\"nf\">partner</span><span class=\"p\">(</span><span\
+        \ class=\"w\">\n</span>    <span class=\"n\">partner</span><span class=\"\
+        p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\">[</span><span\
+        \ class=\"n\">ResPartner</span><span class=\"p\">,</span> <span class=\"n\"\
+        >Depends</span><span class=\"p\">(</span><span class=\"n\">authenticated_partner</span><span\
         \ class=\"p\">)],</span><span class=\"w\">\n</span><span class=\"p\">)</span>\
         \ <span class=\"o\">-&gt;</span> <span class=\"n\">Partner</span><span class=\"\
         p\">:</span><span class=\"w\">\n    </span><span class=\"sd\">&quot;&quot;&quot;Return\
@@ -147412,24 +148227,26 @@ oca:
         \ need to add a new field into the model <strong>\u2018Partner\u2019</strong>,\
         \ you can\nextend it in your new addon by defining a new model that inherits\
         \ from\nthe model <strong>\u2018Partner\u2019</strong>.</p>\n<pre class=\"\
-        code python literal-block\">\n<span class=\"kn\">from</span> <span class=\"\
-        nn\">typing</span> <span class=\"kn\">import</span> <span class=\"n\">Optional</span><span\
-        \ class=\"w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.models.fastapi_endpoint_demo</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">Partner</span><span class=\"\
-        w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\">PartnerExtended</span><span\
-        \ class=\"p\">(</span><span class=\"n\">Partner</span><span class=\"p\">,</span>\
-        \ <span class=\"n\">extends</span><span class=\"o\">=</span><span class=\"\
-        n\">Partner</span><span class=\"p\">):</span><span class=\"w\">\n</span> \
-        \   <span class=\"n\">email</span><span class=\"p\">:</span> <span class=\"\
-        n\">Optional</span><span class=\"p\">[</span><span class=\"nb\">str</span><span\
-        \ class=\"p\">]</span>\n</pre>\n<p>If your new addon is installed in a database,\
-        \ a call to the route\nhandler <strong>\u2018/demo/partner\u2019</strong>\
-        \ will return a response with the new field\n<strong>\u2018email\u2019</strong>\
-        \ if a value is provided by the odoo record.</p>\n<pre class=\"code python\
-        \ literal-block\">\n<span class=\"p\">{</span><span class=\"w\">\n</span>\
-        \  <span class=\"s2\">&quot;name&quot;</span><span class=\"p\">:</span> <span\
-        \ class=\"s2\">&quot;John Doe&quot;</span><span class=\"p\">,</span><span\
-        \ class=\"w\">\n</span>  <span class=\"s2\">&quot;email&quot;</span><span\
+        code python literal-block\">\n<span class=\"kn\">from</span><span class=\"\
+        w\"> </span><span class=\"nn\">typing</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">Optional</span><span class=\"\
+        w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.models.fastapi_endpoint_demo</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">Partner</span><span\
+        \ class=\"w\">\n\n</span><span class=\"k\">class</span><span class=\"w\">\
+        \ </span><span class=\"nc\">PartnerExtended</span><span class=\"p\">(</span><span\
+        \ class=\"n\">Partner</span><span class=\"p\">,</span> <span class=\"n\">extends</span><span\
+        \ class=\"o\">=</span><span class=\"n\">Partner</span><span class=\"p\">):</span><span\
+        \ class=\"w\">\n</span>    <span class=\"n\">email</span><span class=\"p\"\
+        >:</span> <span class=\"n\">Optional</span><span class=\"p\">[</span><span\
+        \ class=\"nb\">str</span><span class=\"p\">]</span>\n</pre>\n<p>If your new\
+        \ addon is installed in a database, a call to the route\nhandler <strong>\u2018\
+        /demo/partner\u2019</strong> will return a response with the new field\n<strong>\u2018\
+        email\u2019</strong> if a value is provided by the odoo record.</p>\n<pre\
+        \ class=\"code python literal-block\">\n<span class=\"p\">{</span><span class=\"\
+        w\">\n</span>  <span class=\"s2\">&quot;name&quot;</span><span class=\"p\"\
+        >:</span> <span class=\"s2\">&quot;John Doe&quot;</span><span class=\"p\"\
+        >,</span><span class=\"w\">\n</span>  <span class=\"s2\">&quot;email&quot;</span><span\
         \ class=\"p\">:</span> <span class=\"s2\">&quot;jhon.doe&#64;acsone.eu&quot;</span><span\
         \ class=\"w\">\n</span><span class=\"p\">}</span>\n</pre>\n<p>If your new\
         \ addon is not installed in a database, a call to the route\nhandler <strong>\u2018\
@@ -147585,19 +148402,22 @@ oca:
         \ router\n(It\u2019s therefore easy to defines tests for routers in an addon\
         \ that\ndoesn\u2019t provide a fastapi endpoint).</p>\n<p>With this base class,\
         \ writing a test for a route handler is as simple\nas:</p>\n<pre class=\"\
-        code python literal-block\">\n<span class=\"kn\">from</span> <span class=\"\
-        nn\">odoo.fastapi.tests.common</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">FastAPITransactionCase</span><span class=\"w\">\n\n</span><span\
-        \ class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi</span> <span\
+        code python literal-block\">\n<span class=\"kn\">from</span><span class=\"\
+        w\"> </span><span class=\"nn\">odoo.fastapi.tests.common</span><span class=\"\
+        w\"> </span><span class=\"kn\">import</span> <span class=\"n\">FastAPITransactionCase</span><span\
+        \ class=\"w\">\n\n</span><span class=\"kn\">from</span><span class=\"w\">\
+        \ </span><span class=\"nn\">odoo.addons.fastapi</span><span class=\"w\"> </span><span\
         \ class=\"kn\">import</span> <span class=\"n\">dependencies</span><span class=\"\
-        w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.routers</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">demo_router</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >FastAPIDemoCase</span><span class=\"p\">(</span><span class=\"n\">FastAPITransactionCase</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"nd\"\
-        >&#64;classmethod</span><span class=\"w\">\n</span>    <span class=\"k\">def</span>\
-        \ <span class=\"nf\">setUpClass</span><span class=\"p\">(</span><span class=\"\
-        bp\">cls</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
+        w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.routers</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">demo_router</span><span class=\"\
+        w\">\n\n</span><span class=\"k\">class</span><span class=\"w\"> </span><span\
+        \ class=\"nc\">FastAPIDemoCase</span><span class=\"p\">(</span><span class=\"\
+        n\">FastAPITransactionCase</span><span class=\"p\">):</span><span class=\"\
+        w\">\n\n</span>    <span class=\"nd\">&#64;classmethod</span><span class=\"\
+        w\">\n</span>    <span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">setUpClass</span><span class=\"p\">(</span><span class=\"bp\"\
+        >cls</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
         \ class=\"kc\">None</span><span class=\"p\">:</span><span class=\"w\">\n</span>\
         \        <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"\
         o\">.</span><span class=\"n\">setUpClass</span><span class=\"p\">()</span><span\
@@ -147614,45 +148434,48 @@ oca:
         o\">.</span><span class=\"n\">create</span><span class=\"p\">({</span><span\
         \ class=\"s2\">&quot;name&quot;</span><span class=\"p\">:</span> <span class=\"\
         s2\">&quot;FastAPI Demo&quot;</span><span class=\"p\">})</span><span class=\"\
-        w\">\n\n</span>    <span class=\"k\">def</span> <span class=\"nf\">test_hello_world</span><span\
-        \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">)</span>\
-        \ <span class=\"o\">-&gt;</span> <span class=\"kc\">None</span><span class=\"\
-        p\">:</span><span class=\"w\">\n</span>        <span class=\"k\">with</span>\
-        \ <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\"\
-        >_create_test_client</span><span class=\"p\">(</span><span class=\"n\">router</span><span\
-        \ class=\"o\">=</span><span class=\"n\">demo_router</span><span class=\"p\"\
-        >)</span> <span class=\"k\">as</span> <span class=\"n\">test_client</span><span\
-        \ class=\"p\">:</span><span class=\"w\">\n</span>            <span class=\"\
-        n\">response</span><span class=\"p\">:</span> <span class=\"n\">Response</span>\
-        \ <span class=\"o\">=</span> <span class=\"n\">test_client</span><span class=\"\
-        o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span class=\"\
-        s2\">&quot;/demo/&quot;</span><span class=\"p\">)</span><span class=\"w\"\
-        >\n</span>        <span class=\"bp\">self</span><span class=\"o\">.</span><span\
-        \ class=\"n\">assertEqual</span><span class=\"p\">(</span><span class=\"n\"\
-        >response</span><span class=\"o\">.</span><span class=\"n\">status_code</span><span\
-        \ class=\"p\">,</span> <span class=\"n\">status</span><span class=\"o\">.</span><span\
-        \ class=\"n\">HTTP_200_OK</span><span class=\"p\">)</span><span class=\"w\"\
-        >\n</span>        <span class=\"bp\">self</span><span class=\"o\">.</span><span\
-        \ class=\"n\">assertDictEqual</span><span class=\"p\">(</span><span class=\"\
-        n\">response</span><span class=\"o\">.</span><span class=\"n\">json</span><span\
-        \ class=\"p\">(),</span> <span class=\"p\">{</span><span class=\"s2\">&quot;Hello&quot;</span><span\
-        \ class=\"p\">:</span> <span class=\"s2\">&quot;World&quot;</span><span class=\"\
-        p\">})</span>\n</pre>\n<p>In the previous example, we created a test client\
-        \ for the demo_router.\nWe could have created a test client for the whole\
-        \ app by not specifying\nthe router but the app instead.</p>\n<pre class=\"\
-        code python literal-block\">\n<span class=\"kn\">from</span> <span class=\"\
-        nn\">odoo.fastapi.tests.common</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">FastAPITransactionCase</span><span class=\"w\">\n\n</span><span\
-        \ class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi</span> <span\
+        w\">\n\n</span>    <span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">test_hello_world</span><span class=\"p\">(</span><span class=\"\
+        bp\">self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"kc\">None</span><span class=\"p\">:</span><span class=\"w\"\
+        >\n</span>        <span class=\"k\">with</span> <span class=\"bp\">self</span><span\
+        \ class=\"o\">.</span><span class=\"n\">_create_test_client</span><span class=\"\
+        p\">(</span><span class=\"n\">router</span><span class=\"o\">=</span><span\
+        \ class=\"n\">demo_router</span><span class=\"p\">)</span> <span class=\"\
+        k\">as</span> <span class=\"n\">test_client</span><span class=\"p\">:</span><span\
+        \ class=\"w\">\n</span>            <span class=\"n\">response</span><span\
+        \ class=\"p\">:</span> <span class=\"n\">Response</span> <span class=\"o\"\
+        >=</span> <span class=\"n\">test_client</span><span class=\"o\">.</span><span\
+        \ class=\"n\">get</span><span class=\"p\">(</span><span class=\"s2\">&quot;/demo/&quot;</span><span\
+        \ class=\"p\">)</span><span class=\"w\">\n</span>        <span class=\"bp\"\
+        >self</span><span class=\"o\">.</span><span class=\"n\">assertEqual</span><span\
+        \ class=\"p\">(</span><span class=\"n\">response</span><span class=\"o\">.</span><span\
+        \ class=\"n\">status_code</span><span class=\"p\">,</span> <span class=\"\
+        n\">status</span><span class=\"o\">.</span><span class=\"n\">HTTP_200_OK</span><span\
+        \ class=\"p\">)</span><span class=\"w\">\n</span>        <span class=\"bp\"\
+        >self</span><span class=\"o\">.</span><span class=\"n\">assertDictEqual</span><span\
+        \ class=\"p\">(</span><span class=\"n\">response</span><span class=\"o\">.</span><span\
+        \ class=\"n\">json</span><span class=\"p\">(),</span> <span class=\"p\">{</span><span\
+        \ class=\"s2\">&quot;Hello&quot;</span><span class=\"p\">:</span> <span class=\"\
+        s2\">&quot;World&quot;</span><span class=\"p\">})</span>\n</pre>\n<p>In the\
+        \ previous example, we created a test client for the demo_router.\nWe could\
+        \ have created a test client for the whole app by not specifying\nthe router\
+        \ but the app instead.</p>\n<pre class=\"code python literal-block\">\n<span\
+        \ class=\"kn\">from</span><span class=\"w\"> </span><span class=\"nn\">odoo.fastapi.tests.common</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">FastAPITransactionCase</span><span\
+        \ class=\"w\">\n\n</span><span class=\"kn\">from</span><span class=\"w\">\
+        \ </span><span class=\"nn\">odoo.addons.fastapi</span><span class=\"w\"> </span><span\
         \ class=\"kn\">import</span> <span class=\"n\">dependencies</span><span class=\"\
-        w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.routers</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">demo_router</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >FastAPIDemoCase</span><span class=\"p\">(</span><span class=\"n\">FastAPITransactionCase</span><span\
-        \ class=\"p\">):</span><span class=\"w\">\n\n</span>    <span class=\"nd\"\
-        >&#64;classmethod</span><span class=\"w\">\n</span>    <span class=\"k\">def</span>\
-        \ <span class=\"nf\">setUpClass</span><span class=\"p\">(</span><span class=\"\
-        bp\">cls</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
+        w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.routers</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">demo_router</span><span class=\"\
+        w\">\n\n</span><span class=\"k\">class</span><span class=\"w\"> </span><span\
+        \ class=\"nc\">FastAPIDemoCase</span><span class=\"p\">(</span><span class=\"\
+        n\">FastAPITransactionCase</span><span class=\"p\">):</span><span class=\"\
+        w\">\n\n</span>    <span class=\"nd\">&#64;classmethod</span><span class=\"\
+        w\">\n</span>    <span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">setUpClass</span><span class=\"p\">(</span><span class=\"bp\"\
+        >cls</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
         \ class=\"kc\">None</span><span class=\"p\">:</span><span class=\"w\">\n</span>\
         \        <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"\
         o\">.</span><span class=\"n\">setUpClass</span><span class=\"p\">()</span><span\
@@ -147669,13 +148492,14 @@ oca:
         o\">.</span><span class=\"n\">create</span><span class=\"p\">({</span><span\
         \ class=\"s2\">&quot;name&quot;</span><span class=\"p\">:</span> <span class=\"\
         s2\">&quot;FastAPI Demo&quot;</span><span class=\"p\">})</span><span class=\"\
-        w\">\n\n</span>    <span class=\"k\">def</span> <span class=\"nf\">test_hello_world</span><span\
-        \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">)</span>\
-        \ <span class=\"o\">-&gt;</span> <span class=\"kc\">None</span><span class=\"\
-        p\">:</span><span class=\"w\">\n</span>        <span class=\"n\">demo_endpoint</span>\
-        \ <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"\
-        o\">.</span><span class=\"n\">env</span><span class=\"o\">.</span><span class=\"\
-        n\">ref</span><span class=\"p\">(</span><span class=\"s2\">&quot;fastapi.fastapi_endpoint_demo&quot;</span><span\
+        w\">\n\n</span>    <span class=\"k\">def</span><span class=\"w\"> </span><span\
+        \ class=\"nf\">test_hello_world</span><span class=\"p\">(</span><span class=\"\
+        bp\">self</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span>\
+        \ <span class=\"kc\">None</span><span class=\"p\">:</span><span class=\"w\"\
+        >\n</span>        <span class=\"n\">demo_endpoint</span> <span class=\"o\"\
+        >=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"\
+        n\">env</span><span class=\"o\">.</span><span class=\"n\">ref</span><span\
+        \ class=\"p\">(</span><span class=\"s2\">&quot;fastapi.fastapi_endpoint_demo&quot;</span><span\
         \ class=\"p\">)</span><span class=\"w\">\n</span>        <span class=\"k\"\
         >with</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span\
         \ class=\"n\">_create_test_client</span><span class=\"p\">(</span><span class=\"\
@@ -147823,21 +148647,25 @@ oca:
         </strong>.</li>\n<li>A PagedCollection pydantic model to use to return the\
         \ result of a\nsearch route handler enclosed in a json document that contains\
         \ the\ncount of records.</li>\n</ol>\n<pre class=\"code python literal-block\"\
-        >\n<span class=\"kn\">from</span> <span class=\"nn\">typing</span> <span class=\"\
-        kn\">import</span> <span class=\"n\">Annotated</span><span class=\"w\">\n\
-        </span><span class=\"kn\">from</span> <span class=\"nn\">pydantic</span> <span\
-        \ class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span class=\"\
-        w\">\n\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo.api</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">Environment</span><span\
-        \ class=\"w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.dependencies</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">paging</span><span class=\"\
+        >\n<span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"\
+        nn\">typing</span><span class=\"w\"> </span><span class=\"kn\">import</span>\
+        \ <span class=\"n\">Annotated</span><span class=\"w\">\n</span><span class=\"\
+        kn\">from</span><span class=\"w\"> </span><span class=\"nn\">pydantic</span><span\
+        \ class=\"w\"> </span><span class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span\
+        \ class=\"w\">\n\n</span><span class=\"kn\">from</span><span class=\"w\">\
+        \ </span><span class=\"nn\">odoo.api</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">Environment</span><span class=\"\
+        w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.dependencies</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">paging</span><span class=\"\
         p\">,</span> <span class=\"n\">authenticated_partner_env</span><span class=\"\
-        w\">\n</span><span class=\"kn\">from</span> <span class=\"nn\">odoo.addons.fastapi.schemas</span>\
-        \ <span class=\"kn\">import</span> <span class=\"n\">PagedCollection</span><span\
+        w\">\n</span><span class=\"kn\">from</span><span class=\"w\"> </span><span\
+        \ class=\"nn\">odoo.addons.fastapi.schemas</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">PagedCollection</span><span\
         \ class=\"p\">,</span> <span class=\"n\">Paging</span><span class=\"w\">\n\
-        \n</span><span class=\"k\">class</span> <span class=\"nc\">SaleOrder</span><span\
-        \ class=\"p\">(</span><span class=\"n\">BaseModel</span><span class=\"p\"\
-        >):</span><span class=\"w\">\n</span>    <span class=\"nb\">id</span><span\
+        \n</span><span class=\"k\">class</span><span class=\"w\"> </span><span class=\"\
+        nc\">SaleOrder</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
+        \ class=\"p\">):</span><span class=\"w\">\n</span>    <span class=\"nb\">id</span><span\
         \ class=\"p\">:</span> <span class=\"nb\">int</span><span class=\"w\">\n</span>\
         \    <span class=\"n\">name</span><span class=\"p\">:</span> <span class=\"\
         nb\">str</span><span class=\"w\">\n</span>    <span class=\"n\">model_config</span>\
@@ -147853,8 +148681,8 @@ oca:
         >\n</span>    <span class=\"n\">response_model_exclude_unset</span><span class=\"\
         o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span><span\
         \ class=\"w\">\n</span><span class=\"p\">)</span><span class=\"w\">\n</span><span\
-        \ class=\"k\">def</span> <span class=\"nf\">get_sale_orders</span><span class=\"\
-        p\">(</span><span class=\"w\">\n</span>    <span class=\"n\">paging</span><span\
+        \ class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">get_sale_orders</span><span\
+        \ class=\"p\">(</span><span class=\"w\">\n</span>    <span class=\"n\">paging</span><span\
         \ class=\"p\">:</span> <span class=\"n\">Annotated</span><span class=\"p\"\
         >[</span><span class=\"n\">Paging</span><span class=\"p\">,</span> <span class=\"\
         n\">Depends</span><span class=\"p\">(</span><span class=\"n\">paging</span><span\
@@ -147963,18 +148791,19 @@ oca:
         \ class=\"p\">,</span> <span class=\"n\">response_model</span><span class=\"\
         o\">=</span><span class=\"n\">List</span><span class=\"p\">[</span><span class=\"\
         n\">Item</span><span class=\"p\">])</span><span class=\"w\">\n</span><span\
-        \ class=\"k\">def</span> <span class=\"nf\">list_items</span><span class=\"\
-        p\">():</span><span class=\"w\">\n</span>    <span class=\"k\">pass</span>\n\
+        \ class=\"k\">def</span><span class=\"w\"> </span><span class=\"nf\">list_items</span><span\
+        \ class=\"p\">():</span><span class=\"w\">\n</span>    <span class=\"k\">pass</span>\n\
         </pre>\n<p>In the <strong>\u2018__init__.py\u2019</strong> file, you will\
         \ import the router and add\nit to the global router or your addon.</p>\n\
-        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span>\
-        \ <span class=\"nn\">fastapi</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">APIRouter</span><span class=\"w\">\n\n</span><span class=\"\
-        kn\">from</span> <span class=\"nn\">.items</span> <span class=\"kn\">import</span>\
-        \ <span class=\"n\">router</span> <span class=\"k\">as</span> <span class=\"\
-        n\">items_router</span><span class=\"w\">\n\n</span><span class=\"n\">router</span>\
-        \ <span class=\"o\">=</span> <span class=\"n\">APIRouter</span><span class=\"\
-        p\">()</span><span class=\"w\">\n</span><span class=\"n\">router</span><span\
+        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span><span\
+        \ class=\"w\"> </span><span class=\"nn\">fastapi</span><span class=\"w\">\
+        \ </span><span class=\"kn\">import</span> <span class=\"n\">APIRouter</span><span\
+        \ class=\"w\">\n\n</span><span class=\"kn\">from</span><span class=\"w\">\
+        \ </span><span class=\"nn\">.items</span><span class=\"w\"> </span><span class=\"\
+        kn\">import</span> <span class=\"n\">router</span> <span class=\"k\">as</span>\
+        \ <span class=\"n\">items_router</span><span class=\"w\">\n\n</span><span\
+        \ class=\"n\">router</span> <span class=\"o\">=</span> <span class=\"n\">APIRouter</span><span\
+        \ class=\"p\">()</span><span class=\"w\">\n</span><span class=\"n\">router</span><span\
         \ class=\"o\">.</span><span class=\"n\">include_router</span><span class=\"\
         p\">(</span><span class=\"n\">items_router</span><span class=\"p\">)</span>\n\
         </pre>\n</li>\n<li><p class=\"first\">The <strong>\u2018schemas.py\u2019</strong>\
@@ -147984,28 +148813,30 @@ oca:
         </strong> file in this directory will be used to import all\nthe models defined\
         \ in the directory. For example, in your\n<strong>\u2018my_model.py\u2019\
         </strong> file, you will define a model like this:</p>\n<pre class=\"code\
-        \ python literal-block\">\n<span class=\"kn\">from</span> <span class=\"nn\"\
-        >pydantic</span> <span class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span\
-        \ class=\"w\">\n\n</span><span class=\"k\">class</span> <span class=\"nc\"\
-        >MyModel</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
+        \ python literal-block\">\n<span class=\"kn\">from</span><span class=\"w\"\
+        > </span><span class=\"nn\">pydantic</span><span class=\"w\"> </span><span\
+        \ class=\"kn\">import</span> <span class=\"n\">BaseModel</span><span class=\"\
+        w\">\n\n</span><span class=\"k\">class</span><span class=\"w\"> </span><span\
+        \ class=\"nc\">MyModel</span><span class=\"p\">(</span><span class=\"n\">BaseModel</span><span\
         \ class=\"p\">):</span><span class=\"w\">\n</span>    <span class=\"n\">name</span><span\
         \ class=\"p\">:</span> <span class=\"nb\">str</span><span class=\"w\">\n</span>\
         \    <span class=\"n\">description</span><span class=\"p\">:</span> <span\
         \ class=\"nb\">str</span> <span class=\"o\">=</span> <span class=\"kc\">None</span>\n\
         </pre>\n<p>In the <strong>\u2018__init__.py\u2019</strong> file, you will\
         \ import the model\u2019s classes\nfrom the files in the directory.</p>\n\
-        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span>\
-        \ <span class=\"nn\">.my_model</span> <span class=\"kn\">import</span> <span\
-        \ class=\"n\">MyModel</span>\n</pre>\n<p>This will allow to always import\
-        \ the models from the schemas module\nwhatever the models are spread across\
-        \ different files or defined in\nthe <strong>\u2018schemas.py\u2019</strong>\
-        \ file.</p>\n<pre class=\"code python literal-block\">\n<span class=\"kn\"\
-        >from</span> <span class=\"nn\">x_api_addon.schemas</span> <span class=\"\
-        kn\">import</span> <span class=\"n\">MyModel</span>\n</pre>\n</li>\n<li><p\
-        \ class=\"first\">The <strong>\u2018dependencies.py\u2019</strong> file contains\
-        \ the custom dependencies that\nyou will use in your routers. For example,\
-        \ you can define a dependency\nto check the access rights of the user.</p>\n\
-        </li>\n<li><p class=\"first\">The <strong>\u2018error_handlers.py\u2019</strong>\
+        <pre class=\"code python literal-block\">\n<span class=\"kn\">from</span><span\
+        \ class=\"w\"> </span><span class=\"nn\">.my_model</span><span class=\"w\"\
+        > </span><span class=\"kn\">import</span> <span class=\"n\">MyModel</span>\n\
+        </pre>\n<p>This will allow to always import the models from the schemas module\n\
+        whatever the models are spread across different files or defined in\nthe <strong>\u2018\
+        schemas.py\u2019</strong> file.</p>\n<pre class=\"code python literal-block\"\
+        >\n<span class=\"kn\">from</span><span class=\"w\"> </span><span class=\"\
+        nn\">x_api_addon.schemas</span><span class=\"w\"> </span><span class=\"kn\"\
+        >import</span> <span class=\"n\">MyModel</span>\n</pre>\n</li>\n<li><p class=\"\
+        first\">The <strong>\u2018dependencies.py\u2019</strong> file contains the\
+        \ custom dependencies that\nyou will use in your routers. For example, you\
+        \ can define a dependency\nto check the access rights of the user.</p>\n</li>\n\
+        <li><p class=\"first\">The <strong>\u2018error_handlers.py\u2019</strong>\
         \ file contains the custom error handlers\nthat you will use in your routers.\
         \ The <strong>\u2018odoo-addon-fastapi\u2019</strong> module\nprovides the\
         \ default error handlers for the common odoo exceptions.\nChance are that\

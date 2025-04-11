@@ -87,6 +87,7 @@ oca:
   - account_invoice_line_report
   - account_invoice_bank_details
   - account_comment_template
+  - account_invoice_production_lot
   account-invoicing:
   - account_invoice_crm_tag
   - account_invoice_pricelist
@@ -399,6 +400,7 @@ oca:
   fleet:
   - fleet_vehicle_usage
   - fleet_vehicle_history_date_end
+  - fleet_vehicle_category
   - fleet_vehicle_service_services
   geospatial:
   - base_geoengine_demo
@@ -408,6 +410,7 @@ oca:
   - geoengine_partner
   helpdesk:
   - helpdesk_mgmt_sale
+  - helpdesk_portal_restriction
   - helpdesk_ticket_open_tab
   - helpdesk_mgmt_project
   - helpdesk_ticket_partner_response
@@ -416,6 +419,7 @@ oca:
   - helpdesk_mgmt
   - helpdesk_mgmt_stage_validation
   - helpdesk_ticket_related
+  - helpdesk_mgmt_portal_follower
   hr:
   - hr_course
   - hr_employee_partner_external
