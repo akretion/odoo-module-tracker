@@ -121,6 +121,7 @@ oca:
   - account_due_list
   - sale_payment_term_security
   - partner_aging
+  - account_payment_widget_amount
   - account_payment_term_security
   - account_payment_return
   - account_payment_term_extension
@@ -410,6 +411,7 @@ oca:
   - geoengine_partner
   helpdesk:
   - helpdesk_mgmt_sale
+  - helpdesk_mgmt_timesheet
   - helpdesk_portal_restriction
   - helpdesk_ticket_open_tab
   - helpdesk_mgmt_project
@@ -766,6 +768,7 @@ oca:
   - project_task_stage_state
   - project_task_note
   - project_parent_task_filter
+  - project_version
   - project_task_pull_request
   - project_sequence
   - project_role
@@ -1231,6 +1234,7 @@ oca:
   - hr_timesheet_task_stage
   - crm_timesheet
   - sale_timesheet_line_exclude
+  - hr_timesheet_time_type
   - sale_timesheet_timeline
   vertical-abbey: []
   vertical-agriculture: []
