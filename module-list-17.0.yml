@@ -380,6 +380,7 @@ oca:
   - fieldservice_repair
   - fieldservice_agreement
   - fieldservice_geoengine
+  - fieldservice_availability
   - fieldservice_stock_request
   - fieldservice_route
   - fieldservice_sale_stock
@@ -402,6 +403,7 @@ oca:
   - fieldservice_account
   - fieldservice_activity
   fleet:
+  - fleet_vehicle_fuel_capacity
   - fleet_vehicle_usage
   - fleet_vehicle_history_date_end
   - fleet_vehicle_category
@@ -692,6 +694,7 @@ oca:
   pos:
   - pos_product_template
   - pos_partner_firstname
+  - pos_partner_vat_valid
   - pos_partner_second_lastname
   - pos_lot_barcode
   - pos_hide_cost_price_and_margin
@@ -814,6 +817,7 @@ oca:
   - sale_purchase_force_vendor
   - purchase_mass_mail
   - purchase_partner_incoterm
+  - purchase_stock_price_unit_sync
   - purchase_manual_delivery
   - purchase_request
   - purchase_order_archive
