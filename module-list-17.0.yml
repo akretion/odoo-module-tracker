@@ -7,6 +7,7 @@ forgeflow:
   stock-rma:
   - rma
   - rma_sale
+  - rma_purchase
   - rma_filter_lot
   - rma_sale_force_invoiced
   - rma_repair
@@ -583,6 +584,7 @@ oca:
   - mrp_component_operation
   - mrp_production_serial_matrix
   - quality_control_stock_oca
+  - purchase_mrp_distribution
   - mrp_subcontracting_purchase_link
   manufacture-reporting:
   - mrp_bom_structure_xlsx_level_1
@@ -701,6 +703,7 @@ oca:
   - pos_partner_firstname_required
   - pos_partner_vat_required
   - pos_product_expiry
+  - pos_margin
   - pos_user_restriction
   - pos_order_to_sale_order
   - pos_cash_move_reason
@@ -964,6 +967,7 @@ oca:
   - sale_fixed_discount
   - sale_order_archive
   - sale_order_revision
+  - sale_promotion_rule
   - sale_advance_payment
   - product_form_sale_link
   - sale_pricelist_global_rule
@@ -1165,6 +1169,7 @@ oca:
   - product_route_profile
   - stock_change_qty_reason
   - stock_reserve
+  - stock_account_change_qty_reason
   - stock_putaway_product_template
   - stock_inventory_discrepancy
   - stock_packaging_calculator
