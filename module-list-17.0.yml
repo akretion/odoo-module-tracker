@@ -683,6 +683,7 @@ oca:
   - partner_contact_department
   - partner_contact_nationality
   - partner_pricelist_search
+  - partner_country_lang
   - partner_deduplicate_acl
   - base_location_geonames_import
   - partner_company_type
@@ -800,6 +801,7 @@ oca:
   project-reporting: []
   purchase-reporting:
   - purchase_report_hide_line
+  - purchase_order_report_grouped_by_vendor
   purchase-workflow:
   - purchase_reception_notify
   - purchase_force_invoiced
@@ -1094,6 +1096,7 @@ oca:
   - mail_notification_custom_subject
   - mail_activity_board
   - mail_tracking_mailgun
+  - mass_mailing_event_registration_exclude
   - mail_tracking_mass_mailing
   - mail_show_follower
   - mail_attach_existing_attachment
