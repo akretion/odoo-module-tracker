@@ -97,6 +97,7 @@ oca:
   - product_form_account_move_line_link
   - account_invoice_date_due
   - account_invoice_block_payment
+  - sale_timesheet_invoice_description
   - account_invoice_fixed_discount
   - account_move_tier_validation
   - account_invoice_transmit_method
@@ -459,6 +460,7 @@ oca:
   - hr_expense_payment
   - hr_expense_tier_validation
   - hr_expense_invoice
+  - hr_expense_journal
   - hr_expense_advance_clearing
   - hr_expense_employee_analytic_default
   hr-holidays:
@@ -584,6 +586,7 @@ oca:
   - mrp_component_operation
   - mrp_production_serial_matrix
   - quality_control_stock_oca
+  - mrp_attachment_mgmt
   - purchase_mrp_distribution
   - mrp_subcontracting_purchase_link
   manufacture-reporting:
@@ -1342,6 +1345,7 @@ oca:
   - website_snippet_big_button
   - website_conditional_visibility_user_group
   - website_cookiefirst
+  - website_breadcrumb
   - website_crm_quick_answer
   - website_local_font
   - website_form_require_legal
