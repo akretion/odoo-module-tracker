@@ -590,6 +590,7 @@ oca:
   - quality_control_stock_oca
   - mrp_production_note
   - mrp_warehouse_calendar
+  - mrp_production_quant_manual_assign
   manufacture-reporting:
   - mrp_bom_structure_xlsx_level_1
   - mrp_bom_structure_report_level_1
@@ -1224,6 +1225,7 @@ oca:
   - stock_picking_show_backorder
   - product_cost_price_avco_sync
   - stock_picking_origin_reference_sale
+  - stock_product_security
   - stock_scrap_tier_validation
   - stock_account_product_run_fifo_hook
   - stock_split_picking
@@ -1253,6 +1255,7 @@ oca:
   survey:
   - survey_result_mail
   - partner_survey
+  - survey_question_type_binary
   - survey_partner_representative
   timesheet:
   - hr_timesheet_sheet
@@ -1262,6 +1265,7 @@ oca:
   - hr_timesheet_task_domain
   - hr_timesheet_time_type
   - sale_timesheet_rounded
+  - hr_timesheet_type_non_billable
   - hr_timesheet_editable_top
   - crm_timesheet
   - hr_timesheet_calendar
