@@ -374,6 +374,7 @@ oca:
   - crm_event
   - event_stage_cancelled
   - event_sale_reservation
+  - website_event_crm_invitation
   field-service:
   - fieldservice_crm
   - fieldservice_portal
@@ -568,6 +569,7 @@ oca:
   - mrp_attachment_mgmt
   - mrp_tag
   - mrp_production_serial_matrix
+  - stock_replenishment_mrp_bom_selection
   - mrp_bom_tracking
   - mrp_repair_order
   - mrp_production_back_to_draft
@@ -1226,6 +1228,7 @@ oca:
   - stock_lock_lot
   - stock_picking_auto_create_lot_sequence
   - stock_picking_show_backorder
+  - stock_putaway_hook
   - product_cost_price_avco_sync
   - stock_picking_origin_reference_sale
   - stock_product_security
@@ -1241,7 +1244,9 @@ oca:
   - stock_picking_origin_reference_purchase
   - stock_picking_return_restricted_qty
   - stock_scrap_tier_validation_mrp
-  stock-weighing: []
+  stock-weighing:
+  - web_widget_remote_measure_utilcell
+  - web_widget_remote_measure
   storage:
   - fs_image
   - fs_file_demo
