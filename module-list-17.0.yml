@@ -289,6 +289,7 @@ oca:
   - base_delivery_carrier_label
   - delivery_carrier_info
   - delivery_carrier_partner
+  - delivery_auto_refresh
   - delivery_state
   - delivery_carrier_account
   - delivery_cttexpress
@@ -332,6 +333,7 @@ oca:
   - website_sale_require_legal
   - website_sale_hide_empty_category
   - website_sale_checkout_skip_payment
+  - website_sale_product_attribute_filter_order
   - website_sale_hide_price
   e-learning: []
   edi:
@@ -1017,6 +1019,7 @@ oca:
   - auth_session_timeout
   - auth_ldaps
   server-backend:
+  - server_action_navigate
   - base_user_role_history
   - base_user_role
   - base_global_discount
@@ -1043,6 +1046,7 @@ oca:
   - tracking_manager_domain
   - base_partition
   - session_db
+  - base_fontawesome
   - base_view_inheritance_extension
   - scheduler_error_mailer
   - module_change_auto_install
