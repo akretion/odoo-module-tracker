@@ -48,6 +48,7 @@ oca:
   - mis_template_financial_report
   - account_tax_balance
   - account_financial_report
+  - account_move_line_report_xls
   account-financial-tools:
   - account_check_deposit
   - account_fiscal_year
@@ -238,6 +239,7 @@ oca:
   - contract_update_last_date_invoiced
   - contract_variable_quantity
   - contract
+  - contract_mandate
   - contract_variable_qty_timesheet
   - contract_price_revision
   - product_contract
@@ -369,6 +371,7 @@ oca:
   - event_registration_partner_unique
   - website_event_track_stage_cancelled
   - event_registration_cancel_reason
+  - event_email_reminder
   - website_event_require_legal
   - website_event_membership_restriction
   - website_event_sale_b2x_alt_price
@@ -427,6 +430,7 @@ oca:
   - helpdesk_mgmt_portal_follower
   - helpdesk_ticket_open_tab
   - helpdesk_mgmt_crm
+  - helpdesk_ticket_close_inactive
   - helpdesk_timesheet_time_type
   - helpdesk_mgmt_sale
   - helpdesk_ticket_related
@@ -622,6 +626,7 @@ oca:
   - product_tax_multicompany_default
   - mail_multicompany
   - product_multi_company
+  - account_multicompany_easy_creation
   odoo-pim: []
   operating-unit:
   - pos_operating_unit
@@ -806,6 +811,7 @@ oca:
   - project_timeline
   - project_administrator_restricted_visibility
   - project_role
+  - project_task_name_with_id
   - project_department
   - project_task_material
   - project_sequence
@@ -1071,10 +1077,12 @@ oca:
   - base_m2m_custom_field
   - base_exception
   - base_partition
+  - attachment_queue
   - iap_alternative_provider
   - rpc_helper
   server-ux:
   - date_range
+  - base_import_security_group
   - base_search_custom_field_filter
   - base_technical_features
   - base_optional_quick_create
@@ -1279,6 +1287,7 @@ oca:
   - survey_skip_start
   - survey_legal
   - survey_contact_generation
+  - survey_crm_generation
   - survey_multi_company
   - survey_sale_generation
   timesheet:
