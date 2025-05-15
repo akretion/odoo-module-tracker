@@ -812,6 +812,7 @@ oca:
   - project_administrator_restricted_visibility
   - project_role
   - project_task_name_with_id
+  - project_milestone_status
   - project_department
   - project_task_material
   - project_sequence
@@ -953,6 +954,7 @@ oca:
   - portal_sale_personal_data_only
   - sale_sourced_by_line
   - sale_blanket_order
+  - sale_order_lot_generator
   - sale_substate
   - sale_elaboration
   - sale_order_line_tag
@@ -1197,6 +1199,7 @@ oca:
   - stock_demand_estimate_matrix
   - stock_secondary_unit
   - stock_route_mto
+  - procurement_auto_create_group
   - stock_picking_volume
   - stock_quant_manual_assign
   - stock_location_lockdown
