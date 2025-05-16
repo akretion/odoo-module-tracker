@@ -322,6 +322,7 @@ oca:
   - website_sale_wishlist_keep
   - website_sale_product_reference_displayed
   - website_sale_product_attribute_filter_order
+  - website_sale_stock_provisioning_date
   - website_sale_hide_empty_category
   - website_sale_product_minimal_price
   - website_sale_product_description
@@ -406,6 +407,7 @@ oca:
   - fieldservice_stock_request
   - fieldservice_activity
   - fieldservice_account_analytic
+  - fieldservice_stock_scrap
   - fieldservice_project
   - fieldservice_repair_order_template
   - fieldservice_geoengine
@@ -682,6 +684,7 @@ oca:
   - partner_fax
   - partner_contact_access_link
   - partner_contact_birthplace
+  - partner_utm_source
   - partner_ref_unique
   - base_partner_company_group
   - partner_contact_department
@@ -1286,6 +1289,7 @@ oca:
   - survey_result_mail
   - partner_survey
   - survey_question_type_binary
+  - survey_crm_sale_generation
   - survey_partner_representative
   - survey_skip_start
   - survey_legal
