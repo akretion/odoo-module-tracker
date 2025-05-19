@@ -26,6 +26,7 @@ oca:
   - account_analytic_distribution_manual_date
   - analytic_base_department
   - account_analytic_tag
+  - purchase_stock_analytic
   - hr_timesheet_analytic_tag
   - account_analytic_spread_by_tag
   - stock_picking_analytic
@@ -393,6 +394,7 @@ oca:
   - fieldservice_repair_order_template
   - fieldservice_sale_recurring
   - fieldservice_sale
+  - fieldservice_skill
   - fieldservice_vehicle
   - fieldservice_sale_agreement
   - fieldservice_activity
@@ -1039,6 +1041,7 @@ oca:
   - base_user_role
   - base_external_dbsource
   - base_external_dbsource_sqlite
+  - base_import_match
   - base_global_discount
   - base_user_role_company
   - base_user_role_history
@@ -1094,6 +1097,7 @@ oca:
   - base_menu_visibility_restriction
   - base_search_custom_field_filter
   - date_range_account
+  - base_tier_validation_server_action
   - server_action_mass_edit
   - multi_step_wizard
   - date_range
