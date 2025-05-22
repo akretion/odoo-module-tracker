@@ -947,6 +947,7 @@ oca:
   sale-promotion: []
   sale-reporting:
   - sale_report_salesman
+  - sale_quotation_builder
   - sale_order_line_position
   - sale_layout_category_hide_detail
   - sale_comment_template
@@ -1237,6 +1238,7 @@ oca:
   - stock_picking_send_by_mail
   - delivery_procurement_group_carrier
   - stock_restrict_by_planned_consumed_date
+  - stock_move_quantity_product_uom
   - stock_picking_auto_create_lot
   - stock_move_forced_lot
   - stock_quant_package_product_packaging
