@@ -95,6 +95,7 @@ oca:
   account-invoicing:
   - account_move_tier_validation
   - account_invoice_fixed_discount
+  - sale_order_whole_delivered_invoiceability
   - account_global_discount
   - sale_invoicing_date_selection
   - account_invoice_mass_sending
@@ -340,6 +341,7 @@ oca:
   - website_sale_require_legal
   - website_sale_hide_price
   - website_sale_product_minimal_price
+  - website_sale_menu_partner_top_selling
   - website_sale_hide_empty_category
   - website_sale_product_brand
   e-learning:
@@ -733,6 +735,7 @@ oca:
   - pos_lot_selection
   - pos_product_template
   - pos_partner_vat_required
+  - pos_config_phone
   - pos_partner_second_lastname
   - pos_lot_barcode
   - pos_cash_move_reason
@@ -1014,6 +1017,7 @@ oca:
   - sale_order_invoicing_finished_task
   - sales_team_security_crm
   - sale_promotion_rule
+  - sales_team_invoiced_target_domain
   - sale_product_multi_add
   - sale_sourced_by_line
   - sale_automatic_workflow
