@@ -954,7 +954,8 @@ oca:
   runbot-addons: []
   sale-channel: []
   sale-financial: []
-  sale-promotion: []
+  sale-promotion:
+  - loyalty_card_fixed_expiration_date
   sale-reporting:
   - sale_report_salesman
   - sale_quotation_builder
