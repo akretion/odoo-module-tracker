@@ -17,6 +17,7 @@ forgeflow:
 oca:
   account-analytic:
   - account_analytic_distribution_manual
+  - account_analytic_distribution_widget_rebalance
   - stock_analytic
   - account_analytic_sequence
   - account_analytic_required
@@ -27,12 +28,15 @@ oca:
   - analytic_base_department
   - account_analytic_tag
   - purchase_stock_analytic
+  - purchase_request_analytic
+  - stock_landed_costs_analytic
   - hr_timesheet_analytic_tag
   - account_analytic_spread_by_tag
   - stock_picking_analytic
   - pos_analytic_by_config
   - analytic_partner
   - mrp_stock_analytic
+  - account_analytic_distribution_model_recalculate
   account-budgeting: []
   account-closing:
   - account_cutoff_base
@@ -147,7 +151,8 @@ oca:
   - agreement_account
   - agreement_repair
   apps-store: []
-  automation: []
+  automation:
+  - automation_oca
   bank-payment:
   - account_payment_purchase
   - account_payment_order
@@ -593,6 +598,7 @@ oca:
   - quality_control_mrp_oca
   - purchase_mrp_distribution
   - mrp_planned_order_matrix
+  - mrp_lot_number_propagation
   - mrp_production_serial_matrix
   - mrp_sale_info
   - mrp_subcontracting_bom_dual_use
@@ -950,6 +956,7 @@ oca:
   - rma
   - product_warranty
   - rma_lot
+  - rma_repair
   role-policy: []
   runbot-addons: []
   sale-channel: []
