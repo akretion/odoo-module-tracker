@@ -107,6 +107,7 @@ oca:
   - account_invoice_show_currency_rate
   - account_invoice_date_due
   - account_invoice_subscription_per_contact
+  - stock_account_move_reset_to_draft
   - account_invoice_crm_tag
   - account_invoice_customer_no_autofollow
   - sale_timesheet_invoice_description
@@ -248,6 +249,7 @@ oca:
   - contract_sale_invoicing
   - product_contract
   - contract_payment_mode
+  - contract_invoice_auto_validate
   - contract_mandate
   - contract_variable_quantity
   - contract
@@ -602,7 +604,9 @@ oca:
   - mrp_production_serial_matrix
   - mrp_sale_info
   - mrp_subcontracting_bom_dual_use
+  - mrp_lot_production_date
   - mrp_bom_tracking
+  - mrp_bom_attribute_match
   - mrp_subcontracting_purchase_link
   - mrp_warehouse_calendar
   - mrp_attachment_mgmt
