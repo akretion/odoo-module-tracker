@@ -161,6 +161,7 @@ oca:
   - account_payment_order_grouped_output
   - account_payment_purchase_stock
   - account_payment_mode
+  - account_payment_order_return
   - account_banking_sepa_direct_debit
   - account_banking_mandate_contact
   - account_banking_mandate
@@ -253,6 +254,7 @@ oca:
   - contract_mandate
   - contract_variable_quantity
   - contract
+  - contract_queue_job
   cooperative: []
   credit-control:
   - account_payment_return_financial_risk
@@ -685,6 +687,7 @@ oca:
   - partner_contact_birthdate
   - partner_utm_source
   - base_location
+  - partner_category_type
   - partner_tz
   - partner_industry_secondary
   - partner_deduplicate_by_website
@@ -718,6 +721,7 @@ oca:
   - partner_external_map
   - partner_country_lang
   - partner_affiliate
+  - partner_contact_lang
   - partner_disable_gravatar
   - partner_stage_only_confirmed
   - partner_deduplicate_filter
@@ -849,6 +853,7 @@ oca:
   project-agile: []
   project-reporting: []
   purchase-reporting:
+  - purchase_comment_template
   - purchase_report_hide_line
   - purchase_order_report_grouped_by_vendor
   purchase-workflow:
@@ -1005,6 +1010,7 @@ oca:
   - sale_order_line_price_history
   - sale_order_type_confirm_message
   - sales_team_security
+  - sale_partner_utm_source
   - sale_order_carrier_auto_assign
   - sale_product_set
   - sale_automatic_workflow_stock
@@ -1080,6 +1086,7 @@ oca:
   server-env:
   - mail_environment
   - mail_environment_office365
+  - server_environment_autocreate
   - server_environment_ir_config_parameter
   - data_encryption
   - server_environment
