@@ -854,8 +854,12 @@ oca:
   project-reporting: []
   purchase-reporting:
   - purchase_comment_template
+  - purchase_report_payment_term
   - purchase_report_hide_line
+  - purchase_report_shipping_address
+  - purchase_packaging_report
   - purchase_order_report_grouped_by_vendor
+  - purchase_report_date_format
   purchase-workflow:
   - purchase_default_terms_conditions
   - purchase_stock_manual_currency
@@ -1287,6 +1291,7 @@ oca:
   - stock_picking_auto_create_lot_sequence
   - stock_push_delay
   - stock_picking_origin_reference_purchase
+  - stock_lot_scrap
   - stock_picking_partner_note
   - stock_picking_purchase_order_link
   - stock_scrap_tier_validation
