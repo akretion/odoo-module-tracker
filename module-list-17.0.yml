@@ -226,7 +226,8 @@ oca:
   connector-cmis: []
   connector-ecommerce: []
   connector-infor: []
-  connector-interfaces: []
+  connector-interfaces:
+  - connector_importer
   connector-jira: []
   connector-lengow: []
   connector-lims: []
@@ -751,6 +752,7 @@ oca:
   - pos_product_template
   - pos_partner_vat_required
   - pos_config_phone
+  - pos_category_vertical_display
   - pos_partner_second_lastname
   - pos_lot_barcode
   - pos_cash_move_reason
@@ -861,14 +863,18 @@ oca:
   - purchase_order_report_grouped_by_vendor
   - purchase_report_date_format
   purchase-workflow:
+  - purchase_location_by_line
   - purchase_default_terms_conditions
   - purchase_stock_manual_currency
   - purchase_order_line_menu
+  - purchase_requisition_order_remaining_qty
   - purchase_advance_payment
   - purchase_all_shipments
   - purchase_invoice_method
   - purchase_invoice_plan
   - purchase_order_type
+  - purchase_stock_packaging
+  - purchase_order_product_recommendation
   - procurement_purchase_no_grouping
   - purchase_fop_shipping
   - purchase_open_qty
@@ -877,11 +883,13 @@ oca:
   - purchase_requisition_multiple_vendor
   - purchase_warn_message
   - purchase_order_weight_volume
+  - purchase_order_general_discount
   - purchase_order_secondary_unit
   - purchase_commercial_partner
   - purchase_order_qty_change_no_recompute
   - purchase_deposit
   - purchase_order_archive
+  - product_supplier_code_purchase
   - purchase_allowed_product
   - purchase_blanket_order
   - purchase_tier_validation
@@ -938,6 +946,7 @@ oca:
   - base_report_to_printer
   reporting-engine:
   - report_py3o
+  - bi_view_editor
   - report_qweb_signer
   - base_comment_template
   - kpi
