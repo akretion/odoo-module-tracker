@@ -289,6 +289,7 @@ oca:
   - currency_rate_update
   data-protection:
   - privacy
+  - privacy_consent
   ddmrp:
   - ddmrp_history
   - ddmrp_chatter
@@ -368,6 +369,7 @@ oca:
   - base_import_pdf_by_template_account
   - base_facturx
   - account_einvoice_generate
+  - base_ubl
   - base_ebill_payment_contract
   - edi_voxel_oca
   - pdf_helper
@@ -870,6 +872,7 @@ oca:
   - purchase_requisition_order_remaining_qty
   - purchase_advance_payment
   - purchase_all_shipments
+  - purchase_partner_selectable_option
   - purchase_invoice_method
   - purchase_invoice_plan
   - purchase_order_type
@@ -888,6 +891,7 @@ oca:
   - purchase_commercial_partner
   - purchase_order_qty_change_no_recompute
   - purchase_deposit
+  - purchase_start_end_dates
   - purchase_order_archive
   - product_supplier_code_purchase
   - purchase_allowed_product
@@ -912,6 +916,7 @@ oca:
   - product_supplierinfo_disable_autocreation
   - purchase_request_tier_validation
   - purchase_no_rfq
+  - procurement_purchase_sale_no_grouping
   - purchase_security
   - purchase_manual_currency
   - procurement_purchase_requisition_generation
@@ -919,6 +924,7 @@ oca:
   - purchase_partner_incoterm
   - purchase_stock_price_unit_sync
   - purchase_order_line_deep_sort
+  - purchase_order_uninvoiced_amount
   pwa-builder: []
   queue:
   - base_import_async
@@ -1305,6 +1311,7 @@ oca:
   - stock_picking_purchase_order_link
   - stock_scrap_tier_validation
   - stock_move_line_reference_link
+  - stock_picking_line_sequence
   - stock_lot_production_date
   - stock_account_show_automatic_valuation
   - sale_planned_consumed_date
