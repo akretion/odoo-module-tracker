@@ -386,6 +386,7 @@ oca:
   event:
   - website_event_sale_b2x_alt_price
   - website_event_crm_invitation
+  - event_track_location_overlap
   - website_event_track_stage_cancelled
   - event_min_seat
   - event_email_reminder
@@ -795,6 +796,7 @@ oca:
   - product_pricelist_fixed_currency_rate
   - product_pricelist_by_contact
   - product_product_template_link
+  - product_category_code_unique
   - product_manufacturer
   - product_code_mandatory
   - product_sequence
@@ -1055,6 +1057,7 @@ oca:
   - sale_procurement_group_by_line
   - sale_partner_utm_source
   - sale_order_secondary_unit
+  - sale_invoice_frequency
   - sale_fixed_discount
   - sale_product_set
   - sale_sourced_by_line
