@@ -97,6 +97,7 @@ oca:
   - partner_time_to_pay
   - account_comment_template
   account-invoicing:
+  - sale_order_type_whole_delivered_invoiceability
   - account_invoice_subscription_per_contact
   - account_invoice_mass_sending
   - account_invoice_block_payment
@@ -239,6 +240,7 @@ oca:
   connector-salesforce: []
   connector-spscommerce: []
   connector-telephony:
+  - voip_oca
   - asterisk_click2dial
   - base_phone
   connector-woocommerce: []
@@ -844,6 +846,7 @@ oca:
   - project_version
   - sale_project_reimbursement_cost
   - project_task_material
+  - project_hr
   - project_type
   - sale_project_task_recurrency
   - project_task_code
