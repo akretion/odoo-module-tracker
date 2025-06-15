@@ -109,6 +109,7 @@ oca:
   - account_invoice_blocking
   - stock_picking_invoicing
   - account_invoice_warn_message
+  - account_invoice_supplier_ref_unique
   - purchase_stock_picking_return_invoicing
   - account_invoice_pricelist
   - stock_picking_return_refund_option
@@ -392,6 +393,7 @@ oca:
   - website_event_track_stage_cancelled
   - event_min_seat
   - event_email_reminder
+  - event_project
   - event_mail
   - event_sale_reservation
   - website_event_questions_by_ticket
@@ -920,6 +922,7 @@ oca:
   - purchase_delivery_split_date
   - purchase_deposit
   - purchase_order_type
+  - purchase_order_approved
   - purchase_allowed_product
   - purchase_order_qty_change_no_recompute
   - purchase_manual_currency
@@ -1091,6 +1094,7 @@ oca:
   - auth_signup_verify_email
   - auth_oauth_multi_token
   - auth_user_case_insensitive
+  - auth_oauth_autologin
   - auth_ldaps
   - auth_api_key
   - auth_saml
