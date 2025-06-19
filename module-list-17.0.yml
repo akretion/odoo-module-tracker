@@ -27,6 +27,7 @@ oca:
   - account_analytic_distribution_widget_rebalance
   - purchase_analytic_tag
   - pos_analytic_by_config
+  - product_analytic
   - account_analytic_sequence
   - analytic_base_department
   - hr_timesheet_analytic_tag
@@ -784,6 +785,7 @@ oca:
   - product_category_code
   - product_main_supplierinfo
   - product_set
+  - product_form_pricelist
   - product_readonly_security
   - product_secondary_unit
   - product_packaging_dimension
@@ -1337,6 +1339,7 @@ oca:
   - stock_move_forced_lot
   - stock_picking_origin_reference
   - product_cost_price_avco_sync
+  - stock_picking_group_by_base
   - stock_lot_on_hand_first
   - stock_picking_warn_message
   - stock_restrict_lot
