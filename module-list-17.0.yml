@@ -329,6 +329,7 @@ oca:
   - delivery_purchase_multi_destination
   - delivery_roulier
   - delivery_carrier_manual_price
+  - delivery_ups_oca
   - delivery_price_method
   - delivery_carrier_multi_zip
   - delivery_carrier_account
@@ -1335,6 +1336,7 @@ oca:
   - stock_split_picking
   - stock_picking_line_sequence
   - stock_picking_group_by_partner_by_carrier
+  - stock_picking_batch_print_pickings
   - stock_no_negative
   - stock_picking_show_return
   - stock_picking_return_restricted_qty
