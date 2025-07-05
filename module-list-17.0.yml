@@ -32,6 +32,7 @@ oca:
   - purchase_request_analytic
   - account_analytic_distribution_widget_rebalance
   - account_analytic_distribution_model_recalculate
+  - account_analytic_document_date
   - analytic_base_department
   - account_analytic_organization
   - analytic_partner
@@ -60,6 +61,7 @@ oca:
   account-financial-tools:
   - account_partner_required
   - account_account_tag_code
+  - account_chart_update_l10n_eu_oss
   - account_move_name_sequence
   - account_move_line_purchase_info
   - account_move_post_date_user
@@ -319,6 +321,7 @@ oca:
   - delivery_auto_refresh
   - delivery_purchase
   - delivery_cttexpress
+  - delivery_carrier_global_manifest
   - delivery_free_fee_removal
   - delivery_carrier_manual_weight
   - delivery_correos_express
@@ -326,6 +329,7 @@ oca:
   - sale_order_warehouse_from_delivery_carrier
   - delivery_package_number
   - delivery_multi_destination
+  - delivery_cbl
   - delivery_purchase_multi_destination
   - delivery_roulier
   - delivery_carrier_manual_price
@@ -1344,6 +1348,7 @@ oca:
   - stock_picking_mass_action
   - stock_picking_supplier_ref
   - stock_move_backdating
+  - stock_landed_costs_priority
   - stock_account_show_automatic_valuation
   - stock_move_planned_consumed_date
   - stock_picking_return_lot
