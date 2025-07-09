@@ -1256,8 +1256,10 @@ oca:
   - barcodes_generator_location
   - barcodes_generator_abstract
   - barcodes_generator_product
+  - stock_picking_product_barcode_report
   stock-logistics-interfaces: []
-  stock-logistics-orderpoint: []
+  stock-logistics-orderpoint:
+  - stock_orderpoint_generator
   stock-logistics-reporting:
   - stock_move_pivot_total_price
   - stock_quant_history_queued
