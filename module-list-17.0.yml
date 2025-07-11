@@ -1024,6 +1024,7 @@ oca:
   sale-financial: []
   sale-promotion:
   - loyalty_card_fixed_expiration_date
+  - coupon_chatter
   sale-reporting:
   - sale_quotation_builder
   - sale_layout_category_hide_detail
@@ -1184,6 +1185,7 @@ oca:
   - database_cleanup
   - sentry
   server-ux:
+  - mail_suggested_recipient_unchecked
   - base_technical_features
   - base_cancel_confirm
   - barcode_action
