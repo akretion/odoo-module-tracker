@@ -24,6 +24,7 @@ oca:
   - account_move_update_analytic
   - account_analytic_parent
   - account_analytic_distribution_manual
+  - account_analytic_account_tag
   - product_analytic
   - account_analytic_document_date
   - purchase_stock_analytic
@@ -114,6 +115,7 @@ oca:
   - account_global_discount
   - sale_order_whole_delivered_invoiceability
   - stock_account_move_reset_to_draft
+  - account_invoice_discount_display_amount
   - account_invoice_pricelist
   - account_invoice_crm_tag
   - account_manual_currency
@@ -354,6 +356,7 @@ oca:
   - website_sale_order_type
   - website_sale_secondary_unit
   - website_sale_hide_empty_category
+  - website_sale_product_matrix
   - website_sale_suggest_create_account
   - website_sale_vat_required
   - website_sale_product_attribute_filter_order
@@ -1252,6 +1255,7 @@ oca:
   - mail_template_substitute
   - mail_tracking_mass_mailing
   - mail_partner_forwarding
+  - mail_gateway_whatsapp
   - mass_mailing_custom_unsubscribe
   - mail_disable_follower_notification
   - mail_gateway
