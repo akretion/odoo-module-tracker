@@ -62,6 +62,7 @@ oca:
   - account_tax_balance
   account-financial-tools:
   - account_spread_cost_revenue
+  - account_lock_to_date
   - account_chart_update_l10n_eu_oss
   - account_lock_date_update
   - account_usability
@@ -480,6 +481,7 @@ oca:
   - helpdesk_mgmt_sale
   - helpdesk_timesheet_time_type
   - helpdesk_ticket_open_tab
+  - helpdesk_mgmtsystem_nonconformity
   - helpdesk_mgmt_portal_follower
   - helpdesk_mgmt_timesheet
   - helpdesk_mgmt
@@ -595,6 +597,7 @@ oca:
   - maintenance_project
   management-system:
   - mgmtsystem_nonconformity_maintenance_equipment
+  - mgmtsystem_quality
   - mgmtsystem_nonconformity_hazard
   - mgmtsystem_hazard
   - document_page_environmental_aspect
@@ -833,6 +836,7 @@ oca:
   - product_cost_security
   - product_code_mandatory
   - product_packaging_level
+  - sale_product_matrix_secondary_unit
   - product_status
   - product_supplierinfo_archive
   - product_assortment
