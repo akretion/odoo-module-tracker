@@ -651,6 +651,7 @@ oca:
   - mrp_lot_number_propagation
   - quality_control_mrp_oca
   - mrp_attachment_mgmt
+  - mrp_production_generator_by_date_interval
   - mrp_production_picking_type_from_route
   - mrp_planned_order_matrix
   - mrp_lot_production_date
@@ -662,6 +663,7 @@ oca:
   - mrp_bom_structure_xlsx
   - mrp_bom_structure_xlsx_level_1
   - mrp_bom_structure_report_level_1
+  - mrp_bom_current_stock
   margin-analysis:
   - sale_margin_security
   - account_invoice_margin_sale
@@ -824,6 +826,7 @@ oca:
   - product_category_active
   - product_lot_sequence
   - product_packaging_dimension
+  - product_attribute_company_favorite
   - product_print_category
   - product_net_weight
   - product_product_template_link
