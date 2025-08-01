@@ -552,6 +552,7 @@ oca:
   - iot_oca
   knowledge:
   - document_knowledge
+  - document_page_tag_print_control
   - document_page_project
   - attachment_zipped_download
   - attachment_category
@@ -837,6 +838,7 @@ oca:
   - product_code_unique
   - purchase_product_template_tags
   - product_cost_security
+  - product_company_default
   - product_code_mandatory
   - product_packaging_level
   - sale_product_matrix_secondary_unit
@@ -1211,6 +1213,7 @@ oca:
   - barcode_action
   - base_technical_features
   - mail_suggested_recipient_unchecked
+  - document_quick_access
   - base_optional_quick_create
   - base_cancel_confirm
   - server_action_mass_edit
