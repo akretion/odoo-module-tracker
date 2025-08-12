@@ -1139,6 +1139,7 @@ oca:
   search-engine: []
   server-auth:
   - auth_api_key
+  - users_ldap_groups
   - users_ldap_populate
   - auth_api_key_server_env
   - auth_jwt
