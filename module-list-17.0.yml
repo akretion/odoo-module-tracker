@@ -571,7 +571,8 @@ oca:
   - document_page_access_group
   - document_page_approval
   - attachment_zipped_download
-  l10n-brazil: []
+  l10n-brazil:
+  - l10n_br_base
   l10n-france:
   - l10n_fr_account_tax_unece
   - account_banking_fr_lcr
@@ -692,6 +693,7 @@ oca:
   - product_multi_company
   - base_multi_company
   - account_invoice_inter_company
+  - mail_template_multi_company
   - purchase_sale_inter_company
   - mail_multicompany
   - product_tax_multicompany_default
@@ -817,6 +819,7 @@ oca:
   - product_supplierinfo_archive
   - uom_alias
   - product_sequence
+  - product_pricelist_direct_print
   - stock_production_lot_expired_date
   - product_product_template_link
   - product_attribute_company_favorite
@@ -1141,6 +1144,7 @@ oca:
   - sale_partner_address_restrict
   - sale_order_invoicing_finished_task
   - sale_promotion_rule
+  - sale_attached_product
   search-engine: []
   server-auth:
   - auth_api_key
@@ -1384,6 +1388,7 @@ oca:
   - stock_picking_group_by_base
   - stock_picking_origin_reference_purchase
   - stock_move_quantity_product_uom
+  - stock_receipt_lot_info
   - stock_picking_back2draft
   - stock_move_line_reference_link
   - stock_lock_lot
