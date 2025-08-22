@@ -387,7 +387,6 @@ oca:
   edi:
   - base_facturx
   - account_invoice_export
-  - edi_voxel_oca
   - pdf_helper
   - account_invoice_facturx
   - base_business_document_import
@@ -398,7 +397,6 @@ oca:
   - base_import_pdf_by_template
   - base_import_pdf_by_template_account
   - base_ubl
-  - edi_voxel_account_invoice_oca
   edi-framework:
   - edi_record_metadata_oca
   - edi_endpoint_oca
@@ -440,6 +438,7 @@ oca:
   - fieldservice_timeline
   - fieldservice_route_availability
   - fieldservice_sale_agreement_equipment_stock
+  - fieldservice_address_no_change
   - fieldservice_availability
   - fieldservice_sale
   - fieldservice_account
@@ -561,6 +560,7 @@ oca:
   knowledge:
   - document_page
   - attachment_category
+  - document_page_reference
   - document_page_group
   - document_page_partner
   - document_url
@@ -1157,6 +1157,7 @@ oca:
   - auth_saml
   - auth_admin_passkey_totp_mail_enforce
   - auth_api_key_group
+  - apikey_scope_editable
   - password_security
   - auth_signup_verify_email
   - auth_oauth_autologin
