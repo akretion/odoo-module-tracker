@@ -596,11 +596,13 @@ oca:
   - maintenance_account
   - maintenance_equipment_status
   - maintenance_timesheet_time_control
+  - maintenance_request_purchase
   - maintenance_project
   - maintenance_equipment_hierarchy
   - maintenance_product
   - maintenance_timesheet
   - base_maintenance
+  - maintenance_location
   - maintenance_equipment_category_hierarchy
   - maintenance_equipment_usage
   - maintenance_equipment_sequence
@@ -694,6 +696,7 @@ oca:
   - base_multi_company
   - account_invoice_inter_company
   - mail_template_multi_company
+  - res_company_active
   - purchase_sale_inter_company
   - mail_multicompany
   - product_tax_multicompany_default
@@ -838,6 +841,7 @@ oca:
   - purchase_product_template_tags
   - product_pricelist_assortment
   - product_supplierinfo_for_customer
+  - stock_product_template_tags
   - product_form_pricelist
   - product_pricelist_revision
   - product_set
@@ -1093,6 +1097,7 @@ oca:
   - sale_order_secondary_unit
   - sale_multi_template_application
   - sale_order_revision
+  - sale_order_partner_no_autofollow
   - sale_product_set
   - portal_sale_personal_data_only
   - sale_discount_display_amount
