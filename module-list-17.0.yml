@@ -573,8 +573,11 @@ oca:
   - document_page_partner
   - document_page_tag_print_control
   l10n-brazil:
+  - spec_driven_model
   - l10n_br_base
   - l10n_br_account_due_list
+  - l10n_br_nfe_spec
+  - l10n_br_fiscal
   l10n-france:
   - l10n_fr_mis_reports
   - l10n_fr_department_oversea
@@ -1255,7 +1258,8 @@ oca:
   - base_cancel_confirm
   - barcode_action
   - base_menu_visibility_restriction
-  shift-planning: []
+  shift-planning:
+  - hr_shift
   sign:
   - maintenance_sign_oca
   - sign_oca
