@@ -17,6 +17,7 @@ forgeflow:
 oca:
   account-analytic:
   - stock_landed_costs_analytic
+  - sale_analytic_tag
   - hr_timesheet_analytic_tag
   - account_analytic_distribution_manual
   - account_analytic_parent
@@ -34,6 +35,7 @@ oca:
   - purchase_analytic
   - purchase_request_analytic
   - account_analytic_spread_by_tag
+  - stock_analytic_rule
   - analytic_base_department
   - product_analytic
   - account_analytic_distribution_model_recalculate
@@ -219,6 +221,7 @@ oca:
   - sale_commission
   - account_commission
   community-data-files:
+  - l10n_eu_product_adr
   - product_fao_fishing
   - base_unece
   - company_sanitary_registry
@@ -575,7 +578,11 @@ oca:
   l10n-brazil:
   - spec_driven_model
   - l10n_br_base
+  - l10n_br_mdfe_spec
   - l10n_br_account_due_list
+  - l10n_br_cte_spec
+  - l10n_br_fiscal_certificate
+  - l10n_br_fiscal_edi
   - l10n_br_nfe_spec
   - l10n_br_fiscal
   l10n-france:
@@ -815,6 +822,7 @@ oca:
   - pos_config_phone
   - pos_partner_ref
   - pos_margin
+  - pos_open_cashbox_after_payment
   - pos_partner_firstname
   - pos_product_template
   - pos_user_restriction
@@ -1259,6 +1267,7 @@ oca:
   - barcode_action
   - base_menu_visibility_restriction
   shift-planning:
+  - hr_shift_holidays_public
   - hr_shift
   sign:
   - maintenance_sign_oca
