@@ -83,6 +83,7 @@ oca:
   - account_chart_update_l10n_eu_oss
   - account_usability
   - account_move_line_sale_info
+  - account_asset_management_stock_lot
   - account_netting
   - account_move_line_purchase_info
   - account_move_budget
@@ -577,9 +578,12 @@ oca:
   - document_page_tag_print_control
   l10n-brazil:
   - spec_driven_model
+  - l10n_br_hr
   - l10n_br_crm
+  - l10n_br_nfse_focus
   - l10n_br_base
   - l10n_br_mdfe_spec
+  - l10n_br_currency_rate_update
   - l10n_br_fiscal_dfe
   - l10n_br_account_due_list
   - l10n_br_cte_spec
@@ -1043,11 +1047,13 @@ oca:
   - base_report_to_printer
   reporting-engine:
   - kpi
+  - report_text_format_option
   - report_xlsx_helper
   - sql_request_abstract
   - base_comment_template
   - report_py3o
   - report_qweb_signer
+  - report_qweb_field_option
   - sql_export_mail
   - report_async
   - report_wkhtmltopdf_param
