@@ -1017,7 +1017,9 @@ oca:
   - purchase_commercial_partner
   - purchase_order_type
   - purchase_order_line_sequence
+  - purchase_invoice_status_line
   - purchase_invoice_plan
+  - purchase_order_uninvoiced_amount_line
   - purchase_stock_price_unit_sync
   pwa-builder: []
   queue:
@@ -1157,6 +1159,7 @@ oca:
   - sale_resource_booking
   - sale_order_product_availability_inline
   - sale_stock_delivery_state
+  - sale_block_no_stock
   - sale_blanket_order
   - sale_invoice_policy
   - sale_order_line_input
