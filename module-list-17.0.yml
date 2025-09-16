@@ -267,6 +267,7 @@ oca:
   - contract_mandate
   - contract_sale_invoicing
   - contract_price_revision
+  - contract_analytic_tag
   - contract_invoice_start_end_dates
   - contract
   - subscription_oca
@@ -772,6 +773,7 @@ oca:
   - partner_deduplicate_by_website
   - partner_second_lastname
   - partner_contact_personal_information_page
+  - partner_search_alias
   - partner_contact_role
   - partner_tier_validation
   - partner_ref_unique
@@ -861,6 +863,7 @@ oca:
   - product_pricelist_by_contact
   - product_attribute_company_favorite
   - uom_category_active
+  - product_multi_code
   - purchase_product_template_tags
   - product_main_supplierinfo
   - product_logistics_uom_total_weight
@@ -1483,6 +1486,7 @@ oca:
   - fs_image_thumbnail
   - fs_base_multi_image
   - fs_image
+  - fs_attachment_s3
   survey:
   - survey_answer_generation
   - survey_partner_representative
