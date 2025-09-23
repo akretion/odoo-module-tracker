@@ -647,6 +647,7 @@ oca:
   - mgmtsystem_quality
   - mgmtsystem_nonconformity_hazard
   - mgmtsystem_hazard_risk
+  - mgmtsystem_review_survey
   - mgmtsystem_info_security_manual
   - mgmtsystem
   - mgmtsystem_nonconformity_type
@@ -813,10 +814,12 @@ oca:
   - partner_pricelist_search
   payroll:
   - payroll_hr_public_holidays
+  - payroll_account
   - payroll
   pms: []
   pos:
   - pos_partner_vat_required
+  - pos_partner_sale_warning
   - pos_partner_vat_valid
   - pos_product_expiry
   - pos_cash_move_reason
@@ -831,6 +834,7 @@ oca:
   - pos_cash_control_extension
   - pos_partner_birthdate
   - pos_partner_address_required
+  - pos_session_sequence
   - pos_lot_selection
   - pos_config_phone
   - pos_partner_ref
@@ -910,6 +914,7 @@ oca:
   - product_variant_default_code
   - purchase_variant_configurator
   - product_variant_configurator
+  - product_variant_name
   - product_variant_sale_price
   program: []
   project:
