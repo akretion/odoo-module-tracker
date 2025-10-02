@@ -1054,6 +1054,7 @@ oca:
   - repair_order_template
   - repair_quotation_manual_sync
   - repair_timesheet
+  - repair_order_line_sequence
   - repair_type_product_destination
   - repair_picking
   - repair_substate
@@ -1261,6 +1262,7 @@ oca:
   - sentry
   - onchange_helper
   - rpc_helper
+  - test_auditlog
   - base_model_restrict_update
   - base_m2m_custom_field
   - database_cleanup
