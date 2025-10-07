@@ -896,6 +896,7 @@ oca:
   - product_packaging_level_salable
   - product_state_sale
   - product_readonly_security
+  - product_attribute_auto_add
   - product_secondary_unit
   - product_pricelist_by_contact
   - product_product_template_link
@@ -903,6 +904,7 @@ oca:
   - stock_product_template_tags
   - product_status
   - product_net_weight
+  - product_route_mto
   product-configurator:
   - product_configurator_sale
   - website_product_configurator
@@ -912,6 +914,7 @@ oca:
   - stock_product_pack
   - sale_product_pack
   - sale_stock_product_pack
+  - sale_product_pack_fixed_discount
   - website_sale_product_pack
   - product_pack
   product-variant:
