@@ -1253,6 +1253,7 @@ oca:
   server-tools:
   - module_change_auto_install
   - server_action_logging
+  - slow_statement_logger
   - auto_backup
   - base_name_search_improved
   - base_cron_exclusion
