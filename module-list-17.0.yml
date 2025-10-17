@@ -1113,6 +1113,7 @@ oca:
   sale-channel: []
   sale-financial: []
   sale-promotion:
+  - loyalty_partner_applicability
   - coupon_chatter
   - loyalty_card_fixed_expiration_date
   sale-reporting:
@@ -1644,6 +1645,7 @@ oca:
   - website_snippet_big_button
   - website_require_login
   - website_forum_subscription
+  - website_legal_page
   - website_cookiebot
   - website_local_font
   - website_crm_quick_answer
