@@ -1,0 +1,2571 @@
+account-analytic:
+  modules:
+    - account_analytic_parent
+    - account_analytic_required
+    - account_analytic_sequence
+    - account_analytic_tag_default
+    - account_move_update_analytic
+    - analytic_base_department
+    - analytic_partner
+    - analytic_tag_dimension
+    - mrp_analytic
+    - partner_analytic
+    - pos_analytic_by_config
+    - procurement_mto_analytic
+    - product_analytic
+    - purchase_analytic
+    - purchase_request_analytic
+    - purchase_stock_analytic
+    - stock_analytic
+  remotes:
+    oca: https://github.com/oca/account-analytic
+  merges:
+    - oca 15.0
+account-closing:
+  modules:
+    - account_cutoff_accrual_picking
+    - account_cutoff_accrual_subscription
+    - account_cutoff_base
+    - account_cutoff_start_end_dates
+    - account_invoice_start_end_dates
+    - account_multicurrency_revaluation
+  remotes:
+    oca: https://github.com/oca/account-closing
+  merges:
+    - oca 15.0
+account-financial-reporting:
+  modules:
+    - account_financial_report
+    - account_financial_report_sale
+    - account_move_line_report_xls
+    - account_purchase_stock_report_non_billed
+    - account_sale_stock_report_non_billed
+    - account_tax_balance
+    - mis_builder_cash_flow
+    - mis_template_financial_report
+    - partner_statement
+  remotes:
+    oca: https://github.com/oca/account-financial-reporting
+  merges:
+    - oca 15.0
+account-financial-tools:
+  modules:
+    - account_asset_batch_compute
+    - account_asset_compute_batch
+    - account_asset_low_value
+    - account_asset_management
+    - account_asset_management_menu
+    - account_asset_number
+    - account_asset_transfer
+    - account_balance_line
+    - account_chart_update
+    - account_chart_update_l10n_eu_oss
+    - account_chart_update_l10n_eu_oss_oca
+    - account_check_deposit
+    - account_cost_center
+    - account_fiscal_month
+    - account_fiscal_position_vat_check
+    - account_fiscal_year
+    - account_invoice_constraint_chronology
+    - account_journal_general_sequence
+    - account_journal_lock_date
+    - account_loan
+    - account_lock_date_update
+    - account_lock_to_date
+    - account_maturity_date_default
+    - account_move_budget
+    - account_move_fiscal_month
+    - account_move_fiscal_year
+    - account_move_force_removal
+    - account_move_line_menu
+    - account_move_line_purchase_info
+    - account_move_line_repair_info
+    - account_move_line_residual
+    - account_move_line_sale_info
+    - account_move_line_tax_editable
+    - account_move_name_sequence
+    - account_move_print
+    - account_move_reversal_choose_method
+    - account_move_template
+    - account_move_total_by_account_internal_group
+    - account_netting
+    - account_sequence_option
+    - account_spread_cost_revenue
+    - account_usability
+    - base_vat_optional_vies
+    - product_category_tax
+    - stock_account_no_auto_reconcile
+  remotes:
+    oca: https://github.com/oca/account-financial-tools
+  merges:
+    - oca 15.0
+account-fiscal-rule:
+  modules:
+    - account_avatax_exemption_base
+    - account_avatax_oca
+    - account_avatax_sale_oca
+    - account_fiscal_position_autodetect_optional_vies
+    - account_fiscal_position_partner_type
+    - account_fiscal_position_type
+    - account_multi_vat
+    - l10n_eu_oss_oca
+  remotes:
+    oca: https://github.com/oca/account-fiscal-rule
+  merges:
+    - oca 15.0
+account-invoice-reporting:
+  modules:
+    - account_comment_template
+    - account_invoice_line_report
+    - account_invoice_line_sale_line_position
+    - account_invoice_production_lot
+    - account_invoice_report_due_list
+    - account_invoice_report_grouped_by_picking
+    - account_invoice_report_grouped_by_picking_sale_mrp
+    - account_invoice_report_payment_info
+    - account_invoice_report_utm
+    - account_reporting_volume
+    - account_reporting_weight
+    - partner_time_to_pay
+  remotes:
+    oca: https://github.com/oca/account-invoice-reporting
+  merges:
+    - oca 15.0
+account-invoicing:
+  modules:
+    - account_global_discount
+    - account_invoice_alternate_payer
+    - account_invoice_analytic_search
+    - account_invoice_anglo_saxon_no_cogs_deferral
+    - account_invoice_block_payment
+    - account_invoice_blocking
+    - account_invoice_change_currency
+    - account_invoice_check_picking_date
+    - account_invoice_check_total
+    - account_invoice_clearing
+    - account_invoice_crm_tag
+    - account_invoice_custom_rounding
+    - account_invoice_date_due
+    - account_invoice_discount_date
+    - account_invoice_discount_display_amount
+    - account_invoice_fiscal_position_update
+    - account_invoice_fixed_discount
+    - account_invoice_force_number
+    - account_invoice_line_description
+    - account_invoice_line_sequence
+    - account_invoice_mass_sending
+    - account_invoice_merge
+    - account_invoice_payment_retention
+    - account_invoice_payment_term_date_due
+    - account_invoice_pricelist
+    - account_invoice_pricelist_sale
+    - account_invoice_refund_line_selection
+    - account_invoice_refund_link
+    - account_invoice_refund_reason
+    - account_invoice_refund_reason_skip_anglo_saxon
+    - account_invoice_refund_reinvoice
+    - account_invoice_restrict_linked_so
+    - account_invoice_search_by_reference
+    - account_invoice_section_sale_order
+    - account_invoice_supplier_ref_unique
+    - account_invoice_supplier_self_invoice
+    - account_invoice_tax_note
+    - account_invoice_tax_required
+    - account_invoice_transmit_method
+    - account_invoice_tree_currency
+    - account_invoice_triple_discount
+    - account_invoice_validation_queued
+    - account_invoice_view_payment
+    - account_invoice_warn_message
+    - account_manual_currency
+    - account_move_exception
+    - account_move_original_partner
+    - account_move_post_block
+    - account_move_search_line
+    - account_move_sent_usability
+    - account_move_substate
+    - account_move_tier_validation
+    - account_move_tier_validation_forward
+    - account_portal_hide_invoice
+    - account_portal_invoice_search
+    - account_portal_invoice_search_by_lot
+    - account_receipt_journal
+    - account_receipt_send
+    - account_tax_group_widget_base_amount
+    - account_warn_option
+    - partner_invoicing_mode
+    - partner_invoicing_mode_at_shipping
+    - portal_account_personal_data_only
+    - product_form_account_move_line_link
+    - product_supplierinfo_for_customer_invoice
+    - purchase_order_invoicing_grouping_criteria
+    - purchase_stock_picking_return_invoicing
+    - sale_invoicing_date_selection
+    - sale_line_refund_to_invoice_qty
+    - sale_line_refund_to_invoice_qty_skip_anglo_saxon
+    - sale_order_invoicing_grouping_criteria
+    - sale_order_invoicing_qty_percentage
+    - sale_order_type_whole_delivered_invoiceability
+    - sale_order_whole_delivered_invoiceability
+    - sale_stock_picking_invoicing
+    - sale_timesheet_invoice_description
+    - stock_picking_invoicing
+    - stock_picking_invoicing_incoterm
+    - stock_picking_return_refund_option
+  remotes:
+    oca: https://github.com/oca/account-invoicing
+  merges:
+    - oca 15.0
+account-payment:
+  modules:
+    - account_check_date
+    - account_check_payee
+    - account_check_printing_report_base
+    - account_check_printing_report_dlt103
+    - account_check_printing_report_sslm102
+    - account_check_report
+    - account_due_list
+    - account_due_list_payment_mode
+    - account_payment_batch_process
+    - account_payment_multi_deduction
+    - account_payment_notification
+    - account_payment_promissory_note
+    - account_payment_return
+    - account_payment_return_import
+    - account_payment_return_import_iso20022
+    - account_payment_term_extension
+    - account_payment_term_partner_holiday
+    - account_payment_term_restriction
+    - account_payment_term_security
+    - account_payment_widget_amount
+    - account_voucher_killer
+    - partner_aging
+    - partner_restrict_payment_acquirer
+    - sale_payment_term_security
+  remotes:
+    oca: https://github.com/oca/account-payment
+  merges:
+    - oca 15.0
+account-reconcile:
+  modules:
+    - account_bank_statement_reopen_skip_undo_reconciliation
+    - account_mass_reconcile
+    - account_mass_reconcile_by_purchase_line
+    - account_move_reconcile_forbid_cancel
+    - account_move_reconcile_helper
+    - account_partner_reconcile
+    - account_reconcile_payment_order
+    - account_reconcile_restrict_partner_mismatch
+    - account_reconciliation_widget
+    - account_reconciliation_widget_due_date
+    - account_reconciliation_widget_limit_aml
+  remotes:
+    oca: https://github.com/oca/account-reconcile
+  merges:
+    - oca 15.0
+agreement:
+  modules:
+    - agreement
+    - agreement_legal
+    - agreement_rebate
+    - agreement_serviceprofile
+  remotes:
+    oca: https://github.com/oca/agreement
+  merges:
+    - oca 15.0
+bank-payment:
+  modules:
+    - account_banking_mandate
+    - account_banking_mandate_contact
+    - account_banking_mandate_sale
+    - account_banking_pain_base
+    - account_banking_sepa_credit_transfer
+    - account_banking_sepa_direct_debit
+    - account_payment_mode
+    - account_payment_order
+    - account_payment_order_grouped_output
+    - account_payment_order_return
+    - account_payment_partner
+    - account_payment_purchase
+    - account_payment_purchase_stock
+    - account_payment_sale
+  remotes:
+    oca: https://github.com/oca/bank-payment
+  merges:
+    - oca 15.0
+bank-statement-import:
+  modules:
+    - account_bank_statement_clear_partner
+    - account_bank_statement_import_move_line
+    - account_statement_import
+    - account_statement_import_base
+    - account_statement_import_camt
+    - account_statement_import_camt54
+    - account_statement_import_file_reconciliation_widget
+    - account_statement_import_move_line
+    - account_statement_import_ofx
+    - account_statement_import_online
+    - account_statement_import_online_gocardless
+    - account_statement_import_online_paypal
+    - account_statement_import_online_ponto
+    - account_statement_import_paypal
+    - account_statement_import_txt_xlsx
+  remotes:
+    oca: https://github.com/oca/bank-statement-import
+  merges:
+    - oca 15.0
+bank-statement-reconcile-simple:
+  modules:
+    - account_statement_completion_label_simple
+    - account_statement_completion_label_simple_sale
+  remotes:
+    akretion: https://github.com/akretion/bank-statement-reconcile-simple
+  merges:
+    - akretion 15.0
+brand:
+  modules:
+    - account_brand
+    - analytic_brand
+    - brand
+    - brand_external_report_layout
+    - contract_brand
+    - mail_brand
+    - product_brand
+    - product_brand_stock
+    - sale_brand
+  remotes:
+    oca: https://github.com/oca/brand
+  merges:
+    - oca 15.0
+business-requirement:
+  modules:
+    - business_requirement
+  remotes:
+    oca: https://github.com/oca/business-requirement
+  merges:
+    - oca 15.0
+calendar:
+  modules:
+    - calendar_export_ics
+    - calendar_import_ics
+    - resource_booking
+  remotes:
+    oca: https://github.com/oca/calendar
+  merges:
+    - oca 15.0
+commission:
+  modules:
+    - account_commission
+    - commission
+    - commission_formula
+    - hr_commission
+    - sale_commission
+    - sale_commission_product_criteria
+    - sale_commission_product_criteria_semaphore
+    - sale_commission_salesman
+  remotes:
+    oca: https://github.com/oca/commission
+  merges:
+    - oca 15.0
+community-data-files:
+  modules:
+    - account_payment_unece
+    - account_tax_unece
+    - base_bank_from_iban
+    - base_currency_iso_4217
+    - base_iso3166
+    - base_unece
+    - company_sanitary_registry
+    - product_fao_fishing
+    - uom_unece
+  remotes:
+    oca: https://github.com/oca/community-data-files
+  merges:
+    - oca 15.0
+connector:
+  modules:
+    - component
+    - component_event
+    - connector
+    - connector_base_product
+    - test_component
+    - test_connector
+  remotes:
+    oca: https://github.com/oca/connector
+  merges:
+    - oca 15.0
+connector-interfaces:
+  modules:
+    - connector_importer
+    - connector_importer_product
+    - connector_importer_source_sftp
+  remotes:
+    oca: https://github.com/oca/connector-interfaces
+  merges:
+    - oca 15.0
+connector-jira:
+  modules:
+    - connector_jira
+    - connector_jira_servicedesk
+    - connector_jira_tempo
+    - connector_jira_tempo_base
+    - server_env_connector_jira
+  remotes:
+    oca: https://github.com/oca/connector-jira
+  merges:
+    - oca 15.0
+contract:
+  modules:
+    - agreement_rebate_partner_company_group
+    - contract
+    - contract_payment_mode
+    - contract_price_revision
+    - contract_sale
+    - contract_sale_generation
+    - contract_sale_invoicing
+    - contract_variable_qty_timesheet
+    - contract_variable_quantity
+    - product_contract
+    - subscription_oca
+  remotes:
+    oca: https://github.com/oca/contract
+  merges:
+    - oca 15.0
+credit-control:
+  modules:
+    - account_credit_control
+    - account_financial_risk
+    - account_invoice_overdue_reminder
+    - account_payment_return_financial_risk
+    - partner_risk_insurance
+    - sale_financial_risk
+    - sale_financial_risk_confirm_action
+    - sale_financial_risk_info
+    - sale_payment_sheet_financial_risk
+  remotes:
+    oca: https://github.com/oca/credit-control
+  merges:
+    - oca 15.0
+crm:
+  modules:
+    - crm_claim
+    - crm_claim_code
+    - crm_claim_type
+    - crm_industry
+    - crm_lead_code
+    - crm_lead_firstname
+    - crm_lead_vat
+    - crm_location
+    - crm_multicompany_reporting_currency
+    - crm_partner_assign
+    - crm_phonecall
+    - crm_phonecall_planner
+    - crm_phonecall_summary_predefined
+    - crm_project
+    - crm_project_task
+    - crm_salesperson_planner
+    - crm_salesperson_planner_sale
+    - crm_security_group
+    - crm_stage_probability
+    - crm_won_reason
+    - crm_won_restrict_per_stage
+    - marketing_crm_partner
+  remotes:
+    oca: https://github.com/oca/crm
+  merges:
+    - oca 15.0
+currency:
+  modules:
+    - currency_rate_update
+    - currency_rate_update_xe
+  remotes:
+    oca: https://github.com/oca/currency
+  merges:
+    - oca 15.0
+data-protection:
+  modules:
+    - privacy
+    - privacy_consent
+  remotes:
+    oca: https://github.com/oca/data-protection
+  merges:
+    - oca 15.0
+ddmrp:
+  modules:
+    - ddmrp
+    - ddmrp_adjustment
+    - ddmrp_chatter
+    - ddmrp_coverage_days
+    - ddmrp_cron_actions_as_job
+    - ddmrp_exclude_moves_adu_calc
+    - ddmrp_history
+    - ddmrp_packaging
+    - ddmrp_product_replace
+    - ddmrp_report_part_flow_index
+    - ddmrp_warning
+    - stock_buffer_capacity_limit
+    - stock_buffer_route
+    - stock_buffer_sales_analysis
+  remotes:
+    oca: https://github.com/oca/ddmrp
+  merges:
+    - oca 15.0
+delivery-carrier:
+  modules:
+    - base_delivery_carrier_label
+    - connector_routific
+    - delivery_auto_refresh
+    - delivery_carrier_info
+    - delivery_carrier_multi_zip
+    - delivery_carrier_partner
+    - delivery_correos_express
+    - delivery_cttexpress
+    - delivery_free_fee_removal
+    - delivery_multi_destination
+    - delivery_package_number
+    - delivery_price_method
+    - delivery_price_rule_untaxed
+    - delivery_purchase
+    - delivery_purchase_multi_destination
+    - delivery_state
+    - delivery_translatable
+    - partner_delivery_schedule
+    - partner_delivery_zone
+    - stock_picking_delivery_link
+    - stock_picking_report_delivery_cost
+  remotes:
+    oca: https://github.com/oca/delivery-carrier
+  merges:
+    - oca 15.0
+dms:
+  modules:
+    - dms
+    - dms_attachment_link
+    - dms_auto_classification
+    - dms_field
+    - dms_field_auto_classification
+    - dms_user_role
+    - hr_dms_field
+  remotes:
+    oca: https://github.com/oca/dms
+  merges:
+    - oca 15.0
+donation:
+  modules:
+    - donation_base
+  remotes:
+    oca: https://github.com/oca/donation
+  merges:
+    - oca 15.0
+e-commerce:
+  modules:
+    - portal_sale_order_website_filter
+    - product_template_multi_link
+    - website_account_fiscal_position_partner_type
+    - website_sale_address_format
+    - website_sale_attribute_filter_form_submit
+    - website_sale_b2x_alt_price
+    - website_sale_block_partner
+    - website_sale_cart_expire
+    - website_sale_cart_selectable
+    - website_sale_charge_payment_fee
+    - website_sale_checkout_country_vat
+    - website_sale_checkout_skip_payment
+    - website_sale_comparison_hide_price
+    - website_sale_google_tag_manager
+    - website_sale_hide_empty_category
+    - website_sale_hide_price
+    - website_sale_invoice_address
+    - website_sale_menu_partner_top_selling
+    - website_sale_order_cancel
+    - website_sale_order_type
+    - website_sale_partner_restrict_payment_acquirer
+    - website_sale_product_assortment
+    - website_sale_product_attachment
+    - website_sale_product_attribute_filter_category
+    - website_sale_product_attribute_filter_collapse
+    - website_sale_product_attribute_filter_order
+    - website_sale_product_attribute_value_filter_existing
+    - website_sale_product_brand
+    - website_sale_product_description
+    - website_sale_product_detail_attribute_image
+    - website_sale_product_detail_attribute_value_image
+    - website_sale_product_item_cart_custom_qty
+    - website_sale_product_matrix
+    - website_sale_product_minimal_price
+    - website_sale_product_publish_date
+    - website_sale_product_reference_displayed
+    - website_sale_product_sort
+    - website_sale_require_legal
+    - website_sale_require_login
+    - website_sale_resource_booking
+    - website_sale_restrict_by_pricelist
+    - website_sale_secondary_unit
+    - website_sale_secondary_unit_product_matrix
+    - website_sale_stock_available
+    - website_sale_stock_list_preview
+    - website_sale_stock_order_cancel
+    - website_sale_stock_product_matrix
+    - website_sale_stock_provisioning_date
+    - website_sale_suggest_create_account
+    - website_sale_tax_toggle
+    - website_sale_vat_required
+    - website_sale_wishlist_archive_cron
+    - website_sale_wishlist_hide_price
+    - website_sale_wishlist_keep
+    - website_sale_wishlist_menuitem
+    - website_snippet_product_category
+  remotes:
+    oca: https://github.com/oca/e-commerce
+  merges:
+    - oca 15.0
+e-learning:
+  modules:
+    - website_sale_slides_order_line_link
+  remotes:
+    oca: https://github.com/oca/e-learning
+  merges:
+    - oca 15.0
+edi:
+  modules:
+    - account_einvoice_generate
+    - account_invoice_facturx
+    - base_edi
+    - base_facturx
+    - base_import_pdf_by_template
+    - base_ubl
+    - edi_account_oca
+    - edi_backend_partner_oca
+    - edi_exchange_template_oca
+    - edi_oca
+    - edi_stock_oca
+    - edi_storage_oca
+    - edi_voxel_account_invoice_oca
+    - edi_voxel_oca
+    - edi_voxel_sale_order_import_oca
+    - edi_voxel_sale_secondary_unit_oca
+    - edi_voxel_secondary_unit_oca
+    - edi_voxel_stock_picking_oca
+    - edi_voxel_stock_picking_secondary_unit_oca
+    - edi_webservice_oca
+    - pdf_helper
+    - test_base_import_pdf_by_template
+  remotes:
+    oca: https://github.com/oca/edi
+  merges:
+    - oca 15.0
+event:
+  modules:
+    - crm_event
+    - event_email_reminder
+    - event_mail
+    - event_min_seat
+    - event_quick_registration
+    - event_registration_cancel_reason
+    - event_registration_mail_compose
+    - event_registration_partner_unique
+    - event_registration_qr_code
+    - event_sale_reservation
+    - event_sale_session
+    - event_session
+    - event_stage_cancelled
+    - event_track_location_overlap
+    - partner_event
+    - sale_crm_event_reservation
+    - website_event_crm_invitation
+    - website_event_filter_city
+    - website_event_questions_by_ticket
+    - website_event_require_login
+    - website_event_sale_b2x_alt_price
+    - website_event_sale_cart_quantity_readonly
+    - website_event_snippet_calendar
+    - website_event_ticket_published
+    - website_event_track_stage_cancelled
+  remotes:
+    oca: https://github.com/oca/event
+  merges:
+    - oca 15.0
+field-service:
+  modules:
+    - base_territory
+    - fieldservice
+    - fieldservice_account
+    - fieldservice_account_analytic
+    - fieldservice_account_payment
+    - fieldservice_activity
+    - fieldservice_availability
+    - fieldservice_calendar
+    - fieldservice_change_management
+    - fieldservice_crm
+    - fieldservice_delivery
+    - fieldservice_delivery_quantities
+    - fieldservice_distribution
+    - fieldservice_equipment_stock
+    - fieldservice_fleet
+    - fieldservice_isp_account
+    - fieldservice_isp_flow
+    - fieldservice_kanban_info
+    - fieldservice_kanban_info_route
+    - fieldservice_location_builder
+    - fieldservice_logbook
+    - fieldservice_partner_multi_relation
+    - fieldservice_portal
+    - fieldservice_project
+    - fieldservice_purchase
+    - fieldservice_recurring
+    - fieldservice_repair
+    - fieldservice_route
+    - fieldservice_sale
+    - fieldservice_sale_note
+    - fieldservice_sale_order_create_wizard
+    - fieldservice_sale_recurring
+    - fieldservice_sale_sign
+    - fieldservice_sale_stock
+    - fieldservice_sale_stock_product_tags
+    - fieldservice_sale_stock_route
+    - fieldservice_size
+    - fieldservice_skill
+    - fieldservice_stage_server_action
+    - fieldservice_stage_validation
+    - fieldservice_stock
+    - fieldservice_substatus
+    - fieldservice_vehicle
+    - fieldservice_vehicle_stock
+    - fieldservice_website_sale
+    - fieldservice_website_sale_extra_step
+  remotes:
+    oca: https://github.com/oca/field-service
+  merges:
+    - oca 15.0
+fleet:
+  modules:
+    - fleet_vehicle_calendar_year
+    - fleet_vehicle_category
+    - fleet_vehicle_configuration
+    - fleet_vehicle_fuel_capacity
+    - fleet_vehicle_fuel_type_ethanol
+    - fleet_vehicle_history_date_end
+    - fleet_vehicle_inspection
+    - fleet_vehicle_inspection_template
+    - fleet_vehicle_log_fuel
+    - fleet_vehicle_service_activity
+    - fleet_vehicle_service_calendar
+    - fleet_vehicle_service_kanban
+    - fleet_vehicle_service_services
+    - fleet_vehicle_stock
+  remotes:
+    oca: https://github.com/oca/fleet
+  merges:
+    - oca 15.0
+helpdesk:
+  modules:
+    - helpdesk_mgmt
+    - helpdesk_mgmt_crm
+    - helpdesk_mgmt_project
+    - helpdesk_mgmt_rating
+    - helpdesk_mgmt_sale
+    - helpdesk_mgmt_timesheet
+    - helpdesk_mgmtsystem_nonconformity
+    - helpdesk_motive
+    - helpdesk_type
+  remotes:
+    oca: https://github.com/oca/helpdesk
+  merges:
+    - oca 15.0
+hr:
+  modules:
+    - hr_announcement
+    - hr_branch
+    - hr_contract_employee_calendar_planning
+    - hr_contract_multi_job
+    - hr_contract_reference
+    - hr_contract_type
+    - hr_course
+    - hr_department_code
+    - hr_emergency_contact
+    - hr_employee_age
+    - hr_employee_birth_name
+    - hr_employee_birthday_mail
+    - hr_employee_calendar_planning
+    - hr_employee_digitized_signature
+    - hr_employee_document
+    - hr_employee_firstname
+    - hr_employee_id
+    - hr_employee_lastnames
+    - hr_employee_medical_examination
+    - hr_employee_partner_external
+    - hr_employee_phone_extension
+    - hr_employee_relative
+    - hr_employee_service
+    - hr_employee_service_contract
+    - hr_employee_ssn
+    - hr_holidays_settings
+    - hr_job_category
+    - hr_org_chart_overview
+    - hr_personal_equipment_request
+    - hr_study
+    - hr_worked_days_from_timesheet
+    - passport_expiration
+  remotes:
+    oca: https://github.com/oca/hr
+  merges:
+    - oca 15.0
+hr-attendance:
+  modules:
+    - hr_attendance_autoclose
+    - hr_attendance_calendar_view
+    - hr_attendance_contract_missing_days
+    - hr_attendance_geolocation
+    - hr_attendance_missing_days
+    - hr_attendance_modification_tracking
+    - hr_attendance_overtime_manual
+    - hr_attendance_reason
+    - hr_attendance_report_theoretical_time
+    - hr_attendance_rest_time_included
+    - hr_attendance_rfid
+  remotes:
+    oca: https://github.com/oca/hr-attendance
+  merges:
+    - oca 15.0
+hr-expense:
+  modules:
+    - hr_expense_advance_clearing
+    - hr_expense_advance_clearing_sequence
+    - hr_expense_advance_overdue_reminder
+    - hr_expense_cancel
+    - hr_expense_cancel_confirm
+    - hr_expense_employee_analytic_default
+    - hr_expense_exception
+    - hr_expense_excluded_tax
+    - hr_expense_invoice
+    - hr_expense_journal
+    - hr_expense_pay_to_vendor
+    - hr_expense_payment
+    - hr_expense_payment_widget_amount
+    - hr_expense_petty_cash
+    - hr_expense_portal
+    - hr_expense_sequence
+    - hr_expense_sequence_option
+    - hr_expense_substate
+    - hr_expense_tax_adjust
+    - hr_expense_tier_validation
+    - hr_expense_widget_o2m
+    - sale_expense_cost_reinvoice
+    - sale_expense_manual_reinvoice
+  remotes:
+    oca: https://github.com/oca/hr-expense
+  merges:
+    - oca 15.0
+hr-holidays:
+  modules:
+    - hr_holidays_calendar_event_privacy
+    - hr_holidays_leave_self_approve
+    - hr_holidays_natural_period
+    - hr_holidays_public
+    - hr_holidays_public_city
+    - hr_holidays_public_overtime
+    - hr_leave_custom_hour_interval
+  remotes:
+    oca: https://github.com/oca/hr-holidays
+  merges:
+    - oca 15.0
+interface-git:
+  modules:
+    - github_connector
+    - github_connector_odoo
+  remotes:
+    oca: https://github.com/oca/interface-git
+  merges:
+    - oca 15.0
+intrastat-extrastat:
+  modules:
+    - intrastat_base
+    - intrastat_product
+    - intrastat_product_generic
+    - intrastat_product_hscodes_import
+    - product_harmonized_system
+    - product_harmonized_system_delivery
+    - product_harmonized_system_stock
+  remotes:
+    oca: https://github.com/oca/intrastat-extrastat
+  merges:
+    - oca 15.0
+iot:
+  modules:
+    - iot_amqp_oca
+    - iot_input_oca
+    - iot_oca
+    - iot_option_oca
+    - iot_output_oca
+    - iot_rule
+    - iot_template_oca
+  remotes:
+    oca: https://github.com/oca/iot
+  merges:
+    - oca 15.0
+knowledge:
+  modules:
+    - attachment_preview
+    - attachment_zipped_download
+    - document_page
+    - document_page_access_group
+    - document_page_approval
+    - document_page_group
+    - document_page_project
+    - document_page_reference
+    - document_page_tag
+    - document_url
+    - knowledge
+  remotes:
+    oca: https://github.com/oca/knowledge
+  merges:
+    - oca 15.0
+l10n-brazil:
+  modules:
+    - l10n_br_account
+    - l10n_br_account_due_list
+    - l10n_br_account_nfe
+    - l10n_br_account_payment_order
+    - l10n_br_account_withholding
+    - l10n_br_base
+    - l10n_br_cnab_structure
+    - l10n_br_cnpj_search
+    - l10n_br_coa
+    - l10n_br_coa_generic
+    - l10n_br_coa_simple
+    - l10n_br_crm
+    - l10n_br_cte
+    - l10n_br_cte_spec
+    - l10n_br_currency_rate_update
+    - l10n_br_fiscal
+    - l10n_br_fiscal_certificate
+    - l10n_br_fiscal_closing
+    - l10n_br_fiscal_dfe
+    - l10n_br_fiscal_edi
+    - l10n_br_hr
+    - l10n_br_ie_search
+    - l10n_br_mdfe
+    - l10n_br_mdfe_spec
+    - l10n_br_mis_report
+    - l10n_br_nfe
+    - l10n_br_nfe_spec
+    - l10n_br_nfse
+    - l10n_br_nfse_focus
+    - l10n_br_nfse_paulistana
+    - l10n_br_purchase
+    - l10n_br_resource
+    - l10n_br_sale
+    - l10n_br_setup_tests
+    - l10n_br_stock
+    - l10n_br_zip
+    - spec_driven_model
+  remotes:
+    oca: https://github.com/oca/l10n-brazil
+  merges:
+    - oca 15.0
+l10n-france:
+  modules:
+    - account_banking_fr_lcr
+    - account_statement_import_fr_cfonb
+    - l10n_fr_account_invoice_facturx
+    - l10n_fr_account_tax_unece
+    - l10n_fr_chorus_account
+    - l10n_fr_chorus_facturx
+    - l10n_fr_chorus_sale
+    - l10n_fr_cog
+    - l10n_fr_das2
+    - l10n_fr_department
+    - l10n_fr_department_oversea
+    - l10n_fr_ecotaxe
+    - l10n_fr_ecotaxe_product
+    - l10n_fr_ecotaxe_sale
+    - l10n_fr_intrastat_product
+    - l10n_fr_intrastat_service
+    - l10n_fr_siret
+    - l10n_fr_state
+  remotes:
+    oca: https://github.com/oca/l10n-france
+  merges:
+    - oca 15.0
+maintenance:
+  modules:
+    - base_maintenance
+    - base_maintenance_config
+    - base_maintenance_group
+    - maintenance_account
+    - maintenance_equipment_contract
+    - maintenance_equipment_hierarchy
+    - maintenance_equipment_image
+    - maintenance_equipment_scrap
+    - maintenance_equipment_sequence
+    - maintenance_equipment_status
+    - maintenance_equipment_tags
+    - maintenance_plan
+    - maintenance_plan_activity
+    - maintenance_plan_employee
+    - maintenance_product
+    - maintenance_project
+    - maintenance_remote
+    - maintenance_request_employee
+    - maintenance_request_repair
+    - maintenance_request_sequence
+    - maintenance_request_stage_transition
+    - maintenance_security
+    - maintenance_team_hierarchy
+    - maintenance_timesheet
+    - maintenance_timesheet_time_control
+  remotes:
+    oca: https://github.com/oca/maintenance
+  merges:
+    - oca 15.0
+management-system:
+  modules:
+    - document_page_environment_manual
+    - document_page_environmental_aspect
+    - document_page_health_safety_manual
+    - document_page_procedure
+    - document_page_quality_manual
+    - document_page_work_instruction
+    - mgmtsystem
+    - mgmtsystem_action
+    - mgmtsystem_action_efficacy
+    - mgmtsystem_action_template
+    - mgmtsystem_audit
+    - mgmtsystem_claim
+    - mgmtsystem_environment
+    - mgmtsystem_hazard
+    - mgmtsystem_hazard_risk
+    - mgmtsystem_health_safety
+    - mgmtsystem_info_security_manual
+    - mgmtsystem_manual
+    - mgmtsystem_nonconformity
+    - mgmtsystem_nonconformity_hr
+    - mgmtsystem_nonconformity_mrp
+    - mgmtsystem_nonconformity_product
+    - mgmtsystem_nonconformity_quality_control_oca
+    - mgmtsystem_nonconformity_repair
+    - mgmtsystem_nonconformity_type
+    - mgmtsystem_partner
+    - mgmtsystem_quality
+    - mgmtsystem_review
+    - mgmtsystem_review_survey
+    - mgmtsystem_survey
+  remotes:
+    oca: https://github.com/oca/management-system
+  merges:
+    - oca 15.0
+manufacture:
+  modules:
+    - account_move_line_mrp_info
+    - mrp_2_steps_consumed_qty_sync
+    - mrp_account_analytic
+    - mrp_account_bom_attribute_match
+    - mrp_bom_assign_auto
+    - mrp_bom_attribute_match
+    - mrp_bom_component_menu
+    - mrp_bom_hierarchy
+    - mrp_bom_line_sequence
+    - mrp_bom_location
+    - mrp_bom_tracking
+    - mrp_finished_backorder_product
+    - mrp_lot_number_propagation
+    - mrp_lot_on_hand_first
+    - mrp_multi_level
+    - mrp_multi_level_estimate
+    - mrp_planned_order_matrix
+    - mrp_production_component_availability_search
+    - mrp_production_consumption_warning
+    - mrp_production_date_planned_finished
+    - mrp_production_date_planned_finished_calendar
+    - mrp_production_generator_by_date_interval
+    - mrp_production_grouped_by_product
+    - mrp_production_location_picking_type
+    - mrp_production_note
+    - mrp_production_operation_injection
+    - mrp_production_picking_type_from_route
+    - mrp_production_putaway_strategy
+    - mrp_production_quant_manual_assign
+    - mrp_production_serial_matrix
+    - mrp_production_split
+    - mrp_progress_button
+    - mrp_sale_info
+    - mrp_set_quantity_to_reservation
+    - mrp_subcontracting_lot_number_propagation
+    - mrp_subcontracting_no_negative
+    - mrp_subcontracting_purchase_link
+    - mrp_tag
+    - mrp_warehouse_calendar
+    - mrp_workcenter_category
+    - mrp_workcenter_dashboard
+    - mrp_workorder_blocking_time
+    - mrp_workorder_lock_planning
+    - mrp_workorder_lot_display
+    - mrp_workorder_ref
+    - mrp_workorder_sequence
+    - purchase_mrp_distribution
+    - quality_control_oca
+    - quality_control_stock_oca
+    - stock_picking_product_kit_helper
+    - stock_replenishment_mrp_bom_selection
+    - stock_whole_kit_constraint
+  remotes:
+    oca: https://github.com/oca/manufacture
+  merges:
+    - oca 15.0
+manufacture-reporting:
+  modules:
+    - mrp_bom_current_stock
+    - mrp_bom_structure_xlsx
+    - mrp_flattened_bom_xlsx
+  remotes:
+    oca: https://github.com/oca/manufacture-reporting
+  merges:
+    - oca 15.0
+margin-analysis:
+  modules:
+    - account_invoice_margin
+    - account_invoice_margin_sale
+    - account_invoice_margin_sale_delivered_sync
+    - product_standard_margin
+    - sale_elaboration_margin
+    - sale_margin_delivered
+    - sale_margin_security
+    - sale_margin_sync
+    - sale_report_margin
+  remotes:
+    oca: https://github.com/oca/margin-analysis
+  merges:
+    - oca 15.0
+mis-builder:
+  modules:
+    - mis_builder
+    - mis_builder_budget
+    - mis_builder_demo
+  remotes:
+    oca: https://github.com/oca/mis-builder
+  merges:
+    - oca 15.0
+mis-builder-contrib:
+  modules:
+    - mis_builder_budget_product
+    - mis_builder_total_committed_purchase
+  remotes:
+    oca: https://github.com/oca/mis-builder-contrib
+  merges:
+    - oca 15.0
+multi-company:
+  modules:
+    - account_invoice_inter_company
+    - account_multicompany_easy_creation
+    - base_multi_company
+    - calendar_event_multi_company
+    - login_all_company
+    - mail_multicompany
+    - mail_template_multi_company
+    - multicompany_configuration
+    - partner_multi_company
+    - product_category_inter_company
+    - product_category_multi_company
+    - product_multi_company
+    - product_multi_company_stock
+    - product_tax_multicompany_default
+    - purchase_sale_inter_company
+    - purchase_sale_stock_inter_company
+    - res_company_code
+    - stock_intercompany
+    - utm_source_multi_company
+  remotes:
+    oca: https://github.com/oca/multi-company
+  merges:
+    - oca 15.0
+odoo-mooncard-connector:
+  modules:
+    - base_newgen_payment_card
+    - base_newgen_payment_card_start_end_dates
+    - l10n_fr_base_newgen_payment_card
+    - mooncard_payment_card
+  remotes:
+    akretion: https://github.com/akretion/odoo-mooncard-connector
+  merges:
+    - akretion 15.0
+odoo-pim:
+  modules:
+    - attribute_set
+  remotes:
+    oca: https://github.com/oca/odoo-pim
+  merges:
+    - oca 15.0
+operating-unit:
+  modules:
+    - account_asset_operating_unit
+    - account_asset_transfer_operating_unit
+    - account_financial_report_operating_unit
+    - account_operating_unit
+    - account_operating_unit_access_all
+    - analytic_operating_unit
+    - analytic_operating_unit_access_all
+    - contract_operating_unit
+    - crm_operating_unit
+    - hr_contract_operating_unit
+    - hr_expense_operating_unit
+    - hr_expense_operating_unit_access_all
+    - hr_operating_unit
+    - hr_operating_unit_access_all
+    - hr_payroll_account_operating_unit
+    - mis_builder_operating_unit
+    - mis_builder_operating_unit_access_all
+    - mrp_operating_unit
+    - mrp_operating_unit_access_all
+    - operating_unit
+    - operating_unit_access_all
+    - project_operating_unit
+    - purchase_deposit_operating_unit
+    - purchase_operating_unit
+    - purchase_operating_unit_access_all
+    - purchase_request_operating_unit
+    - purchase_request_operating_unit_access_all
+    - purchase_requisition_operating_unit
+    - purchase_stock_operating_unit
+    - report_qweb_operating_unit
+    - sale_operating_unit
+    - sale_stock_operating_unit
+    - sales_team_operating_unit
+    - stock_account_operating_unit
+    - stock_operating_unit
+    - stock_operating_unit_access_all
+  remotes:
+    oca: https://github.com/oca/operating-unit
+  merges:
+    - oca 15.0
+partner-contact:
+  modules:
+    - account_partner_company_group
+    - animal
+    - base_country_state_translatable
+    - base_location
+    - base_location_geonames_import
+    - base_location_nuts
+    - base_partner_company_group
+    - base_partner_sequence
+    - crm_partner_company_group
+    - partner_address_street3
+    - partner_affiliate
+    - partner_bank_code
+    - partner_capital
+    - partner_coc
+    - partner_company_default
+    - partner_company_group
+    - partner_company_type
+    - partner_contact_access_link
+    - partner_contact_address_default
+    - partner_contact_age_range
+    - partner_contact_birthdate
+    - partner_contact_department
+    - partner_contact_gender
+    - partner_contact_job_position
+    - partner_contact_lang
+    - partner_contact_nationality
+    - partner_contact_personal_information_page
+    - partner_contact_role
+    - partner_country_lang
+    - partner_data_vies_populator
+    - partner_deduplicate_acl
+    - partner_deduplicate_by_ref
+    - partner_deduplicate_by_website
+    - partner_deduplicate_filter
+    - partner_disable_gravatar
+    - partner_email_check
+    - partner_employee_quantity
+    - partner_exception
+    - partner_external_map
+    - partner_fax
+    - partner_firstname
+    - partner_identification
+    - partner_industry_parent
+    - partner_industry_secondary
+    - partner_label
+    - partner_manual_rank
+    - partner_multi_relation
+    - partner_name_hide_parent
+    - partner_phone_extension
+    - partner_phone_secondary
+    - partner_phonecall_schedule
+    - partner_pricelist_search
+    - partner_pricelist_tracking
+    - partner_priority
+    - partner_readonly_security
+    - partner_ref_unique
+    - partner_second_lastname
+    - partner_stage
+    - partner_supplierinfo
+    - partner_tz
+    - partner_vat_unique
+    - portal_partner_data_no_edit
+    - portal_user_login_email_change
+    - res_partner_journal_items_link
+    - sale_partner_company_group
+  remotes:
+    oca: https://github.com/oca/partner-contact
+  merges:
+    - oca 15.0
+payroll:
+  modules:
+    - hr_payroll_period
+    - payroll
+    - payroll_account
+  remotes:
+    oca: https://github.com/oca/payroll
+  merges:
+    - oca 15.0
+pos:
+  modules:
+    - pos_cash_move_reason
+    - pos_default_partner
+    - pos_event_sale
+    - pos_event_sale_registration_qr_code
+    - pos_event_sale_session
+    - pos_fixed_discount
+    - pos_hide_cost_price_and_margin
+    - pos_lot_barcode
+    - pos_lot_selection
+    - pos_payment_change
+    - pos_product_display_default_code
+    - pos_product_template
+    - pos_receipt_hide_price
+    - pos_report_session_summary
+    - pos_sale_pos_event_sale
+    - pos_sale_pos_event_sale_session
+    - pos_supplierinfo_barcode
+    - pos_supplierinfo_search
+    - pos_user_restriction
+  remotes:
+    oca: https://github.com/oca/pos
+  merges:
+    - oca 15.0
+product-attribute:
+  modules:
+    - base_product_mass_addition
+    - nutritional_info
+    - nutritional_info_stock_lot
+    - product_abc_classification
+    - product_abc_classification_sale
+    - product_assortment
+    - product_attachment_zipped_download
+    - product_attribute_archive
+    - product_attribute_value_menu
+    - product_category_active
+    - product_category_code
+    - product_category_code_unique
+    - product_category_product_link
+    - product_code_mandatory
+    - product_code_unique
+    - product_cost_security
+    - product_custom_info
+    - product_dimension
+    - product_drained_weight
+    - product_ingredient
+    - product_logistics_uom
+    - product_lot_sequence
+    - product_manufacturer
+    - product_multi_image
+    - product_multi_price
+    - product_net_weight
+    - product_order_noname
+    - product_packaging_type
+    - product_pricelist_by_contact
+    - product_pricelist_direct_print
+    - product_pricelist_direct_print_company_group
+    - product_pricelist_direct_print_website_sale
+    - product_pricelist_discount_by_range
+    - product_pricelist_item_list_view
+    - product_pricelist_revision
+    - product_pricelist_simulation
+    - product_pricelist_supplierinfo
+    - product_profile
+    - product_restricted_type
+    - product_secondary_unit
+    - product_sequence
+    - product_state
+    - product_status
+    - product_sticker
+    - product_stock_state
+    - product_supplierinfo_archive
+    - product_supplierinfo_comment
+    - product_supplierinfo_for_customer
+    - product_supplierinfo_revision
+    - product_template_tags
+    - product_variant_attribute_name_manager
+    - purchase_product_template_tags
+    - sale_product_matrix_secondary_unit
+    - sale_product_template_tags
+    - stock_product_template_tags
+  remotes:
+    oca: https://github.com/oca/product-attribute
+  merges:
+    - oca 15.0
+product-pack:
+  modules:
+    - product_pack
+    - sale_product_pack
+    - stock_product_pack
+  remotes:
+    oca: https://github.com/oca/product-pack
+  merges:
+    - oca 15.0
+product-variant:
+  modules:
+    - product_variant_configurator
+    - product_variant_configurator_manual_creation
+    - product_variant_default_code
+    - product_variant_sale_price
+    - sale_order_line_variant_description
+  remotes:
+    oca: https://github.com/oca/product-variant
+  merges:
+    - oca 15.0
+project:
+  modules:
+    - project_administrator_restricted_visibility
+    - project_department
+    - project_duplicate_subtask
+    - project_forecast_line
+    - project_forecast_line_bokeh_chart
+    - project_forecast_line_deadline
+    - project_forecast_line_holidays_public
+    - project_hr
+    - project_list
+    - project_parent_task_filter
+    - project_purchase_analytic_global
+    - project_role
+    - project_sale_order_link
+    - project_sequence
+    - project_stage_mgmt
+    - project_status
+    - project_stock
+    - project_stock_product_set
+    - project_stock_request
+    - project_task_add_very_high
+    - project_task_code
+    - project_task_default_stage
+    - project_task_dependency
+    - project_task_description_template
+    - project_task_material
+    - project_task_milestone
+    - project_task_note
+    - project_task_personal_stage_auto_fold
+    - project_task_pull_request
+    - project_task_required_project
+    - project_task_stage_state
+    - project_template
+    - project_template_milestone
+    - project_timeline
+    - project_timeline_hr_timesheet
+    - project_timesheet_time_control
+    - project_type
+    - project_wbs
+    - sale_project_copy_tasks
+  remotes:
+    oca: https://github.com/oca/project
+  merges:
+    - oca 15.0
+purchase-reporting:
+  modules:
+    - purchase_comment_template
+    - purchase_order_report_grouped_by_vendor
+  remotes:
+    oca: https://github.com/oca/purchase-reporting
+  merges:
+    - oca 15.0
+purchase-workflow:
+  modules:
+    - procurement_purchase_no_grouping
+    - procurement_purchase_sale_no_grouping
+    - product_form_purchase_link
+    - product_supplier_code_purchase
+    - product_supplierinfo_qty_multiplier
+    - purchase_advance_payment
+    - purchase_allowed_product
+    - purchase_analytic_global
+    - purchase_blanket_order
+    - purchase_cancel_confirm
+    - purchase_default_terms_conditions
+    - purchase_delivery_split_date
+    - purchase_deposit
+    - purchase_deposit_analytic
+    - purchase_discount
+    - purchase_exception
+    - purchase_fop_shipping
+    - purchase_force_invoiced
+    - purchase_fully_invoiced
+    - purchase_fully_received
+    - purchase_invoice_method
+    - purchase_invoice_plan
+    - purchase_invoice_status_line
+    - purchase_last_price_info
+    - purchase_line_reassign
+    - purchase_location_by_line
+    - purchase_manual_currency
+    - purchase_merge
+    - purchase_open_qty
+    - purchase_order_analytic_search
+    - purchase_order_approval_block
+    - purchase_order_approved
+    - purchase_order_general_discount
+    - purchase_order_line_deep_sort
+    - purchase_order_line_menu
+    - purchase_order_line_original_date
+    - purchase_order_line_price_history
+    - purchase_order_line_price_history_discount
+    - purchase_order_line_qty_to_receive
+    - purchase_order_line_sequence
+    - purchase_order_line_stock_available
+    - purchase_order_no_zero_price
+    - purchase_order_price_recalculation
+    - purchase_order_product_recommendation
+    - purchase_order_product_recommendation_brand
+    - purchase_order_product_recommendation_classification
+    - purchase_order_product_recommendation_forecast
+    - purchase_order_product_recommendation_secondary_unit
+    - purchase_order_product_recommendation_xlsx
+    - purchase_order_qty_by_product_category
+    - purchase_order_qty_change_no_recompute
+    - purchase_order_revision
+    - purchase_order_secondary_unit
+    - purchase_order_supplierinfo_update
+    - purchase_order_type
+    - purchase_order_type_dashboard
+    - purchase_order_uninvoiced_amount
+    - purchase_order_uninvoiced_amount_line
+    - purchase_order_weight_volume
+    - purchase_partner_incoterm
+    - purchase_partner_selectable_option
+    - purchase_quick
+    - purchase_receipt_expectation
+    - purchase_receipt_expectation_from_partner
+    - purchase_receipt_expectation_manual
+    - purchase_receipt_expectation_manual_split
+    - purchase_receipt_percentage
+    - purchase_reception_notify
+    - purchase_reception_status
+    - purchase_reception_status_line
+    - purchase_representative
+    - purchase_request
+    - purchase_request_cancel_confirm
+    - purchase_request_department
+    - purchase_request_exception
+    - purchase_request_substate
+    - purchase_request_tier_validation
+    - purchase_request_to_requisition
+    - purchase_requisition_grouped_by_procurement
+    - purchase_requisition_order_remaining_qty
+    - purchase_requisition_tier_validation
+    - purchase_rfq_number
+    - purchase_security
+    - purchase_stock_manual_currency
+    - purchase_stock_price_unit_sync
+    - purchase_stock_return_request
+    - purchase_stock_secondary_unit
+    - purchase_stock_tier_validation
+    - purchase_substate
+    - purchase_tag
+    - purchase_tier_validation
+    - purchase_total_ordered_qty
+    - purchase_triple_discount
+    - purchase_uninvoiced_amount_force_invoiced_line
+    - purchase_v12_control_menu
+    - purchase_warn_message
+    - purchase_warn_option
+    - purchase_work_acceptance
+    - purchase_work_acceptance_evaluation
+    - purchase_work_acceptance_invoice_plan
+    - purchase_work_acceptance_late_fines
+    - purchase_work_acceptance_tier_validation
+    - sale_purchase_force_vendor
+    - sale_purchase_secondary_unit
+    - stock_move_purchase_price_update
+    - stock_picking_batch_purchase_price_update
+    - subcontracted_service
+    - supplier_calendar
+  remotes:
+    oca: https://github.com/oca/purchase-workflow
+  merges:
+    - oca 15.0
+queue:
+  modules:
+    - base_export_async
+    - queue_job
+    - queue_job_cron
+    - queue_job_cron_jobrunner
+    - queue_job_subscribe
+    - test_queue_job
+  remotes:
+    oca: https://github.com/oca/queue
+  merges:
+    - oca 15.0
+repair:
+  modules:
+    - repair_reason
+    - repair_refurbish
+    - repair_refurbish_repair_stock_move
+    - repair_sale_order
+    - repair_scrap
+    - repair_security
+    - repair_stock_move
+    - repair_stock_move_restrict_lot
+    - repair_type
+    - repair_type_refurbish
+    - repair_type_security
+    - repair_type_sequence
+  remotes:
+    oca: https://github.com/oca/repair
+  merges:
+    - oca 15.0
+report-print-send:
+  modules:
+    - base_report_to_printer
+    - base_report_to_printer_mail
+    - printer_zpl2
+  remotes:
+    oca: https://github.com/oca/report-print-send
+  merges:
+    - oca 15.0
+reporting-engine:
+  modules:
+    - base_comment_template
+    - bi_sql_editor
+    - bi_view_editor
+    - board_eval_context
+    - kpi_dashboard
+    - report_async
+    - report_csv
+    - report_py3o
+    - report_qr
+    - report_qweb_decimal_place
+    - report_qweb_element_page_visibility
+    - report_qweb_encrypt
+    - report_qweb_parameter
+    - report_qweb_pdf_watermark
+    - report_wkhtmltopdf_param
+    - report_xlsx
+    - report_xlsx_helper
+    - report_xml
+    - sql_export
+    - sql_export_excel
+    - sql_export_mail
+    - sql_request_abstract
+  remotes:
+    oca: https://github.com/oca/reporting-engine
+  merges:
+    - oca 15.0
+rest-framework:
+  modules:
+    - base_rest
+    - base_rest_auth_api_key
+    - base_rest_auth_user_service
+    - base_rest_datamodel
+    - base_rest_demo
+    - base_rest_pydantic
+    - datamodel
+    - extendable
+    - graphql_base
+    - graphql_demo
+    - model_serializer
+    - pydantic
+    - rest_log
+  remotes:
+    oca: https://github.com/oca/rest-framework
+  merges:
+    - oca 15.0
+rma:
+  modules:
+    - product_warranty
+    - rma
+    - rma_delivery
+    - rma_sale
+    - rma_sale_mrp
+    - stock_production_lot_warranty
+    - website_rma
+  remotes:
+    oca: https://github.com/oca/rma
+  merges:
+    - oca 15.0
+sale-promotion:
+  modules:
+    - coupon_chatter
+    - coupon_commercial_partner_applicability
+    - coupon_criteria_multi_product
+    - coupon_domain_free_product
+    - coupon_domain_product_discount
+    - coupon_incompatibility
+    - coupon_limit
+    - coupon_mass_mailing
+    - coupon_multi_gift
+    - coupon_multiplier_free_product
+    - coupon_portal
+    - coupon_portal_commercial_partner_applicability
+    - coupon_promotion_generate_coupon
+    - sale_coupon_auto_refresh
+    - sale_coupon_criteria_multi_product
+    - sale_coupon_criteria_order_based
+    - sale_coupon_delivery_auto_refresh
+    - sale_coupon_domain_free_product
+    - sale_coupon_domain_product_discount
+    - sale_coupon_financial_risk
+    - sale_coupon_incompatibility
+    - sale_coupon_limit
+    - sale_coupon_multi_gift
+    - sale_coupon_multiple_code_program
+    - sale_coupon_multiplier_free_product
+    - sale_coupon_order_line_link
+    - sale_coupon_order_pending
+    - sale_coupon_order_suggestion
+    - sale_coupon_partner
+    - sale_coupon_promotion_generate_coupon
+    - sale_coupon_selection_wizard
+    - sale_coupon_validity_notification
+    - website_sale_coupon_page
+    - website_sale_coupon_restrict
+    - website_sale_coupon_selection_wizard
+  remotes:
+    oca: https://github.com/oca/sale-promotion
+  merges:
+    - oca 15.0
+sale-reporting:
+  modules:
+    - base_multicompany_reporting_currency
+    - product_sold_by_delivery_week
+    - sale_comment_template
+    - sale_layout_category_hide_detail
+    - sale_multicompany_reporting_currency
+    - sale_order_line_position
+    - sale_order_product_recommendation_product_sold_by_delivery_week
+    - sale_order_report_customer_lead
+    - sale_order_report_product_image
+    - sale_report_delivered
+    - sale_report_delivered_brand
+    - sale_report_delivered_elaboration
+    - sale_report_delivered_partner_priority
+    - sale_report_delivered_semaphore
+    - sale_report_delivered_subtotal
+    - sale_report_delivered_volume
+    - sale_report_salesman
+    - sale_report_salesperson_from_partner
+  remotes:
+    oca: https://github.com/oca/sale-reporting
+  merges:
+    - oca 15.0
+sale-workflow:
+  modules:
+    - partner_contact_sale_info_propagation
+    - partner_sale_pivot
+    - portal_sale_personal_data_only
+    - pricelist_cache
+    - product_form_sale_link
+    - product_supplierinfo_for_customer_elaboration
+    - product_supplierinfo_for_customer_sale
+    - sale_advance_payment
+    - sale_attached_product
+    - sale_automatic_workflow
+    - sale_automatic_workflow_job
+    - sale_automatic_workflow_payment_mode
+    - sale_blanket_order
+    - sale_cancel_confirmed_invoice
+    - sale_cancel_reason
+    - sale_commercial_partner
+    - sale_credit_point
+    - sale_custom_rounding
+    - sale_delivery_split_date
+    - sale_delivery_state
+    - sale_discount_display_amount
+    - sale_elaboration
+    - sale_elaboration_brand
+    - sale_exception
+    - sale_fixed_discount
+    - sale_force_invoiced
+    - sale_force_whole_invoiceability
+    - sale_fully_invoiced
+    - sale_global_discount
+    - sale_invoice_blocking
+    - sale_invoice_frequency
+    - sale_invoice_no_mail
+    - sale_invoice_plan
+    - sale_invoice_policy
+    - sale_isolated_quotation
+    - sale_last_price_info
+    - sale_lead_time_range
+    - sale_missing_tracking
+    - sale_missing_tracking_tier_validation
+    - sale_mrp_bom
+    - sale_order_amount_to_invoice
+    - sale_order_archive
+    - sale_order_carrier_auto_assign
+    - sale_order_discount_invoicing
+    - sale_order_general_discount
+    - sale_order_invoice_amount
+    - sale_order_invoicing_finished_task
+    - sale_order_line_chained_move
+    - sale_order_line_date
+    - sale_order_line_delivery_state
+    - sale_order_line_description
+    - sale_order_line_input
+    - sale_order_line_menu
+    - sale_order_line_not_billable
+    - sale_order_line_note
+    - sale_order_line_price_history
+    - sale_order_line_remove
+    - sale_order_line_sequence
+    - sale_order_lot_selection
+    - sale_order_mass_action
+    - sale_order_partner_no_autofollow
+    - sale_order_partner_restrict
+    - sale_order_price_recalculation
+    - sale_order_priority
+    - sale_order_product_assortment
+    - sale_order_product_availability_inline
+    - sale_order_product_recommendation
+    - sale_order_product_recommendation_secondary_unit
+    - sale_order_qty_change_no_recompute
+    - sale_order_report_without_price
+    - sale_order_restrict_cancel_existing_invoice
+    - sale_order_restrict_copy_archived_product
+    - sale_order_revision
+    - sale_order_secondary_unit
+    - sale_order_type
+    - sale_order_type_quotation_number
+    - sale_order_warn_message
+    - sale_partner_incoterm
+    - sale_partner_selectable_option
+    - sale_payment_sheet
+    - sale_planner_calendar
+    - sale_pricelist_global_rule
+    - sale_procurement_group_by_commitment_date
+    - sale_procurement_group_by_line
+    - sale_product_category_menu
+    - sale_product_multi_add
+    - sale_product_set
+    - sale_product_set_layout
+    - sale_purchase_procurement_group_by_line
+    - sale_quotation_number
+    - sale_readonly_security
+    - sale_rental
+    - sale_resource_booking
+    - sale_semaphore
+    - sale_shipping_info_helper
+    - sale_sourced_by_line
+    - sale_start_end_dates
+    - sale_stock_cancel_restriction
+    - sale_stock_delivery_address
+    - sale_stock_invoice_plan
+    - sale_stock_last_date
+    - sale_stock_line_sequence
+    - sale_stock_picking_blocking
+    - sale_stock_picking_note
+    - sale_stock_return_request
+    - sale_stock_secondary_unit
+    - sale_stock_warehouse_partner
+    - sale_substate
+    - sale_tier_validation
+    - sale_triple_discount
+    - sale_validity_auto_cancel
+    - sale_warn_option
+    - sale_wishlist
+    - sales_team_invoiced_target_domain
+    - sales_team_security
+    - sales_team_security_crm
+    - sales_team_security_sale
+  remotes:
+    oca: https://github.com/oca/sale-workflow
+  merges:
+    - oca 15.0
+search-engine:
+  modules:
+    - connector_elasticsearch
+    - connector_search_engine
+  remotes:
+    oca: https://github.com/oca/search-engine
+  merges:
+    - oca 15.0
+server-auth:
+  modules:
+    - auth_admin_passkey
+    - auth_api_key
+    - auth_api_key_group
+    - auth_api_key_server_env
+    - auth_ldaps
+    - auth_oauth_autologin
+    - auth_oauth_multi_token
+    - auth_oidc
+    - auth_saml
+    - auth_session_timeout
+    - auth_signup_partner_company
+    - auth_signup_verify_email
+    - auth_user_case_insensitive
+    - password_security
+    - user_log_view
+    - users_ldap_groups
+    - vault
+    - vault_share
+  remotes:
+    oca: https://github.com/oca/server-auth
+  merges:
+    - oca 15.0
+server-backend:
+  modules:
+    - base_external_dbsource
+    - base_external_dbsource_mssql
+    - base_external_dbsource_mysql
+    - base_external_dbsource_sap_hana
+    - base_external_dbsource_sqlite
+    - base_external_system
+    - base_global_discount
+    - base_ical
+    - base_import_match
+    - base_user_role
+  remotes:
+    oca: https://github.com/oca/server-backend
+  merges:
+    - oca 15.0
+server-brand:
+  modules:
+    - disable_odoo_online
+    - hr_expense_remove_mobile_link
+    - portal_odoo_debranding
+    - remove_odoo_enterprise
+  remotes:
+    oca: https://github.com/oca/server-brand
+  merges:
+    - oca 15.0
+server-env:
+  modules:
+    - auth_saml_environment
+    - mail_environment
+    - mail_environment_google_gmail
+    - mail_environment_office365
+    - server_environment
+    - server_environment_files_sample
+    - server_environment_ir_config_parameter
+  remotes:
+    oca: https://github.com/oca/server-env
+  merges:
+    - oca 15.0
+server-tools:
+  modules:
+    - attachment_unindex_content
+    - auditlog
+    - auto_backup
+    - base_changeset
+    - base_conditional_image
+    - base_cron_exclusion
+    - base_custom_info
+    - base_exception
+    - base_fontawesome
+    - base_kanban_stage
+    - base_kanban_stage_state
+    - base_model_restrict_update
+    - base_multi_image
+    - base_remote
+    - base_search_fuzzy
+    - base_sequence_option
+    - base_sparse_field_list_support
+    - base_technical_user
+    - base_time_parameter
+    - base_time_window
+    - base_translation_field_label
+    - base_view_inheritance_extension
+    - database_cleanup
+    - datetime_formatter
+    - dbfilter_from_header
+    - excel_import_export
+    - excel_import_export_demo
+    - fetchmail_incoming_log
+    - fetchmail_incoming_log_test
+    - fetchmail_notify_error_to_sender
+    - html_image_url_extractor
+    - html_text
+    - iap_alternative_provider
+    - jsonifier
+    - letsencrypt
+    - module_analysis
+    - module_auto_update
+    - module_change_auto_install
+    - monitoring
+    - onchange_helper
+    - scheduler_error_mailer
+    - sentry
+    - sequence_python
+    - server_action_logging
+    - session_db
+    - tracking_manager
+    - upgrade_analysis
+  remotes:
+    oca: https://github.com/oca/server-tools
+  merges:
+    - oca 15.0
+server-ux:
+  modules:
+    - announcement
+    - barcode_action
+    - base_archive_date
+    - base_cancel_confirm
+    - base_custom_filter
+    - base_duplicate_security_group
+    - base_export_manager
+    - base_field_deprecated
+    - base_import_security_group
+    - base_menu_visibility_restriction
+    - base_multi_branch_company
+    - base_optional_quick_create
+    - base_recurrence
+    - base_revision
+    - base_search_custom_field_filter
+    - base_substate
+    - base_technical_features
+    - base_tier_validation
+    - base_tier_validation_formula
+    - base_tier_validation_forward
+    - base_tier_validation_report
+    - base_tier_validation_server_action
+    - base_user_locale
+    - base_warn_option
+    - chained_swapper
+    - date_range
+    - date_range_account
+    - default_multi_user
+    - document_quick_access
+    - document_quick_access_folder_auto_classification
+    - filter_multi_user
+    - mass_editing
+    - multi_step_wizard
+    - sequence_check_digit
+    - sequence_reset_period
+    - template_content_swapper
+    - web_archive_date
+  remotes:
+    oca: https://github.com/oca/server-ux
+  merges:
+    - oca 15.0
+shift-planning:
+  modules:
+    - hr_shift
+    - hr_shift_holidays_public
+  remotes:
+    oca: https://github.com/oca/shift-planning
+  merges:
+    - oca 15.0
+sign:
+  modules:
+    - maintenance_sign_oca
+    - project_task_sign_oca
+    - sign_oca
+  remotes:
+    oca: https://github.com/oca/sign
+  merges:
+    - oca 15.0
+social:
+  modules:
+    - attachment_mimetype_restriction
+    - base_search_mail_content
+    - base_user_signature
+    - email_template_qweb
+    - fetchmail_mail_activity_team_activity
+    - mail_activity_board
+    - mail_activity_creator
+    - mail_activity_done
+    - mail_activity_partner
+    - mail_activity_plan
+    - mail_activity_team
+    - mail_attach_existing_attachment
+    - mail_autogenerated_header
+    - mail_autosubscribe
+    - mail_composer_cc_bcc
+    - mail_debrand
+    - mail_drop_target
+    - mail_forward
+    - mail_improved_tracking_value
+    - mail_layout_force
+    - mail_layout_preview
+    - mail_message_restrict
+    - mail_no_user_assign_notification
+    - mail_notification_custom_subject
+    - mail_optional_autofollow
+    - mail_optional_follower_notification
+    - mail_outbound_static
+    - mail_parent_recipient
+    - mail_partner_opt_out
+    - mail_post_defer
+    - mail_preview_audio
+    - mail_preview_base
+    - mail_print
+    - mail_quoted_reply
+    - mail_restrict_follower_selection
+    - mail_save_as_template_security
+    - mail_send_confirmation
+    - mail_send_copy
+    - mail_show_follower
+    - mail_tracking
+    - mail_tracking_mailgun
+    - mail_tracking_mass_mailing
+    - mass_mailing_custom_unsubscribe
+    - mass_mailing_custom_unsubscribe_event
+    - mass_mailing_event_registration_exclude
+    - mass_mailing_list_dynamic
+    - mass_mailing_partner
+    - mass_mailing_resend
+    - microsoft_outlook_single_tenant
+    - outgoing_email_by_model
+  remotes:
+    oca: https://github.com/oca/social
+  merges:
+    - oca 15.0
+stock-logistics-barcode:
+  modules:
+    - barcodes_generator_abstract
+    - barcodes_generator_product
+    - base_gs1_barcode
+    - product_multi_barcode
+    - product_supplierinfo_barcode
+    - stock_barcodes
+    - stock_barcodes_elaboration
+    - stock_barcodes_gs1
+    - stock_barcodes_gs1_expiry
+    - stock_barcodes_gs1_secondary_unit
+    - stock_barcodes_picking_batch
+    - stock_barcodes_picking_batch_revision
+    - stock_picking_product_barcode_report
+    - stock_picking_product_barcode_report_secondary_unit
+  remotes:
+    oca: https://github.com/oca/stock-logistics-barcode
+  merges:
+    - oca 15.0
+stock-logistics-reporting:
+  modules:
+    - delivery_line_sale_line_position
+    - stock_account_quantity_history_location
+    - stock_account_valuation_report
+    - stock_card_report
+    - stock_move_value_report
+    - stock_picking_auto_print
+    - stock_picking_report_custom_description
+    - stock_picking_report_external_note
+    - stock_picking_report_internal_delivery_address
+    - stock_picking_report_product_sticker
+    - stock_picking_report_undelivered_product
+    - stock_picking_report_valued
+    - stock_picking_report_valued_sale_mrp
+    - stock_quantity_history_location
+    - stock_report_quantity_by_location
+  remotes:
+    oca: https://github.com/oca/stock-logistics-reporting
+  merges:
+    - oca 15.0
+stock-logistics-transport:
+  modules:
+    - stock_location_address
+    - stock_location_address_purchase
+  remotes:
+    oca: https://github.com/oca/stock-logistics-transport
+  merges:
+    - oca 15.0
+stock-logistics-warehouse:
+  modules:
+    - account_move_line_product
+    - account_move_line_stock_info
+    - base_product_merge
+    - procurement_auto_create_group
+    - product_route_profile
+    - sale_stock_available_info_popup
+    - scrap_reason_code
+    - stock_archive_constraint
+    - stock_available
+    - stock_available_immediately
+    - stock_available_mrp
+    - stock_available_unreserved
+    - stock_change_qty_reason
+    - stock_cycle_count
+    - stock_demand_estimate
+    - stock_demand_estimate_matrix
+    - stock_free_quantity
+    - stock_helper
+    - stock_inventory
+    - stock_inventory_count_to_zero
+    - stock_inventory_discrepancy
+    - stock_inventory_lockdown
+    - stock_inventory_verification_request
+    - stock_location_lockdown
+    - stock_location_position
+    - stock_location_route_description
+    - stock_lot_filter_available
+    - stock_move_location
+    - stock_move_location_purchase_uom
+    - stock_move_purchase_uom
+    - stock_mts_mto_rule
+    - stock_orderpoint_generator
+    - stock_orderpoint_move_link
+    - stock_orderpoint_purchase_link
+    - stock_orderpoint_uom
+    - stock_packaging_calculator
+    - stock_picking_orig_dest_link
+    - stock_picking_show_linked
+    - stock_procurement_group_hook
+    - stock_putaway_product_template
+    - stock_quant_cost_info
+    - stock_quant_manual_assign
+    - stock_quant_reservation_info
+    - stock_quant_reservation_info_mrp
+    - stock_removal_location_by_priority
+    - stock_request
+    - stock_request_analytic
+    - stock_request_bom
+    - stock_request_kanban
+    - stock_request_mrp
+    - stock_request_purchase
+    - stock_request_separate_picking
+    - stock_request_submit
+    - stock_request_tier_validation
+    - stock_reserve
+    - stock_reserve_rule
+    - stock_search_supplierinfo_code
+    - stock_secondary_unit
+    - stock_valuation_layer_accounting_date
+    - stock_warehouse_calendar
+  remotes:
+    oca: https://github.com/oca/stock-logistics-warehouse
+  merges:
+    - oca 15.0
+stock-logistics-workflow:
+  modules:
+    - delivery_procurement_group_carrier
+    - product_cost_price_avco_sync
+    - product_supplierinfo_for_customer_picking
+    - purchase_stock_picking_invoice_link
+    - sale_line_returned_qty
+    - sale_line_returned_qty_mrp
+    - sale_order_global_stock_route
+    - stock_account_product_run_fifo_hook
+    - stock_auto_move
+    - stock_delivery_note
+    - stock_force_assign_by_type
+    - stock_landed_costs_delivery
+    - stock_landed_costs_priority
+    - stock_landed_costs_purchase_auto
+    - stock_landed_costs_security
+    - stock_lot_on_hand_first
+    - stock_lot_product_qty_search
+    - stock_move_change_source_location
+    - stock_move_consu_location_from_putaway
+    - stock_move_line_auto_fill
+    - stock_move_name_from_sale_line
+    - stock_move_original_date
+    - stock_move_propagate_first_move
+    - stock_move_quick_lot
+    - stock_no_negative
+    - stock_owner_restriction
+    - stock_partner_delivery_window
+    - stock_picking_assign_serial_final
+    - stock_picking_auto_create_lot
+    - stock_picking_back2draft
+    - stock_picking_backorder_strategy
+    - stock_picking_batch_extended
+    - stock_picking_batch_extended_account
+    - stock_picking_batch_extended_account_sale_type
+    - stock_picking_batch_operation_quick_change
+    - stock_picking_batch_outgoing
+    - stock_picking_batch_set_quantity
+    - stock_picking_customer_ref
+    - stock_picking_filter_lot
+    - stock_picking_import_serial_number
+    - stock_picking_info_lot
+    - stock_picking_invoice_link
+    - stock_picking_line_sequence
+    - stock_picking_mass_action
+    - stock_picking_operation_manual_lot_selection
+    - stock_picking_operation_quick_change
+    - stock_picking_origin_reference
+    - stock_picking_origin_reference_purchase
+    - stock_picking_origin_reference_sale
+    - stock_picking_product_assortment
+    - stock_picking_product_assortment_availability_inline
+    - stock_picking_product_availability_inline
+    - stock_picking_product_availability_search
+    - stock_picking_propagate_scheduled_date
+    - stock_picking_purchase_order_link
+    - stock_picking_return_restricted_qty
+    - stock_picking_sale_order_link
+    - stock_picking_send_by_mail
+    - stock_picking_show_backorder
+    - stock_picking_show_lot
+    - stock_picking_show_return
+    - stock_picking_start
+    - stock_picking_warn_message
+    - stock_picking_whole_scrap
+    - stock_product_set
+    - stock_production_lot_active
+    - stock_production_lot_traceability
+    - stock_push_delay
+    - stock_putaway_hook
+    - stock_receipt_lot_info
+    - stock_reception_discrepancy_distribution
+    - stock_remote_measure
+    - stock_restrict_lot
+    - stock_return_request
+    - stock_scrap_tier_validation
+    - stock_split_picking
+    - stock_valuation_fifo_lot
+    - stock_valuation_layer_usage
+    - stock_warn_option
+  remotes:
+    oca: https://github.com/oca/stock-logistics-workflow
+  merges:
+    - oca 15.0
+stock-rma:
+  modules:
+    - rma
+    - rma_account
+    - rma_account_readonly
+    - rma_analytic
+    - rma_filter_lot
+    - rma_operating_unit
+    - rma_purchase
+    - rma_purchase_analytic
+    - rma_purchase_operating_unit
+    - rma_put_away
+    - rma_readonly
+    - rma_repair
+    - rma_repair_refurbish
+    - rma_sale
+    - rma_sale_analytic
+    - rma_sale_force_invoiced
+    - rma_sale_operating_unit
+    - rma_scrap
+  remotes:
+    forgeflow: https://github.com/forgeflow/stock-rma
+  merges:
+    - forgeflow 15.0
+stock-weighing:
+  modules:
+    - mrp_weighing
+    - partner_delivery_zone_weighing
+    - sale_elaboration_weighing
+    - sale_stock_weighing
+    - stock_picking_batch_weighing
+    - stock_secondary_unit_weighing
+    - stock_weighing
+    - stock_weighing_auto_create_lot
+    - stock_weighing_auto_create_lot_config
+    - stock_weighing_auto_package
+    - stock_weighing_remote_measure
+    - stock_weighing_threaded_print
+    - web_widget_remote_measure
+    - web_widget_remote_measure_utilcell
+  remotes:
+    oca: https://github.com/oca/stock-weighing
+  merges:
+    - oca 15.0
+storage:
+  modules:
+    - storage_backend
+    - storage_backend_ftp
+    - storage_backend_s3
+    - storage_backend_sftp
+    - storage_file
+    - storage_image
+    - storage_image_backend_migration
+    - storage_image_import
+    - storage_image_product
+    - storage_image_product_brand
+    - storage_import_image_advanced
+    - storage_media
+    - storage_thumbnail
+  remotes:
+    oca: https://github.com/oca/storage
+  merges:
+    - oca 15.0
+survey:
+  modules:
+    - partner_survey
+    - survey_answer_generation
+    - survey_certification_py3o
+    - survey_certification_sending
+    - survey_contact_generation
+    - survey_crm_generation
+    - survey_crm_sale_generation
+    - survey_legal
+    - survey_multi_company
+    - survey_next_survey_update_partner
+    - survey_partner_representative
+    - survey_placeholder
+    - survey_question_type_binary
+    - survey_question_type_binary_result_mail
+    - survey_resource_booking
+    - survey_result_mail
+    - survey_sale_generation
+    - survey_skip_start
+    - survey_xlsx
+  remotes:
+    oca: https://github.com/oca/survey
+  merges:
+    - oca 15.0
+timesheet:
+  modules:
+    - crm_timesheet
+    - hr_employee_cost_history
+    - hr_employee_product
+    - hr_timesheet_begin_end
+    - hr_timesheet_portal
+    - hr_timesheet_sheet
+    - hr_timesheet_sheet_attendance
+    - hr_timesheet_sheet_autodraft
+    - hr_timesheet_sheet_begin_end
+    - hr_timesheet_sheet_no_create
+    - hr_timesheet_sheet_period
+    - hr_timesheet_sheet_policy_project_manager
+    - hr_timesheet_task_domain
+    - hr_timesheet_task_required
+    - hr_timesheet_task_stage
+    - hr_timesheet_time_type
+    - sale_timesheet_line_exclude
+    - sale_timesheet_rounded
+    - sale_timesheet_task_exclude
+  remotes:
+    oca: https://github.com/oca/timesheet
+  merges:
+    - oca 15.0
+vertical-association:
+  modules:
+    - contract_membership_delegated_partner
+    - membership_delegated_partner
+    - membership_extension
+    - membership_prorate
+    - membership_variable_period
+    - website_membership_gamification
+    - website_membership_random_order
+  remotes:
+    oca: https://github.com/oca/vertical-association
+  merges:
+    - oca 15.0
+vertical-construction:
+  modules:
+    - bc3_importer
+  remotes:
+    oca: https://github.com/oca/vertical-construction
+  merges:
+    - oca 15.0
+vertical-hotel:
+  modules:
+    - hotel
+    - hotel_housekeeping
+    - hotel_reservation
+    - hotel_restaurant
+    - report_hotel_reservation
+    - report_hotel_restaurant
+  remotes:
+    oca: https://github.com/oca/vertical-hotel
+  merges:
+    - oca 15.0
+vertical-rental:
+  modules:
+    - rental_offday
+  remotes:
+    oca: https://github.com/oca/vertical-rental
+  merges:
+    - oca 15.0
+web:
+  modules:
+    - web_action_conditionable
+    - web_advanced_search
+    - web_calendar_slot_duration
+    - web_chatter_position
+    - web_company_color
+    - web_copy_confirm
+    - web_dialog_size
+    - web_disable_export_group
+    - web_domain_field
+    - web_drop_target
+    - web_environment_ribbon
+    - web_excel_export_dynamic_expand
+    - web_filter_header_button
+    - web_group_expand
+    - web_hide_user_menu_item
+    - web_ir_actions_act_multi
+    - web_ir_actions_act_view_reload
+    - web_ir_actions_act_window_message
+    - web_listview_range_select
+    - web_m2x_options
+    - web_m2x_options_manager
+    - web_no_bubble
+    - web_notify
+    - web_pivot_computed_measure
+    - web_pwa_oca
+    - web_refresher
+    - web_remember_tree_column_width
+    - web_responsive
+    - web_search_with_and
+    - web_select_all_companies
+    - web_send_message_popup
+    - web_sheet_full_width
+    - web_time_range_menu_custom
+    - web_timeline
+    - web_tree_dynamic_colored_field
+    - web_tree_image_tooltip
+    - web_tree_many2one_clickable
+    - web_view_calendar_list
+    - web_widget_bokeh_chart
+    - web_widget_char_size
+    - web_widget_child_selector
+    - web_widget_domain_editor_dialog
+    - web_widget_dropdown_dynamic
+    - web_widget_image_download
+    - web_widget_json_graph
+    - web_widget_many2one_simple
+    - web_widget_mpld3_chart
+    - web_widget_numeric_step
+    - web_widget_one2many_tree_line_duplicate
+    - web_widget_open_tab
+    - web_widget_text_markdown
+    - web_widget_url_advanced
+    - web_widget_x2many_2d_matrix
+  remotes:
+    oca: https://github.com/oca/web
+  merges:
+    - oca 15.0
+web-api:
+  modules:
+    - webservice
+  remotes:
+    oca: https://github.com/oca/web-api
+  merges:
+    - oca 15.0
+website:
+  modules:
+    - website_analytics_matomo
+    - website_breadcrumb
+    - website_conditional_visibility_user_group
+    - website_cookiebot
+    - website_cookiefirst
+    - website_crm_privacy_policy
+    - website_crm_quick_answer
+    - website_form_require_legal
+    - website_forum_subscription
+    - website_google_tag_manager
+    - website_legal_page
+    - website_local_font
+    - website_odoo_debranding
+    - website_plausible
+    - website_require_login
+    - website_snippet_big_button
+    - website_snippet_country_dropdown
+    - website_snippet_dynamic_link
+    - website_snippet_marginless_gallery
+    - website_snippet_openstreetmap
+    - website_whatsapp
+  remotes:
+    oca: https://github.com/oca/website
+  merges:
+    - oca 15.0
+wms:
+  modules:
+    - delivery_carrier_warehouse
+  remotes:
+    oca: https://github.com/oca/wms
+  merges:
+    - oca 15.0
