@@ -261,7 +261,7 @@ def insert_module_commit(db, commit_id, module_id):
     """Insert a module commit in the database."""
     db.execute(
         """
-        INSERT INTO module_commit (commit_id, module_id)
+        INSERT OR IGNORE INTO module_commit (commit_id, module_id)
         VALUES (?, ?)
         """,
         (
@@ -274,10 +274,10 @@ def insert_module_commit(db, commit_id, module_id):
 def fetch_last_commit(db, repo_id):
     """Fetch the last commit of a repo."""
     # Use order by id and not date since commits can be out of order
-    return scalar(
+    return fetch(
         db,
         """
-        SELECT hash
+        SELECT id, hash
         FROM "commit"
         WHERE repo_id = ?
         ORDER BY id DESC
@@ -285,6 +285,26 @@ def fetch_last_commit(db, repo_id):
         """,
         repo_id,
     )
+
+
+def forget_commit(db, commit_id):
+    """Drop a commit of the database, with its module links."""
+    db.execute("DELETE FROM module_commit WHERE commit_id = ?", (commit_id,))
+    db.execute('DELETE FROM "commit" WHERE id = ?', (commit_id,))
+
+
+def commit_exists(path, commit):
+    """Check that a commit is known in the clone of a repo."""
+    result = run(
+        path,
+        "git",
+        "cat-file",
+        "-e",
+        f"{commit}^{{commit}}",
+        check=False,
+        stderr=subprocess.DEVNULL,
+    )
+    return result.returncode == 0
 
 
 def analyse_commits(db, repo_id, path, modules):
@@ -296,9 +316,29 @@ def analyse_commits(db, repo_id, path, modules):
     }
 
     last_commit = fetch_last_commit(db, repo_id)
-    target = f"{last_commit}..HEAD" if last_commit else "HEAD"
+    if last_commit and not commit_exists(path, last_commit[1]):
+        # The branch has been rewritten upstream (rebase, force push): the
+        # stored commit is not an ancestor anymore, and `rev-list <hash>..HEAD`
+        # fails on an unknown object. Forget it and analyse the branch again
+        # from scratch, module_commit inserts are idempotent.
+        print(f"Commit {last_commit[1]} of {path.name} is gone, analysing its full history")
+        forget_commit(db, last_commit[0])
+        last_commit = None
+    target = f"{last_commit[1]}..HEAD" if last_commit else "HEAD"
     print(f"Analyzing commits for {path.name} ({target})")
-    rev_list = run_read(path, "git", "rev-list", target).strip()
+    rev_list = run(
+        path,
+        "git",
+        "rev-list",
+        target,
+        check=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.DEVNULL,
+    )
+    if rev_list.returncode:
+        print(f"Fail to list the commits of {path.name} ({target}), skip them")
+        return
+    rev_list = rev_list.stdout.decode("utf-8").strip()
     if not rev_list:
         return
 
