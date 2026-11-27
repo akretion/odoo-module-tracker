@@ -329,6 +329,38 @@ def analyse_commits(db, repo_id, path, modules):
             insert_module_commit(db, commit_id, module_ids[module])
 
 
+def build_spec(result, version):
+    """Build a project spec (docky style) from the analysis result."""
+    spec = {}
+    repos = sorted((repo, org) for org, repos in result.items() for repo in repos)
+    for repo, org in repos:
+        if repo in spec:
+            print(f"Repo {repo} found in several orgs, keeping {spec[repo]['remotes']}")
+            continue
+        if not result[org][repo]:
+            # Branch exists but holds no installable module yet
+            continue
+        spec[repo] = {
+            "modules": sorted(result[org][repo]),
+            "remotes": {org: f"https://github.com/{org}/{repo}"},
+            "merges": [f"{org} {version}"],
+        }
+    return spec
+
+
+class IndentedDumper(yaml.SafeDumper):
+    """Dumper indenting list items under their key, like project specs do."""
+
+    def increase_indent(self, flow=False, indentless=False):
+        return super().increase_indent(flow, False)
+
+
+def dump_spec(spec, path):
+    """Write a spec to path with indented lists (readable in reviews)."""
+    with open(path, "w") as output:
+        yaml.dump(spec, output, Dumper=IndentedDumper, sort_keys=False)
+
+
 def main():
     """Run the main analysis, writing the results to yaml files and sqlite db."""
     result = {}
@@ -365,6 +397,9 @@ def main():
     data = yaml.safe_dump(result)
     with open(OUTPUT_DIRECTORY / f"{version}.yml", "w") as output:
         output.write(data)
+
+    spec = build_spec(result, version)
+    dump_spec(spec, OUTPUT_DIRECTORY / f"spec-{version}.yaml")
 
     for org, repos in result.items():
         for repo in repos:
