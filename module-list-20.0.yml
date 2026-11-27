@@ -1,0 +1,356 @@
+akretion:
+  ak-odoo-incubator:
+  - order_confirm_block
+  odoo-import-helper:
+  - account_import_helper
+  odoo-py3o-report-templates:
+  - account_invoice_report_py3o
+  odoo-usability:
+  - base_company_extension
+  - base_dynamic_list
+  - base_usability_akretion
+  - account_bank_journal_balance
+  - account_usability_akretion
+forgeflow:
+  stock-rma: []
+oca:
+  account-analytic:
+  - analytic_amount_security
+  - account_analytic_line_commercial_partner
+  - analytic_hr_department_restriction
+  account-budgeting: []
+  account-closing: []
+  account-consolidation: []
+  account-financial-reporting:
+  - account_tax_balance
+  account-financial-tools:
+  - account_usability
+  - account_move_line_tax_editable
+  account-fiscal-rule: []
+  account-invoice-reporting: []
+  account-invoicing:
+  - account_invoice_refund_link
+  - account_invoice_tax_required
+  - portal_account_personal_data_only
+  - account_invoice_triple_discount
+  account-payment:
+  - account_payment_method_base
+  - account_payment_notification
+  account-reconcile: []
+  agreement: []
+  ai: []
+  apps-store: []
+  automation: []
+  bank-payment: []
+  bank-payment-alternative: []
+  bank-statement-import: []
+  barcode-interface: []
+  brand: []
+  business-requirement: []
+  calendar: []
+  cim: []
+  commission: []
+  community-data-files:
+  - base_bank_from_iban
+  connector: []
+  connector-accountedge: []
+  connector-cmis: []
+  connector-ecommerce: []
+  connector-infor: []
+  connector-interfaces: []
+  connector-jira: []
+  connector-lengow: []
+  connector-lims: []
+  connector-magento: []
+  connector-mautic: []
+  connector-mercadolibre: []
+  connector-odoo2odoo: []
+  connector-prestashop: []
+  connector-redmine: []
+  connector-sage: []
+  connector-salesforce: []
+  connector-shopify: []
+  connector-spscommerce: []
+  connector-telephony: []
+  connector-woocommerce: []
+  contract: []
+  cooperative: []
+  credit-control:
+  - sale_financial_risk_info
+  - sale_financial_risk
+  - stock_financial_risk
+  - account_financial_risk
+  crm:
+  - crm_project_task
+  - crm_stage_probability
+  crowdfunding: []
+  currency: []
+  data-protection: []
+  ddmrp:
+  - ddmrp_history
+  - ddmrp_coverage_days
+  - ddmrp_chatter
+  - ddmrp
+  - ddmrp_cron_actions_as_job
+  - ddmrp_warning
+  - ddmrp_warning_as_job
+  delivery-carrier:
+  - delivery_state
+  - delivery_package_number
+  department: []
+  dms:
+  - dms_field_auto_classification
+  - hr_dms_field
+  - dms_auto_classification
+  - web_editor_media_dialog_dms
+  - dms_field
+  - dms
+  donation: []
+  dotnet: []
+  e-commerce:
+  - website_sale_require_legal
+  - website_sale_tax_toggle
+  e-learning: []
+  edi: []
+  edi-ediversa: []
+  edi-framework: []
+  edi-framework-wms: []
+  edi-voxel: []
+  event:
+  - partner_event
+  - event_sale_free_no_invoiceable
+  - website_event_questions_by_ticket
+  field-service: []
+  fleet:
+  - fleet_vehicle_service_activity
+  geospatial: []
+  helpdesk: []
+  hr: []
+  hr-attendance: []
+  hr-expense: []
+  hr-holidays: []
+  infrastructure: []
+  interface-git: []
+  intrastat-extrastat:
+  - product_harmonized_system
+  iot: []
+  knowledge:
+  - document_knowledge
+  - document_page_partner
+  - document_page
+  l10n-brazil:
+  - l10n_br_coa
+  l10n-france:
+  - l10n_fr_siret
+  - l10n_fr_state
+  mail:
+  - mail_activity_board
+  - mail_message_search
+  - mail_gateway
+  maintenance:
+  - maintenance_partner
+  - maintenance_equipment_ref
+  - maintenance_purchase
+  management-system: []
+  manufacture:
+  - mrp_workorder_last_worker
+  - mrp_subcontracting_purchase_link
+  - mrp_warehouse_calendar
+  - mrp_production_unique_lot
+  - mrp_subcontracting_resupply_status
+  - mrp_multi_level
+  manufacture-reporting: []
+  margin-analysis: []
+  mass-mailing: []
+  mis-builder: []
+  mis-builder-contrib: []
+  module-composition-analysis: []
+  multi-company:
+  - crm_tag_multi_company
+  - product_multi_company
+  - partner_category_multi_company
+  - base_multi_company
+  - account_multicompany_easy_creation
+  odoo-pim:
+  - pim
+  - attribute_set
+  - product_attribute_set
+  operating-unit: []
+  partner-contact:
+  - partner_category_security
+  - partner_title
+  - partner_contact_department
+  - partner_contact_personal_information_page
+  - partner_employee_quantity
+  - partner_industry_secondary
+  payroll: []
+  pms: []
+  pos:
+  - pos_config_logo
+  product-attribute:
+  - product_category_active
+  - product_set
+  - product_code_mandatory
+  - product_category_code
+  - product_attribute_value_avoid_auto_fill
+  - product_manufacturer
+  product-configurator: []
+  product-kitting: []
+  product-pack: []
+  product-uom: []
+  product-variant: []
+  program: []
+  project:
+  - project_task_pull_request_state
+  - project_department
+  - project_task_product
+  - project_task_pull_request
+  - project_task_default_stage
+  - project_administrator_restricted_visibility
+  - project_key
+  - project_task_stage_auto_state
+  project-agile: []
+  project-reporting: []
+  purchase-reporting: []
+  purchase-workflow:
+  - purchase_order_internal_note
+  - purchase_all_shipments
+  - purchase_order_line_menu
+  - purchase_lot
+  - purchase_order_line_price_unit_digits
+  queue:
+  - queue_job
+  repair: []
+  report-print-send: []
+  reporting-engine:
+  - report_xlsx_helper
+  - report_qweb_element_page_visibility
+  - report_qweb_parameter
+  - report_xlsx
+  resource: []
+  rest-api: []
+  rest-framework: []
+  rma: []
+  role-policy: []
+  route-planning: []
+  sale-automatic-workflow: []
+  sale-blanket: []
+  sale-channel: []
+  sale-financial: []
+  sale-prebook: []
+  sale-promotion: []
+  sale-reporting:
+  - sale_order_report_hide_tax
+  sale-stock-workflow: []
+  sale-workflow:
+  - portal_sale_personal_data_only
+  - sale_order_line_menu
+  - sale_order_split_strategy
+  - sale_order_archive
+  - sale_commercial_partner
+  - sale_order_type
+  search-engine: []
+  server-auth: []
+  server-backend: []
+  server-brand:
+  - portal_debranding
+  - disable_odoo_online
+  - remove_odoo_enterprise
+  - mail_debranding
+  server-env: []
+  server-tools:
+  - base_view_inheritance_extension
+  - auto_backup
+  - scheduler_error_mailer
+  - upgrade_analysis
+  - base_cron_exclusion
+  server-ux:
+  - developer_menu
+  - server_action_mass_edit
+  - filter_multi_user
+  - date_range
+  shift-planning: []
+  shopfloor-app: []
+  shoppingfeed: []
+  sign: []
+  social: []
+  spreadsheet:
+  - spreadsheet_dashboard_purchase_oca
+  stock-logistics-availability: []
+  stock-logistics-barcode: []
+  stock-logistics-interfaces: []
+  stock-logistics-inventory: []
+  stock-logistics-orderpoint: []
+  stock-logistics-putaway: []
+  stock-logistics-release-channel: []
+  stock-logistics-reporting:
+  - stock_picking_report_custom_description
+  stock-logistics-request:
+  - stock_request
+  stock-logistics-reservation: []
+  stock-logistics-shopfloor: []
+  stock-logistics-tracking: []
+  stock-logistics-transport: []
+  stock-logistics-warehouse:
+  - stock_warehouse_calendar
+  - stock_demand_estimate
+  - stock_warehouse_out_pull
+  stock-logistics-workflow:
+  - stock_restrict_lot
+  - stock_picking_invoice_link
+  - stock_picking_sale_order_link
+  - stock_account_product_run_fifo_hook
+  stock-weighing: []
+  storage: []
+  survey: []
+  sustainability: []
+  tier-validation: []
+  timesheet:
+  - sale_timesheet_invoice_link
+  - hr_employee_cost_history
+  - hr_timesheet_task_domain
+  - hr_timesheet_amount_security
+  - hr_timesheet_autofill_project_off
+  version-control-platform: []
+  vertical-abbey: []
+  vertical-agriculture: []
+  vertical-association: []
+  vertical-community: []
+  vertical-construction: []
+  vertical-cooperative-supermarket: []
+  vertical-edition: []
+  vertical-education: []
+  vertical-hotel: []
+  vertical-isp: []
+  vertical-medical: []
+  vertical-ngo: []
+  vertical-realestate: []
+  vertical-rental: []
+  vertical-travel: []
+  wallet: []
+  web:
+  - web_environment_ribbon
+  - web_widget_bokeh_chart
+  - web_remember_tree_column_width
+  - web_ir_actions_act_multi
+  - web_navbar_light
+  - web_dark_mode
+  - web_timeline
+  - web_quick_start_screen
+  - web_widget_numeric_step
+  - web_refresher
+  - web_m2x_options
+  - web_responsive
+  - web_dialog_size
+  - web_filter_header_button
+  - web_pivot_computed_measure
+  web-api: []
+  web-api-contrib: []
+  web-app-shell: []
+  webhook: []
+  webkit-tools: []
+  website: []
+  website-cms: []
+  website-themes: []
+  wms: []
+shopinvader: {}
